@@ -1,13 +1,12 @@
 # Ali Goff DataVis Module 04: build specification
 
-- Status: implementation-ready draft for faculty and clinical review
+- Status: runnable release candidate; required human reviews pending
 - Date: 2026-08-15
 - Course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 - Course designer and content owner: Ali Goff
 - Commons sponsor: Shuhan He
 - Module: Distributions versus summaries
-- Current module version: `0.1.0`
-- Target runnable module version: `0.2.0`
+- Module version: `0.2.0`
 - Primary source: [Ali Goff's DA-730 redesign](../source/ali-goff-da-730-course-redesign.md#module-04-distributions-versus-summaries)
 - Content record: [Module 04](../../courses/data-visualization/modules/04-distributions-vs-summaries/README.md)
 
@@ -47,8 +46,10 @@ The review team covers four roles:
 
 1. Ali Goff approves the visualization competency and teaching sequence.
 2. An emergency department operations reviewer approves the case language and operational interpretation.
-3. A data or statistical reviewer checks generation, validation, and reproducibility.
+3. An accessibility reviewer checks the chart examples and learner requirements.
 4. An instructor who did not build the module completes a dry run.
+
+Generation, validation, and reproducibility are enforced by the runnable technical checks and recorded in the release manifest. Human reviewers may repeat or challenge any result.
 
 One person may fill more than one role. The release record names the people who completed each review.
 
@@ -90,6 +91,7 @@ The completed module contains only the files needed to generate, inspect, teach,
 ```text
 courses/data-visualization/modules/04-distributions-vs-summaries/
   README.md
+  .gitignore
   data-spec.md
   generate_ed_los.R
   validate_ed_los.R
@@ -314,7 +316,8 @@ The runnable release bumps the module from `0.1.0` to `0.2.0`. A changed dataset
 
 | Stage | Evidence required |
 |---|---|
-| Pre-alpha | Content record and build specification exist. This is the current stage. |
+| Pre-alpha | Content record and build specification exist. |
+| Runnable candidate | Technical artifacts and checks pass; required human reviews are not complete. This is the current stage. |
 | Alpha | A clean clone can generate and validate the data, run the lab, create the critique charts, and grade the worked answer. All four review roles are recorded. |
 | Beta | The module has been taught once to the target cohort. Timing, defects, learner work, and instructor revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully, no release-blocking defect remains, and adoption instructions have been tested outside the build team. |

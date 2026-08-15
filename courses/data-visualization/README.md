@@ -4,7 +4,7 @@ This course teaches learners to choose, build, critique, and explain healthcare 
 
 - Source course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 - Course designer: Ali Goff
-- Commons status: course structure and first module record published
+- Commons status: Module 04 runnable release candidate; human review pending
 - First lab environment: R and ggplot2
 
 ## Source record
@@ -43,4 +43,4 @@ Misleading displays, accessibility, equity, ethics, and small-cell protection ar
 - [Module 04: Distributions versus summaries](modules/04-distributions-vs-summaries/README.md)
 - [Module 04 build specification](../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 
-The Module 04 content record is complete. Its synthetic data generator, dataset, R lab, critique chart code, validation checks, and release manifest remain to be built.
+Module 04 now includes the synthetic dataset, deterministic generator, validation checks, R lab, critique charts, assessment, answer key, and release record. Faculty, emergency department, accessibility, and independent-instructor reviews remain before alpha.

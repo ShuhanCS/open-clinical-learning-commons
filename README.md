@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.2.1`
-- Status: Ali Goff's course document and the first module record are available. No data release has shipped yet.
+- Current version: `0.3.0`
+- Status: Module 04 is a runnable release candidate with synthetic data, labs, checks, assessment, and an instructor key. Required human reviews are pending.
 
 ## First course
 
@@ -15,11 +15,14 @@ The first application is DA-730: Analyzing, Visualizing, and Storytelling with D
 
 The course teaches learners to choose, build, critique, and explain healthcare visualizations based on the decision, the data structure, the audience, and what the display leaves out. Its concept modules are independent of software and clinical domain. R and ggplot2 provide the first lab environment.
 
-The first build is Module 04, Distributions versus summaries. Learners examine an emergency department where median length of stay improves while the longest stays become much worse. They must find the hidden change, choose one chart for leadership, and explain what decision should change.
+The first build is Module 04, Distributions versus summaries. Learners examine an emergency department where median length of stay improves while the longest stays become much worse. They must find the hidden change, choose one chart for leadership, and explain what decision should change. The synthetic reference dataset is included; it is not a stable teaching release until the required reviews are recorded.
 
 - [Data visualization course](courses/data-visualization/README.md)
 - [Module 04: Distributions versus summaries](courses/data-visualization/modules/04-distributions-vs-summaries/README.md)
 - [Module 04 build specification](docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
+- [Module 04 assessment](courses/data-visualization/modules/04-distributions-vs-summaries/assessment.md)
+- [Module 04 instructor notes](courses/data-visualization/modules/04-distributions-vs-summaries/instructor-notes.md)
+- [Module 04 release record](courses/data-visualization/modules/04-distributions-vs-summaries/release.json)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
@@ -57,11 +60,10 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Approve the data visualization course and module contract. The draft is published for review.
-2. Build and test Module 04 end to end. The content record is complete; the generator, data, code, and checks are next.
+1. Complete faculty, emergency department, accessibility, and independent-instructor review of Module 04.
+2. Teach the Module 04 pilot, log defects, and promote the candidate to beta.
 3. Add the remaining ten module briefs and the Fall 2026 course wrapper.
-4. Teach the course, log defects, and revise the module contract.
-5. Connect tested modules to a small, versioned Commons data release.
+4. Connect tested modules to a small, versioned Commons data release.
 
 ## Licensing
 

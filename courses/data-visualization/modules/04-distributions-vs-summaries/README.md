@@ -2,8 +2,8 @@
 
 - Thread: visualization
 - Level: healthcare essential
-- Status: content record complete; executable artifacts pending
-- Module version: `0.1.0`
+- Status: runnable release candidate; required human reviews pending
+- Module version: `0.2.0`
 - Slot cost: one teaching slot
 - Concept core: about 22 minutes
 - Lab: 60 to 90 minutes, depending on scaffold level
@@ -16,6 +16,24 @@
 A correct summary can still hide the part of a distribution that matters for a healthcare decision. This module teaches learners to ask whether a mean, median, or other summary preserves the information needed to act.
 
 The primary case uses emergency department length of stay. Median performance improves after a fast-track pathway launches, while the longest stays become much worse as inpatient boarding grows. Both findings are correct. The learner must find the hidden change and redirect the decision.
+
+## Quick start
+
+Install R and the `ggplot2` package, open this module directory, then run:
+
+```powershell
+Rscript validate_ed_los.R data/ed_los_2026.csv real
+Rscript lab.R data/ed_los_2026.csv
+Rscript critique_charts.R data/ed_los_2026.csv
+```
+
+To reproduce the committed data first, run:
+
+```powershell
+Rscript generate_ed_los.R real 730 data/ed_los_2026.csv
+```
+
+See the [data specification](data-spec.md), [learner assessment](assessment.md), [instructor notes](instructor-notes.md), and [release record](release.json).
 
 ## 1. Competency statement
 
@@ -164,20 +182,20 @@ The portable artifact is the data contract, not one CSV. A new clinical case mus
 | Small subgroup | At least one meaningful group has fewer than 100 observations. | Small denominators produce unstable estimates. |
 | Misleading average of averages | Unweighted group means differ from the pooled mean by at least 30 minutes. | Group means must be weighted or reported separately. |
 
-### Target realization from Ali Goff's source
+### Measured reference release
 
-The generator should reproduce or improve upon these source targets:
+The source values guided the teaching design. The committed variant `real`, seed `730`, measures:
 
 - 8,392 synthetic encounters in calendar year 2026;
 - generator seed `730`;
-- mean divided by median of `1.41`;
+- mean divided by median of `1.335`;
 - 6,462 discharged and 1,930 admitted encounters, a ratio of `3.35:1`;
 - admitted modes near 252 and 782 minutes, with the second mode weak when data are pooled;
-- mean change of `+4.5%` and 90th-percentile change of `+104.1%`;
+- January-to-December mean change of `-2.6%` and 90th-percentile change of `+82.6%`;
 - 66 encounters in the rarest acuity group;
-- 71-minute difference between the unweighted average of group means and the pooled mean.
+- 72.2-minute difference between the unweighted average of group means and the pooled mean.
 
-These values are validation targets until the generator and dataset are committed and the benchmark passes.
+All defined teaching thresholds pass. Exact measured results and the CSV checksum are recorded in [release.json](release.json).
 
 ### Columns
 
@@ -321,13 +339,13 @@ Below 35 minutes, the lesson becomes a demonstration rather than a practiced com
 
 - [x] Course source converted to Markdown.
 - [x] Nine-part module content record.
-- [ ] Deterministic R generator.
-- [ ] Generated CSV and data dictionary.
-- [ ] Automated data-contract checks.
-- [ ] Tier 1 and Tier 2 R scripts.
-- [ ] Critique chart generation code.
-- [ ] Assessment datasets for real, null, and trivial variants.
-- [ ] Instructor answer key and grading rubric.
-- [ ] Release manifest with version, license, row count, checksum, and known issues.
+- [x] Deterministic R generator.
+- [x] Generated CSV and data dictionary.
+- [x] Automated data-contract checks.
+- [x] Tier 1 and Tier 2 R scripts.
+- [x] Critique chart generation code.
+- [x] Real, null, and trivial assessment variants generated on demand.
+- [x] Instructor answer key and grading rubric.
+- [x] Release manifest with version, license, row count, checksum, and known issues.
 
-The module is ready for faculty content review. It is not yet a runnable teaching release.
+The package runs end to end and is ready for review. It remains a release candidate until faculty, emergency department, accessibility, and independent-instructor reviews are recorded.
