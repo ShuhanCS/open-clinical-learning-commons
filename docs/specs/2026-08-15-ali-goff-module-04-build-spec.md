@@ -328,18 +328,21 @@ This follows the useful lesson-lifecycle pattern used by The Carpentries while k
 
 The module is ready for an alpha release only when all of these statements are true:
 
-- [ ] A clean clone runs the four documented commands successfully.
-- [ ] Two `real` runs with seed 730 produce byte-identical files.
-- [ ] The committed CSV has the schema, counts, and values defined in this spec.
-- [ ] The `real`, `null`, and `trivial` variants pass their own validation rules.
-- [ ] The six `real` teaching checks pass, including the recorded visual review of the hidden second mode.
-- [ ] `lab.R` runs from top to bottom without manual repair and produces the four required views.
-- [ ] `critique_charts.R` reproduces all three flawed displays.
-- [ ] The assessment items and rubric map to C4.1, C4.2, and C4.3.
-- [ ] The answer key reproduces the measured results from the committed CSV.
-- [ ] Chart examples meet the module's accessibility requirements.
-- [ ] No file contains patient data, restricted data, or an undocumented imported source.
-- [ ] All module links resolve, the release record is complete, and the checksum matches.
+- [x] A clean clone runs the four documented commands successfully.
+- [x] Two `real` runs with seed 730 produce byte-identical files.
+- [x] The committed CSV has the schema, counts, and values defined in this spec.
+- [x] The `real`, `null`, and `trivial` variants pass their own validation rules.
+- [x] The six automated `real` teaching checks pass and the hidden process is recorded in the build preview.
+- [ ] A human reviewer confirms the hidden second mode and its clinical interpretation.
+- [x] `lab.R` runs from top to bottom without manual repair and produces the four required views.
+- [x] `critique_charts.R` reproduces all three flawed displays.
+- [x] The assessment items and rubric map to C4.1, C4.2, and C4.3.
+- [x] The answer key reproduces the measured results from the committed CSV.
+- [x] Chart examples have labels, units, honest scales, alt text guidance, and non-color cues where groups are compared.
+- [ ] An accessibility reviewer completes the chart and assignment review.
+- [x] No file contains patient data, restricted data, or an undocumented imported source.
+- [x] All relative module links resolve, the release record is complete, and the checksum matches.
+- [ ] Faculty and emergency department reviewers approve the content and case.
 - [ ] An instructor who did not write the code completes a dry run.
 
 ## Build order

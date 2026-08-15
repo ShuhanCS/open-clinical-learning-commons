@@ -74,7 +74,7 @@
     "technical_validation": {
       "status": "complete",
       "date": "2026-08-15",
-      "evidence": "Generator determinism, all variant contracts, lab execution, critique generation, and manifest checksum passed in the implementation environment."
+      "evidence": "A fresh clone of the remote branch passed generator determinism, all variant contracts, lab execution, seven chart outputs, the clean-worktree check, and the manifest checksum check."
     },
     "required_human_roles": [
       {
@@ -105,6 +105,7 @@
   },
   "validation": {
     "structural_checks": "pass",
+    "clean_clone": "pass on remote branch codex/datavis-module",
     "real_variant_checks": "18 of 18 pass",
     "null_variant_checks": "15 of 15 pass",
     "trivial_variant_checks": "15 of 15 pass",
