@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.1.0`
-- Status: course foundation. No data release has shipped yet.
+- Current version: `0.2.0`
+- Status: Ali Goff's course document and the first module record are available. No data release has shipped yet.
 
 ## First course
 
@@ -17,7 +17,10 @@ The course teaches learners to choose, build, critique, and explain healthcare v
 
 The first build is Module 04, Distributions versus summaries. Learners examine an emergency department where median length of stay improves while the longest stays become much worse. They must find the hidden change, choose one chart for leadership, and explain what decision should change.
 
-Read the [data visualization course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md).
+- [Data visualization course](courses/data-visualization/README.md)
+- [Module 04: Distributions versus summaries](courses/data-visualization/modules/04-distributions-vs-summaries/README.md)
+- [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
+- [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
 ## What a release contains
 
@@ -53,8 +56,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Approve the data visualization course and module contract.
-2. Build and test Module 04 end to end.
+1. Approve the data visualization course and module contract. The draft is published for review.
+2. Build and test Module 04 end to end. The content record is complete; the generator, data, code, and checks are next.
 3. Add the remaining ten module briefs and the Fall 2026 course wrapper.
 4. Teach the course, log defects, and revise the module contract.
 5. Connect tested modules to a small, versioned Commons data release.

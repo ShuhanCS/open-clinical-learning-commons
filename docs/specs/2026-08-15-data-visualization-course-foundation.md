@@ -1,6 +1,6 @@
 # Open Clinical Learning Commons: data visualization course foundation
 
-- Status: draft 0.1 for faculty review
+- Status: active draft for faculty review; source conversion and Module 04 content record complete
 - Date: 2026-08-15
 - Source course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 
@@ -20,7 +20,20 @@ This specification draws from three documents supplied for the project:
 - The IDEA Fellowship for Emergency Medicine prospectus;
 - The IDEA Fellowship and MSDA curriculum and Open Clinical Learning Commons alignment one-pager.
 
-The source files are not copied into this public repository. Course authors should confirm permission and attribution before publishing adapted instructional text.
+The original DOCX and fellowship PDFs are not copied into this public repository. Course authors should confirm permission and attribution before publishing adapted instructional text.
+
+The Word document has now been converted to a public [Markdown source record](../source/ali-goff-da-730-course-redesign.md) at Shuhan He's direction. The separate [Module 04 record](../../courses/data-visualization/modules/04-distributions-vs-summaries/README.md) adapts that source into the Commons module contract.
+
+## Implementation status
+
+| Artifact | Status |
+|---|---|
+| Ali Goff course document in Markdown | Complete |
+| Data visualization course landing page | Complete |
+| Module 04 content record | Complete |
+| Synthetic data generator and checks | Not started |
+| Learner R lab and critique chart code | Not started |
+| Generated dataset and release manifest | Not started |
 
 ## Purpose
 
@@ -172,8 +185,8 @@ courses/data-visualization/
 
 ## Release sequence
 
-1. Foundation: approve this course and release contract.
-2. Vertical slice: build and test Module 04 end to end.
+1. Foundation: approve this course and release contract. The draft is published for review.
+2. Vertical slice: build and test Module 04 end to end. The content record is complete; executable artifacts are next.
 3. Course shell: add the remaining ten module briefs and assemble the Fall 2026 wrapper.
 4. Teaching release: run the course, log defects, and revise the module contract.
 5. Commons starter: connect tested modules to a small, versioned synthetic and open data release.
