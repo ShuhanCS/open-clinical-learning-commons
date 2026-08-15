@@ -9,6 +9,7 @@
 - Lab: 60 to 90 minutes, depending on scaffold level
 - First lab environment: R and ggplot2
 - Source: [Ali Goff's DA-730 redesign](../../../../docs/source/ali-goff-da-730-course-redesign.md#module-04-distributions-versus-summaries)
+- Build specification: [implementation and release contract](../../../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 
 ## Why this module exists
 

@@ -6,7 +6,7 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.2.0`
+- Current version: `0.2.1`
 - Status: Ali Goff's course document and the first module record are available. No data release has shipped yet.
 
 ## First course
@@ -19,6 +19,7 @@ The first build is Module 04, Distributions versus summaries. Learners examine a
 
 - [Data visualization course](courses/data-visualization/README.md)
 - [Module 04: Distributions versus summaries](courses/data-visualization/modules/04-distributions-vs-summaries/README.md)
+- [Module 04 build specification](docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 

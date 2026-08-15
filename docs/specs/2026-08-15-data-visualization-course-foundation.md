@@ -22,7 +22,7 @@ This specification draws from three documents supplied for the project:
 
 The original DOCX and fellowship PDFs are not copied into this public repository. Course authors should confirm permission and attribution before publishing adapted instructional text.
 
-The Word document has now been converted to a public [Markdown source record](../source/ali-goff-da-730-course-redesign.md) at Shuhan He's direction. The separate [Module 04 record](../../courses/data-visualization/modules/04-distributions-vs-summaries/README.md) adapts that source into the Commons module contract.
+The Word document has now been converted to a public [Markdown source record](../source/ali-goff-da-730-course-redesign.md) at Shuhan He's direction. The separate [Module 04 record](../../courses/data-visualization/modules/04-distributions-vs-summaries/README.md) adapts that source into the Commons module contract. The [Module 04 build specification](2026-08-15-ali-goff-module-04-build-spec.md) defines the runnable package, validation rules, assessment, review gates, and release criteria.
 
 ## Implementation status
 
@@ -31,6 +31,7 @@ The Word document has now been converted to a public [Markdown source record](..
 | Ali Goff course document in Markdown | Complete |
 | Data visualization course landing page | Complete |
 | Module 04 content record | Complete |
+| Module 04 implementation and release specification | Complete |
 | Synthetic data generator and checks | Not started |
 | Learner R lab and critique chart code | Not started |
 | Generated dataset and release manifest | Not started |

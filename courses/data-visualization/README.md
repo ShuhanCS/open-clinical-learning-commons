@@ -41,5 +41,6 @@ Misleading displays, accessibility, equity, ethics, and small-cell protection ar
 ## Available module
 
 - [Module 04: Distributions versus summaries](modules/04-distributions-vs-summaries/README.md)
+- [Module 04 build specification](../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 
 The Module 04 content record is complete. Its synthetic data generator, dataset, R lab, critique chart code, validation checks, and release manifest remain to be built.
