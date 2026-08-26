@@ -1,10 +1,10 @@
 # Assessment: Distributions versus summaries
 
-Module version: `0.2.0`
+Module version: `0.3.0`
 
 ## Directions
 
-Answer in plain language. When a prompt asks for a chart, submit the R script, the exported chart, one or two sentences of alt text, and the requested interpretation. A chart is not complete until you explain what decision it supports.
+Answer in plain language. When a prompt asks for a chart, submit the R script, the exported chart, one or two sentences of alt text, and the requested interpretation. Name the healthcare audience and the patient group or care process represented. A chart is not complete until you explain what clinical or operational decision it supports.
 
 Use synthetic data only. Generate an assessment variant from this module folder with:
 
@@ -15,23 +15,23 @@ Rscript generate_ed_los.R null 730 outputs/assessment-null.csv
 
 ## Recognition
 
-### A1. Same mean, different systems
+### A1. Same department-wide mean, different patient experiences
 
 Competency: C4.1 Diagnose
 
-Give two different situations that could produce an unchanged annual mean. Only one situation should represent a system that is genuinely unchanged. State what additional view would distinguish them.
+An emergency-department director sees an unchanged annual mean length of stay. Describe one situation in which patient mix and care processes are genuinely stable. Then describe a second situation in which discharged patients move faster while admitted patients wait longer for inpatient beds. State which additional visualization would distinguish the two situations and what decision it would inform.
 
-### A2. Limits of a box plot
-
-Competency: C4.1 Diagnose
-
-Which feature can a standard box plot fail to reveal: median, skew, multiple modes, or outliers? Explain your choice.
-
-### A3. What a bar of means omits
+### A2. When a box plot hides a care process
 
 Competency: C4.1 Diagnose
 
-Name three facts that a bar of mean cost by service line does not provide. For each fact, say why it could matter to an operational decision.
+Emergency-department length of stay may contain one pattern for discharged patients and another for boarded admitted patients. Which feature can a standard box plot fail to reveal: median, skew, multiple modes, or outliers? Explain why missing that feature matters to an emergency-department medical director or patient-flow team.
+
+### A3. What mean length of stay by acuity omits
+
+Competency: C4.1 Diagnose
+
+An emergency-department dashboard shows one bar for mean length of stay in each Emergency Severity Index group. Name three facts the bars do not provide. For each omission, explain how it could change a staffing, fast-track, or bed-flow decision.
 
 ## Application
 
@@ -39,13 +39,13 @@ Name three facts that a bar of mean cost by service line does not provide. For e
 
 Competencies: C4.2 Select and justify; C4.3 Connect to consequence
 
-Use the `trivial` variant. Choose a display and a summary that accurately communicate the change from January to December. Justify them against one reasonable alternative, then state whether the result supports an operational change.
+Use the `trivial` emergency-department variant. Choose a display and summary that accurately communicate the January-to-December change. Justify them against one reasonable alternative, then tell the chief operating officer whether the result supports a staffing, fast-track, boarding, or monitoring change.
 
 ### A5. Four thousand encounters
 
 Competency: C4.2 Select and justify
 
-You have 4,000 encounters across six service lines. Choose a display that lets a director compare typical values, spread, and unusual values without plotting an unreadable mass of points. Explain how your design avoids overplotting and how it communicates group size.
+You have 4,000 encounters across six hospital service lines. Choose a display that lets a system operations director compare typical length of stay, variation, and unusual waits without plotting an unreadable mass of points. Explain how the display handles overplotting, communicates group size, and prevents a small service from appearing as certain as a large one.
 
 ### A6. Similar medians, different tails
 
@@ -68,7 +68,7 @@ Explain why a comparison based only on the medians is misleading. State what the
 
 Competencies: C4.1 Diagnose; C4.3 Connect to consequence
 
-Use the `null` variant. A director expects deterioration and asks you to find evidence for it. Report what the data show without manufacturing an effect. Recommend a next step.
+Use the `null` emergency-department variant. A patient-flow director expects boarding deterioration and asks you to find evidence for it. Report what the synthetic data show without manufacturing an effect. Recommend a monitoring or follow-up step that does not waste clinical or operational resources on an unsupported finding.
 
 ### A8. A better median and more complaints
 
@@ -99,7 +99,7 @@ Your chart must name the measure and unit, use an honest scale, label relevant g
 | Diagnoses the hidden or absent distributional pattern | 25 |
 | Selects an appropriate statistic and display | 20 |
 | Justifies the choice against a reasonable alternative | 15 |
-| Connects the evidence to a defensible operational decision | 30 |
+| Connects the evidence to a defensible healthcare decision | 30 |
 | Produces reproducible, readable, and accessible work | 10 |
 | **Total** | **100** |
 

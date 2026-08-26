@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0",
   "status": "runnable-release-candidate",
-  "release_date": "2026-08-15",
+  "release_date": "2026-08-26",
   "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
   "module": {
     "id": "oclc-datavis-04",
     "title": "Distributions versus summaries",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "course": "DA-730: Analyzing, Visualizing, and Storytelling with Data"
   },
   "data": {
@@ -54,6 +54,7 @@
     "author": "Ali Goff",
     "source_date": "2026-08-15",
     "markdown_path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "course_redesign_path": "../../syllabus-redesign.md",
     "note": "The synthetic data encode teaching requirements from the source design. They were not fitted to or derived from patient records."
   },
   "contributors": [
@@ -73,8 +74,8 @@
   "review": {
     "technical_validation": {
       "status": "complete",
-      "date": "2026-08-15",
-      "evidence": "A fresh clone of the remote branch passed generator determinism, all variant contracts, lab execution, seven chart outputs, the clean-worktree check, and the manifest checksum check."
+      "date": "2026-08-26",
+      "evidence": "The real-variant validator passed 18 of 18 checks, and the learner lab and critique chart scripts executed successfully on Windows after the healthcare decision rewrite."
     },
     "required_human_roles": [
       {

@@ -931,6 +931,75 @@
       font-size: 13px;
     }
 
+    .care-process-panel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-subtle);
+    }
+
+    .care-process-heading {
+      grid-column: 1 / -1;
+    }
+
+    .care-process-heading h3,
+    .care-process-heading p,
+    .care-process-card p {
+      margin: 0;
+    }
+
+    .care-process-heading p {
+      margin-top: 5px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .care-process-card {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+    }
+
+    .care-process-card small,
+    .care-process-card strong {
+      display: block;
+    }
+
+    .care-process-card small {
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .care-process-card strong {
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 19px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .care-process-card p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .care-process-action {
+      grid-column: 1 / -1;
+      padding: 14px 16px;
+      border-left: 3px solid var(--data-tail);
+      background: #fff8ed;
+      color: #4d3a1f;
+      font-size: 13px;
+    }
+
     .decision-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
@@ -1180,8 +1249,14 @@
       .decision-layout,
       .chart-choice-row,
       .message-comparison,
+      .care-process-panel,
       .materials-note {
         grid-template-columns: 1fr;
+      }
+
+      .care-process-heading,
+      .care-process-action {
+        grid-column: 1;
       }
 
       .metric-tabs {
@@ -1356,6 +1431,13 @@
                 <article class="message-card"><small>What one measure says</small><h4>Median stay fell 37%</h4><p>True, but limited to the middle visit. It does not describe the longest waits.</p></article>
                 <article class="message-card answer"><small>What the fuller view says</small><h4>Typical visits improved while long waits worsened</h4><p>Pair the median with a high percentile or the share of visits over eight hours.</p></article>
               </div>
+              <div class="care-process-panel" aria-label="Clinical interpretation by care pathway">
+                <div class="care-process-heading"><h3>Which care process changed?</h3><p>Split the same data by disposition and boarding status before deciding what to change.</p></div>
+                <article class="care-process-card" data-care-metric="discharged"><small>Discharged visits</small><strong>174 to 108 min</strong><p>Shorter stays are consistent with the intended fast-track improvement.</p></article>
+                <article class="care-process-card" data-care-metric="admitted"><small>Admitted visits</small><strong>310 to 509 min</strong><p>Patients who needed a hospital bed spent much longer in the emergency department.</p></article>
+                <article class="care-process-card" data-care-metric="boarding"><small>Boarding among admissions</small><strong>10% to 46%</strong><p>A growing share waited in the emergency department after the admission decision.</p></article>
+                <div class="care-process-action"><strong>Decision:</strong> protect the fast-track gains for discharged patients, while patient-flow and bed-management leaders investigate inpatient capacity and boarding. This teaching dataset does not establish cause or patient harm.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1391,22 +1473,23 @@
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download><span><small>Optional R and ggplot2</small><strong>Rebuild the charts in R</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/assessment.md"><span><small>Learner tasks</small><strong>Assessment and rubric</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/instructor-notes.md"><span><small>Teaching guide</small><strong>Instructor notes and answer key</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+          <a class="resource-link content-link" href="courses/data-visualization/data-source-register.md"><span><small>Data provenance</small><strong>Course source register</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
         </div>
 
-        <div class="materials-note"><p>The dataset is synthetic and designed for instruction. It is not evidence about any hospital or patient population.</p><p>Source, validation checks, and reuse terms are available on <a class="content-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p></div>
+        <div class="materials-note"><p>The dataset is deterministic synthetic teaching data generated from the module specification. It contains no patient records and is not evidence about any hospital or intervention.</p><p>The source register records the current provenance gap and the public healthcare sources required before a teaching release. Validation checks and reuse terms are available on <a class="content-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p></div>
       </section>
 
-      <footer class="site-footer">Open Clinical Learning Commons / Module preview 0.5.0 / Synthetic data only</footer>
+      <footer class="site-footer">Open Clinical Learning Commons / Module preview 0.5.1 / Synthetic data only</footer>
     </main>
   </div>
 
   <script>
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const metrics = {
-      median: { title: "Median length of stay", description: "A typical visit became much shorter across 2026.", values: [185.5, 180, 174, 167.5, 161.5, 155, 149, 142, 136, 130, 123, 116.5], unit: " min", change: "37% lower", finding: "The median supports the success story, but it describes the middle visit rather than the longest waits." },
-      mean: { title: "Mean length of stay", description: "The average changed very little across the same period.", values: [205.6, 204.9, 205, 204.2, 203.6, 202.8, 203, 202.3, 201.6, 201.7, 200.1, 200.2], unit: " min", change: "2.6% lower", finding: "The near-flat mean blends shorter discharged visits with much longer boarded visits." },
-      p90: { title: "90th percentile length of stay", description: "The time within which 90% of visits finished rose sharply.", values: [294, 293.1, 294, 294.1, 295.1, 297.2, 301.4, 308.4, 314.6, 335.4, 360.2, 536.8], unit: " min", change: "83% higher", finding: "The longest waits became much worse and point toward patients waiting for inpatient beds." },
-      longWait: { title: "Visits longer than eight hours", description: "The share beyond a decision-relevant threshold grew each month.", values: [2.4, 3, 3.9, 4.4, 5.1, 5.9, 6.7, 7.4, 8.2, 9, 9.6, 10.5], unit: "%", change: "4.4 times higher", finding: "By December, more than one in ten visits lasted over eight hours." }
+      median: { title: "Median length of stay", description: "The middle visit became much shorter across 2026.", values: [185.5, 180, 174, 167.5, 161.5, 155, 149, 142, 136, 130, 123, 116.5], unit: " min", change: "37% lower", finding: "The median is dominated by the more common discharged pathway. It does not show what happened to admitted patients waiting for beds." },
+      mean: { title: "Mean length of stay", description: "The average changed very little across the same period.", values: [205.6, 204.9, 205, 204.2, 203.6, 202.8, 203, 202.3, 201.6, 201.7, 200.1, 200.2], unit: " min", change: "2.6% lower", finding: "The mean blends two opposing care pathways: shorter discharged visits and much longer admitted visits." },
+      p90: { title: "90th percentile length of stay", description: "The time within which 90% of visits finished rose sharply.", values: [294, 293.1, 294, 294.1, 295.1, 297.2, 301.4, 308.4, 314.6, 335.4, 360.2, 536.8], unit: " min", change: "83% higher", finding: "The longest waits became much worse, directing attention to admitted patients and inpatient boarding." },
+      longWait: { title: "Visits longer than eight hours", description: "The share beyond an operational threshold grew each month.", values: [2.4, 3, 3.9, 4.4, 5.1, 5.9, 6.7, 7.4, 8.2, 9, 9.6, 10.5], unit: "%", change: "4.4 times higher", finding: "By December, more than one in ten visits crossed an eight-hour threshold that patient-flow leaders can monitor." }
     };
     const distribution = {
       bins: ["0 to 2h", "2 to 4h", "4 to 6h", "6 to 8h", "8 to 12h", "12h+"],
@@ -1425,6 +1508,7 @@
         Math.round((metrics.median.values.at(-1) / metrics.median.values[0] - 1) * 100) === -37,
         Math.round((metrics.p90.values.at(-1) / metrics.p90.values[0] - 1) * 100) === 83,
         Math.round((metrics.longWait.values.at(-1) / metrics.longWait.values[0]) * 10) / 10 === 4.4,
+        document.querySelectorAll("[data-care-metric]").length === 3,
         document.querySelectorAll(".first-choice").length === 2,
         document.querySelectorAll(".decision-button").length === 3,
         Object.hasOwn(feedback, "balanced")
@@ -1570,8 +1654,8 @@
 
     const feedback = {
       neutral: { title: "Accurate but unhelpful", body: "This title names the topic but makes the reader discover the finding alone." },
-      median: { title: "True but incomplete", body: "The title reports the typical visit and hides the patients whose waits became much longer." },
-      balanced: { title: "Decision-ready title", body: "This title preserves both findings. Leadership can keep the fast-track gains while investigating boarding and inpatient capacity." }
+      median: { title: "True but incomplete", body: "The title mainly reflects discharged visits and hides the admitted patients whose waits became much longer." },
+      balanced: { title: "Decision-ready title", body: "This title preserves both findings. Emergency department leaders can protect fast-track gains while patient-flow and bed-management teams investigate boarding and inpatient capacity." }
     };
 
     document.querySelectorAll(".decision-button").forEach(button => button.addEventListener("click", () => {

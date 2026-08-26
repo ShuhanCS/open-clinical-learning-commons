@@ -3,7 +3,7 @@
 - Thread: visualization
 - Level: healthcare essential
 - Status: runnable release candidate; required human reviews pending
-- Module version: `0.2.0`
+- Module version: `0.3.0`
 - Slot cost: one teaching slot
 - Concept core: about 22 minutes
 - Lab: 60 to 90 minutes, depending on scaffold level
@@ -37,7 +37,7 @@ See the [data specification](data-spec.md), [learner assessment](assessment.md),
 
 ## 1. Competency statement
 
-Given a dataset and a comparison question, the learner determines whether a summary statistic faithfully represents the underlying distribution and selects a display that reveals the distributional features relevant to the decision.
+Given a healthcare dataset and a clinical or operational comparison question, the learner determines whether a summary statistic represents the patient groups and care processes needed for the decision. The learner selects a display that reveals any consequential part of the distribution and explains what a healthcare leader should do differently.
 
 The assessment uses three observable behaviors:
 
@@ -72,6 +72,10 @@ A summary statistic replaces many values with a few. The question is not whether
 > Does what this summary discards matter for the decision being made?
 
 Anscombe's quartet or the Datasaurus Dozen may introduce the idea, but the healthcare decision remains the center of the module.
+
+### Healthcare interpretation rule
+
+For every display, learners name the patient group, care process, healthcare audience, and decision. In the emergency-department case, "the median improved" is not a complete interpretation. Learners must ask whether the metric describes discharged patients, admitted patients, or people waiting for an inpatient bed, then state whether the evidence supports a fast-track, staffing, bed-flow, or monitoring decision.
 
 ### What a bar of means discards
 
@@ -197,6 +201,10 @@ The source values guided the teaching design. The committed variant `real`, seed
 
 All defined teaching thresholds pass. Exact measured results and the CSV checksum are recorded in [release.json](release.json).
 
+### Source status
+
+The released file is a deterministic synthetic teaching dataset. It is generated from this module's pedagogical contract rather than sampled from a hospital or fitted to patient records. Before a teaching release, the module must satisfy the [course source-first rule](../../data-source-register.md) by either calibrating selected parameters to a named public aggregate source or rebuilding the case from an identified Synthea release. Any assumptions used to create patient-level distributions must remain explicit.
+
 ### Columns
 
 | Column | Type | Purpose |
@@ -276,14 +284,14 @@ Every critique asks:
 
 ### Recognition
 
-1. Give two different situations that could produce an unchanged annual mean, only one of which represents an unchanged system.
-2. Identify which feature a box plot cannot reveal: median, skew, multiple modes, or outliers. Explain the answer.
-3. Name three facts a bar of mean cost by service line does not provide.
+1. Explain how an emergency department's annual mean length of stay could remain unchanged when care is stable, and how the same mean could result from discharged patients improving while admitted patients wait longer.
+2. Identify what a box plot can hide when discharged and boarded admitted patients follow different length-of-stay patterns.
+3. Name three facts a bar of mean length of stay by acuity does not provide and explain how each omission could change an emergency-department decision.
 
 ### Application
 
 4. Given the trivial-effect variant, choose a display and justify it against one alternative. A well-defended summary can earn full credit.
-5. Choose a display for 4,000 encounters across six service lines and explain how it avoids overplotting.
+5. Choose a display for 4,000 encounters across six hospital service lines and explain how it supports a system operations director without hiding group size or unusual waits.
 6. Read an empirical cumulative distribution function for two clinics and explain why their medians are misleading.
 
 ### Judgment and transfer
