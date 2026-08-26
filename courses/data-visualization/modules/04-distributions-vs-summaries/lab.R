@@ -1,5 +1,7 @@
 args <- commandArgs(trailingOnly = TRUE)
-input_path <- if (length(args) >= 1) args[[1]] else file.path("data", "ed_los_2026.csv")
+default_inputs <- c(file.path("data", "ed_los_2026.csv"), "ed_los_2026.csv")
+available_default <- default_inputs[file.exists(default_inputs)][1]
+input_path <- if (length(args) >= 1) args[[1]] else if (!is.na(available_default)) available_default else default_inputs[[1]]
 output_dir <- if (length(args) >= 2) args[[2]] else file.path("outputs", "lab")
 
 if (!requireNamespace("ggplot2", quietly = TRUE)) {

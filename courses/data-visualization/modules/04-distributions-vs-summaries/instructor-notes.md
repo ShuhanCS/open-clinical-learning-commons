@@ -1,6 +1,6 @@
 # Instructor notes: Distributions versus summaries
 
-Module version: `0.3.0`
+Module version: `0.3.1`
 
 These notes support a class taught without Ali Goff's original course document. The data are synthetic teaching data. They do not describe a real hospital, patient population, or intervention effect.
 

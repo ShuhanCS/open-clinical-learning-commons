@@ -3,7 +3,7 @@
 - Thread: visualization
 - Level: healthcare essential
 - Status: runnable release candidate; required human reviews pending
-- Module version: `0.3.0`
+- Module version: `0.3.1`
 - Slot cost: one teaching slot
 - Concept core: about 22 minutes
 - Lab: 60 to 90 minutes, depending on scaffold level
@@ -32,6 +32,16 @@ To reproduce the committed data first, run:
 ```powershell
 Rscript generate_ed_los.R real 730 data/ed_los_2026.csv
 ```
+
+### Beginner RStudio path
+
+1. Download `lab.R` and `ed_los_2026.csv` into the same folder.
+2. Open `lab.R` in RStudio.
+3. Choose **Session > Set Working Directory > To Source File Location**.
+4. In the Console, run `install.packages("ggplot2")` once.
+5. Click **Source**. The script creates four charts and `monthly_metrics.csv` in `outputs/lab/`.
+
+The final reference visualization is `outputs/lab/04-monthly-metrics.png`. It compares the mean, median, 90th percentile, and share of visits over eight hours across 2026.
 
 See the [data specification](data-spec.md), [learner assessment](assessment.md), [instructor notes](instructor-notes.md), and [release record](release.json).
 

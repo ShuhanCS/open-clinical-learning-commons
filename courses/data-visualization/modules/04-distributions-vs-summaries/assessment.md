@@ -1,6 +1,6 @@
 # Assessment: Distributions versus summaries
 
-Module version: `0.3.0`
+Module version: `0.3.1`
 
 ## Directions
 

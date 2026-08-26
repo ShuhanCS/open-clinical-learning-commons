@@ -1,6 +1,6 @@
 # Clinical data visualization course redesign plan
 
-- Status: implemented for program review
+- Status: implemented for program review; learner Teaching Key added
 - Date: 2026-08-26
 - Source syllabus: `C:\Users\Shuha\Downloads\DA730_Syllabus_Storytelling_Fall2025.docx`
 - Course format: three credits, seven weeks, asynchronous online
@@ -90,3 +90,14 @@ Each submission includes the visualization, reproducible source, source record, 
 - The course includes flow, network, uncertainty, distribution, temporal, comparison, hierarchical, geographic, and dashboard displays.
 - The Word redesign validates and renders on US Letter pages.
 - Module 04 data and chart calculations continue to pass their existing checks.
+
+## Learner Teaching Key extension
+
+The Module 04 rebuild section must answer four questions in order:
+
+1. What am I making?
+2. Why is this visualization appropriate for the healthcare decision?
+3. What exact steps do I follow in RStudio?
+4. What should a correct result and interpretation look like?
+
+The learner page will show the four expected lab outputs, identify the four-panel monthly display as the final answer, and reuse the model interpretation in the instructor notes. The R workflow must work when a beginner downloads `lab.R` and the CSV into the same folder.

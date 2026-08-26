@@ -1064,6 +1064,340 @@
       font-size: 14px;
     }
 
+    .rebuild-brief-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .rebuild-brief {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .rebuild-brief.why {
+      border-color: #c9d7f5;
+      background: var(--primary-soft);
+    }
+
+    .rebuild-brief small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .rebuild-brief h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .rebuild-brief p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .r-guide {
+      overflow: hidden;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .r-guide-header {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px 24px;
+      background: #152b4b;
+      color: white;
+    }
+
+    .r-guide-header h3,
+    .r-guide-header p {
+      margin: 0;
+    }
+
+    .r-guide-header h3 {
+      color: white;
+    }
+
+    .r-guide-header p {
+      max-width: 470px;
+      color: #d7e2f4;
+      font-size: 13px;
+    }
+
+    .r-guide-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .r-guide-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 12px;
+      border: 1px solid #5f7698;
+      border-radius: var(--radius-sm);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .r-guide-links a:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .r-steps {
+      padding: 0 24px;
+    }
+
+    .r-step {
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr);
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .r-step:last-child {
+      border-bottom: 0;
+    }
+
+    .r-step-number {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .r-step h4,
+    .r-step p {
+      margin: 0;
+    }
+
+    .r-step h4 {
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .r-step p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .r-step-downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .r-step-downloads a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 12px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .r-step-downloads a:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .inline-code,
+    .r-command {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .inline-code {
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #e8eef8;
+      color: #203b69;
+      font-size: 0.92em;
+    }
+
+    .r-command {
+      overflow-x: auto;
+      margin: 12px 0 0;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: #0e1c31;
+      color: #dce8fb;
+      font-size: 12px;
+      line-height: 1.7;
+      white-space: pre;
+    }
+
+    .teaching-key {
+      margin-bottom: 18px;
+      border: 1px solid #b7d9cf;
+      border-radius: var(--radius-md);
+      background: #f2faf7;
+    }
+
+    .teaching-key summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 64px;
+      padding: 14px 20px;
+      color: #0b624d;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .teaching-key summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .teaching-key summary::after {
+      content: "+";
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .teaching-key[open] summary::after {
+      content: "−";
+    }
+
+    .teaching-key-body {
+      padding: 0 20px 20px;
+    }
+
+    .key-intro {
+      margin: 0 0 16px;
+      color: #3f5f57;
+      font-size: 13px;
+    }
+
+    .key-chart-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .key-chart-card {
+      padding: 14px;
+      border: 1px solid #c9e1da;
+      border-radius: var(--radius-sm);
+      background: white;
+    }
+
+    .key-chart-card small,
+    .key-chart-card strong {
+      display: block;
+    }
+
+    .key-chart-card small {
+      min-height: 30px;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .key-chart-card strong {
+      margin: 4px 0 8px;
+      color: #0b624d;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+    }
+
+    .key-mini-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .key-baseline {
+      stroke: #d7e8e3;
+      stroke-width: 1;
+    }
+
+    .key-line {
+      fill: none;
+      stroke: #0d67ff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+    }
+
+    .key-point {
+      fill: #d97706;
+      stroke: white;
+      stroke-width: 2;
+    }
+
+    .key-answer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .key-answer {
+      padding: 16px;
+      border-left: 3px solid #0b8a6c;
+      background: white;
+    }
+
+    .key-answer h4,
+    .key-answer p {
+      margin: 0;
+    }
+
+    .key-answer h4 {
+      margin-bottom: 6px;
+      color: #0b624d;
+      font-size: 13px;
+    }
+
+    .key-answer p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .key-source {
+      margin: 14px 0 0;
+      font-size: 12px;
+    }
+
+    .key-source a {
+      color: #0b624d;
+      font-weight: 700;
+    }
+
     .resource-list {
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
@@ -1250,6 +1584,8 @@
       .chart-choice-row,
       .message-comparison,
       .care-process-panel,
+      .rebuild-brief-grid,
+      .key-answer-grid,
       .materials-note {
         grid-template-columns: 1fr;
       }
@@ -1260,6 +1596,22 @@
       }
 
       .metric-tabs {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .r-guide-header {
+        display: block;
+      }
+
+      .r-guide-links {
+        margin-top: 14px;
+      }
+
+      .r-steps {
+        padding-inline: 18px;
+      }
+
+      .key-chart-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -1465,8 +1817,47 @@
       <section class="lesson-section" id="materials">
         <div class="section-heading">
           <span class="step-number">04</span>
-          <div><h2>Rebuild the visualization</h2><p>The guided lesson requires no code. Download the data and R lab when you are ready to reproduce the charts yourself.</p></div>
+          <div><h2>Rebuild it in R</h2><p>Know what you are making and why before you run the code. Then use the Teaching Key to check your result.</p></div>
         </div>
+
+        <div class="rebuild-brief-grid">
+          <article class="rebuild-brief"><small>What you are making</small><h3>A four-panel view of emergency department flow</h3><p>Plot the monthly mean, median, 90th percentile, and share of visits over eight hours. The lab also creates three earlier charts that help you discover why all four measures are needed.</p></article>
+          <article class="rebuild-brief why"><small>Why this visualization</small><h3>One average hides two care pathways</h3><p>The mean looks stable because shorter discharged visits offset longer admitted visits. The four-panel view keeps the improvement visible while exposing the boarding problem in the upper tail.</p></article>
+        </div>
+
+        <div class="r-guide">
+          <div class="r-guide-header">
+            <div><h3>Run the lab in RStudio</h3><p>R performs the analysis. RStudio is the desktop app where you open the script, run it, and inspect the charts.</p></div>
+            <div class="r-guide-links"><a href="https://cloud.r-project.org/">Install R</a><a href="https://posit.co/download/rstudio-desktop/">Install RStudio</a></div>
+          </div>
+          <div class="r-steps">
+            <div class="r-step"><span class="r-step-number">1</span><div><h4>Download the two lab files</h4><p>Save both files in the same folder.</p><div class="r-step-downloads"><a href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download>Download lab.R</a><a href="courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv" download>Download ed_los_2026.csv</a></div></div></div>
+            <div class="r-step"><span class="r-step-number">2</span><div><h4>Open the script and point RStudio to the folder</h4><p>Open <span class="inline-code">lab.R</span>. Choose <strong>Session &gt; Set Working Directory &gt; To Source File Location</strong>.</p></div></div>
+            <div class="r-step"><span class="r-step-number">3</span><div><h4>Install ggplot2 once, then run the script</h4><p>Paste these lines into the Console. You only need the first line the first time you use this computer.</p><pre class="r-command"><code>install.packages("ggplot2")
+source("lab.R")</code></pre></div></div>
+            <div class="r-step"><span class="r-step-number">4</span><div><h4>Open the finished chart</h4><p>R creates four PNG charts and a table in <span class="inline-code">outputs/lab/</span>. Your final reference chart is <span class="inline-code">04-monthly-metrics.png</span>.</p></div></div>
+          </div>
+        </div>
+
+        <details class="teaching-key" id="teaching-key" open>
+          <summary>Teaching Key: what a correct answer looks like</summary>
+          <div class="teaching-key-body">
+            <p class="key-intro">These four trends belong together. The first two describe the center of the distribution. The last two show the patients who waited longest.</p>
+            <div class="key-chart-grid">
+              <article class="key-chart-card"><small>Mean</small><strong>206 to 200 min</strong><svg class="key-mini-chart" data-key-metric="mean" viewBox="0 0 180 72" role="img" aria-label="Mean length of stay is nearly flat across the year."></svg></article>
+              <article class="key-chart-card"><small>Median</small><strong>186 to 117 min</strong><svg class="key-mini-chart" data-key-metric="median" viewBox="0 0 180 72" role="img" aria-label="Median length of stay falls across the year."></svg></article>
+              <article class="key-chart-card"><small>90th percentile</small><strong>294 to 537 min</strong><svg class="key-mini-chart" data-key-metric="p90" viewBox="0 0 180 72" role="img" aria-label="The 90th percentile rises sharply late in the year."></svg></article>
+              <article class="key-chart-card"><small>Over 8 hours</small><strong>2.4% to 10.5%</strong><svg class="key-mini-chart" data-key-metric="longWait" viewBox="0 0 180 72" role="img" aria-label="The share of visits over eight hours rises across the year."></svg></article>
+            </div>
+            <div class="key-answer-grid">
+              <div class="key-answer"><h4>Model chart title</h4><p>Typical emergency department visits improve while the longest stays worsen.</p></div>
+              <div class="key-answer"><h4>Model clinical decision</h4><p>Continue the fast-track work for discharged patients. Ask patient-flow and bed-management teams to investigate boarding and monitor the upper tail.</p></div>
+              <div class="key-answer"><h4>Why this earns credit</h4><p>The chart preserves the familiar mean and median, adds measures of long waits, uses honest scales, names the unit, and connects the pattern to a healthcare decision.</p></div>
+              <div class="key-answer"><h4>What not to claim</h4><p>This synthetic dataset does not prove that fast track caused the improvement, that boarding caused harm, or that any real hospital had these results.</p></div>
+            </div>
+            <p class="key-source">Full scoring guidance: <a href="courses/data-visualization/modules/04-distributions-vs-summaries/instructor-notes.md#worked-tier-3-answer">worked answer and instructor rubric</a>.</p>
+          </div>
+        </details>
 
         <div class="resource-list">
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv" download><span><small>CSV / 8,392 rows</small><strong>Synthetic emergency department dataset</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
@@ -1479,7 +1870,7 @@
         <div class="materials-note"><p>The dataset is deterministic synthetic teaching data generated from the module specification. It contains no patient records and is not evidence about any hospital or intervention.</p><p>The source register records the current provenance gap and the public healthcare sources required before a teaching release. Validation checks and reuse terms are available on <a class="content-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p></div>
       </section>
 
-      <footer class="site-footer">Open Clinical Learning Commons / Module preview 0.5.1 / Synthetic data only</footer>
+      <footer class="site-footer">Open Clinical Learning Commons / Module preview 0.6.0 / Synthetic data only</footer>
     </main>
   </div>
 
@@ -1509,6 +1900,7 @@
         Math.round((metrics.p90.values.at(-1) / metrics.p90.values[0] - 1) * 100) === 83,
         Math.round((metrics.longWait.values.at(-1) / metrics.longWait.values[0]) * 10) / 10 === 4.4,
         document.querySelectorAll("[data-care-metric]").length === 3,
+        document.querySelectorAll("[data-key-metric]").length === 4,
         document.querySelectorAll(".first-choice").length === 2,
         document.querySelectorAll(".decision-button").length === 3,
         Object.hasOwn(feedback, "balanced")
@@ -1628,6 +2020,23 @@
       });
     }
 
+    function renderTeachingKey() {
+      document.querySelectorAll("[data-key-metric]").forEach(svg => {
+        const values = metrics[svg.dataset.keyMetric].values;
+        const width = 180;
+        const height = 72;
+        const padding = 7;
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        const spread = max - min || 1;
+        const x = index => padding + index / (values.length - 1) * (width - padding * 2);
+        const y = value => padding + (max - value) / spread * (height - padding * 2);
+        svg.append(svgElement("line", { x1: padding, y1: height - padding, x2: width - padding, y2: height - padding, class: "key-baseline" }));
+        svg.append(svgElement("polyline", { points: values.map((value, index) => `${x(index)},${y(value)}`).join(" "), class: "key-line" }));
+        svg.append(svgElement("circle", { cx: x(values.length - 1), cy: y(values.at(-1)), r: 5, class: "key-point" }));
+      });
+    }
+
     function completeStep(step) {
       completedSteps.add(step);
       const progress = Math.round(completedSteps.size / 3 * 100);
@@ -1679,6 +2088,7 @@
     verifyTeachingData();
     renderMetric("median");
     renderHistogram();
+    renderTeachingKey();
   </script>
 </body>
 </html>

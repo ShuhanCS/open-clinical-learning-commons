@@ -6,7 +6,7 @@
   "module": {
     "id": "oclc-datavis-04",
     "title": "Distributions versus summaries",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "course": "DA-730: Analyzing, Visualizing, and Storytelling with Data"
   },
   "data": {
@@ -75,7 +75,7 @@
     "technical_validation": {
       "status": "complete",
       "date": "2026-08-26",
-      "evidence": "The real-variant validator passed 18 of 18 checks, and the learner lab and critique chart scripts executed successfully on Windows after the healthcare decision rewrite."
+      "evidence": "The real-variant validator passed 18 of 18 checks. The learner lab executed successfully with the repository layout and with lab.R and the CSV downloaded side by side, matching the beginner RStudio instructions."
     },
     "required_human_roles": [
       {
