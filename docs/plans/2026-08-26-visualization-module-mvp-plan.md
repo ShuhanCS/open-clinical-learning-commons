@@ -4,13 +4,24 @@
 
 Deploy a public, no-login preview of Module 04 that lets a newcomer experience the central lesson without installing R or navigating GitHub.
 
+The course teaches data visualization through healthcare decisions. Synthetic healthcare data provides a safe, realistic setting, while chart selection, interpretation, critique, and communication remain the assessed skills.
+
 ## First release
 
 - One static page deployed as a Vercel preview.
 - A short emergency-department case using the measured Module 04 dataset results.
 - Interactive views of the median, mean, 90th percentile, long waits, and January versus December distributions.
-- One decision question with immediate feedback.
+- One chart-choice question and one chart-title exercise with immediate feedback.
 - Direct downloads for the dataset, lab, assessment, and instructor notes.
+
+## Learning loop
+
+1. Give the learner a healthcare question and an incomplete chart-based claim.
+2. Ask which visualization would test the claim before revealing the full evidence.
+3. Let the learner compare measures and inspect the distribution.
+4. Explain what the first visualization showed and what it hid.
+5. Ask the learner to choose a decision-ready chart title that communicates both findings.
+6. Offer the dataset and R lab as an optional way to reproduce the visualization.
 
 ## Interface direction
 

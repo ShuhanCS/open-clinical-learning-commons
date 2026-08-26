@@ -563,6 +563,11 @@
       gap: 10px;
     }
 
+    .chart-choice-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
     .choice-button,
     .metric-button,
     .decision-button {
@@ -578,6 +583,24 @@
       padding: 9px 14px;
       font-size: 13px;
       font-weight: 700;
+    }
+
+    .chart-choice-button {
+      padding: 14px;
+      text-align: left;
+    }
+
+    .chart-choice-button small,
+    .chart-choice-button span {
+      display: block;
+    }
+
+    .chart-choice-button small {
+      margin-bottom: 5px;
+      color: var(--text-muted);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     .choice-button:hover,
@@ -599,6 +622,30 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       margin-bottom: 16px;
+    }
+
+    .chart-reading-tip {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--primary);
+      background: var(--surface-subtle);
+    }
+
+    .chart-reading-tip strong {
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .chart-reading-tip p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
     .metric-button {
@@ -803,6 +850,85 @@
       color: var(--text-muted);
       font-size: 11px;
       text-align: center;
+    }
+
+    .data-details {
+      margin-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .data-details summary {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .data-table-wrap {
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .data-table caption {
+      padding: 0 0 8px;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .message-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .message-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-subtle);
+    }
+
+    .message-card.answer {
+      border-color: #c9d7f5;
+      background: var(--primary-soft);
+    }
+
+    .message-card small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .message-card h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .message-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
     .decision-layout {
@@ -1052,6 +1178,8 @@
       .brief-layout,
       .distribution-heading,
       .decision-layout,
+      .chart-choice-row,
+      .message-comparison,
       .materials-note {
         grid-template-columns: 1fr;
       }
@@ -1140,10 +1268,10 @@
       </div>
 
       <nav class="lesson-nav" aria-label="Lesson steps">
-        <a class="active" href="#brief" data-nav-step="1"><span class="nav-index">1</span><span>Read the brief</span><span class="step-status"></span></a>
-        <a href="#evidence" data-nav-step="2"><span class="nav-index">2</span><span>Explore evidence</span><span class="step-status"></span></a>
-        <a href="#decision" data-nav-step="3"><span class="nav-index">3</span><span>Make a decision</span><span class="step-status"></span></a>
-        <a href="#materials"><span class="nav-index">4</span><span>Use the materials</span><span class="step-status"></span></a>
+        <a class="active" href="#brief" data-nav-step="1"><span class="nav-index">1</span><span>Choose a chart</span><span class="step-status"></span></a>
+        <a href="#evidence" data-nav-step="2"><span class="nav-index">2</span><span>Read the evidence</span><span class="step-status"></span></a>
+        <a href="#decision" data-nav-step="3"><span class="nav-index">3</span><span>Write the message</span><span class="step-status"></span></a>
+        <a href="#materials"><span class="nav-index">4</span><span>Rebuild it in R</span><span class="step-status"></span></a>
       </nav>
 
       <p class="dataset-note"><strong>8,392 synthetic visits</strong>No patient records are used in this lesson.</p>
@@ -1152,26 +1280,27 @@
     <main class="workspace" id="main">
       <section class="module-hero" id="overview">
         <div>
-          <p class="breadcrumb">Data visualization / Module 04</p>
+          <p class="breadcrumb">Healthcare data visualization / Module 04</p>
           <h1>Distributions versus summaries</h1>
-          <p class="hero-copy">Can an improving median hide a worsening patient experience? Compare four measures, inspect the distribution, and make a recommendation.</p>
+          <p class="hero-copy">Learn how chart choice changes a healthcare decision. Test a claim about emergency department performance, find what the first chart hides, and communicate the result.</p>
           <div class="hero-meta" aria-label="Module details">
             <span class="meta-chip">About 5 minutes</span>
             <span class="meta-chip">No coding</span>
+            <span class="meta-chip">Healthcare case</span>
             <span class="meta-chip">Synthetic data</span>
           </div>
-          <a class="primary-button" href="#brief">Begin module</a>
+          <a class="primary-button" href="#brief">Start the case</a>
         </div>
         <aside class="objective-panel">
           <p>Learning objective</p>
-          <strong>Decide when a summary statistic hides information that matters for a healthcare decision.</strong>
+          <strong>Choose a visualization that reveals both typical visits and longer waits, then write a chart title that supports a healthcare decision.</strong>
         </aside>
       </section>
 
       <section class="lesson-section" id="brief">
         <div class="section-heading">
           <span class="step-number">01</span>
-          <div><h2>Read the brief</h2><p>Leadership has one result and a proposal. Make an initial call before you inspect the rest of the data.</p></div>
+          <div><h2>Choose a first chart</h2><p>Leadership has one result and a proposal. Decide which visualization you would request before seeing the full analysis.</p></div>
         </div>
 
         <div class="activity-panel">
@@ -1180,10 +1309,10 @@
             <div class="reported-metric"><span>Reported result</span><strong>Median stay fell from 186 to 117 minutes.</strong></div>
             <div class="case-question">
               <blockquote>“The new pathway is working. We should expand fast track across the department.”</blockquote>
-              <p class="question-label">Would you support this proposal from the median alone?</p>
-              <div class="choice-row" role="group" aria-label="Initial recommendation">
-                <button class="choice-button first-choice" type="button" data-choice="yes" aria-pressed="false">Yes, expand it</button>
-                <button class="choice-button first-choice" type="button" data-choice="wait" aria-pressed="false">Not yet, show me more</button>
+              <p class="question-label">Which chart would help you test this claim?</p>
+              <div class="choice-row chart-choice-row" role="group" aria-label="Choose a first visualization">
+                <button class="choice-button chart-choice-button first-choice" type="button" data-choice="median" aria-pressed="false"><small>Option A</small><span>Monthly median line chart</span></button>
+                <button class="choice-button chart-choice-button first-choice" type="button" data-choice="distribution" aria-pressed="false"><small>Option B</small><span>January and December distributions</span></button>
               </div>
               <p class="first-response" id="first-response" aria-live="polite"></p>
             </div>
@@ -1194,7 +1323,7 @@
       <section class="lesson-section" id="evidence">
         <div class="section-heading">
           <span class="step-number">02</span>
-          <div><h2>Compare the evidence</h2><p>Each measure is correct. Select the measures to see which patients each one describes.</p></div>
+          <div><h2>Read the evidence</h2><p>Each measure answers a different question. Change the measure, read the chart, and notice which patient experiences remain visible.</p></div>
         </div>
 
         <div class="activity-panel">
@@ -1207,11 +1336,13 @@
               <button class="metric-button" id="metric-long" type="button" aria-pressed="false" data-metric="longWait"><small>Very long visits</small><span>Over 8 hours</span></button>
             </div>
 
+            <div class="chart-reading-tip"><strong>Read the chart</strong><p>Check the axes first. Compare January with December, then ask which patient experiences the selected measure leaves out.</p></div>
+
             <div class="chart-card" aria-live="polite">
               <div class="chart-head"><h3 id="chart-title">Median length of stay</h3><p id="chart-description">A typical visit became much shorter across 2026.</p></div>
               <svg class="metric-chart" id="metric-chart" viewBox="0 0 760 330" role="img" aria-labelledby="chart-title chart-description"></svg>
               <div class="finding-strip"><strong id="metric-change">37% lower</strong><p id="metric-finding">The median describes the middle visit rather than the longest waits.</p></div>
-              <table class="sr-only" id="metric-table"><caption id="metric-table-caption">Monthly median length of stay</caption><thead><tr><th>Month</th><th>Value</th></tr></thead><tbody></tbody></table>
+              <details class="data-details"><summary>View exact monthly values</summary><div class="data-table-wrap"><table class="data-table" id="metric-table"><caption id="metric-table-caption">Monthly median length of stay</caption><thead><tr><th>Month</th><th>Value</th></tr></thead><tbody></tbody></table></div></details>
             </div>
 
             <div class="distribution-block">
@@ -1219,7 +1350,11 @@
               <div class="chart-card">
                 <div class="histogram-legend" aria-hidden="true"><span class="legend-key"><span class="legend-swatch"></span>January</span><span class="legend-key"><span class="legend-swatch december"></span>December</span></div>
                 <div role="img" aria-label="Distribution comparison. December has more visits under two hours and more visits longer than eight hours."><div class="histogram" id="histogram"></div><div class="histogram-labels" id="histogram-labels"></div></div>
-                <table class="sr-only"><caption>Share of visits by length of stay range</caption><thead><tr><th>Range</th><th>January</th><th>December</th></tr></thead><tbody id="histogram-table"></tbody></table>
+                <details class="data-details"><summary>View exact distribution values</summary><div class="data-table-wrap"><table class="data-table"><caption>Share of visits by length of stay range</caption><thead><tr><th>Range</th><th>January</th><th>December</th></tr></thead><tbody id="histogram-table"></tbody></table></div></details>
+              </div>
+              <div class="message-comparison" aria-label="Compare chart messages">
+                <article class="message-card"><small>What one measure says</small><h4>Median stay fell 37%</h4><p>True, but limited to the middle visit. It does not describe the longest waits.</p></article>
+                <article class="message-card answer"><small>What the fuller view says</small><h4>Typical visits improved while long waits worsened</h4><p>Pair the median with a high percentile or the share of visits over eight hours.</p></article>
               </div>
             </div>
           </div>
@@ -1229,18 +1364,18 @@
       <section class="lesson-section" id="decision">
         <div class="section-heading">
           <span class="step-number">03</span>
-          <div><h2>Make a recommendation</h2><p>Account for the patients who moved faster and the patients whose waits became much longer.</p></div>
+          <div><h2>Write the message</h2><p>A chart title should state the finding the reader needs, not merely name the measure.</p></div>
         </div>
 
         <div class="activity-panel">
-          <div class="activity-toolbar"><span>Leadership recommendation</span><span>Step 3 of 3</span></div>
+          <div class="activity-toolbar"><span>Chart title exercise</span><span>Step 3 of 3</span></div>
           <div class="activity-body decision-layout">
-            <div class="decision-options" role="group" aria-label="Choose a recommendation">
-              <button class="decision-button" type="button" data-answer="expand" aria-pressed="false"><span class="decision-letter">A</span><span>Expand fast track because the median improved.</span></button>
-              <button class="decision-button" type="button" data-answer="boarding" aria-pressed="false"><span class="decision-letter">B</span><span>Keep fast track, then investigate boarding and inpatient capacity.</span></button>
-              <button class="decision-button" type="button" data-answer="report" aria-pressed="false"><span class="decision-letter">C</span><span>Continue reporting the median as the main result.</span></button>
+            <div class="decision-options" role="group" aria-label="Choose the strongest chart title">
+              <button class="decision-button" type="button" data-answer="neutral" aria-pressed="false"><span class="decision-letter">A</span><span>Emergency department length of stay, 2026</span></button>
+              <button class="decision-button" type="button" data-answer="median" aria-pressed="false"><span class="decision-letter">B</span><span>Median stay fell 37% in 2026</span></button>
+              <button class="decision-button" type="button" data-answer="balanced" aria-pressed="false"><span class="decision-letter">C</span><span>Typical visits shortened while the longest waits worsened</span></button>
             </div>
-            <aside class="decision-feedback" id="decision-feedback" aria-live="polite"><h3>Choose one option</h3><p>A defensible recommendation explains both changes in the data.</p></aside>
+            <aside class="decision-feedback" id="decision-feedback" aria-live="polite"><h3>Choose a chart title</h3><p>The strongest title states the main finding without hiding the patients who waited longest.</p></aside>
           </div>
         </div>
       </section>
@@ -1248,12 +1383,12 @@
       <section class="lesson-section" id="materials">
         <div class="section-heading">
           <span class="step-number">04</span>
-          <div><h2>Use the full module</h2><p>Students can begin here. Instructors can download the data, code, assessment, and teaching notes.</p></div>
+          <div><h2>Rebuild the visualization</h2><p>The guided lesson requires no code. Download the data and R lab when you are ready to reproduce the charts yourself.</p></div>
         </div>
 
         <div class="resource-list">
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv" download><span><small>CSV / 8,392 rows</small><strong>Synthetic emergency department dataset</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
-          <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download><span><small>R and ggplot2</small><strong>Reproducible learner lab</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
+          <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download><span><small>Optional R and ggplot2</small><strong>Rebuild the charts in R</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/assessment.md"><span><small>Learner tasks</small><strong>Assessment and rubric</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/instructor-notes.md"><span><small>Teaching guide</small><strong>Instructor notes and answer key</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
         </div>
@@ -1261,7 +1396,7 @@
         <div class="materials-note"><p>The dataset is synthetic and designed for instruction. It is not evidence about any hospital or patient population.</p><p>Source, validation checks, and reuse terms are available on <a class="content-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p></div>
       </section>
 
-      <footer class="site-footer">Open Clinical Learning Commons / Module preview 0.4.1 / Synthetic data only</footer>
+      <footer class="site-footer">Open Clinical Learning Commons / Module preview 0.5.0 / Synthetic data only</footer>
     </main>
   </div>
 
@@ -1289,7 +1424,10 @@
         distribution.december.reduce((sum, value) => sum + value, 0) === 698,
         Math.round((metrics.median.values.at(-1) / metrics.median.values[0] - 1) * 100) === -37,
         Math.round((metrics.p90.values.at(-1) / metrics.p90.values[0] - 1) * 100) === 83,
-        Math.round((metrics.longWait.values.at(-1) / metrics.longWait.values[0]) * 10) / 10 === 4.4
+        Math.round((metrics.longWait.values.at(-1) / metrics.longWait.values[0]) * 10) / 10 === 4.4,
+        document.querySelectorAll(".first-choice").length === 2,
+        document.querySelectorAll(".decision-button").length === 3,
+        Object.hasOwn(feedback, "balanced")
       ];
       document.documentElement.dataset.checks = checks.every(Boolean) ? "passed" : "failed";
       console.assert(checks.every(Boolean), "The embedded teaching data failed its checks.");
@@ -1424,16 +1562,16 @@
     document.querySelectorAll(".first-choice").forEach(button => button.addEventListener("click", () => {
       document.querySelectorAll(".first-choice").forEach(choice => choice.setAttribute("aria-pressed", "false"));
       button.setAttribute("aria-pressed", "true");
-      document.querySelector("#first-response").textContent = button.dataset.choice === "yes"
-        ? "That is a reasonable first reading. Now test whether the median represents all patients."
-        : "Good restraint. A summary is useful only when it preserves what the decision needs.";
+      document.querySelector("#first-response").textContent = button.dataset.choice === "distribution"
+        ? "Good choice. A distribution shows how visits are spread and whether the longest waits changed."
+        : "The line chart confirms that the typical visit improved. You still need a distribution or tail measure to see what happened to longer waits.";
       completeStep(1);
     }));
 
     const feedback = {
-      expand: { title: "Incomplete recommendation", body: "Fast track helped many discharged patients, but expansion does not address the growing number of visits over eight hours." },
-      boarding: { title: "Defensible recommendation", body: "Keep the improvement for discharged patients. Investigate boarding and inpatient capacity, where the longest waits are growing." },
-      report: { title: "Misleading reporting choice", body: "Keep the median in the report, but pair it with a high percentile or the share above eight hours." }
+      neutral: { title: "Accurate but unhelpful", body: "This title names the topic but makes the reader discover the finding alone." },
+      median: { title: "True but incomplete", body: "The title reports the typical visit and hides the patients whose waits became much longer." },
+      balanced: { title: "Decision-ready title", body: "This title preserves both findings. Leadership can keep the fast-track gains while investigating boarding and inpatient capacity." }
     };
 
     document.querySelectorAll(".decision-button").forEach(button => button.addEventListener("click", () => {
@@ -1442,7 +1580,7 @@
         option.classList.remove("correct", "incorrect");
         option.setAttribute("aria-pressed", "false");
       });
-      button.classList.add(answer === "boarding" ? "correct" : "incorrect");
+      button.classList.add(answer === "balanced" ? "correct" : "incorrect");
       button.setAttribute("aria-pressed", "true");
       document.querySelector("#decision-feedback h3").textContent = feedback[answer].title;
       document.querySelector("#decision-feedback p").textContent = feedback[answer].body;
