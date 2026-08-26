@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#173d7a">
+  <meta name="description" content="A guided visualization investigation using synthetic emergency department data.">
+  <title>Distributions versus summaries | Open Clinical Learning Commons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f4f1e8;
+      --paper-raised: #fffdf7;
+      --ink: #17202a;
+      --muted: #5f6871;
+      --blue: #173d7a;
+      --blue-soft: #dce6f4;
+      --red: #c94935;
+      --red-soft: #f6dfd8;
+      --green: #22634d;
+      --green-soft: #dcebe3;
+      --line: #c8c3b6;
+      --shadow: 0 18px 60px rgba(30, 43, 54, 0.1);
+      --radius: 6px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 1px 1px, rgba(23, 61, 122, 0.09) 1px, transparent 1.2px) 0 0 / 24px 24px,
+        var(--paper);
+      font-family: "IBM Plex Sans", sans-serif;
+      line-height: 1.55;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    a {
+      color: var(--blue);
+      text-underline-offset: 0.2em;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #e6a43b;
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 20;
+      padding: 0.65rem 0.9rem;
+      color: white;
+      background: var(--ink);
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 0.9rem clamp(1rem, 4vw, 4rem);
+      border-bottom: 1px solid rgba(23, 32, 42, 0.18);
+      background: rgba(244, 241, 232, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .brand strong {
+      font-family: "Newsreader", serif;
+      font-size: 1.08rem;
+      font-weight: 650;
+    }
+
+    .preview-tag {
+      padding: 0.12rem 0.42rem;
+      border: 1px solid var(--blue);
+      border-radius: 999px;
+      color: var(--blue);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.86rem;
+    }
+
+    .site-nav a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+      gap: clamp(2rem, 7vw, 7rem);
+      min-height: 78vh;
+      padding: clamp(4rem, 10vw, 9rem) clamp(1.25rem, 7vw, 7rem) 5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -6rem;
+      bottom: -8rem;
+      width: 26rem;
+      height: 26rem;
+      border: 1px solid rgba(23, 61, 122, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5rem rgba(23, 61, 122, 0.035), 0 0 0 10rem rgba(23, 61, 122, 0.025);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 1.25rem;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Newsreader", serif;
+      font-weight: 650;
+      line-height: 1.02;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(3.1rem, 8vw, 7.6rem);
+      letter-spacing: -0.045em;
+    }
+
+    .hero-deck {
+      max-width: 660px;
+      margin: 1.75rem 0 2rem;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+    }
+
+    .primary-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid var(--blue);
+      border-radius: 2px;
+      color: white;
+      background: var(--blue);
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 5px 5px 0 var(--ink);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .primary-link:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .case-slip {
+      align-self: center;
+      position: relative;
+      z-index: 1;
+      padding: 1.4rem;
+      border: 1px solid var(--ink);
+      background: var(--paper-raised);
+      box-shadow: 10px 12px 0 var(--blue-soft);
+      transform: rotate(1.5deg);
+    }
+
+    .case-slip::before {
+      content: "SYNTHETIC CASE";
+      position: absolute;
+      top: -0.75rem;
+      right: 1rem;
+      padding: 0.28rem 0.55rem;
+      color: white;
+      background: var(--red);
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+
+    .case-slip dl {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem 1rem;
+      margin: 0;
+    }
+
+    .case-slip dt,
+    .case-slip dd {
+      padding-bottom: 0.65rem;
+      border-bottom: 1px dotted var(--line);
+    }
+
+    .case-slip dt {
+      color: var(--muted);
+    }
+
+    .case-slip dd {
+      margin: 0;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .section {
+      padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 7rem);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+      gap: clamp(2rem, 7vw, 7rem);
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+
+    .section-number {
+      display: inline-block;
+      width: 2.15rem;
+      height: 2.15rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      font-size: 0.78rem;
+      font-weight: 600;
+      line-height: 2.05rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4.9rem);
+      letter-spacing: -0.035em;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin: 0.45rem 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .brief-card {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.65fr) minmax(0, 1.35fr);
+      border: 1px solid var(--ink);
+      background: var(--paper-raised);
+      box-shadow: var(--shadow);
+    }
+
+    .brief-label {
+      padding: 2rem;
+      color: white;
+      background: var(--blue);
+    }
+
+    .brief-label p {
+      margin: 0;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brief-label strong {
+      display: block;
+      margin-top: 4rem;
+      font-family: "Newsreader", serif;
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .brief-body {
+      padding: clamp(2rem, 5vw, 4rem);
+    }
+
+    .brief-body blockquote {
+      margin: 0 0 2rem;
+      font-family: "Newsreader", serif;
+      font-size: clamp(1.6rem, 3vw, 2.55rem);
+      line-height: 1.18;
+    }
+
+    .question-label {
+      margin: 0 0 0.75rem;
+      font-weight: 600;
+    }
+
+    .choice-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .choice-button,
+    .metric-button {
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      color: var(--ink);
+      background: transparent;
+      cursor: pointer;
+      transition: color 140ms ease, background 140ms ease, transform 140ms ease;
+    }
+
+    .choice-button {
+      padding: 0.7rem 1rem;
+      font-weight: 500;
+    }
+
+    .choice-button:hover,
+    .choice-button[aria-pressed="true"] {
+      color: white;
+      background: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .first-response {
+      min-height: 1.6em;
+      margin: 1rem 0 0;
+      color: var(--muted);
+    }
+
+    .analysis-section {
+      background: rgba(255, 253, 247, 0.64);
+    }
+
+    .metric-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--ink);
+      background: var(--paper-raised);
+    }
+
+    .metric-button {
+      min-height: 6.4rem;
+      padding: 1rem;
+      border: 0;
+      border-right: 1px solid var(--ink);
+      text-align: left;
+    }
+
+    .metric-button:last-child {
+      border-right: 0;
+    }
+
+    .metric-button:hover,
+    .metric-button[aria-pressed="true"] {
+      color: white;
+      background: var(--blue);
+    }
+
+    .metric-button span {
+      display: block;
+      margin-top: 0.5rem;
+      font-family: "Newsreader", serif;
+      font-size: 1.45rem;
+      font-weight: 650;
+    }
+
+    .chart-card {
+      padding: clamp(1rem, 3vw, 2rem);
+      border: 1px solid var(--ink);
+      background: var(--paper-raised);
+      box-shadow: var(--shadow);
+    }
+
+    .chart-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .chart-head h3 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+    }
+
+    .chart-head p {
+      max-width: 500px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .chart-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .metric-chart {
+      display: block;
+      width: 100%;
+      min-width: 660px;
+      height: auto;
+    }
+
+    .chart-grid {
+      stroke: #d8d3c7;
+      stroke-width: 1;
+    }
+
+    .chart-axis-label {
+      fill: var(--muted);
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 12px;
+    }
+
+    .chart-line {
+      fill: none;
+      stroke: var(--blue);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 4;
+    }
+
+    .chart-point {
+      fill: var(--paper-raised);
+      stroke: var(--blue);
+      stroke-width: 3;
+    }
+
+    .chart-point.end {
+      fill: var(--red);
+      stroke: var(--red);
+    }
+
+    .chart-value {
+      fill: var(--ink);
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .finding-strip {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1.25rem;
+      padding: 1rem 1.2rem;
+      background: var(--blue-soft);
+    }
+
+    .finding-strip strong {
+      font-family: "Newsreader", serif;
+      font-size: 1.5rem;
+    }
+
+    .finding-strip p {
+      margin: 0;
+    }
+
+    .distribution-block {
+      margin-top: 5rem;
+    }
+
+    .distribution-heading {
+      max-width: 720px;
+      margin-bottom: 1.5rem;
+    }
+
+    .distribution-heading h3 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .distribution-heading p {
+      color: var(--muted);
+    }
+
+    .histogram-legend {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .legend-key {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .legend-swatch {
+      width: 1rem;
+      height: 0.7rem;
+      border: 1px solid var(--ink);
+      background: var(--blue-soft);
+    }
+
+    .legend-swatch.december {
+      background: var(--red);
+    }
+
+    .histogram {
+      display: grid;
+      grid-template-columns: repeat(11, minmax(48px, 1fr));
+      gap: 0.35rem;
+      min-width: 720px;
+      min-height: 280px;
+      padding-top: 1rem;
+      border-bottom: 1px solid var(--ink);
+      background: repeating-linear-gradient(to top, transparent 0, transparent 54px, rgba(23, 32, 42, 0.09) 55px);
+    }
+
+    .histogram-bin {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      align-items: end;
+      min-height: 260px;
+      position: relative;
+    }
+
+    .histogram-bar {
+      min-height: 2px;
+      border: 1px solid var(--ink);
+      border-bottom: 0;
+      background: var(--blue-soft);
+      transition: height 500ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .histogram-bar.december {
+      background: var(--red);
+    }
+
+    .histogram-labels {
+      display: grid;
+      grid-template-columns: repeat(11, minmax(48px, 1fr));
+      gap: 0.35rem;
+      min-width: 720px;
+      padding-top: 0.6rem;
+      color: var(--muted);
+      font-size: 0.68rem;
+      text-align: center;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    .decision-options {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .decision-button {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      width: 100%;
+      padding: 1.1rem;
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      color: var(--ink);
+      background: var(--paper-raised);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .decision-button:hover {
+      transform: translateX(4px);
+    }
+
+    .decision-letter {
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      line-height: 1.85rem;
+      text-align: center;
+    }
+
+    .decision-button.correct {
+      border-color: var(--green);
+      color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .decision-button.incorrect {
+      border-color: var(--red);
+      color: var(--red);
+      background: var(--red-soft);
+    }
+
+    .decision-feedback {
+      min-height: 13rem;
+      padding: 1.5rem;
+      border: 1px solid var(--ink);
+      background: var(--paper-raised);
+      box-shadow: 8px 8px 0 var(--blue-soft);
+    }
+
+    .decision-feedback h3 {
+      margin: 0 0 0.6rem;
+      font-size: 2rem;
+    }
+
+    .decision-feedback p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .program-section {
+      color: #f8f5eb;
+      background: var(--ink);
+    }
+
+    .program-section .eyebrow,
+    .program-section .section-intro {
+      color: #bdc9d6;
+    }
+
+    .program-section .section-number {
+      border-color: #f8f5eb;
+    }
+
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 3rem;
+      border: 1px solid #697580;
+    }
+
+    .asset-link {
+      min-height: 13rem;
+      padding: 1.4rem;
+      border-right: 1px solid #697580;
+      color: #f8f5eb;
+      text-decoration: none;
+      transition: color 150ms ease, background 150ms ease;
+    }
+
+    .asset-link:last-child {
+      border-right: 0;
+    }
+
+    .asset-link:hover {
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .asset-link small {
+      display: block;
+      margin-bottom: 3rem;
+      color: #aab5bf;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .asset-link:hover small {
+      color: var(--muted);
+    }
+
+    .asset-link strong {
+      display: block;
+      font-family: "Newsreader", serif;
+      font-size: 1.6rem;
+      line-height: 1.08;
+    }
+
+    .program-note {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+      color: #bdc9d6;
+    }
+
+    .program-note p {
+      margin: 0;
+    }
+
+    .program-note a {
+      color: white;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem clamp(1.25rem, 7vw, 7rem);
+      color: var(--muted);
+      background: var(--paper);
+      font-size: 0.82rem;
+    }
+
+    .data-error {
+      display: none;
+      margin: 0;
+      padding: 1rem;
+      color: #721c15;
+      background: var(--red-soft);
+      text-align: center;
+    }
+
+    html[data-checks="failed"] .data-error {
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .site-nav {
+        display: none;
+      }
+
+      .hero,
+      .section-heading,
+      .brief-card,
+      .decision-grid,
+      .program-note {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .case-slip {
+        max-width: 480px;
+      }
+
+      .metric-tabs,
+      .asset-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .metric-button:nth-child(2) {
+        border-right: 0;
+      }
+
+      .metric-button:nth-child(-n+2) {
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .asset-link:nth-child(2) {
+        border-right: 0;
+      }
+
+      .asset-link:nth-child(-n+2) {
+        border-bottom: 1px solid #697580;
+      }
+
+      .chart-head {
+        display: block;
+      }
+
+      .chart-head p {
+        margin-top: 0.6rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 3.25rem;
+      }
+
+      .brand span:not(.preview-tag) {
+        display: none;
+      }
+
+      .metric-tabs,
+      .asset-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-button,
+      .metric-button:nth-child(2),
+      .asset-link,
+      .asset-link:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .asset-link {
+        min-height: 9rem;
+      }
+
+      .asset-link small {
+        margin-bottom: 1.5rem;
+      }
+
+      footer {
+        display: block;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the investigation</a>
+  <p class="data-error" role="alert">The teaching data did not pass the page checks. Please use the downloadable module while this preview is repaired.</p>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Open Clinical Learning Commons home">
+      <strong>Open Clinical Learning Commons</strong>
+      <span class="preview-tag">Preview</span>
+    </a>
+    <nav class="site-nav" aria-label="Module navigation">
+      <a href="#brief">The brief</a>
+      <a href="#evidence">Explore</a>
+      <a href="#decision">Decide</a>
+      <a href="#materials">Materials</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div>
+        <p class="eyebrow">Module 04 / Distributions versus summaries</p>
+        <h1>One number says the emergency department improved.</h1>
+        <p class="hero-deck">Look at the patients it leaves out. This five minute investigation uses 8,392 synthetic visits. You do not need an account or coding experience.</p>
+        <a class="primary-link" href="#brief">Start the investigation <span aria-hidden="true">↓</span></a>
+      </div>
+      <aside class="case-slip" aria-label="Case file summary">
+        <dl>
+          <dt>Setting</dt><dd>Emergency department</dd>
+          <dt>Period</dt><dd>January to December 2026</dd>
+          <dt>Reported success</dt><dd>Median down 37%</dd>
+          <dt>Dataset</dt><dd>Fully synthetic</dd>
+          <dt>Your role</dt><dd>Clinical analyst</dd>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section" id="brief">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">01</span>
+            <p class="eyebrow">The brief</p>
+            <h2>Make the first call.</h2>
+          </div>
+          <p class="section-intro">The fast-track pathway was designed to move lower acuity patients through the department more quickly. Leadership has one result and a proposal.</p>
+        </div>
+
+        <div class="brief-card">
+          <div class="brief-label">
+            <p>Leadership note</p>
+            <strong>Median length of stay fell from 186 to 117 minutes.</strong>
+          </div>
+          <div class="brief-body">
+            <blockquote>"The new pathway is working. We should expand fast track across the department."</blockquote>
+            <p class="question-label">Would you support the proposal from this result alone?</p>
+            <div class="choice-row" role="group" aria-label="Initial decision">
+              <button class="choice-button first-choice" type="button" data-choice="yes" aria-pressed="false">Yes, expand it</button>
+              <button class="choice-button first-choice" type="button" data-choice="wait" aria-pressed="false">Not yet, show me more</button>
+            </div>
+            <p class="first-response" id="first-response" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section analysis-section" id="evidence">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">02</span>
+            <p class="eyebrow">The evidence</p>
+            <h2>Change the measure. Change the story.</h2>
+          </div>
+          <p class="section-intro">Each measure is correct. Select all four and notice which patients each one describes.</p>
+        </div>
+
+        <div class="metric-tabs" role="group" aria-label="Choose a length of stay measure">
+          <button class="metric-button" id="metric-median" type="button" aria-pressed="true" data-metric="median">Typical visit<span>Median</span></button>
+          <button class="metric-button" id="metric-mean" type="button" aria-pressed="false" data-metric="mean">Total burden<span>Mean</span></button>
+          <button class="metric-button" id="metric-p90" type="button" aria-pressed="false" data-metric="p90">Longer visits<span>90th percentile</span></button>
+          <button class="metric-button" id="metric-long" type="button" aria-pressed="false" data-metric="longWait">Very long visits<span>Over 8 hours</span></button>
+        </div>
+
+        <div class="chart-card" aria-live="polite">
+          <div class="chart-head">
+            <h3 id="chart-title">Median length of stay</h3>
+            <p id="chart-description">A typical visit became much shorter across 2026.</p>
+          </div>
+          <div class="chart-wrap">
+            <svg class="metric-chart" id="metric-chart" viewBox="0 0 760 330" role="img" aria-labelledby="chart-title chart-description"></svg>
+          </div>
+          <div class="finding-strip">
+            <strong id="metric-change">37% lower</strong>
+            <p id="metric-finding">The median supports leadership's success story, but it describes the middle visit rather than the longest waits.</p>
+          </div>
+        </div>
+
+        <div class="distribution-block">
+          <div class="distribution-heading">
+            <p class="eyebrow">Where the visits went</p>
+            <h3>The middle moved left. A second group stretched far right.</h3>
+            <p>These bars show the share of visits in each length of stay range. December has many more short visits and a larger group beyond eight hours.</p>
+          </div>
+          <div class="chart-card">
+            <div class="histogram-legend" aria-hidden="true">
+              <span class="legend-key"><span class="legend-swatch"></span>January</span>
+              <span class="legend-key"><span class="legend-swatch december"></span>December</span>
+            </div>
+            <div class="chart-wrap" role="img" aria-label="Histogram comparing January and December. December has more visits under two hours and more visits longer than eight hours.">
+              <div class="histogram" id="histogram"></div>
+              <div class="histogram-labels" id="histogram-labels"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="decision">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">03</span>
+            <p class="eyebrow">Your recommendation</p>
+            <h2>What should leadership do next?</h2>
+          </div>
+          <p class="section-intro">The fast-track pathway did help many discharged patients. The worsening tail points to a different operational problem.</p>
+        </div>
+
+        <div class="decision-grid">
+          <div class="decision-options" role="group" aria-label="Choose a recommendation">
+            <button class="decision-button" type="button" data-answer="expand">
+              <span class="decision-letter">A</span>
+              <span>Expand fast track because the median improved.</span>
+            </button>
+            <button class="decision-button" type="button" data-answer="boarding">
+              <span class="decision-letter">B</span>
+              <span>Keep fast track, then investigate boarding and inpatient capacity.</span>
+            </button>
+            <button class="decision-button" type="button" data-answer="report">
+              <span class="decision-letter">C</span>
+              <span>Continue reporting the median as the main performance result.</span>
+            </button>
+          </div>
+          <aside class="decision-feedback" id="decision-feedback" aria-live="polite">
+            <h3>Choose one.</h3>
+            <p>A strong recommendation accounts for both the patients who moved faster and the patients whose waits became much longer.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section program-section" id="materials">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">04</span>
+            <p class="eyebrow">For learners and programs</p>
+            <h2>This preview sits on top of a complete teaching package.</h2>
+          </div>
+          <p class="section-intro">Students can begin in the browser. Instructors can download the synthetic data, reproducible lab, assessment, and teaching notes.</p>
+        </div>
+
+        <div class="asset-grid">
+          <a class="asset-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv" download>
+            <small>8,392 rows / CSV</small>
+            <strong>Download the synthetic dataset</strong>
+          </a>
+          <a class="asset-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download>
+            <small>R and ggplot2</small>
+            <strong>Open the reproducible lab</strong>
+          </a>
+          <a class="asset-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/assessment.md">
+            <small>Learner tasks</small>
+            <strong>Read the assessment</strong>
+          </a>
+          <a class="asset-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/instructor-notes.md">
+            <small>Rubric and answers</small>
+            <strong>Read the instructor notes</strong>
+          </a>
+        </div>
+
+        <div class="program-note">
+          <p>The dataset is synthetic and designed for instruction. It is not evidence about any hospital, patient population, or intervention.</p>
+          <p>Module source, validation checks, and reuse terms are available on <a href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Open Clinical Learning Commons / Visualization Module 04</span>
+    <span>Preview 0.4.0 / Synthetic data only</span>
+  </footer>
+
+  <script>
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const metrics = {
+      median: {
+        title: "Median length of stay",
+        description: "A typical visit became much shorter across 2026.",
+        values: [185.5, 180, 174, 167.5, 161.5, 155, 149, 142, 136, 130, 123, 116.5],
+        unit: " min",
+        change: "37% lower",
+        finding: "The median supports leadership's success story, but it describes the middle visit rather than the longest waits."
+      },
+      mean: {
+        title: "Mean length of stay",
+        description: "The average changed very little across the same period.",
+        values: [205.6, 204.9, 205, 204.2, 203.6, 202.8, 203, 202.3, 201.6, 201.7, 200.1, 200.2],
+        unit: " min",
+        change: "2.6% lower",
+        finding: "The near-flat mean could be mistaken for an unchanged system. It blends shorter discharged visits with much longer boarded visits."
+      },
+      p90: {
+        title: "90th percentile length of stay",
+        description: "The time within which 90% of visits finished rose sharply.",
+        values: [294, 293.1, 294, 294.1, 295.1, 297.2, 301.4, 308.4, 314.6, 335.4, 360.2, 536.8],
+        unit: " min",
+        change: "83% higher",
+        finding: "The longest waits became much worse. This measure points away from fast track and toward the patients stuck waiting for inpatient beds."
+      },
+      longWait: {
+        title: "Visits longer than eight hours",
+        description: "The share of visits beyond a clinically meaningful threshold grew each month.",
+        values: [2.4, 3, 3.9, 4.4, 5.1, 5.9, 6.7, 7.4, 8.2, 9, 9.6, 10.5],
+        unit: "%",
+        change: "4.4 times higher",
+        finding: "By December, more than one in ten visits lasted over eight hours. A falling median does not represent those patients."
+      }
+    };
+
+    const JanuaryCounts = [99, 421, 153, 10, 3, 4, 4, 3, 2, 0, 1];
+    const DecemberCounts = [363, 204, 55, 3, 8, 18, 19, 14, 8, 4, 2];
+    const bins = ["0 to 2h", "2 to 4h", "4 to 6h", "6 to 8h", "8 to 10h", "10 to 12h", "12 to 14h", "14 to 16h", "16 to 18h", "18 to 20h", "20h+"];
+
+    function verifyTeachingData() {
+      const checks = [
+        Object.values(metrics).every(metric => metric.values.length === months.length),
+        JanuaryCounts.reduce((sum, value) => sum + value, 0) === 700,
+        DecemberCounts.reduce((sum, value) => sum + value, 0) === 698,
+        Math.round((metrics.median.values.at(-1) / metrics.median.values[0] - 1) * 100) === -37,
+        Math.round((metrics.p90.values.at(-1) / metrics.p90.values[0] - 1) * 100) === 83,
+        Math.round((metrics.longWait.values.at(-1) / metrics.longWait.values[0]) * 10) / 10 === 4.4
+      ];
+
+      document.documentElement.dataset.checks = checks.every(Boolean) ? "passed" : "failed";
+      console.assert(checks.every(Boolean), "The embedded teaching data failed its checks.");
+    }
+
+    function svgElement(name, attributes = {}) {
+      const node = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attributes).forEach(([key, value]) => node.setAttribute(key, value));
+      return node;
+    }
+
+    function renderMetric(metricName) {
+      const metric = metrics[metricName];
+      const svg = document.querySelector("#metric-chart");
+      const width = 760;
+      const height = 330;
+      const padding = { top: 35, right: 38, bottom: 45, left: 60 };
+      const plotWidth = width - padding.left - padding.right;
+      const plotHeight = height - padding.top - padding.bottom;
+      const rawMin = Math.min(...metric.values);
+      const rawMax = Math.max(...metric.values);
+      const spread = rawMax - rawMin || rawMax * 0.1;
+      const min = Math.max(0, rawMin - spread * 0.18);
+      const max = rawMax + spread * 0.18;
+      const x = index => padding.left + (index / (months.length - 1)) * plotWidth;
+      const y = value => padding.top + ((max - value) / (max - min)) * plotHeight;
+      const formatValue = value => `${Number.isInteger(value) ? value : value.toFixed(1)}${metric.unit}`;
+
+      svg.replaceChildren();
+
+      for (let index = 0; index <= 4; index += 1) {
+        const fraction = index / 4;
+        const yPosition = padding.top + fraction * plotHeight;
+        const value = max - fraction * (max - min);
+        svg.append(svgElement("line", { x1: padding.left, y1: yPosition, x2: width - padding.right, y2: yPosition, class: "chart-grid" }));
+
+        const label = svgElement("text", { x: padding.left - 10, y: yPosition + 4, "text-anchor": "end", class: "chart-axis-label" });
+        label.textContent = metric.unit === "%" ? `${value.toFixed(0)}%` : value.toFixed(0);
+        svg.append(label);
+      }
+
+      months.forEach((month, index) => {
+        const label = svgElement("text", { x: x(index), y: height - 14, "text-anchor": "middle", class: "chart-axis-label" });
+        label.textContent = month;
+        svg.append(label);
+      });
+
+      const points = metric.values.map((value, index) => `${x(index)},${y(value)}`).join(" ");
+      svg.append(svgElement("polyline", { points, class: "chart-line" }));
+
+      metric.values.forEach((value, index) => {
+        svg.append(svgElement("circle", {
+          cx: x(index),
+          cy: y(value),
+          r: index === metric.values.length - 1 ? 6 : 4,
+          class: `chart-point${index === metric.values.length - 1 ? " end" : ""}`
+        }));
+      });
+
+      [0, metric.values.length - 1].forEach(index => {
+        const label = svgElement("text", {
+          x: x(index),
+          y: y(metric.values[index]) - 14,
+          "text-anchor": index === 0 ? "start" : "end",
+          class: "chart-value"
+        });
+        label.textContent = formatValue(metric.values[index]);
+        svg.append(label);
+      });
+
+      document.querySelector("#chart-title").textContent = metric.title;
+      document.querySelector("#chart-description").textContent = metric.description;
+      document.querySelector("#metric-change").textContent = metric.change;
+      document.querySelector("#metric-finding").textContent = metric.finding;
+
+      document.querySelectorAll(".metric-button").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.metric === metricName));
+      });
+    }
+
+    function renderHistogram() {
+      const histogram = document.querySelector("#histogram");
+      const labels = document.querySelector("#histogram-labels");
+      const januaryTotal = JanuaryCounts.reduce((sum, value) => sum + value, 0);
+      const decemberTotal = DecemberCounts.reduce((sum, value) => sum + value, 0);
+      const percentages = [
+        ...JanuaryCounts.map(value => value / januaryTotal),
+        ...DecemberCounts.map(value => value / decemberTotal)
+      ];
+      const maxPercentage = Math.max(...percentages);
+
+      bins.forEach((label, index) => {
+        const bin = document.createElement("div");
+        bin.className = "histogram-bin";
+
+        const january = document.createElement("div");
+        const januaryPercent = JanuaryCounts[index] / januaryTotal;
+        january.className = "histogram-bar";
+        january.style.height = `${Math.max(1, januaryPercent / maxPercentage * 100)}%`;
+        january.title = `January, ${label}: ${(januaryPercent * 100).toFixed(1)}%`;
+
+        const december = document.createElement("div");
+        const decemberPercent = DecemberCounts[index] / decemberTotal;
+        december.className = "histogram-bar december";
+        december.style.height = `${Math.max(1, decemberPercent / maxPercentage * 100)}%`;
+        december.title = `December, ${label}: ${(decemberPercent * 100).toFixed(1)}%`;
+
+        bin.append(january, december);
+        histogram.append(bin);
+
+        const binLabel = document.createElement("span");
+        binLabel.textContent = label;
+        labels.append(binLabel);
+      });
+    }
+
+    document.querySelectorAll(".metric-button").forEach(button => {
+      button.addEventListener("click", () => renderMetric(button.dataset.metric));
+    });
+
+    document.querySelectorAll(".first-choice").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".first-choice").forEach(choice => choice.setAttribute("aria-pressed", "false"));
+        button.setAttribute("aria-pressed", "true");
+        document.querySelector("#first-response").textContent = button.dataset.choice === "yes"
+          ? "That is a reasonable first reading. Now test whether the median represents all patients."
+          : "Good restraint. A summary is useful only when it preserves what the decision needs.";
+      });
+    });
+
+    const feedback = {
+      expand: {
+        title: "Incomplete recommendation",
+        body: "Fast track helped the majority group, but expanding it does not address the growing number of patients waiting more than eight hours."
+      },
+      boarding: {
+        title: "Defensible recommendation",
+        body: "Keep the improvement for discharged patients. Redirect the next investigation toward boarding and inpatient capacity, where the longest waits are growing."
+      },
+      report: {
+        title: "Misleading reporting choice",
+        body: "The median should remain part of the report, but it cannot stand alone. Pair it with a high percentile or the share above eight hours."
+      }
+    };
+
+    document.querySelectorAll(".decision-button").forEach(button => {
+      button.addEventListener("click", () => {
+        const answer = button.dataset.answer;
+        document.querySelectorAll(".decision-button").forEach(option => option.classList.remove("correct", "incorrect"));
+        button.classList.add(answer === "boarding" ? "correct" : "incorrect");
+        document.querySelector("#decision-feedback").innerHTML = `<h3>${feedback[answer].title}</h3><p>${feedback[answer].body}</p>`;
+      });
+    });
+
+    verifyTeachingData();
+    renderMetric("median");
+    renderHistogram();
+  </script>
+</body>
+</html>
