@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-15",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-datavis-04",
+    "title": "Distributions versus summaries",
+    "version": "0.2.0",
+    "course": "DA-730: Analyzing, Visualizing, and Storytelling with Data"
+  },
+  "data": {
+    "id": "oclc-ed-los-2026",
+    "version": "0.1.0",
+    "path": "data/ed_los_2026.csv",
+    "synthetic": true,
+    "variant": "real",
+    "seed": 730,
+    "row_count": 8392,
+    "columns": [
+      "encounter_id",
+      "arrival_date",
+      "esi",
+      "age_group",
+      "disposition",
+      "boarded",
+      "los_min"
+    ],
+    "sha256": "14d5a8e12084b739a0f95331334b6103ed88a9c4eb628ae4c0c9c52fdd38f0d9"
+  },
+  "environment": {
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "synthetic_data": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "source": {
+    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "author": "Ali Goff",
+    "source_date": "2026-08-15",
+    "markdown_path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "note": "The synthetic data encode teaching requirements from the source design. They were not fitted to or derived from patient records."
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "course designer and content owner"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and release direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "implementation support for code, checks, and documentation"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-15",
+      "evidence": "A fresh clone of the remote branch passed generator determinism, all variant contracts, lab execution, seven chart outputs, the clean-worktree check, and the manifest checksum check."
+    },
+    "required_human_roles": [
+      {
+        "role": "faculty and source fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "emergency department content",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "structural_checks": "pass",
+    "clean_clone": "pass on remote branch codex/datavis-module",
+    "real_variant_checks": "18 of 18 pass",
+    "null_variant_checks": "15 of 15 pass",
+    "trivial_variant_checks": "15 of 15 pass",
+    "determinism": "same variant and seed produce byte-identical CSV files",
+    "different_seed": "seed 731 produces a different file that preserves the real variant contract",
+    "measured_results": {
+      "overall_mean_divided_by_median": 1.335,
+      "disposition_count_ratio": 3.348,
+      "boarded_minus_nonboarded_admitted_median_min": 530.0,
+      "january_to_december_boarding_change_percentage_points": 36.3,
+      "january_to_december_mean_change_percent": -2.6,
+      "january_to_december_p90_change_percent": 82.6,
+      "smallest_esi_group_n": 66,
+      "unweighted_group_mean_gap_min": 72.2
+    },
+    "hidden_process_visual_preview": {
+      "status": "observed-in-build-preview",
+      "observation": "The admitted density has a lower-stay process and a distinct boarded mode near 782 minutes; pooling weakens the longer-stay mode.",
+      "human_confirmation": "pending"
+    }
+  },
+  "known_issues": [
+    "The dataset is designed for instruction and is not evidence about any hospital, patient population, or intervention.",
+    "Acuity and age group are assigned independently of length of stay, so they should not be used for clinical inference.",
+    "The model omits staffing, occupancy, seasonality, transfers, censoring, and other real emergency department processes.",
+    "Technical execution has been tested on Windows; human faculty, clinical, accessibility, and independent-instructor reviews are pending."
+  ]
+}

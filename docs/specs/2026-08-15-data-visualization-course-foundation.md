@@ -1,6 +1,6 @@
 # Open Clinical Learning Commons: data visualization course foundation
 
-- Status: draft 0.1 for faculty review
+- Status: active draft; Module 04 runnable release candidate complete, human review pending
 - Date: 2026-08-15
 - Source course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 
@@ -20,7 +20,23 @@ This specification draws from three documents supplied for the project:
 - The IDEA Fellowship for Emergency Medicine prospectus;
 - The IDEA Fellowship and MSDA curriculum and Open Clinical Learning Commons alignment one-pager.
 
-The source files are not copied into this public repository. Course authors should confirm permission and attribution before publishing adapted instructional text.
+The original DOCX and fellowship PDFs are not copied into this public repository. Course authors should confirm permission and attribution before publishing adapted instructional text.
+
+The Word document has now been converted to a public [Markdown source record](../source/ali-goff-da-730-course-redesign.md) at Shuhan He's direction. The separate [Module 04 record](../../courses/data-visualization/modules/04-distributions-vs-summaries/README.md) adapts that source into the Commons module contract. The [Module 04 build specification](2026-08-15-ali-goff-module-04-build-spec.md) defines the runnable package, validation rules, assessment, review gates, and release criteria.
+
+## Implementation status
+
+| Artifact | Status |
+|---|---|
+| Ali Goff course document in Markdown | Complete |
+| Data visualization course landing page | Complete |
+| Module 04 content record | Complete |
+| Module 04 implementation and release specification | Complete |
+| Synthetic data generator and checks | Complete |
+| Learner R lab and critique chart code | Complete |
+| Generated dataset and release manifest | Complete |
+| Assessment and instructor key | Complete |
+| Faculty, clinical, accessibility, and independent-instructor review | Pending |
 
 ## Purpose
 
@@ -172,8 +188,8 @@ courses/data-visualization/
 
 ## Release sequence
 
-1. Foundation: approve this course and release contract.
-2. Vertical slice: build and test Module 04 end to end.
+1. Foundation: approve this course and release contract. The draft is published for review.
+2. Vertical slice: the Module 04 runnable candidate is complete; record the four human reviews before alpha.
 3. Course shell: add the remaining ten module briefs and assemble the Fall 2026 wrapper.
 4. Teaching release: run the course, log defects, and revise the module contract.
 5. Commons starter: connect tested modules to a small, versioned synthetic and open data release.
@@ -182,8 +198,8 @@ courses/data-visualization/
 
 The first release will not build the full two-hospital synthetic health system, all eleven finished modules, Python mirrors, a learning management system, credentials, or a contribution portal. Add those only after Module 04 proves the release contract.
 
-## Faculty decisions before Module 04 build
+## Faculty decisions before Module 04 alpha
 
-1. Confirm R and ggplot2 as the Fall 2026 graded environment. Recommendation: yes, with the concept core kept tool independent.
-2. Confirm whether the `boarded` field ships in the learner dataset or is released after the first critique. Recommendation: ship it for the transition cohort.
-3. Confirm the faculty reviewers for course content, clinical realism, assessment, accessibility, and data release.
+1. Confirm R and ggplot2 as the Fall 2026 graded environment. The candidate uses them while keeping the concept core tool independent.
+2. Confirm whether `boarded`, currently included for the transition cohort, should remain visible in the final learner release.
+3. Name the faculty, clinical, accessibility, and independent-instructor reviewers.
