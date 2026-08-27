@@ -69,6 +69,7 @@ Vendor-specific menu recall is not a standalone course outcome. A learner may us
 
 ## Available module
 
+- [Clinical visualization chart atlas in R](chart_gallery.R)
 - [Module 04: Distributions versus summaries](modules/04-distributions-vs-summaries/README.md)
 - [Module 04 build specification](../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 - [Syllabus redesign](syllabus-redesign.md)

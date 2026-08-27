@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.3.1`
-- Status: Module 04 is a runnable release candidate with synthetic data, labs, checks, assessment, and an instructor key. Required human reviews are pending.
+- Current version: `0.7.0`
+- Status: The public preview includes a ten-family clinical visualization atlas and a runnable Module 04 release candidate. Required human reviews are pending.
 
 ## First course
 
@@ -16,6 +16,8 @@ The first application is DA-730: Analyzing, Visualizing, and Storytelling with D
 The course teaches learners to choose, build, critique, and explain healthcare visualizations based on the decision, the data structure, the audience, and what the display leaves out. Its concept modules are independent of software and clinical domain. R and ggplot2 provide the first lab environment.
 
 The first build is Module 04, Distributions versus summaries. Learners examine an emergency department where median length of stay improves while the longest stays become much worse. They must find the hidden change, choose one chart for leadership, and explain what decision should change. The synthetic reference dataset is included; it is not a stable teaching release until the required reviews are recorded.
+
+The public preview also includes a chart atlas covering comparison, distribution, time, relationship, uncertainty, flow, network, composition, place, and dashboard views. Each family includes a healthcare example and matching R code. The complete runnable script is [chart_gallery.R](courses/data-visualization/chart_gallery.R).
 
 - [Data visualization course](courses/data-visualization/README.md)
 - [Module 04: Distributions versus summaries](courses/data-visualization/modules/04-distributions-vs-summaries/README.md)

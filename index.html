@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#1f49b6">
-  <meta name="description" content="A free guided visualization lesson using synthetic emergency department data.">
-  <title>Distributions versus summaries | Open Clinical Learning Commons</title>
+  <meta name="description" content="A clinical data visualization atlas with healthcare examples, runnable R code, and a guided synthetic-data lesson.">
+  <title>Clinical data visualization atlas | Open Clinical Learning Commons</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1064,6 +1064,381 @@
       font-size: 14px;
     }
 
+    .svg-definitions {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .atlas-shell {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .atlas-index {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .atlas-family-card {
+      min-width: 0;
+      min-height: 166px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      text-align: left;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
+    }
+
+    .atlas-family-card:hover,
+    .atlas-family-card[aria-pressed="true"] {
+      border-color: var(--primary);
+      box-shadow: 0 9px 22px rgba(31, 73, 182, 0.11);
+      transform: translateY(-2px);
+    }
+
+    .atlas-family-card[aria-pressed="true"] {
+      background: var(--primary-soft);
+    }
+
+    .atlas-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .atlas-family-number,
+    .atlas-family-card small,
+    .atlas-kicker,
+    .atlas-guidance small,
+    .atlas-code-head span {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .atlas-family-number {
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    .atlas-family-card strong,
+    .atlas-family-card small {
+      display: block;
+    }
+
+    .atlas-family-card strong {
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
+    .atlas-family-card small {
+      min-height: 31px;
+      margin-top: 3px;
+      color: var(--text-muted);
+      font-size: 9px;
+      line-height: 1.45;
+    }
+
+    .atlas-thumb {
+      display: block;
+      width: 100%;
+      height: 74px;
+      border: 1px solid #e5eaf2;
+      border-radius: 7px;
+      background: #fbfcff;
+    }
+
+    .atlas-detail {
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-md);
+    }
+
+    .atlas-detail-copy {
+      padding: 28px 28px 22px;
+    }
+
+    .atlas-kicker {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .atlas-detail h3 {
+      margin-bottom: 8px;
+      font-size: 28px;
+    }
+
+    .atlas-summary {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .atlas-question {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--primary);
+      background: var(--surface-subtle);
+    }
+
+    .atlas-question span {
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .atlas-question p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .atlas-chart-frame {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: #fbfcff;
+    }
+
+    .atlas-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .atlas-chart-caption {
+      margin: 10px 0 0;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .atlas-guidance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .atlas-guidance {
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .atlas-guidance.caution {
+      border-color: #efd0c8;
+      background: #fff8f5;
+    }
+
+    .atlas-guidance small {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--primary);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .atlas-guidance.caution small {
+      color: var(--data-tail);
+    }
+
+    .atlas-guidance p,
+    .atlas-variants {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .atlas-variants {
+      margin-top: 14px;
+    }
+
+    .atlas-variants strong {
+      color: var(--text);
+    }
+
+    .atlas-code {
+      background: #0e1c31;
+    }
+
+    .atlas-code-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      border-bottom: 1px solid #2a4163;
+      color: #dce8fb;
+    }
+
+    .atlas-code-head span {
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .copy-code {
+      min-height: 36px;
+      padding: 6px 10px;
+      border: 1px solid #607797;
+      border-radius: 6px;
+      color: white;
+      background: transparent;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .copy-code:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .atlas-code pre {
+      overflow-x: auto;
+      margin: 0;
+      padding: 20px;
+      color: #e7eefc;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      line-height: 1.65;
+      white-space: pre;
+    }
+
+    .atlas-download {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 16px;
+      padding: 18px 20px;
+      border: 1px solid #bfd0f4;
+      border-radius: var(--radius-md);
+      background: var(--primary-soft);
+    }
+
+    .atlas-download p {
+      margin: 0;
+      color: #354563;
+      font-size: 13px;
+    }
+
+    .atlas-download .primary-button {
+      flex: 0 0 auto;
+    }
+
+    .viz-grid {
+      stroke: #dce3ee;
+      stroke-width: 1;
+    }
+
+    .viz-axis {
+      stroke: #a9b8ce;
+      stroke-width: 1.2;
+    }
+
+    .viz-primary {
+      fill: var(--primary);
+      stroke: var(--primary);
+    }
+
+    .viz-cyan {
+      fill: #0d8fa6;
+      stroke: #0d8fa6;
+    }
+
+    .viz-tail {
+      fill: var(--data-tail);
+      stroke: var(--data-tail);
+    }
+
+    .viz-success {
+      fill: var(--success);
+      stroke: var(--success);
+    }
+
+    .viz-amber {
+      fill: #d97706;
+      stroke: #d97706;
+    }
+
+    .viz-soft {
+      fill: #dce7ff;
+      stroke: #a8bfea;
+    }
+
+    .viz-surface {
+      fill: white;
+      stroke: #a9b8ce;
+      stroke-width: 1.2;
+    }
+
+    .viz-line {
+      fill: none;
+      stroke: var(--primary);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 4;
+    }
+
+    .viz-trend {
+      fill: none;
+      stroke: var(--data-tail);
+      stroke-dasharray: 5 4;
+      stroke-width: 2;
+    }
+
+    .viz-flow {
+      fill: none;
+      stroke-linecap: butt;
+      opacity: 0.55;
+    }
+
+    .viz-edge {
+      fill: none;
+      stroke: #a9b8ce;
+      stroke-width: 3;
+    }
+
+    .viz-label,
+    .viz-value {
+      fill: var(--text-muted);
+      font-family: "Manrope", sans-serif;
+      font-size: 10px;
+    }
+
+    .viz-value {
+      fill: var(--text);
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 500;
+    }
+
     .rebuild-brief-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1539,6 +1914,14 @@
       .module-hero {
         grid-template-columns: 1fr;
       }
+
+      .atlas-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .atlas-index {
+        grid-template-columns: repeat(5, 1fr);
+      }
     }
 
     @media (max-width: 680px) {
@@ -1584,10 +1967,59 @@
       .chart-choice-row,
       .message-comparison,
       .care-process-panel,
+      .atlas-guidance-grid,
       .rebuild-brief-grid,
       .key-answer-grid,
       .materials-note {
         grid-template-columns: 1fr;
+      }
+
+      .atlas-index {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        scroll-snap-type: x proximity;
+      }
+
+      .atlas-family-card {
+        flex: 0 0 168px;
+        min-height: 154px;
+        scroll-snap-align: start;
+      }
+
+      .atlas-detail-copy {
+        padding: 20px 18px 18px;
+      }
+
+      .atlas-detail h3 {
+        font-size: 24px;
+      }
+
+      .atlas-detail {
+        scroll-margin-top: calc(var(--header-height) + 72px);
+      }
+
+      .atlas-question {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .atlas-chart-frame {
+        padding: 10px;
+      }
+
+      .atlas-code pre {
+        padding: 16px;
+      }
+
+      .atlas-download {
+        display: block;
+      }
+
+      .atlas-download .primary-button {
+        width: 100%;
+        margin-top: 14px;
       }
 
       .care-process-heading,
@@ -1686,8 +2118,8 @@
   <div class="app-shell">
     <aside class="module-sidebar" aria-label="Module progress">
       <a class="course-link" href="courses/data-visualization/README.md">← Data visualization course</a>
-      <p class="sidebar-label">Module 04</p>
-      <h2>Distributions versus summaries</h2>
+      <p class="sidebar-label">Chart atlas + Module 04</p>
+      <h2>Choose, read, and rebuild a chart</h2>
 
       <div class="progress-summary">
         <div class="progress-copy"><span>Module progress</span><span id="progress-text">0%</span></div>
@@ -1695,7 +2127,8 @@
       </div>
 
       <nav class="lesson-nav" aria-label="Lesson steps">
-        <a class="active" href="#brief" data-nav-step="1"><span class="nav-index">1</span><span>Choose a chart</span><span class="step-status"></span></a>
+        <a class="active" href="#atlas"><span class="nav-index">A</span><span>Explore chart types</span><span class="step-status"></span></a>
+        <a href="#brief" data-nav-step="1"><span class="nav-index">1</span><span>Choose a chart</span><span class="step-status"></span></a>
         <a href="#evidence" data-nav-step="2"><span class="nav-index">2</span><span>Read the evidence</span><span class="step-status"></span></a>
         <a href="#decision" data-nav-step="3"><span class="nav-index">3</span><span>Write the message</span><span class="step-status"></span></a>
         <a href="#materials"><span class="nav-index">4</span><span>Rebuild it in R</span><span class="step-status"></span></a>
@@ -1705,23 +2138,133 @@
     </aside>
 
     <main class="workspace" id="main">
+      <svg class="svg-definitions" aria-hidden="true" focusable="false">
+        <symbol id="viz-comparison" viewBox="0 0 320 180">
+          <line class="viz-grid" x1="66" y1="35" x2="278" y2="35"></line><line class="viz-grid" x1="66" y1="70" x2="278" y2="70"></line><line class="viz-grid" x1="66" y1="105" x2="278" y2="105"></line><line class="viz-grid" x1="66" y1="140" x2="278" y2="140"></line>
+          <text class="viz-label" x="12" y="39">North</text><text class="viz-label" x="12" y="74">Central</text><text class="viz-label" x="12" y="109">South</text><text class="viz-label" x="12" y="144">West</text>
+          <line class="viz-soft" x1="66" y1="35" x2="245" y2="35" stroke-width="5"></line><line class="viz-soft" x1="66" y1="70" x2="221" y2="70" stroke-width="5"></line><line class="viz-soft" x1="66" y1="105" x2="196" y2="105" stroke-width="5"></line><line class="viz-soft" x1="66" y1="140" x2="178" y2="140" stroke-width="5"></line>
+          <circle class="viz-primary" cx="245" cy="35" r="7"></circle><circle class="viz-primary" cx="221" cy="70" r="7"></circle><circle class="viz-primary" cx="196" cy="105" r="7"></circle><circle class="viz-primary" cx="178" cy="140" r="7"></circle>
+          <text class="viz-value" x="257" y="39">78%</text><text class="viz-value" x="233" y="74">71%</text><text class="viz-value" x="208" y="109">64%</text><text class="viz-value" x="190" y="144">59%</text>
+        </symbol>
+        <symbol id="viz-distribution" viewBox="0 0 320 180">
+          <line class="viz-axis" x1="34" y1="150" x2="294" y2="150"></line>
+          <rect class="viz-soft" x="46" y="128" width="26" height="22" rx="2"></rect><rect class="viz-primary" x="76" y="78" width="26" height="72" rx="2"></rect><rect class="viz-primary" x="106" y="38" width="26" height="112" rx="2"></rect><rect class="viz-primary" x="136" y="58" width="26" height="92" rx="2"></rect><rect class="viz-primary" x="166" y="94" width="26" height="56" rx="2"></rect><rect class="viz-cyan" x="196" y="116" width="26" height="34" rx="2"></rect><rect class="viz-tail" x="226" y="129" width="26" height="21" rx="2"></rect><rect class="viz-tail" x="256" y="138" width="26" height="12" rx="2"></rect>
+          <line class="viz-tail" x1="150" y1="26" x2="150" y2="154" stroke-width="2"></line><text class="viz-value" x="157" y="31">median</text>
+          <text class="viz-label" x="38" y="169">Shorter visits</text><text class="viz-label" x="232" y="169">Long tail</text>
+        </symbol>
+        <symbol id="viz-time" viewBox="0 0 320 180">
+          <line class="viz-grid" x1="38" y1="43" x2="292" y2="43"></line><line class="viz-grid" x1="38" y1="91" x2="292" y2="91"></line><line class="viz-grid" x1="38" y1="139" x2="292" y2="139"></line>
+          <polyline class="viz-line" points="42,130 64,123 86,116 108,119 130,104 152,96 174,82 196,78 218,87 240,68 262,54 286,42"></polyline>
+          <circle class="viz-primary" cx="42" cy="130" r="5"></circle><circle class="viz-primary" cx="108" cy="119" r="4"></circle><circle class="viz-primary" cx="196" cy="78" r="4"></circle><circle class="viz-tail" cx="286" cy="42" r="6"></circle>
+          <text class="viz-value" x="39" y="151">61%</text><text class="viz-value" x="263" y="28">82%</text><text class="viz-label" x="39" y="169">Jan</text><text class="viz-label" x="269" y="169">Dec</text>
+        </symbol>
+        <symbol id="viz-relationship" viewBox="0 0 320 180">
+          <line class="viz-axis" x1="36" y1="150" x2="294" y2="150"></line><line class="viz-axis" x1="36" y1="25" x2="36" y2="150"></line>
+          <line class="viz-trend" x1="53" y1="135" x2="282" y2="43"></line>
+          <circle class="viz-cyan" cx="58" cy="130" r="5"></circle><circle class="viz-cyan" cx="78" cy="119" r="6"></circle><circle class="viz-cyan" cx="99" cy="128" r="4"></circle><circle class="viz-cyan" cx="115" cy="104" r="5"></circle><circle class="viz-cyan" cx="139" cy="111" r="6"></circle><circle class="viz-cyan" cx="157" cy="86" r="5"></circle><circle class="viz-cyan" cx="179" cy="92" r="4"></circle><circle class="viz-cyan" cx="201" cy="67" r="6"></circle><circle class="viz-cyan" cx="222" cy="76" r="5"></circle><circle class="viz-cyan" cx="242" cy="48" r="6"></circle><circle class="viz-cyan" cx="266" cy="56" r="4"></circle><circle class="viz-cyan" cx="279" cy="36" r="5"></circle>
+          <text class="viz-label" x="104" y="170">Travel time to clinic</text><text class="viz-label" transform="translate(14 126) rotate(-90)">Missed visits</text>
+        </symbol>
+        <symbol id="viz-uncertainty" viewBox="0 0 320 180">
+          <line class="viz-grid" x1="162" y1="22" x2="162" y2="158" stroke-dasharray="4 4"></line>
+          <text class="viz-label" x="14" y="43">Ward A</text><text class="viz-label" x="14" y="78">Ward B</text><text class="viz-label" x="14" y="113">Ward C</text><text class="viz-label" x="14" y="148">Ward D</text>
+          <line class="viz-primary" x1="73" y1="39" x2="158" y2="39" stroke-width="3"></line><line class="viz-primary" x1="116" y1="74" x2="178" y2="74" stroke-width="3"></line><line class="viz-primary" x1="137" y1="109" x2="238" y2="109" stroke-width="3"></line><line class="viz-primary" x1="157" y1="144" x2="281" y2="144" stroke-width="3"></line>
+          <circle class="viz-tail" cx="108" cy="39" r="7"></circle><circle class="viz-tail" cx="145" cy="74" r="7"></circle><circle class="viz-tail" cx="187" cy="109" r="7"></circle><circle class="viz-tail" cx="223" cy="144" r="7"></circle>
+          <text class="viz-value" x="151" y="174">no difference</text>
+        </symbol>
+        <symbol id="viz-flow" viewBox="0 0 320 180">
+          <path class="viz-flow viz-primary" d="M40 48 C93 48 91 45 144 45" stroke-width="38"></path><path class="viz-flow viz-amber" d="M40 85 C93 85 91 90 144 90" stroke-width="22"></path><path class="viz-flow viz-tail" d="M40 122 C93 122 91 134 144 134" stroke-width="34"></path>
+          <path class="viz-flow viz-primary" d="M160 45 C213 45 211 54 270 54" stroke-width="35"></path><path class="viz-flow viz-amber" d="M160 90 C213 90 211 92 270 92" stroke-width="22"></path><path class="viz-flow viz-tail" d="M160 134 C213 134 211 127 270 127" stroke-width="42"></path>
+          <rect class="viz-surface" x="24" y="27" width="16" height="117" rx="3"></rect><rect class="viz-surface" x="144" y="23" width="16" height="133" rx="3"></rect><rect class="viz-surface" x="270" y="29" width="16" height="120" rx="3"></rect>
+          <text class="viz-label" x="12" y="169">Arrival</text><text class="viz-label" x="127" y="169">Decision</text><text class="viz-label" x="257" y="169">Outcome</text>
+        </symbol>
+        <symbol id="viz-network" viewBox="0 0 320 180">
+          <line class="viz-edge" x1="57" y1="91" x2="151" y2="48"></line><line class="viz-edge" x1="57" y1="91" x2="151" y2="135"></line><line class="viz-edge" x1="151" y1="48" x2="257" y2="48"></line><line class="viz-edge" x1="151" y1="48" x2="257" y2="133"></line><line class="viz-edge" x1="151" y1="135" x2="257" y2="133"></line>
+          <circle class="viz-primary" cx="57" cy="91" r="22"></circle><circle class="viz-cyan" cx="151" cy="48" r="17"></circle><circle class="viz-amber" cx="151" cy="135" r="15"></circle><circle class="viz-success" cx="257" cy="48" r="14"></circle><circle class="viz-tail" cx="257" cy="133" r="13"></circle>
+          <text class="viz-value" x="31" y="126">Primary care</text><text class="viz-value" x="125" y="24">Cardiology</text><text class="viz-value" x="132" y="166">Imaging</text><text class="viz-value" x="235" y="24">Pharmacy</text><text class="viz-value" x="225" y="164">Home health</text>
+        </symbol>
+        <symbol id="viz-composition" viewBox="0 0 320 180">
+          <rect class="viz-primary" x="50" y="28" width="48" height="38"></rect><rect class="viz-tail" x="50" y="66" width="48" height="42"></rect><rect class="viz-success" x="50" y="108" width="48" height="34"></rect><rect class="viz-amber" x="50" y="142" width="48" height="12"></rect>
+          <rect class="viz-primary" x="110" y="28" width="48" height="35"></rect><rect class="viz-tail" x="110" y="63" width="48" height="40"></rect><rect class="viz-success" x="110" y="103" width="48" height="34"></rect><rect class="viz-amber" x="110" y="137" width="48" height="17"></rect>
+          <rect class="viz-primary" x="170" y="28" width="48" height="32"></rect><rect class="viz-tail" x="170" y="60" width="48" height="37"></rect><rect class="viz-success" x="170" y="97" width="48" height="34"></rect><rect class="viz-amber" x="170" y="131" width="48" height="23"></rect>
+          <rect class="viz-primary" x="230" y="28" width="48" height="29"></rect><rect class="viz-tail" x="230" y="57" width="48" height="34"></rect><rect class="viz-success" x="230" y="91" width="48" height="32"></rect><rect class="viz-amber" x="230" y="123" width="48" height="31"></rect>
+          <text class="viz-label" x="64" y="171">Q1</text><text class="viz-label" x="124" y="171">Q2</text><text class="viz-label" x="184" y="171">Q3</text><text class="viz-label" x="244" y="171">Q4</text>
+        </symbol>
+        <symbol id="viz-place" viewBox="0 0 320 180">
+          <path d="M34 32 L128 19 L190 42 L286 27 L294 145 L220 157 L146 139 L49 157 Z" fill="#eef3f8" stroke="#a9b8ce" stroke-width="1.2"></path><path d="M52 124 C92 100 112 96 146 75 C184 52 218 90 274 55" fill="none" stroke="white" stroke-width="12"></path><path d="M88 31 C108 64 127 94 148 143" fill="none" stroke="white" stroke-width="8"></path>
+          <circle class="viz-primary" cx="105" cy="57" r="12"></circle><circle class="viz-cyan" cx="159" cy="83" r="19"></circle><circle class="viz-tail" cx="198" cy="130" r="15"></circle><circle class="viz-soft" cx="248" cy="62" r="10"></circle><circle class="viz-amber" cx="83" cy="128" r="13"></circle>
+          <text class="viz-value" x="140" y="57">Central</text><text class="viz-value" x="180" y="161">South</text><text class="viz-label" x="33" y="174">Size = patients · color = access gap</text>
+        </symbol>
+        <symbol id="viz-dashboard" viewBox="0 0 320 180">
+          <rect class="viz-surface" x="24" y="20" width="84" height="42" rx="5"></rect><rect class="viz-surface" x="118" y="20" width="84" height="42" rx="5"></rect><rect class="viz-surface" x="212" y="20" width="84" height="42" rx="5"></rect>
+          <text class="viz-label" x="35" y="37">Median wait</text><text class="viz-value" x="35" y="53">28 min</text><text class="viz-label" x="129" y="37">Over target</text><text class="viz-value" x="129" y="53">14%</text><text class="viz-label" x="223" y="37">Seen today</text><text class="viz-value" x="223" y="53">186</text>
+          <g transform="translate(24 78)"><rect fill="#e8f1fb" x="0" y="0" width="40" height="24"></rect><rect fill="#bdd7ee" x="43" y="0" width="40" height="24"></rect><rect fill="#8fb9d9" x="86" y="0" width="40" height="24"></rect><rect fill="#5e97bf" x="129" y="0" width="40" height="24"></rect><rect fill="#2f6f9f" x="172" y="0" width="40" height="24"></rect><rect fill="#16496f" x="215" y="0" width="40" height="24"></rect><rect fill="#e8f1fb" x="0" y="28" width="40" height="24"></rect><rect fill="#e8f1fb" x="43" y="28" width="40" height="24"></rect><rect fill="#8fb9d9" x="86" y="28" width="40" height="24"></rect><rect fill="#5e97bf" x="129" y="28" width="40" height="24"></rect><rect fill="#2f6f9f" x="172" y="28" width="40" height="24"></rect><rect fill="#16496f" x="215" y="28" width="40" height="24"></rect><rect fill="#bdd7ee" x="0" y="56" width="40" height="24"></rect><rect fill="#8fb9d9" x="43" y="56" width="40" height="24"></rect><rect fill="#5e97bf" x="86" y="56" width="40" height="24"></rect><rect fill="#2f6f9f" x="129" y="56" width="40" height="24"></rect><rect fill="#16496f" x="172" y="56" width="40" height="24"></rect><rect fill="#0f3654" x="215" y="56" width="40" height="24"></rect></g>
+          <text class="viz-label" x="24" y="174">Morning</text><text class="viz-label" x="252" y="174">Evening</text>
+        </symbol>
+      </svg>
+
       <section class="module-hero" id="overview">
         <div>
-          <p class="breadcrumb">Healthcare data visualization / Module 04</p>
-          <h1>Distributions versus summaries</h1>
-          <p class="hero-copy">Learn how chart choice changes a healthcare decision. Test a claim about emergency department performance, find what the first chart hides, and communicate the result.</p>
+          <p class="breadcrumb">Clinical data visualization / Interactive chart atlas</p>
+          <h1>Choose the chart that fits the clinical question</h1>
+          <p class="hero-copy">See ten visualization families in action, learn what each one reveals, and inspect the R code that makes it. Then use a synthetic emergency-department case to practice the choice.</p>
           <div class="hero-meta" aria-label="Module details">
-            <span class="meta-chip">About 5 minutes</span>
-            <span class="meta-chip">No coding</span>
-            <span class="meta-chip">Healthcare case</span>
+            <span class="meta-chip">10 chart families</span>
+            <span class="meta-chip">Runnable R examples</span>
+            <span class="meta-chip">Guided healthcare case</span>
             <span class="meta-chip">Synthetic data</span>
           </div>
-          <a class="primary-button" href="#brief">Start the case</a>
+          <a class="primary-button" href="#atlas">Explore the chart atlas</a>
         </div>
         <aside class="objective-panel">
           <p>Learning objective</p>
-          <strong>Choose a visualization that reveals both typical visits and longer waits, then write a chart title that supports a healthcare decision.</strong>
+          <strong>Match a healthcare question to the right visualization, read what the chart shows and hides, and rebuild the example in R.</strong>
         </aside>
+      </section>
+
+      <section class="lesson-section" id="atlas">
+        <div class="section-heading">
+          <span class="step-number">A</span>
+          <div><h2>Explore the chart atlas</h2><p>Start with the question, not the software. Choose a family to see a clinical example, common variants, a misuse warning, and the matching R code.</p></div>
+        </div>
+
+        <div class="atlas-shell">
+          <div class="atlas-index" role="group" aria-label="Choose a visualization family">
+            <button class="atlas-family-card" type="button" data-family="comparison" aria-pressed="true"><span class="atlas-card-top"><span class="atlas-family-number">01</span><span class="status-badge">Compare</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-comparison"></use></svg><strong>Comparison</strong><small>Bars · dots · dumbbells</small></button>
+            <button class="atlas-family-card" type="button" data-family="distribution" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">02</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-distribution"></use></svg><strong>Distribution</strong><small>Histogram · box · violin</small></button>
+            <button class="atlas-family-card" type="button" data-family="time" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">03</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-time"></use></svg><strong>Change over time</strong><small>Line · run · control chart</small></button>
+            <button class="atlas-family-card" type="button" data-family="relationship" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">04</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-relationship"></use></svg><strong>Relationship</strong><small>Scatter · bubble · hexbin</small></button>
+            <button class="atlas-family-card" type="button" data-family="uncertainty" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">05</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-uncertainty"></use></svg><strong>Uncertainty</strong><small>Intervals · forest · funnel</small></button>
+            <button class="atlas-family-card" type="button" data-family="flow" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">06</span><span class="status-badge">Sankey</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-flow"></use></svg><strong>Patient flow</strong><small>Sankey · alluvial · funnel</small></button>
+            <button class="atlas-family-card" type="button" data-family="network" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">07</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-network"></use></svg><strong>Network</strong><small>Node-link · matrix · chord</small></button>
+            <button class="atlas-family-card" type="button" data-family="composition" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">08</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-composition"></use></svg><strong>Composition</strong><small>Stacked bar · treemap · sunburst</small></button>
+            <button class="atlas-family-card" type="button" data-family="place" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">09</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-place"></use></svg><strong>Place and access</strong><small>Choropleth · symbol · bivariate map</small></button>
+            <button class="atlas-family-card" type="button" data-family="dashboard" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">10</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-dashboard"></use></svg><strong>Dashboard</strong><small>KPI · heatmap · table</small></button>
+          </div>
+
+          <article class="atlas-detail">
+            <div class="atlas-detail-copy">
+              <p class="atlas-kicker" id="atlas-kicker" aria-live="polite">Comparison / Dot plot</p>
+              <h3 id="atlas-title">Compare units on one measure</h3>
+              <p class="atlas-summary" id="atlas-summary">Position on a shared scale makes close differences and rank easy to see.</p>
+              <div class="atlas-question"><span>Healthcare question</span><p id="atlas-question">Which unit has the highest 72-hour follow-up rate?</p></div>
+              <figure class="atlas-chart-frame">
+                <svg class="atlas-chart" id="atlas-chart" viewBox="0 0 320 180" role="img" aria-label="Dot plot. North has a 78 percent follow-up rate, Central 71 percent, South 64 percent, and West 59 percent."><use id="atlas-chart-use" href="#viz-comparison"></use></svg>
+                <figcaption class="atlas-chart-caption" id="atlas-caption">North leads at 78%, while West has the lowest follow-up rate at 59%.</figcaption>
+              </figure>
+              <div class="atlas-guidance-grid">
+                <div class="atlas-guidance"><small>Use it when</small><p id="atlas-use">You need a clean comparison across hospitals, units, groups, or periods.</p></div>
+                <div class="atlas-guidance caution"><small>Watch for</small><p id="atlas-caution">Do not use area or angle when the decision depends on small differences.</p></div>
+              </div>
+              <p class="atlas-variants"><strong>Related charts:</strong> <span id="atlas-variants">bar, lollipop, dumbbell, slopegraph</span></p>
+            </div>
+            <div class="atlas-code">
+              <div class="atlas-code-head"><span>R / ggplot2</span><button class="copy-code" id="copy-atlas-code" type="button">Copy code</button></div>
+              <pre><code id="atlas-r-code"></code></pre>
+            </div>
+          </article>
+        </div>
+
+        <div class="atlas-download"><p>One script creates all ten examples as PNG files from small synthetic datasets. It uses ggplot2 for the common charts and ggalluvial for the Sankey-style patient-flow chart.</p><a class="primary-button" href="courses/data-visualization/chart_gallery.R" download>Download all R examples</a></div>
       </section>
 
       <section class="lesson-section" id="brief">
@@ -1860,6 +2403,7 @@ source("lab.R")</code></pre></div></div>
         </details>
 
         <div class="resource-list">
+          <a class="resource-link content-link" href="courses/data-visualization/chart_gallery.R" download><span><small>R / 10 chart families</small><strong>Build the complete visualization atlas</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv" download><span><small>CSV / 8,392 rows</small><strong>Synthetic emergency department dataset</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download><span><small>Optional R and ggplot2</small><strong>Rebuild the charts in R</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
           <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/assessment.md"><span><small>Learner tasks</small><strong>Assessment and rubric</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
@@ -1870,7 +2414,7 @@ source("lab.R")</code></pre></div></div>
         <div class="materials-note"><p>The dataset is deterministic synthetic teaching data generated from the module specification. It contains no patient records and is not evidence about any hospital or intervention.</p><p>The source register records the current provenance gap and the public healthcare sources required before a teaching release. Validation checks and reuse terms are available on <a class="content-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p></div>
       </section>
 
-      <footer class="site-footer">Open Clinical Learning Commons / Module preview 0.6.0 / Synthetic data only</footer>
+      <footer class="site-footer">Open Clinical Learning Commons / Chart atlas preview 0.7.0 / Synthetic data only</footer>
     </main>
   </div>
 
@@ -1887,6 +2431,263 @@ source("lab.R")</code></pre></div></div>
       january: [99, 421, 153, 10, 7, 10],
       december: [363, 204, 55, 3, 26, 47]
     };
+    const atlasFamilies = {
+      comparison: {
+        kicker: "Comparison / Dot plot",
+        title: "Compare units on one measure",
+        summary: "Position on a shared scale makes close differences and rank easy to see.",
+        question: "Which unit has the highest 72-hour follow-up rate?",
+        caption: "North leads at 78%, while West has the lowest follow-up rate at 59%.",
+        alt: "Dot plot. North has a 78 percent follow-up rate, Central 71 percent, South 64 percent, and West 59 percent.",
+        use: "You need a clean comparison across hospitals, units, groups, or periods.",
+        caution: "Do not use area or angle when the decision depends on small differences.",
+        variants: "bar, lollipop, dumbbell, slopegraph",
+        r: `library(ggplot2)
+
+comparison <- data.frame(
+  unit = c("North", "Central", "South", "West"),
+  rate = c(78, 71, 64, 59)
+)
+
+ggplot(comparison, aes(rate, reorder(unit, rate))) +
+  geom_segment(aes(x = 0, xend = rate,
+                   yend = reorder(unit, rate)),
+               color = "#dce3ee", linewidth = 1.2) +
+  geom_point(size = 4, color = "#1f49b6") +
+  labs(x = "Follow-up within 72 hours (%)", y = NULL)`
+      },
+      distribution: {
+        kicker: "Distribution / Histogram",
+        title: "See the full spread of patient experience",
+        summary: "A distribution shows the center, variation, clusters, and long tail that one average can hide.",
+        question: "Did typical emergency-department visits improve while very long stays became more common?",
+        caption: "Most visits finish in a few hours, but a smaller group remains much longer.",
+        alt: "Histogram of length of stay. Most visits cluster between one and four hours, with a long tail extending beyond eight hours.",
+        use: "You need to understand variation, skew, unusual values, or more than one patient pathway.",
+        caution: "Bin width changes the story. Show the scale and test whether the pattern survives a reasonable bin choice.",
+        variants: "density, box plot, violin, ridgeline",
+        r: `library(ggplot2)
+
+los <- c(42, 55, 67, 73, 81, 92, 108, 119, 132,
+         148, 165, 184, 215, 267, 342, 493, 618)
+
+ggplot(data.frame(minutes = los), aes(minutes)) +
+  geom_histogram(binwidth = 60, boundary = 0,
+                 fill = "#1f49b6", color = "white") +
+  labs(x = "Length of stay (minutes)", y = "Visits")`
+      },
+      time: {
+        kicker: "Change over time / Line chart",
+        title: "Track direction, timing, and persistence",
+        summary: "Ordered time points reveal trends, sudden shifts, cycles, and reversals.",
+        question: "Did 72-hour follow-up improve steadily, or did one unusual month create the result?",
+        caption: "The rate rises from 61% in January to 82% in December, with a small dip in September.",
+        alt: "Line chart. Monthly follow-up rises from 61 percent in January to 82 percent in December, with a small September dip.",
+        use: "The order and timing of observations matter to the clinical or operational decision.",
+        caution: "Do not connect categories that have no time order. Add a control chart when ordinary process variation matters.",
+        variants: "run chart, control chart, slopegraph, calendar heatmap",
+        r: `library(ggplot2)
+
+monthly <- data.frame(
+  month = factor(month.abb, levels = month.abb),
+  rate = c(61, 63, 65, 64, 68, 70, 73, 74, 72, 76, 79, 82)
+)
+
+ggplot(monthly, aes(month, rate, group = 1)) +
+  geom_line(linewidth = 1.2, color = "#1f49b6") +
+  geom_point(size = 2.8, color = "#1f49b6") +
+  labs(x = NULL, y = "Follow-up within 72 hours (%)")`
+      },
+      relationship: {
+        kicker: "Relationship / Scatter plot",
+        title: "Look for association between two measures",
+        summary: "Every point remains visible, so form, spread, clusters, and unusual observations can be inspected.",
+        question: "Are longer travel times associated with more missed clinic visits?",
+        caption: "Missed visits tend to rise with travel time, but the points do not prove that travel caused the difference.",
+        alt: "Scatter plot. Clinics with longer travel times generally have more missed visits, with variation around the upward trend.",
+        use: "You want to examine the form and strength of an association between two quantitative variables.",
+        caution: "Association is not causation. Look for confounding, nonlinearity, subgroups, and overplotting.",
+        variants: "bubble plot, hexbin, regression view, connected scatter",
+        r: `library(ggplot2)
+
+access <- data.frame(
+  travel = c(8, 14, 19, 25, 32, 39, 47, 56, 64),
+  missed = c(5, 7, 6, 12, 14, 17, 18, 25, 29)
+)
+
+ggplot(access, aes(travel, missed)) +
+  geom_point(size = 3, color = "#0d8fa6") +
+  geom_smooth(method = "lm", color = "#1f49b6") +
+  labs(x = "Travel time (minutes)",
+       y = "Missed visits per 100 appointments")`
+      },
+      uncertainty: {
+        kicker: "Uncertainty / Forest plot",
+        title: "Show the estimate and how precise it is",
+        summary: "Intervals keep a reader from treating every difference as equally certain.",
+        question: "Which ward estimates are clearly different from the reference rate?",
+        caption: "Ward A has the lowest estimate. Several intervals cross the reference value of 1.0.",
+        alt: "Forest plot with four ward estimates and confidence intervals. Ward A is below the reference; the other intervals touch or cross it.",
+        use: "A decision depends on an estimate, comparison, or model result with sampling uncertainty.",
+        caution: "An interval is not a probability that the true value lies inside it. State the interval definition and reference.",
+        variants: "confidence interval plot, caterpillar plot, funnel plot",
+        r: `library(ggplot2)
+
+effects <- data.frame(
+  ward = c("A", "B", "C", "D"),
+  estimate = c(.82, .93, 1.08, 1.19),
+  low = c(.68, .84, .88, .97),
+  high = c(.99, 1.03, 1.31, 1.46)
+)
+
+ggplot(effects, aes(estimate, reorder(ward, estimate))) +
+  geom_vline(xintercept = 1, linetype = "dashed") +
+  geom_errorbar(aes(xmin = low, xmax = high),
+                orientation = "y", width = 0) +
+  geom_point(size = 3, color = "#d4543f") +
+  labs(x = "Rate ratio with 95% CI", y = "Ward")`
+      },
+      flow: {
+        kicker: "Patient flow / Sankey diagram",
+        title: "Follow a cohort through a care pathway",
+        summary: "Ribbon width shows how people or events split, continue, and reach different outcomes.",
+        question: "Where do walk-in and ambulance arrivals go after the emergency-department decision?",
+        caption: "Walk-in visits mostly end in discharge. Ambulance arrivals contribute a larger share of admissions.",
+        alt: "Sankey-style diagram connecting arrival mode to emergency-department decision and outcome. The widest walk-in flow ends at home; the widest ambulance flow ends on a ward.",
+        use: "You have counts that move between a small number of defined stages or states.",
+        caution: "Too many nodes become unreadable. Define each transition and do not imply time or cause unless the data contain it.",
+        variants: "alluvial, cohort funnel, state-transition diagram",
+        r: `library(ggplot2)
+library(ggalluvial)
+
+journeys <- data.frame(
+  arrival = c("Walk-in", "Walk-in", "Ambulance", "Ambulance"),
+  decision = c("Discharge", "Admit", "Discharge", "Admit"),
+  outcome = c("Home", "Ward", "Home", "Ward"),
+  visits = c(390, 115, 80, 215)
+)
+
+ggplot(journeys,
+       aes(axis1 = arrival, axis2 = decision,
+           axis3 = outcome, y = visits)) +
+  geom_alluvium(aes(fill = decision), width = .12) +
+  geom_stratum(width = .12, fill = "white", color = "#172033") +
+  geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+  scale_x_discrete(limits = c("Arrival", "Decision", "Outcome"))`
+      },
+      network: {
+        kicker: "Network / Node-link diagram",
+        title: "See who or what is connected",
+        summary: "Nodes represent entities and links represent a clearly defined relationship.",
+        question: "Which services receive referrals from primary care, and which services connect the network?",
+        caption: "Primary care is the largest hub. Cardiology links primary care with pharmacy and home health.",
+        alt: "Node-link diagram. Primary care connects to cardiology and imaging; cardiology connects to pharmacy and home health.",
+        use: "Connections, hubs, clusters, or paths are the subject of the question.",
+        caution: "Dense networks turn into hairballs. Define every edge and use a matrix when exact comparison matters.",
+        variants: "adjacency matrix, chord diagram, arc diagram",
+        r: `library(ggplot2)
+
+nodes <- data.frame(
+  name = c("Primary", "Cardiology", "Imaging", "Pharmacy"),
+  x = c(0, 1, 1, 2), y = c(.5, .9, .1, .9)
+)
+edges <- data.frame(
+  x = c(0, 0, 1), y = c(.5, .5, .9),
+  xend = c(1, 1, 2), yend = c(.9, .1, .9)
+)
+
+ggplot() +
+  geom_segment(data = edges,
+               aes(x, y, xend = xend, yend = yend),
+               color = "#a9b8ce", linewidth = 1.2) +
+  geom_point(data = nodes, aes(x, y), size = 8, color = "#1f49b6") +
+  geom_text(data = nodes, aes(x, y, label = name), nudge_y = -.14) +
+  coord_equal() + theme_void()`
+      },
+      composition: {
+        kicker: "Composition / 100% stacked bar",
+        title: "Show how parts contribute to a whole",
+        summary: "A common baseline supports comparison of the first segment while the full bar preserves the whole.",
+        question: "How did the share of virtual, outpatient, inpatient, and emergency visits change by quarter?",
+        caption: "Virtual care grows across the year while the other services occupy a smaller share of the total.",
+        alt: "Four 100 percent stacked bars. The virtual-care segment grows from 9 percent in the first quarter to 22 percent in the fourth.",
+        use: "The parts are mutually exclusive and add to a meaningful total.",
+        caution: "Middle segments lack a common baseline. Use small multiples or direct values when every part must be compared precisely.",
+        variants: "stacked bar, treemap, sunburst, waterfall",
+        r: `library(ggplot2)
+
+mix <- data.frame(
+  quarter = rep(c("Q1", "Q2", "Q3", "Q4"), each = 4),
+  service = rep(c("Emergency", "Inpatient", "Outpatient", "Virtual"), 4),
+  visits = c(26, 30, 35, 9, 24, 29, 35, 12,
+             23, 27, 34, 16, 21, 25, 32, 22)
+)
+
+ggplot(mix, aes(quarter, visits, fill = service)) +
+  geom_col(position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  labs(x = NULL, y = "Share of visits")`
+      },
+      place: {
+        kicker: "Place and access / Proportional-symbol map",
+        title: "Put access and need in geographic context",
+        summary: "Location, symbol size, and color can show where a service gap and affected population overlap.",
+        question: "Where are the largest patient populations and the longest access gaps?",
+        caption: "South clinic has the largest access gap. Central serves the largest patient population.",
+        alt: "Schematic proportional-symbol map. Central has the largest circle for patient volume; South has the strongest warning color for access gap.",
+        use: "Location is part of the decision, such as outreach, travel, service placement, or regional variation.",
+        caution: "Maps can make large areas look important. Show denominators and avoid causal or stigmatizing claims about communities.",
+        variants: "choropleth, proportional symbol, bivariate map, cartogram",
+        r: `library(ggplot2)
+
+clinics <- data.frame(
+  clinic = c("North", "Central", "East", "South", "West"),
+  x = c(3.2, 2.4, 3.8, 2.7, 1.2),
+  y = c(4.1, 2.8, 2.2, 1.0, 2.0),
+  patients = c(820, 1290, 610, 430, 710),
+  access_gap = c(12, 27, 18, 35, 22)
+)
+
+ggplot(clinics, aes(x, y)) +
+  geom_point(aes(size = patients, color = access_gap), alpha = .9) +
+  geom_text(aes(label = clinic), nudge_y = -.25) +
+  scale_color_gradient(low = "#1f49b6", high = "#d97706") +
+  coord_equal() + theme_void()`
+      },
+      dashboard: {
+        kicker: "Dashboard / Heatmap",
+        title: "Monitor a defined care process",
+        summary: "A small set of coordinated views supports repeated decisions without compressing every question into one score.",
+        question: "At which days and times do check-in waits most often exceed the target?",
+        caption: "Waits are shortest in the morning and highest late in the day, especially Tuesday through Thursday.",
+        alt: "Dashboard with three key measures and a weekday-by-hour heatmap. Darker afternoon cells show longer check-in waits.",
+        use: "The same audience monitors the same process and needs to spot exceptions or act on a threshold.",
+        caution: "Every measure needs an owner, definition, update time, and action. More tiles do not make a better dashboard.",
+        variants: "KPI card, sparkline, heatmap, accessible table",
+        r: `library(ggplot2)
+
+waits <- expand.grid(
+  day = c("Mon", "Tue", "Wed", "Thu", "Fri"),
+  hour = c(8, 10, 12, 14, 16, 18)
+)
+waits$minutes <- with(waits,
+  18 + 7 * (hour >= 12) + 9 * (hour >= 16) +
+  5 * (day %in% c("Tue", "Wed", "Thu")))
+waits$day <- factor(waits$day,
+                    levels = rev(c("Mon", "Tue", "Wed", "Thu", "Fri")))
+waits$hour <- factor(sprintf("%02d", waits$hour),
+                     levels = c("08", "10", "12", "14", "16", "18"))
+
+ggplot(waits, aes(hour, day, fill = minutes)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = minutes, color = minutes <= 25),
+            show.legend = FALSE) +
+  scale_color_manual(values = c("FALSE" = "#172033",
+                                "TRUE" = "white")) +
+  scale_fill_viridis_c(option = "C") +
+  labs(x = "Hour", y = NULL, fill = "Wait (min)")`
+      }
+    };
     const completedSteps = new Set();
     let activeMetric = "median";
     let resizeTimer;
@@ -1899,6 +2700,10 @@ source("lab.R")</code></pre></div></div>
         Math.round((metrics.median.values.at(-1) / metrics.median.values[0] - 1) * 100) === -37,
         Math.round((metrics.p90.values.at(-1) / metrics.p90.values[0] - 1) * 100) === 83,
         Math.round((metrics.longWait.values.at(-1) / metrics.longWait.values[0]) * 10) / 10 === 4.4,
+        Object.keys(atlasFamilies).length === 10,
+        Object.keys(atlasFamilies).every(familyName => document.querySelector(`#viz-${familyName}`)),
+        Object.values(atlasFamilies).every(family => family.r.includes("ggplot")),
+        document.querySelectorAll(".atlas-family-card").length === 10,
         document.querySelectorAll("[data-care-metric]").length === 3,
         document.querySelectorAll("[data-key-metric]").length === 4,
         document.querySelectorAll(".first-choice").length === 2,
@@ -1917,6 +2722,26 @@ source("lab.R")</code></pre></div></div>
 
     function formatValue(value, unit) {
       return `${Number.isInteger(value) ? value : value.toFixed(1)}${unit}`;
+    }
+
+    function renderAtlasFamily(familyName) {
+      const family = atlasFamilies[familyName];
+      document.querySelectorAll(".atlas-family-card").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.family === familyName));
+      });
+      document.querySelector("#atlas-kicker").textContent = family.kicker;
+      document.querySelector("#atlas-title").textContent = family.title;
+      document.querySelector("#atlas-summary").textContent = family.summary;
+      document.querySelector("#atlas-question").textContent = family.question;
+      document.querySelector("#atlas-caption").textContent = family.caption;
+      document.querySelector("#atlas-use").textContent = family.use;
+      document.querySelector("#atlas-caution").textContent = family.caution;
+      document.querySelector("#atlas-variants").textContent = family.variants;
+      document.querySelector("#atlas-r-code").textContent = family.r;
+      document.querySelector("#atlas-chart-use").setAttribute("href", `#viz-${familyName}`);
+      document.querySelector("#atlas-chart").setAttribute("aria-label", family.alt);
+      const copyButton = document.querySelector("#copy-atlas-code");
+      copyButton.textContent = "Copy code";
     }
 
     function renderMetric(metricName) {
@@ -2052,6 +2877,23 @@ source("lab.R")</code></pre></div></div>
       completeStep(2);
     }));
 
+    document.querySelectorAll(".atlas-family-card").forEach(button => button.addEventListener("click", () => {
+      renderAtlasFamily(button.dataset.family);
+      if (window.innerWidth <= 680) {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        document.querySelector(".atlas-detail").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      }
+    }));
+
+    document.querySelector("#copy-atlas-code").addEventListener("click", async event => {
+      try {
+        await navigator.clipboard.writeText(document.querySelector("#atlas-r-code").textContent);
+        event.currentTarget.textContent = "Copied";
+      } catch {
+        event.currentTarget.textContent = "Select code to copy";
+      }
+    });
+
     document.querySelectorAll(".first-choice").forEach(button => button.addEventListener("click", () => {
       document.querySelectorAll(".first-choice").forEach(choice => choice.setAttribute("aria-pressed", "false"));
       button.setAttribute("aria-pressed", "true");
@@ -2085,6 +2927,7 @@ source("lab.R")</code></pre></div></div>
       resizeTimer = setTimeout(() => renderMetric(activeMetric), 120);
     });
 
+    renderAtlasFamily("comparison");
     verifyTeachingData();
     renderMetric("median");
     renderHistogram();
