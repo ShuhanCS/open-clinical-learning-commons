@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#1f49b6">
-  <meta name="description" content="A clinical data visualization atlas with healthcare examples, runnable R code, and a guided synthetic-data lesson.">
-  <title>Clinical data visualization atlas | Open Clinical Learning Commons</title>
+  <meta name="description" content="An 11-course health data analytics path built around shared synthetic and open healthcare data, with a working clinical visualization lesson.">
+  <title>Health data analytics curriculum | Open Clinical Learning Commons</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -76,7 +76,8 @@
     }
 
     button:focus-visible,
-    a:focus-visible {
+    a:focus-visible,
+    summary:focus-visible {
       outline: 3px solid var(--focus);
       outline-offset: 3px;
     }
@@ -455,6 +456,198 @@
       display: block;
       font-size: 17px;
       line-height: 1.45;
+    }
+
+    .program-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .program-stat {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .program-stat strong,
+    .program-stat span {
+      display: block;
+    }
+
+    .program-stat strong {
+      margin-bottom: 4px;
+      color: var(--primary);
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .program-stat span {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .curriculum-stage + .curriculum-stage {
+      margin-top: 32px;
+    }
+
+    .stage-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 14px;
+    }
+
+    .stage-heading h3,
+    .stage-heading p {
+      margin: 0;
+    }
+
+    .stage-heading p {
+      max-width: 650px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .stage-count {
+      flex: 0 0 auto;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .course-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .course-card[open] {
+      border-color: #b9c8ea;
+      box-shadow: var(--shadow-md);
+    }
+
+    .course-card summary {
+      position: relative;
+      padding: 20px 50px 20px 20px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .course-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .course-card summary::after {
+      content: "+";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      color: var(--primary);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .course-card[open] summary::after {
+      content: "−";
+      color: white;
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .course-code {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .course-name {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 18px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .course-purpose {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .course-meta span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      background: var(--surface-subtle);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .course-details {
+      padding: 18px 20px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--surface-subtle);
+    }
+
+    .course-details h4 {
+      margin: 0 0 10px;
+      font-size: 13px;
+    }
+
+    .week-list {
+      display: grid;
+      gap: 7px;
+      margin: 0 0 16px;
+      padding-left: 22px;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .course-outcome {
+      margin: 0;
+      padding: 12px 14px;
+      border-left: 3px solid var(--primary);
+      color: var(--text-muted);
+      background: var(--primary-soft);
+      font-size: 12px;
+    }
+
+    .course-outcome strong {
+      color: var(--text);
     }
 
     .lesson-section {
@@ -1915,6 +2108,10 @@
         grid-template-columns: 1fr;
       }
 
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+
       .atlas-shell {
         grid-template-columns: 1fr;
       }
@@ -1947,6 +2144,19 @@
       .module-hero {
         gap: 20px;
         padding: 24px;
+      }
+
+      .program-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stage-heading {
+        display: block;
+      }
+
+      .stage-count {
+        display: block;
+        margin-top: 6px;
       }
 
       h1 {
@@ -2099,7 +2309,7 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to lesson</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <p class="data-error" role="alert">The teaching data did not pass the page checks. Use the downloadable module while this preview is repaired.</p>
 
   <header class="topbar">
@@ -2116,10 +2326,10 @@
   </header>
 
   <div class="app-shell">
-    <aside class="module-sidebar" aria-label="Module progress">
-      <a class="course-link" href="courses/data-visualization/README.md">← Data visualization course</a>
-      <p class="sidebar-label">Chart atlas + Module 04</p>
-      <h2>Choose, read, and rebuild a chart</h2>
+    <aside class="module-sidebar" aria-label="Course and lesson navigation">
+      <a class="course-link" href="#curriculum">View the full curriculum</a>
+      <p class="sidebar-label">Program path + working lesson</p>
+      <h2>Eleven courses and one runnable example</h2>
 
       <div class="progress-summary">
         <div class="progress-copy"><span>Module progress</span><span id="progress-text">0%</span></div>
@@ -2127,6 +2337,7 @@
       </div>
 
       <nav class="lesson-nav" aria-label="Lesson steps">
+        <a href="#curriculum"><span class="nav-index">11</span><span>See all courses</span><span class="step-status"></span></a>
         <a class="active" href="#atlas"><span class="nav-index">A</span><span>Explore chart types</span><span class="step-status"></span></a>
         <a href="#brief" data-nav-step="1"><span class="nav-index">1</span><span>Choose a chart</span><span class="step-status"></span></a>
         <a href="#evidence" data-nav-step="2"><span class="nav-index">2</span><span>Read the evidence</span><span class="step-status"></span></a>
@@ -2204,27 +2415,306 @@
 
       <section class="module-hero" id="overview">
         <div>
-          <p class="breadcrumb">Clinical data visualization / Interactive chart atlas</p>
-          <h1>Choose the chart that fits the clinical question</h1>
-          <p class="hero-copy">See ten visualization families in action, learn what each one reveals, and inspect the R code that makes it. Then use a synthetic emergency-department case to practice the choice.</p>
-          <div class="hero-meta" aria-label="Module details">
-            <span class="meta-chip">10 chart families</span>
-            <span class="meta-chip">Runnable R examples</span>
-            <span class="meta-chip">Guided healthcare case</span>
-            <span class="meta-chip">Synthetic data</span>
+          <p class="breadcrumb">Open Clinical Learning Commons / Program roadmap</p>
+          <h1>Learn health data analytics through one shared clinical data commons</h1>
+          <p class="hero-copy">Move from healthcare data foundations to applied clinical decisions and a defended capstone. Every course is mapped below, and the working visualization lesson shows how the Commons turns synthetic data into something learners can inspect, analyze, and reuse.</p>
+          <div class="hero-meta" aria-label="Program details">
+            <span class="meta-chip">2 foundation courses</span>
+            <span class="meta-chip">7 applied courses</span>
+            <span class="meta-chip">2 capstone courses</span>
+            <span class="meta-chip">Synthetic and open data</span>
           </div>
-          <a class="primary-button" href="#atlas">Explore the chart atlas</a>
+          <a class="primary-button" href="#curriculum">Explore the 11-course path</a>
         </div>
         <aside class="objective-panel">
-          <p>Learning objective</p>
-          <strong>Match a healthcare question to the right visualization, read what the chart shows and hides, and rebuild the example in R.</strong>
+          <p>Current working release</p>
+          <strong>The full curriculum is mapped here. The clinical visualization atlas and Module 04 are the first runnable learning experience.</strong>
         </aside>
+      </section>
+
+      <section class="lesson-section" id="curriculum">
+        <div class="section-heading">
+          <span class="step-number">11</span>
+          <div><h2>Follow the complete course path</h2><p>Start by learning how to build trustworthy data and analytics. Apply those skills to seven kinds of healthcare decisions, then use them together in a capstone. Open any course to see its seven-week path.</p></div>
+        </div>
+
+        <div class="program-stats" aria-label="Curriculum summary">
+          <div class="program-stat"><strong>11</strong><span>courses in the shared roadmap</span></div>
+          <div class="program-stat"><strong>77</strong><span>weekly learning milestones</span></div>
+          <div class="program-stat"><strong>1</strong><span>shared synthetic and open data layer</span></div>
+        </div>
+
+        <section class="curriculum-stage" aria-labelledby="foundation-stage">
+          <div class="stage-heading">
+            <div><h3 id="foundation-stage">Foundation</h3><p>Build data you can trust, then choose and defend analytics that fit the decision.</p></div>
+            <span class="stage-count">2 required courses</span>
+          </div>
+          <div class="course-grid">
+            <details class="course-card" data-course-stage="foundation" data-course-id="FND-1">
+              <summary>
+                <span class="course-code">FND-1 / Foundation</span>
+                <strong class="course-name">Healthcare Data Foundations</strong>
+                <span class="course-purpose">Build, check, describe, and hand off a healthcare dataset another analyst can trust.</span>
+                <span class="course-meta"><span>3 credits</span><span>No prerequisite</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Set up a reproducible workspace.</li>
+                  <li>Work with databases and retrieve data.</li>
+                  <li>Build cohorts and analytic tables.</li>
+                  <li>Clean and profile healthcare data.</li>
+                  <li>Produce descriptive results.</li>
+                  <li>Create accessible charts and read time-indexed data.</li>
+                  <li>Complete a reproducible handoff and AI audit.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> SQL, notebook, README, version tag, and data brief in one reproducible toolkit.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="foundation" data-course-id="FND-2">
+              <summary>
+                <span class="course-code">FND-2 / Foundation</span>
+                <strong class="course-name">Modeling, Inference, and Reproducible Analytics</strong>
+                <span class="course-purpose">Turn checked data into analytic evidence and defend the method, assumptions, claims, and monitoring plan.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisite: FND-1</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Define analytic aims and a reproducible modeling workspace.</li>
+                  <li>Fit and interpret regression models.</li>
+                  <li>Build and evaluate prediction workflows.</li>
+                  <li>Handle adjustment, missing data, and longitudinal structure.</li>
+                  <li>Forecast and validate across time.</li>
+                  <li>Test agent-assisted modeling work.</li>
+                  <li>Defend model cards and governance decisions.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A model or agent-assisted analytics package with a model card.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="curriculum-stage" aria-labelledby="applied-stage">
+          <div class="stage-heading">
+            <div><h3 id="applied-stage">Applied healthcare decisions</h3><p>Use the same foundation skills across care, patient experience, performance, decision support, population health, research, and strategy. The capstone path requires six of these seven courses.</p></div>
+            <span class="stage-count">7 domain courses</span>
+          </div>
+          <div class="course-grid">
+            <details class="course-card" data-course-stage="applied" data-course-id="APP-1">
+              <summary>
+                <span class="course-code">APP-1 / Applied</span>
+                <strong class="course-name">Data for Clinical Care</strong>
+                <span class="course-purpose">Follow a clinical cohort over time, compare outcomes fairly, and recommend a feasible care-pathway improvement.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisites: FND-1 and FND-2</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Frame a care-pathway decision.</li>
+                  <li>Build longitudinal cohorts and follow-up.</li>
+                  <li>Analyze survival and time-to-event outcomes.</li>
+                  <li>Use risk adjustment for fair comparison.</li>
+                  <li>Study clinical variation and patterns of care.</li>
+                  <li>Connect equity, variation, and a feasible improvement.</li>
+                  <li>Make an integrated clinical recommendation.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A clinical care improvement brief with an evaluation plan.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="applied" data-course-id="APP-2">
+              <summary>
+                <span class="course-code">APP-2 / Applied</span>
+                <strong class="course-name">Data for Patient Experience and Engagement</strong>
+                <span class="course-purpose">Treat what patients report about health, access, communication, and trust as evidence for improving care.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisites: FND-1 and FND-2</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Frame a patient-experience and engagement decision.</li>
+                  <li>Work with patient-reported measurement.</li>
+                  <li>Examine response, representation, and bias.</li>
+                  <li>Build linked patient evidence.</li>
+                  <li>Study patient voice, group differences, and equity.</li>
+                  <li>Design a patient-partnered improvement.</li>
+                  <li>Make the recommendation and define accountability.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A patient-experience and engagement evidence package.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="applied" data-course-id="APP-3">
+              <summary>
+                <span class="course-code">APP-3 / Applied</span>
+                <strong class="course-name">Data for Clinical Performance and Improvement</strong>
+                <span class="course-purpose">Turn harm, delay, unreliable care, access, or capacity problems into measures and tested improvement decisions.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisites: FND-1 and FND-2</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Frame a clinical performance problem.</li>
+                  <li>Define measures and operational metrics.</li>
+                  <li>Find variation, safety signals, and bottlenecks.</li>
+                  <li>Forecast demand and plan capacity.</li>
+                  <li>Test improvement scenarios and evaluation designs.</li>
+                  <li>Set feasibility, equity, and monitoring requirements.</li>
+                  <li>Defend a performance recommendation.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A clinical performance improvement package with monitoring and fallback thresholds.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="applied" data-course-id="APP-4">
+              <summary>
+                <span class="course-code">APP-4 / Applied</span>
+                <strong class="course-name">Data for Clinical Decision Support</strong>
+                <span class="course-purpose">Take a prediction into a clinical workflow, test its burden and failure modes, and stop before it does harm.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisites: FND-1 and FND-2</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Frame a decision support use case.</li>
+                  <li>Define decision logic, triggers, and data.</li>
+                  <li>Assess evidence, calibration, and validation.</li>
+                  <li>Measure alert burden, human factors, and equity.</li>
+                  <li>Build a sandbox prototype and test failure modes.</li>
+                  <li>Write the safety case, monitoring, and governance plan.</li>
+                  <li>Defend the product brief.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A CDS product brief, sandbox prototype, evaluation plan, and safety case.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="applied" data-course-id="APP-5">
+              <summary>
+                <span class="course-code">APP-5 / Applied</span>
+                <strong class="course-name">Data for Population Health and Equity</strong>
+                <span class="course-purpose">Measure how health differs across groups and places, then turn that picture into an accountable intervention plan.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisites: FND-1 and FND-2</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Frame a population-health decision.</li>
+                  <li>Build population measures from linked data.</li>
+                  <li>Measure disparities and state data limits.</li>
+                  <li>Use place-based evidence and geographic reasoning.</li>
+                  <li>Evaluate targeting and fairness.</li>
+                  <li>Design an accountable intervention plan.</li>
+                  <li>Defend the population recommendation.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A population intervention analytics plan with an equity rationale and monitoring measures.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="applied" data-course-id="APP-6">
+              <summary>
+                <span class="course-code">APP-6 / Applied</span>
+                <strong class="course-name">Data for Health Research and Innovation</strong>
+                <span class="course-purpose">Design a health study that can answer a causal question and produce evidence another researcher can rerun and review.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisites: FND-1 and FND-2</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Move from a question to a causal estimand and study design.</li>
+                  <li>Test data feasibility and measurement.</li>
+                  <li>Use causal diagrams for confounding and identification.</li>
+                  <li>Run estimation, adjustment, and sensitivity analysis.</li>
+                  <li>Preregister reproducible protocol analytics.</li>
+                  <li>Evaluate innovation evidence and create a dissemination artifact.</li>
+                  <li>Meet reporting standards and defend the method.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A protocol, feasibility analysis, innovation evidence, dissemination artifact, and methodological defense.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="applied" data-course-id="APP-7">
+              <summary>
+                <span class="course-code">APP-7 / Applied</span>
+                <strong class="course-name">Data for Health Systems Strategy, Finance, and Value</strong>
+                <span class="course-purpose">Turn service, cost, finance, and value data into a strategic investment recommendation leadership can weigh.</span>
+                <span class="course-meta"><span>3 credits</span><span>Prerequisites: FND-1 and FND-2</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Frame the strategic decision.</li>
+                  <li>Read finance and value data.</li>
+                  <li>Diagnose service-line performance and access.</li>
+                  <li>Assess the strategic context.</li>
+                  <li>Build financial and value models.</li>
+                  <li>Compare and prioritize options.</li>
+                  <li>Deliver the executive decision package.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A board-ready strategic investment decision package and monitoring plan.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="curriculum-stage" aria-labelledby="capstone-stage">
+          <div class="stage-heading">
+            <div><h3 id="capstone-stage">Capstone</h3><p>Approve a feasible proposal, then deliver one complete healthcare analytics project for a real decision owner.</p></div>
+            <span class="stage-count">Preparation + final project</span>
+          </div>
+          <div class="course-grid">
+            <details class="course-card" data-course-stage="capstone" data-course-id="CAP-0">
+              <summary>
+                <span class="course-code">CAP-0 / Capstone preparation</span>
+                <strong class="course-name">Capstone Preparation</strong>
+                <span class="course-purpose">Define the problem, prove the data and methods are feasible, clear ethics, and earn approval before the project begins.</span>
+                <span class="course-meta"><span>0 credits / Pass-Fail</span><span>FND-1, FND-2, and at least 5 applied courses</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Frame the problem.</li>
+                  <li>Identify stakeholders and the analytic aim.</li>
+                  <li>Confirm data feasibility.</li>
+                  <li>Write the methods plan.</li>
+                  <li>Resolve ethics and privacy requirements.</li>
+                  <li>Build the reproducible project skeleton and timeline.</li>
+                  <li>Defend the proposal.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> An approved capstone proposal with data access, methods, ethics, and delivery plans.</p>
+              </div>
+            </details>
+
+            <details class="course-card" data-course-stage="capstone" data-course-id="CAP-1">
+              <summary>
+                <span class="course-code">CAP-1 / Capstone</span>
+                <strong class="course-name">Capstone: Learning Health System Analytics</strong>
+                <span class="course-purpose">Run one complete healthcare analytics project from an authentic decision through a defended recommendation.</span>
+                <span class="course-meta"><span>3 credits</span><span>FND-1, FND-2, 6 applied courses, and CAP-0</span></span>
+              </summary>
+              <div class="course-details">
+                <h4>Seven-week path</h4>
+                <ol class="week-list">
+                  <li>Scope the decision with stakeholders.</li>
+                  <li>Acquire data and build the cohort.</li>
+                  <li>Select methods and run the analysis.</li>
+                  <li>Evaluate validity and possible harm.</li>
+                  <li>Plan implementation and evaluation.</li>
+                  <li>Prepare communication and independent review.</li>
+                  <li>Complete the oral defense and define the next learning cycle.</li>
+                </ol>
+                <p class="course-outcome"><strong>Final work:</strong> A reproducible final package, oral defense, implementation plan, and reflection.</p>
+              </div>
+            </details>
+          </div>
+        </section>
       </section>
 
       <section class="lesson-section" id="atlas">
         <div class="section-heading">
           <span class="step-number">A</span>
-          <div><h2>Explore the chart atlas</h2><p>Start with the question, not the software. Choose a family to see a clinical example, common variants, a misuse warning, and the matching R code.</p></div>
+          <div><h2>Try the current clinical visualization lesson</h2><p>This is the first runnable example in the course path. Start with the question, choose a chart family, and inspect the matching healthcare example and R code.</p></div>
         </div>
 
         <div class="atlas-shell">
@@ -2414,7 +2904,7 @@ source("lab.R")</code></pre></div></div>
         <div class="materials-note"><p>The dataset is deterministic synthetic teaching data generated from the module specification. It contains no patient records and is not evidence about any hospital or intervention.</p><p>The source register records the current provenance gap and the public healthcare sources required before a teaching release. Validation checks and reuse terms are available on <a class="content-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p></div>
       </section>
 
-      <footer class="site-footer">Open Clinical Learning Commons / Chart atlas preview 0.7.0 / Synthetic data only</footer>
+      <footer class="site-footer">Open Clinical Learning Commons / Program curriculum preview 0.8.0 / Synthetic and open data only</footer>
     </main>
   </div>
 
@@ -2704,6 +3194,12 @@ ggplot(waits, aes(hour, day, fill = minutes)) +
         Object.keys(atlasFamilies).every(familyName => document.querySelector(`#viz-${familyName}`)),
         Object.values(atlasFamilies).every(family => family.r.includes("ggplot")),
         document.querySelectorAll(".atlas-family-card").length === 10,
+        document.querySelectorAll(".course-card").length === 11,
+        new Set([...document.querySelectorAll(".course-card")].map(card => card.dataset.courseId)).size === 11,
+        [...document.querySelectorAll(".course-card")].every(card => card.querySelectorAll(".week-list li").length === 7),
+        document.querySelectorAll('[data-course-stage="foundation"]').length === 2,
+        document.querySelectorAll('[data-course-stage="applied"]').length === 7,
+        document.querySelectorAll('[data-course-stage="capstone"]').length === 2,
         document.querySelectorAll("[data-care-metric]").length === 3,
         document.querySelectorAll("[data-key-metric]").length === 4,
         document.querySelectorAll(".first-choice").length === 2,

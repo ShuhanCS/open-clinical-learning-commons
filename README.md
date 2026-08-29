@@ -6,10 +6,30 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.7.0`
-- Status: The public preview includes a ten-family clinical visualization atlas and a runnable Module 04 release candidate. Required human reviews are pending.
+- Current version: `0.8.0`
+- Status: The public preview maps the full 11-course curriculum and includes a ten-family clinical visualization atlas with a runnable Module 04 release candidate. Required human reviews are pending.
 
-## First course
+## Program course path
+
+The curriculum uses one shared synthetic and open data layer across two foundation courses, seven applied courses, capstone preparation, and a final capstone.
+
+| Stage | Course | Main work |
+|---|---|---|
+| Foundation | FND-1: Healthcare Data Foundations | Build, check, describe, and hand off trustworthy healthcare data. |
+| Foundation | FND-2: Modeling, Inference, and Reproducible Analytics | Choose, test, explain, and govern analytics that fit the decision. |
+| Applied | APP-1: Data for Clinical Care | Longitudinal cohorts, survival, risk adjustment, and care-pathway improvement. |
+| Applied | APP-2: Data for Patient Experience and Engagement | Patient-reported measures, representation, patient voice, and partnered improvement. |
+| Applied | APP-3: Data for Clinical Performance and Improvement | Quality and operational measures, process variation, capacity, and improvement evaluation. |
+| Applied | APP-4: Data for Clinical Decision Support | Workflow logic, validation, human factors, safety cases, monitoring, and governance. |
+| Applied | APP-5: Data for Population Health and Equity | Population measures, disparities, place-based evidence, targeting, and accountability. |
+| Applied | APP-6: Data for Health Research and Innovation | Causal questions, study design, protocol analytics, sensitivity analysis, and dissemination. |
+| Applied | APP-7: Data for Health Systems Strategy, Finance, and Value | Financial and value modeling, strategic options, investment decisions, and monitoring. |
+| Capstone | CAP-0: Capstone Preparation | Problem framing, data feasibility, methods, ethics, and proposal approval. |
+| Capstone | CAP-1: Capstone: Learning Health System Analytics | One complete, reproducible healthcare analytics project and oral defense. |
+
+The complete seven-week path, prerequisites, and final deliverable for every course are shown in the public page. The source-to-page implementation record is [docs/plans/2026-08-29-program-course-roadmap-plan.md](docs/plans/2026-08-29-program-course-roadmap-plan.md).
+
+## Current working course example
 
 The first application is DA-730: Analyzing, Visualizing, and Storytelling with Data.
 
@@ -85,8 +105,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 1. Complete faculty, emergency department, accessibility, and independent-instructor review of Module 04.
 2. Teach the Module 04 pilot, log defects, and promote the candidate to beta.
-3. Add the remaining ten module briefs and the Fall 2026 course wrapper.
-4. Connect tested modules to a small, versioned Commons data release.
+3. Connect the visualization lesson to the first small, versioned Commons data release.
+4. Build course packs against the 11-course roadmap, starting with the two foundation courses.
 
 ## Licensing
 
