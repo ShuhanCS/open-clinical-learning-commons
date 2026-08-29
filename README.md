@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.8.0`
-- Status: The public preview maps the full 11-course curriculum and includes a ten-family clinical visualization atlas with a runnable Module 04 release candidate. Required human reviews are pending.
+- Current version: `0.9.0`
+- Status: The public preview has an all-courses home page, a seven-module view for every course, and a routable page for all 77 roadmap modules. The ten-family clinical visualization atlas and Module 04 remain the first runnable learning release. Required human reviews are pending.
 
 ## Program course path
 
@@ -29,6 +29,17 @@ The curriculum uses one shared synthetic and open data layer across two foundati
 
 The complete seven-week path, prerequisites, and final deliverable for every course are shown in the public page. The source-to-page implementation record is [docs/plans/2026-08-29-program-course-roadmap-plan.md](docs/plans/2026-08-29-program-course-roadmap-plan.md).
 
+## Site routes
+
+| Page | Example | Purpose |
+|---|---|---|
+| All courses | `index.html` | Shows the complete foundation, applied, and capstone path. |
+| Course | `course.html?id=FND-1` | Shows one course and its seven modules. |
+| Module | `module.html?course=FND-1&week=1` | Shows the outcome, topics, submission, workload, and course context for one roadmap module. |
+| Working lesson | `courses/data-visualization/atlas.html#atlas` | Opens the clinical visualization atlas and guided synthetic-data case. |
+
+The shared [curriculum-data.js](curriculum-data.js) file is the single source for all 11 courses and 77 modules. See [docs/plans/2026-08-29-course-module-site-plan.md](docs/plans/2026-08-29-course-module-site-plan.md) for the page contract and release checks.
+
 ## Current working course example
 
 The first application is DA-730: Analyzing, Visualizing, and Storytelling with Data.
@@ -37,7 +48,7 @@ The course teaches learners to choose, build, critique, and explain healthcare v
 
 The first build is Module 04, Distributions versus summaries. Learners examine an emergency department where median length of stay improves while the longest stays become much worse. They must find the hidden change, choose one chart for leadership, and explain what decision should change. The synthetic reference dataset is included; it is not a stable teaching release until the required reviews are recorded.
 
-The public preview also includes a chart atlas covering comparison, distribution, time, relationship, uncertainty, flow, network, composition, place, and dashboard views. Each family includes a healthcare example and matching R code. The complete runnable script is [chart_gallery.R](courses/data-visualization/chart_gallery.R).
+The public preview also includes a [chart atlas](courses/data-visualization/atlas.html#atlas) covering comparison, distribution, time, relationship, uncertainty, flow, network, composition, place, and dashboard views. Each family includes a healthcare example and matching R code. The complete runnable script is [chart_gallery.R](courses/data-visualization/chart_gallery.R).
 
 - [Data visualization course](courses/data-visualization/README.md)
 - [Module 04: Distributions versus summaries](courses/data-visualization/modules/04-distributions-vs-summaries/README.md)
