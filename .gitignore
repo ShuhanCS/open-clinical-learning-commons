@@ -1,3 +1,4 @@
 .gstack/
 .vercel/
 courses/data-visualization/outputs/
+.env.local
