@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-09",
+    "title": "Comparison and small multiples",
+    "version": "0.1.0",
+    "commons_release": "0.20.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "national_selected": {
+      "id": "oclc-places-five-measure-county-comparison-2024",
+      "version": "0.1.0",
+      "path": "data/places_county_comparison_2024.csv",
+      "row_count": 31450,
+      "column_count": 16,
+      "county_geographies": 3144,
+      "national_summary_rows": 10,
+      "sha256": "2af5ce99fc7d66a18e95451084afc397e0f7392e9f1a2b5476377fd8811658d2"
+    },
+    "north_carolina": {
+      "id": "oclc-nc-five-measure-health-profiles-2024",
+      "version": "0.1.0",
+      "path": "data/nc_county_health_profiles_2024.csv",
+      "row_count": 500,
+      "column_count": 27,
+      "county_count": 100,
+      "measure_count": 5,
+      "sha256": "33b7cfc1c2459f1bde29cee7c05141aa116da2e6f79faf82646961e5162a75a9"
+    },
+    "unit": "county-measure estimate",
+    "public_aggregate_data": true,
+    "patient_level": false,
+    "synthetic": false
+  },
+  "source": {
+    "publisher": "Centers for Disease Control and Prevention",
+    "program": "PLACES: Local Data for Better Health",
+    "dataset_id": "fu4u-a9bh",
+    "landing_page": "https://data.cdc.gov/d/fu4u-a9bh",
+    "metadata_api": "https://data.cdc.gov/api/views/fu4u-a9bh",
+    "methodology": "https://www.cdc.gov/places/methodology/index.html",
+    "query_url": "https://data.cdc.gov/resource/fu4u-a9bh.csv?%24select=year%2Cstateabbr%2Cstatedesc%2Clocationname%2Clocationid%2Cmeasureid%2Cmeasure%2Cdata_value_type%2Cdatavaluetypeid%2Cdata_value%2Clow_confidence_limit%2Chigh_confidence_limit%2Ctotalpopulation%2Ctotalpop18plus%2Cdata_value_footnote_symbol%2Cdata_value_footnote&%24where=measureid+in%28%27CSMOKING%27%2C%27DIABETES%27%2C%27GHLTH%27%2C%27LPA%27%2C%27OBESITY%27%29&%24order=measureid%2Clocationid%2Cdatavaluetypeid&%24limit=50000",
+    "measure_year": 2022,
+    "raw_query_sha256": "897064d10703b870afe6d55f4cf0bc7e08d1c91f5d3490584952894df3f6de4b",
+    "source_record": "source-record.yml"
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    },
+    "cdc_data": {
+      "spdx": "LicenseRef-US-Government-Public-Data",
+      "url": "https://data.cdc.gov/"
+    }
+  },
+  "curriculum_source": {
+    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "author": "Ali Goff",
+    "date": "2026-08-15",
+    "path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/09-comparison-small-multiples-spec.md"
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "course designer and content owner"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, data release, teaching implementation, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The validator passed 58 checks. Four lab figures, one 500-row exact table, one text alternative, and three critique figures rendered successfully."
+    },
+    "required_human_roles": [
+      {
+        "role": "population-health decision relevance",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "epidemiology and CDC PLACES fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "equity and community language",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "visualization and accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "data_checks": "58 of 58 pass",
+    "lab_execution": "pass: four PNGs, one CSV, and one Markdown text alternative",
+    "critique_execution": "pass: three deliberately flawed PNGs",
+    "measured_results": {
+      "selected_rows": 31450,
+      "north_carolina_rows": 500,
+      "counties": 100,
+      "measures": 5,
+      "measure_year": 2022,
+      "adult_population_minimum": 2644,
+      "adult_population_maximum": 908531,
+      "counties_above_all_five_national_points": 54,
+      "counties_at_or_below_all_five_national_points": 9,
+      "counties_above_national_by_measure": {
+        "CSMOKING": 89,
+        "DIABETES": 62,
+        "GHLTH": 73,
+        "LPA": 68,
+        "OBESITY": 70
+      }
+    }
+  },
+  "known_issues": [
+    "Named population-health, epidemiology, equity, visualization, accessibility, and independent-instructor reviews are pending.",
+    "PLACES values are model-based small-area estimates rather than direct county survey estimates or observed diagnoses.",
+    "The selected measures include self-reported behavior, diagnosis, height, weight, and health status.",
+    "The reference profile count gives every selected measure equal weight and is not a validated risk, equity, readiness, or funding score.",
+    "County aggregates do not reveal within-county variation, community priorities, intervention fit, cost, or implementation capacity.",
+    "Interval overlap and point-estimate direction are descriptive and do not establish a formal pairwise result.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

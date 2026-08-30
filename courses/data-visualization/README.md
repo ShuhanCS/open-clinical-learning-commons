@@ -4,7 +4,7 @@ This course teaches people to choose, build, critique, and explain visualization
 
 - Source course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 - Format: three credits, seven weeks, asynchronous online
-- Course status: full course specification complete; Modules 01 through 08 and the Week 3 checkpoint package are runnable release candidates
+- Course status: full course specification complete; Modules 01 through 09 and the Week 3 checkpoint package are runnable release candidates
 - Default reproducible lab: R and ggplot2
 - Tool policy: Tableau, Python, Power BI, Observable, and other approved tools may be used when the source file is submitted and the result can be reproduced
 
@@ -98,10 +98,13 @@ Vendor-specific menu recall is not a standalone course outcome. A learner may us
 - [Module 08: Time and process variation](modules/08-time-process-variation/README.md)
 - [Module 08 specification](../../docs/curriculum/courses/DA-730/modules/08-time-process-variation-spec.md)
 - [Module 08 release record](modules/08-time-process-variation/release.json)
+- [Module 09: Comparison and small multiples](modules/09-comparison-small-multiples/README.md)
+- [Module 09 specification](../../docs/curriculum/courses/DA-730/modules/09-comparison-small-multiples-spec.md)
+- [Module 09 release record](modules/09-comparison-small-multiples/release.json)
 - [Syllabus redesign](syllabus-redesign.md)
 - [Course redesign plan](../../docs/plans/2026-08-26-clinical-data-visualization-course-redesign-plan.md)
 
-Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 03 uses the same source to choose among comparison, lookup, relationship, and no-display responses through a 10-case matrix. Module 04 uses every national CMS OP_18b hospital row to anchor an explicitly synthetic emergency-department distribution exercise. Module 05 uses complete national CDC PLACES diabetes rows, ACS county population context, and North Carolina boundary data to teach counts, crude prevalence, adjustment, and denominators. Module 06 uses every national CMS heart failure readmission row, the national benchmark, and official footnotes to show why point ranks exceed evidence of separation. Module 07 preserves that exact 65-hospital case while adding color, shape, text, grayscale, contrast, table, and long-description access paths. Module 08 preserves a 6,208-row CDC NHSN jurisdiction release and uses 94 consecutive Massachusetts weeks to teach raw time views, seasonality, smoothing, reporting context, and exploratory process limits. The Week 3 package renders one comparison, distribution, rate, and uncertainty figure from the first six releases, then checks the learner's exact source, analysis, accessibility, critique, and decision files. All eight modules remain candidates until their required human reviews are recorded.
+Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 03 uses the same source to choose among comparison, lookup, relationship, and no-display responses through a 10-case matrix. Module 04 uses every national CMS OP_18b hospital row to anchor an explicitly synthetic emergency-department distribution exercise. Module 05 uses complete national CDC PLACES diabetes rows, ACS county population context, and North Carolina boundary data to teach counts, crude prevalence, adjustment, and denominators. Module 06 uses every national CMS heart failure readmission row, the national benchmark, and official footnotes to show why point ranks exceed evidence of separation. Module 07 preserves that exact 65-hospital case while adding color, shape, text, grayscale, contrast, table, and long-description access paths. Module 08 preserves a 6,208-row CDC NHSN jurisdiction release and uses 94 consecutive Massachusetts weeks to teach raw time views, seasonality, smoothing, reporting context, and exploratory process limits. Module 09 preserves 31,450 CDC PLACES rows and uses 500 complete North Carolina county-measure rows to teach fixed scales, shared order, consistent references, crude-versus-adjusted dumbbells, and transparent review rules. The Week 3 package renders one comparison, distribution, rate, and uncertainty figure from the first six releases, then checks the learner's exact source, analysis, accessibility, critique, and decision files. All nine modules remain candidates until their required human reviews are recorded.
 
 ## Source record
 

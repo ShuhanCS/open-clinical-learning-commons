@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.8.0`
+- Register version: `0.9.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -47,7 +47,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 06. Uncertainty, variation, and small numbers | CMS Unplanned Hospital Visits and Footnote Crosswalk | Released all-national heart failure readmission estimate rows plus the complete national summary, official footnotes, and a 65-hospital Massachusetts decision table. |
 | 07. Color and accessible visual communication | Reused Module 06 CMS Unplanned Hospital Visits release plus W3C and CDC accessibility guidance | Released 65-row source-preserving accessibility table with redundant cues, contrast calculations, grayscale output, exact table, and text alternatives. |
 | 08. Time and process variation | CDC NHSN weekly hospital respiratory data by jurisdiction | Released 6,208-row jurisdiction table and 94-week Massachusetts teaching sequence with capacity, occupancy, respiratory admissions, reporting coverage, and source-season availability. |
-| 09. Comparison and small multiples | CMS, CDC PLACES, or module-approved source | Planned repeated measure across hospitals, counties, or patient groups. |
+| 09. Comparison and small multiples | CDC PLACES county data 2024 release | Released five-measure national county table and a 100-county North Carolina comparison table with paired crude and age-adjusted estimates, uncertainty, national references, and transparent profile order. |
 | 10. Maps, geography, and place | CDC PLACES, ACS, and HRSA AHRF | Planned county health measure, population denominator, geography, and workforce ratio. |
 | 11. Flow, networks, composition, and hierarchy | Synthea, ClinicalTrials.gov, or openFDA | Planned patient transitions, research relationships, or reporting hierarchy with explicit grain. |
 | 12. Dashboards and multi-view composition | CMS hospitals | Planned small hospital monitoring set for one named audience and decision. |
@@ -187,3 +187,24 @@ The module defines five reusable status cues with direct text, symbols, shapes, 
 - Validation: 47 of 47 checks pass
 
 The all-jurisdiction release preserves 120 rows with unavailable core metrics, six published count-above-bed anomalies, and one published coverage value above 100 percent. The Massachusetts sequence has complete core metrics, but reporting coverage and the reporting hospital mix still change. Exploratory process limits identify dates for review and do not establish special cause.
+
+### DA-730 comparison-small-multiples release
+
+- Module: DA-730 Module 09, Comparison and small multiples
+- CDC source: PLACES county data 2024 release, dataset `fu4u-a9bh`
+- Source page: https://data.cdc.gov/d/fu4u-a9bh
+- Methodology: https://www.cdc.gov/places/methodology/index.html
+- Selected measure year: 2022
+- Selected measures: current smoking, diagnosed diabetes, fair or poor self-rated health, no leisure-time physical activity, and obesity
+- Raw selected-query rows: 31,450
+- Raw selected-query SHA-256: `897064d10703b870afe6d55f4cf0bc7e08d1c91f5d3490584952894df3f6de4b`
+- All-selected release: `courses/data-visualization/modules/09-comparison-small-multiples/data/places_county_comparison_2024.csv`
+- All-selected rows: 31,450 across 3,144 counties plus 10 national summary rows
+- All-selected SHA-256: `2af5ce99fc7d66a18e95451084afc397e0f7392e9f1a2b5476377fd8811658d2`
+- North Carolina teaching release: `courses/data-visualization/modules/09-comparison-small-multiples/data/nc_county_health_profiles_2024.csv`
+- North Carolina rows: 500, representing 100 counties by five measures with paired crude and age-adjusted estimates
+- North Carolina SHA-256: `33b7cfc1c2459f1bde29cee7c05141aa116da2e6f79faf82646961e5162a75a9`
+- Source record: `courses/data-visualization/modules/09-comparison-small-multiples/source-record.yml`
+- Validation: 58 of 58 checks pass
+
+The values are model-based small-area estimates, not observed county diagnoses or direct county survey estimates. The reference profile count gives every measure equal weight and is only a transparent teaching screen. It is not a validated equity, risk, readiness, clinical, or funding score. Age-adjusted values support comparison; crude values retain population-burden context.

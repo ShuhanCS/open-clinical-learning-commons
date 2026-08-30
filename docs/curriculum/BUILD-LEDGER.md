@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.19.0
+- Current release: 0.20.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 08, Time and process variation
-- Next unit: DA-730 Module 09, Comparison and small multiples
+- Last completed unit: DA-730 Module 09, Comparison and small multiples
+- Next unit: DA-730 Module 10, Maps, geography, and place
 
 ## Confirmed decisions
 
@@ -62,6 +62,12 @@
 - Module 08 passes 47 data checks. Its lab creates five figures, one 94-row exact table, and one short and long text alternative; its critique creates an arbitrary dual-axis chart, a smoothed-only chart, and a chart with unsupported control limits.
 - The reference individuals chart declares the first 26 weeks as an exploratory baseline. Its center is 85.23 percent, lower limit is 80.72 percent, and upper limit is 89.75 percent. The module does not convert outside-limit points into formal special-cause claims because reporting coverage, seasonality, and aggregate mix weaken the process assumptions.
 - The source release preserves 120 jurisdiction-weeks with unavailable core metrics, six count-above-bed anomalies, and one coverage value above 100 percent instead of silently correcting them.
+- DA-730 Module 09 preserves 31,450 CDC PLACES rows covering five 2022 measures, both crude and age-adjusted estimates for all 3,144 counties, and ten national reference rows.
+- Module 09 all-selected SHA-256: `2af5ce99fc7d66a18e95451084afc397e0f7392e9f1a2b5476377fd8811658d2`.
+- Its North Carolina teaching release contains 500 county-measure rows, representing 100 counties by five measures, and has SHA-256 `33b7cfc1c2459f1bde29cee7c05141aa116da2e6f79faf82646961e5162a75a9`.
+- Module 09 passes 58 data checks. Its lab creates four figures, one 500-row decision table, and one short and long text alternative; its critique creates three deliberately flawed figures.
+- In the pinned release, 54 counties are above the national age-adjusted point estimate on all five selected measures and 9 are at or below it on all five. This shows why the national reference alone does not produce a narrow priority list.
+- The profile count and order are declared teaching devices, not validated scores. The module keeps crude and age-adjusted values, uncertainty intervals, adult denominators, direct labels, shared scales, and exact values available for review.
 
 ## Pending confirmation
 
@@ -70,8 +76,8 @@
 
 ## Next resume instructions
 
-1. Read the DA-730 Module 09 brief and the Module 08 time-context handoff.
-2. Select and pin the public source for the multi-group comparison case.
-3. Write `docs/curriculum/courses/DA-730/modules/09-comparison-small-multiples-spec.md` using the 21-section contract.
-4. Build ordering, shared-scale, small-multiple, and inconsistent-baseline exercises with the standing accessibility contract.
-5. Verify and release Module 09, then continue to Module 10.
+1. Read the DA-730 Module 10 brief and the Module 09 comparison handoff.
+2. Reuse the pinned CDC PLACES and North Carolina county releases unless the map decision requires an additional public denominator or workforce measure.
+3. Write `docs/curriculum/courses/DA-730/modules/10-maps-geography-place-spec.md` using the 21-section contract.
+4. Build a choropleth and a non-map comparison for the same named decision, with projection, geography, denominator, classification, and accessibility checks.
+5. Verify and release Module 10, then package the week-6 checkpoint.

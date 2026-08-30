@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.19.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 08 are runnable release candidates, and the Week 3 visualization judgment checkpoint has an exact folder contract, reproducible assembler, learner templates, and validator.
+- Current version: `0.20.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 09 are runnable release candidates, and the Week 3 visualization judgment checkpoint has an exact folder contract, reproducible assembler, learner templates, and validator.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -56,7 +56,7 @@ The first standalone course build is DA-730: Clinical Data Visualization and Dec
 
 The course teaches learners to choose, build, critique, and explain healthcare visualizations based on the decision, the data structure, the audience, and what the display leaves out. Its concept modules are independent of software and clinical domain. R and ggplot2 provide the first lab environment.
 
-Modules 01 through 08 are complete sequential rebuilds. Learners map real CMS HCAHPS variables to marks and channels, test how accurately they can read different encodings, select a chart, table, coordinated pair, or no display, audit whether a summary hides a consequential distribution, distinguish modeled counts from adjusted rates, decide how much confidence to place in a ranked estimate, make the result work in color, grayscale, print, text, and an exact table, and then distinguish a weekly pattern from smoothing, seasonality, reporting change, or an unsupported process claim. Module 08 preserves 6,208 CDC NHSN jurisdiction-week rows and uses a complete 94-week Massachusetts sequence for accessible run, seasonal, reporting-context, and exploratory process charts. All eight require recorded human reviews before alpha release.
+Modules 01 through 09 are complete sequential rebuilds. Learners map real CMS HCAHPS variables to marks and channels, test how accurately they can read different encodings, select a chart, table, coordinated pair, or no display, audit whether a summary hides a consequential distribution, distinguish modeled counts from adjusted rates, decide how much confidence to place in a ranked estimate, make the result work in color, grayscale, print, text, and an exact table, distinguish a weekly pattern from smoothing or reporting change, and then compare many groups without changing scale, order, or reference meaning. Module 09 preserves 31,450 CDC PLACES rows and uses a complete 500-row North Carolina county-measure table for ordered small multiples and an auditable twelve-county review screen. All nine require recorded human reviews before alpha release.
 
 The public preview also includes a [chart atlas](courses/data-visualization/atlas.html#atlas) covering comparison, distribution, time, relationship, uncertainty, flow, network, composition, place, and dashboard views. Each family includes a healthcare example and matching R code. The complete runnable script is [chart_gallery.R](courses/data-visualization/chart_gallery.R).
 
@@ -98,6 +98,11 @@ The public preview also includes a [chart atlas](courses/data-visualization/atla
 - [Module 08 assessment](courses/data-visualization/modules/08-time-process-variation/assessment.md)
 - [Module 08 instructor notes](courses/data-visualization/modules/08-time-process-variation/instructor-notes.md)
 - [Module 08 release record](courses/data-visualization/modules/08-time-process-variation/release.json)
+- [Module 09: Comparison and small multiples](courses/data-visualization/modules/09-comparison-small-multiples/README.md)
+- [Module 09 specification](docs/curriculum/courses/DA-730/modules/09-comparison-small-multiples-spec.md)
+- [Module 09 assessment](courses/data-visualization/modules/09-comparison-small-multiples/assessment.md)
+- [Module 09 instructor notes](courses/data-visualization/modules/09-comparison-small-multiples/instructor-notes.md)
+- [Module 09 release record](courses/data-visualization/modules/09-comparison-small-multiples/release.json)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
@@ -156,7 +161,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build DA-730 Module 09, Comparison and small multiples.
+1. Build DA-730 Module 10, Maps, geography, and place.
 2. Complete the named human reviews for Modules 01 through 06.
 3. Continue the sequential DA-730 build before starting the foundation course packages.
 

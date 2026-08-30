@@ -1,0 +1,86 @@
+schema_version: "1.0.0"
+module_id: "oclc-da730-09"
+module_title: "Comparison and small multiples"
+retrieved_at: "2026-08-29"
+
+clinical_source:
+  publisher: "Centers for Disease Control and Prevention"
+  program: "PLACES: Local Data for Better Health"
+  dataset_id: "fu4u-a9bh"
+  dataset_title: "PLACES: Local Data for Better Health, County Data 2024 release"
+  landing_page: "https://data.cdc.gov/d/fu4u-a9bh"
+  metadata_api: "https://data.cdc.gov/api/views/fu4u-a9bh"
+  methodology_url: "https://www.cdc.gov/places/methodology/index.html"
+  health_outcomes_url: "https://www.cdc.gov/places/measure-definitions/health-outcomes.html"
+  health_risk_behaviors_url: "https://www.cdc.gov/places/measure-definitions/health-risk-behaviors.html"
+  health_status_url: "https://www.cdc.gov/places/measure-definitions/health-status.html"
+  query_url: "https://data.cdc.gov/resource/fu4u-a9bh.csv?%24select=year%2Cstateabbr%2Cstatedesc%2Clocationname%2Clocationid%2Cmeasureid%2Cmeasure%2Cdata_value_type%2Cdatavaluetypeid%2Cdata_value%2Clow_confidence_limit%2Chigh_confidence_limit%2Ctotalpopulation%2Ctotalpop18plus%2Cdata_value_footnote_symbol%2Cdata_value_footnote&%24where=measureid+in%28%27CSMOKING%27%2C%27DIABETES%27%2C%27GHLTH%27%2C%27LPA%27%2C%27OBESITY%27%29&%24order=measureid%2Clocationid%2Cdatavaluetypeid&%24limit=50000"
+  release_label: "2024 release"
+  measure_year: "2022"
+  raw_rows: 31450
+  raw_bytes: 5095209
+  raw_sha256: "897064d10703b870afe6d55f4cf0bc7e08d1c91f5d3490584952894df3f6de4b"
+  access_level: "public"
+  license_id: "PUBLIC_DOMAIN"
+  patient_level: false
+  synthetic: false
+
+selected_measures:
+  - id: "CSMOKING"
+    name: "Current cigarette smoking among adults"
+    category: "health risk behavior"
+  - id: "DIABETES"
+    name: "Diagnosed diabetes among adults"
+    category: "health outcome"
+  - id: "GHLTH"
+    name: "Fair or poor self-rated health status among adults"
+    category: "health status"
+  - id: "LPA"
+    name: "No leisure-time physical activity among adults"
+    category: "health risk behavior"
+  - id: "OBESITY"
+    name: "Obesity among adults"
+    category: "health outcome"
+
+teaching_releases:
+  national_selected:
+    data_id: "oclc-places-five-measure-county-comparison-2024"
+    version: "0.1.0"
+    path: "data/places_county_comparison_2024.csv"
+    rows: 31450
+    columns: 16
+    county_geographies: 3144
+    national_summary_rows: 10
+    sha256: "2af5ce99fc7d66a18e95451084afc397e0f7392e9f1a2b5476377fd8811658d2"
+  north_carolina:
+    data_id: "oclc-nc-five-measure-health-profiles-2024"
+    version: "0.1.0"
+    path: "data/nc_county_health_profiles_2024.csv"
+    rows: 500
+    columns: 27
+    counties: 100
+    measures: 5
+    sha256: "33b7cfc1c2459f1bde29cee7c05141aa116da2e6f79faf82646961e5162a75a9"
+  build_script: "build_places_comparison.py"
+  validator: "validate_places_comparison.py"
+  validation_result: "58 of 58 checks pass"
+  transformations:
+    - "Selected five named 2022 adult measures and both crude and age-adjusted source rows."
+    - "Preserved all 3,144 county geographies and five national crude and five national adjusted summary rows."
+    - "Selected all 100 North Carolina counties and paired crude and adjusted estimates by county and measure."
+    - "Added the matching national age-adjusted reference and percentage-point difference."
+    - "Calculated within-measure competition rank, descriptive point direction, and one transparent county profile order."
+
+rights:
+  source_status: "United States government public-domain data"
+  source_terms_url: "https://data.cdc.gov/"
+  documentation_license: "CC-BY-4.0"
+  code_license: "MIT"
+
+known_limits:
+  - "PLACES estimates use multilevel regression and poststratification rather than direct county survey estimates."
+  - "The selected measures include self-reported behavior, diagnosis, height, weight, and health status."
+  - "Age-adjusted estimates support comparison and do not represent outreach volume."
+  - "Confidence-interval overlap is not used as a formal county-versus-national or county-versus-county test."
+  - "County aggregates do not show within-county groups, access, readiness, cost, or community priorities."
+  - "The profile count and order are transparent teaching devices, not validated risk, equity, clinical, or funding scores."
