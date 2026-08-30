@@ -1,0 +1,8 @@
+criterion,component,course_points_available,points_earned,status,evidence
+Executable environment and dependency record,Module 01 setup,5,5,pass,Reference clean environment and smoke tests
+Git history semantic version clean release and tag,Module 01 setup,5,5,pass,Version chain and protected release contract
+Reproduction privacy and verified AI-use evidence,Module 01 setup,5,5,pass,Cumulative records and synthetic-only scan
+Source relational schema FHIR reading and first extracts,Module 03 SQL cohort,5,5,pass,Exact database facts and five extracts
+Eligibility index event time zero and readable SQL,Module 03 SQL cohort,8,8,pass,1048 eligible events and deterministic ranking
+Analytic-table grain windows fields and leakage labels,Module 03 SQL cohort,7,7,pass,374 rows and 29-field dictionary
+Flow denominators query checks and technical handoff,Module 03 SQL cohort,5,5,pass,Conserved flow and 16 passing checks

@@ -894,11 +894,11 @@ Return without scoring when:
 - AI-generated code is unverified; or
 - the learner cannot explain the SQL.
 
-Future full checkpoint specification:
+Full checkpoint specification:
 
 `docs/curriculum/courses/FND-1/checkpoints/01-validated-cohort-release-spec.md`
 
-Future runnable package:
+Runnable checkpoint package:
 
 `courses/healthcare-data-foundations/checkpoints/01-validated-cohort-release/`
 

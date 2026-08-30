@@ -264,6 +264,81 @@ if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 03 builder self-check failed.' }
 & python (Join-Path $fnd1Module03Root 'validate_cohort.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 03 validator self-check failed.' }
 
+$fnd1Checkpoint01Root = Join-Path $repo 'courses\healthcare-data-foundations\checkpoints\01-validated-cohort-release'
+$fnd1Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\checkpoints\01-validated-cohort-release-spec.md'
+$fnd1Checkpoint01Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md', 'assemble_checkpoint.py',
+    'instructor-notes.md', 'release.json', 'validate_checkpoint.py', 'assets\schema-diagram.svg',
+    'template\.gitattributes', 'template\README.md', 'template\ai-use.md',
+    'template\component-score.csv', 'template\reproducibility-check.md',
+    'template\review-disposition.md', 'template\source-system-comparison.md',
+    'template\transformation-record.md', 'reference\README.md', 'reference\environment-note.md',
+    'reference\version-policy.md', 'reference\data-model.mmd', 'reference\schema-description.md',
+    'reference\source-system-comparison.md', 'reference\fhir-json-reading.md',
+    'reference\transformation-record.md', 'reference\reproducibility-check.md',
+    'reference\ai-use.md', 'reference\component-score.csv', 'reference\review-disposition.md',
+    'reference\evidence\module-01-ai-use.md',
+    'reference\evidence\module-01-reproducibility-check.md',
+    'reference\evidence\module-02-ai-use.md',
+    'reference\evidence\module-02-validation-notes.md',
+    'reference\evidence\module-03-ai-use.md',
+    'reference\evidence\module-03-reproducibility-check.md',
+    'reference\first-extracts\encounter-class-counts.csv',
+    'reference\first-extracts\numeric-observation-sample.csv',
+    'reference\first-extracts\observation-linkage.csv',
+    'reference\first-extracts\selected-patient-timeline.csv',
+    'reference\first-extracts\table-inventory.csv'
+)
+$fnd1Checkpoint01Missing = @($fnd1Checkpoint01Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Checkpoint01Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Checkpoint01Spec) -or $fnd1Checkpoint01Missing.Count -gt 0) {
+    throw "FND-1 Checkpoint 1 is missing its specification or package files: $($fnd1Checkpoint01Missing -join ', ')."
+}
+$fnd1Checkpoint01Content = Get-Content -Raw -LiteralPath $fnd1Checkpoint01Spec
+$fnd1Checkpoint01Sections = [regex]::Matches($fnd1Checkpoint01Content, '(?m)^## \d+\.').Count
+if ($fnd1Checkpoint01Sections -ne 17 -or $fnd1Checkpoint01Content -match '[—–]' -or $fnd1Checkpoint01Content -match '(?im)[A-Z]:\\Users\\') {
+    throw "FND-1 Checkpoint 1 must define 17 plain-ASCII contract sections without local absolute paths; found $fnd1Checkpoint01Sections sections."
+}
+$fnd1Checkpoint01Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Checkpoint01Root 'release.json') | ConvertFrom-Json
+$fnd1Checkpoint01Scores = Import-Csv -LiteralPath (Join-Path $fnd1Checkpoint01Root 'reference\component-score.csv')
+$fnd1Checkpoint01Extracts = @(
+    @{ Name = 'encounter-class-counts.csv'; Rows = 6; Hash = '26106dd682622ddbc6d75857a93607d48a353ba707ef56fc51d231be8f201d65' },
+    @{ Name = 'numeric-observation-sample.csv'; Rows = 25; Hash = 'f6854aeeeca3a7083147f53fa7e41fd7797e3ee94f459864c087190126c2d940' },
+    @{ Name = 'observation-linkage.csv'; Rows = 3; Hash = '901e06e7c9b71b5e11daf021772837af9223338c921641aeff60cc1ca214dd12' },
+    @{ Name = 'selected-patient-timeline.csv'; Rows = 25; Hash = '411a05229819cd5e7cfe9d678fc8920053db8e2be8cc93135c6fcb88d1b28a0c' },
+    @{ Name = 'table-inventory.csv'; Rows = 16; Hash = '3f8fc12567ef57d1b74c21aa9fcfaedfac764c772e8d422ced002b7901358c07' }
+)
+if (
+    $fnd1Checkpoint01Release.checkpoint.version -ne '0.1.0' -or
+    $fnd1Checkpoint01Release.checkpoint.commons_release -ne '0.31.0' -or
+    $fnd1Checkpoint01Release.checkpoint.course_weight_percent -ne 40 -or
+    $fnd1Checkpoint01Release.checkpoint.cumulative_hours -ne 48 -or
+    ($fnd1Checkpoint01Release.components | Measure-Object -Property course_points -Sum).Sum -ne 40 -or
+    $fnd1Checkpoint01Release.package.assembled_files -ne 45 -or
+    $fnd1Checkpoint01Release.package.immutable_manifest_rows -ne 35 -or
+    $fnd1Checkpoint01Release.package.manifest_sha256 -ne '36cf454387db595e9237f461556676db7611b3b60b2762f8554e4d9d580c96a6' -or
+    $fnd1Checkpoint01Release.validation.starter_checks -ne 295 -or
+    $fnd1Checkpoint01Release.validation.complete_reference_checks -ne 341 -or
+    ($fnd1Checkpoint01Scores | Measure-Object -Property course_points_available -Sum).Sum -ne 40 -or
+    ($fnd1Checkpoint01Scores | Measure-Object -Property points_earned -Sum).Sum -ne 40
+) {
+    throw 'FND-1 Checkpoint 1 release metadata, component weights, manifest, or validation facts do not match the 0.1.0 contract.'
+}
+foreach ($extract in $fnd1Checkpoint01Extracts) {
+    $path = Join-Path $fnd1Checkpoint01Root (Join-Path 'reference\first-extracts' $extract.Name)
+    if (
+        (Import-Csv -LiteralPath $path).Count -ne $extract.Rows -or
+        (Get-FileHash -Algorithm SHA256 -LiteralPath $path).Hash.ToLowerInvariant() -ne $extract.Hash
+    ) {
+        throw "FND-1 Checkpoint 1 first extract changed: $($extract.Name)."
+    }
+}
+& python (Join-Path $fnd1Checkpoint01Root 'assemble_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Checkpoint 1 assembler self-check failed.' }
+& python (Join-Path $fnd1Checkpoint01Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Checkpoint 1 validator self-check failed.' }
+
 function Test-ModuleContract {
     param(
         [Parameter(Mandatory)] [string] $Label,
@@ -903,3 +978,4 @@ Write-Output "FND-1 specification passed: $fnd1ModuleCount modules, $fnd1Hours h
 Write-Output "FND-1 Module 01 passed: $fnd1Module01Sections contract sections and $($fnd1Module01Files.Count) required files."
 Write-Output "FND-1 Module 02 passed: $fnd1Module02Sections contract sections and $($fnd1Module02Files.Count) required files."
 Write-Output "FND-1 Module 03 passed: $fnd1Module03Sections contract sections and $($fnd1Module03Files.Count) required files."
+Write-Output "FND-1 Checkpoint 1 passed: $fnd1Checkpoint01Sections contract sections and $($fnd1Checkpoint01Files.Count) required files."

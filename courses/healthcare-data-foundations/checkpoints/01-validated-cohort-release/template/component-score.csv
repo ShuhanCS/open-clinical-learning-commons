@@ -1,0 +1,8 @@
+criterion,component,course_points_available,points_earned,status,evidence
+Executable environment and dependency record,Module 01 setup,5,[REPLACE],[REPLACE],[REPLACE]
+Git history semantic version clean release and tag,Module 01 setup,5,[REPLACE],[REPLACE],[REPLACE]
+Reproduction privacy and verified AI-use evidence,Module 01 setup,5,[REPLACE],[REPLACE],[REPLACE]
+Source relational schema FHIR reading and first extracts,Module 03 SQL cohort,5,[REPLACE],[REPLACE],[REPLACE]
+Eligibility index event time zero and readable SQL,Module 03 SQL cohort,8,[REPLACE],[REPLACE],[REPLACE]
+Analytic-table grain windows fields and leakage labels,Module 03 SQL cohort,7,[REPLACE],[REPLACE],[REPLACE]
+Flow denominators query checks and technical handoff,Module 03 SQL cohort,5,[REPLACE],[REPLACE],[REPLACE]

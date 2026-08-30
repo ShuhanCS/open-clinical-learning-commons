@@ -1,0 +1,17 @@
+table_name,source_rows,source_columns
+allergies,597,6
+careplans,3483,9
+conditions,8376,6
+devices,78,7
+encounters,53346,15
+imaging_studies,855,10
+immunizations,15478,6
+medications,42989,13
+observations,299697,8
+organizations,1119,11
+patients,1171,25
+payer_transitions,3801,5
+payers,10,21
+procedures,34981,8
+providers,5855,12
+supplies,0,6

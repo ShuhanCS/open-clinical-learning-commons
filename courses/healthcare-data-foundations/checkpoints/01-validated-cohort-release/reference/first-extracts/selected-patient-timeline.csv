@@ -1,0 +1,26 @@
+encounter_id,start,stop,encounterclass,code,description
+9502c4e9-c3f9-418e-ab7c-cd7711ff0f7e,1950-11-23T23:35:03Z,1950-11-23T23:50:03Z,ambulatory,185345009,Encounter for symptom
+6278e689-1f02-482c-b80a-42db6fa3d761,1955-05-11T23:35:03Z,1955-05-12T00:35:03Z,emergency,50849002,Emergency room admission (procedure)
+edd09cd5-414f-44db-8319-87a965241b7e,1959-05-19T23:35:03Z,1959-05-19T23:50:03Z,ambulatory,185347001,Encounter for problem
+e6736bfd-eabe-4014-8fff-abaa0dace3ac,1963-05-31T23:35:03Z,1963-06-01T00:05:03Z,wellness,162673000,General examination of patient (procedure)
+93e58e80-1ceb-4365-99be-757bbd1e9e03,1964-06-05T23:35:03Z,1964-06-06T00:05:03Z,wellness,162673000,General examination of patient (procedure)
+1ab058cb-9d80-4086-88c5-d1e93066e54b,1966-06-17T23:35:03Z,1966-06-18T00:05:03Z,wellness,162673000,General examination of patient (procedure)
+8faf4363-8c01-4697-8f33-0ee45f6868f5,1972-05-05T23:35:03Z,1972-05-06T01:05:03Z,emergency,230690007,Stroke
+d66080d9-f633-4b45-91ae-63b0e905d897,1972-07-21T23:35:03Z,1972-07-21T23:50:03Z,wellness,162673000,General examination of patient (procedure)
+4fdd5f70-d12e-4ad5-8678-45dcd042945b,1973-07-27T23:35:03Z,1973-07-27T23:53:03Z,wellness,162673000,General examination of patient (procedure)
+603bda08-2be8-4384-8622-4804db7fbd17,1973-08-17T23:35:03Z,1973-08-17T23:50:03Z,ambulatory,390906007,Follow-up encounter
+6499a40e-2219-4084-a4fe-fdc309f386fa,1973-10-05T23:35:03Z,1973-10-05T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+731ced21-2816-40d3-b234-f52b1b858f22,1973-12-07T23:35:03Z,1973-12-07T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+8a6c69ba-43a3-4fae-8b0a-6d518f666871,1974-01-04T23:35:03Z,1974-01-04T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+76ce5282-88fb-49c8-9aee-cd8ea58a60e0,1974-03-08T23:35:03Z,1974-03-08T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+5563c367-061e-4566-b854-88f06ef7ef2d,1974-08-02T23:35:03Z,1974-08-02T23:52:03Z,wellness,162673000,General examination of patient (procedure)
+2e4c53c1-63bd-441e-bf0a-d8d8033b70de,1974-08-17T23:35:03Z,1974-08-17T23:50:03Z,ambulatory,390906007,Follow-up encounter
+45203409-a316-4104-9c78-5aaad8977708,1974-08-30T23:35:03Z,1974-08-30T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+ff5dacff-6c68-45c1-a881-420f54e69235,1974-10-04T23:35:03Z,1974-10-04T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+eac017e5-4046-494a-a8a0-4897ebd947b3,1974-11-01T23:35:03Z,1974-11-01T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+e283428c-dace-4528-b5cd-8d2b5b782019,1975-08-08T23:35:03Z,1975-08-08T23:52:03Z,wellness,162673000,General examination of patient (procedure)
+edb865b9-b1c5-4474-9019-48ec489986cd,1975-08-17T23:35:03Z,1975-08-17T23:50:03Z,ambulatory,390906007,Follow-up encounter
+4af17b53-4bca-433d-9147-394ff07dc97f,1976-08-13T23:35:03Z,1976-08-13T23:54:03Z,wellness,162673000,General examination of patient (procedure)
+d5acae19-4ad1-4860-bb3a-81126d72947f,1976-08-16T23:35:03Z,1976-08-16T23:50:03Z,ambulatory,390906007,Follow-up encounter
+4204808a-d937-4142-aef9-25e85bba0830,1976-10-22T23:35:03Z,1976-10-22T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)
+7fe5ae17-e95c-449e-afe5-fd8adfbd9f87,1976-11-19T23:35:03Z,1976-11-19T23:50:03Z,outpatient,185349003,Encounter for check up (procedure)

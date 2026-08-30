@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.30.0
+- Current release: 0.31.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Module 03, Cohorts and analytic tables
-- Next unit: FND-1 Week 3 checkpoint, cumulative workspace, database, and cohort release
+- Last completed unit: FND-1 Week 3 checkpoint, validated cohort and analytic-table release
+- Next unit: FND-1 Module 04, Cleaning and profiling
 
 ## Confirmed decisions
 
@@ -137,6 +137,12 @@
 - Separate pre-index aggregation prevents join multiplication. Encounter, acute, condition, and medication history-count sums are 2,138, 113, 468, and 1,007.
 - Five committed outputs reproduce byte for byte from the pinned database. The validator passes 600 package checks, 613 checks with upstream database reproduction, and 614 complete-submission checks; incomplete packages and existing build targets are rejected.
 - Module 03 is a runnable release candidate. Faculty, SQL, clinical informatics, temporal logic, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Checkpoint 1 preserves the source assessment weights as 15 Module 01 setup points plus 25 Module 03 SQL cohort points. Module 02 is a required relational-data gateway and adds no separate weight.
+- The instructor reference assembles 45 files and registers 35 immutable artifacts. The manifest is 4,107 bytes with SHA-256 `36cf454387db595e9237f461556676db7611b3b60b2762f8554e4d9d580c96a6`.
+- The checkpoint preserves five Module 02 first extracts with row counts 16, 6, 3, 25, and 25, plus all five Module 03 outputs, both data dictionaries, schema SQL, an editable relationship model, accessible SVG and text, six module evidence records, and cumulative review records.
+- Learner-mode assembly from three accepted workspaces passes a 295-check starter audit. Complete reference validation passes 341 checks and invokes the 614-check Module 03 submission validator through the checkpoint subset.
+- The checkpoint requires at least 32 of 40 points, 19 noncompensable gates, an adequate defense, and `accept` or `accept with conditions` before Module 04 begins.
+- Checkpoint 1 is a runnable release candidate. Faculty, clinical analyst, SQL, informatics, reproducibility, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -145,9 +151,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course specification, Modules 01 through 03 specifications and release records, source record, master architecture, and this ledger.
-2. Treat the accepted Module 02 database and Module 03 cohort definition, analytic table, flow, SQL, and fingerprints as immutable upstream inputs.
-3. Write the cumulative Week 3 checkpoint specification mapping the 15-percent Module 01 workspace component and 25-percent Module 03 cohort component to the official 40-percent checkpoint.
-4. Assemble the exact workspace, relational database evidence, tested cohort, analytic table, source record, query checks, AI disclosure, and release disposition into one portable submission contract.
-5. Build the checkpoint assembler, validator, learner templates, rubric, instructor key, release record, and clean reproduction evidence.
-6. Update the Commons version and this ledger, then commit and push the Week 3 checkpoint before beginning Module 04.
+1. Read the FND-1 course, Modules 01 through 03, and Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
+2. Treat the accepted Checkpoint 1 analytic table, cohort definition, source records, SQL, and fingerprints as immutable upstream inputs.
+3. Write the 21-section Module 04 specification for a separately versioned deterministic defect layer, quality profile, risk log, and stop/fix/proceed decision.
+4. Lock the seeded defects, natural source issues, expected counts, severity rules, missingness handling, small-cell boundary, and correction-versus-exclusion rules before writing the notebook or builder.
+5. Build the defect release, profiler, notebook, machine-readable outputs, learner assessment, instructor key, validator, and decision records.
+6. Update the Commons version and this ledger, then commit and push Module 04 before beginning Module 05.

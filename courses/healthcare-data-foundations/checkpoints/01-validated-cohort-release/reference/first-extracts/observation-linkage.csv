@@ -1,0 +1,4 @@
+type,encounter_linkage,observation_count
+numeric,linked encounter,248125
+numeric,no encounter reference,30363
+text,linked encounter,21209

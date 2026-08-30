@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-fnd1-cp1",
+    "title": "Validated cohort and analytic-table release",
+    "version": "0.1.0",
+    "commons_release": "0.31.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "due": "end of instructional Week 3",
+    "course_weight_percent": 40,
+    "cumulative_hours": 48.0,
+    "required_tag": "fnd1-checkpoint1-v0.1.0"
+  },
+  "components": [
+    {"module": "oclc-fnd1-01", "version": "0.1.0", "course_points": 15, "role": "reproducible workspace"},
+    {"module": "oclc-fnd1-02", "version": "0.1.0", "course_points": 0, "role": "required relational-data gateway"},
+    {"module": "oclc-fnd1-03", "version": "0.1.0", "course_points": 25, "role": "SQL cohort and analytic table"}
+  ],
+  "decision": {
+    "owners": ["senior clinical data analyst", "course instructor acting as repository maintainer"],
+    "question": "Are the workspace, database, cohort, and analytic table technically ready for quality and descriptive work?",
+    "dispositions": ["accept", "accept with conditions", "revise", "refer"],
+    "progression_dispositions": ["accept", "accept with conditions"]
+  },
+  "source": {
+    "id": "synthea-sample-data-csv-apr2020",
+    "url": "https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip",
+    "archive_bytes": 8982431,
+    "archive_sha256": "4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a",
+    "tables": 16,
+    "fields": 168,
+    "rows": 471836,
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "database": {
+    "tested_bytes": 141234176,
+    "tested_sha256": "1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a",
+    "dictionary_fields": 177,
+    "foreign_key_failures": 0,
+    "integrity": "ok",
+    "stored_in_git": false
+  },
+  "first_extracts": {
+    "encounter-class-counts.csv": {"rows": 6, "bytes": 125, "sha256": "26106dd682622ddbc6d75857a93607d48a353ba707ef56fc51d231be8f201d65"},
+    "numeric-observation-sample.csv": {"rows": 25, "bytes": 3335, "sha256": "f6854aeeeca3a7083147f53fa7e41fd7797e3ee94f459864c087190126c2d940"},
+    "observation-linkage.csv": {"rows": 3, "bytes": 138, "sha256": "901e06e7c9b71b5e11daf021772837af9223338c921641aeff60cc1ca214dd12"},
+    "selected-patient-timeline.csv": {"rows": 25, "bytes": 3364, "sha256": "411a05229819cd5e7cfe9d678fc8920053db8e2be8cc93135c6fcb88d1b28a0c"},
+    "table-inventory.csv": {"rows": 16, "bytes": 337, "sha256": "3f8fc12567ef57d1b74c21aa9fcfaedfac764c772e8d422ced002b7901358c07"}
+  },
+  "cohort": {
+    "eligible_events": 1048,
+    "included_patients": 374,
+    "index_rows": 374,
+    "analytic_rows": 374,
+    "analytic_fields": 29,
+    "analytic_sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a",
+    "query_checks": 16
+  },
+  "package": {
+    "assembled_files": 45,
+    "immutable_manifest_rows": 35,
+    "manifest_bytes": 4107,
+    "manifest_sha256": "36cf454387db595e9237f461556676db7611b3b60b2762f8554e4d9d580c96a6",
+    "first_extract_registry_bytes": 527,
+    "first_extract_registry_sha256": "32707acca77a1e6ca06a783912c06bcc765910142646f36eba6af0ee6710f17a",
+    "external_python_dependencies": 0
+  },
+  "assessment": {
+    "course_points": 40,
+    "minimum_passing_points": 32,
+    "setup_component_points": 15,
+    "sql_cohort_component_points": 25,
+    "required_gates": 19
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_assembly": "pass",
+    "learner_mode_assembly": "pass",
+    "starter_checks": 295,
+    "complete_reference_checks": 341,
+    "embedded_module03_validation": "pass",
+    "existing_target_rejection": "pass",
+    "incomplete_checkpoint_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, assembly, teaching records, and validation"}
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "Reference assembly creates 45 files and 35 immutable manifest rows. Starter validation passes 295 checks and complete validation passes 341 checks."
+    },
+    "required_human_roles": [
+      {"role": "FND-1 faculty owner", "reviewer": null, "status": "pending"},
+      {"role": "senior clinical data analyst", "reviewer": null, "status": "pending"},
+      {"role": "SQL and data engineering", "reviewer": null, "status": "pending"},
+      {"role": "clinical informatics and cohort meaning", "reviewer": null, "status": "pending"},
+      {"role": "reproducibility and developer environment", "reviewer": null, "status": "pending"},
+      {"role": "accessibility", "reviewer": null, "status": "pending"},
+      {"role": "privacy and data governance", "reviewer": null, "status": "pending"},
+      {"role": "responsible AI", "reviewer": null, "status": "pending"},
+      {"role": "independent reproduction and teachability", "reviewer": null, "status": "pending"}
+    ]
+  },
+  "known_issues": [
+    "Named faculty, clinical, technical, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending.",
+    "Windows reproduction is complete; named macOS and Linux reproduction remains pending.",
+    "The generated SQLite database and source archive are verified but not stored in Git.",
+    "The tested SQLite byte fingerprint may require a documented compatibility decision after a supported SQLite upgrade.",
+    "The source is synthetic and older and cannot support real clinical or population estimates."
+  ]
+}

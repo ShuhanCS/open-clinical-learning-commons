@@ -13,7 +13,7 @@ FND-1 teaches learners to build, check, describe, and hand off healthcare data a
 - Course specification status: complete candidate
 - Module package status: Modules 01 through 03 are runnable release candidates; Modules 04 through 07 are not yet built
 - Course package version: 0.1.0
-- Commons release: 0.30.0
+- Commons release: 0.31.0
 
 ## Seven technical modules
 
@@ -42,6 +42,12 @@ Runnable module packages:
 - Week 3: workspace, database, validated SQL cohort, analytic table, and query checks.
 - Week 6: cleaned analytic table, quality profile, descriptive evidence, accessible charts, and stop/fix/proceed recommendation.
 - Official half-term end date: versioned toolkit release, clean reproduction, provenance and data brief, AI audit, and technical handoff defense.
+
+Runnable Week 3 checkpoint:
+
+- [Validated cohort and analytic-table release](checkpoints/01-validated-cohort-release/README.md)
+- [Durable Checkpoint 1 specification](../../docs/curriculum/courses/FND-1/checkpoints/01-validated-cohort-release-spec.md)
+- [Checkpoint 1 release record](checkpoints/01-validated-cohort-release/release.json)
 
 The 7.5-week phrase is a planning model. Published dates use the official MGH Institute half-term calendar:
 
