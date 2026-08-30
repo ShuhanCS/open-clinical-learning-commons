@@ -1,0 +1,26 @@
+check_id,invariant,actual,expected,status
+I01,official source file count,25,25,pass
+I02,official source bytes,18206634,18206634,pass
+I03,official PDF pages,1101,1101,pass
+I04,upstream handoff file count,3,3,pass
+I05,person source rows,19140,19140,pass
+I06,event source rows,174231,174231,pass
+I07,all event rows link to HC-256,174231,174231,pass
+I08,event weights match person weights,0,0,pass
+I09,accepted target rows,1255,1255,pass
+I10,accepted synthetic respondents,782,782,pass
+I11,target linked event rows,28455,28455,pass
+I12,target inpatient events,1692,1692,pass
+I13,target emergency events,1601,1601,pass
+I14,target outpatient events,4651,4651,pass
+I15,target office-based events,20511,20511,pass
+I16,every target person has inpatient evidence,1255,1255,pass
+I17,person totals reconcile to event files,True,True,pass
+I18,released person IDs are unique,1255,1255,pass
+I19,released event IDs are unique,28455,28455,pass
+I20,direct source IDs are omitted,True,True,pass
+I21,linked events follow the documented annual-file window,28455,28455,pass
+I22,event months are valid,28455,28455,pass
+I23,related emergency-inpatient links are reciprocal pairs,1710,1710,pass
+I24,portal preference remains unavailable,0,0,pass
+I25,linked pattern rows,14,14,pass

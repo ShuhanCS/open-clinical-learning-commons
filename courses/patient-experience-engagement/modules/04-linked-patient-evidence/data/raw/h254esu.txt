@@ -1,0 +1,729 @@
+SAS User File for H254E Data                                                                   
+                                                                                                    
+This file contains information and sample SAS programs to create a permanent                        
+SAS dataset for users who want to use SAS in processing the MEPS data                               
+provided in this PUF release.                                                                       
+                                                                                                    
+There are two ways to create a permanent SAS dataset, using either the SAS                          
+transport data file (H254E.SSP) or the ASCII data file (H254E.DAT)                        
+supplied in this PUF release. Section A provides a sample SAS program for the                       
+first alternative, which is to convert the SAS transport data file to a                             
+regular SAS dataset using the SAS procedure: CIMPORT. Section B provides a                          
+sample SAS program for the second alternative, which is to read data from the                       
+ASCII data file using a SAS DATA step with INFILE, INPUT, and LABEL                                 
+statements. Section C explains format-related SAS statements that a user may                        
+optionally use when working with the SAS dataset. Examples of SAS programs                          
+(DATA step or PROC) are provided in all three sections, primarily for the                           
+benefit of inexperienced users. Section D contains complete SAS statements                          
+that must be used in the programs described in Sections B and C.                                    
+                                                                                                    
+******************************************************************************                      
+                                                                                                    
+The sample SAS programs provided in Sections A and B show how to create a                           
+permanent SAS dataset from the data files provided in this PUF release.                             
+                                                                                                    
+A. A Sample SAS Program for Converting the SAS Transport File to a                                  
+Permanent SAS Dataset                                                                               
+                                                                                                    
+The SAS procedure CIMPORT will read a SAS transport file and convert the                            
+data to regular SAS format, storing the output in a permanent SAS dataset.                          
+This permanent SAS dataset can then be used for all future processing and                           
+analyses.                                                                                           
+                                                                                                    
+Below is a sample SAS program that can be used to convert the SAS transport                         
+file to a permanent SAS dataset (in a Windows environment).                                         
+                                                                                                    
+     LIBNAME PUFLIB 'C:\MEPS\SASDATA';                                                              
+     FILENAME IN1 'C:\MEPS\DOWNLOAD\H254E.SSP';                                                
+                                                                                                    
+     PROC CIMPORT DATA=PUFLIB.H254E INFILE=IN1;                                                
+     RUN;                                                                                           
+                                                                                                    
+                                                                                                    
+Below are SAS statements to print a list of variables and a few sample records                      
+from the permanent SAS dataset:                                                                     
+                                                                                                    
+     PROC CONTENTS DATA=PUFLIB.H254E;                                                          
+     TITLE 'List of Variables in MEPS H254E SAS Dataset';                                      
+     RUN;                                                                                           
+                                                                                                    
+     PROC PRINT DATA=PUFLIB.H254E (OBS=20);                                                    
+     TITLE 'First 20 Observations in MEPS H254E SAS Dataset';                                  
+     RUN;                                                                                           
+                                                                                                    
+The LIBNAME statement tells SAS the location (directory name) to store the                          
+permanent SAS dataset which is output by PROC CIMPORT.  The FILENAME statement                      
+tells SAS the location (complete directory and file name) of the input SAS                          
+transport data file.                                                                                
+                                                                                                    
+NOTES:                                                                                              
+                                                                                                    
+     1)  The names used in the LIBNAME and FILENAME statements shown                                
+     above (i.e., PUFLIB, IN1) are arbitrary; they are only temporary                               
+     aliases.                                                                                       
+                                                                                                    
+     2)  The directory and file names used in the LIBNAME and FILENAME                              
+     statements shown above are Windows syntax and may need to be                                   
+     modified for other operating systems such as UNIX and Linux.                                   
+                                                                                                    
+     3)  H254E is the internal SAS dataset name (also the PC file name,                        
+     without the extension) prior to the creation of the SAS transport data                         
+     file.  After running PROC CIMPORT, the output SAS dataset assumes the same                     
+     dataset name (or file name).  Hence, in the example above, a file named                        
+     H254E.SAS7BDAT will be created under the C:\MEPS\SASDATA directory when                   
+     PROC CIMPORT runs successfully.                                                                
+                                                                                                    
+     4)  The SAS transport file H254E.SSP was created from a SAS V9                            
+     data file, using PROC CPORT.  This file should work with earlier versions of                   
+     SAS, although it has not been tested with those versions. Users who are                        
+     unable to use this SAS transport file should instead convert the ASCII                         
+     data file H254E.DAT to a SAS dataset as described in Section B.                           
+                                                                                                    
+                                                                                                    
+B.     A Sample SAS Program for Converting the ASCII Data File to a Permanent                       
+SAS Dataset                                                                                         
+                                                                                                    
+The complete SAS statements (INPUT and LABEL) included in Section D are                             
+intended to save time for those users wishing to create a permanent SAS                             
+dataset from the H254E.DAT ASCII data file.  These statements must be used                     
+in combination with other SAS statements to create the appropriate SAS                              
+program, as shown below.  To use the statements provided in Section D to                            
+create a SAS program, you will need an ASCII text editor.  If you are using an                      
+interactive form of SAS (Windows, UNIX, Linux, etc.), use the editor provided as                    
+part of the SAS software.                                                                           
+                                                                                                    
+Following is a sample Windows SAS program that will convert the ASCII data file to SAS              
+format:                                                                                             
+                                                                                                    
+     LIBNAME PUFLIB 'C:\MEPS\SASDATA';                                                              
+     FILENAME IN1 'C:\MEPS\DOWNLOAD\H254E.DAT';                                                
+                                                                                                    
+     DATA PUFLIB.H254E;                                                                        
+     INFILE IN1 LRECL=312;                                                                     
+     INPUT .....; * to user: insert the complete INPUT statement that is                            
+provided in Section D;                                                                              
+     LABEL .....; * to user: insert the complete LABEL statement that is                            
+provided in Section D;                                                                              
+     RUN;                                                                                           
+                                                                                                    
+Here is an explanation of the SAS statements used in the program above.                             
+                                                                                                    
+LIBNAME statement: This tells SAS the location (directory name) of the                              
+permanent SAS dataset.                                                                              
+                                                                                                    
+FILENAME statement: This tells SAS the location of the input ASCII data file.                       
+                                                                                                    
+DATA statement: This signifies the beginning of a SAS DATA step and specifies                       
+the output SAS dataset, referencing the LIBNAME entry (PUFLIB) and assigning                        
+an internal SAS dataset name (H254E).  In the example, after the successful                    
+completion of the DATA step, a PC file named H254E.SAS7BDAT would have                         
+been created in the C:\MEPS\SASDATA directory.                                                      
+                                                                                                    
+INFILE statement: This tells SAS the location (directory and file name) of the                      
+input ASCII data file.  Also provided is the logical record length (312                        
+bytes), with the default of RECFM=V implied when this parameter is omitted.                         
+LRECL and RECFM are optional parameters in the INFILE statement.  With regard                       
+to these options, please note the following: the ASCII data file H254E.DAT                     
+contains a 2-byte carriage return/line feed at the end of each record.  When                        
+converting to a PC-SAS file, the LRECL option should be used to specify the                         
+record length to avoid use of a default record length by PC-SAS.  If the                            
+RECFM=V option is used, the LRECL option must be specified as the logical                           
+record length (e.g., 312 for H254E.DAT).  If RECFM=F is used, then the                    
+LRECL value must  be specified as the logical record length plus 2 (314 for            
+H254E.DAT).  Note that if the RECFM option is omitted, then the default                        
+option of RECFM=V is automatically used, and LRECL should be specified as the                       
+logical record (312 for H254E.DAT).                                                       
+                                                                                                    
+INPUT statement: This specifies the input record layout, giving names, the                          
+beginning column positions, and the lengths for data items (which become SAS                        
+variables) in the ASCII data file (H254E.DAT).  Variable type (numeric or                      
+character) is also defined by character variables having a dollar sign ($) directly                 
+before the variables length, while numeric variables do not have a dollar sign.                     
+                                                                                                    
+LABEL statement: This associates descriptive names with the SAS variables.                          
+                                                                                                    
+RUN statement: This tells SAS to execute all commands up to this point.                             
+                                                                                                    
+                                                                                                    
+C.     Optional Format-related SAS Statements                                                       
+                                                                                                    
+If a user wants to use formats for the SAS variables, a SAS format                                  
+catalog must first be created.  Below is a SAS program that will accomplish this:                   
+                                                                                                    
+     LIBNAME PUFLIB 'C:\MEPS\SASDATA';                                                              
+                                                                                                    
+     PROC FORMAT LIBRARY=PUFLIB;                                                                    
+     VALUE .....; * to user: insert the complete set of VALUE statements found                      
+in Section D;                                                                                       
+     VALUE .....;                                                                                   
+     .......... ;                                                                                   
+     RUN;                                                                                           
+                                                                                                    
+                                                                                                    
+Below is an example of how to use the SAS formats defined by the PROC FORMAT                        
+procedure:                                                                                          
+                                                                                                    
+     LIBNAME PUFLIB 'C:\MEPS\SASDATA';                                                              
+     OPTIONS FMTSEARCH=(PUFLIB);                                                                    
+                                                                                                    
+     PROC FREQ DATA=PUFLIB.H254E;                                                              
+     TABLES .... / LIST MISSING;                                                                    
+     FORMAT varnam1 fmtnam1.  Varnam2 fmtnam2.  .... ;                                              
+     * to user: substitute varnam1 and fmtnam1 with actual variable names and                       
+format names;                                                                                       
+     *     Insert the FORMAT statement provided in Section D, if you are using                      
+all the variables in the TABLES statement;                                                          
+     TITLE 'Frequency Distributions ....';                                                          
+     RUN;                                                                                           
+                                                                                                    
+Here is an explanation of the SAS statements used above.                                            
+                                                                                                    
+LIBNAME statement: This tells SAS the location (directory name) of the SAS                          
+format library.  Please note that SAS datasets (file name extension is                              
+'SAS7BDAT') and format                                                                              
+catalog (file name extension is 'SAS7BCAT') can be stored under the same directory.                 
+                                                                                                    
+OPTIONS FMTSEARCH=...: This specifies the SAS format library.                                       
+                                                                                                    
+PROC FORMAT statement: This identifies the SAS procedure that will make SAS                         
+formats according to VALUE statements.  Formats will be stored in a file named                      
+FORMATS.SAS7BCAT.  Please note that the option 'LIBRARY=...' can be omitted                         
+if the user does not want to create a permanent SAS format library. When simply                     
+'PROC FORMAT;' is used, the formats are defined only for the duration of the                        
+batch SAS program or an interactive SAS session.                                                    
+                                                                                                    
+VALUE statement: This gives a) names to formats; and b) descriptive labels for                      
+individual values, or range of values.  The format names can then be invoked                        
+using a FORMAT statement if desired.                                                                
+                                                                                                    
+PROC FREQ statement: This identifies the SAS procedure that generates                               
+frequency distributions of variables specified in the TABLES statement,                             
+formatted if a FORMAT statement is used.  The input SAS dataset is specified                        
+in the 'DATA=' option.                                                                              
+                                                                                                    
+FORMAT statement: This associates existing formats with variables.  When using                      
+this statement, the formats must have already been created with a PROC FORMAT                       
+procedure.                                                                                          
+                                                                                                    
+RUN statement: This tells SAS to execute all commands up to this point.                             
+                                                                                                    
+                                                                                                    
+NOTES:                                                                                              
+                                                                                                    
+     1)  Use of formats is entirely optional, and depends on the types                              
+     of analyses that you are doing.  It is recommended that you create                             
+     and use them as appropriate.                                                                   
+                                                                                                    
+     2)  The names used in the LIBNAME and FILENAME statements shown                                
+     above (i.e., PUFLIB, IN1) are arbitrary; they are only temporary                               
+     aliases.                                                                                       
+                                                                                                    
+     3)  The file and directory specifications in the LIBNAME and                                   
+     FILENAME statements are Windows syntax and may need to be modified                             
+     for other operating systems such as UNIX and Linux.                                            
+                                                                                                    
+                                                                                                    
+D.  SAS Statements                                                                                  
+                                                                                                    
+This section contains SAS INPUT, LABEL, FORMAT, and VALUE statements for use in                     
+converting the ASCII H254E.DAT file into a SAS dataset, and for creating                       
+SAS formats.                                                                                        
+                                                                                                    
+* INPUT STATEMENTS;
+INFILE IN LRECL=312;
+
+INPUT @1      DUID                              7.0
+      @8      PID                               3.0
+      @11     DUPERSID                         $10.0
+      @21     EVNTIDX                          $16.0
+      @37     EVENTRN                           1.0
+      @38     ERHEVIDX                         $16.0
+      @54     FFEEIDX                          $12.0
+      @66     PANEL                             2.0
+      @68     MPCDATA                           1.0
+      @69     ERDATEYR                          4.0
+      @73     ERDATEMM                          2.0
+      @75     VSTCTGRY                          3.0
+      @78     VSTRELCN                          2.0
+      @80     LABTEST_M18                       2.0
+      @82     SONOGRAM_M18                      2.0
+      @84     XRAYS_M18                         2.0
+      @86     MAMMOG_M18                        2.0
+      @88     MRI_M18                           2.0
+      @90     EKG_M18                           2.0
+      @92     RCVVAC_M18                        2.0
+      @94     SURGPROC                          2.0
+      @96     MEDPRESC                          2.0
+      @98     FFERTYPE                          2.0
+      @100    ERXP24X                           9.2
+      @109    ERTC24X                           9.2
+      @118    ERFSF24X                          8.2
+      @126    ERFMR24X                          9.2
+      @135    ERFMD24X                          8.2
+      @143    ERFPV24X                          8.2
+      @151    ERFVA24X                          8.2
+      @159    ERFTR24X                          7.2
+      @166    ERFOF24X                          7.2
+      @173    ERFSL24X                          7.2
+      @180    ERFWC24X                          7.2
+      @187    ERFOT24X                          8.2
+      @195    ERFXP24X                          9.2
+      @204    ERFTC24X                          9.2
+      @213    ERDSF24X                          7.2
+      @220    ERDMR24X                          7.2
+      @227    ERDMD24X                          7.2
+      @234    ERDPV24X                          7.2
+      @241    ERDVA24X                          7.2
+      @248    ERDTR24X                          7.2
+      @255    ERDOF24X                          4.2
+      @259    ERDSL24X                          6.2
+      @265    ERDWC24X                          7.2
+      @272    ERDOT24X                          7.2
+      @279    ERDXP24X                          8.2
+      @287    ERDTC24X                          8.2
+      @295    IMPFLAG                           1.0
+      @296    PERWT24F                          12.6
+      @308    VARSTR                            4.0
+      @312    VARPSU                            1.0
+;
+
+
+* FORMAT STATEMENTS;
+FORMAT DUID                              DUIDF.
+       PID                               PIDF.
+       DUPERSID                          $DUPERSIDF.
+       EVNTIDX                           $EVNTIDXF.
+       EVENTRN                           EVENTRNF.
+       ERHEVIDX                          $ERHEVIDXF.
+       FFEEIDX                           $FFEEIDXF.
+       PANEL                             PANELF.
+       MPCDATA                           MPCDATAF.
+       ERDATEYR                          ERDATEYRF.
+       ERDATEMM                          ERDATEMMF.
+       VSTCTGRY                          VSTCTGRYF.
+       VSTRELCN                          VSTRELCNF.
+       LABTEST_M18                       LABTEST_M18F.
+       SONOGRAM_M18                      SONOGRAM_M18F.
+       XRAYS_M18                         XRAYS_M18F.
+       MAMMOG_M18                        MAMMOG_M18F.
+       MRI_M18                           MRI_M18F.
+       EKG_M18                           EKG_M18F.
+       RCVVAC_M18                        RCVVAC_M18F.
+       SURGPROC                          SURGPROCF.
+       MEDPRESC                          MEDPRESCF.
+       FFERTYPE                          FFERTYPEF.
+       ERXP24X                           ERXP24XF.
+       ERTC24X                           ERTC24XF.
+       ERFSF24X                          ERFSF24XF.
+       ERFMR24X                          ERFMR24XF.
+       ERFMD24X                          ERFMD24XF.
+       ERFPV24X                          ERFPV24XF.
+       ERFVA24X                          ERFVA24XF.
+       ERFTR24X                          ERFTR24XF.
+       ERFOF24X                          ERFOF24XF.
+       ERFSL24X                          ERFSL24XF.
+       ERFWC24X                          ERFWC24XF.
+       ERFOT24X                          ERFOT24XF.
+       ERFXP24X                          ERFXP24XF.
+       ERFTC24X                          ERFTC24XF.
+       ERDSF24X                          ERDSF24XF.
+       ERDMR24X                          ERDMR24XF.
+       ERDMD24X                          ERDMD24XF.
+       ERDPV24X                          ERDPV24XF.
+       ERDVA24X                          ERDVA24XF.
+       ERDTR24X                          ERDTR24XF.
+       ERDOF24X                          ERDOF24XF.
+       ERDSL24X                          ERDSL24XF.
+       ERDWC24X                          ERDWC24XF.
+       ERDOT24X                          ERDOT24XF.
+       ERDXP24X                          ERDXP24XF.
+       ERDTC24X                          ERDTC24XF.
+       IMPFLAG                           IMPFLAGF.
+       PERWT24F                          PERWT24FF.
+       VARSTR                            VARSTRF.
+       VARPSU                            VARPSUF.
+;
+
+
+* LABEL STATEMENTS;
+LABEL DUID                             ="PANEL # + ENCRYPTED DU IDENTIFIER"
+      PID                              ="PERSON NUMBER"
+      DUPERSID                         ="PERSON ID (DUID + PID)"
+      EVNTIDX                          ="EVENT ID"
+      EVENTRN                          ="EVENT ROUND NUMBER"
+      ERHEVIDX                         ="EVENT ID FOR CORRESPONDING HOSPITAL STAY"
+      FFEEIDX                          ="FLAT FEE ID"
+      PANEL                            ="PANEL NUMBER"
+      MPCDATA                          ="MPC DATA FLAG"
+      ERDATEYR                         ="EVENT DATE - YEAR"
+      ERDATEMM                         ="EVENT DATE - MONTH"
+      VSTCTGRY                         ="BEST CATEGORY FOR CARE P RECV ON VISIT DT"
+      VSTRELCN                         ="THIS VISIT RELATED TO SPEC CONDITION"
+      LABTEST_M18                      ="THIS VISIT DID P HAVE LAB TESTS"
+      SONOGRAM_M18                     ="THIS VISIT DID P HAVE SONOGRAM OR ULTRSD"
+      XRAYS_M18                        ="THIS VISIT DID P HAVE X-RAYS"
+      MAMMOG_M18                       ="THIS VISIT DID P HAVE A MAMMOGRAM"
+      MRI_M18                          ="THIS VISIT DID P HAVE AN MRI/CATSCAN"
+      EKG_M18                          ="THIS VISIT DID P HAVE AN EKG, EEG OR ECG"
+      RCVVAC_M18                       ="THIS VISIT DID P RECEIVE A VACCINATION"
+      SURGPROC                         ="WAS SURG PROC PERFORMED ON P THIS VISIT"
+      MEDPRESC                         ="ANY MEDICINE PRESCRIBED FOR P THIS VISIT"
+      FFERTYPE                         ="FLAT FEE BUNDLE"
+      ERXP24X                          ="TOTAL EXP FOR EVENT (ERFXP24X + ERDXP24X)"
+      ERTC24X                          ="TOTAL CHG FOR EVENT (ERFTC24X + ERDTC24X)"
+      ERFSF24X                         ="FACILITY AMOUNT PAID, FAMILY (IMPUTED)"
+      ERFMR24X                         ="FACILITY AMOUNT PAID, MEDICARE (IMPUTED)"
+      ERFMD24X                         ="FACILITY AMOUNT PAID, MEDICAID (IMPUTED)"
+      ERFPV24X                         ="FACILITY AMOUNT PAID, PRIV INSUR (IMPUTED)"
+      ERFVA24X                         ="FACILITY AMOUNT PAID, VETERANS/CHAMPVA (IMPUTED)"
+      ERFTR24X                         ="FACILITY AMOUNT PAID, TRICARE (IMPUTED)"
+      ERFOF24X                         ="FACILITY AMOUNT PAID, OTH FEDERAL (IMPUTED)"
+      ERFSL24X                         ="FACILITY AMOUNT PAID, STATE/LOC GOV (IMPUTED)"
+      ERFWC24X                         ="FACILITY AMOUNT PAID, WORKERS COMP (IMPUTED)"
+      ERFOT24X                         ="FACILITY AMOUNT PAID, OTH INSUR (IMPUTED)"
+      ERFXP24X                         ="FACILITY SUM PAYMENTS ERFSF24X - ERFOT24X"
+      ERFTC24X                         ="TOTAL FACILITY CHARGE (IMPUTED)"
+      ERDSF24X                         ="DOCTOR AMOUNT PAID, FAMILY (IMPUTED)"
+      ERDMR24X                         ="DOCTOR AMOUNT PAID, MEDICARE (IMPUTED)"
+      ERDMD24X                         ="DOCTOR AMOUNT PAID, MEDICAID (IMPUTED)"
+      ERDPV24X                         ="DOCTOR AMOUNT PAID, PRIV INSUR (IMPUTED)"
+      ERDVA24X                         ="DOCTOR AMOUNT PAID, VETERANS/CHAMPVA (IMPUTED)"
+      ERDTR24X                         ="DOCTOR AMOUNT PAID, TRICARE (IMPUTED)"
+      ERDOF24X                         ="DOCTOR AMOUNT PAID, OTH FEDERAL (IMPUTED)"
+      ERDSL24X                         ="DOCTOR AMOUNT PAID, STATE/LOC GOV (IMPUTED)"
+      ERDWC24X                         ="DOCTOR AMOUNT PAID, WORKERS COMP (IMPUTED)"
+      ERDOT24X                         ="DOCTOR AMOUNT PAID, OTH INSUR (IMPUTED)"
+      ERDXP24X                         ="DOCTOR SUM PAYMENTS ERDSF24X - ERDOT24X"
+      ERDTC24X                         ="TOTAL DOCTOR CHARGE (IMPUTED)"
+      IMPFLAG                          ="IMPUTATION STATUS"
+      PERWT24F                         ="EXPENDITURE FILE PERSON WEIGHT, 2024"
+      VARSTR                           ="VARIANCE ESTIMATION STRATUM, 2024"
+      VARPSU                           ="VARIANCE ESTIMATION PSU, 2024"
+;
+
+
+* VALUE STATEMENTS;
+VALUE DUIDF  
+  2810003 - 2930417 = "VALID ID"
+  ;
+VALUE $DUPERSIDF  
+  '2810003101' - '2930417102' = "VALID ID"
+  ;
+VALUE EKG_M18F  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  95 = "95 NO SERVICES RECEIVED"
+  ;
+VALUE ERDATEMMF  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 - 12 = "1 - 12 MONTH"
+  ;
+VALUE ERDATEYRF  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  2024 = "2024"
+  ;
+VALUE ERDMD24XF  
+  0 = "0"
+  0.14 - 51.03 = "$0.14 - $51.03"
+  51.04 - 130.72 = "$51.04 - $130.72"
+  130.73 - 288.33 = "$130.73 - $288.33"
+  288.34 - 7269.07 = "$288.34 - $7,269.07"
+  ;
+VALUE ERDMR24XF  
+  0 = "0"
+  1.82 - 84.29 = "$1.82 - $84.29"
+  84.3 - 186.34 = "$84.30 - $186.34"
+  186.35 - 383.51 = "$186.35 - $383.51"
+  383.52 - 8429.15 = "$383.52 - $8,429.15"
+  ;
+VALUE ERDOF24XF  
+  0 = "0.00"
+  ;
+VALUE ERDOT24XF  
+  0 = "0"
+  7.29 - 185.44 = "$7.29 - $185.44"
+  185.45 - 390.57 = "$185.45 - $390.57"
+  390.58 - 512.8 = "$390.58 - $512.80"
+  512.81 - 1326.67 = "$512.81 - $1,326.67"
+  ;
+VALUE ERDPV24XF  
+  0 = "0"
+  1.61 - 52.65 = "$1.61 - $52.65"
+  52.66 - 234.71 = "$52.66 - $234.71"
+  234.72 - 507.47 = "$234.72 - $507.47"
+  507.48 - 7129.8 = "$507.48 - $7,129.80"
+  ;
+VALUE ERDSF24XF  
+  0 = "0"
+  2 - 39.74 = "$2.00 - $39.74"
+  39.75 - 132.84 = "$39.75 - $132.84"
+  132.85 - 318.04 = "$132.85 - $318.04"
+  318.05 - 8834.56 = "$318.05 - $8,834.56"
+  ;
+VALUE ERDSL24XF  
+  0 = "0"
+  110.13 - 789.28 = "$110.13 - $789.28"
+  ;
+VALUE ERDTC24XF  
+  0 = "0"
+  14 - 449.5 = "$14.00 - $449.50"
+  449.51 - 1113 = "$449.51 - $1,113.00"
+  1113.01 - 2095.52 = "$1,113.01 - $2,095.52"
+  2095.53 - 88454.5 = "$2,095.53 - $88,454.50"
+  ;
+VALUE ERDTR24XF  
+  0 = "0"
+  1.66 - 16.52 = "$1.66 - $16.52"
+  16.53 - 34.65 = "$16.53 - $34.65"
+  34.66 - 119.33 = "$34.66 - $119.33"
+  119.34 - 2767.04 = "$119.34 - $2,767.04"
+  ;
+VALUE ERDVA24XF  
+  0 = "0"
+  2.11 - 44.99 = "$2.11 - $44.99"
+  45 - 116.23 = "$45.00 - $116.23"
+  116.24 - 311.44 = "$116.24 - $311.44"
+  311.45 - 1481.63 = "$311.45 - $1,481.63"
+  ;
+VALUE ERDWC24XF  
+  0 = "0"
+  9 - 177.66 = "$9.00 - $177.66"
+  177.67 - 213.77 = "$177.67 - $213.77"
+  213.78 - 318.04 = "$213.78 - $318.04"
+  318.05 - 1326.67 = "$318.05 - $1,326.67"
+  ;
+VALUE ERDXP24XF  
+  0 = "0"
+  1.52 - 102.53 = "$1.52 - $102.53"
+  102.54 - 238.19 = "$102.54 - $238.19"
+  238.2 - 468.48 = "$238.20 - $468.48"
+  468.49 - 11196.19 = "$468.49 - $11,196.19"
+  ;
+VALUE ERFMD24XF  
+  0 = "0"
+  1 - 141.35 = "$1.00 - $141.35"
+  141.36 - 324.29 = "$141.36 - $324.29"
+  324.3 - 631.85 = "$324.30 - $631.85"
+  631.86 - 20518.84 = "$631.86 - $20,518.84"
+  ;
+VALUE ERFMR24XF  
+  0 = "0"
+  1.47 - 217.31 = "$1.47 - $217.31"
+  217.32 - 515.55 = "$217.32 - $515.55"
+  515.56 - 864.53 = "$515.56 - $864.53"
+  864.54 - 190204 = "$864.54 - $190,204.00"
+  ;
+VALUE ERFOF24XF  
+  0 = "0"
+  21.79 - 75.49 = "$21.79 - $75.49"
+  75.5 - 127.01 = "$75.50 - $127.01"
+  127.02 - 1001.88 = "$127.02 - $1,001.88"
+  1001.89 - 2842.67 = "$1,001.89 - $2,842.67"
+  ;
+VALUE ERFOT24XF  
+  0 = "0"
+  40.34 - 575.25 = "$40.34 - $575.25"
+  575.26 - 1227.32 = "$575.26 - $1,227.32"
+  1227.33 - 2970.67 = "$1,227.33 - $2,970.67"
+  2970.68 - 31658.62 = "$2,970.68 - $31,658.62"
+  ;
+VALUE ERFPV24XF  
+  0 = "0"
+  4.03 - 237.24 = "$4.03 - $237.24"
+  237.25 - 933.13 = "$237.25 - $933.13"
+  933.14 - 2272 = "$933.14 - $2,272.00"
+  2272.01 - 40534 = "$2,272.01 - $40,534.00"
+  ;
+VALUE ERFSF24XF  
+  0 = "0"
+  1 - 80 = "$1.00 - $80.00"
+  80.01 - 150 = "$80.01 - $150.00"
+  150.01 - 434 = "$150.01 - $434.00"
+  434.01 - 18900 = "$434.01 - $18,900.00"
+  ;
+VALUE ERFSL24XF  
+  0 = "0"
+  309 - 438.87 = "$309.00 - $438.87"
+  438.88 - 947.56 = "$438.88 - $947.56"
+  947.57 - 2699.32 = "$947.57 - $2,699.32"
+  2699.33 - 6969 = "$2,699.33 - $6,969.00"
+  ;
+VALUE ERFTC24XF  
+  0 = "0"
+  14 - 1384.49 = "$14.00 - $1,384.49"
+  1384.5 - 3404.51 = "$1,384.50 - $3,404.51"
+  3404.52 - 6998.6 = "$3,404.52 - $6,998.60"
+  6998.61 - 190744 = "$6,998.61 - $190,744.00"
+  ;
+VALUE ERFTR24XF  
+  0 = "0"
+  8.53 - 129.15 = "$8.53 - $129.15"
+  129.16 - 261.99 = "$129.16 - $261.99"
+  262 - 423.35 = "$262.00 - $423.35"
+  423.36 - 2811.24 = "$423.36 - $2,811.24"
+  ;
+VALUE ERFVA24XF  
+  0 = "0"
+  9.71 - 622.69 = "$9.71 - $622.69"
+  622.7 - 1013.82 = "$622.70 - $1,013.82"
+  1013.83 - 1440.87 = "$1,013.83 - $1,440.87"
+  1440.88 - 21410.13 = "$1,440.88 - $21,410.13"
+  ;
+VALUE ERFWC24XF  
+  0 = "0"
+  244.72 - 504.41 = "$244.72 - $504.41"
+  504.42 - 893.67 = "$504.42 - $893.67"
+  893.68 - 1545.61 = "$893.68 - $1,545.61"
+  1545.62 - 9889.52 = "$1,545.62 - $9,889.52"
+  ;
+VALUE ERFXP24XF  
+  0 = "0"
+  1.47 - 305.6 = "$1.47 - $305.60"
+  305.61 - 681.54 = "$305.61 - $681.54"
+  681.55 - 1370 = "$681.55 - $1,370.00"
+  1370.01 - 190204 = "$1,370.01 - $190,204.00"
+  ;
+VALUE $ERHEVIDXF  
+  '-1' = "-1 INAPPLICABLE"
+  '2810061101003801' - '2930417102010201' = "VALID ID"
+  ;
+VALUE ERTC24XF  
+  0 = "0"
+  19 - 1480 = "$19.00 - $1,480.00"
+  1480.01 - 3635.32 = "$1,480.01 - $3,635.32"
+  3635.33 - 7553.6 = "$3,635.33 - $7,553.60"
+  7553.61 - 192252 = "$7,553.61 - $192,252.00"
+  ;
+VALUE ERXP24XF  
+  0 = "0"
+  1.47 - 327.59 = "$1.47 - $327.59"
+  327.6 - 744.83 = "$327.60 - $744.83"
+  744.84 - 1491.14 = "$744.84 - $1,491.14"
+  1491.15 - 190803.87 = "$1,491.15 - $190,803.87"
+  ;
+VALUE EVENTRNF  
+  1 = "1 ROUND 1"
+  2 = "2 ROUND 2"
+  3 = "3 ROUND 3"
+  4 = "4 ROUND 4"
+  5 = "5 ROUND 5"
+  ;
+VALUE $EVNTIDXF  
+  '2810003101004901' - '2930417102010301' = "VALID ID"
+  ;
+VALUE $FFEEIDXF  
+  '-1' = "-1 INAPPLICABLE"
+  '10027' - '10064' = "VALID ID"
+  ;
+VALUE FFERTYPEF  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  -1 = "-1 INAPPLICABLE"
+  1 = "1 FLAT FEE STEM"
+  2 = "2 FLAT FEE LEAF"
+  ;
+VALUE IMPFLAGF  
+  0 = "0 NOT ELIGIBLE FOR IMPUTATION"
+  1 = "1 COMPLETE HC DATA"
+  2 = "2 COMPLETE MPC DATA"
+  3 = "3 FULLY IMPUTED"
+  4 = "4 PARTIALLY IMPUTED"
+  5 = "5 CAPITATION IMPUTATION"
+  ;
+VALUE LABTEST_M18F  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  95 = "95 NO SERVICES RECEIVED"
+  ;
+VALUE MAMMOG_M18F  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  95 = "95 NO SERVICES RECEIVED"
+  ;
+VALUE MEDPRESCF  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  ;
+VALUE MPCDATAF  
+  1 = "1 HAS MPC DATA"
+  2 = "2 NO MPC DATA"
+  ;
+VALUE MRI_M18F  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  95 = "95 NO SERVICES RECEIVED"
+  ;
+VALUE PANELF  
+  28 = "28 PANEL 28"
+  29 = "29 PANEL 29"
+  ;
+VALUE PERWT24FF  
+  0 = "0.000000"
+  1370.543693 - 91256.761356 = "1370.543693 - 91256.761356"
+  ;
+VALUE PIDF  
+  101 - 306 = "VALID ID"
+  ;
+VALUE RCVVAC_M18F  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  95 = "95 NO SERVICES RECEIVED"
+  ;
+VALUE SONOGRAM_M18F  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  95 = "95 NO SERVICES RECEIVED"
+  ;
+VALUE SURGPROCF  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  ;
+VALUE VARPSUF  
+  1 - 7 = "1 - 7"
+  ;
+VALUE VARSTRF  
+  2001 - 2117 = "2001 - 2117"
+  ;
+VALUE VSTCTGRYF  
+  -15 = "-15 CANNOT BE COMPUTED"
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 DIAGNOSIS OR TREATMENT"
+  2 = "2 EMERGENCY (E.G., ACCIDENT OR INJURY)"
+  3 = "3 PSYCHOTHERAPY/MENTAL HEALTH COUNSELING"
+  4 = "4 FOLLOW-UP OR POST-OPERATIVE VISIT"
+  5 = "5 IMMUNIZATIONS OR SHOTS"
+  6 = "6 PREGNANCY-RELATED (INC PRENATAL/DELV)"
+  91 = "91 OTHER"
+  ;
+VALUE VSTRELCNF  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  ;
+VALUE XRAYS_M18F  
+  -8 = "-8 DON'T KNOW"
+  -7 = "-7 REFUSED"
+  1 = "1 YES"
+  2 = "2 NO"
+  95 = "95 NO SERVICES RECEIVED"
+  ;

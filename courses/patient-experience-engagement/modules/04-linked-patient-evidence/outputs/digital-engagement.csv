@@ -1,0 +1,8 @@
+evidence_id,grain,setting,denominator_n,numerator_n,unweighted_percent,weighted_percent,interpretation,claim_limit
+DE01,event,outpatient,4651,497,10.68587401,10.20412240,share of linked outpatient events marked telehealth,"event channel is not patient preference, portal access, engagement, or intervention effect"
+DE02,event,office_based,20511,1316,6.41606943,6.81199164,share of linked office-based events marked telehealth,"event channel is not patient preference, portal access, engagement, or intervention effect"
+DE03,event,combined,25162,1813,7.20530959,7.37866394,share of linked outpatient and office-based events marked telehealth,"event channel is not patient preference, portal access, engagement, or intervention effect"
+DE04,event,telehealth_only,1813,629,34.69387755,31.69149796,phone share among linked telehealth events,"event channel is not patient preference, portal access, engagement, or intervention effect"
+DE05,event,telehealth_only,1813,1144,63.09983453,66.43138179,video share among linked telehealth events,"event channel is not patient preference, portal access, engagement, or intervention effect"
+DE06,event,telehealth_only,1813,38,2.09597352,1.74996502,other-mode share among linked telehealth events,"event channel is not patient preference, portal access, engagement, or intervention effect"
+DE07,person,portal_preference,0,0,,,not available in the accepted source suite,do not infer portal preference or digital access

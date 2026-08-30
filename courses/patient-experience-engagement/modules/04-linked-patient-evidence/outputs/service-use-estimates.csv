@@ -1,0 +1,9 @@
+setting,statistic,eligible_persons,persons_with_use,unweighted_value,weighted_estimate,survey_se,ci95_low,ci95_high,unit,claim_limit
+inpatient,any_use,1255,1255,100.00000000,100.00000000,0.00000000,100.00000000,100.00000000,percent,descriptive association only; no causal or quality claim
+inpatient,mean_events,1255,1255,1.34820717,1.32034962,0.02494419,1.27145899,1.36924024,events_per_person,descriptive association only; no causal or quality claim
+emergency,any_use,1255,904,72.03187251,70.89748576,1.58270419,67.79538554,73.99958597,percent,descriptive association only; no causal or quality claim
+emergency,mean_events,1255,904,1.27569721,1.20974128,0.04685155,1.11791224,1.30157032,events_per_person,descriptive association only; no causal or quality claim
+outpatient,any_use,1255,642,51.15537849,50.40502704,1.70912991,47.05513242,53.75492166,percent,descriptive association only; no causal or quality claim
+outpatient,mean_events,1255,642,3.70597610,3.35334442,0.25414949,2.85521141,3.85147742,events_per_person,descriptive association only; no causal or quality claim
+office_based,any_use,1255,1164,92.74900398,92.74535872,0.98329801,90.81809462,94.67262283,percent,descriptive association only; no causal or quality claim
+office_based,mean_events,1255,1164,16.34342629,16.71995519,0.73512715,15.27910598,18.16080441,events_per_person,descriptive association only; no causal or quality claim

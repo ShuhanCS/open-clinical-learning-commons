@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.58.0.
-- Current build: Modules 01 through 03 and the cumulative Week 3 checkpoint runnable; Modules 04 through 07 and the later checkpoints specified at course level but not yet built.
+- Current Commons release: 0.59.0.
+- Current build: Modules 01 through 04 and the cumulative Week 3 checkpoint runnable; Modules 05 through 07 and the later checkpoints specified at course level but not yet built.
 
 APP-2 teaches patient-reported measurement, survey representation, response bias, linked patient evidence, patient voice, patient partnership, and accountable improvement.
 
@@ -18,7 +18,7 @@ The course uses the complete public CMS HCAHPS hospital file as its first source
 | 01 | Framing a patient-experience and engagement decision | 15.5 | Runnable release candidate |
 | 02 | Patient-reported measurement and scale construction | 16.0 | Runnable release candidate |
 | 03 | Response, representation, and survey bias | 16.5 | Runnable release candidate |
-| 04 | Linked patient evidence | 16.5 | Specified in course contract |
+| 04 | Linked patient evidence | 16.5 | Runnable release candidate |
 | 05 | Patient voice, group differences, and equity | 16.0 | Specified in course contract |
 | 06 | Partnered improvement and embedded machine learning | 16.0 | Specified in course contract |
 | 07 | Clinician and patient leadership, accountability, and defense | 16.0 | Specified in course contract |
@@ -39,6 +39,8 @@ The course uses the complete public CMS HCAHPS hospital file as its first source
 [Module 03](modules/03-response-representation-bias/README.md) uses the full public MEPS HC-256 person file and a deterministic synthetic response layer to teach target, frame, response, item missingness, subgroup representation, and one bounded response adjustment. Its durable contract is [the Module 03 specification](../../docs/curriculum/courses/APP-2/modules/03-response-representation-bias-spec.md).
 
 [Checkpoint 01](checkpoints/01-measurement-representation-readiness/README.md) freezes 135 accepted files from Modules 01 through 03, carries the 20-point Module 02 score exactly once, and controls progression into linked analysis. Its durable contract is [the Week 3 checkpoint specification](../../docs/curriculum/courses/APP-2/checkpoints/01-measurement-representation-readiness-spec.md).
+
+[Module 04](modules/04-linked-patient-evidence/README.md) uses all five official MEPS person and event products to teach governed linkage, aligned denominators, access and communication measures, digital-channel limits, and noncausal service-use interpretation. Its durable contract is [the Module 04 specification](../../docs/curriculum/courses/APP-2/modules/04-linked-patient-evidence-spec.md).
 
 The full course contract is [the APP-2 course specification](../../docs/curriculum/courses/APP-2/course-spec.md). Source normalization is recorded in [the APP-2 source record](../../docs/source/app-2-patient-experience-engagement-source-record.md).
 

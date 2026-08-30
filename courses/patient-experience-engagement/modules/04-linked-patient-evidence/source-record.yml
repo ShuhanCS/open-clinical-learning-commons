@@ -1,0 +1,35 @@
+schema_version: 1.0.0
+module_id: oclc-app2-04
+module_version: 0.1.0
+commons_release: 0.59.0
+publisher: Agency for Healthcare Research and Quality
+release: 2024 Medical Expenditure Panel Survey public-use files
+landing_pages:
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-256
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254D
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254E
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254F
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254G
+source_inventory: data/source-inventory.csv
+upstream_inventory: data/upstream-inventory.csv
+person_grain: one public-use person record
+event_grain:
+  h254d: one household-reported inpatient stay
+  h254e: one household-reported emergency room visit
+  h254f: one household-reported outpatient department visit
+  h254g: one household-reported office-based visit
+link_key: DUPERSID
+released_link_key: sequential LINK identifier
+design:
+  weight: PERWT24F
+  stratum: VARSTR
+  psu: VARPSU
+known_period_condition: 12 target inpatient stays begin in 2023 and continue into the 2024 event file
+license_and_terms: United States federal public-use data; retain agency attribution, source context, and public-use limits
+prohibited_interpretations:
+  - clinical causation
+  - provider or hospital quality
+  - hospital or patient ranking
+  - portal access or preference
+  - patient engagement inferred from telehealth use
+  - synthetic response fields described as observed patient testimony

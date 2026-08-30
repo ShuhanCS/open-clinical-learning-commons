@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.58.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 is complete with seven modules and three checkpoints. APP-2 has three runnable modules and its cumulative Week 3 checkpoint.
+- Current version: `0.59.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 is complete with seven modules and three checkpoints. APP-2 has four runnable modules and its cumulative Week 3 checkpoint.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -88,6 +88,8 @@ The second runnable unit is [APP-2 Module 02: Patient-reported measurement and s
 The third runnable unit is [APP-2 Module 03: Response, representation, and survey bias](courses/patient-experience-engagement/modules/03-response-representation-bias/README.md), governed by the durable [Module 03 specification](docs/curriculum/courses/APP-2/modules/03-response-representation-bias-spec.md). It retains the full five-file MEPS HC-256 source suite, builds a 1,255-person public-derived teaching frame, generates a known synthetic response mechanism, and shows that one bounded adjustment can improve all three teaching estimates while leaving visible residual bias.
 
 The cumulative [APP-2 Week 3 checkpoint](courses/patient-experience-engagement/checkpoints/01-measurement-representation-readiness/README.md) freezes 135 accepted component files, carries the 20-point Module 02 measurement score exactly once, and requires all measurement, response, integrity, and protection gates before Module 04 linked analysis. Its durable [checkpoint specification](docs/curriculum/courses/APP-2/checkpoints/01-measurement-representation-readiness-spec.md) defines the complete evidence-chain and progression contract.
+
+The fourth runnable unit is [APP-2 Module 04: Linked patient evidence](courses/patient-experience-engagement/modules/04-linked-patient-evidence/README.md), governed by the durable [Module 04 specification](docs/curriculum/courses/APP-2/modules/04-linked-patient-evidence-spec.md). It retains all 25 official MEPS person and event source files, links 28,455 inpatient, emergency, outpatient, and office-based events to the accepted 1,255-person target, and teaches aligned denominators, access, communication, digital-channel limits, and noncausal service-use interpretation.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -265,7 +267,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Continue APP-2 with Module 04 linked patient evidence through its final checkpoint.
+1. Continue APP-2 with Module 05 patient voice, group differences, and equity through its final checkpoint.
 2. Continue APP-3 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 

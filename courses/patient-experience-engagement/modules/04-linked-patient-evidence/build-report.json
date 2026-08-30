@@ -1,0 +1,50 @@
+{
+  "status": "pass",
+  "module": {
+    "id": "oclc-app2-04",
+    "version": "0.1.0",
+    "commons_release": "0.59.0"
+  },
+  "source": {
+    "files": 25,
+    "bytes": 18206634,
+    "pdf_pages": 1101,
+    "person_rows": 19140,
+    "event_rows": 174231
+  },
+  "upstream": {
+    "files": 3,
+    "bytes": 570340,
+    "checkpoint_manifest_sha256": "5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903"
+  },
+  "target": {
+    "people": 1255,
+    "base_weighted_population": "18879474.284615",
+    "linked_events": 28455
+  },
+  "event_rows": {
+    "inpatient": 1692,
+    "emergency": 1601,
+    "outpatient": 4651,
+    "office_based": 20511
+  },
+  "related_emergency_inpatient_pairs": 855,
+  "access_measures": 10,
+  "linked_pattern_rows": 14,
+  "invariants": {
+    "passed": 25,
+    "failed": 0
+  },
+  "generated_sha256": {
+    "data/public/linked-persons.csv": "3605f17995f4f3020572dd23ac008a17db9ca78980d15d6a2faadb1efd5e8f24",
+    "data/public/linked-events.csv": "16cbb65d1dc0925f4257c73b574617803f05feacbebba134fec3396dd5788997",
+    "outputs/source-profile.csv": "d8bc7fef4e166c178a3575a8062976c6ebe44bb35650b7e3228100cf4dd759c1",
+    "outputs/linkage-reconciliation.csv": "2ebbdad9a530f44e0e1a5f5371d777cc398c1b1189243255164f689ebad0041d",
+    "outputs/denominator-registry.csv": "7263d5c2b4add3eef5493f9c499e711b70f2f31edf90ef649fa56d4a5f61d4de",
+    "outputs/access-communication-estimates.csv": "d45a741d9e175f6c56eaab6b02b5cb40723ba6b85d36c6e3a6c59ca3ca74c963",
+    "outputs/service-use-estimates.csv": "6af6f8aca758561d7970b7930de86d0b1e5a2a7be65506dfe99beae58a0b709e",
+    "outputs/digital-engagement.csv": "d0199adf76b09d15dbe3398636da49619a5dc8bc76647ddb7d76373798fc5978",
+    "outputs/linked-evidence-patterns.csv": "b15de64dfc72a9ce5419b50c4e22b40e056057d605fdc2b3241acef38e1e55fe",
+    "outputs/invariant-checks.csv": "bfcca65557bd8daa34b8b68fc43a843655844b3a96138e210bccafaf7f63fb0c"
+  }
+}

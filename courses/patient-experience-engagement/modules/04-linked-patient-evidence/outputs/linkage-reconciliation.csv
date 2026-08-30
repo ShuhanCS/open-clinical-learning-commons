@@ -1,0 +1,6 @@
+source_puf,setting,full_source_rows,full_rows_linked_to_h256,target_reported_total,target_linked_event_rows,difference,target_people_with_event,status
+H254D,inpatient,1912,1912,1692,1692,0,1255,pass
+H254E,emergency,4351,4351,1601,1601,0,904,pass
+H254F,outpatient,22150,22150,4651,4651,0,642,pass
+H254G,office_based,145818,145818,20511,20511,0,1164,pass
+HC-254D/HC-254E,related_emergency_inpatient_pair,968,968,855,855,0,692,pass

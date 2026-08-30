@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.58.0 through runnable Module 03 and Checkpoint 01.
+- Current Commons release: 0.59.0 through runnable Module 04 and Checkpoint 01.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -244,10 +244,17 @@ The released case retains the full five-file MEPS HC-256 suite and builds a 1,25
 
 - Module ID: `oclc-app2-04`.
 - Hours: 16.5.
+- Package path: `courses/patient-experience-engagement/modules/04-linked-patient-evidence/`.
+- Specification: `docs/curriculum/courses/APP-2/modules/04-linked-patient-evidence-spec.md`.
+- Status: runnable release candidate at Commons 0.59.0.
 - Decision: whether experience, access, communication, engagement, and service-use evidence can be linked and interpreted with aligned denominators.
 - Submission: 25-point response and linked-evidence analysis component.
 
 Learners pin MEPS person and event files, build the governed linkage, reconcile eligible populations and periods, define access and communication measures, interpret digital engagement without equating access with preference, and compare service-use patterns without causal claims.
+
+The released case retains all 25 official files for HC-256 and HC-254D through HC-254G. Every one of the 174,231 source event rows links to the person file with no event-person weight mismatch. The accepted 1,255-person target contains 28,455 linked events, including 12 inpatient stays that began in 2023 and continued into the 2024 event file. Released teaching tables omit direct MEPS identifiers and preserve the exact Week 3 response handoff.
+
+The evidence package separates 14 denominator decisions, 10 access and communication estimates, eight service-use estimates, and seven digital-channel results. The 45-record provider-language estimate is limited support, and the absent portal-preference field is recorded as unavailable rather than inferred from telehealth use. Synthetic linked patterns are procedural teaching associations, never real patient-experience, causal, clinical, prevalence, targeting, or ranking evidence.
 
 ## 13. Module 05 brief: Patient voice, group differences, and equity
 
@@ -410,7 +417,7 @@ Build Modules 01 through 07 in order. Build each checkpoint after its upstream m
 - Confirm Joe Joseph's participation, schedule, format, recording permission, and final biography wording.
 - Name and confirm the patient/caregiver partner co-lead, compensation, authority, access, preparation, and review terms.
 - Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions before alpha.
-- Pin and fingerprint MEPS HC-256 and selected HC-254 event archives before Module 03 or Module 04 uses them.
+- Complete named review of the accepted 25-file MEPS HC-256 and HC-254D through HC-254G release, linkage rules, denominator decisions, and Module 05 handoff before alpha.
 - Build and review the synthetic comment corpus before Module 05; no real comments may be copied into it.
 - Define and test the known response-selection generator before Module 06.
 - Confirm R survey and psychometric execution in one supported teaching environment.

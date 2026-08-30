@@ -1,0 +1,10 @@
+/.gitattributes text eol=lf
+/VERSION text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+data/raw/*.txt binary
+data/raw/*.pdf binary
+data/raw/*.zip binary

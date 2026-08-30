@@ -1,0 +1,4 @@
+source_id,title,relative_path,bytes,sha256,role
+APP2-M03-FRAME,Module 03 accepted adult inpatient frame,data/upstream/module03-adult-inpatient-frame.csv,294946,96e7b493aabf51bdb6c6072e2175ebe560a8ab211287983c6b38e851244e8d4a,accepted public-derived target identity
+APP2-M03-RESPONSE,Module 03 accepted synthetic response study,data/upstream/module03-response-study.csv,271547,eb593a7883c10ff8b83456a4b66b7c8132a3a787d1151d1baf4093d21f10a0af,accepted synthetic response handoff
+APP2-CP01-RELEASE,Week 3 checkpoint release record,data/upstream/checkpoint01-release.json,3847,44f189a6225a1ed72fee70fa7366cc6dfd2ab5952c1ddcd8304fff5ea89a0137,accepted progression identity

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.58.0
+- Current release: 0.59.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Checkpoint 01, measurement and representation readiness
-- Next unit: APP-2 Module 04, linked patient evidence
+- Last completed unit: APP-2 Module 04, linked patient evidence
+- Next unit: APP-2 Module 05, patient voice, group differences, and equity
 
 ## Confirmed decisions
 
@@ -399,22 +399,29 @@
 - The checkpoint carries the 20-point Module 02 score exactly once. Module 01 and Module 03 add zero points, while 18 measurement gates, 19 response gates, and 15 checkpoint integrity gates are required.
 - Reference checkpoint validation passes 714 checks and learner validation passes 683 checks. Two-build equality, copied validation, candidate mutation, duplicate-point, failed-gate, invalid-progression, and existing-target routes pass.
 - APP-2 Checkpoint 01 is a runnable release candidate at Commons 0.58.0 and permits Module 04 linked analysis with all patient-partner, survey-methods, accessibility, language-access, privacy, responsible-AI, clinical, faculty, and independent-review conditions retained.
+- APP-2 Module 04 version 0.1.0 accepts the exact Week 3 checkpoint candidate manifest SHA-256 `5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903` and the Module 03 manifest SHA-256 `3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30`.
+- Its official HC-256 and HC-254D through HC-254G source suite contains 25 files, 18,206,634 bytes, 1,101 PDF pages, 19,140 person rows, and 174,231 event rows. Every source event links to the person source, with zero event-person weight mismatches.
+- The accepted 1,255-person target links to 28,455 events: 1,692 inpatient, 1,601 emergency, 4,651 outpatient, and 20,511 office-based. All four setting totals reconcile exactly. The package also preserves 855 related emergency-inpatient pairs and 12 inpatient stays that began in 2023 and carried into the 2024 event file.
+- The released evidence contains 14 denominator decisions, 10 access and communication estimates, eight service-use estimates, seven digital-channel results, and 14 synthetic linked-pattern rows. Portal preference remains unavailable, and the 45-record provider-language estimate remains limited support.
+- The Module 04 workspace has 52 immutable rows, 12 editable records, and 65 assembled files. Its 6,529-byte manifest SHA-256 is `bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8`.
+- Reference validation passes 249 checks at 25 of 25 points with all 20 gates. Learner validation passes 234 checks. Evidence and workspace two-build equality, copied validation, mutation rejection, failed-gate rejection, invalid-progression rejection, and existing-target rejection pass.
+- APP-2 Module 04 is a runnable release candidate at Commons 0.59.0 and permits Module 05 patient-voice and equity analysis with conditions. Clinical action, patient targeting, hospital ranking, causal claims, portal-preference claims, and machine learning remain prohibited.
 
 ## Pending confirmation
 
 - Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha.
 - Name and confirm the APP-2 patient/caregiver partner co-lead, compensation, decision rights, preparation, access needs, recording consent, and review terms.
-- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions and the Module 03 MEPS population, response, weighting, privacy, and progression decisions before alpha.
+- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; and the Module 04 MEPS linkage, denominators, measures, claims, and handoff before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 03 progression record, source record, and this ledger.
-2. Write the durable Module 04 linked patient-evidence specification before implementation.
-3. Preserve the exact Q21-Q23 measurement, target population, data-class, response-state, base-weight, teaching-factor, bound, and claim contracts from the Week 3 release.
-4. Pin and fingerprint the required MEPS HC-254 event files before creating a linked person-event analytic table.
-5. Align person, event, access, communication, engagement, and service-use denominators and periods before comparison.
-6. Use `PERWT24F`, `VARSTR`, and `VARPSU` correctly or record a specialist referral before population inference.
-7. Build the 25-point linked-evidence component with learner and reference packages, exact tests, source boundaries, assessment, instructor materials, AI record, release metadata, and a Module 05 handoff.
-8. Validate, advance semver, commit, and push before Module 05.
+1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 04 progression record, source record, and this ledger.
+2. Write the durable Module 05 patient-voice, group-differences, and equity specification before implementation.
+3. Preserve the exact target population, linkage, denominator, response-state, weight, data-class, limited-support, unavailable-measure, and claim contracts from Module 04.
+4. Build a governed synthetic comment corpus with no real patient text, a fixed generator, seed, known truth, data dictionary, codebook, and explicit synthetic labels.
+5. Keep comment themes qualitative. Do not turn comment frequency into prevalence or use assisted classification before a transparent human-coded benchmark.
+6. Define prespecified group comparisons, uncertainty, support, channel exclusion, and non-stigmatizing language before interpreting differences.
+7. Build the 20-point equity and patient-voice component with learner and reference packages, exact tests, source boundaries, assessment, instructor materials, AI record, release metadata, and a Module 06 handoff.
+8. Validate, advance semver, commit, and push before Module 06.

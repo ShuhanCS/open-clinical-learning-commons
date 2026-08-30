@@ -1,0 +1,14 @@
+metric,value,unit,evidence
+official_source_files,25,files,five official files for each of HC-256 and HC-254D through HC-254G
+official_source_bytes,18206634,bytes,fingerprinted source inventory
+official_pdf_pages,1101,pages,documentation and codebooks
+upstream_handoff_files,3,files,Week 3 accepted handoff
+upstream_handoff_bytes,570340,bytes,fingerprinted upstream inventory
+person_source_rows,19140,people,full h256.dat
+event_source_rows,174231,events,full h254d through h254g data files
+target_rows,1255,people,accepted Week 3 target
+target_linked_event_rows,28455,events,four linked event files
+target_inpatient_carry_in_starts,12,stays,HC-254D stays beginning in 2023 and continuing into the 2024 event file
+target_base_weighted_population,18879474.284615,people,PERWT24F
+synthetic_response_rows,1255,procedural rows,accepted Module 03 response handoff
+synthetic_respondents,782,procedural rows,accepted Module 03 response handoff

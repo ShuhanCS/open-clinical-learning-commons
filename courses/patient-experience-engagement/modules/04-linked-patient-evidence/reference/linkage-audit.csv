@@ -1,0 +1,9 @@
+audit_id,question,actual,expected,status,action
+L01,official source suite identity,"25 files; 18,206,634 bytes; 1,101 PDF pages","25 files; 18,206,634 bytes; 1,101 PDF pages",pass,restore pinned source on change
+L02,full person source parsed,"19,140 rows; one fixed width","19,140 rows; one fixed width",pass,stop on parse change
+L03,full event sources parsed,"174,231 rows across four fixed widths","174,231 rows across four fixed widths",pass,stop on parse change
+L04,all event rows link to HC-256,"174,231 of 174,231","174,231 of 174,231",pass,investigate any orphan
+L05,target identity,"1,255 people; 18,879,474.284615 weighted","1,255 people; 18,879,474.284615 weighted",pass,restore Week 3 handoff
+L06,target event reconciliation,"1,692 inpatient; 1,601 emergency; 4,651 outpatient; 20,511 office-based; zero differences","28,455 linked events and zero differences",pass,stop on mismatch
+L07,related emergency-inpatient pairs,"855 reciprocal target pairs","855 reciprocal target pairs",pass,preserve relationship in interpretation
+L08,direct public-use IDs released,"none","none",pass,remove direct IDs before release

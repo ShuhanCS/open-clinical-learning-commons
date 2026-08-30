@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.58.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.59.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1751,7 +1751,7 @@ if (
     $app2Content -match '(?im)[A-Z]:\\Users\\' -or
     $app2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app2Content -notmatch 'Current Commons release: 0\.58\.0' -or
+    $app2Content -notmatch 'Current Commons release: 0\.59\.0' -or
     $app2Content -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '25,906' -or
@@ -2072,6 +2072,130 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 03 evidence builder self-check fa
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 03 workspace builder self-check failed.' }
 & python (Join-Path $app2Module03Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 03 validator self-check failed.' }
+
+$app2Module04Root = Join-Path $repo 'courses\patient-experience-engagement\modules\04-linked-patient-evidence'
+$app2Module04Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\modules\04-linked-patient-evidence-spec.md'
+$app2Module04Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md', 'build_linked_evidence.py',
+    'build_workspace.py', 'build-report.json', 'data-spec.md', 'instructor-notes.md',
+    'linkage-contract.json', 'release.json', 'source-record.yml', 'validate_workspace.py',
+    'data\source-inventory.csv', 'data\upstream-inventory.csv',
+    'data\upstream\checkpoint01-release.json', 'data\upstream\module03-adult-inpatient-frame.csv',
+    'data\upstream\module03-response-study.csv', 'data\public\linked-persons.csv',
+    'data\public\linked-events.csv', 'outputs\access-communication-estimates.csv',
+    'outputs\denominator-registry.csv', 'outputs\digital-engagement.csv',
+    'outputs\invariant-checks.csv', 'outputs\linkage-reconciliation.csv',
+    'outputs\linked-evidence-patterns.csv', 'outputs\service-use-estimates.csv',
+    'outputs\source-profile.csv'
+)
+foreach ($sourceStem in @('h256', 'h254d', 'h254e', 'h254f', 'h254g')) {
+    foreach ($sourceSuffix in @('dat.zip', 'doc.pdf', 'cb.pdf', 'su.txt', 'ru.txt')) {
+        $app2Module04Files += "data\raw\$sourceStem$sourceSuffix"
+    }
+}
+foreach ($editable in @(
+    'access-communication-interpretation.md', 'ai-use.md', 'denominator-decisions.csv',
+    'digital-engagement-interpretation.md', 'gate-results.csv', 'linkage-audit.csv',
+    'linkage-plan.md', 'linked-evidence-analysis.md', 'progression-decision.md',
+    'reproducibility-check.md', 'responsible-claims.md', 'service-use-interpretation.md'
+)) {
+    $app2Module04Files += "template\$editable", "reference\$editable"
+}
+$app2Module04Missing = @()
+if (-not (Test-Path -LiteralPath $app2Module04Spec)) { $app2Module04Missing += 'specification' }
+foreach ($relative in $app2Module04Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Module04Root $relative))) {
+        $app2Module04Missing += $relative
+    }
+}
+if ($app2Module04Missing.Count -gt 0) {
+    throw "APP-2 Module 04 is missing its specification or package files: $($app2Module04Missing -join ', ')."
+}
+$app2Module04Content = Get-Content -Raw -LiteralPath $app2Module04Spec
+$app2Module04Sections = [regex]::Matches($app2Module04Content, '(?m)^## \d+\.').Count
+$app2Module04Release = Get-Content -Raw -LiteralPath (Join-Path $app2Module04Root 'release.json') | ConvertFrom-Json
+$app2Module04Sources = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'data\source-inventory.csv'))
+$app2Module04People = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'data\public\linked-persons.csv'))
+$app2Module04Events = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'data\public\linked-events.csv'))
+$app2Module04Reconciliation = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'outputs\linkage-reconciliation.csv'))
+$app2Module04Denominators = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'outputs\denominator-registry.csv'))
+$app2Module04Access = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'outputs\access-communication-estimates.csv'))
+$app2Module04Services = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'outputs\service-use-estimates.csv'))
+$app2Module04Digital = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'outputs\digital-engagement.csv'))
+$app2Module04Patterns = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'outputs\linked-evidence-patterns.csv'))
+$app2Module04Invariants = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'outputs\invariant-checks.csv'))
+$app2Module04Gates = @(Import-Csv -LiteralPath (Join-Path $app2Module04Root 'reference\gate-results.csv'))
+if (
+    $app2Module04Sections -ne 21 -or
+    $app2Module04Content -match '[—–]' -or
+    $app2Module04Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Module04Content -notmatch '18,206,634 bytes' -or
+    $app2Module04Content -notmatch '6,529 bytes' -or
+    $app2Module04Content -notmatch 'bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8' -or
+    $app2Module04Content -notmatch '249 checks' -or
+    $app2Module04Content -notmatch '234 checks' -or
+    $app2Module04Release.module.id -ne 'oclc-app2-04' -or
+    $app2Module04Release.module.version -ne '0.1.0' -or
+    $app2Module04Release.module.commons_release -ne '0.59.0' -or
+    $app2Module04Release.module.course_points -ne 25 -or
+    $app2Module04Release.source_suite.files -ne 25 -or
+    $app2Module04Release.source_suite.bytes -ne 18206634 -or
+    $app2Module04Release.source_suite.pdf_pages -ne 1101 -or
+    $app2Module04Release.source_suite.person_rows -ne 19140 -or
+    $app2Module04Release.source_suite.event_rows -ne 174231 -or
+    $app2Module04Release.source_suite.event_weight_mismatches -ne 0 -or
+    $app2Module04Release.upstream.checkpoint_candidate_manifest_sha256 -ne '5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903' -or
+    $app2Module04Release.target.people -ne 1255 -or
+    $app2Module04Release.target.linked_events -ne 28455 -or
+    $app2Module04Release.target.synthetic_complete_linked_analysis_rows -ne 538 -or
+    $app2Module04Release.linkage.event_rows.inpatient -ne 1692 -or
+    $app2Module04Release.linkage.event_rows.emergency -ne 1601 -or
+    $app2Module04Release.linkage.event_rows.outpatient -ne 4651 -or
+    $app2Module04Release.linkage.event_rows.office_based -ne 20511 -or
+    $app2Module04Release.linkage.inpatient_2023_carry_in_starts -ne 12 -or
+    $app2Module04Release.measurement.provider_language_valid_rows -ne 45 -or
+    $app2Module04Release.measurement.portal_preference_denominator -ne 0 -or
+    $app2Module04Release.generated_evidence.invariants_passed -ne 25 -or
+    $app2Module04Release.package.immutable_manifest_rows -ne 52 -or
+    $app2Module04Release.package.editable_records -ne 12 -or
+    $app2Module04Release.package.assembled_files -ne 65 -or
+    $app2Module04Release.package.manifest_bytes -ne 6529 -or
+    $app2Module04Release.package.manifest_sha256 -ne 'bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8' -or
+    $app2Module04Release.validation.complete_reference_checks -ne 249 -or
+    $app2Module04Release.validation.starter_checks -ne 234 -or
+    $app2Module04Release.progression.reference -ne 'continue with conditions' -or
+    $app2Module04Release.progression.module05_permission -ne 'permitted for patient-voice and equity analysis' -or
+    $app2Module04Release.progression.machine_learning -ne 'reserved for Module 06' -or
+    $app2Module04Sources.Count -ne 25 -or
+    ($app2Module04Sources | Measure-Object -Property bytes -Sum).Sum -ne 18206634 -or
+    ($app2Module04Sources | Measure-Object -Property pages -Sum).Sum -ne 1101 -or
+    $app2Module04People.Count -ne 1255 -or
+    $app2Module04Events.Count -ne 28455 -or
+    $app2Module04Reconciliation.Count -ne 5 -or
+    @($app2Module04Reconciliation | Where-Object { $_.status -ne 'pass' -or $_.difference -ne '0' }).Count -ne 0 -or
+    $app2Module04Denominators.Count -ne 14 -or
+    @($app2Module04Denominators | Where-Object { $_.denominator_id -eq 'D022' -and $_.unweighted_n -eq '0' }).Count -ne 1 -or
+    $app2Module04Access.Count -ne 10 -or
+    @($app2Module04Access | Where-Object { $_.measure -eq 'provider_language_match' -and $_.eligible_persons -eq '45' -and $_.support_flag -eq 'limited_support' }).Count -ne 1 -or
+    $app2Module04Services.Count -ne 8 -or
+    $app2Module04Digital.Count -ne 7 -or
+    @($app2Module04Digital | Where-Object { $_.evidence_id -eq 'DE03' -and $_.denominator_n -eq '25162' -and $_.numerator_n -eq '1813' -and $_.weighted_percent -eq '7.37866394' }).Count -ne 1 -or
+    $app2Module04Patterns.Count -ne 14 -or
+    $app2Module04Invariants.Count -ne 25 -or
+    @($app2Module04Invariants | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app2Module04Gates.Count -ne 20 -or
+    @($app2Module04Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0
+) {
+    throw 'APP-2 Module 04 release metadata, specification, sources, linkage, denominators, measures, validation, manifest, or progression facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Module04Root 'build_linked_evidence.py') --verify-committed
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 04 committed evidence reproduction failed.' }
+& python (Join-Path $app2Module04Root 'build_linked_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 04 evidence builder self-check failed.' }
+& python (Join-Path $app2Module04Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 04 workspace builder self-check failed.' }
+& python (Join-Path $app2Module04Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 04 validator self-check failed.' }
 
 $app2Checkpoint01Root = Join-Path $repo 'courses\patient-experience-engagement\checkpoints\01-measurement-representation-readiness'
 $app2Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\checkpoints\01-measurement-representation-readiness-spec.md'
@@ -3428,4 +3552,5 @@ Write-Output "APP-2 specification passed: $app2ModuleCount modules, $app2Hours h
 Write-Output "APP-2 Module 01 passed: $app2Module01Sections contract sections and $($app2Module01Files.Count) required files."
 Write-Output "APP-2 Module 02 passed: $app2Module02Sections contract sections and $($app2Module02Files.Count) required non-source files plus 28 verified source files."
 Write-Output "APP-2 Module 03 passed: $app2Module03Sections contract sections and $($app2Module03Files.Count) required files."
+Write-Output "APP-2 Module 04 passed: $app2Module04Sections contract sections and $($app2Module04Files.Count) required files."
 Write-Output "APP-2 Checkpoint 01 passed: $app2Checkpoint01Sections contract sections and $($app2Checkpoint01Files.Count) required files."

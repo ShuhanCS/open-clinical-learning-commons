@@ -1,0 +1,11 @@
+measure,source_field,definition,eligible_persons,positive_persons,weighted_denominator,weighted_percent,survey_se_pp,ci95_low_percent,ci95_high_percent,support_flag
+usual_source,HAVEUS42,has a usual source of care,1229,1009,18530883.463143,80.78856833,1.35945509,78.12403635,83.45310031,reportable_teaching_support
+regular_phone_difficult,PHNREG42,regular phone contact is very or somewhat difficult,972,235,14400682.955018,23.80306525,1.74035193,20.39197547,27.21415504,reportable_teaching_support
+evening_weekend_hours,OFFHOU42,usual source has evening or weekend hours,865,176,12926566.584439,21.26764865,1.89280942,17.55774218,24.97755513,reportable_teaching_support
+after_hours_difficult,AFTHOU42,after-hours contact is very or somewhat difficult,708,365,10467442.595347,52.44065366,2.39646068,47.74359073,57.13771658,reportable_teaching_support
+asked_other_treatments,TREATM42,provider asks about other treatments,987,816,14641353.110975,82.77999181,1.35103140,80.13197025,85.42801336,reportable_teaching_support
+involved_usually_always,DECIDE42,provider usually or always asks the person to help decide,957,704,14195620.944791,74.88406042,1.77461428,71.40581644,78.36230440,reportable_teaching_support
+options_explained,EXPLOP42,provider explains options,983,939,14592186.853658,95.12103610,0.94928082,93.26044570,96.98162651,reportable_teaching_support
+provider_language_match,PRVSPK42,provider speaks the person's language,45,41,561057.118891,93.59013151,3.56420303,86.60429356,100.00000000,limited_support
+delayed_for_cost,DLAYCA42,medical care was delayed because of cost,1252,94,18838515.509597,7.61893012,0.84834750,5.95616901,9.28169123,reportable_teaching_support
+unable_to_afford,AFRDCA42,person could not afford medical care,1251,65,18813706.365268,4.85515654,0.73535635,3.41385810,6.29645498,reportable_teaching_support

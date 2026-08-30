@@ -1,0 +1,9 @@
+denominator_id,measure,grain,eligible_n,excluded_or_missing_n,weight,uncertainty,decision
+D001,service-use estimates,person,1255,0,PERWT24F,Taylor linearization with VARSTR and VARPSU,retain full accepted target
+D002,usual source of care,person,1229,26,PERWT24F,Taylor domain estimate,report valid 1 or 2 responses only
+D003,regular phone difficulty,person,972,283,PERWT24F,Taylor domain estimate,report valid 1 through 4 responses only
+D005,after-hours difficulty,person,708,547,PERWT24F,Taylor domain estimate,keep large inapplicable or unknown set visible
+D009,provider language match,person,45,1210,PERWT24F,Taylor domain estimate,limited support; no broad equity conclusion
+D020,telehealth event distribution,event,25162,0,repeated PERWT24F,event distribution without person-level inference,do not call service channel patient preference
+D021,linked teaching patterns,person,538,717,response-adjusted analysis weight,Taylor domain estimate,synthetic response plus public MEPS evidence only
+D022,portal preference,person,0,1255,not available,not estimable,record evidence gap and prohibit inference

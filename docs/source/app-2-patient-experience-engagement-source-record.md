@@ -118,6 +118,27 @@ The five official files total 12,353,779 bytes. The full data file contains 19,1
 
 The invitation, mode, response, Q21, Q22, Q23, and item-missingness fields are deterministic synthetic procedural data. The 13-cell teaching factor adjusts only that synthetic response layer and never replaces or relabels the official MEPS final person weight. The released known-truth comparison shows improvement with residual bias, so it cannot support a real patient-experience, hospital, access, equity, prevalence, mode, or clinical claim.
 
+## Accepted Module 04 source release
+
+Module 04 accepts the complete five-file suite for each of HC-256, HC-254D, HC-254E, HC-254F, and HC-254G. The 25 official files include the ASCII data archives, documentation PDFs, codebook PDFs, SAS programming statements, and R programming statements. Together they contain 18,206,634 bytes and 1,101 PDF pages.
+
+The accepted source rows are:
+
+| Product | Grain | Rows |
+|---|---|---:|
+| HC-256 | Person | 19,140 |
+| HC-254D | Inpatient event | 1,912 |
+| HC-254E | Emergency event | 4,351 |
+| HC-254F | Outpatient event | 22,150 |
+| HC-254G | Office-based event | 145,818 |
+| Total event rows | Event | 174,231 |
+
+Every source event links to HC-256 through `DUPERSID`, and all event-person weight checks agree. The Module 04 teaching release preserves the accepted 1,255-person Week 3 target and links 28,455 target events: 1,692 inpatient, 1,601 emergency, 4,651 outpatient, and 20,511 office-based. Twelve target inpatient stays began in 2023 and continued into the 2024 event file, so their carry-in dates remain visible rather than being discarded.
+
+The public teaching tables omit `DUPERSID` and `EVNTIDX`, use module-scoped sequential keys, and keep the source mapping inside the controlled build. This is data minimization, not a claim that the original public-use data were de-identified by the Commons. The exact source URLs, bytes, hashes, pages, terms, and access dates are recorded in `courses/patient-experience-engagement/modules/04-linked-patient-evidence/data/source-inventory.csv`.
+
+Module 04 has valid service-channel evidence for telehealth but no portal-access or portal-preference field. Portal preference therefore has a denominator of zero and remains unavailable. The provider-language estimate has only 45 valid target records and remains limited support. The synthetic Week 3 response layer is retained only to demonstrate linkage and analysis procedure; no linked pattern is a real patient-experience association.
+
 ## Stable source decisions
 
 - APP-2 remains a distinct applied course.

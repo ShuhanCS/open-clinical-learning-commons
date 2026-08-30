@@ -1,0 +1,21 @@
+gate_id,gate,status,evidence,required_action
+G01,accepted Week 3 checkpoint permits linked analysis,pass,candidate manifest and permission verified,restore accepted handoff
+G02,full official source suite matches,pass,"25 files; 18,206,634 bytes; 1,101 pages",restore pinned sources
+G03,upstream frame response and release files match,pass,three fingerprints verified,restore upstream files
+G04,full HC-256 person file parses,pass,"19,140 rows; fixed width 4,690",stop on parse change
+G05,all four full event files parse,pass,"174,231 rows across four fixed widths",stop on parse change
+G06,every event row links to HC-256,pass,"174,231 of 174,231",investigate any orphan
+G07,event weights and design fields match person records,pass,zero weight mismatches,stop on mismatch
+G08,Week 3 target identity is preserved,pass,"1,255 people; 18,879,474.284615 weighted",restore target
+G09,released tables omit direct public-use IDs,pass,sequential teaching IDs only,remove direct IDs
+G10,person totals reconcile to target event rows,pass,zero differences in four settings,stop on mismatch
+G11,annual-file carry-in rule is explicit,pass,12 inpatient starts in 2023 retained,restore period note
+G12,related emergency-inpatient events are preserved,pass,855 reciprocal pairs,restore relationship
+G13,every analysis has a registered grain and denominator,pass,14 denominator records,register missing denominator
+G14,person estimates use weight stratum PSU and domain variance,pass,PERWT24F VARSTR VARPSU retained,rerun survey estimates
+G15,missing and inapplicable access responses remain visible,pass,measure-specific eligible counts retained,restore support
+G16,provider-language result is limited support,pass,45 valid target records,remove broad conclusion
+G17,telehealth is not relabeled as portal preference or engagement,pass,portal denominator recorded as zero,remove unsupported claim
+G18,public public-derived synthetic and unavailable classes remain distinct,pass,four data classes recorded,separate classes
+G19,causal ranking targeting clinical and ML uses remain prohibited,pass,responsible-claims and progression records complete,remove prohibited action
+G20,reproduction AI accountability and progression are complete,pass,all required records complete,finish records before progression
