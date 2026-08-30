@@ -1,0 +1,6 @@
+criterion_id,criterion,points_available,points_earned,evidence,status
+H01-A,"Source, rights, grain, and cohort explanation",1.00,1.00,"handoff topics 1-4 and responses 1-3",pass
+H01-B,"Quality, denominator, and interpretation explanation",1.00,1.00,"handoff topics 5-6 and responses 4-6",pass
+H01-C,"Reproduction, version, and manifest explanation",1.00,1.00,"handoff topic 8 and response 7",pass
+H01-D,"Accessibility and AI-accountability explanation",1.00,1.00,"handoff topics 7 and 9; response 8",pass
+H01-E,"Response accuracy, limits, conditions, and final recommendation",2.00,1.50,"handoff topic 10; responses 9-10; C01",pass with conditions

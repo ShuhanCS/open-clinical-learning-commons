@@ -11,9 +11,9 @@ FND-1 teaches learners to build, check, describe, and hand off healthcare data a
 - Continuing case: a synthetic longitudinal acute-care data system built from Synthea and documented public-source contrasts
 - Final deliverable: a reproducible healthcare data toolkit
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 07 and Checkpoints 1 and 2 are runnable release candidates; the final checkpoint is not yet built
+- Module package status: Modules 01 through 07 and all three cumulative checkpoints are runnable release candidates
 - Course package version: 0.1.0
-- Commons release: 0.36.0
+- Commons release: 0.37.0
 
 ## Seven technical modules
 
@@ -67,6 +67,12 @@ Runnable Week 6 checkpoint:
 - [Durable Checkpoint 2 specification](../../docs/curriculum/courses/FND-1/checkpoints/02-quality-descriptive-accessible-release-spec.md)
 - [Checkpoint 2 release record](checkpoints/02-quality-descriptive-accessible-release/release.json)
 
+Runnable final checkpoint:
+
+- [Reproducible healthcare data toolkit](checkpoints/03-reproducible-toolkit/README.md)
+- [Durable final-checkpoint specification](../../docs/curriculum/courses/FND-1/checkpoints/03-reproducible-toolkit-spec.md)
+- [Final-checkpoint release record](checkpoints/03-reproducible-toolkit/release.json)
+
 The 7.5-week phrase is a planning model. Published dates use the official MGH Institute half-term calendar:
 
 https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf
@@ -108,6 +114,8 @@ https://data.cms.gov/collection/synthetic-medicare-enrollment-fee-for-service-cl
 - [Master curriculum architecture](../../docs/specs/2026-08-29-curriculum-master-architecture-spec.md)
 - [Build ledger](../../docs/curriculum/BUILD-LEDGER.md)
 
-## Build order
+## Release status
 
-Build Modules 01 through 07 one at a time. Each release receives its own 21-section module specification, teaching data, runnable exercise, learner assessment, instructor notes, validator, review fields, semantic version, commit, and push.
+The full technical sequence is built. Each of the seven modules has a 21-section specification and runnable package, and each cumulative checkpoint has a 17-section specification, protected assembly, learner and instructor records, assessment, validator, and release metadata.
+
+Named human review, a real learner defense, and a taught pilot still gate alpha and beta promotion. The next curriculum build is the separate FND-2 course specification.

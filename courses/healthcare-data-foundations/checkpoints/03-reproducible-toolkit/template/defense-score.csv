@@ -1,0 +1,6 @@
+criterion_id,criterion,points_available,points_earned,evidence,status
+H01-A,"Source, rights, grain, and cohort explanation",1.00,"[REPLACE: 0.00-1.00]","[REPLACE: defense evidence]","[REPLACE: pass, pass with conditions, or fail]"
+H01-B,"Quality, denominator, and interpretation explanation",1.00,"[REPLACE: 0.00-1.00]","[REPLACE: defense evidence]","[REPLACE: pass, pass with conditions, or fail]"
+H01-C,"Reproduction, version, and manifest explanation",1.00,"[REPLACE: 0.00-1.00]","[REPLACE: defense evidence]","[REPLACE: pass, pass with conditions, or fail]"
+H01-D,"Accessibility and AI-accountability explanation",1.00,"[REPLACE: 0.00-1.00]","[REPLACE: defense evidence]","[REPLACE: pass, pass with conditions, or fail]"
+H01-E,"Response accuracy, limits, conditions, and final recommendation",2.00,"[REPLACE: 0.00-2.00]","[REPLACE: defense evidence]","[REPLACE: pass, pass with conditions, or fail]"

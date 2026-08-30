@@ -1,0 +1,9 @@
+criterion_id,criterion,points_available,points_earned,evidence,status
+R01,"Repository identity, semantic version, change log, release notes, and tag evidence",4.00,4.00,"README.md; CHANGELOG.md; release-notes.md; submission-record.md; C03",pass with conditions
+R02,"Complete package, ownership map, immutable manifest, and fingerprint integrity",5.00,5.00,"candidate-manifest.csv; release-manifest.csv; pipeline-contract.csv",pass
+R03,"Environment, clean reproduction, output comparison, and hidden-dependency removal",6.00,5.50,"reproducibility-check.md; final-reproduction.md; C02",pass with conditions
+D01,"Data brief, source, rights, grain, cohort, and denominator clarity",4.00,4.00,"documentation/data-brief.md; data/data-dictionary.csv; evidence-tables/denominator-registry.csv",pass
+D02,"Quality conditions, descriptive limits, permitted use, and stop rules",3.00,3.00,"quality/; documentation/limitations.md; handoff-acceptance.md",pass
+A01,"Accessible schema and figure routes, exact tables, alternatives, and handoff communication",3.00,3.00,"figure-registry.csv; figures/; tables/; alt-text/; defense/handoff-brief.md",pass
+AI01,"Complete AI-use inventory, prompt log, material audit, verification, and human ownership",4.00,4.00,"audit/prompt-log.csv; documentation/ai-audit.md",pass
+H01,"Release checklist, eight-minute handoff, defense, conditions, and disposition",6.00,5.50,"release-checklist.md; defense-score.csv; final-disposition.md; C01",pass with conditions

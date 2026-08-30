@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.36.0
+- Current release: 0.37.0
 - Last updated: 2026-08-30
-- Active phase: FND-1 module build
-- Last completed unit: FND-1 Module 07, Reproducible handoff and AI audit
-- Next unit: FND-1 final checkpoint, Reproducible healthcare data toolkit
+- Active phase: FND-2 course specification
+- Last completed unit: FND-1 final checkpoint, Reproducible healthcare data toolkit
+- Next unit: FND-2 course specification and source normalization
 
 ## Confirmed decisions
 
@@ -179,7 +179,12 @@
 - The reference AI audit independently verifies that all 263 `No encounter recorded` rows retain blank next-event companion fields. Zero would invent an event at the follow-up origin and is rejected.
 - Starter validation passes 585 checks and complete reference validation passes 657. Existing targets, unfinished records, and a missing immutable rate table are rejected; two clean assemblies produce the same immutable manifest.
 - Module 07 drafts the exact 35-point final component. A score of at least 28, every gate, an adequate defense, and `accept` or `accept with conditions` permit final-checkpoint review.
-- All seven FND-1 technical modules are now runnable release candidates. The final checkpoint and named human review remain before course completion.
+- FND-1 final checkpoint 0.1.0 treats the complete Module 07 toolkit as immutable input and adds no analytic result. It freezes all 90 candidate files in a sorted candidate manifest and adds ten final-review files.
+- Reference and learner assembly each create exactly 100 files. The 90-row candidate manifest is 11,804 bytes with SHA-256 `200df43e17926e29cc09aa89427a04205fd39ac289aebdf1217f952b188b89a0`.
+- The final checkpoint preserves the 35-point source assessment exactly once across eight criteria. Passing requires at least 28 points, at least 4.8 of 6 defense points, all 20 gates, and `accept` or `accept with conditions` with explicit FND-2 progression.
+- Complete reference validation passes 493 checks and learner starter validation passes 404 checks. Existing targets, unfinished review records, and a missing candidate artifact are rejected.
+- The reference technical disposition is `accept with conditions`. Named human decisions and a real learner defense remain before alpha; named macOS and Linux reproduction remains before stable; the final learner commit and annotated tag remain part of a real acceptance.
+- All seven FND-1 modules and all three cumulative checkpoints are runnable release candidates. FND-1 technical construction is complete at Commons 0.37.0.
 
 ## Pending confirmation
 
@@ -188,9 +193,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course, Module 07 specification and release record, final-checkpoint brief, source record, master architecture, and this ledger.
-2. Treat the accepted 90-file Module 07 toolkit candidate and 74-row manifest as immutable final-checkpoint input.
-3. Write the 17-section final-checkpoint specification around the source 35-point rubric, technical defense, and health-system analytics engineering lead decision.
-4. Preserve D01 through D20 resolution, N01 through N08 conditions, exact descriptive meaning, equivalent access, material AI audit, and synthetic claim limits.
-5. Build the protected final assembler, learner and reviewer records, instructor answer key, validator, release record, and final `accept`, `accept with conditions`, `revise`, or `refer` disposition.
-6. Update the Commons version and this ledger, then commit and push the final checkpoint before starting FND-2.
+1. Read the master curriculum architecture, this ledger, the FND-1 ownership boundary, and the FND-2 source DOCX from the supplied curriculum archive.
+2. Create the durable FND-2 course specification and source-normalization record before building Module 01.
+3. Preserve the source assessment weights, seven-module sequence, three checkpoints, and 112.5-hour total.
+4. Define what FND-2 owns that FND-1 does not, including its distinct modeling and inference decisions.
+5. Select public or documented synthetic clinical data that support the full FND-2 sequence without restricted data.
+6. Record the next module handoff, version decision, checker updates, commit, and push before building FND-2 Module 01.

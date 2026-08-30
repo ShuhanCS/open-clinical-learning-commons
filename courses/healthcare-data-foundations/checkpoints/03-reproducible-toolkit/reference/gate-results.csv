@@ -1,0 +1,21 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,"Exact accepted Module 07 version and candidate",pass,"Module 07 complete validation and VERSION",technical reference,none
+G02,"Exact 90-row candidate manifest",pass,"candidate-manifest.csv",technical reference,none
+G03,"Exact 100-file final tree",pass,"final checkpoint complete validation",technical reference,none
+G04,"Repository, commit, semantic version, and tag identity","pass with condition","submission-record.md; final learner commit and annotated tag remain pending",technical reference,C03
+G05,"Exact source archive and rights",pass,"documentation/data-brief.md and source-record.yml",technical reference,none
+G06,"Exact analytic grain and fingerprint",pass,"data/analytic-table.csv and release-manifest.csv",technical reference,none
+G07,"Deterministic cohort and conserved counts",pass,"source-code/module03 and cohort-flow.csv",technical reference,none
+G08,"D01 through D20 resolution preserved",pass,"quality/quality-rule-results.csv and quality/resolution-log.csv",technical reference,none
+G09,"N01 through N08 conditions preserved",pass,"quality/resolution-log.csv and evidence-tables/denominator-registry.csv",technical reference,none
+G10,"Exact descriptive denominators and interval meaning",pass,"evidence-tables/rates.csv and denominator-registry.csv",technical reference,none
+G11,"Exact F01 through F03 evidence and equivalent access",pass,"figure-registry.csv; figures/; tables/; alt-text/",technical reference,none
+G12,"Complete pipeline source and declared environment",pass,"pipeline-contract.csv; source-code/; requirements.txt",technical reference,none
+G13,"Clean reproduction and exact output comparison","pass with condition","final-reproduction.md; named macOS and Linux reproduction remains pending",technical reference,C02
+G14,"No hidden dependency or manual output edit",pass,"final-reproduction.md and reproducibility-check.md",technical reference,none
+G15,"No prohibited data, archive, database, secret, or credential",pass,"complete validator prohibited-file scan",technical reference,none
+G16,"Complete data brief, limitations, change log, release notes, and checklist",pass,"documentation/; CHANGELOG.md; release-notes.md; release-checklist.md",technical reference,none
+G17,"Complete material AI disclosure and independent audit",pass,"audit/prompt-log.csv and documentation/ai-audit.md",technical reference,none
+G18,"Adequate accessible technical defense",pass,"defense/handoff-brief.md; defense/questions-and-responses.md; defense-score.csv",technical reference,none
+G19,"Complete reviewer, condition, and final-disposition records","pass with condition","reviewer-record.md; final-disposition.md; named human review remains pending",technical reference,C01
+G20,"No unsupported real-world or causal claim",pass,"documentation/limitations.md and handoff-acceptance.md",technical reference,none

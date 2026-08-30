@@ -1,8 +1,8 @@
 # FND-1: Healthcare Data Foundations
 
-- Status: course specification complete; Modules 01 through 07 and Checkpoints 1 and 2 are runnable release candidates
+- Status: course technical package complete; Modules 01 through 07 and all three checkpoints are runnable release candidates
 - Course specification version: 0.1.0
-- Commons release: 0.36.0
+- Commons release: 0.37.0
 - Credits: 3
 - Delivery: asynchronous online half-term with scheduled technical clinics and review
 - Planning model: seven instructional weeks mapped to official half-term dates
@@ -1507,7 +1507,7 @@ Every FND-1 module specification uses the 21-section contract:
 | Beta | The course or module has been taught once and timing, defects, and revisions are recorded without learner identifiers. |
 | Stable | A second instructor or program has taught it successfully and no release-blocking issue remains. |
 
-The course specification is currently specified. No FND-1 module is yet a runnable release candidate.
+The course technical package is a runnable release candidate. All seven modules and all three checkpoints have specifications, teaching records, protected assembly or build paths, validators, release metadata, and measured reference evidence. Named human review still gates alpha promotion.
 
 ## Required human review roles
 
@@ -1617,7 +1617,7 @@ Each module adds its own source, data, code, output, and release checks.
 - [x] Module 06 has a complete specification and runnable package.
 - [x] Checkpoint 2 has a runnable assembler, templates, validator, and instructor notes.
 - [x] Module 07 has a complete specification and runnable package.
-- [ ] The final checkpoint has a runnable assembler, templates, validator, and instructor notes.
+- [x] The final checkpoint has a runnable assembler, templates, validator, and instructor notes.
 - [ ] Named human reviews are recorded.
 - [ ] The course has reached beta after a taught pilot.
 
@@ -1631,28 +1631,6 @@ These decisions do not block final-checkpoint specification and build:
 
 ## Context-safe continuation
 
-Module 07 version 0.1.0 is complete. Resume at the final checkpoint and preserve the exact 90-file candidate, 74 immutable rows, 35-point score contract, material AI audit, defense evidence, and all upstream conditions.
+FND-1 technical construction is complete at Commons 0.37.0. The final checkpoint freezes the exact 90-file Module 07 candidate, adds ten final-review files, and validates the 100-file result. Named human decisions, a real learner defense, cross-platform reproduction, and the final learner tag remain maturity conditions rather than missing technical package work.
 
-Read:
-
-- this course specification;
-- `docs/curriculum/courses/FND-1/modules/07-reproducible-handoff-ai-audit-spec.md`;
-- `courses/healthcare-data-foundations/modules/07-reproducible-handoff-ai-audit/release.json`;
-- `docs/curriculum/courses/FND-1/checkpoints/02-quality-descriptive-accessible-release-spec.md`;
-- `courses/healthcare-data-foundations/checkpoints/02-quality-descriptive-accessible-release/release.json`;
-- `docs/source/fnd-1-healthcare-data-foundations-source-record.md`;
-- `docs/specs/2026-08-29-curriculum-master-architecture-spec.md`; and
-- `docs/curriculum/BUILD-LEDGER.md`.
-
-Then:
-
-1. write the 17-section final-checkpoint specification;
-2. treat the accepted Module 07 toolkit candidate as immutable input;
-3. preserve the exact 35-point rubric and every noncompensable gate;
-4. define the final technical defense, review roles, and decision record;
-5. create the protected final assembler, learner and reviewer records, instructor key, and validator;
-6. preserve exact quality, denominator, accessibility, AI, and claim conditions;
-7. reproduce the final checkpoint from a clean target;
-8. update versions, checker, course status, and ledger;
-9. commit and push the final checkpoint; and
-10. record named human review before alpha or beta promotion.
+Resume with FND-2 as the next separate straight-through technical foundations course. Read the master curriculum architecture, the FND-2 source DOCX inventory in the supplied curriculum archive, this FND-1 ownership boundary, and `docs/curriculum/BUILD-LEDGER.md`. Specify FND-2 before building its first module, preserve the source weights and 112.5-hour total, and avoid reteaching the FND-1 pipeline.

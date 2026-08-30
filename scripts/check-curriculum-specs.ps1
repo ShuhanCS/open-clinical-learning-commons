@@ -633,6 +633,65 @@ if ($LASTEXITCODE -ne 0) { throw 'FND-1 Checkpoint 2 assembler self-check failed
 & python (Join-Path $fnd1Checkpoint02Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'FND-1 Checkpoint 2 validator self-check failed.' }
 
+$fnd1Checkpoint03Root = Join-Path $repo 'courses\healthcare-data-foundations\checkpoints\03-reproducible-toolkit'
+$fnd1Checkpoint03Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\checkpoints\03-reproducible-toolkit-spec.md'
+$fnd1Checkpoint03Records = @(
+    'submission-record.md', 'final-score.csv', 'gate-results.csv', 'defense-score.csv',
+    'reviewer-record.md', 'final-disposition.md', 'handoff-acceptance.md', 'final-reproduction.md'
+)
+$fnd1Checkpoint03Files = @(
+    '.gitattributes', '.gitignore', 'VERSION', 'README.md', 'assessment.md',
+    'assemble_checkpoint.py', 'instructor-notes.md', 'release.json', 'validate_checkpoint.py'
+) + @($fnd1Checkpoint03Records | ForEach-Object { "template\$_" }) + @($fnd1Checkpoint03Records | ForEach-Object { "reference\$_" })
+$fnd1Checkpoint03Missing = @($fnd1Checkpoint03Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Checkpoint03Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Checkpoint03Spec) -or $fnd1Checkpoint03Missing.Count -gt 0) {
+    throw "FND-1 final checkpoint is missing its specification or package files: $($fnd1Checkpoint03Missing -join ', ')."
+}
+$fnd1Checkpoint03Content = Get-Content -Raw -LiteralPath $fnd1Checkpoint03Spec
+$fnd1Checkpoint03Sections = [regex]::Matches($fnd1Checkpoint03Content, '(?m)^## \d+\.').Count
+if ($fnd1Checkpoint03Sections -ne 17 -or $fnd1Checkpoint03Content -match '[—–]' -or $fnd1Checkpoint03Content -match '(?im)[A-Z]:\\Users\\') {
+    throw "FND-1 final checkpoint must define 17 plain-ASCII contract sections without local absolute paths; found $fnd1Checkpoint03Sections sections."
+}
+$fnd1Checkpoint03Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Checkpoint03Root 'release.json') | ConvertFrom-Json
+$fnd1Checkpoint03Scores = Import-Csv -LiteralPath (Join-Path $fnd1Checkpoint03Root 'reference\final-score.csv')
+$fnd1Checkpoint03Gates = Import-Csv -LiteralPath (Join-Path $fnd1Checkpoint03Root 'reference\gate-results.csv')
+$fnd1Checkpoint03Defense = Import-Csv -LiteralPath (Join-Path $fnd1Checkpoint03Root 'reference\defense-score.csv')
+if (
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.37.0' -or
+    $fnd1Checkpoint03Release.checkpoint.version -ne '0.1.0' -or
+    $fnd1Checkpoint03Release.checkpoint.commons_release -ne '0.37.0' -or
+    $fnd1Checkpoint03Release.checkpoint.course_weight_percent -ne 35 -or
+    $fnd1Checkpoint03Release.checkpoint.cumulative_hours -ne 112.5 -or
+    $fnd1Checkpoint03Release.package.assembled_files -ne 100 -or
+    $fnd1Checkpoint03Release.package.candidate_files -ne 90 -or
+    $fnd1Checkpoint03Release.package.final_review_files -ne 10 -or
+    $fnd1Checkpoint03Release.package.candidate_manifest_rows -ne 90 -or
+    $fnd1Checkpoint03Release.package.candidate_manifest_bytes -ne 11804 -or
+    $fnd1Checkpoint03Release.package.candidate_manifest_sha256 -ne '200df43e17926e29cc09aa89427a04205fd39ac289aebdf1217f952b188b89a0' -or
+    $fnd1Checkpoint03Release.package.assembler_sha256 -ne '04bb5fc700dfb2a65bb486b26ad95a65f98fd4463926d76835371220d198ab07' -or
+    $fnd1Checkpoint03Release.package.validator_sha256 -ne '27a347d0fb8a6f231d87f968b58c2cf689e39123760f58295645ad4d14442910' -or
+    $fnd1Checkpoint03Release.validation.starter_checks -ne 404 -or
+    $fnd1Checkpoint03Release.validation.complete_reference_checks -ne 493 -or
+    $fnd1Checkpoint03Scores.Count -ne 8 -or
+    ($fnd1Checkpoint03Scores | Measure-Object -Property points_available -Sum).Sum -ne 35 -or
+    ($fnd1Checkpoint03Scores | Measure-Object -Property points_earned -Sum).Sum -ne 34 -or
+    $fnd1Checkpoint03Gates.Count -ne 20 -or
+    @($fnd1Checkpoint03Gates | Where-Object { $_.result -eq 'fail' }).Count -ne 0 -or
+    $fnd1Checkpoint03Defense.Count -ne 5 -or
+    ($fnd1Checkpoint03Defense | Measure-Object -Property points_available -Sum).Sum -ne 6 -or
+    ($fnd1Checkpoint03Defense | Measure-Object -Property points_earned -Sum).Sum -ne 5.5 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $fnd1Checkpoint03Root 'assemble_checkpoint.py')).Hash.ToLowerInvariant() -ne '04bb5fc700dfb2a65bb486b26ad95a65f98fd4463926d76835371220d198ab07' -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $fnd1Checkpoint03Root 'validate_checkpoint.py')).Hash.ToLowerInvariant() -ne '27a347d0fb8a6f231d87f968b58c2cf689e39123760f58295645ad4d14442910'
+) {
+    throw 'FND-1 final checkpoint release metadata, score, gates, defense, fingerprints, or validation facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $fnd1Checkpoint03Root 'assemble_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 final-checkpoint assembler self-check failed.' }
+& python (Join-Path $fnd1Checkpoint03Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 final-checkpoint validator self-check failed.' }
+
 function Test-ModuleContract {
     param(
         [Parameter(Mandatory)] [string] $Label,
@@ -1278,3 +1337,4 @@ Write-Output "FND-1 Module 06 passed: $fnd1Module06Sections contract sections an
 Write-Output "FND-1 Module 07 passed: $fnd1Module07Sections contract sections and $($fnd1Module07Files.Count) required files."
 Write-Output "FND-1 Checkpoint 1 passed: $fnd1Checkpoint01Sections contract sections and $($fnd1Checkpoint01Files.Count) required files."
 Write-Output "FND-1 Checkpoint 2 passed: $fnd1Checkpoint02Sections contract sections and $($fnd1Checkpoint02Files.Count) required files."
+Write-Output "FND-1 final checkpoint passed: $fnd1Checkpoint03Sections contract sections and $($fnd1Checkpoint03Files.Count) required files."
