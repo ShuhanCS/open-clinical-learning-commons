@@ -1,0 +1,15 @@
+rule_id,trigger,immediate_action,escalation_owner,restart_evidence,restart_authority
+R01,incorrect delayed or missing safe question route,stop affected workflow and protect unresolved questions,clinical safety owner,incident review corrected route and dry run,clinical decision owner and patient co-lead
+R02,contact without current consent or against recorded preference,stop contact and investigate all affected records,privacy owner,corrected consent process and affected-person response,privacy lead clinical owner and patient co-lead
+R03,requested language format interpreter proxy or non-digital route unavailable,pause affected offer route and provide safe alternative,access and language owner,capacity evidence and partner review,access lead and patient co-lead
+R04,patient co-lead withdraws or rejects the proposal,pause progression and retain the reason,APP-2 faculty owner,new direct agreement or documented stop decision,patient co-lead and program owner
+R05,invalid denominator scoring skip or item-missingness logic,stop result use and correct records,survey and measurement leads,independent reproduction of corrected contract,measurement lead and governance
+R06,data completeness below approved threshold,pause inference and repair collection,data steward,complete audit and accepted rerun,data steward and methods reviewer
+R07,unsupported group estimate or contrast is reported,withdraw claim and correct all outputs,equity reviewer,support audit and accessible correction,equity reviewer and patient co-lead
+R08,privacy source-term or governance breach,stop data use and preserve incident record,privacy and governance lead,formal review and approved corrective action,governance authority
+R09,burden above patient-partner approved limit,pause or narrow workflow,patient-experience owner,redesigned workflow and direct partner review,patient co-lead and clinical owner
+R10,staff time or capacity exceeds approved limit,pause expansion and adjust scope,operations owner,capacity plan and successful run-in,operations and clinical owners
+R11,teaching result is presented as official HCAHPS reporting,withdraw and correct publication,measurement lead,approved correction and communication,measurement and governance leads
+R12,model patient or group targeting appears,stop model use and remove targeting logic,responsible-AI and governance leads,independent audit showing universal offer,governance and patient co-lead
+R13,results are not returned by agreed date,stop progression and assign correction,accountability owner,dated accessible response and capacity plan,patient co-lead and program owner
+R14,accountable clinical patient or governance ownership is lost,pause work until roles are restored,APP-2 faculty owner,named accepted owners and renewed review,program owner and patient co-lead

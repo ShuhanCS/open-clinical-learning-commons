@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.62.0
+- Current release: 0.63.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Checkpoint 02, linked evidence and patient voice release
-- Next unit: APP-2 Module 07, clinician and patient leadership, accountability, and defense
+- Last completed unit: APP-2 Module 07, clinician and patient leadership, accountability, and defense
+- Next unit: APP-2 final checkpoint, patient-experience and engagement package
 
 ## Confirmed decisions
 
@@ -427,6 +427,16 @@
 - Reference validation passes 826 checks and learner validation passes 797 checks. Two-build equality, copied validation, existing-target refusal, candidate mutation, duplicate-score, failed-gate, and invalid-progression routes pass.
 - The checkpoint repaired the recorded Module 06 immutable-manifest identity after the prior line-ending cleanup. The accepted 28-row, 4,361-byte manifest SHA-256 is `0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938`; no analytic evidence changed.
 - APP-2 Checkpoint 02 is a runnable release candidate at Commons 0.62.0 and permits Module 07 curriculum construction with conditions. Comment-text ML, fabricated patient voice, patient targeting, group ranking, official HCAHPS reporting, fielding, clinical action, implementation, and model deployment remain prohibited.
+- APP-2 Module 07 version 0.1.0 freezes the complete 149-file Week 3 package, 174-file Week 6 package, and both accepted release records without changing their evidence or scores.
+- Nine controls and 325 accepted evidence files create a 334-row immutable manifest. The complete candidate has 358 files and 23 clinician and patient leadership records.
+- The 334-row manifest is 64,149 bytes with SHA-256 `53bd306692145df85d1b2a709615000f80829099a916659c6a8cfd3bd994697f`.
+- Joe Joseph, MD, SFHM, remains the designated clinician of record under the dated public identity boundary. Direct participation, schedule, format, recording permission, and final wording remain pending before alpha.
+- The patient/caregiver co-lead is required and pending before alpha. The reference contains zero actual patient or caregiver statements and cannot count simulated records or generated comments as partnership.
+- The construction reference scores 35.00 of 35.00, passes all 26 gates with allowed conditions, and has an adequate 14-question defense. The package is `accept with conditions`; the organizational recommendation remains `revise before testing`.
+- Fourteen prospective measures cover implementation, process, response, outcome, access, balancing, accountability, and safety. Fourteen stop rules name immediate action, escalation ownership, restart evidence, and shared restart authority.
+- The transparent response adjustment remains the teaching benchmark. The bounded random forest does not change the response-adjustment decision, and universal offer without patient or group targeting remains required.
+- Complete validation passes 1,847 checks and learner validation passes 1,794 checks. Deterministic assembly, copied validation, overwrite refusal, and changed-evidence, score, gate, recommendation, partnership, and progression failure routes pass.
+- APP-2 Module 07 is a runnable release candidate at Commons 0.63.0. Patient contact, fielding, official HCAHPS reporting, targeting, clinical implementation, and model deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -438,11 +448,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, accepted Checkpoint 02 package and progression record, Module 07 brief, source record, and this ledger.
-2. Write the durable Module 07 clinician and patient leadership specification before implementation.
-3. Freeze the exact accepted Week 3 and Week 6 checkpoint identities without changing their evidence or scores.
-4. Design the 16-hour clinician and patient leadership block around recommendation, patient-facing communication, accountability, monitoring, stop rules, and defense.
-5. Keep Joe Joseph, MD, SFHM, as the designated clinician under the dated-identity boundary, with participation details pending direct confirmation.
-6. Require a named patient or caregiver co-lead, compensation, authority, access, preparation, disagreement, and review terms before alpha.
-7. Preserve the transparent adjustment, model non-adoption decision, universal-offer proposal, open reviewer conditions, and every prohibited use.
-8. Validate, advance semver, commit, and push before the final checkpoint.
+1. Read the APP-2 course specification, accepted Module 07 package and progression record, both accepted checkpoint release records, source record, and this ledger.
+2. Write the durable final-checkpoint specification before implementation.
+3. Freeze the complete 358-file Module 07 candidate without editing accepted evidence, leadership records, scores, gates, recommendation, or conditions.
+4. Record the 35-point component exactly once and adjudicate the 26 gates and 14-question defense.
+5. Keep package acceptance, organizational recommendation, final course progression, and authorization as separate decisions.
+6. Preserve the clinician and patient co-lead conditions, transparent adjustment, model non-adoption, universal offer, accountability plan, stop rules, and every prohibited use.
+7. Add final reviewer, reproducibility, accessibility, agent-use, and handoff records without inventing approval.
+8. Validate, advance semver, commit, and push before moving to APP-3.

@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.62.0 through runnable Module 06 and Checkpoint 02.
+- Current Commons release: 0.63.0 through runnable Module 07 and Checkpoint 02.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -300,8 +300,15 @@ The Week 6 package scores Module 04 at 25 points and Module 05 at 20 points. Mod
 - Patient-partner co-lead: role required; named participant and participation terms pending.
 - Decision: what the service and patient advisory group should do next, who owns it, how results return to patients, and when the proposal must stop or change.
 - Submission: final patient-experience and engagement package and defense.
+- Package path: `courses/patient-experience-engagement/modules/07-clinician-patient-leadership-defense/`.
+- Specification: `docs/curriculum/courses/APP-2/modules/07-clinician-patient-leadership-defense-spec.md`.
+- Status: runnable release candidate at Commons 0.63.0.
 
 Leadership cannot repair an invalid measure or unrepresentative evidence. The panel may narrow, revise, refer, or stop the proposal. Patient-facing reporting, feedback, compensation, access, ownership, monitoring, and disagreement records are required.
+
+The released construction reference freezes the 149-file Week 3 package, the 174-file Week 6 package, and both release records without changing accepted evidence. Nine controls and 325 accepted evidence files form a 334-row immutable manifest. The complete 358-file candidate adds 23 leadership records. Its 64,149-byte manifest SHA-256 is `53bd306692145df85d1b2a709615000f80829099a916659c6a8cfd3bd994697f`.
+
+The reference scores 35.00 of 35.00, passes all 26 gates with allowed open conditions, and has an adequate 14-question construction defense. Its package status is `accept with conditions`, while the organizational recommendation is `revise before testing`. A named patient/caregiver co-lead, direct clinician confirmation, local workflow and access evidence, governance, independent reproduction, and live or equivalent defense remain pre-alpha conditions.
 
 ## 16. Three cumulative checkpoint contracts
 

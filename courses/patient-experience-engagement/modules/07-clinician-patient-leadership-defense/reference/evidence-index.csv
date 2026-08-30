@@ -1,0 +1,19 @@
+claim_id,claim,evidence_path,evidence_type,owner,status
+E01,Checkpoint 01 identity and package are accepted,evidence/provenance/checkpoint1-release.json,accepted release,APP-2 faculty owner,accepted
+E02,Checkpoint 02 identity and package are accepted,evidence/provenance/checkpoint2-release.json,accepted release,APP-2 faculty owner,accepted
+E03,Measurement rights scoring and reporting limits are retained,evidence/checkpoint1/candidate/module-02/measurement-contract.json,accepted checkpoint evidence,measurement lead,accepted
+E04,Response frame missingness weights and residual limits are retained,evidence/checkpoint1/candidate/module-03/weighting-decision.md,accepted checkpoint evidence,survey-methods lead,accepted
+E05,Target contains 1255 public-derived records,evidence/checkpoint1/candidate/module-03/outputs/source-profile.csv,accepted checkpoint evidence,data steward,accepted
+E06,Linked evidence contains 28455 target events,evidence/checkpoint2/candidate/module-04/outputs/linkage-reconciliation.csv,accepted checkpoint evidence,health-services data lead,accepted
+E07,Portal preference is not available in the source,evidence/checkpoint2/candidate/module-04/digital-engagement-interpretation.md,accepted checkpoint evidence,health-services data lead,accepted
+E08,Generated comments are not patient testimony,evidence/checkpoint2/candidate/module-05/equity-patient-voice-memo.md,accepted checkpoint evidence,qualitative-methods lead,accepted
+E09,Comment benchmark agreement and kappa are retained,evidence/checkpoint2/candidate/module-05/outputs/agreement-summary.csv,accepted checkpoint evidence,qualitative-methods lead,accepted
+E10,Supported groups and contrasts remain separate from causal claims,evidence/checkpoint2/candidate/module-05/outputs/group-support.csv,accepted checkpoint evidence,equity reviewer,accepted
+E11,Partnership record is simulated with zero actual statements,evidence/checkpoint2/candidate/module-06/partner-contract.csv,accepted checkpoint evidence,patient co-lead,pending direct review
+E12,Transparent benchmark remains because ML improvement is below threshold,evidence/checkpoint2/candidate/module-06/outputs/model-performance.csv,accepted checkpoint evidence,model reviewer,accepted
+E13,Recommendation is revise before testing,leadership-recommendation.md,leadership synthesis,clinical owner and patient co-lead,pending shared review
+E14,Universal offer and no targeting are required,bounded-test-plan.md,proposed protocol,clinical owner and patient co-lead,pending authorization
+E15,Fourteen prospective measures define monitoring,measures-monitoring.csv,proposed monitoring,measurement lead and patient co-lead,pending authorization
+E16,Fourteen rules define stop escalation and restart,stop-escalation-rules.csv,proposed control,governance and patient co-lead,pending authorization
+E17,Patients receive changes reasons owners and open questions,feedback-accountability.md,proposed accountability,accountability owner and patient co-lead,pending direct review
+E18,Patient-facing wording states the evidence and authorization limits,patient-facing-summary.md,proposed communication,patient co-lead,pending direct review

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app2-07",
+    "version": "0.1.0",
+    "commons_release": "0.63.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "decision": "What should the service and patient advisory group do next, who owns it, how will patients hear what happened, and when must the proposal stop or change?",
+  "clinician_of_record": {
+    "name": "Joe Joseph, MD, SFHM",
+    "role": "clinician leadership instructor",
+    "current_employer_claim": "none",
+    "pre_alpha_confirmation": "required"
+  },
+  "patient_partner_co_lead": {
+    "status": "pending before alpha",
+    "actual_statements_in_reference": 0,
+    "compensation_and_terms": "direct agreement required",
+    "shared_authority": "required"
+  },
+  "accepted_inputs": {
+    "checkpoint1": {
+      "id": "oclc-app2-cp01",
+      "version": "0.1.0",
+      "commons_release": "0.58.0",
+      "assembled_files": 149,
+      "candidate_manifest_sha256": "5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903",
+      "release_sha256": "44f189a6225a1ed72fee70fa7366cc6dfd2ab5952c1ddcd8304fff5ea89a0137"
+    },
+    "checkpoint2": {
+      "id": "oclc-app2-cp02",
+      "version": "0.1.0",
+      "commons_release": "0.62.0",
+      "assembled_files": 174,
+      "candidate_manifest_sha256": "67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1",
+      "release_sha256": "7684d17f2441883cdcd87521e5376b133bf7d85dc0513f655770c18f19edb60c"
+    }
+  },
+  "allowed_recommendations": [
+    "run bounded prospective measurement and improvement test",
+    "revise before testing",
+    "refer",
+    "stop"
+  ],
+  "reference_recommendation": "revise before testing",
+  "reference_package_status": "accept with conditions",
+  "score": {
+    "maximum": 35.0,
+    "minimum_to_pass": 28.0,
+    "criteria": {"M01": 7.0, "P01": 8.0, "L01": 8.0, "A01": 7.0, "H01": 5.0}
+  },
+  "required_gates": 26,
+  "defense_questions": 14,
+  "required_measures": 14,
+  "measure_families": ["implementation", "process", "response", "outcome", "access", "balancing", "accountability", "safety"],
+  "prohibited": [
+    "patient contact or fielding",
+    "official HCAHPS reporting",
+    "fabricated patient voice",
+    "patient or group targeting",
+    "clinical implementation",
+    "model deployment",
+    "causal efficacy fairness or benefit claim",
+    "hospital clinician group or community ranking"
+  ]
+}

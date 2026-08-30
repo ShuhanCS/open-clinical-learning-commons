@@ -1,0 +1,9 @@
+condition_id,condition,owner,due_point,evidence,verifier,status,escalation_trigger
+COND-01,Confirm Joe Joseph participation role schedule format recording and final wording,APP-2 faculty owner,before alpha,clinician-profile.md,program owner,open,no confirmed clinician leadership
+COND-02,Name compensate prepare and obtain direct review from a patient or caregiver co-lead,APP-2 faculty owner,before alpha,patient-partner-decision-record.md,patient partnership lead,open,no direct co-lead authority
+COND-03,Name local clinical operations accountability and safety owners and establish workflow capacity,clinical decision owner,before any test,workflow-feasibility.md,program and patient co-lead,open,no safe feasible local workflow
+COND-04,Complete measurement survey data qualitative equity and model reviews,measurement lead,before alpha,reviewer-record.md,APP-2 faculty owner,open,no accepted multidisciplinary review
+COND-05,Test requested language disability format interpreter proxy and non-digital routes,access and language owner,before any test,accessibility-language-review.md,patient co-lead,open,requested route unavailable
+COND-06,Approve privacy consent contact data governance and official-reporting boundaries,privacy and governance lead,before any test,bounded-test-plan.md,governance authority,open,no governed prospective contract
+COND-07,Complete clean human reproduction and responsible-agent review,independent reproducer,before alpha,reproducibility-check.md,APP-2 faculty owner,open,no independent reproducibility evidence
+COND-08,Publish official course section and complete live or equivalent 14-question defense,APP-2 faculty owner,final checkpoint,leadership-defense.md,clinician and patient co-lead,open,no accepted final defense

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app2-07",
+    "title": "Clinician and patient leadership, accountability, and defense",
+    "version": "0.1.0",
+    "commons_release": "0.63.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": "final clinician and patient leadership block",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "clinician_of_record": {
+    "name": "Joe Joseph, MD, SFHM",
+    "identity_status": "confirmed from dated Sound Physicians public sources",
+    "current_employer_claim": "none",
+    "participation_confirmation": "required before alpha"
+  },
+  "patient_partner_co_lead": {
+    "status": "pending before alpha",
+    "actual_statements_in_reference": 0,
+    "compensation_and_terms": "direct agreement required",
+    "shared_authority": "required"
+  },
+  "accepted_inputs": [
+    {
+      "id": "oclc-app2-cp01",
+      "version": "0.1.0",
+      "commons_release": "0.58.0",
+      "assembled_files": 149,
+      "candidate_manifest_sha256": "5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903",
+      "release_sha256": "44f189a6225a1ed72fee70fa7366cc6dfd2ab5952c1ddcd8304fff5ea89a0137"
+    },
+    {
+      "id": "oclc-app2-cp02",
+      "version": "0.1.0",
+      "commons_release": "0.62.0",
+      "assembled_files": 174,
+      "candidate_manifest_sha256": "67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1",
+      "release_sha256": "7684d17f2441883cdcd87521e5376b133bf7d85dc0513f655770c18f19edb60c"
+    }
+  ],
+  "reference_decision": {
+    "candidate_score": "35.00 of 35.00",
+    "gates": "26 of 26 pass or pass with an allowed condition",
+    "defense": "adequate for curriculum construction",
+    "candidate_status": "accept with conditions",
+    "organizational_recommendation": "revise before testing",
+    "final_checkpoint": "permitted for curriculum construction",
+    "patient_contact_and_fielding": "prohibited",
+    "official_hcahps_reporting": "prohibited",
+    "clinical_implementation": "prohibited",
+    "patient_or_group_targeting": "prohibited",
+    "model_deployment": "prohibited"
+  },
+  "reference_facts": {
+    "target_people": 1255,
+    "synthetic_respondents": 782,
+    "synthetic_nonrespondents": 473,
+    "linked_events": 28455,
+    "synthetic_comments": 420,
+    "actual_patient_or_caregiver_statements": 0,
+    "supported_group_estimates": "35 of 52",
+    "supported_group_contrasts": "19 of 36",
+    "prospective_measures": 14,
+    "stop_rules": 14,
+    "transparent_composite_absolute_bias_pp": "2.48289986",
+    "bounded_rf_composite_absolute_bias_pp": "2.39922466",
+    "improvement_pp": "0.08367520",
+    "decision_threshold_pp": "0.50",
+    "ml_changes_response_adjustment_decision": "no"
+  },
+  "package": {
+    "immutable_controls": 9,
+    "accepted_evidence_files": 325,
+    "immutable_manifest_rows": 334,
+    "leadership_records": 23,
+    "candidate_files": 358,
+    "manifest_bytes": 64149,
+    "manifest_sha256": "53bd306692145df85d1b2a709615000f80829099a916659c6a8cfd3bd994697f"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 1847,
+    "starter_checks": 1794,
+    "copied_validator_check": "pass",
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_evidence_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_recommendation_rejection": "pass",
+    "false_partnership_claim_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor, curriculum direction, clinician designation, patient-partner requirement, and construction disposition"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, leadership package, deterministic assembly, validation, and release record"
+    }
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, format, recording permission, and final biography wording before alpha.",
+    "A named and compensated patient or caregiver co-lead must agree preparation, access, authority, attribution, recording, withdrawal, and review terms before alpha.",
+    "Named clinical, measurement, survey, data, qualitative, equity, access, privacy, governance, operations, model, responsible-AI, and independent reviews remain pending.",
+    "Independent human clean reproduction and a live or equivalent 14-question defense remain pending.",
+    "Public-derived, synthetic, and simulated teaching evidence cannot establish local feasibility, patient preference, causal effect, equity, safety, acceptability, or expected benefit.",
+    "The package does not authorize patient contact, fielding, official HCAHPS reporting, patient or group targeting, clinical implementation, or model deployment."
+  ]
+}

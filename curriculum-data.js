@@ -300,9 +300,9 @@
         },
         {
           "week": 7,
-          "title": "Recommendation, communication, and accountability",
-          "outcome": "Defend a patient-experience and engagement recommendation.",
-          "topics": "Evidence synthesis, patient-facing reporting, leadership communication, evaluation measures, responsible claims, accountability.",
+          "title": "Clinician and patient leadership, accountability, and defense",
+          "outcome": "Defend a shared recommendation, ownership plan, patient feedback route, and stop decision.",
+          "topics": "Evidence synthesis, shared clinician and patient authority, patient-facing reporting, monitoring, feedback, stop and restart rules, responsible claims.",
           "submission": "Final patient-experience and engagement package.",
           "hours": 16
         }

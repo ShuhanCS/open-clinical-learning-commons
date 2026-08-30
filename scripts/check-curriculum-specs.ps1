@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.62.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.63.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1751,7 +1751,9 @@ if (
     $app2Content -match '(?im)[A-Z]:\\Users\\' -or
     $app2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app2Content -notmatch 'Current Commons release: 0\.62\.0' -or
+    $app2Content -notmatch 'Current Commons release: 0\.63\.0' -or
+    $app2PackageContent -notmatch 'Current Commons release: 0\.63\.0' -or
+    $app2PackageContent -notmatch 'Modules 01 through 07' -or
     $app2Content -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '25,906' -or
@@ -2607,6 +2609,109 @@ if (
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 02 builder self-check failed.' }
 & python (Join-Path $app2Checkpoint02Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 02 validator self-check failed.' }
+
+$app2Module07Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\modules\07-clinician-patient-leadership-defense-spec.md'
+$app2Module07Root = Join-Path $repo 'courses\patient-experience-engagement\modules\07-clinician-patient-leadership-defense'
+$app2Module07Files = @(
+    '.gitattributes', 'VERSION', 'assessment.md', 'assemble_candidate.py', 'clinician-profile.md',
+    'instructor-notes.md', 'leadership-contract.json', 'leadership-session-plan.md',
+    'patient-partner-role.md', 'README.md', 'release.json', 'validate_candidate.py',
+    'reference\README.md', 'reference\evidence-synthesis.md', 'reference\patient-facing-summary.md',
+    'reference\leadership-recommendation.md', 'reference\patient-partner-decision-record.md',
+    'reference\stakeholder-roles.csv', 'reference\workflow-feasibility.md',
+    'reference\bounded-test-plan.md', 'reference\measures-monitoring.csv',
+    'reference\feedback-accountability.md', 'reference\stop-escalation-rules.csv',
+    'reference\leadership-reflection.md', 'reference\technical-appendix.md',
+    'reference\evidence-index.csv', 'reference\accessibility-language-review.md',
+    'reference\reproducibility-check.md', 'reference\ai-use.md', 'reference\component-score.csv',
+    'reference\gate-results.csv', 'reference\conditions-register.csv',
+    'reference\leadership-defense.md', 'reference\reviewer-record.md',
+    'reference\progression-decision.md',
+    'template\README.md', 'template\evidence-synthesis.md', 'template\patient-facing-summary.md',
+    'template\leadership-recommendation.md', 'template\patient-partner-decision-record.md',
+    'template\stakeholder-roles.csv', 'template\workflow-feasibility.md',
+    'template\bounded-test-plan.md', 'template\measures-monitoring.csv',
+    'template\feedback-accountability.md', 'template\stop-escalation-rules.csv',
+    'template\leadership-reflection.md', 'template\technical-appendix.md',
+    'template\evidence-index.csv', 'template\accessibility-language-review.md',
+    'template\reproducibility-check.md', 'template\ai-use.md', 'template\component-score.csv',
+    'template\gate-results.csv', 'template\conditions-register.csv',
+    'template\leadership-defense.md', 'template\reviewer-record.md',
+    'template\progression-decision.md'
+)
+$app2Module07Missing = @()
+if (-not (Test-Path -LiteralPath $app2Module07Spec)) { $app2Module07Missing += 'specification' }
+foreach ($relative in $app2Module07Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Module07Root $relative))) {
+        $app2Module07Missing += $relative
+    }
+}
+if ($app2Module07Missing.Count -gt 0) {
+    throw "APP-2 Module 07 is missing its specification or package files: $($app2Module07Missing -join ', ')."
+}
+$app2Module07Content = Get-Content -Raw -LiteralPath $app2Module07Spec
+$app2Module07Sections = [regex]::Matches($app2Module07Content, '(?m)^## \d+\.').Count
+$app2Module07Release = Get-Content -Raw -LiteralPath (Join-Path $app2Module07Root 'release.json') | ConvertFrom-Json
+$app2Module07Scores = Import-Csv -LiteralPath (Join-Path $app2Module07Root 'reference\component-score.csv')
+$app2Module07Gates = Import-Csv -LiteralPath (Join-Path $app2Module07Root 'reference\gate-results.csv')
+$app2Module07Measures = Import-Csv -LiteralPath (Join-Path $app2Module07Root 'reference\measures-monitoring.csv')
+$app2Module07Stops = Import-Csv -LiteralPath (Join-Path $app2Module07Root 'reference\stop-escalation-rules.csv')
+if (
+    $app2Module07Sections -ne 22 -or
+    $app2Module07Content -match '[—–]' -or
+    $app2Module07Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Module07Content -notmatch '64,149 bytes' -or
+    $app2Module07Content -notmatch '53bd306692145df85d1b2a709615000f80829099a916659c6a8cfd3bd994697f' -or
+    $app2Module07Content -notmatch '1,847 checks' -or
+    $app2Module07Content -notmatch '1,794 checks' -or
+    $app2Module07Release.module.id -ne 'oclc-app2-07' -or
+    $app2Module07Release.module.version -ne '0.1.0' -or
+    $app2Module07Release.module.commons_release -ne '0.63.0' -or
+    $app2Module07Release.module.hours -ne 16 -or
+    $app2Module07Release.module.course_points -ne 35 -or
+    $app2Module07Release.clinician_of_record.name -ne 'Joe Joseph, MD, SFHM' -or
+    $app2Module07Release.clinician_of_record.current_employer_claim -ne 'none' -or
+    $app2Module07Release.patient_partner_co_lead.status -ne 'pending before alpha' -or
+    $app2Module07Release.patient_partner_co_lead.actual_statements_in_reference -ne 0 -or
+    $app2Module07Release.accepted_inputs.Count -ne 2 -or
+    ($app2Module07Release.accepted_inputs | Measure-Object -Property assembled_files -Sum).Sum -ne 323 -or
+    $app2Module07Release.accepted_inputs[0].candidate_manifest_sha256 -ne '5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903' -or
+    $app2Module07Release.accepted_inputs[1].candidate_manifest_sha256 -ne '67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1' -or
+    $app2Module07Release.reference_decision.candidate_status -ne 'accept with conditions' -or
+    $app2Module07Release.reference_decision.organizational_recommendation -ne 'revise before testing' -or
+    $app2Module07Release.reference_decision.final_checkpoint -ne 'permitted for curriculum construction' -or
+    $app2Module07Release.reference_decision.patient_contact_and_fielding -ne 'prohibited' -or
+    $app2Module07Release.reference_decision.clinical_implementation -ne 'prohibited' -or
+    $app2Module07Release.reference_decision.model_deployment -ne 'prohibited' -or
+    $app2Module07Release.reference_facts.target_people -ne 1255 -or
+    $app2Module07Release.reference_facts.linked_events -ne 28455 -or
+    $app2Module07Release.reference_facts.synthetic_comments -ne 420 -or
+    $app2Module07Release.reference_facts.actual_patient_or_caregiver_statements -ne 0 -or
+    $app2Module07Release.reference_facts.prospective_measures -ne 14 -or
+    $app2Module07Release.reference_facts.stop_rules -ne 14 -or
+    $app2Module07Release.reference_facts.ml_changes_response_adjustment_decision -ne 'no' -or
+    $app2Module07Release.package.immutable_controls -ne 9 -or
+    $app2Module07Release.package.accepted_evidence_files -ne 325 -or
+    $app2Module07Release.package.immutable_manifest_rows -ne 334 -or
+    $app2Module07Release.package.leadership_records -ne 23 -or
+    $app2Module07Release.package.candidate_files -ne 358 -or
+    $app2Module07Release.package.manifest_bytes -ne 64149 -or
+    $app2Module07Release.package.manifest_sha256 -ne '53bd306692145df85d1b2a709615000f80829099a916659c6a8cfd3bd994697f' -or
+    $app2Module07Release.validation.complete_reference_checks -ne 1847 -or
+    $app2Module07Release.validation.starter_checks -ne 1794 -or
+    ($app2Module07Scores | Measure-Object -Property maximum -Sum).Sum -ne 35 -or
+    ($app2Module07Scores | Measure-Object -Property score -Sum).Sum -ne 35 -or
+    $app2Module07Gates.Count -ne 26 -or
+    @($app2Module07Gates | Where-Object { $_.result -eq 'fail' }).Count -ne 0 -or
+    $app2Module07Measures.Count -ne 14 -or
+    $app2Module07Stops.Count -ne 14
+) {
+    throw 'APP-2 Module 07 release metadata, specification, clinician and patient roles, accepted evidence, score, gates, monitoring, validation, or manifest facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Module07Root 'assemble_candidate.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 07 assembler self-check failed.' }
+& python (Join-Path $app2Module07Root 'validate_candidate.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 07 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -3911,3 +4016,4 @@ Write-Output "APP-2 Module 05 passed: $app2Module05Sections contract sections an
 Write-Output "APP-2 Module 06 passed: $app2Module06Sections contract sections and $($app2Module06Files.Count) required files."
 Write-Output "APP-2 Checkpoint 01 passed: $app2Checkpoint01Sections contract sections and $($app2Checkpoint01Files.Count) required files."
 Write-Output "APP-2 Checkpoint 02 passed: $app2Checkpoint02Sections contract sections and $($app2Checkpoint02Files.Count) required files."
+Write-Output "APP-2 Module 07 passed: $app2Module07Sections contract sections and $($app2Module07Files.Count) required files."

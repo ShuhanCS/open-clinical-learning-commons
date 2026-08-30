@@ -1,0 +1,13 @@
+role_id,role,accountable_for,responsible_for,consulted_on,informed_about,decision_right,status
+S01,Clinical decision owner,clinical safety and organizational recommendation,final clinical review,workflow feasibility and stop rules,all review results,accept revise refer stop or request bounded protocol,pending named owner
+S02,Patient or caregiver co-lead,patient-facing meaning burden access feedback and partnership approval,direct co-lead review,language measures disagreements and return of results,all team decisions,change narrow reject or withhold partnership approval,pending before alpha
+S03,APP-2 faculty owner,curriculum outcomes score and progression,instruction and assessment,all module records,program status,accept or condition curriculum candidate,role defined
+S04,Patient-experience measurement lead,measure fit scoring and reporting boundary,measurement review,local questions and missingness,leadership decision,approve measurement contract,pending named review
+S05,Survey-methods lead,frame response missingness weighting and representation,response protocol review,mode contact and analysis rules,leadership decision,approve survey design,pending named review
+S06,Health-services data lead,source linkage denominators and service-use meaning,data review,prospective linkage plan,leadership decision,approve data contract,pending named review
+S07,Qualitative-methods lead,comment codebook human review and quote boundary,qualitative review,partner questions and examples,leadership decision,approve qualitative use,pending named review
+S08,Access and language lead,language format disability proxy interpreter and channel routes,access readiness review,patient-facing materials and workflow,access failures,stop unavailable access route,pending named owner
+S09,Improvement and operations lead,workflow capacity fidelity and run-in,feasibility review,measures staffing and burden,review results,pause or revise workflow,pending named owner
+S10,Privacy and governance lead,consent contact privacy source terms and use boundary,governance review,protocol data and agent use,incidents and changes,approve or stop governed use,pending named owner
+S11,Model reviewer,transparent and ML comparison integrity,independent model review,features split diagnostics and non-adoption,leadership decision,reject unsupported model use,pending named review
+S12,Independent reproducer,clean package reproduction,run accepted builders and validators,source and environment records,reproduction status,accept or reject reproducibility evidence,pending before alpha

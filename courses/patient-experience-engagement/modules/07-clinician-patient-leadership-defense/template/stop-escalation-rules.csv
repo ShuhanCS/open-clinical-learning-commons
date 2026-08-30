@@ -1,0 +1,2 @@
+rule_id,trigger,immediate_action,escalation_owner,restart_evidence,restart_authority
+REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
