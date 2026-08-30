@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.21.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 10 are runnable release candidates, and the Week 3 visualization judgment checkpoint has an exact folder contract, reproducible assembler, learner templates, and validator.
+- Current version: `0.22.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 11 are runnable release candidates, and the Week 3 visualization judgment checkpoint has an exact folder contract, reproducible assembler, learner templates, and validator.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -56,7 +56,7 @@ The first standalone course build is DA-730: Clinical Data Visualization and Dec
 
 The course teaches learners to choose, build, critique, and explain healthcare visualizations based on the decision, the data structure, the audience, and what the display leaves out. Its concept modules are independent of software and clinical domain. R and ggplot2 provide the first lab environment.
 
-Modules 01 through 10 are complete sequential rebuilds. Learners map real CMS HCAHPS variables to marks and channels, test how accurately they can read different encodings, select a chart, table, coordinated pair, or no display, audit whether a summary hides a consequential distribution, distinguish modeled counts from adjusted rates, decide how much confidence to place in a ranked estimate, make the result work in color, grayscale, print, text, and an exact table, distinguish a weekly pattern from smoothing or reporting change, compare many groups without changing scale, order, or reference meaning, and then decide whether geography adds useful information. Module 10 combines 100 county health estimates, 1,546 primary-care HPSA source records, and 7,121 generalized boundary points in a map-versus-non-map access-planning case. All ten require recorded human reviews before alpha release.
+Modules 01 through 11 are complete sequential rebuilds. Learners map real CMS HCAHPS variables to marks and channels, test how accurately they can read different encodings, select a chart, table, coordinated pair, or no display, audit whether a summary hides a consequential distribution, distinguish modeled counts from adjusted rates, decide how much confidence to place in a ranked estimate, make the result work in color, grayscale, print, text, and an exact table, distinguish a weekly pattern from smoothing or reporting change, compare many groups without changing scale, order, or reference meaning, decide whether geography adds useful information, and define flows, transitions, composition, hierarchy, and networks without changing units or denominators. Module 11 preserves 1,171 synthetic patients and all 53,346 encounters needed for a 374-person acute-transition case. All eleven require recorded human reviews before alpha release.
 
 The public preview also includes a [chart atlas](courses/data-visualization/atlas.html#atlas) covering comparison, distribution, time, relationship, uncertainty, flow, network, composition, place, and dashboard views. Each family includes a healthcare example and matching R code. The complete runnable script is [chart_gallery.R](courses/data-visualization/chart_gallery.R).
 
@@ -108,6 +108,11 @@ The public preview also includes a [chart atlas](courses/data-visualization/atla
 - [Module 10 assessment](courses/data-visualization/modules/10-maps-geography-place/assessment.md)
 - [Module 10 instructor notes](courses/data-visualization/modules/10-maps-geography-place/instructor-notes.md)
 - [Module 10 release record](courses/data-visualization/modules/10-maps-geography-place/release.json)
+- [Module 11: Flow, networks, composition, and hierarchy](courses/data-visualization/modules/11-flow-networks-composition-hierarchy/README.md)
+- [Module 11 specification](docs/curriculum/courses/DA-730/modules/11-flow-networks-composition-hierarchy-spec.md)
+- [Module 11 assessment](courses/data-visualization/modules/11-flow-networks-composition-hierarchy/assessment.md)
+- [Module 11 instructor notes](courses/data-visualization/modules/11-flow-networks-composition-hierarchy/instructor-notes.md)
+- [Module 11 release record](courses/data-visualization/modules/11-flow-networks-composition-hierarchy/release.json)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
@@ -166,7 +171,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build DA-730 Module 11, Flow, networks, composition, and hierarchy.
+1. Build DA-730 Module 12, Dashboards and multi-view composition.
 2. Complete the named human reviews for Modules 01 through 06.
 3. Continue the sequential DA-730 build before starting the foundation course packages.
 

@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.21.0
+- Specification version: 0.22.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -302,7 +302,9 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Core sources: https://synthetichealth.github.io/synthea/ and https://clinicaltrials.gov/data-api
 - Lab: create one defined cohort flow and audit every node, edge, denominator, and dropped record.
 - Critique: repair a Sankey with changing denominators, a hairball network, and a treemap that confuses area with rate.
-- Submission: `module-11/structure-definition.md`, `module-11/analysis.R`, `module-11/figure.png`, `module-11/source-record.yml`, `module-11/alt-text.md`, and `module-11/decision-note.md`.
+- Submission: `module-11/structure-definition.md`, `module-11/analysis.R`, `module-11/cohort-flow.png`, `module-11/transition-matrix.png`, `module-11/composition.png`, `module-11/path-table.csv`, `module-11/source-record.yml`, `module-11/alt-text.md`, `module-11/decision-note.md`, and `module-11/ai-use.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/11-flow-networks-composition-hierarchy-spec.md`.
+- Runnable package: `courses/data-visualization/modules/11-flow-networks-composition-hierarchy/`.
 - Handoff: Module 12 decides when several views belong together in a monitoring display.
 
 ## Module 12 brief: Dashboards and multi-view composition
@@ -583,7 +585,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01 through 10 are current runnable candidates. Their human reviews remain pending.
+Modules 01 through 11 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 
@@ -620,6 +622,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Module 08 has a complete time-and-process specification, pinned CDC NHSN releases, runnable lab, critique set, assessment, instructor key, and release record.
 - [x] Module 09 has a complete comparison specification, pinned five-measure CDC PLACES releases, runnable lab, critique set, assessment, instructor key, and release record.
 - [x] Module 10 has a complete place specification, pinned public HPSA and boundary releases, runnable map-versus-non-map lab, critique set, assessment, instructor key, and release record.
+- [x] Module 11 has a complete structure specification, pinned Synthea patient and encounter releases, a one-person-per-index cohort, conserved flow, matrix, composition lab, critique set, assessment, instructor key, and release record.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.

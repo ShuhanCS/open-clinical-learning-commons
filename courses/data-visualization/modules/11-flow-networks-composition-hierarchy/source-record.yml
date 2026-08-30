@@ -1,0 +1,62 @@
+schema_version: "1.0.0"
+record_id: "oclc-da730-11-synthea-transitions-2020"
+title: "Synthea adult acute-care transition teaching release"
+retrieved_at: "2026-08-30"
+source:
+  publisher: "The MITRE Corporation / Synthea"
+  landing_page: "https://synthea.mitre.org/downloads"
+  project_page: "https://synthetichealth.github.io/synthea/"
+  archive_url: "https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip"
+  data_dictionary: "https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary"
+  repository: "https://github.com/synthetichealth/synthea"
+  license_url: "https://github.com/synthetichealth/synthea/blob/master/LICENSE"
+  archive_bytes: 8982431
+  archive_sha256: "4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a"
+  archive_label: "April 2020 CSV sample"
+rights:
+  code_license: "Apache-2.0"
+  data_statement: "The official Synthea site describes the generated records as synthetic and free from cost, privacy, and security restrictions."
+  redistribution: "allowed with attribution"
+  privacy: "Synthetic records, not real patients."
+  local_minimization: "The Commons selection omits synthetic names, addresses, SSNs, driver identifiers, passports, providers, organizations, payers, and costs because they are not needed for this lesson."
+source_tables:
+  patients:
+    archive_path: "csv/patients.csv"
+    source_rows: 1171
+    released_rows: 1171
+    released_columns: 6
+    released_path: "data/synthea_patients_transition_source_2020.csv"
+    released_sha256: "a208fe4ff6fc9dc5cee4a201043a2f059943b8c058fdb191e19b0f9ffbb821bf"
+  encounters:
+    archive_path: "csv/encounters.csv"
+    source_rows: 53346
+    released_rows: 53346
+    released_columns: 9
+    released_path: "data/synthea_encounters_transition_source_2020.csv"
+    released_sha256: "00298bf68f89dee9734cf133c516ad6b7efe95c8cd15a9458e7fb09c1dca56ce"
+derived_tables:
+  cohort:
+    path: "data/synthea_acute_transition_cohort_2020.csv"
+    rows: 374
+    columns: 25
+    sha256: "b3f1cf69a54fd2f38dfe6debfd009ebb1c7d2b1ef7b42d7b35c989a9f068f3ca"
+  edges:
+    path: "data/synthea_transition_edges_2020.csv"
+    rows: 15
+    columns: 9
+    sha256: "13ee29b6fb6e16235cb3b9509d72f95a6b478024a7322d011bb04a4e8064fa8d"
+cohort_contract:
+  unit: "one adult synthetic patient"
+  index_event: "first emergency or inpatient encounter per patient from 2015-01-01 through 2019-12-31"
+  next_state: "first encounter starting after index stop and within 30 days, grouped into scheduled care, urgent care, acute return, or no encounter recorded"
+  endpoint: "death within 90 days; otherwise any acute return within 90 days; otherwise no acute return within 90 days"
+  exclusions: "patients younger than 18 at the index event and patients without a qualifying index event"
+interpretation_limits:
+  - "Synthea is simulated data and cannot estimate real utilization, follow-up, mortality, access, or quality."
+  - "No encounter recorded means no qualifying row appears in this extract during the defined window."
+  - "The teaching priority screen is not a validated quality threshold."
+  - "The archive is an older sample and should not be treated as a current population snapshot."
+alternate_source:
+  name: "ClinicalTrials.gov API"
+  url: "https://clinicaltrials.gov/data-api/about-api"
+  role: "Optional sponsor-condition-site network extension; not required by the core lab and not redistributed in this release."

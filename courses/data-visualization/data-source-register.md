@@ -1,7 +1,7 @@
 # Clinical data visualization source register
 
-- Register version: `0.10.0`
-- Retrieved or verified: 2026-08-29
+- Register version: `0.11.0`
+- Retrieved or verified: 2026-08-30
 - Scope: public course development and assignments
 
 ## Required source record
@@ -50,7 +50,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 08. Time and process variation | CDC NHSN weekly hospital respiratory data by jurisdiction | Released 6,208-row jurisdiction table and 94-week Massachusetts teaching sequence with capacity, occupancy, respiratory admissions, reporting coverage, and source-season availability. |
 | 09. Comparison and small multiples | CDC PLACES county data 2024 release | Released five-measure national county table and a 100-county North Carolina comparison table with paired crude and age-adjusted estimates, uncertainty, national references, and transparent profile order. |
 | 10. Maps, geography, and place | CDC PLACES, direct HRSA primary-care HPSAs, and Census generalized county boundaries | Released 100-county place-access table, 1,546-row HPSA source selection, and 7,121-point boundary release for a map-versus-non-map decision. |
-| 11. Flow, networks, composition, and hierarchy | Synthea, ClinicalTrials.gov, or openFDA | Planned patient transitions, research relationships, or reporting hierarchy with explicit grain. |
+| 11. Flow, networks, composition, and hierarchy | Synthea; ClinicalTrials.gov as an optional extension | Released all 1,171 patient rows and all 53,346 encounter rows with selected fields from the pinned sample, plus a 374-person adult acute-transition cohort and 15-edge conservation table. |
 | 12. Dashboards and multi-view composition | CMS hospitals | Planned small hospital monitoring set for one named audience and decision. |
 | 13. Audience, annotation, narrative, and capstone | One approved source above | Versioned learner extract with full provenance record. |
 
@@ -232,3 +232,20 @@ The values are model-based small-area estimates, not observed county diagnoses o
 The reference case uses the highest current primary-care HPSA component score touching each county. That value is not a county workforce rate. Score 20 and the twelve-county review limit are declared teaching rules, not official thresholds or validated allocation rules. The map supports regional discussion; the ordered comparison and exact table support rank, uncertainty, and value review.
 
 The 2024-2025 AHRF archives were inspected but are not redistributed. The included technical documentation contains more restrictive reuse language than the catalog page and identifies copyrighted source fields. The module uses the direct public HRSA HPSA data mart instead.
+
+### DA-730 flow-networks-composition-hierarchy release
+
+- Module: DA-730 Module 11, Flow, networks, composition, and hierarchy
+- Source: Synthea April 2020 CSV sample
+- Downloads page: https://synthea.mitre.org/downloads
+- Archive URL: https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip
+- Data dictionary: https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary
+- Archive: 8,982,431 bytes, SHA-256 `4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a`
+- Patient source selection: 1,171 rows and 6 fields, SHA-256 `a208fe4ff6fc9dc5cee4a201043a2f059943b8c058fdb191e19b0f9ffbb821bf`
+- Encounter source selection: 53,346 rows and 9 fields, SHA-256 `00298bf68f89dee9734cf133c516ad6b7efe95c8cd15a9458e7fb09c1dca56ce`
+- Teaching cohort: 374 adult synthetic patients and 25 fields, SHA-256 `b3f1cf69a54fd2f38dfe6debfd009ebb1c7d2b1ef7b42d7b35c989a9f068f3ca`
+- Edge audit: 15 rows and 9 fields, SHA-256 `13ee29b6fb6e16235cb3b9509d72f95a6b478024a7322d011bb04a4e8064fa8d`
+- Source record: `courses/data-visualization/modules/11-flow-networks-composition-hierarchy/source-record.yml`
+- Validation: 64 of 64 checks pass
+
+The data are simulated and cannot estimate real care quality, utilization, access, or mortality. `No encounter recorded` means no qualifying encounter appears in the selected extract and interval. The reference path screen selects a definition-audit target; it is not a validated clinical threshold.

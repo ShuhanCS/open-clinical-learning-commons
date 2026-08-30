@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-11",
+    "title": "Flow, networks, composition, and hierarchy",
+    "version": "0.1.0",
+    "commons_release": "0.22.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "patients": {
+      "path": "data/synthea_patients_transition_source_2020.csv",
+      "row_count": 1171,
+      "column_count": 6,
+      "sha256": "a208fe4ff6fc9dc5cee4a201043a2f059943b8c058fdb191e19b0f9ffbb821bf"
+    },
+    "encounters": {
+      "path": "data/synthea_encounters_transition_source_2020.csv",
+      "row_count": 53346,
+      "column_count": 9,
+      "sha256": "00298bf68f89dee9734cf133c516ad6b7efe95c8cd15a9458e7fb09c1dca56ce"
+    },
+    "cohort": {
+      "path": "data/synthea_acute_transition_cohort_2020.csv",
+      "row_count": 374,
+      "column_count": 25,
+      "sha256": "b3f1cf69a54fd2f38dfe6debfd009ebb1c7d2b1ef7b42d7b35c989a9f068f3ca"
+    },
+    "edges": {
+      "path": "data/synthea_transition_edges_2020.csv",
+      "row_count": 15,
+      "column_count": 9,
+      "sha256": "13ee29b6fb6e16235cb3b9509d72f95a6b478024a7322d011bb04a4e8064fa8d"
+    },
+    "patient_level": true,
+    "synthetic": true,
+    "real_patient_data": false
+  },
+  "source": {
+    "publisher": "The MITRE Corporation / Synthea",
+    "landing_page": "https://synthea.mitre.org/downloads",
+    "archive_url": "https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip",
+    "retrieved_at": "2026-08-30",
+    "archive_bytes": 8982431,
+    "archive_sha256": "4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a",
+    "source_record": "source-record.yml"
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {"ggplot2": "4.0.3"},
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {"spdx": "CC-BY-4.0", "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"},
+    "code": {"spdx": "MIT", "url": "https://opensource.org/license/mit"},
+    "source": {"spdx": "Apache-2.0", "url": "https://github.com/synthetichealth/synthea/blob/master/LICENSE"}
+  },
+  "curriculum_source": {
+    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "author": "Ali Goff",
+    "date": "2026-08-15",
+    "path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/11-flow-networks-composition-hierarchy-spec.md"
+  },
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "The validator passed 64 checks. Three reference figures, one seven-row decision table, one text alternative, and three critique figures rendered successfully and were visually inspected."
+    },
+    "required_human_roles": [
+      {"role": "transitions-of-care relevance", "reviewer": null, "status": "pending", "date": null},
+      {"role": "Synthea source fidelity", "reviewer": null, "status": "pending", "date": null},
+      {"role": "flow and network visualization", "reviewer": null, "status": "pending", "date": null},
+      {"role": "equity and synthetic-data language", "reviewer": null, "status": "pending", "date": null},
+      {"role": "accessibility", "reviewer": null, "status": "pending", "date": null},
+      {"role": "independent teachability", "reviewer": null, "status": "pending", "date": null}
+    ]
+  },
+  "validation": {
+    "data_checks": "64 of 64 pass",
+    "lab_execution": "pass: three PNGs, one CSV, and one Markdown text alternative",
+    "critique_execution": "pass: three deliberately flawed PNGs",
+    "measured_results": {
+      "source_patients": 1171,
+      "source_encounters": 53346,
+      "cohort_patients": 374,
+      "emergency_index": 314,
+      "inpatient_index": 60,
+      "no_encounter_recorded_30d": 263,
+      "scheduled_care_30d": 92,
+      "urgent_care_30d": 4,
+      "acute_return_as_next_state_30d": 15,
+      "acute_return_90d": 36,
+      "death_90d": 8,
+      "overall_acute_return_pct": 9.6,
+      "priority_path": "Inpatient -> No encounter recorded",
+      "priority_path_patients": 38,
+      "priority_path_acute_return_pct": 15.8
+    }
+  },
+  "known_issues": [
+    "Named clinical, source, visualization, equity, accessibility, and independent-instructor reviews are pending.",
+    "Synthea records are simulated and cannot estimate real care quality, access, utilization, or mortality.",
+    "No encounter recorded is an extract state, not evidence of missing care.",
+    "The teaching priority screen of at least 20 patients and a rate above the cohort rate is not validated.",
+    "The April 2020 sample is retained for reproducibility rather than recency.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

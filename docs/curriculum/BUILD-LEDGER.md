@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.21.0
+- Current release: 0.22.0
 - Last updated: 2026-08-30
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 10, Maps, geography, and place
-- Next unit: DA-730 Module 11, Flow, networks, composition, and hierarchy
+- Last completed unit: DA-730 Module 11, Flow, networks, composition, and hierarchy
+- Next unit: DA-730 Module 12, Dashboards and multi-view composition
 
 ## Confirmed decisions
 
@@ -75,6 +75,13 @@
 - The selected HRSA source contains 740 current designated component rows and 210 unique current HPSA identifiers touching 98 counties. The teaching table does not call the maximum component score a county workforce rate.
 - Seventy-three counties are above the 17.0 percent national health point, 23 meet the declared score-20 HPSA screen, and 19 meet both. The reference twelve are Robeson, Scotland, Hertford, Halifax, Warren, Greene, Washington, Wilson, Anson, Lenoir, Edgecombe, and Swain.
 - The AHRF 2024-2025 archives were inspected but not redistributed. Included documentation restricts reproduction and identifies copyrighted source fields, so Module 10 uses the directly public HRSA HPSA data mart.
+- DA-730 Module 11 preserves selected fields from all 1,171 synthetic patients and all 53,346 encounters in the pinned Synthea April 2020 CSV sample.
+- Module 11 patient SHA-256: `a208fe4ff6fc9dc5cee4a201043a2f059943b8c058fdb191e19b0f9ffbb821bf`.
+- Module 11 encounter SHA-256: `00298bf68f89dee9734cf133c516ad6b7efe95c8cd15a9458e7fb09c1dca56ce`.
+- Its one-person-per-index teaching cohort contains 374 adults and has SHA-256 `b3f1cf69a54fd2f38dfe6debfd009ebb1c7d2b1ef7b42d7b35c989a9f068f3ca`.
+- Module 11 passes 64 data checks. Its lab creates a conserved alluvial flow, explicit-denominator matrix, endpoint composition, seven-row exact table, and text alternative; its critique creates three deliberately flawed structural displays.
+- The reference screen selects `Inpatient -> No encounter recorded`: 38 synthetic patients and a 15.8 percent 90-day acute-return percentage versus 9.6 percent in the full cohort. This is a definition-audit screen, not a quality threshold.
+- Synthetic names, addresses, SSNs, driver identifiers, passports, provider, organization, payer, and cost fields were not redistributed because the teaching decision does not need them.
 
 ## Pending confirmation
 
@@ -83,9 +90,9 @@
 
 ## Next resume instructions
 
-1. Read the DA-730 Module 11 brief and the Module 10 structure handoff.
-2. Select and pin one open source that can support a defined flow, network, hierarchy, or composition case without patient privacy risk.
-3. Prefer the existing Synthea option unless the ClinicalTrials.gov relationship case produces a clearer decision and release contract.
-4. Write `docs/curriculum/courses/DA-730/modules/11-flow-networks-composition-hierarchy-spec.md` using the 21-section contract.
-5. Define every node, edge, state, denominator, and dropped record before building the lab and critique set.
-6. Verify and release Module 11, then continue toward the week-6 checkpoint.
+1. Read the DA-730 Module 12 brief and the Module 11 dashboard handoff.
+2. Select and pin one small CMS hospital monitoring source with explicit measure definitions, reporting periods, footnotes, and refresh dates.
+3. Name one clinical operations or quality audience and one exception-driven monitoring decision before choosing views.
+4. Write `docs/curriculum/courses/DA-730/modules/12-dashboards-multi-view-composition-spec.md` using the 21-section contract.
+5. Keep the dashboard to three to five coordinated views and define the action linked to every threshold.
+6. Verify and release Module 12, then assemble the week-6 checkpoint.

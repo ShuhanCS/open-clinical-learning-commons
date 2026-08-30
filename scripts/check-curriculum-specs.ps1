@@ -344,6 +344,48 @@ if (
     throw 'DA-730 Module 10 release metadata does not match the 0.1.0 public-source place contract.'
 }
 
+$module11 = Test-ModuleContract `
+    -Label 'Module 11' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\11-flow-networks-composition-hierarchy-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\11-flow-networks-composition-hierarchy') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_transition_case.py',
+        'validate_transition_case.py',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\synthea_patients_transition_source_2020.csv',
+        'data\synthea_encounters_transition_source_2020.csv',
+        'data\synthea_acute_transition_cohort_2020.csv',
+        'data\synthea_transition_edges_2020.csv'
+    )
+if (
+    $module11.Release.module.version -ne '0.1.0' -or
+    $module11.Release.module.commons_release -ne '0.22.0' -or
+    $module11.Release.data.patients.row_count -ne 1171 -or
+    $module11.Release.data.patients.column_count -ne 6 -or
+    $module11.Release.data.patients.sha256 -ne 'a208fe4ff6fc9dc5cee4a201043a2f059943b8c058fdb191e19b0f9ffbb821bf' -or
+    $module11.Release.data.encounters.row_count -ne 53346 -or
+    $module11.Release.data.encounters.column_count -ne 9 -or
+    $module11.Release.data.encounters.sha256 -ne '00298bf68f89dee9734cf133c516ad6b7efe95c8cd15a9458e7fb09c1dca56ce' -or
+    $module11.Release.data.cohort.row_count -ne 374 -or
+    $module11.Release.data.cohort.column_count -ne 25 -or
+    $module11.Release.data.cohort.sha256 -ne 'b3f1cf69a54fd2f38dfe6debfd009ebb1c7d2b1ef7b42d7b35c989a9f068f3ca' -or
+    $module11.Release.data.edges.row_count -ne 15 -or
+    $module11.Release.data.edges.column_count -ne 9 -or
+    $module11.Release.data.edges.sha256 -ne '13ee29b6fb6e16235cb3b9509d72f95a6b478024a7322d011bb04a4e8064fa8d' -or
+    $module11.Release.validation.measured_results.cohort_patients -ne 374 -or
+    $module11.Release.validation.measured_results.acute_return_90d -ne 36 -or
+    $module11.Release.validation.measured_results.priority_path_patients -ne 38
+) {
+    throw 'DA-730 Module 11 release metadata does not match the 0.1.0 synthetic transition contract.'
+}
+
 $checkpoint01Root = Join-Path $repo 'courses\data-visualization\checkpoints\01-visualization-judgment-dossier'
 $checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\checkpoints\01-visualization-judgment-dossier-spec.md'
 $checkpoint01Files = @(
@@ -390,4 +432,5 @@ Write-Output "DA-730 $($module07.Label) passed: $($module07.Sections) contract s
 Write-Output "DA-730 $($module08.Label) passed: $($module08.Sections) contract sections and $($module08.FileCount) required files."
 Write-Output "DA-730 $($module09.Label) passed: $($module09.Sections) contract sections and $($module09.FileCount) required files."
 Write-Output "DA-730 $($module10.Label) passed: $($module10.Sections) contract sections and $($module10.FileCount) required files."
+Write-Output "DA-730 $($module11.Label) passed: $($module11.Sections) contract sections and $($module11.FileCount) required files."
 Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."
