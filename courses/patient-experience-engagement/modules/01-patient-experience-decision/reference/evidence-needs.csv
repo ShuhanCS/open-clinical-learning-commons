@@ -1,0 +1,9 @@
+need_id,evidence_needed,available_in_public_hcahps,local_collection_required,patient_partner_role,decision_if_missing,owner,next_module
+E01,fit-for-purpose instrument and exact version,partial public measure wording,yes before local use,judge relevance wording and missing concepts,refer or revise instrument choice,measurement reviewer,Module 02
+E02,scoring direction validity reliability and meaningful interpretation,partial reported fields but no local scoring evidence,yes before local comparison,review whether score meaning matches lived experience,do not score or compare,measurement reviewer,Module 02
+E03,target population eligibility and sampling frame,no,yes,define who must have a chance to respond,do not interpret representation,survey methods reviewer,Module 03
+E04,response item missingness and nonresponse by prespecified groups,response rate only,yes,review which missing voices matter to the decision,do not compare group results,survey methods reviewer,Module 03
+E05,language disability proxy mode and non-digital access,no,yes,set access requirements and acceptable alternatives,stop inaccessible collection,accessibility owner,Module 03
+E06,access communication engagement and service-use linkage,no in this file,yes before local action,interpret whether linked measures explain burden or opportunity,keep conclusions descriptive,health-services data reviewer,Module 04
+E07,comment context codebook agreement and qualitative limits,no; synthetic teaching comments only,yes for any real local use,co-design codebook and check examples,do not report theme frequencies as prevalence,qualitative reviewer,Module 05
+E08,patient-partner interpretation workflow feasibility feedback and accountability,no,yes,co-own interpretation design feedback and stop rights,do not advance an improvement proposal,patient-experience council,Modules 06 and 07

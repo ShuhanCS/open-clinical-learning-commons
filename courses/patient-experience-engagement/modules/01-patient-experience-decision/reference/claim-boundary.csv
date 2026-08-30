@@ -1,0 +1,9 @@
+boundary_id,claim,disposition,reason,evidence_needed,owner
+B01,The accepted file contains 325720 rows across 4790 facilities and 68 measures.,allowed,The complete source profile reproduces these counts.,exact source fingerprint and profiler,analytics owner
+B02,CMS publicly reports hospital-level recovery-at-home experience measures.,allowed,The measure inventory contains the named discharge items.,current CMS source and data dictionary,measurement reviewer
+B03,The distribution can be used to understand reporting support and measurement structure.,conditional,Distribution summaries are descriptive context rather than hospital grades.,footnotes support rules and no ranking,measurement reviewer
+B04,One hospital provides better discharge care than another.,prohibited,Public reported values do not support an unqualified quality ranking.,case mix mode response support and local context,clinical decision owner
+B05,Individual patients received usable discharge information.,prohibited,The source contains no patient-level response rows.,patient-level fit-for-purpose collection,survey methods reviewer
+B06,Local groups or language communities are represented fairly.,prohibited,The public file lacks the local frame individual response and subgroup fields.,local denominator response missingness mode and access evidence,equity reviewer
+B07,Discharge information caused a clinical or service-use outcome.,prohibited,Hospital-level experience reporting is not a causal design.,prospective protocol comparator outcomes and analysis plan,methods reviewer
+B08,A discharge communication workflow should be implemented now.,prohibited,Module 01 only supports instrument-selection work with conditions.,local measurement partnership feasibility governance and test authorization,patient-experience council

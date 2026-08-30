@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.55.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.56.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1720,6 +1720,155 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-1 final checkpoint assembler self-check fa
 & python (Join-Path $app1Checkpoint03Root 'validate_final.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-1 final checkpoint validator self-check failed.' }
 
+$app2 = Join-Path $repo 'docs\curriculum\courses\APP-2\course-spec.md'
+$app2Source = Join-Path $repo 'docs\source\app-2-patient-experience-engagement-source-record.md'
+$app2Package = Join-Path $repo 'courses\patient-experience-engagement\README.md'
+if (-not (Test-Path -LiteralPath $app2) -or -not (Test-Path -LiteralPath $app2Source) -or -not (Test-Path -LiteralPath $app2Package)) {
+    throw 'APP-2 must include its course specification, source record, and course package README.'
+}
+$app2Content = Get-Content -Raw -LiteralPath $app2
+$app2SourceContent = Get-Content -Raw -LiteralPath $app2Source
+$app2PackageContent = Get-Content -Raw -LiteralPath $app2Package
+$app2ModuleCount = [regex]::Matches($app2Content, '(?m)^## \d+\. Module \d{2} brief:').Count
+$app2HourMatches = [regex]::Matches(
+    $app2Content,
+    '(?m)^\| \d{2} \| [^|]+ \| \d \| (?<hours>\d+(?:\.\d+)?) \|'
+)
+$app2Hours = ($app2HourMatches | ForEach-Object { [decimal]$_.Groups['hours'].Value } | Measure-Object -Sum).Sum
+$app2CheckpointCount = [regex]::Matches($app2Content, '(?m)^### (?:Checkpoint \d|Final checkpoint):').Count
+if (
+    $app2ModuleCount -ne 7 -or
+    $app2HourMatches.Count -ne 7 -or
+    $app2Hours -ne [decimal]112.5 -or
+    $app2CheckpointCount -ne 3
+) {
+    throw "APP-2 must define seven modules, seven schedule rows totaling 112.5 hours, and three checkpoints; found $app2ModuleCount modules, $($app2HourMatches.Count) rows, $app2Hours hours, and $app2CheckpointCount checkpoints."
+}
+if (
+    $app2Content -match '[—–]' -or
+    $app2SourceContent -match '[—–]' -or
+    $app2PackageContent -match '[—–]' -or
+    $app2Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Content -notmatch 'Current Commons release: 0\.56\.0' -or
+    $app2Content -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
+    $app2SourceContent -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
+    $app2SourceContent -notmatch '25,906' -or
+    $app2Content -notmatch 'b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc' -or
+    $app2Content -notmatch '56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c' -or
+    $app2Content -notmatch 'https://meps\.ahrq\.gov/data_stats/download_data_files_detail\.jsp\?cboPufNumber=HC-256' -or
+    $app2Content -notmatch 'eight-hour ML extension' -or
+    $app2Content -notmatch 'Joe Joseph, MD, SFHM' -or
+    $app2Content -notmatch 'patient/caregiver partner co-lead' -or
+    $app2Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
+    $app2SourceContent -notmatch '20%' -or
+    $app2SourceContent -notmatch '25%' -or
+    ([regex]::Matches($app2SourceContent, '20%')).Count -lt 2 -or
+    $app2SourceContent -notmatch '35%'
+) {
+    throw 'APP-2 is missing its source, version, ownership, workload, assessment, public-data, ML, leadership, or plain-ASCII contract.'
+}
+
+$app2Module01Root = Join-Path $repo 'courses\patient-experience-engagement\modules\01-patient-experience-decision'
+$app2Module01Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\modules\01-patient-experience-decision-spec.md'
+$app2Module01Files = @(
+    '.gitattributes',
+    'README.md',
+    'VERSION',
+    'assessment.md',
+    'build_workspace.py',
+    'data-spec.md',
+    'decision-contract.json',
+    'instructor-notes.md',
+    'profile_source.py',
+    'source-record.yml',
+    'validate_workspace.py',
+    'release.json',
+    'data\raw\HCAHPS-Hospital.csv.gz',
+    'data\source-profile.csv',
+    'data\measure-inventory.csv',
+    'data\discharge-measure-profile.csv',
+    'template\patient-experience-decision-charter.md',
+    'template\construct-map.csv',
+    'template\patient-journey-map.csv',
+    'template\evidence-needs.csv',
+    'template\stakeholder-partnership-map.csv',
+    'template\claim-boundary.csv',
+    'template\source-feasibility-interpretation.md',
+    'template\ai-use.md',
+    'template\progression-decision.md',
+    'reference\patient-experience-decision-charter.md',
+    'reference\construct-map.csv',
+    'reference\patient-journey-map.csv',
+    'reference\evidence-needs.csv',
+    'reference\stakeholder-partnership-map.csv',
+    'reference\claim-boundary.csv',
+    'reference\source-feasibility-interpretation.md',
+    'reference\ai-use.md',
+    'reference\progression-decision.md'
+)
+$app2Module01Missing = @()
+if (-not (Test-Path -LiteralPath $app2Module01Spec)) { $app2Module01Missing += 'specification' }
+foreach ($relative in $app2Module01Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Module01Root $relative))) {
+        $app2Module01Missing += $relative
+    }
+}
+if ($app2Module01Missing.Count -gt 0) {
+    throw "APP-2 Module 01 is missing its specification or package files: $($app2Module01Missing -join ', ')."
+}
+$app2Module01Content = Get-Content -Raw -LiteralPath $app2Module01Spec
+$app2Module01Sections = [regex]::Matches($app2Module01Content, '(?m)^## \d+\.').Count
+$app2Module01Release = Get-Content -Raw -LiteralPath (Join-Path $app2Module01Root 'release.json') | ConvertFrom-Json
+$app2Module01Profile = @(Import-Csv -LiteralPath (Join-Path $app2Module01Root 'data\source-profile.csv'))
+$app2Module01Measures = @(Import-Csv -LiteralPath (Join-Path $app2Module01Root 'data\measure-inventory.csv'))
+$app2Module01Discharge = @(Import-Csv -LiteralPath (Join-Path $app2Module01Root 'data\discharge-measure-profile.csv'))
+if (
+    $app2Module01Sections -ne 21 -or
+    $app2Module01Content -match '[—–]' -or
+    $app2Module01Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Module01Content -notmatch '325,720 rows' -or
+    $app2Module01Content -notmatch '4,790 facilities' -or
+    $app2Module01Content -notmatch '68 measure IDs' -or
+    $app2Module01Content -notmatch '1,787 bytes' -or
+    $app2Module01Content -notmatch 'c693e04592994f6f7bef14459b83669a5c824d0bf0b027a0624bab12a3cb4862' -or
+    $app2Module01Content -notmatch '173 checks' -or
+    $app2Module01Content -notmatch '134 checks' -or
+    $app2Module01Release.module.id -ne 'oclc-app2-01' -or
+    $app2Module01Release.module.version -ne '0.1.0' -or
+    $app2Module01Release.module.commons_release -ne '0.56.0' -or
+    $app2Module01Release.source.raw_bytes -ne 105461119 -or
+    $app2Module01Release.source.raw_sha256 -ne 'b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc' -or
+    $app2Module01Release.source.gzip_bytes -ne 2195547 -or
+    $app2Module01Release.source.gzip_sha256 -ne '56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c' -or
+    $app2Module01Release.source.rows -ne 325720 -or
+    $app2Module01Release.source.facilities -ne 4790 -or
+    $app2Module01Release.source.measure_ids -ne 68 -or
+    $app2Module01Release.source.patient_level_rows -ne 0 -or
+    $app2Module01Release.package.immutable_manifest_rows -ne 15 -or
+    $app2Module01Release.package.assembled_files -ne 25 -or
+    $app2Module01Release.package.manifest_bytes -ne 1787 -or
+    $app2Module01Release.package.manifest_sha256 -ne 'c693e04592994f6f7bef14459b83669a5c824d0bf0b027a0624bab12a3cb4862' -or
+    $app2Module01Release.validation.complete_reference_checks -ne 173 -or
+    $app2Module01Release.validation.starter_checks -ne 134 -or
+    $app2Module01Release.progression.reference -ne 'continue with conditions' -or
+    $app2Module01Release.progression.clinical_action -ne 'prohibited' -or
+    $app2Module01Release.progression.hospital_ranking -ne 'prohibited' -or
+    $app2Module01Profile.Count -ne 20 -or
+    $app2Module01Measures.Count -ne 68 -or
+    $app2Module01Discharge.Count -ne 4 -or
+    @($app2Module01Discharge | Where-Object { $_.measure_id -eq 'H_COMP_6_Y_P' -and $_.reported_percent_rows -eq '3949' -and $_.unavailable_percent_rows -eq '841' }).Count -ne 1
+) {
+    throw 'APP-2 Module 01 release metadata, specification, source, profiles, validation, manifest, or progression facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Module01Root 'profile_source.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 01 source profiler self-check failed.' }
+& python (Join-Path $app2Module01Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 01 builder self-check failed.' }
+& python (Join-Path $app2Module01Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 01 validator self-check failed.' }
+
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
 $fnd1Module01Files = @(
@@ -3014,3 +3163,5 @@ Write-Output "APP-1 Module 06 passed: $app1Module06Sections contract sections an
 Write-Output "APP-1 Checkpoint 2 passed: $app1Checkpoint02Sections contract sections and $($app1Checkpoint02Files.Count) required files."
 Write-Output "APP-1 Module 07 passed: $app1Module07Sections contract sections and $($app1Module07Files.Count) required files."
 Write-Output "APP-1 final checkpoint passed: $app1Checkpoint03Sections contract sections and $($app1Checkpoint03Files.Count) required files."
+Write-Output "APP-2 specification passed: $app2ModuleCount modules, $app2Hours hours, and $app2CheckpointCount checkpoints."
+Write-Output "APP-2 Module 01 passed: $app2Module01Sections contract sections and $($app2Module01Files.Count) required files."

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.55.0
+- Current release: 0.56.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-1 final checkpoint, clinical care improvement package
-- Next unit: APP-2 course specification, Patient Experience and Engagement
+- Last completed unit: APP-2 Module 01, patient-experience decision framing
+- Next unit: APP-2 Module 02, patient-reported measurement and scale construction
 
 ## Confirmed decisions
 
@@ -31,6 +31,9 @@
 - The APP-1 source file is byte-for-byte identical in both supplied archives: 25,134 bytes and SHA-256 `00e1ecf99fe3ad365b21e934fca64c225b1a63a00067afcf451a06050a372d57`.
 - The APP-1 specification defines seven distinct applied modules totaling 112.5 hours and preserves 20, 45, and 35 course points through Week 3, Week 6, and official-end-date checkpoints.
 - APP-1 revisits longitudinal cohorts, survival, risk adjustment, clinical variation, equity, improvement, and leadership through one continuing clinical-care decision. Module 06 contains eight hours of application and equity work plus an eight-hour embedded machine-learning extension. Module 07 is clinician led.
+- The APP-2 source file is byte-for-byte identical in both supplied archives: 25,906 bytes and SHA-256 `3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009`.
+- The APP-2 specification defines seven distinct applied modules totaling 112.5 hours and preserves 20, 45, and 35 course points through Week 3, Week 6, and official-end-date checkpoints.
+- APP-2 owns patient-reported measures, scale construction, response patterns, missingness, representation, survey bias, linked patient evidence, patient voice, patient partnership, and engagement strategy. Module 06 contains eight hours of partnered improvement and an eight-hour response-adjustment ML extension. Module 07 is clinician led with a required patient-partner co-lead.
 - FND-2 owns analytic aims and targets, regression, prediction evaluation, validity, adjustment, longitudinal boundaries, forecasting, testing, agent verification, model cards, monitoring, governance, and defense. It does not repeat FND-1 data-pipeline work.
 - The primary modeling case preserves the accepted 374-row FND-1 synthetic analytic table and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
 - The 90-day acute-return label contains 36 positive and 338 negative rows. The fixed temporal split contains 224, 75, and 75 rows with 25, 7, and 4 positive outcomes.
@@ -361,20 +364,33 @@
 - The final package disposition is `accept with conditions`; the separate clinical recommendation is `revise before testing`. Clinical implementation, model deployment, and patient targeting remain prohibited.
 - Final reference validation passes 1,276 checks and learner validation passes 1,231 checks. Two-build equality, candidate, score, gate, early-tag, and inconsistent-decision failure routes pass.
 - APP-1 is a complete runnable curriculum-construction release candidate at Commons 0.55.0.
+- APP-2 Module 01 version 0.1.0 uses the complete CMS Patient survey (HCAHPS) - Hospital snapshot from dataset `dgck-syfz`.
+- The raw file is 105,461,119 bytes with SHA-256 `b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc`. The deterministic gzip is 2,195,547 bytes with SHA-256 `56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c`.
+- The source contains 325,720 hospital-measure rows, 22 fields, 4,790 public facilities, 68 measure IDs, 56 state or territory codes, and one reporting period from 2024-10-01 through 2025-09-30. It contains no patient-level response rows.
+- The primary recovery-at-home measure has numeric percentages for 3,949 facilities and unavailable values for 841. Supporting help and warning-sign items each have numeric percentages for 3,610 facilities and unavailable values for 1,180.
+- Numeric facility response rates are available for 3,949 facilities. Their first quartile, median, and third quartile are 18, 22, and 28 percent. The sum of reported completed survey counts is 2,411,406 and is not presented as proof of distinct patients.
+- The source profiler releases 20 exact source facts, all 68 measure records, and four discharge-anchor profiles. It rejects a changed source and reproduces byte-identical profiles.
+- The Module 01 workspace contains 15 immutable rows and 25 files. Its manifest is 1,787 bytes with SHA-256 `c693e04592994f6f7bef14459b83669a5c824d0bf0b027a0624bab12a3cb4862`.
+- Reference validation passes 173 checks and learner-starter validation passes 134 checks. Source, builder, two-build, existing-target, incomplete-record, changed-profile, missing-journey, invalid-progression, and hospital-ranking-overclaim routes pass.
+- Module 01 awards zero course points and hands the cumulative Week 3 package one accepted decision-framing record set. The 20-point measurement component remains owned by Module 02.
+- The reference progression is `continue with conditions`. Module 02 is permitted for curriculum construction. Clinical action and hospital ranking remain prohibited.
+- APP-2 Module 01 is a runnable release candidate at Commons 0.56.0.
 
 ## Pending confirmation
 
 - Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha.
-- Assign the official APP-1 section and half-term dates from the published calendar.
-- Complete named program review, independent human reproduction, and a live or equivalent learner defense before alpha.
+- Name and confirm the APP-2 patient/caregiver partner co-lead, compensation, decision rights, preparation, access needs, recording consent, and review terms.
+- Confirm exact HCAHPS instrument-version use and reproduction rights before Module 02 packages survey text.
+- Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
+- Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-1 final handoff, supplied APP-2 source course, and this ledger.
-2. Write the durable APP-2 course specification before broad implementation.
-3. Keep APP-2 distinct: patient-reported measures, scale construction, response patterns, missingness, representation, survey bias, linked patient evidence, patient partnership, and engagement strategy.
-4. Define seven APP-2 modules totaling 112.5 hours, with an embedded Module 06 machine-learning extension and clinician-led Module 07.
-5. Preserve source assessment weights through Week 3, Week 6, and official-end-date checkpoints.
-6. Select and fingerprint open patient-experience or survey sources, with documented synthetic data only where a public source cannot safely support the teaching case.
-7. Build APP-2 Module 01, its durable specification, learner and reference package, instructor materials, data, checks, release record, and handoff.
-8. Validate, advance semver, commit, and push before Module 02.
+1. Read the APP-2 course specification, Module 01 release and progression record, source record, and this ledger.
+2. Write the durable Module 02 patient-reported measurement and scale-construction specification before implementation.
+3. Confirm an exact fit-for-purpose public instrument version and its reproduction, translation, scoring, and use terms. Do not copy instrument text until the rights decision is recorded.
+4. Preserve the recovery-at-home construct, patient-partner authority, full HCAHPS source identity, and all seven Module 01 open conditions.
+5. Build the 20-point patient-measurement lab with instrument comparison, construct and content validity, scoring direction, reliability, meaningful interpretation, language and accessibility, proxy rules, and burden.
+6. Include learner and reference packages, scoring code, exact tests, source and rights records, assessment, instructor materials, AI record, release metadata, and a Module 03 handoff.
+7. Keep Module 02 distinct from Module 03 response and representation work. It may identify the future sampling frame but must not perform nonresponse weighting yet.
+8. Validate, advance semver, commit, and push before Module 03.

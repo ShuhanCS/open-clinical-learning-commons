@@ -1,0 +1,24 @@
+schema_version: 1.0.0
+publisher: Centers for Medicare & Medicaid Services
+dataset_title: Patient survey (HCAHPS) - Hospital
+dataset_id: dgck-syfz
+dataset_page: https://data.cms.gov/provider-data/dataset/dgck-syfz
+download_url: https://data.cms.gov/provider-data/sites/default/files/resources/78a50346fbe828ea0ce2837847af6a7c_1785189950/HCAHPS-Hospital.csv
+downloaded_utc_date: 2026-08-30
+source_file: HCAHPS-Hospital.csv
+source_bytes: 105461119
+source_sha256: b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc
+stored_file: data/raw/HCAHPS-Hospital.csv.gz
+stored_bytes: 2195547
+stored_sha256: 56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c
+compression: gzip-1.14-level-9-no-name
+rows: 325720
+columns: 22
+grain: one public facility and HCAHPS measure ID per row
+period_start: 2024-10-01
+period_end: 2025-09-30
+contains_patient_level_rows: false
+contains_public_facility_identity: true
+source_terms_control: true
+teaching_use: patient-experience construct framing, source feasibility, reporting limits, and instrument-selection handoff
+prohibited_use: patient identification, hospital ranking, causal inference, local performance claims, and clinical implementation

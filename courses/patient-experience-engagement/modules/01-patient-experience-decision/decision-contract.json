@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app2-01",
+    "title": "Framing a patient-experience and engagement decision",
+    "version": "0.1.0",
+    "commons_release": "0.56.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": 1,
+    "hours": 15.5
+  },
+  "decision": {
+    "owner": "adult inpatient patient-experience council with a patient/caregiver advisory group",
+    "question": "Is the recovery-at-home patient-reported construct defined well enough to enter fit-for-purpose instrument selection for a local multilingual measurement study?",
+    "next_action": "compare candidate instruments, scoring rules, collection modes, burden, and access requirements in Module 02"
+  },
+  "source": {
+    "course_docx_bytes": 25906,
+    "course_docx_sha256": "3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009",
+    "dataset_id": "dgck-syfz",
+    "dataset_page": "https://data.cms.gov/provider-data/dataset/dgck-syfz",
+    "download_url": "https://data.cms.gov/provider-data/sites/default/files/resources/78a50346fbe828ea0ce2837847af6a7c_1785189950/HCAHPS-Hospital.csv",
+    "raw_bytes": 105461119,
+    "raw_sha256": "b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc",
+    "gzip_bytes": 2195547,
+    "gzip_sha256": "56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c",
+    "rows": 325720,
+    "columns": 22,
+    "facilities": 4790,
+    "measure_ids": 68,
+    "state_or_territory_codes": 56,
+    "period_start": "2024-10-01",
+    "period_end": "2025-09-30",
+    "patient_level_rows": 0
+  },
+  "fixed_evidence": {
+    "discharge_information_reported_facilities": 3949,
+    "discharge_information_unavailable_facilities": 841,
+    "response_rate_reported_facilities": 3949,
+    "response_rate_unavailable_facilities": 841,
+    "response_rate_q1_percent": 18,
+    "response_rate_median_percent": 22,
+    "response_rate_q3_percent": 28,
+    "reported_completed_surveys_sum": 2411406
+  },
+  "package": {
+    "immutable_manifest_rows": 15,
+    "editable_records": 9,
+    "assembled_files": 25
+  },
+  "assessment": {
+    "course_points_awarded_here": 0,
+    "week3_measurement_component_points": 20,
+    "noncompensable_gates": 12
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction",
+    "clinical_action": "prohibited"
+  }
+}

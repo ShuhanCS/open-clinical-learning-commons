@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.55.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 has a complete course specification, its first six runnable modules, and its Week 3 and Week 6 checkpoints.
+- Current version: `0.56.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 is complete with seven modules and three checkpoints. APP-2 has a complete course specification and its first runnable module.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -78,6 +78,10 @@ The cumulative [APP-1 Week 6 checkpoint](courses/clinical-care/checkpoints/02-ad
 The seventh runnable unit is [APP-1 Module 07: Clinician leadership, recommendation, and defense](courses/clinical-care/modules/07-clinician-leadership-defense/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/APP-1/modules/07-clinician-leadership-defense-spec.md). It freezes both cumulative checkpoints in a 236-file leadership candidate, assigns stakeholder and decision ownership, defines a universal-offer prospective measurement proposal, and separates package acceptance from clinical authorization. Joe Joseph, MD, SFHM, is the designated clinician of record; his dated public identity is confirmed and participation details remain a pre-alpha condition.
 
 The [APP-1 final checkpoint](courses/clinical-care/checkpoints/03-clinical-care-improvement-package/README.md) freezes all 236 candidate files and adds the final 35-point score, 24 gates, 12-question defense, reviewers, reproduction, conditions, package disposition, and separate clinical recommendation. Its durable [checkpoint specification](docs/curriculum/courses/APP-1/checkpoints/03-clinical-care-improvement-package-spec.md) records `accept with conditions` for the curriculum package and `revise before testing` for the clinical recommendation. It does not authorize a test, workflow change, targeting, or model deployment.
+
+The second applied course is specified in [APP-2: Data for Patient Experience and Engagement](docs/curriculum/courses/APP-2/course-spec.md), with source normalization in [the APP-2 source record](docs/source/app-2-patient-experience-engagement-source-record.md). It owns patient-reported measurement, survey representation, response bias, linked patient evidence, patient voice, partnership, and accountable improvement. Its 20, 45, and 35 course points are due at Week 3, Week 6, and the official half-term end date.
+
+Its first runnable unit is [APP-2 Module 01: Framing a patient-experience and engagement decision](courses/patient-experience-engagement/modules/01-patient-experience-decision/README.md), governed by the durable [Module 01 specification](docs/curriculum/courses/APP-2/modules/01-patient-experience-decision-spec.md). It retains the complete 325,720-row CMS HCAHPS hospital source as a deterministic 2,195,547-byte gzip, inventories all 68 measures across 4,790 facilities, and frames a recovery-at-home measurement decision without patient-level inference, hospital ranking, causal claims, or implementation.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -255,8 +259,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-1 as the first domain-specific applied course, revisiting foundations through clinical-care decisions.
-2. Continue APP-2 through APP-7 one distinct course at a time.
+1. Continue APP-2 from patient-experience decision framing through its final checkpoint.
+2. Continue APP-3 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 
 ## Licensing

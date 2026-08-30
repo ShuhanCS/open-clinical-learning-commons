@@ -1,0 +1,21 @@
+metric_id,metric,value,unit,method,decision_use
+SP01,source rows,325720,row,streamed CSV count,full-source scope
+SP02,source columns,22,field,exact header,source structure
+SP03,public facilities,4790,facility,distinct Facility ID,facility-level grain
+SP04,HCAHPS measure IDs,68,measure,distinct measure ID,measurement inventory
+SP05,state or territory codes,56,code,distinct State,geographic coverage only
+SP06,rows per measure,4790,row,all measure counts agree,one row per facility and measure
+SP07,reporting period start,2024-10-01,date,source Start Date,time boundary
+SP08,reporting period end,2025-09-30,date,source End Date,time boundary
+SP09,decompressed source bytes,105461119,byte,gzip stream count,source fingerprint
+SP10,decompressed source SHA-256,b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc,hash,SHA-256,source fingerprint
+SP11,stored gzip bytes,2195547,byte,file size,portable full source
+SP12,stored gzip SHA-256,56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c,hash,SHA-256,portable full source
+SP13,facilities with numeric response rate,3949,facility,distinct facility value,response support
+SP14,facilities without numeric response rate,841,facility,distinct facility value,public-value gap
+SP15,response rate first quartile,18,percent,facility distribution,response context
+SP16,response rate median,22,percent,facility distribution,response context
+SP17,response rate third quartile,28,percent,facility distribution,response context
+SP18,sum of reported completed survey counts,2411406,reported survey count,sum across supported facilities,"scale, not distinct-patient proof"
+SP19,patient-level response rows,0,row,source grain review,patient-level inference prohibited
+SP20,public facility identities,4790,facility,distinct Facility ID,ranking prohibited

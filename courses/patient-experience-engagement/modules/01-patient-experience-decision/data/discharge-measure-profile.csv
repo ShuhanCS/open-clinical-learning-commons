@@ -1,0 +1,5 @@
+measure_id,role,facility_rows,reported_percent_rows,unavailable_percent_rows,min_percent,q1_percent,median_percent,q3_percent,max_percent
+H_COMP_6_Y_P,primary recovery-at-home decision anchor,4790,3949,841,62,84,87,89,100
+H_COMP_6_N_P,complementary recovery-at-home response,4790,3949,841,0,11,13,16,38
+H_DISCH_HELP_Y_P,support-after-discharge item,4790,3610,1180,54,82,86,88,100
+H_SYMPTOMS_Y_P,warning-sign information item,4790,3610,1180,66,85,88,90,100

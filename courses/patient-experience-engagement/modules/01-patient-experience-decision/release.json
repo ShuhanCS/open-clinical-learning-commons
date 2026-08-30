@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app2-01",
+    "title": "Framing a patient-experience and engagement decision",
+    "version": "0.1.0",
+    "commons_release": "0.56.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": 1,
+    "hours": 15.5,
+    "course_points_awarded_here": 0,
+    "week3_measurement_component_points": 20
+  },
+  "source": {
+    "publisher": "Centers for Medicare & Medicaid Services",
+    "dataset_id": "dgck-syfz",
+    "dataset_page": "https://data.cms.gov/provider-data/dataset/dgck-syfz",
+    "download_url": "https://data.cms.gov/provider-data/sites/default/files/resources/78a50346fbe828ea0ce2837847af6a7c_1785189950/HCAHPS-Hospital.csv",
+    "raw_bytes": 105461119,
+    "raw_sha256": "b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc",
+    "gzip_bytes": 2195547,
+    "gzip_sha256": "56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c",
+    "rows": 325720,
+    "columns": 22,
+    "facilities": 4790,
+    "measure_ids": 68,
+    "state_or_territory_codes": 56,
+    "period_start": "2024-10-01",
+    "period_end": "2025-09-30",
+    "patient_level_rows": 0,
+    "public_facility_identity": true
+  },
+  "derived_source_evidence": {
+    "source_profile": {
+      "rows": 20,
+      "bytes": 1812,
+      "sha256": "aad51b6715c122e0ba75f68b243b8a6630e63fc3964dc8b2bdcbbca9ff8ad117"
+    },
+    "measure_inventory": {
+      "rows": 68,
+      "bytes": 14114,
+      "sha256": "47df9c620db9e3f19f707fb7ac9a9e02b57d4788910f3fc36dd6b899680522ed"
+    },
+    "discharge_measure_profile": {
+      "rows": 4,
+      "bytes": 456,
+      "sha256": "d10cf07a8fc3d4a79e1f4fe29bc31b00703c5a7763f79574effbecc8c676db8e"
+    }
+  },
+  "fixed_evidence": {
+    "discharge_information_reported_facilities": 3949,
+    "discharge_information_unavailable_facilities": 841,
+    "support_help_reported_facilities": 3610,
+    "support_help_unavailable_facilities": 1180,
+    "response_rate_reported_facilities": 3949,
+    "response_rate_unavailable_facilities": 841,
+    "response_rate_q1_percent": 18,
+    "response_rate_median_percent": 22,
+    "response_rate_q3_percent": 28,
+    "reported_completed_surveys_sum": 2411406
+  },
+  "package": {
+    "immutable_manifest_rows": 15,
+    "editable_records": 9,
+    "assembled_files": 25,
+    "manifest_bytes": 1787,
+    "manifest_sha256": "c693e04592994f6f7bef14459b83669a5c824d0bf0b027a0624bab12a3cb4862",
+    "external_python_dependencies": 0
+  },
+  "assessment": {
+    "course_points_awarded_here": 0,
+    "week3_measurement_component_points": 20,
+    "noncompensable_gates": 12,
+    "reference_failed_gates": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction",
+    "open_conditions": 7,
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited"
+  },
+  "validation": {
+    "source_profiler_self_check": "pass",
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 173,
+    "starter_checks": 134,
+    "two_build_manifest_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_source_rejection": "pass",
+    "missing_journey_rejection": "pass",
+    "invalid_progression_rejection": "pass",
+    "hospital_ranking_overclaim_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "course and module specification, public-source profiling, package assembly, and validation"}
+  ],
+  "known_issues": [
+    "Named APP-2 faculty, patient/caregiver partner, measurement, survey methods, accessibility, equity, governance, responsible-AI, and independent reproduction reviews remain pending before alpha.",
+    "The source is public hospital-level reporting and contains no patient-level response rows.",
+    "Public values cannot establish local response bias, subgroup experience, language access, patient preference, causation, or intervention benefit.",
+    "Public facility identities must not be used for unsupported ranking.",
+    "Module 02 must confirm the exact instrument version, reproduction rights, scoring, validity, reliability, meaningful interpretation, language access, proxy rules, and burden before use.",
+    "The named patient/caregiver partner and participation terms remain unconfirmed.",
+    "No package authorizes clinical implementation or patient targeting.",
+    "An actual course section must map the module to the official half-term calendar before assigning a due date."
+  ]
+}
