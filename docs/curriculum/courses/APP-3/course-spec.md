@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.68.0 through Module 03.
+- Current Commons release: 0.69.0 through Checkpoint 01.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -273,7 +273,7 @@ The build must preserve seeded defects in a raw layer, repair them through decla
 - Specification: `docs/curriculum/courses/APP-3/modules/03-variation-safety-bottlenecks-spec.md`.
 - Decision: whether the evidence supports one bounded process diagnosis and immediate escalation rule.
 - Submission: 20-point performance diagnostic and 40-point Week 3 release.
-- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.68.0`; the separate Week 3 checkpoint remains pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.68.0`; accepted by Checkpoint 01 at Commons release `0.69.0`.
 
 Learners map the service, locate rework and handoffs, distinguish common from special cause, choose a chart that matches the measure distribution and denominator, calculate centerlines and limits, apply predeclared signal rules, preserve low-count limits, and compare prespecified shifts or acuity segments.
 
@@ -352,9 +352,10 @@ Leadership must address blame, staff voice, patient access, uncertainty, operati
 
 - Timing: end of instructional Week 3.
 - Course points: 40.
-- Future package path: `courses/clinical-performance-improvement/checkpoints/01-measures-variation-readiness/`.
-- Future specification: `docs/curriculum/courses/APP-3/checkpoints/01-measures-variation-readiness-spec.md`.
+- Package path: `courses/clinical-performance-improvement/checkpoints/01-measures-variation-readiness/`.
+- Specification: `docs/curriculum/courses/APP-3/checkpoints/01-measures-variation-readiness-spec.md`.
 - Decision: may the accepted service definition, measures, diagnostic, and escalation logic enter forecasting and scenario work?
+- Build status: runnable release candidate at Checkpoint version `0.1.0` and Commons release `0.69.0`; Module 04 construction is permitted with conditions.
 
 Required evidence includes the Module 01 charter and source audit; exact public and synthetic release identities; unit of flow; measure family; accountability and claim boundaries; SQL measure build; event validation; defects and repairs; operational metrics; process map; chart-selection record; exact control-chart calculations; signal-rule audit; safety-source limitations; bottleneck reconciliation; subgroup support; 40-point score; gates; AI record; defense; and progression decision.
 

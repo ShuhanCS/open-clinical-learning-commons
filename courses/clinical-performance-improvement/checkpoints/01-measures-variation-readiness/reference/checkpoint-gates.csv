@@ -1,0 +1,19 @@
+gate_id,gate,status,evidence,owner
+G01,Exact Module 01 through Module 03 identities are accepted,pass,evidence-index.csv and nested release records,checkpoint owner
+G02,All 137 candidate files are present and fingerprinted,pass,candidate-manifest.csv,reproducibility owner
+G03,All three nested manifests match accepted bytes and SHA-256,pass,nested release-manifest.csv files,reproducibility owner
+G04,Module 01 remains a required zero-point gate,pass,evidence-index.csv and checkpoint contract,assessment owner
+G05,Module 02 contributes 20 points exactly once,pass,evidence-index.csv and accepted measure-score.csv,assessment owner
+G06,Module 03 contributes 20 points exactly once,pass,evidence-index.csv and accepted week3-score.csv,assessment owner
+G07,Checkpoint points sum to 40 without duplication,pass,evidence-index.csv,assessment owner
+G08,All 45 inherited module gates pass,pass,nested gate and progression records,checkpoint owner
+G09,Fictional service public-source roles and unit of flow remain exact,pass,Module 01 candidate and cumulative review,source steward
+G10,Measure denominators clocks repairs and unavailable states remain exact,pass,Module 02 candidate and cumulative review,measurement lead
+G11,Provisional baseline chart contracts rules and nine signals remain exact,pass,Module 03 candidate and cumulative review,variation lead
+G12,Safety truth triggers reports false positives and low-count limits remain separate,pass,Module 03 safety outputs and cumulative review,safety lead
+G13,The diagnosis remains bounded to one stage shift and time window,pass,Module 03 bottleneck evidence and cumulative review,flow lead
+G14,Unsupported target-window subgroup comparisons remain unavailable,pass,Module 03 subgroup evidence and cumulative review,equity and access lead
+G15,E01 remains a human review rule with no automated action,pass,Module 03 escalation rule and cumulative review,clinical performance council
+G16,Root-cause staffing clinical causal and implementation claims remain prohibited,pass,cumulative review and progression decision,clinical and workforce reviewers
+G17,Defense reproducibility accessibility and accountable agent records are complete,pass,checkpoint defense reproducibility and AI records,faculty owner
+G18,Progression and Module 04 permission agree and carry named conditions,pass,progression-decision.md,checkpoint owner

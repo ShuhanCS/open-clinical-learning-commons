@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.68.0
+- Current release: 0.69.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Module 03, variation, safety signals, and bottlenecks
-- Next unit: APP-3 Checkpoint 01, measures, variation, and bottleneck readiness
+- Last completed unit: APP-3 Checkpoint 01, measures, variation, and bottleneck readiness
+- Next unit: APP-3 Module 04, demand forecasting and capacity
 
 ## Confirmed decisions
 
@@ -487,7 +487,17 @@
 - The learner workspace has 41 files and 27 immutable manifest rows. The reference has 54 files and 40 immutable manifest rows. Complete validation passes 259 checks and starter validation passes 130 structural checks.
 - Upstream, diagnostic, workspace, and validator self-checks pass. Fifteen mutation and incomplete-workspace routes are rejected.
 - The reference scores 20 of 20 and passes all 18 gates. Together with the Module 02 20-point component, it permits construction of the 40-point Week 3 checkpoint. Module 04 is not yet permitted.
-- APP-3 Module 03 is a runnable release candidate at Commons 0.68.0. Checkpoint 01 is next.
+- APP-3 Module 03 is a runnable release candidate at Commons 0.68.0.
+- APP-3 Checkpoint 01 version 0.1.0 assembles the accepted Module 01 through Module 03 reference workspaces without editing or recomputing their evidence.
+- The checkpoint freezes 25 Module 01, 58 Module 02, and 54 Module 03 files. Its 137-row candidate manifest is 23,862 bytes with SHA-256 `9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656`.
+- Module 01 remains a required zero-point gate. Module 02 contributes 20 points once and Module 03 contributes 20 points once, giving an exact Week 3 total of 40.
+- All 12 Module 01, 15 Module 02, and 18 Module 03 gates remain required. All 18 checkpoint integrity gates pass.
+- The cumulative review preserves the provisional baseline, four chart contracts, three signal rules, nine signal records, safety undercapture, bounded roomed-to-clinician diagnosis, unsupported target-window subgroup comparisons, and E01 human-only escalation.
+- The learner and reference workspaces each contain 153 files. Reference validation passes 742 checks and learner validation passes 700 structural and immutable-evidence checks.
+- The copied validator passes. Two reference assemblies match, existing targets are protected, and 18 mutation or incomplete-submission routes are rejected.
+- The 12-question defense covers decision and unit, data classes, measures, charts, baseline instability, safety, bottleneck evidence, subgroup support, E01, points, reproduction, and Module 04 ownership.
+- Progression is `continue with conditions`. Module 04 demand forecasting and capacity analysis is permitted. Root cause remains unestablished, and staffing, clinical, automated, and implementation action remain prohibited.
+- APP-3 Checkpoint 01 is a runnable release candidate at Commons 0.69.0. Module 04 is next.
 
 ## Pending confirmation
 
@@ -502,10 +512,10 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-3 course specification, APP-3 source record, Module 01 specification and package, curriculum catalog, and this ledger.
-2. Read the accepted Module 02 and Module 03 specifications, packages, release records, scores, gates, conditions, and progression decisions.
-3. Write the durable APP-3 Checkpoint 01 specification before building its package.
-4. Freeze Modules 01 through 03 without recomputing or editing accepted evidence.
-5. Count Module 02 and Module 03 20-point components once, retain Module 01 as a required zero-point gate, and verify the 40-point total.
-6. Preserve the provisional baseline, all nine signals, safety undercapture, bounded stage diagnosis, unsupported target-window subgroup comparison, and E01 human-only escalation.
-7. Release the Week 3 checkpoint, decide whether Module 04 may begin, advance semver, update this ledger, commit, and push.
+1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoint 01 specification and package, curriculum catalog, and this ledger.
+2. Read the frozen Module 02 measure contract and Module 03 baseline, chart, signal, safety, bottleneck, subgroup, and escalation evidence carried by the checkpoint.
+3. Write the durable APP-3 Module 04 specification before building its package.
+4. Freeze the accepted Week 3 checkpoint identity and declare the forecast target, issue time, information cutoff, horizon, eligible history, calendar assumptions, cost of error, and capacity decision before fitting.
+5. Compare last-value and seasonal-naive benchmarks with one bounded exponential-smoothing model on identical rolling-origin folds.
+6. Translate forecast error into a bounded capacity implication, state Little's Law limits, and keep staffing, root-cause, clinical, and implementation claims prohibited.
+7. Release the zero-point Module 04 forecast gate for Module 05, advance semver, update this ledger, commit, and push.

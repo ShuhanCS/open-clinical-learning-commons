@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.68.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.69.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2816,8 +2816,8 @@ if (
     $app3Content -match '(?im)[A-Z]:\\Users\\' -or
     $app3SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app3PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app3Content -notmatch 'Current Commons release: 0\.68\.0' -or
-    $app3PackageContent -notmatch 'Current Commons release: 0\.68\.0' -or
+    $app3Content -notmatch 'Current Commons release: 0\.69\.0' -or
+    $app3PackageContent -notmatch 'Current Commons release: 0\.69\.0' -or
     $app3Content -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '26,907' -or
@@ -2842,12 +2842,12 @@ if (
     $app3Content -notmatch 'Joe Joseph, MD, SFHM' -or
     $app3Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
     $app3Content -notmatch 'Module 01 pins all three complete public snapshots' -or
-    $app3PackageContent -notmatch 'Modules 01 through 03 complete' -or
+    $app3PackageContent -notmatch 'Modules 01 through 03, and Checkpoint 01 complete' -or
     $app3Content -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.68.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.69.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -3201,6 +3201,89 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 03 diagnostic self-check failed.'
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 03 workspace-builder self-check failed.' }
 & python (Join-Path $app3Module03Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 03 validator self-check failed.' }
+
+$app3Checkpoint01Root = Join-Path $repo 'courses\clinical-performance-improvement\checkpoints\01-measures-variation-readiness'
+$app3Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\APP-3\checkpoints\01-measures-variation-readiness-spec.md'
+$app3Checkpoint01Files = @(
+    '.gitattributes',
+    'VERSION',
+    'assessment.md',
+    'build_checkpoint.py',
+    'checkpoint-contract.json',
+    'instructor-notes.md',
+    'release.json',
+    'validate_checkpoint.py',
+    'reference\README.md',
+    'reference\evidence-index.csv',
+    'reference\measures-variation-readiness-review.md',
+    'reference\checkpoint-gates.csv',
+    'reference\checkpoint-defense.md',
+    'reference\reproducibility-check.md',
+    'reference\ai-use.md',
+    'reference\progression-decision.md',
+    'template\README.md',
+    'template\evidence-index.csv',
+    'template\measures-variation-readiness-review.md',
+    'template\checkpoint-gates.csv',
+    'template\checkpoint-defense.md',
+    'template\reproducibility-check.md',
+    'template\ai-use.md',
+    'template\progression-decision.md'
+)
+$app3Checkpoint01Missing = @($app3Checkpoint01Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $app3Checkpoint01Root $_))
+})
+if (-not (Test-Path -LiteralPath $app3Checkpoint01Spec) -or $app3Checkpoint01Missing.Count -gt 0) {
+    throw "APP-3 Checkpoint 01 is missing its specification or package files: $($app3Checkpoint01Missing -join ', ')."
+}
+$app3Checkpoint01Content = Get-Content -Raw -LiteralPath $app3Checkpoint01Spec
+$app3Checkpoint01Sections = [regex]::Matches($app3Checkpoint01Content, '(?m)^## \d+\.').Count
+$app3Checkpoint01Release = Get-Content -Raw -LiteralPath (Join-Path $app3Checkpoint01Root 'release.json') | ConvertFrom-Json
+$app3Checkpoint01Contract = Get-Content -Raw -LiteralPath (Join-Path $app3Checkpoint01Root 'checkpoint-contract.json') | ConvertFrom-Json
+$app3Checkpoint01Index = @(Import-Csv -LiteralPath (Join-Path $app3Checkpoint01Root 'reference\evidence-index.csv'))
+$app3Checkpoint01Gates = @(Import-Csv -LiteralPath (Join-Path $app3Checkpoint01Root 'reference\checkpoint-gates.csv'))
+$app3Checkpoint01Progression = Get-Content -Raw -LiteralPath (Join-Path $app3Checkpoint01Root 'reference\progression-decision.md')
+if (
+    $app3Checkpoint01Sections -ne 17 -or
+    $app3Checkpoint01Content -match '[—–]' -or
+    $app3Checkpoint01Content -notmatch '137' -or
+    $app3Checkpoint01Content -notmatch '153' -or
+    $app3Checkpoint01Content -notmatch '40 of 40' -or
+    $app3Checkpoint01Content -notmatch '742' -or
+    $app3Checkpoint01Content -notmatch '700' -or
+    $app3Checkpoint01Content -notmatch '9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656' -or
+    $app3Checkpoint01Release.checkpoint.id -ne 'oclc-app3-cp01' -or
+    $app3Checkpoint01Release.checkpoint.version -ne '0.1.0' -or
+    $app3Checkpoint01Release.checkpoint.commons_release -ne '0.69.0' -or
+    $app3Checkpoint01Release.checkpoint.course_points -ne 40 -or
+    $app3Checkpoint01Release.package.candidate_manifest_rows -ne 137 -or
+    $app3Checkpoint01Release.package.candidate_manifest_bytes -ne 23862 -or
+    $app3Checkpoint01Release.package.candidate_manifest_sha256 -ne '9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656' -or
+    $app3Checkpoint01Release.package.checkpoint_editable_records -ne 8 -or
+    $app3Checkpoint01Release.package.defense_questions -ne 12 -or
+    $app3Checkpoint01Release.package.assembled_files -ne 153 -or
+    $app3Checkpoint01Release.validation.complete_reference_checks -ne 742 -or
+    $app3Checkpoint01Release.validation.starter_checks -ne 700 -or
+    $app3Checkpoint01Release.validation.failure_routes_rejected -ne 18 -or
+    $app3Checkpoint01Release.progression.reference -ne 'continue with conditions' -or
+    $app3Checkpoint01Release.progression.module04_permission -ne 'permitted for demand forecasting and capacity analysis' -or
+    $app3Checkpoint01Contract.accepted_component_files -ne 137 -or
+    $app3Checkpoint01Contract.course_points -ne 40 -or
+    @($app3Checkpoint01Contract.accepted_modules).Count -ne 3 -or
+    ($app3Checkpoint01Contract.accepted_modules | Measure-Object -Property points -Sum).Sum -ne 40 -or
+    $app3Checkpoint01Index.Count -ne 3 -or
+    ($app3Checkpoint01Index | Measure-Object -Property checkpoint_points -Sum).Sum -ne 40 -or
+    $app3Checkpoint01Gates.Count -ne 18 -or
+    @($app3Checkpoint01Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Checkpoint01Progression -notmatch 'Module 02 20 points once plus Module 03 20 points once' -or
+    $app3Checkpoint01Progression -notmatch 'permitted for demand forecasting and capacity analysis'
+) {
+    throw 'APP-3 Checkpoint 01 specification, frozen candidates, point accounting, gates, defense, progression, or responsible-claim boundary does not match the 0.1.0 contract.'
+}
+& python (Join-Path $app3Checkpoint01Root 'build_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Checkpoint 01 builder self-check failed.' }
+& python (Join-Path $app3Checkpoint01Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Checkpoint 01 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -4510,3 +4593,4 @@ Write-Output "APP-2 final checkpoint passed: $app2Checkpoint03Sections contract 
 Write-Output "APP-3 course architecture passed: $app3Sections sections, $app3ModuleCount modules, $app3Hours hours, and $app3CheckpointCount checkpoints."
 Write-Output "APP-3 Module 02 passed: $app3Module02Sections contract sections and $($app3Module02Files.Count) required files."
 Write-Output "APP-3 Module 03 passed: $app3Module03Sections contract sections and $($app3Module03Files.Count) required files."
+Write-Output "APP-3 Checkpoint 01 passed: $app3Checkpoint01Sections contract sections and $($app3Checkpoint01Files.Count) required files."

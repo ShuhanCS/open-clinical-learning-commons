@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.68.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, and first three runnable modules.
+- Current version: `0.69.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, first three runnable modules, and cumulative Week 3 checkpoint.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -110,6 +110,8 @@ Its first runnable unit is [APP-3 Module 01: Framing a clinical performance and 
 The second runnable unit is [APP-3 Module 02: Measures and operational metrics](courses/clinical-performance-improvement/modules/02-measures-operational-metrics/README.md), governed by the durable [Module 02 specification](docs/curriculum/courses/APP-3/modules/02-measures-operational-metrics-spec.md). It generates nine linked synthetic operational tables with 318,732 raw rows, preserves 12 auditable defects, defines 17 complete measures, and releases a deterministic 20-point build with 30 exact query checks. It permits Module 03 curriculum construction without diagnosing a bottleneck or recommending staffing.
 
 The third runnable unit is [APP-3 Module 03: Variation, safety signals, and bottlenecks](courses/clinical-performance-improvement/modules/03-variation-safety-bottlenecks/README.md), governed by the durable [Module 03 specification](docs/curriculum/courses/APP-3/modules/03-variation-safety-bottlenecks-spec.md). It freezes 14 Module 02 files, builds four chart contracts and nine signal records, audits safety undercapture with exact low-count limits, and reconciles a bounded roomed-to-clinician constraint during evening shifts in Weeks 35 through 44. The release scores 20/20 and permits construction of the 40-point Week 3 checkpoint without authorizing staffing or clinical action.
+
+The cumulative [APP-3 Week 3 checkpoint](courses/clinical-performance-improvement/checkpoints/01-measures-variation-readiness/reference/README.md) freezes 137 accepted files from Modules 01 through 03, carries the Module 02 and Module 03 20-point components once, and keeps Module 01 as a required zero-point gate. Its durable [checkpoint specification](docs/curriculum/courses/APP-3/checkpoints/01-measures-variation-readiness-spec.md) defines 18 integrity gates, a 12-question defense, the exact signal and safety limits, and conditional permission for Module 04 demand forecasting and capacity analysis.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -287,7 +289,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-3 Checkpoint 01, Measures, variation, and bottleneck readiness.
+1. Build APP-3 Module 04, Demand forecasting and capacity.
 2. Continue APP-4 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 

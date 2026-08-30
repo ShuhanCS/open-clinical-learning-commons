@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.68.0.
-- Current build: course specification, source architecture, and Modules 01 through 03 complete; later modules and checkpoints not yet built.
+- Current Commons release: 0.69.0.
+- Current build: course specification, source architecture, Modules 01 through 03, and Checkpoint 01 complete; later modules and checkpoints not yet built.
 
 APP-3 teaches learners to define and validate clinical performance measures, distinguish process signals from routine variation, diagnose bottlenecks, forecast demand, test capacity and workflow scenarios, and defend a monitored improvement recommendation.
 
@@ -26,7 +26,7 @@ The continuing case is an explicitly fictional adult emergency service, `CGH-ED-
 
 ## Checkpoints
 
-- Week 3: 40-point measures, variation, safety, and bottleneck readiness package.
+- Week 3: [40-point measures, variation, safety, and bottleneck readiness package](checkpoints/01-measures-variation-readiness/reference/README.md).
 - Week 6: 25-point forecast, scenario, evaluation, and monitoring package.
 - Official half-term end date: 35-point clinical performance improvement package.
 
@@ -46,5 +46,7 @@ The first runnable package is [Module 01](modules/01-clinical-performance-decisi
 The second runnable package is [Module 02](modules/02-measures-operational-metrics/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/02-measures-operational-metrics-spec.md). It generates 318,732 linked synthetic operational rows, preserves 12 raw defects, defines 17 measures, produces eight accepted outputs, awards the 20-point Week 3 measure component, and passes 15 release gates before Module 03 begins.
 
 The third runnable package is [Module 03](modules/03-variation-safety-bottlenecks/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/03-variation-safety-bottlenecks-spec.md). It produces 13 diagnostic outputs, four accessible figures, nine audited signals, exact safety-surveillance evidence, a bounded stage diagnosis, and one human escalation rule. Its 20-point component completes the evidence needed to build the 40-point Week 3 checkpoint.
+
+The cumulative [Week 3 checkpoint](checkpoints/01-measures-variation-readiness/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/checkpoints/01-measures-variation-readiness-spec.md), freezes 137 accepted module files in a 153-file assembly. It counts the Module 02 and Module 03 20-point components once, passes 18 checkpoint integrity gates, and uses a 12-question defense before permitting Module 04 demand forecasting and capacity analysis with conditions.
 
 No package authorizes clinical implementation, current hospital performance judgment, patient or workforce targeting, staffing change, or model deployment.

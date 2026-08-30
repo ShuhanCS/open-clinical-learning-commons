@@ -1,0 +1,25 @@
+# Checkpoint reproducibility check
+
+- Accepted modules: `3`
+- Accepted candidate files: `137`
+- Candidate directories: `module-01, module-02, and module-03`
+- Nested manifests: `all row counts, bytes, and SHA-256 values match their accepted releases`
+- Point check: `Module 01 has 0 points, Module 02 has 20 once, Module 03 has 20 once, and the sum is 40`
+- Gate check: `12 Module 01, 15 Module 02, 18 Module 03, and 18 checkpoint gates pass`
+- Assembly: `two independent reference builds match byte for byte`
+- Learner and reference candidates: `identical`
+- Existing target: `overwrite refused`
+- Copied validator: `passes from the assembled checkpoint`
+- Candidate mutation: `rejected`
+- Missing-candidate mutation: `rejected`
+- Duplicate-point mutation: `rejected`
+- Failed-gate mutation: `rejected`
+- Changed-signal mutation: `rejected`
+- Signal-as-cause mutation: `rejected`
+- Staffing-claim mutation: `rejected`
+- Unsupported-subgroup mutation: `rejected`
+- Automated-escalation mutation: `rejected`
+- Incomplete-defense mutation: `rejected`
+- Invalid-progression mutation: `rejected`
+- External Python dependencies: `none`
+- Independent base-R control-chart check: `pending before alpha because R is unavailable in the construction environment`
