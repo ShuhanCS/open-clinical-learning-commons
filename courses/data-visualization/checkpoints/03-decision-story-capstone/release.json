@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "DA-730-CP3",
+    "title": "Decision-story capstone and defense",
+    "version": "0.1.0",
+    "commons_release": "0.26.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling",
+    "due": "official last day of the assigned half-term",
+    "included_modules": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  },
+  "calendar": {
+    "planning_model": "7.5 weeks",
+    "official_rule": "Use the published half-term start and end dates; the final checkpoint is due on the official last day.",
+    "official_url": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+    "observed_2026_2027_elapsed_days": [49, 51, 50, 52, 50, 51]
+  },
+  "package": {
+    "specification": "../../../../docs/curriculum/courses/DA-730/checkpoints/03-decision-story-capstone-spec.md",
+    "assembler": "assemble_checkpoint.ps1",
+    "analysis": "render_decision_story.R",
+    "validator": "validate_checkpoint.py",
+    "instructor_notes": "instructor-notes.md",
+    "learner_and_review_templates": 12,
+    "packaged_data_files": 3
+  },
+  "source": {
+    "publisher": "Centers for Medicare & Medicaid Services",
+    "dataset_id": "yv7e-xc69",
+    "landing_page": "https://data.cms.gov/provider-data/dataset/yv7e-xc69",
+    "full_csv_url": "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv",
+    "cms_release_date": "2026-08-13",
+    "full_rows": 138084,
+    "full_columns": 16,
+    "full_sha256": "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516"
+  },
+  "packaged_data": {
+    "teaching": {
+      "path": "data/ma_ed_public_reporting_dashboard_2026.csv",
+      "row_count": 186,
+      "column_count": 31,
+      "sha256": "fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd"
+    },
+    "measure_dictionary": {
+      "path": "data/ed_dashboard_measure_dictionary_2026.csv",
+      "row_count": 3,
+      "column_count": 18,
+      "sha256": "2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412"
+    },
+    "source_selection": {
+      "path": "data/cms_ma_ed_dashboard_source_2026.csv",
+      "row_count": 186,
+      "column_count": 15,
+      "sha256": "f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b"
+    }
+  },
+  "starter_outputs": {
+    "figures": 2,
+    "accessible_tables": 1,
+    "accessible_table_rows": 3,
+    "accessible_table_columns": 20,
+    "defense_pdf": 0,
+    "reason_defense_pdf_is_absent": "The learner must create and defend the accessible slide deck."
+  },
+  "reference_invariants": {
+    "selected_facility_id": "220029",
+    "selected_op18b_minutes": 188,
+    "selected_op18b_sample": 422,
+    "selected_op18b_lag_days": 317,
+    "selected_op22_percent": 23,
+    "selected_op22_sample": 19211,
+    "selected_op22_reporting_peers": 53,
+    "selected_op22_peer_median_percent": 3,
+    "selected_op22_mock_trigger_percent": 10,
+    "selected_op22_lag_days": 590,
+    "stable_supported_action": "definition and current-data review"
+  },
+  "environment": {
+    "powershell": "PowerShell 7 and Windows PowerShell compatible",
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {"ggplot2": "4.0.3"},
+    "tested_platform": "Windows"
+  },
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "Validator self-check, full reference assembly, analysis rerun, incomplete-starter rejection, and nonempty-target refusal passed."
+    },
+    "required_human_roles": [
+      {"role": "DA-730 faculty", "reviewer": null, "status": "pending", "date": null},
+      {"role": "emergency department quality relevance", "reviewer": null, "status": "pending", "date": null},
+      {"role": "CMS source fidelity", "reviewer": null, "status": "pending", "date": null},
+      {"role": "executive communication", "reviewer": null, "status": "pending", "date": null},
+      {"role": "visualization and information design", "reviewer": null, "status": "pending", "date": null},
+      {"role": "accessibility", "reviewer": null, "status": "pending", "date": null},
+      {"role": "equity and action language", "reviewer": null, "status": "pending", "date": null},
+      {"role": "independent teachability and reproduction", "reviewer": null, "status": "pending", "date": null}
+    ]
+  },
+  "validation": {
+    "validator_self_check": "pass",
+    "assembler": "pass",
+    "analysis_rerun": "pass",
+    "nonempty_target_refusal": "pass",
+    "incomplete_starter_rejection": "pass",
+    "technical_artifact_errors": 0,
+    "minimum_release_score": 80,
+    "passing_dispositions": ["approve", "approve with conditions"]
+  },
+  "known_issues": [
+    "Named faculty, clinical, source, executive, design, accessibility, equity, and independent-instructor reviews are pending.",
+    "The assembled starter intentionally fails completed-folder validation until learner records, the defense PDF, oral-defense evidence, and review disposition are complete.",
+    "The reference uses historical public aggregate reporting and does not support current, causal, subgroup, or intervention claims.",
+    "The Massachusetts medians are descriptive and the triggers are course assumptions.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

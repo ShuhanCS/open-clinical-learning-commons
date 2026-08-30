@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.25.0
+- Current release: 0.26.0
 - Last updated: 2026-08-30
-- Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 13, Audience, annotation, narrative, and capstone
-- Next unit: DA-730 final checkpoint, decision-story capstone
+- Active phase: foundation-course specification and build
+- Last completed unit: DA-730 final checkpoint, Decision-story capstone and defense
+- Next unit: FND-1 straight-through technical foundations course
 
 ## Confirmed decisions
 
@@ -104,6 +104,12 @@
 - The stable reference finding is that the historical 23-percent public OP-22 signal warrants definition and current-data review. The 590-day source lag prevents a current performance or intervention conclusion.
 - The technical and executive versions preserve the same values, units, samples, reporting windows, peer references, mock-trigger origin, action owner, material limitation, and unsupported conclusions.
 - All 13 DA-730 modules now have 21-section specifications and runnable teaching packages. Named human reviews remain pending before alpha.
+- DA-730 Checkpoint 3 packages the Module 13 evidence into a portable final release with three pinned CMS data files, editable analysis, two audience figures, one exact three-row table, complete learner records, an accessible defense, and a reviewer disposition.
+- The final checkpoint has a 17-section specification, safe PowerShell assembler, standard-library Python validator, learner and review templates, instructor answer key, and machine-readable release record.
+- The assembler copies exact source tables with row counts 186, 3, and 186; renders two visually inspected PNG files; and writes the exact 3-row, 20-column selected-facility table.
+- The validator self-check passes a complete fixture and rejects a missing supporting figure. Full assembly and analysis rerun pass, the incomplete starter is rejected for the intended reasons, and a nonempty target is protected from overwrite.
+- Final release requires a score of at least 80, passed clinical, accessibility, reproducibility, and oral-defense gates, and an `approve` or `approve with conditions` disposition.
+- DA-730 now has all 13 module packages and all three cumulative checkpoint packages as runnable release candidates. Faculty and human review still gate alpha promotion.
 
 ## Pending confirmation
 
@@ -112,9 +118,9 @@
 
 ## Next resume instructions
 
-1. Read the final checkpoint contract in the course specification and the Module 13 final-checkpoint handoff.
-2. Define the exact final-capstone folder around the Module 13 submission without forcing learners to rename or reconstruct files.
-3. Create the final checkpoint specification, safe assembler or packager, learner templates, instructor notes, release record, and standard-library validator.
-4. Validate the primary figure, optional supporting-figure rule, exact table, source and transformation records, audience adaptation, accessibility, AI use, reproduction, critique response, and defense files.
-5. Tie the due date to the official last day of the half-term and record the review disposition.
-6. Release the final checkpoint, then begin separate FND-1 and FND-2 technical foundation builds.
+1. Read the master curriculum architecture and the source curriculum documents for the first foundation course.
+2. Confirm the exact FND-1 course title, catalog number, source-module ownership, and checkpoint outcomes from the extracted curriculum evidence.
+3. Keep FND-1 separate from FND-2 and teach its technical sequence straight through rather than using the applied-course rhythm.
+4. Write the durable FND-1 course specification before broad implementation.
+5. Define exact Week 3, Week 6, and final deliverables, public or synthetic datasets, reproducibility, accessibility, AI accountability, assessment, and release checks.
+6. Build and release FND-1 modules one by one, then move to the separate FND-2 build.

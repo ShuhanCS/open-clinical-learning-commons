@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.13.0`
+- Register version: `0.14.0`
 - Retrieved or verified: 2026-08-30
 - Scope: public course development and assignments
 
@@ -287,3 +287,19 @@ The selected Anna Jaques Hospital public values are 23 percent for OP-22 and 188
 - Validation: 66 of 66 checks pass
 
 The reference title, annotation density, evidence order, and explanatory depth change by audience. The 23-percent OP-22 value, 188-minute OP-18b value, samples, units, reporting windows, release date, source lag, peer context, mock-trigger origin, supported action, and unsupported conclusions remain invariant. The module supports authorization of a definition and current-data review, not a current performance or intervention claim.
+
+### DA-730 final decision-story capstone release
+
+- Checkpoint: DA-730-CP3, Decision-story capstone and defense
+- Upstream source: Module 12 CMS Timely and Effective Care public-reporting release
+- Dataset page: https://data.cms.gov/provider-data/dataset/yv7e-xc69
+- Complete pinned CSV: https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv
+- Packaged teaching table: 186 rows and 31 columns, SHA-256 `fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd`
+- Packaged measure dictionary: 3 rows and 18 columns, SHA-256 `2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412`
+- Packaged source selection: 186 rows and 15 columns, SHA-256 `f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b`
+- Assembled exact table: 3 rows and 20 columns for facility ID `220029`
+- Assembled figures: executive authorization story and technical OP-22 peer-position story
+- Source record template: `courses/data-visualization/checkpoints/03-decision-story-capstone/template/source-record.yml`
+- Final validator: `courses/data-visualization/checkpoints/03-decision-story-capstone/validate_checkpoint.py`
+
+The final checkpoint copies the exact pinned tables into the learner release so another analyst can reproduce the figures and table without a silent source refresh. The public OP-22 period ended 590 days before the source release. The 3-percent state median is descriptive and the 10-percent trigger is a course assumption. The release supports definition and current-data review, not current performance, cause, or intervention.

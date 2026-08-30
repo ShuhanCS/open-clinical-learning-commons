@@ -574,6 +574,77 @@ if ($LASTEXITCODE -ne 0) {
     throw 'DA-730 Checkpoint 2 validator self-check failed.'
 }
 
+$checkpoint03Root = Join-Path $repo 'courses\data-visualization\checkpoints\03-decision-story-capstone'
+$checkpoint03Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\checkpoints\03-decision-story-capstone-spec.md'
+$checkpoint03Files = @(
+    'README.md',
+    'assemble_checkpoint.ps1',
+    'render_decision_story.R',
+    'validate_checkpoint.py',
+    'instructor-notes.md',
+    'release.json',
+    'template\README.md',
+    'template\decision-brief.md',
+    'template\alt-text.md',
+    'template\transformation-record.md',
+    'template\audience-adaptation-record.md',
+    'template\reproducibility-check.md',
+    'template\critique-response.md',
+    'template\ai-use.md',
+    'template\review-disposition.md',
+    'template\source-record.yml',
+    'template\defense\slides-outline.md',
+    'template\defense\questions-and-responses.md'
+)
+$checkpoint03Missing = @($checkpoint03Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $checkpoint03Root $_))
+})
+if (-not (Test-Path -LiteralPath $checkpoint03Spec) -or $checkpoint03Missing.Count -gt 0) {
+    throw "DA-730 Checkpoint 3 is missing its specification or package files: $($checkpoint03Missing -join ', ')."
+}
+$checkpoint03Content = Get-Content -Raw -LiteralPath $checkpoint03Spec
+if ([regex]::Matches($checkpoint03Content, '(?m)^## \d+\.').Count -ne 17) {
+    throw 'DA-730 Checkpoint 3 must define 17 numbered contract sections.'
+}
+if ($checkpoint03Content -match '[—–]') {
+    throw 'DA-730 Checkpoint 3 contains a Unicode em dash or en dash.'
+}
+$checkpoint03Release = Get-Content -Raw -LiteralPath (Join-Path $checkpoint03Root 'release.json') | ConvertFrom-Json
+if (
+    $checkpoint03Release.checkpoint.version -ne '0.1.0' -or
+    $checkpoint03Release.checkpoint.commons_release -ne '0.26.0' -or
+    $checkpoint03Release.checkpoint.included_modules.Count -ne 13 -or
+    $checkpoint03Release.calendar.observed_2026_2027_elapsed_days.Count -ne 6 -or
+    ($checkpoint03Release.calendar.observed_2026_2027_elapsed_days | Measure-Object -Minimum).Minimum -ne 49 -or
+    ($checkpoint03Release.calendar.observed_2026_2027_elapsed_days | Measure-Object -Maximum).Maximum -ne 52 -or
+    $checkpoint03Release.packaged_data.teaching.row_count -ne 186 -or
+    $checkpoint03Release.packaged_data.teaching.column_count -ne 31 -or
+    $checkpoint03Release.packaged_data.teaching.sha256 -ne 'fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd' -or
+    $checkpoint03Release.packaged_data.measure_dictionary.row_count -ne 3 -or
+    $checkpoint03Release.packaged_data.measure_dictionary.column_count -ne 18 -or
+    $checkpoint03Release.packaged_data.measure_dictionary.sha256 -ne '2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412' -or
+    $checkpoint03Release.packaged_data.source_selection.row_count -ne 186 -or
+    $checkpoint03Release.packaged_data.source_selection.column_count -ne 15 -or
+    $checkpoint03Release.packaged_data.source_selection.sha256 -ne 'f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b' -or
+    $checkpoint03Release.starter_outputs.figures -ne 2 -or
+    $checkpoint03Release.starter_outputs.accessible_table_rows -ne 3 -or
+    $checkpoint03Release.starter_outputs.accessible_table_columns -ne 20 -or
+    $checkpoint03Release.reference_invariants.selected_op22_percent -ne 23 -or
+    $checkpoint03Release.reference_invariants.selected_op22_lag_days -ne 590 -or
+    $checkpoint03Release.reference_invariants.stable_supported_action -ne 'definition and current-data review' -or
+    $checkpoint03Release.validation.validator_self_check -ne 'pass' -or
+    $checkpoint03Release.validation.assembler -ne 'pass' -or
+    $checkpoint03Release.validation.analysis_rerun -ne 'pass' -or
+    $checkpoint03Release.validation.nonempty_target_refusal -ne 'pass' -or
+    $checkpoint03Release.validation.incomplete_starter_rejection -ne 'pass'
+) {
+    throw 'DA-730 Checkpoint 3 release metadata does not match the 0.1.0 final decision-story contract.'
+}
+& python (Join-Path $checkpoint03Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'DA-730 Checkpoint 3 validator self-check failed.'
+}
+
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
 Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
 Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."
@@ -590,3 +661,4 @@ Write-Output "DA-730 $($module12.Label) passed: $($module12.Sections) contract s
 Write-Output "DA-730 $($module13.Label) passed: $($module13.Sections) contract sections and $($module13.FileCount) required files."
 Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."
 Write-Output "DA-730 Checkpoint 2 passed: 17 contract sections and $($checkpoint02Files.Count) package files."
+Write-Output "DA-730 Checkpoint 3 passed: 17 contract sections and $($checkpoint03Files.Count) package files."

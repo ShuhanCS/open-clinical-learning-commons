@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.25.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. All 13 concept-first DA-730 modules are runnable release candidates and retain the 112.5-hour course workload. The Week 3 and Week 6 checkpoints both have exact folder contracts, reproducible assemblers, learner templates, validators, and instructor handoffs.
+- Current version: `0.26.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 now has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates while retaining the 112.5-hour course workload. The final checkpoint packages one public clinical evidence chain, two audience versions, exact data, accessibility, reproduction, review disposition, and oral defense.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -127,6 +127,10 @@ The public preview also includes a [chart atlas](courses/data-visualization/atla
 - [Module 13 assessment](courses/data-visualization/modules/13-audience-annotation-narrative-capstone/assessment.md)
 - [Module 13 instructor notes](courses/data-visualization/modules/13-audience-annotation-narrative-capstone/instructor-notes.md)
 - [Module 13 release record](courses/data-visualization/modules/13-audience-annotation-narrative-capstone/release.json)
+- [Final decision-story capstone](courses/data-visualization/checkpoints/03-decision-story-capstone/README.md)
+- [Final checkpoint specification](docs/curriculum/courses/DA-730/checkpoints/03-decision-story-capstone-spec.md)
+- [Final checkpoint instructor notes](courses/data-visualization/checkpoints/03-decision-story-capstone/instructor-notes.md)
+- [Final checkpoint release record](courses/data-visualization/checkpoints/03-decision-story-capstone/release.json)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
@@ -185,9 +189,9 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Assemble and validate the DA-730 final half-term checkpoint.
-2. Complete the named human reviews before promoting any module or checkpoint to alpha.
-3. Begin the separate FND-1 and FND-2 technical foundation builds.
+1. Build FND-1 as its own straight-through technical foundations course.
+2. Build FND-2 as a separate straight-through technical foundations course.
+3. Complete the named DA-730 human reviews before alpha promotion.
 
 ## Licensing
 

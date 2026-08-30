@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
-- Status: course specification and all 13 module builds complete; final checkpoint build in progress
-- Specification version: 0.25.0
+- Status: all 13 module builds and all three checkpoint packages complete as runnable release candidates
+- Specification version: 0.26.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -463,7 +463,9 @@ The capstone proposal fixes the audience, decision, source and rights, populatio
 ## Final checkpoint: decision-story capstone
 
 - Due: official last day of the half-term.
-- Purpose: demonstrate the complete course outcome with one decision-ready release.
+- Purpose: let a faculty, clinical, accessibility, and reproducibility review panel decide whether the learner can release and defend the complete DA-730 competency.
+- Reference decision: authorize the emergency department quality director to conduct a definition and current-data review, then return to the hospital quality committee.
+- Passing dispositions: `approve` or `approve with conditions` after a score of at least 80 and passed clinical, accessibility, reproducibility, and oral-defense gates.
 
 The learner submits:
 
@@ -476,18 +478,28 @@ final-capstone/
   accessible-table.csv
   alt-text.md
   analysis/
+    analysis.R
   data/
+    ma_ed_public_reporting_dashboard_2026.csv
+    ed_dashboard_measure_dictionary_2026.csv
+    cms_ma_ed_dashboard_source_2026.csv
   source-record.yml
   transformation-record.md
+  audience-adaptation-record.md
   reproducibility-check.md
   critique-response.md
   ai-use.md
+  review-disposition.md
   defense/
     slides.pdf
+    slides-outline.md
     questions-and-responses.md
 ```
 
-The supporting figure is optional unless it answers a different question from the primary display. The capstone must not use several views to avoid choosing a clear primary message.
+The primary executive figure supports authorization. The supporting technical figure answers a different trace-and-validate question. Both preserve the source, values, definitions, time, trigger origin, material limitation, and action boundary. The assembled starter deliberately remains incomplete until the learner completes every record, exports an accessible defense PDF, passes the defense, and receives a recorded disposition.
+
+- Full checkpoint specification: `docs/curriculum/courses/DA-730/checkpoints/03-decision-story-capstone-spec.md`.
+- Runnable assembler, editable analysis, learner templates, validator, instructor notes, and release record: `courses/data-visualization/checkpoints/03-decision-story-capstone/`.
 
 ## Assessment weights
 
@@ -646,7 +658,7 @@ Build one numbered module at a time:
 13. Module 12: Dashboards and multi-view composition.
 14. Assemble and test checkpoint 2.
 15. Module 13: Audience, annotation, narrative, and capstone.
-16. Assemble and test the final checkpoint and complete course wrapper.
+16. Assemble and test the final checkpoint and complete course wrapper. Complete.
 
 Each completed module updates `docs/curriculum/BUILD-LEDGER.md`, bumps the release version when appropriate, runs its checks, and is committed and pushed before the next module begins.
 
@@ -676,6 +688,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Each module has its full specification and runnable teaching package.
 - [x] Checkpoint 1 assembly and validator run from a clean checkout.
 - [x] Checkpoint 2 assembly regenerates six figures, six exact tables, and six accessible alternatives from Modules 07 through 12; its validator self-check and overwrite guard pass.
+- [x] The final checkpoint has a 17-section specification, portable three-file data release, two-audience analysis, exact three-row table, learner and review templates, oral-defense contract, safe assembler, strict validator, instructor notes, and release record.
 - [ ] Faculty, clinical, accessibility, and independent-instructor reviews are recorded.
 - [ ] The official DA-730 versus DA-830 course number is confirmed for publication.
 - [ ] The course has reached at least beta after a taught pilot.
