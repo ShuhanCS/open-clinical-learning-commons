@@ -9,8 +9,8 @@ APP-1 is the first domain-specific applied course. Learners use a continuing syn
 - Core tools: SQL and Python
 - Final deliverable: clinical care improvement brief with reproducible evidence and a defense
 - Course package version: 0.1.0
-- Commons release: 0.52.0
-- Current package status: Modules 01 through 04 and the Week 3 checkpoint are runnable release candidates
+- Commons release: 0.53.0
+- Current package status: Modules 01 through 05 and the Week 3 checkpoint are runnable release candidates
 
 ## Seven applied modules
 
@@ -36,6 +36,8 @@ Module 06 contains eight hours of cumulative application and equity work plus an
 - [Week 3 checkpoint durable specification](../../docs/curriculum/courses/APP-1/checkpoints/01-longitudinal-survival-readiness-spec.md)
 - [Module 04: Risk adjustment and fair comparison](modules/04-risk-adjustment-fair-comparison/README.md)
 - [Module 04 durable specification](../../docs/curriculum/courses/APP-1/modules/04-risk-adjustment-fair-comparison-spec.md)
+- [Module 05: Clinical variation and patterns of care](modules/05-clinical-variation-patterns-of-care/README.md)
+- [Module 05 durable specification](../../docs/curriculum/courses/APP-1/modules/05-clinical-variation-patterns-of-care-spec.md)
 
 Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns, and defines a 476-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
 
@@ -48,6 +50,8 @@ Module 03 releases 84 event-time rows, 12 fixed-time risk rows, and exact log-ra
 The Week 3 checkpoint assembles 78 accepted module files into a 91-file package. It carries the 20.00-point Module 02 score once, requires all 16 survival gates, and continues to Module 04 with the failed PH screen as an open methods condition.
 
 Module 04 uses a fixed day-335 outcome because every no-event person reaches the same administrative boundary and no competing death occurs first. Its prespecified four-predictor expected model has apparent Brier score 0.13490621 and apparent ROC AUC 0.66585409. The secondary adjusted scheduled-follow-up odds ratio is 1.16353250 with a 95 percent interval from 0.67665877 to 2.00072462. All six synthetic sites meet the reporting minimums, remain in fixed order, and are reported with caution rather than ranked.
+
+Module 05 reads 1,694 post-landmark encounter rows, 742 medication rows, 1,832 procedure rows, and 92 care-plan rows from the full pinned Synthea database. Recorded scheduled follow-up spans 22.99 percent to 37.80 percent across the fixed synthetic teaching sites, but the global p-value is 0.27993975 and the known direct site effect is zero. The module treats that 14.82-point spread as a prospective measurement question, not site performance, and explicitly prevents medication orders from becoming an adherence measure.
 
 ## Three cumulative checkpoints
 
@@ -76,4 +80,4 @@ No real patient records are used. Synthetic frequencies do not estimate real pre
 
 ## Build order
 
-Modules 01 through 04 and the Week 3 checkpoint are complete. Module 05 next owns treatment, procedure, adherence, utilization, time, and pathway variation without turning the Module 04 comparisons into causal effects or site grades.
+Modules 01 through 05 and the Week 3 checkpoint are complete. Module 06 next owns formal equity review, feasible improvement design, the Week 6 application release, and the embedded simple-versus-machine-learning comparison.

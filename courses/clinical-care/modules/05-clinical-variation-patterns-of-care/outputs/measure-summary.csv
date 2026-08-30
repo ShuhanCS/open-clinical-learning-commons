@@ -1,0 +1,9 @@
+measure_id,measure,numerator,denominator,proportion,denominator_definition,claim_limit
+M01,Recorded scheduled follow-up by day 30,129,476,0.27100840,476 landmark-eligible people,record occurrence does not prove offer attendance access quality need or benefit
+M02,Continued scheduled-care record by day 90,260,476,0.54621849,people in the comparison group,not continuity quality need access or causal pathway effect
+M03,Any scheduled-care record after landmark,433,476,0.90966387,people in the comparison group,not catch-up benefit unmet need or causal pathway effect
+M04,Any medication-order record after landmark,279,476,0.58613445,people in the comparison group,not dispensing possession ingestion adherence correct use efficacy or preference
+M05,Medication-reconciliation procedure record after landmark,143,476,0.30042017,people in the comparison group,not proof that a validated reconciliation process was completed
+M06,Any procedure record after landmark,297,476,0.62394958,people in the comparison group,not quality appropriateness need overuse underuse or effect
+M10,Later acute return by day 365,87,476,0.18277311,people in the comparison group,not causal effect risk adjustment repair or real return rate
+M11,Medication-reconciliation record by day 30 among recorded follow-up,17,129,0.13178295,129 people with recorded scheduled follow-up,not a validated reconciliation rate or proof of completed reconciliation

@@ -1,0 +1,7 @@
+exposure_group,window,window_days,people,person_days,people_with_scheduled_record,scheduled_records,scheduled_records_per_1000_person_days,all_encounter_records,all_records_per_1000_person_days,acute_records,acute_records_per_1000_person_days,claim_limit
+scheduled_followup,days_31_90,60,129,7740,61,148,19.12144703,156,20.15503876,5,0.64599483,synthetic source-record rate; not real utilization need access quality overuse or underuse
+scheduled_followup,days_91_180,90,129,11610,52,152,13.09216193,163,14.03962102,8,0.68906115,synthetic source-record rate; not real utilization need access quality overuse or underuse
+scheduled_followup,days_181_365,185,129,23865,73,170,7.12340247,196,8.21286403,17,0.71234025,synthetic source-record rate; not real utilization need access quality overuse or underuse
+no_recorded_followup,days_31_90,60,347,20820,199,307,14.74543708,365,17.53121998,46,2.20941402,synthetic source-record rate; not real utilization need access quality overuse or underuse
+no_recorded_followup,days_91_180,90,347,31230,137,194,6.21197566,231,7.39673391,22,0.70445085,synthetic source-record rate; not real utilization need access quality overuse or underuse
+no_recorded_followup,days_181_365,185,347,64195,211,486,7.57068308,583,9.08170418,68,1.05927253,synthetic source-record rate; not real utilization need access quality overuse or underuse

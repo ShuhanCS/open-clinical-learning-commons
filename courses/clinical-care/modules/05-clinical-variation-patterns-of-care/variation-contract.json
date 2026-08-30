@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "app1-clinical-variation-v1",
+  "origin": "accepted index encounter stop",
+  "landmark_day": 30,
+  "end_day": 365,
+  "post_landmark_person_days": 335,
+  "scheduled_classes": ["ambulatory", "outpatient", "wellness"],
+  "acute_classes": ["emergency", "inpatient"],
+  "time_windows": [
+    {"id": "days_31_90", "start_open": 30, "end_closed": 90, "days": 60},
+    {"id": "days_91_180", "start_open": 90, "end_closed": 180, "days": 90},
+    {"id": "days_181_365", "start_open": 180, "end_closed": 365, "days": 185}
+  ],
+  "exposure_order": ["scheduled_followup", "no_recorded_followup"],
+  "clinical_subgroup_order": ["inpatient", "emergency"],
+  "site_order": ["SITE-A", "SITE-B", "SITE-C", "SITE-D", "SITE-E", "SITE-F"],
+  "support": {"minimum_people": 50, "minimum_numerator": 10, "minimum_complement": 10},
+  "statistics": {
+    "difference_interval": "unpooled large-sample 95 percent interval",
+    "two_group_test": "two-sided Fisher exact",
+    "site_global_test": "Pearson chi-square",
+    "pairwise_site_tests": "prohibited"
+  },
+  "known_direct_site_effect": 0,
+  "randomness": "none",
+  "allowed_progression": ["continue", "continue with conditions", "revise", "refer"]
+}

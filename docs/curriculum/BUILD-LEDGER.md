@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.51.0
+- Current release: 0.53.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-1 Checkpoint 1, longitudinal and survival readiness
-- Next unit: APP-1 Module 04, risk adjustment and fair comparison
+- Last completed unit: APP-1 Module 05, clinical variation and patterns of care
+- Next unit: APP-1 Module 06, equity, feasible improvement, and embedded machine learning
 
 ## Confirmed decisions
 
@@ -323,6 +323,16 @@
 - Complete reference validation passes 155 checks, starter validation passes 85 checks, and module-root validation passes 122 checks. Copied validation and incomplete, output, score, progression, and field-role mutation rejection pass.
 - The cumulative 25-point survival and risk-adjustment component passes all 18 Module 04 gates and is scored once at the Week 6 checkpoint. Module 05 is permitted for curriculum construction with model, uncertainty, confounding, equity, survival, review, and R-execution conditions.
 - APP-1 Module 04 is a runnable release candidate at Commons 0.52.0.
+- APP-1 Module 05 version 0.1.0 accepts the exact 476-person cohort, the Module 04 expected-outcome file, and the full pinned Synthea SQLite database with SHA-256 values `558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5`, `e6c4efbe845bc1047040d27760aa22cf63a462ba4cca6709d6bdff8578af840e`, and `1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a`.
+- The read-only build uses 1,694 post-landmark encounter rows, 742 medication rows, 1,832 procedure rows, and 92 care-plan rows. It generates no new patient or clinical records.
+- The person-level care-pattern file preserves 476 people, 129 recorded follow-up exposures, 87 later acute returns, six fixed teaching sites, and the unchanged expected probabilities. Every person contributes the common 335-day descriptive record window.
+- Recorded follow-up ranges from 0.22988506 at SITE-E to 0.37804878 at SITE-F. The 0.14816372 operational spread crosses the curriculum threshold, while the global Pearson chi-square p-value is 0.27993975 and the synthetic site's known direct effect remains zero.
+- The exposure groups differ by -0.13129147 for any later scheduled-care record and -0.18597949 for any procedure record. The medication-record difference is -0.01713469. Timing, clinical need, and a record mix containing pregnancy and chronic-care pathways prevent causal or quality interpretations.
+- Seventeen of 129 people with recorded day-30 follow-up have the exact medication-reconciliation procedure description in the same window. The package treats this as source-record fidelity, not a validated completion rate, and labels medication rows treatment records rather than adherence.
+- Eleven deterministic outputs total 180,851 bytes. The nine-row immutable workspace manifest is 1,526 bytes with SHA-256 `7106a0ec0b412c61768eff72f03062e60cb3d9dfc0a887bb81be8f4475e7363e`.
+- Module-root validation passes 129 checks, complete reference validation passes 159 checks, and learner-starter validation passes 82 checks. Builder, workspace, copied-validator, mutation, score, and progression checks pass.
+- The 20-point clinical variation component passes all 18 gates and is scored once at the Week 6 checkpoint. Module 06 is permitted for curriculum construction with the bounded site finding, one equity question, one feasible improvement lever, and one transparent benchmark.
+- APP-1 Module 05 is a runnable release candidate at Commons 0.53.0.
 
 ## Pending confirmation
 
@@ -331,11 +341,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-1 course specification, accepted Checkpoint 1 package, Module 04 specification and release, Module 05 ownership boundary, and this ledger.
-2. Write the durable APP-1 Module 05 specification before broad implementation.
-3. Preserve the exact 476-person cohort, survival evidence, expected outcomes, field roles, synthetic-site provenance, and Module 04 manifest identity.
-4. Define treatment, procedure, adherence, utilization, time, and pathway-variation measures before analysis. Keep observed care patterns separate from recommendations and causal effects.
-5. Use the accepted exposure and site comparisons to ask where pathway variation occurs, not to rank sites or repair prior results.
-6. Build exact denominator, support, uncertainty, missingness, and failure checks for each variation measure.
-7. Carry sparse-model instability, apparent-only performance, fixed-expected-count intervals, residual confounding, equity review, and failed PH conditions forward.
-8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 06.
+1. Read the APP-1 course specification, accepted Week 3 checkpoint, Module 04 and Module 05 specifications and releases, Module 06 ownership boundary, and this ledger.
+2. Write the durable APP-1 Module 06 specification before broad implementation.
+3. Preserve the exact cohort, survival limits, expected outcomes, clinical-variation outputs, synthetic-site provenance, and Module 05 manifest identity.
+4. Prespecify demographic subgroup support, missingness, equity language, pathway-access measures, and suppression before calculating subgroup results.
+5. Turn the one bounded variation finding into a feasible improvement option with implementation, process, outcome, and balancing measures; do not authorize implementation from synthetic evidence.
+6. Compare one bounded machine-learning model with the transparent benchmark under the same prediction time, eligible features, split, and evaluation rows.
+7. Keep calibration, subgroup support, error costs, failure cases, test contamination, leakage, and whether machine learning changes the decision explicit.
+8. Assemble the cumulative Week 6 package, score the 25-point survival/risk component and 20-point variation component exactly once, validate, advance semver, commit, and push.

@@ -1,0 +1,17 @@
+check_name,observed_value,expected_value,status
+people,476,476,pass
+unique_people,476,476,pass
+recorded_followup,129,129,pass
+later_acute_returns,87,87,pass
+teaching_sites,6,6,pass
+sum_expected_events,86.99999984,86.99999984,pass
+post_landmark_encounters,1694,1694,pass
+post_landmark_scheduled_encounters,1457,1457,pass
+post_landmark_acute_encounters,166,166,pass
+post_landmark_medication_rows,742,742,pass
+post_landmark_procedure_rows,1832,1832,pass
+post_landmark_careplan_rows,92,92,pass
+medication_reconciliation_rows_day_0_30,19,19,pass
+people_with_medication_reconciliation_day_0_30,17,17,pass
+common_person_days,335,335,pass
+database_query_only,1,1,pass

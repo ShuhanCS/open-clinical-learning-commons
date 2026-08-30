@@ -1,0 +1,9 @@
+name: oclc-app1-05
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - matplotlib=3.10.9
+  - numpy=2.0.2
+  - pandas=3.0.3
+  - scipy=1.17.1

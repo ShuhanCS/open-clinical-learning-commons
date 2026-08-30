@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app1-05",
+    "title": "Clinical variation and patterns of care",
+    "version": "0.1.0",
+    "commons_release": "0.53.0",
+    "course": "APP-1: Data for Clinical Care",
+    "week": 5,
+    "hours": 16.0,
+    "course_points": 20,
+    "awarded_at": "Week 6 checkpoint"
+  },
+  "upstream": {
+    "module04_id": "oclc-app1-04",
+    "module04_version": "0.1.0",
+    "module04_commons_release": "0.52.0",
+    "module04_manifest_sha256": "5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb",
+    "analysis_cohort_rows": 476,
+    "analysis_cohort_fields": 49,
+    "analysis_cohort_bytes": 200699,
+    "analysis_cohort_sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5",
+    "expected_outcomes_rows": 476,
+    "expected_outcomes_fields": 12,
+    "expected_outcomes_bytes": 54320,
+    "expected_outcomes_sha256": "e6c4efbe845bc1047040d27760aa22cf63a462ba4cca6709d6bdff8578af840e"
+  },
+  "source": {
+    "synthea_sqlite_sha256": "1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a",
+    "access": "read-only",
+    "post_landmark_rows": {
+      "encounters": 1694,
+      "medications": 742,
+      "procedures": 1832,
+      "careplans": 92
+    },
+    "generated_clinical_rows": 0
+  },
+  "reference_results": {
+    "people": 476,
+    "recorded_followup": 129,
+    "later_acute_returns": 87,
+    "post_landmark_person_days_each": 335,
+    "people_with_medication_record": 279,
+    "people_with_procedure_record": 297,
+    "people_with_post_landmark_medication_reconciliation_record": 143,
+    "people_with_day30_medication_reconciliation_among_followup": 17,
+    "day30_medication_reconciliation_followup_denominator": 129,
+    "site_recorded_followup_minimum_site": "SITE-E",
+    "site_recorded_followup_minimum": "0.22988506",
+    "site_recorded_followup_maximum_site": "SITE-F",
+    "site_recorded_followup_maximum": "0.37804878",
+    "site_recorded_followup_range": "0.14816372",
+    "site_recorded_followup_global_p": "0.27993975",
+    "site_recorded_followup_threshold_met": "yes",
+    "known_direct_site_effect": 0,
+    "later_scheduled_record_exposure_difference": "-0.13129147",
+    "medication_record_exposure_difference": "-0.01713469",
+    "procedure_record_exposure_difference": "-0.18597949",
+    "inpatient_emergency_outcome_difference": "0.32197657"
+  },
+  "outputs": {
+    "analysis-checks.csv": {"rows": 16, "fields": 4, "bytes": 660, "sha256": "3dabac9212c8a09a4a9c1386739a3f07ab3a776c7628f924e553c1c5a9842753"},
+    "build-report.json": {"bytes": 1914, "sha256": "86d76bb049a3b54f83ba692f1c0e514035e5a76d2cd874080a0d9b45d0ed6f62"},
+    "care-patterns.csv": {"rows": 476, "fields": 26, "bytes": 99475, "sha256": "c5d372e777ff3b190859e7c418b87c4f165776b84fb86346db700fa39f516a6e"},
+    "clinical-subgroup-variation.csv": {"rows": 6, "fields": 18, "bytes": 1660, "sha256": "1d98c4ea0e9ad29b149dd6a841971343aa2608c499cbde1f3003b83f5185ec10"},
+    "exposure-variation.csv": {"rows": 6, "fields": 18, "bytes": 1788, "sha256": "1a34057e6632da0c98a04abb774eb9266d55e170429539d55030c733edf74a8d"},
+    "measure-summary.csv": {"rows": 8, "fields": 7, "bytes": 1423, "sha256": "dfbd2be741cbf92b99bd5b6a29acb1a80589449e2edf4cb44c027cabe33f673e"},
+    "record-mix.csv": {"rows": 30, "fields": 7, "bytes": 5302, "sha256": "4354f65e4b077e94547dd7434831486cb0ef0de0ec704e8a93b8381318034841"},
+    "site-summary.csv": {"rows": 6, "fields": 15, "bytes": 1642, "sha256": "f22c4cee9689ccfed38b8cab83f98c65a0785b1b75caf8b88f53535d7991c8bf"},
+    "site-variation.csv": {"rows": 36, "fields": 12, "bytes": 8081, "sha256": "85c43edd00e0e9094c2197ce441a8b8bc187d48b80b5a58d32c2aa025e3e4f6b"},
+    "time-variation.csv": {"rows": 6, "fields": 13, "bytes": 1361, "sha256": "d6f2e4f816b90dfab2b7afd0add77f7c6939b9595ffb27fd953143ec05acbf6a"},
+    "variation-figure.svg": {"bytes": 57545, "sha256": "c937a8f6bc942e501eab036c64ad4ab63c0fd3c775e78bdf6ad6a385ed9597eb"}
+  },
+  "package": {
+    "immutable_manifest_rows": 9,
+    "editable_work_files": 9,
+    "learner_files": 19,
+    "reference_files": 30,
+    "output_files": 11,
+    "output_bytes": 180851,
+    "manifest_bytes": 1526,
+    "manifest_sha256": "7106a0ec0b412c61768eff72f03062e60cb3d9dfc0a887bb81be8f4475e7363e"
+  },
+  "assessment": {
+    "course_points": 20,
+    "criteria": 5,
+    "noncompensable_gates": 18,
+    "reference_points": 20,
+    "reference_gates_passed": 18
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "module_root_checks": 129,
+    "complete_reference_checks": 159,
+    "starter_checks": 82,
+    "copied_validator_check": "pass",
+    "two_build_output_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_database_rejection": "pass",
+    "changed_cohort_rejection": "pass",
+    "changed_expected_outcome_rejection": "pass",
+    "changed_contract_rejection": "pass",
+    "changed_output_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module06_permission": "permitted for curriculum construction",
+    "clinical_use": "prohibited"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, source-record analysis, teaching package, and validation"}
+  ],
+  "known_issues": [
+    "Named clinical care, medication safety, health-services methods, informatics, equity, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "Medication rows do not establish dispensing, possession, ingestion, persistence, adherence, benefit, or preference.",
+    "Procedure and encounter records reflect heterogeneous clinical need and simulation pathways and are not quality or utilization judgments.",
+    "The six teaching sites are deterministic synthetic labels with known direct effect zero and cannot be ranked as real facilities.",
+    "Difference intervals use a simple unpooled large-sample method; pairwise site selection and testing are prohibited.",
+    "The source is synthetic and cannot support real-population, causal, efficacy, fairness, ranking, or deployment claims."
+  ]
+}

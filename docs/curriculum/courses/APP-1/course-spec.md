@@ -13,7 +13,7 @@
 - R role: read, run, and interpret published survival and risk-adjustment code; writing R from scratch is not graded.
 - Final deliverable: clinical care improvement brief with complete reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.49.1 for corrected Module 01.
+- Current Commons release: 0.53.0 through runnable Module 05.
 - Specification status: construction candidate.
 
 APP-1 is the first applied course. Learners follow a clinical cohort over time, compare care and outcomes while accounting for baseline differences, and recommend a feasible care-pathway improvement. The course takes longitudinal cohorts, censoring, survival analysis, risk adjustment, and clinical variation from foundation recognition to working skill.

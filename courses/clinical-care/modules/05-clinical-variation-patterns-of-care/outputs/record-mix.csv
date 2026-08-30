@@ -1,0 +1,31 @@
+record_type,exposure_group,rank,description,record_count,people,claim_limit
+medication,all,1,insulin human  isophane 70 UNT/ML / Regular Insulin  Human 30 UNT/ML Injectable Suspension [Humulin],62,14,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,all,2,Hydrochlorothiazide 25 MG Oral Tablet,49,43,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,all,3,24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet,48,16,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,all,4,Simvastatin 10 MG Oral Tablet,46,46,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,all,5,amLODIPine 5 MG / Hydrochlorothiazide 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet,45,33,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,scheduled_followup,1,120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler,19,17,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,scheduled_followup,2,NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler,19,17,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,scheduled_followup,3,24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet,18,6,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,scheduled_followup,4,insulin human  isophane 70 UNT/ML / Regular Insulin  Human 30 UNT/ML Injectable Suspension [Humulin],17,4,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,scheduled_followup,5,Simvastatin 10 MG Oral Tablet,12,12,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,no_recorded_followup,1,insulin human  isophane 70 UNT/ML / Regular Insulin  Human 30 UNT/ML Injectable Suspension [Humulin],45,10,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,no_recorded_followup,2,Hydrochlorothiazide 25 MG Oral Tablet,41,36,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,no_recorded_followup,3,amLODIPine 5 MG / Hydrochlorothiazide 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet,37,26,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,no_recorded_followup,4,Simvastatin 10 MG Oral Tablet,34,34,record composition can reflect clinical need and simulation pathways; not quality or effect
+medication,no_recorded_followup,5,24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet,30,10,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,all,1,Auscultation of the fetal heart,189,33,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,all,2,Evaluation of uterine fundal height,189,33,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,all,3,Medication Reconciliation (procedure),163,143,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,all,4,Depression screening,138,128,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,all,5,Physical examination following birth,121,121,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,scheduled_followup,1,Auscultation of the fetal heart,52,11,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,scheduled_followup,2,Evaluation of uterine fundal height,52,11,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,scheduled_followup,3,Medication Reconciliation (procedure),34,31,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,scheduled_followup,4,Depression screening,20,19,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,scheduled_followup,5,Intramuscular injection,19,6,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,no_recorded_followup,1,Auscultation of the fetal heart,137,22,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,no_recorded_followup,2,Evaluation of uterine fundal height,137,22,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,no_recorded_followup,3,Medication Reconciliation (procedure),129,112,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,no_recorded_followup,4,Depression screening,118,109,record composition can reflect clinical need and simulation pathways; not quality or effect
+procedure,no_recorded_followup,5,Physical examination following birth,106,106,record composition can reflect clinical need and simulation pathways; not quality or effect

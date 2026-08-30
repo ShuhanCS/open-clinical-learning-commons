@@ -1,0 +1,60 @@
+{
+  "module": "oclc-app1-05",
+  "module_version": "0.1.0",
+  "commons_release": "0.53.0",
+  "analysis_id": "app1-clinical-variation-v1",
+  "sources": {
+    "database_sha256": "1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a",
+    "database_access": "read-only",
+    "analysis_cohort_sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5",
+    "expected_outcomes_sha256": "e6c4efbe845bc1047040d27760aa22cf63a462ba4cca6709d6bdff8578af840e",
+    "source_rows_post_landmark": {
+      "encounters": 1694,
+      "medications": 742,
+      "procedures": 1832,
+      "careplans": 92
+    }
+  },
+  "cohort": {
+    "people": 476,
+    "recorded_followup": 129,
+    "later_acute_returns": 87,
+    "sites": 6,
+    "post_landmark_person_days_each": 335
+  },
+  "reference_findings": {
+    "medication_reconciliation_people_day_0_30_among_recorded_followup": 17,
+    "medication_reconciliation_denominator_recorded_followup": 129,
+    "site_recorded_followup_range": "0.14816372",
+    "site_recorded_followup_global_p": "0.27993975",
+    "site_recorded_followup_threshold_met": "yes",
+    "known_direct_site_effect": 0
+  },
+  "methods": {
+    "randomness": "none",
+    "difference_interval": "unpooled large-sample 95 percent interval",
+    "site_global_test": "Pearson chi-square"
+  },
+  "software": {
+    "python": "3.12",
+    "pandas": "3.0.3",
+    "numpy": "2.0.2",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "sqlite": "3.49.1"
+  },
+  "outputs": [
+    "analysis-checks.csv",
+    "build-report.json",
+    "care-patterns.csv",
+    "clinical-subgroup-variation.csv",
+    "exposure-variation.csv",
+    "measure-summary.csv",
+    "record-mix.csv",
+    "site-summary.csv",
+    "site-variation.csv",
+    "time-variation.csv",
+    "variation-figure.svg"
+  ],
+  "claim_boundary": "synthetic recorded-care variation only; not adherence causation quality fairness ranking or deployment"
+}

@@ -1,0 +1,27 @@
+module_id: oclc-app1-05
+module_version: 0.1.0
+commons_release: 0.53.0
+accepted_upstream:
+  module04_id: oclc-app1-04
+  module04_version: 0.1.0
+  module04_commons_release: 0.52.0
+  module04_manifest_sha256: 5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb
+analysis_cohort:
+  rows: 476
+  fields: 49
+  bytes: 200699
+  sha256: 558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5
+expected_outcomes:
+  rows: 476
+  fields: 12
+  bytes: 54320
+  sha256: e6c4efbe845bc1047040d27760aa22cf63a462ba4cca6709d6bdff8578af840e
+synthea_sqlite:
+  sha256: 1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a
+  access: read-only
+  source_tables: encounters medications procedures careplans
+extension:
+  id: app1-six-site-v1
+  sites: 6
+  known_direct_site_effect: zero
+claim_boundary: synthetic descriptive patterns of recorded care only; no adherence causal clinical quality equity ranking or deployment claim
