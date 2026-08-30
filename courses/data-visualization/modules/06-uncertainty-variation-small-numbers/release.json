@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-06",
+    "title": "Uncertainty, variation, and small numbers",
+    "version": "0.1.0",
+    "commons_release": "0.17.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "id": "oclc-ma-hf-readmission-uncertainty-2026",
+    "version": "0.1.0",
+    "path": "data/ma_hf_readmission_uncertainty_2026.csv",
+    "row_count": 65,
+    "column_count": 26,
+    "sha256": "33e6284a1064bb12600903526e4e65c009f875d9e6f6a3f25783d3a9a4b00727",
+    "unit": "Massachusetts hospital measure row",
+    "public_aggregate_data": true,
+    "synthetic": false
+  },
+  "sources": {
+    "cms_hospital": {
+      "dataset_id": "632h-zaca",
+      "measure_id": "READM_30_HF",
+      "release_date": "2026-08-13",
+      "period": "2023-07-01 to 2025-06-30",
+      "raw_row_count": 67060,
+      "raw_bytes": 19048784,
+      "raw_sha256": "a3e64029ea6daea1f7de163e5b5054b918d0c8be986fccfc47c7a8d5b29a6d1d",
+      "path": "data/cms_hf_readmission_hospitals_2026.csv",
+      "row_count": 4790,
+      "sha256": "e69fcee79711ef8496cb32205b492e6e3a788c4e63009bc1330a84216b0edeba",
+      "landing_page": "https://data.cms.gov/provider-data/dataset/632h-zaca"
+    },
+    "cms_national": {
+      "dataset_id": "cvcs-xecj",
+      "release_date": "2026-08-13",
+      "path": "data/cms_unplanned_national_2026.csv",
+      "row_count": 14,
+      "sha256": "408c2d3f27a93c9294f9399e6a0deabfe70076685a5e06f285daf857e92161f9",
+      "national_rate": 21.3,
+      "landing_page": "https://data.cms.gov/provider-data/dataset/cvcs-xecj"
+    },
+    "cms_footnotes": {
+      "dataset_id": "y9us-9xdf",
+      "release_date": "2026-08-13",
+      "path": "data/cms_footnote_crosswalk_2026.csv",
+      "row_count": 32,
+      "sha256": "94d22120d0efcb0d6f98f3470bce8a7cffb3cf657eb95179556198c4ebae84e7",
+      "landing_page": "https://data.cms.gov/provider-data/dataset/y9us-9xdf"
+    }
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    },
+    "cms_data": {
+      "spdx": "LicenseRef-US-Government-Public-Data",
+      "url": "https://data.cms.gov/provider-data/"
+    }
+  },
+  "source": {
+    "curriculum_title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "curriculum_author": "Ali Goff",
+    "curriculum_date": "2026-08-15",
+    "curriculum_path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "source_record": "source-record.yml",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/06-uncertainty-variation-small-numbers-spec.md"
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "course designer and content owner"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, public-source build, implementation, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The data validator passed 42 checks. Four lab figures, one decision table, and two critique figures rendered successfully."
+    },
+    "required_human_roles": [
+      {
+        "role": "visualization and source fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "clinical quality interpretation",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "statistical interpretation",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "data_checks": "42 of 42 pass",
+    "source_build": "67,060 raw hospital rows, 4,790 selected measure rows, 14 national rows, 32 footnotes, and 65 Massachusetts rows",
+    "lab_execution": "pass: four PNGs and one decision CSV",
+    "critique_execution": "pass: two intentionally flawed PNGs",
+    "measured_results": {
+      "massachusetts_rows": 65,
+      "reported_rows": 53,
+      "no_different_rows": 52,
+      "worse_rows": 1,
+      "too_few_rows": 2,
+      "not_available_rows": 10,
+      "national_rate": 21.3,
+      "top_ten_classified_worse": 1,
+      "descriptive_overlapping_interval_pairs": 1378,
+      "all_interval_pairs": 1378,
+      "denominator_min": 30,
+      "denominator_max": 2088,
+      "score_min": 19.7,
+      "score_max": 25.2
+    }
+  },
+  "known_issues": [
+    "Human visualization, clinical quality, statistical interpretation, accessibility, and independent-instructor reviews are pending.",
+    "CMS labels the interval columns Lower Estimate and Higher Estimate; this module does not invent a confidence level.",
+    "The risk-standardized model cannot be reconstructed from the public extract alone.",
+    "CMS source categories compare each hospital with the national rate and do not test every hospital pair.",
+    "Descriptive interval overlap does not establish equivalence or a pairwise result.",
+    "The national summary too-few count is preserved as published and may not equal a simple count of one hospital display category.",
+    "Public data lag current operations and do not establish causal hospital quality differences.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

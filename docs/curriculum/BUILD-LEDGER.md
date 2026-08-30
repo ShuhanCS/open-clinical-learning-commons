@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.16.0
+- Current release: 0.17.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 05, Rates, denominators, and adjustment
-- Next unit: DA-730 Module 06, Uncertainty, variation, and small numbers
+- Last completed unit: DA-730 Module 06, Uncertainty, variation, and small numbers
+- Next unit: DA-730 week-3 checkpoint verification, then Module 07, Color and accessible visual communication
 
 ## Confirmed decisions
 
@@ -44,6 +44,12 @@
 - Module 05 teaching table contains 100 North Carolina counties and SHA-256 `1528b204830966dff88e00f57fc4f77b8dcf5db135daa122e8aff3679fdf32c7`.
 - Module 05 passes 32 data checks. Its lab creates four figures and a decision table; its critique creates two deliberately flawed figures.
 - In the pinned release, the top 12 modeled-count and top 12 age-adjusted-prevalence lists have zero counties in common. The largest count-to-adjusted rank change is 93 places.
+- DA-730 Module 06 validates the complete 67,060-row CMS Unplanned Hospital Visits hospital download before preserving all 4,790 `READM_30_HF` rows, all 14 national summary rows, and all 32 official footnotes.
+- Module 06 national hospital extract SHA-256: `e69fcee79711ef8496cb32205b492e6e3a788c4e63009bc1330a84216b0edeba`.
+- Module 06 Massachusetts teaching table contains 65 hospital rows and SHA-256 `33e6284a1064bb12600903526e4e65c009f875d9e6f6a3f25783d3a9a4b00727`.
+- Module 06 passes 42 data checks. Its lab creates four figures and a decision table; its critique creates two deliberately flawed figures.
+- The Massachusetts case has 53 reported estimates, 52 CMS-classified no different from the national rate, 1 worse, 2 too few, and 10 not available. Only 1 of the ten highest point estimates is source-classified worse.
+- All 1,378 displayed Massachusetts interval pairs overlap descriptively. The module states that this is not a pairwise hypothesis test and does not prove equivalence.
 
 ## Pending confirmation
 
@@ -52,9 +58,9 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, DA-730 course specification, and Module 05 handoff.
-2. Write `docs/curriculum/courses/DA-730/modules/06-uncertainty-variation-small-numbers-spec.md` using the 21-section contract.
-3. Choose the exact public hospital or trial estimate source and preserve sample size, estimate, interval, suppression, period, and adjustment fields.
-4. Create interval, rank, small-number, and deliberately misleading league-table views.
-5. Add the learner lesson, tiered lab, critique set, exact assessment, instructor key, accessibility checks, and release record.
-6. Verify and release Module 06, then assemble the week-3 checkpoint from Modules 01 through 06.
+1. Verify the exact week-3 checkpoint folder contract against the released outputs from Modules 01 through 06.
+2. Read the DA-730 Module 07 brief and the Module 06 accessibility handoff.
+3. Write `docs/curriculum/courses/DA-730/modules/07-color-accessible-communication-spec.md` using the 21-section contract.
+4. Reuse the Module 06 interval and status case so color changes do not change the statistical claim.
+5. Build screen, print, grayscale, redundant-encoding, and text-alternative exercises.
+6. Verify and release Module 07, then continue to Module 08.

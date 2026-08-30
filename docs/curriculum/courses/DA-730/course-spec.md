@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.16.0
+- Specification version: 0.17.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -220,13 +220,16 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Prerequisites: Modules 01 through 05 and an introductory understanding of intervals.
 - Competency: Display estimate uncertainty and distinguish a stable difference from sampling noise, measurement variation, or a small denominator.
 - Concepts: confidence intervals, prediction intervals, margins of error, funnel plots, caterpillar plots, forest plots, control limits, multiplicity, and suppressed or unreliable estimates.
-- Primary case: hospital or trial estimates with sample size and uncertainty.
+- Primary case: Massachusetts hospital heart failure 30-day readmission estimates from the complete national CMS selected-measure release.
 - Decision owner: clinical quality or research review committee.
-- Core sources: https://clinicaltrials.gov/data-api and https://data.cms.gov/provider-data/topics/hospitals
-- Lab: build an interval display, compare it with a rank chart, and identify decisions that the rank chart overstates.
-- Critique: repair a league table that treats close estimates as certain and a subgroup chart that hides small samples.
+- Core sources: https://data.cms.gov/provider-data/dataset/632h-zaca, https://data.cms.gov/provider-data/dataset/cvcs-xecj, and https://data.cms.gov/provider-data/dataset/y9us-9xdf
+- Lab: compare a 53-position rank chart with CMS source intervals, the 21.3 national rate, denominators, and reporting status across all 65 Massachusetts hospital rows.
+- Critique: repair a point-only top-ten league table and a chart that gives small and large denominators equal visual certainty.
 - Submission: `module-06/uncertainty-brief.md`, `module-06/analysis.R`, `module-06/figure.png`, `module-06/source-record.yml`, `module-06/alt-text.md`, and `module-06/decision-note.md`.
 - Checkpoint contribution: closes the week-3 visualization judgment dossier.
+- Full specification: `docs/curriculum/courses/DA-730/modules/06-uncertainty-variation-small-numbers-spec.md`.
+- Runnable package: `courses/data-visualization/modules/06-uncertainty-variation-small-numbers/`.
+- Handoff: Module 07 tests whether the interval and status display works without relying on color.
 
 ## Module 07 brief: Color and accessible visual communication
 
@@ -560,7 +563,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01 through 05 are current runnable candidates. Their human reviews remain pending.
+Modules 01 through 06 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 
@@ -571,7 +574,7 @@ Build one numbered module at a time:
 3. Module 03: Chart selection in practice.
 4. Reconcile and complete the existing Module 04 candidate.
 5. Complete the released Module 05 candidate: Rates, denominators, and adjustment.
-6. Module 06: Uncertainty, variation, and small numbers.
+6. Complete the released Module 06 candidate: Uncertainty, variation, and small numbers.
 7. Assemble and test checkpoint 1.
 8. Module 07: Color and accessible visual communication.
 9. Module 08: Time and process variation.
@@ -592,6 +595,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] The course has 13 numbered modules across seven instructional weeks.
 - [x] Module 04 remains Distributions versus summaries and retains its current runnable package.
 - [x] Module 05 has a complete source-first specification and runnable teaching package.
+- [x] Module 06 has a complete source-first specification, runnable teaching package, and exact checkpoint handoff.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.

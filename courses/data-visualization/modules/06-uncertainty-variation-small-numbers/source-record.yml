@@ -1,0 +1,121 @@
+schema_version: "1.0.0"
+module_id: "oclc-da730-06"
+module_title: "Uncertainty, variation, and small numbers"
+retrieved_at: "2026-08-29"
+
+hospital_source:
+  publisher: "Centers for Medicare & Medicaid Services"
+  dataset_id: "632h-zaca"
+  dataset_title: "Unplanned Hospital Visits - Hospital"
+  landing_page: "https://data.cms.gov/provider-data/dataset/632h-zaca"
+  download_url: "https://data.cms.gov/provider-data/sites/default/files/resources/30edc1d0417a34b58affcc2495a02b0a_1785189969/Unplanned_Hospital_Visits-Hospital.csv"
+  catalog_api: "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items?theme=Hospitals"
+  data_dictionary: "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+  catalog_modified: "2026-07-22"
+  catalog_released: "2026-08-13"
+  raw_rows: 67060
+  raw_columns: 20
+  raw_bytes: 19048784
+  raw_sha256: "a3e64029ea6daea1f7de163e5b5054b918d0c8be986fccfc47c7a8d5b29a6d1d"
+  measure_filter:
+    field: "Measure ID"
+    value: "READM_30_HF"
+    measure_name: "Heart failure (HF) 30-Day Readmission Rate"
+    selected_rows: 4790
+    reported_rows: 3253
+    too_few_rows: 1020
+    not_available_rows: 517
+    reporting_start: "2023-07-01"
+    reporting_end: "2025-06-30"
+  released_extract:
+    path: "data/cms_hf_readmission_hospitals_2026.csv"
+    rows: 4790
+    columns: 20
+    sha256: "e69fcee79711ef8496cb32205b492e6e3a788c4e63009bc1330a84216b0edeba"
+
+national_source:
+  publisher: "Centers for Medicare & Medicaid Services"
+  dataset_id: "cvcs-xecj"
+  dataset_title: "Unplanned Hospital Visits - National"
+  landing_page: "https://data.cms.gov/provider-data/dataset/cvcs-xecj"
+  download_url: "https://data.cms.gov/provider-data/sites/default/files/resources/d30b0557f1d06bee1d5646d2eaede709_1785189969/Unplanned_Hospital_Visits-National.csv"
+  catalog_modified: "2026-07-22"
+  catalog_released: "2026-08-13"
+  raw_rows: 14
+  raw_bytes: 2814
+  raw_sha256: "44e39aedc296f00fa8477a3485a66012cbfcdefb173435199a0b03343c9402c3"
+  selected_measure:
+    measure_id: "READM_30_HF"
+    national_rate: 21.3
+    hospitals_worse: 38
+    hospitals_same: 3253
+    hospitals_better: 21
+    hospitals_too_few: 1121
+    reporting_start: "2023-07-01"
+    reporting_end: "2025-06-30"
+  released_extract:
+    path: "data/cms_unplanned_national_2026.csv"
+    rows: 14
+    columns: 14
+    sha256: "408c2d3f27a93c9294f9399e6a0deabfe70076685a5e06f285daf857e92161f9"
+
+footnote_source:
+  publisher: "Centers for Medicare & Medicaid Services"
+  dataset_id: "y9us-9xdf"
+  dataset_title: "Footnote Crosswalk"
+  landing_page: "https://data.cms.gov/provider-data/dataset/y9us-9xdf"
+  download_url: "https://data.cms.gov/provider-data/sites/default/files/resources/f29bb7c812e242f6edfef0a4b7d0eaca_1760630713/Footnote_Crosswalk.csv"
+  catalog_released: "2026-08-13"
+  raw_rows: 32
+  raw_bytes: 3456
+  raw_sha256: "5214e1468fb04c5cdeac8920f2c446cccaa65e2f6f929424cd228042a52d963e"
+  released_extract:
+    path: "data/cms_footnote_crosswalk_2026.csv"
+    rows: 32
+    columns: 2
+    sha256: "94d22120d0efcb0d6f98f3470bce8a7cffb3cf657eb95179556198c4ebae84e7"
+
+teaching_extract:
+  path: "data/ma_hf_readmission_uncertainty_2026.csv"
+  geography_filter: "State equals MA"
+  rows: 65
+  columns: 26
+  reported_rows: 53
+  too_few_rows: 2
+  not_available_rows: 10
+  no_different_rows: 52
+  worse_rows: 1
+  better_rows: 0
+  sha256: "33e6284a1064bb12600903526e4e65c009f875d9e6f6a3f25783d3a9a4b00727"
+  derived_fields:
+    - "reported_rank_worst_first"
+    - "interval_width"
+    - "contains_national_rate"
+    - "source_comparison_group"
+    - "denominator_display_group"
+    - "top_ten_point_rank"
+  derivation_note: "Display fields only. No source score, interval, denominator, status, or footnote is recomputed."
+
+build:
+  script: "build_hf_uncertainty.py"
+  runtime: "Python 3 standard library"
+  validation_script: "validate_hf_uncertainty.py"
+  validation_result: "42 of 42 checks pass"
+  raw_retention: "The build validates each complete raw download, then commits the full selected measure, national file, footnote file, and Massachusetts table."
+
+rights:
+  access_level: "public"
+  publisher: "U.S. Centers for Medicare & Medicaid Services"
+  source_terms_context: "https://data.cms.gov/provider-data/"
+  documentation_license: "CC-BY-4.0"
+  code_license: "MIT"
+  attribution: "Centers for Medicare & Medicaid Services, Unplanned Hospital Visits and Footnote Crosswalk, July 2026 catalog release."
+
+known_limits:
+  - "The CMS score is risk standardized and is not a raw observed proportion."
+  - "The release labels interval endpoints Lower Estimate and Higher Estimate; this package does not invent a confidence level."
+  - "CMS comparison categories use the national rate, not every hospital pair."
+  - "Displayed interval overlap is descriptive and is not a pairwise hypothesis test."
+  - "The national summary too-few count is preserved as published and is not forced to equal a reconstructed hospital display category."
+  - "Public aggregate data lag current hospital operations and do not establish causal care quality differences."
+  - "Suppressed values must remain blank and may not be reconstructed."

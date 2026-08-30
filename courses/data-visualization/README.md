@@ -4,7 +4,7 @@ This course teaches people to choose, build, critique, and explain visualization
 
 - Source course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 - Format: three credits, seven weeks, asynchronous online
-- Course status: full course specification complete; Modules 01 through 05 are runnable release candidates
+- Course status: full course specification complete; Modules 01 through 06 are runnable release candidates
 - Default reproducible lab: R and ggplot2
 - Tool policy: Tableau, Python, Power BI, Observable, and other approved tools may be used when the source file is submitted and the result can be reproduced
 
@@ -87,10 +87,13 @@ Vendor-specific menu recall is not a standalone course outcome. A learner may us
 - [Module 05: Rates, denominators, and adjustment](modules/05-rates-denominators-adjustment/README.md)
 - [Module 05 specification](../../docs/curriculum/courses/DA-730/modules/05-rates-denominators-adjustment-spec.md)
 - [Module 05 release record](modules/05-rates-denominators-adjustment/release.json)
+- [Module 06: Uncertainty, variation, and small numbers](modules/06-uncertainty-variation-small-numbers/README.md)
+- [Module 06 specification](../../docs/curriculum/courses/DA-730/modules/06-uncertainty-variation-small-numbers-spec.md)
+- [Module 06 release record](modules/06-uncertainty-variation-small-numbers/release.json)
 - [Syllabus redesign](syllabus-redesign.md)
 - [Course redesign plan](../../docs/plans/2026-08-26-clinical-data-visualization-course-redesign-plan.md)
 
-Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 03 uses the same source to choose among comparison, lookup, relationship, and no-display responses through a 10-case matrix. Module 04 uses every national CMS OP_18b hospital row to anchor an explicitly synthetic emergency-department distribution exercise. Module 05 uses complete national CDC PLACES diabetes rows, ACS county population context, and North Carolina boundary data to teach counts, crude prevalence, adjustment, and denominators. All five remain candidates until their required human reviews are recorded.
+Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 03 uses the same source to choose among comparison, lookup, relationship, and no-display responses through a 10-case matrix. Module 04 uses every national CMS OP_18b hospital row to anchor an explicitly synthetic emergency-department distribution exercise. Module 05 uses complete national CDC PLACES diabetes rows, ACS county population context, and North Carolina boundary data to teach counts, crude prevalence, adjustment, and denominators. Module 06 uses every national CMS heart failure readmission row, the national benchmark, and official footnotes to show why point ranks exceed evidence of separation. All six remain candidates until their required human reviews are recorded.
 
 ## Source record
 

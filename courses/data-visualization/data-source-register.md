@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.6.0`
+- Register version: `0.7.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -43,7 +43,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 03. Chart selection in practice | CMS hospitals | Released 10-case decision table plus two HCAHPS charts and one exact-value table using the Module 01 extract. |
 | 04. Distributions versus summaries | CMS Timely and Effective Care plus calibrated synthetic encounters | Released all-national OP_18b hospital extract and a source-bounded synthetic encounter distribution. |
 | 05. Rates, denominators, and adjustment | CDC PLACES, ACS, and Census TIGERweb | Released national diabetes and adult-population extracts plus a 100-county North Carolina decision table and generalized boundary file. |
-| 06. Uncertainty, variation, and small numbers | ClinicalTrials.gov or CMS | Planned estimates with sample size and uncertainty, including null and small-number cases. |
+| 06. Uncertainty, variation, and small numbers | CMS Unplanned Hospital Visits and Footnote Crosswalk | Released all-national heart failure readmission estimate rows plus the complete national summary, official footnotes, and a 65-hospital Massachusetts decision table. |
 | 07. Color and accessible visual communication | CMS or another released module dataset | Planned clinical quality display variants for screen, print, grayscale, and text alternatives. |
 | 08. Time and process variation | CMS timely care or CDC WONDER | Planned multi-period process measure or mortality rate with reporting dates. |
 | 09. Comparison and small multiples | CMS, CDC PLACES, or module-approved source | Planned repeated measure across hospitals, counties, or patient groups. |
@@ -129,3 +129,24 @@ The median of 4,081 reported CMS hospital values is 148 minutes. It anchors only
 - Validation: 32 of 32 checks pass
 
 The modeled adult count is rounded crude prevalence multiplied by the matching PLACES adult population. It is not an observed case count. The ACS population is separate context and is not substituted into that calculation. The 10,000-adult warning is a declared teaching rule, not a CDC suppression rule.
+
+### DA-730 uncertainty-variation-small-numbers release
+
+- Module: DA-730 Module 06, Uncertainty, variation, and small numbers
+- CMS hospital source: Unplanned Hospital Visits - Hospital, dataset `632h-zaca`, measure `READM_30_HF`, release 2026-08-13
+- CMS hospital source page: https://data.cms.gov/provider-data/dataset/632h-zaca
+- Original hospital file: 67,060 rows, 19,048,784 bytes, SHA-256 `a3e64029ea6daea1f7de163e5b5054b918d0c8be986fccfc47c7a8d5b29a6d1d`
+- Selected hospital extract: `courses/data-visualization/modules/06-uncertainty-variation-small-numbers/data/cms_hf_readmission_hospitals_2026.csv`
+- Selected rows: all 4,790 national `READM_30_HF` hospital rows, including 3,253 reported and 1,537 too-few or unavailable results
+- Selected hospital SHA-256: `e69fcee79711ef8496cb32205b492e6e3a788c4e63009bc1330a84216b0edeba`
+- CMS national source: https://data.cms.gov/provider-data/dataset/cvcs-xecj
+- National release: all 14 measure rows; selected national rate 21.3; SHA-256 `408c2d3f27a93c9294f9399e6a0deabfe70076685a5e06f285daf857e92161f9`
+- CMS footnote source: https://data.cms.gov/provider-data/dataset/y9us-9xdf
+- Footnote release: all 32 official definitions; SHA-256 `94d22120d0efcb0d6f98f3470bce8a7cffb3cf657eb95179556198c4ebae84e7`
+- Teaching table: `courses/data-visualization/modules/06-uncertainty-variation-small-numbers/data/ma_hf_readmission_uncertainty_2026.csv`
+- Massachusetts rows: 65, including 53 reported, 2 too few, and 10 not available
+- Teaching table SHA-256: `33e6284a1064bb12600903526e4e65c009f875d9e6f6a3f25783d3a9a4b00727`
+- Source record: `courses/data-visualization/modules/06-uncertainty-variation-small-numbers/source-record.yml`
+- Validation: 42 of 42 checks pass
+
+The source score is risk standardized. The release labels its endpoints Lower Estimate and Higher Estimate, so the module does not invent a confidence level. CMS comparison categories use the national rate and do not test every hospital pair. Suppressed values remain blank.

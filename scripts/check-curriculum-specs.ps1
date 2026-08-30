@@ -180,9 +180,41 @@ if (
     throw 'DA-730 Module 05 release metadata does not match the 0.1.0 public-source county contract.'
 }
 
+$module06 = Test-ModuleContract `
+    -Label 'Module 06' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\06-uncertainty-variation-small-numbers-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\06-uncertainty-variation-small-numbers') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_hf_uncertainty.py',
+        'validate_hf_uncertainty.py',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\cms_hf_readmission_hospitals_2026.csv',
+        'data\cms_unplanned_national_2026.csv',
+        'data\cms_footnote_crosswalk_2026.csv',
+        'data\ma_hf_readmission_uncertainty_2026.csv'
+    )
+if (
+    $module06.Release.module.version -ne '0.1.0' -or
+    $module06.Release.module.commons_release -ne '0.17.0' -or
+    $module06.Release.data.row_count -ne 65 -or
+    $module06.Release.sources.cms_hospital.row_count -ne 4790 -or
+    $module06.Release.sources.cms_national.row_count -ne 14 -or
+    $module06.Release.sources.cms_footnotes.row_count -ne 32
+) {
+    throw 'DA-730 Module 06 release metadata does not match the 0.1.0 public-source uncertainty contract.'
+}
+
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
 Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
 Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."
 Write-Output "DA-730 $($module03.Label) passed: $($module03.Sections) contract sections and $($module03.FileCount) required files."
 Write-Output "DA-730 $($module04.Label) passed: $($module04.Sections) contract sections and $($module04.FileCount) required files."
 Write-Output "DA-730 $($module05.Label) passed: $($module05.Sections) contract sections and $($module05.FileCount) required files."
+Write-Output "DA-730 $($module06.Label) passed: $($module06.Sections) contract sections and $($module06.FileCount) required files."
