@@ -2,3 +2,5 @@
 .vercel/
 courses/data-visualization/outputs/
 .env.local
+__pycache__/
+*.py[cod]

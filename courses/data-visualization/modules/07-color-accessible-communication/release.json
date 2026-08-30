@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-07",
+    "title": "Color and accessible visual communication",
+    "version": "0.1.0",
+    "commons_release": "0.18.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "id": "oclc-ma-hf-readmission-accessibility-2026",
+    "version": "0.1.0",
+    "path": "data/accessibility_hf_readmission_2026.csv",
+    "row_count": 65,
+    "column_count": 27,
+    "sha256": "b58168d9002a3e489213b0fafde1eca76f5b1a426c71ea3d61551671d76a49c2",
+    "unit": "Massachusetts hospital measure row with accessibility cues",
+    "public_aggregate_data": true,
+    "synthetic": false
+  },
+  "upstream": {
+    "module": "DA-730 Module 06",
+    "path": "../06-uncertainty-variation-small-numbers/data/ma_hf_readmission_uncertainty_2026.csv",
+    "row_count": 65,
+    "column_count": 26,
+    "sha256": "33e6284a1064bb12600903526e4e65c009f875d9e6f6a3f25783d3a9a4b00727",
+    "cms_dataset_id": "632h-zaca",
+    "cms_measure_id": "READM_30_HF",
+    "cms_landing_page": "https://data.cms.gov/provider-data/dataset/632h-zaca"
+  },
+  "accessibility_sources": {
+    "wcag_2_2": "https://www.w3.org/TR/WCAG22/",
+    "use_of_color": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color",
+    "contrast_minimum": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum",
+    "non_text_contrast": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast",
+    "complex_images": "https://www.w3.org/WAI/tutorials/images/complex/",
+    "cdc_cove": "https://www.cdc.gov/cove/about/section-508-accessibility.html"
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    },
+    "cms_data": {
+      "spdx": "LicenseRef-US-Government-Public-Data",
+      "url": "https://data.cms.gov/provider-data/"
+    }
+  },
+  "source": {
+    "curriculum_title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "curriculum_author": "Ali Goff",
+    "curriculum_date": "2026-08-15",
+    "curriculum_path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "source_record": "source-record.yml",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/07-color-accessible-communication-spec.md"
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "course designer and content owner"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, accessibility implementation, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The validator passed 66 checks. Four lab figures, one exact table, one text alternative, and two critique figures rendered successfully."
+    },
+    "required_human_roles": [
+      {
+        "role": "accessibility and assistive technology",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "clinical quality interpretation",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "statistical and CMS source fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "visualization teaching quality",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "data_checks": "66 of 66 pass",
+    "lab_execution": "pass: four PNGs, one CSV, and one Markdown text alternative",
+    "critique_execution": "pass: two intentionally inaccessible PNGs",
+    "measured_results": {
+      "rows": 65,
+      "reported_rows": 53,
+      "no_different_rows": 52,
+      "worse_rows": 1,
+      "too_few_rows": 2,
+      "not_available_rows": 10,
+      "defined_status_encodings": 5,
+      "present_status_encodings": 4,
+      "minimum_contrast_on_white": 5.54,
+      "maximum_contrast_on_white": 18.88,
+      "national_rate": 21.3
+    }
+  },
+  "known_issues": [
+    "Named accessibility, clinical, statistical, visualization, and independent-instructor reviews are pending.",
+    "Calculated contrast does not certify the complete chart or delivery context.",
+    "The static package does not test every browser, assistive technology, printer, or color-vision condition.",
+    "CMS labels the interval columns Lower Estimate and Higher Estimate; this module does not invent a confidence level.",
+    "The source categories compare each hospital with the national rate and do not test every hospital pair.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

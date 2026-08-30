@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.17.1
+- Specification version: 0.18.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -241,7 +241,9 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Accessibility sources: https://www.w3.org/TR/WCAG22/, https://www.w3.org/WAI/tutorials/images/complex/, and https://www.cdc.gov/cove/about/section-508-accessibility.html
 - Lab: create an accessible palette, add labels or shapes, write alt text, and produce a matching table.
 - Critique: repair a red-green status chart and a low-contrast heatmap.
-- Submission: `module-07/accessibility-audit.md`, `module-07/analysis.R`, `module-07/figure.png`, `module-07/data-table.csv`, `module-07/alt-text.md`, and `module-07/decision-note.md`.
+- Submission: `module-07/accessibility-audit.md`, `module-07/analysis.R`, `module-07/figure.png`, `module-07/data-table.csv`, `module-07/alt-text.md`, `module-07/decision-note.md`, and `module-07/ai-use.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/07-color-accessible-communication-spec.md`.
+- Runnable package: `courses/data-visualization/modules/07-color-accessible-communication/`.
 - Handoff: accessibility requirements apply to every remaining module.
 
 ## Module 08 brief: Time and process variation
@@ -607,6 +609,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Module 04 remains Distributions versus summaries and retains its current runnable package.
 - [x] Module 05 has a complete source-first specification and runnable teaching package.
 - [x] Module 06 has a complete source-first specification, runnable teaching package, and exact checkpoint handoff.
+- [x] Module 07 has a complete accessibility specification, source-preserving teaching table, runnable lab, critique set, assessment, instructor key, and release record.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.

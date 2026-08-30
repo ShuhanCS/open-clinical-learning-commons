@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.17.1
+- Current release: 0.18.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Week 3 visualization judgment checkpoint
-- Next unit: DA-730 Module 07, Color and accessible visual communication
+- Last completed unit: DA-730 Module 07, Color and accessible visual communication
+- Next unit: DA-730 Module 08, Time and process variation
 
 ## Confirmed decisions
 
@@ -52,6 +52,10 @@
 - All 1,378 displayed Massachusetts interval pairs overlap descriptively. The module states that this is not a pairwise hypothesis test and does not prove equivalence.
 - DA-730 Checkpoint 1 maps Modules 03 through 06 to exact comparison, distribution, rate, and uncertainty figure names while carrying Module 01 encoding choices and Module 02 perception evidence into the selection matrix.
 - The checkpoint package assembles four figures and four editable R files from the released module data, supplies four complete source records and six writing templates, and validates the completed folder contract with a Python standard-library check.
+- DA-730 Module 07 reuses all 65 Module 06 Massachusetts rows and verifies that every source field used in the case remains unchanged.
+- Module 07 teaching table SHA-256: `b58168d9002a3e489213b0fafde1eca76f5b1a426c71ea3d61551671d76a49c2`.
+- Module 07 passes 66 data checks. Its lab creates four figures, one 65-row exact table, and one short and long text alternative; its critique creates a red-green color-only chart and a low-contrast heatmap.
+- Five status cues use direct text, symbols, shapes, line types, and foreground colors. Every defined foreground exceeds 4.5:1 contrast on white, with a range of 5.54:1 to 18.88:1.
 
 ## Pending confirmation
 
@@ -60,8 +64,8 @@
 
 ## Next resume instructions
 
-1. Read the DA-730 Module 07 brief and the Module 06 accessibility handoff.
-2. Write `docs/curriculum/courses/DA-730/modules/07-color-accessible-communication-spec.md` using the 21-section contract.
-3. Reuse the Module 06 interval and status case so color changes do not change the statistical claim.
-4. Build screen, print, grayscale, redundant-encoding, and text-alternative exercises.
-5. Verify and release Module 07, then continue to Module 08.
+1. Read the DA-730 Module 08 brief and the Module 07 accessibility handoff.
+2. Select and pin the multi-period public process source for the time case.
+3. Write `docs/curriculum/courses/DA-730/modules/08-time-process-variation-spec.md` using the 21-section contract.
+4. Build trend, seasonality, ordinary-variation, signal, and missing-period exercises with the Module 07 accessibility contract.
+5. Verify and release Module 08, then continue to Module 09.

@@ -44,7 +44,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 04. Distributions versus summaries | CMS Timely and Effective Care plus calibrated synthetic encounters | Released all-national OP_18b hospital extract and a source-bounded synthetic encounter distribution. |
 | 05. Rates, denominators, and adjustment | CDC PLACES, ACS, and Census TIGERweb | Released national diabetes and adult-population extracts plus a 100-county North Carolina decision table and generalized boundary file. |
 | 06. Uncertainty, variation, and small numbers | CMS Unplanned Hospital Visits and Footnote Crosswalk | Released all-national heart failure readmission estimate rows plus the complete national summary, official footnotes, and a 65-hospital Massachusetts decision table. |
-| 07. Color and accessible visual communication | CMS or another released module dataset | Planned clinical quality display variants for screen, print, grayscale, and text alternatives. |
+| 07. Color and accessible visual communication | Reused Module 06 CMS Unplanned Hospital Visits release plus W3C and CDC accessibility guidance | Released 65-row source-preserving accessibility table with redundant cues, contrast calculations, grayscale output, exact table, and text alternatives. |
 | 08. Time and process variation | CMS timely care or CDC WONDER | Planned multi-period process measure or mortality rate with reporting dates. |
 | 09. Comparison and small multiples | CMS, CDC PLACES, or module-approved source | Planned repeated measure across hospitals, counties, or patient groups. |
 | 10. Maps, geography, and place | CDC PLACES, ACS, and HRSA AHRF | Planned county health measure, population denominator, geography, and workforce ratio. |
@@ -150,3 +150,21 @@ The modeled adult count is rounded crude prevalence multiplied by the matching P
 - Validation: 42 of 42 checks pass
 
 The source score is risk standardized. The release labels its endpoints Lower Estimate and Higher Estimate, so the module does not invent a confidence level. CMS comparison categories use the national rate and do not test every hospital pair. Suppressed values remain blank.
+
+### DA-730 color-accessible-communication release
+
+- Module: DA-730 Module 07, Color and accessible visual communication
+- Upstream clinical release: Module 06 Massachusetts `READM_30_HF` table, 65 rows
+- CMS source page: https://data.cms.gov/provider-data/dataset/632h-zaca
+- Accessibility standards: https://www.w3.org/TR/WCAG22/
+- Use of color guidance: https://www.w3.org/WAI/WCAG22/Understanding/use-of-color
+- Non-text contrast guidance: https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast
+- Complex images guidance: https://www.w3.org/WAI/tutorials/images/complex/
+- CDC COVE accessibility guidance: https://www.cdc.gov/cove/about/section-508-accessibility.html
+- Teaching table: `courses/data-visualization/modules/07-color-accessible-communication/data/accessibility_hf_readmission_2026.csv`
+- Teaching rows: 65 source-preserving hospital rows with 11 accessibility fields
+- Teaching table SHA-256: `b58168d9002a3e489213b0fafde1eca76f5b1a426c71ea3d61551671d76a49c2`
+- Source record: `courses/data-visualization/modules/07-color-accessible-communication/source-record.yml`
+- Validation: 66 of 66 checks pass
+
+The module defines five reusable status cues with direct text, symbols, shapes, line types, and colors. All defined foregrounds exceed 4.5:1 contrast against white. A calculated ratio does not certify the complete chart or delivery context, so learners also test grayscale, print, a smaller view, text alternatives, and the exact-value table.

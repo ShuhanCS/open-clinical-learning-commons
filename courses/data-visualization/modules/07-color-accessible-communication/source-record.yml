@@ -1,0 +1,82 @@
+schema_version: "1.0.0"
+module_id: "oclc-da730-07"
+module_title: "Color and accessible visual communication"
+retrieved_at: "2026-08-29"
+
+upstream_clinical_release:
+  publisher: "Centers for Medicare & Medicaid Services"
+  dataset_id: "632h-zaca"
+  dataset_title: "Unplanned Hospital Visits - Hospital"
+  measure_id: "READM_30_HF"
+  landing_page: "https://data.cms.gov/provider-data/dataset/632h-zaca"
+  path: "../06-uncertainty-variation-small-numbers/data/ma_hf_readmission_uncertainty_2026.csv"
+  rows: 65
+  columns: 26
+  sha256: "33e6284a1064bb12600903526e4e65c009f875d9e6f6a3f25783d3a9a4b00727"
+  source_release: "2026-08-13"
+  reporting_start: "2023-07-01"
+  reporting_end: "2025-06-30"
+  source_record: "../06-uncertainty-variation-small-numbers/source-record.yml"
+
+accessibility_sources:
+  wcag_2_2:
+    publisher: "World Wide Web Consortium"
+    title: "Web Content Accessibility Guidelines 2.2"
+    url: "https://www.w3.org/TR/WCAG22/"
+    retrieved_at: "2026-08-29"
+  use_of_color:
+    publisher: "W3C Web Accessibility Initiative"
+    title: "Understanding Success Criterion 1.4.1: Use of Color"
+    url: "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color"
+    retrieved_at: "2026-08-29"
+  contrast_minimum:
+    publisher: "W3C Web Accessibility Initiative"
+    title: "Understanding Success Criterion 1.4.3: Contrast Minimum"
+    url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum"
+    retrieved_at: "2026-08-29"
+  non_text_contrast:
+    publisher: "W3C Web Accessibility Initiative"
+    title: "Understanding Success Criterion 1.4.11: Non-text Contrast"
+    url: "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast"
+    retrieved_at: "2026-08-29"
+  complex_images:
+    publisher: "W3C Web Accessibility Initiative"
+    title: "Complex Images"
+    url: "https://www.w3.org/WAI/tutorials/images/complex/"
+    retrieved_at: "2026-08-29"
+  cdc_cove:
+    publisher: "Centers for Disease Control and Prevention"
+    title: "COVE Section 508 Accessibility"
+    url: "https://www.cdc.gov/cove/about/section-508-accessibility.html"
+    retrieved_at: "2026-08-29"
+
+teaching_release:
+  data_id: "oclc-ma-hf-readmission-accessibility-2026"
+  version: "0.1.0"
+  path: "data/accessibility_hf_readmission_2026.csv"
+  rows: 65
+  columns: 27
+  sha256: "b58168d9002a3e489213b0fafde1eca76f5b1a426c71ea3d61551671d76a49c2"
+  build_script: "build_accessibility_case.py"
+  validator: "validate_accessibility_case.py"
+  validation_result: "66 of 66 checks pass"
+  transformations:
+    - "Preserved all 65 Module 06 hospital rows and every source field used in the accessibility case."
+    - "Sorted reported rows by score for reading order, followed by too-few and not-available rows."
+    - "Added direct labels, symbols, shapes, line types, and foreground colors for five source statuses."
+    - "Calculated WCAG relative-luminance contrast against white and black."
+    - "Added a row-level text alternative without imputing unavailable scores."
+
+rights:
+  cms_access_level: "public"
+  cms_terms_context: "https://data.cms.gov/provider-data/"
+  documentation_license: "CC-BY-4.0"
+  code_license: "MIT"
+
+known_limits:
+  - "A calculated contrast ratio does not by itself establish that a finished chart, document, or application is accessible."
+  - "Color remains redundant; it may not replace text, shape, line, position, or a complete data alternative."
+  - "The module tests a static teaching package, not every browser, screen reader, printer, or color-vision condition."
+  - "The CMS score is risk standardized and is not a raw observed proportion."
+  - "CMS lower and higher estimates retain their source labels; the module does not invent a confidence level."
+  - "Public aggregate results do not establish causal hospital quality differences."
