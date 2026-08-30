@@ -1,0 +1,16 @@
+gate_id,gate,status,evidence,owner
+G01,Fictional service and synthetic rows remain explicit,pass,Every accepted row has service CGH-ED-01 and synthetic_flag 1,data steward
+G02,Public and synthetic identifiers remain disjoint,pass,Public-like identifier is quarantined and no public linkage is present,privacy steward
+G03,Adult encounter population is exact,pass,43628 accepted adult encounters remain after deduplication and quarantine,measure steward
+G04,Encounter denominators conserve across branches,pass,39975 completed plus 3653 left before seen equals 43628,measure steward
+G05,Required event states and clocks are validated,pass,43627 valid sequences and one retained unavailable clinician clock,process owner
+G06,Every raw defect has a declared effect,pass,12 defect-impact rows match 12 seeded defects,data steward
+G07,Queue arithmetic conserves,pass,No clean queue conservation failures,flow data owner
+G08,Staffing intervals are valid,pass,No clean negative staff hours or shift orphans,workforce data owner
+G09,Safety types remain separate,pass,Error near miss adverse event and harm each retain separate results,safety lead
+G10,Safety detection is tested against generated truth,pass,Trigger and incident capture sensitivity are calculated against 894 known events,safety analytics owner
+G11,Subgroup support is explicit,pass,All three declared groups exceed the 1000-encounter teaching threshold,equity and access lead
+G12,SQL owns linked operational logic,pass,Four ordered SQL files build the clean and measure layers,data engineer
+G13,Python independently reproduces and checks outputs,pass,Deterministic builder passes 30 exact query checks,analytics owner
+G14,No bottleneck staffing causal clinical or implementation claim appears,pass,Interpretation records preserve the Module 02 boundary,clinical performance council
+G15,Package is complete portable disclosed and reproducible,pass,Manifest builder validator and AI record pass,module owner

@@ -1,0 +1,16 @@
+gate_id,gate,status,evidence,owner
+G01,Fictional service and synthetic rows remain explicit,REPLACE,REPLACE,REPLACE
+G02,Public and synthetic identifiers remain disjoint,REPLACE,REPLACE,REPLACE
+G03,Adult encounter population is exact,REPLACE,REPLACE,REPLACE
+G04,Encounter denominators conserve across branches,REPLACE,REPLACE,REPLACE
+G05,Required event states and clocks are validated,REPLACE,REPLACE,REPLACE
+G06,Every raw defect has a declared effect,REPLACE,REPLACE,REPLACE
+G07,Queue arithmetic conserves,REPLACE,REPLACE,REPLACE
+G08,Staffing intervals are valid,REPLACE,REPLACE,REPLACE
+G09,Safety types remain separate,REPLACE,REPLACE,REPLACE
+G10,Safety detection is tested against generated truth,REPLACE,REPLACE,REPLACE
+G11,Subgroup support is explicit,REPLACE,REPLACE,REPLACE
+G12,SQL owns linked operational logic,REPLACE,REPLACE,REPLACE
+G13,Python independently reproduces and checks outputs,REPLACE,REPLACE,REPLACE
+G14,No bottleneck staffing causal clinical or implementation claim appears,REPLACE,REPLACE,REPLACE
+G15,Package is complete portable disclosed and reproducible,REPLACE,REPLACE,REPLACE

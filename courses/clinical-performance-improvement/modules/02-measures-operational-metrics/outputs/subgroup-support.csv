@@ -1,0 +1,4 @@
+access_support_group,eligible_encounters,clinician_time_available,left_before_seen,left_before_seen_percent,return_within_72h,return_within_72h_percent,median_arrival_to_clinician_minutes,median_arrival_to_departure_minutes,clinician_time_unavailable,synthetic_flag
+language_support,6032,5399,633,10.494,0,0.0,103.0,307.0,633,1
+mobility_support,3498,3171,327,9.3482,0,0.0,101.0,310.0,327,1
+standard,34098,31404,2693,7.8978,0,0.0,97.0,303.0,2694,1

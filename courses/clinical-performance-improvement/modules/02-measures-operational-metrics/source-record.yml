@@ -1,0 +1,25 @@
+module_id: oclc-app3-02
+module_version: 0.1.0
+commons_release: 0.67.0
+service_id: CGH-ED-01
+service_status: fictional
+source_release: cgh-ed-01-operational-v1
+generator:
+  file: generate_operational_release.py
+  version: 0.1.0
+  seed: 73002
+  start_date: 2024-01-01
+  end_date: 2024-12-29
+accepted_identity:
+  manifest: data/operational-source-manifest.csv
+  tables: 9
+  rows: 318732
+  synthetic_flag: 1
+upstream_handoff:
+  module: oclc-app3-01
+  manifest: upstream/module01-handoff-manifest.csv
+  public_source_record: ../01-clinical-performance-decision/source-record.yml
+public_source_role: concept orientation only; no row linkage or local attribution
+license: curriculum repository license and upstream public-source terms
+privacy: no real patient, clinician, workforce, or hospital data
+claim_limit: synthetic measure construction only; no bottleneck, staffing, causal, clinical, or implementation claim

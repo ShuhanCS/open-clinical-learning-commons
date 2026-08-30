@@ -1,0 +1,7 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+R01,Measure definitions and denominators,4,4,measure-specifications.csv defines 17 complete measures
+R02,Event logic and data repair,4,4,SQL produces valid clocks and defect-repair-log.csv accounts for 12 defects
+R03,Operational metric construction,4,4,shift weekly safety and subgroup outputs reproduce
+R04,Validation and responsible interpretation,4,4,30 query checks pass and claims stop before diagnosis or action
+R05,Reproducibility and progression,4,4,source and output fingerprints reproduce with disclosed ownership
+TOTAL,Module 02 readiness score,20,20,All noncompensable gates pass

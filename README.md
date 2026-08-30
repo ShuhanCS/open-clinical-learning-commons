@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.66.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, and first runnable module.
+- Current version: `0.67.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, and first two runnable modules.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -106,6 +106,8 @@ The third applied course is specified in [APP-3: Data for Clinical Performance a
 The [APP-3 course package](courses/clinical-performance-improvement/README.md) maps seven distinct modules totaling 112.5 hours. Its continuing case uses the explicitly fictional `CGH-ED-01` service, full public CMS quality and safety releases, historical HHS capacity data, and a generated operational layer that can never be attributed to a public hospital.
 
 Its first runnable unit is [APP-3 Module 01: Framing a clinical performance and improvement decision](courses/clinical-performance-improvement/modules/01-clinical-performance-decision/README.md), governed by the durable [Module 01 specification](docs/curriculum/courses/APP-3/modules/01-clinical-performance-decision-spec.md). It validates 138,084-row and 95,800-row complete CMS releases, fingerprints the complete 1,045,406-row HHS capacity snapshot, preserves all 15,179 Massachusetts facility-week rows for teaching, and releases a deterministic 25-file workspace without diagnosing a bottleneck or recommending staffing.
+
+The second runnable unit is [APP-3 Module 02: Measures and operational metrics](courses/clinical-performance-improvement/modules/02-measures-operational-metrics/README.md), governed by the durable [Module 02 specification](docs/curriculum/courses/APP-3/modules/02-measures-operational-metrics-spec.md). It generates nine linked synthetic operational tables with 318,732 raw rows, preserves 12 auditable defects, defines 17 complete measures, and releases a deterministic 20-point build with 30 exact query checks. It permits Module 03 curriculum construction without diagnosing a bottleneck or recommending staffing.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -283,7 +285,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-3 Module 02, Measures and operational metrics.
+1. Build APP-3 Module 03, Variation, safety signals, and bottlenecks.
 2. Continue APP-4 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 

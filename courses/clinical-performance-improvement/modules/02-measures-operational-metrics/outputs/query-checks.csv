@@ -1,0 +1,31 @@
+check_id,check_name,observed_value,expected_value
+Q01,raw encounter rows,43631,43631
+Q02,clean adult encounters,43628,43628
+Q03,clean encounter duplicate keys,0,0
+Q04,clean public-like service identifiers,0,0
+Q05,clean underage encounters,0,0
+Q06,clean impossible encounter clocks,0,0
+Q07,raw process-event rows,250821,250821
+Q08,clean process-event duplicate keys,0,0
+Q09,clean event orphans,0,0
+Q10,invalid accepted event sequences,1,1
+Q11,missing clinician times retained,1,1
+Q12,negative arrival-to-triage times,0,0
+Q13,negative arrival-to-clinician times,0,0
+Q14,negative arrival-to-departure times,0,0
+Q15,clean negative queue ends,0,0
+Q16,queue conservation failures,0,0
+Q17,clean negative actual staff hours,0,0
+Q18,staffing shift orphans,0,0
+Q19,calendar shifts,1092,1092
+Q20,calendar arrival mismatches,0,0
+Q21,weekly metric rows,52,52
+Q22,shift metric rows,1092,1092
+Q23,safety duplicate keys,0,0
+Q24,safety event orphans,0,0
+Q25,subgroup support rows,3,3
+Q26,subgroups below 1000 encounters,0,0
+Q27,seeded defect rows,12,12
+Q28,defect impact rows,12,12
+Q29,synthetic flags not equal to one in clean encounters,0,0
+Q30,scenario results present,0,0

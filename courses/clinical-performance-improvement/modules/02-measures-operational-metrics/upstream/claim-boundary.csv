@@ -1,0 +1,9 @@
+claim_id,claim,disposition,reason,evidence_needed,owner
+C01,the accepted public releases define useful measure families,allowed,source identity grain and definitions were audited,complete source profiles and method pages,source steward
+C02,the three public releases are feasible for instruction,allowed,complete rows and unavailable values were inspected,reproducible profiles and source interpretation,APP-3 faculty owner
+C03,CGH-ED-01 is a fictional service,allowed,the declaration is explicit and has no public linkage,synthetic service record,data steward
+C04,a named public hospital has poor emergency performance,prohibited,Module 01 does not rank or adjudicate facilities,approved comparison design outside this module,APP-3 faculty owner
+C05,CGH-ED-01 currently has a bottleneck,prohibited,no local operational rows or diagnostic analysis exist,Module 03 accepted diagnostic evidence,operations reviewer
+C06,CGH-ED-01 needs more staff,prohibited,no forecast capacity scenario burden or clinical review exists,Modules 04 through 07 evidence,workforce reviewer
+C07,a future local pattern caused harm,prohibited,synthetic observational patterns cannot establish cause,predeclared evaluation and appropriate evidence,safety reviewer
+C08,the course evidence authorizes clinical implementation,prohibited,curriculum evidence is not operational authorization,local governance clinical review and implementation authority,clinical reviewer

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.66.0
+- Current release: 0.67.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Module 01, framing a clinical performance and improvement decision
-- Next unit: APP-3 Module 02, measures and operational metrics
+- Last completed unit: APP-3 Module 02, measures and operational metrics
+- Next unit: APP-3 Module 03, variation, safety signals, and bottlenecks
 
 ## Confirmed decisions
 
@@ -467,7 +467,15 @@
 - Modules 01 through 03 form the technical performance block. Modules 04 through 06 form the application block. Module 06 splits evenly between feasibility and monitoring and the embedded ML comparison. Module 07 is clinician led.
 - The ML extension compares the accepted transparent arrival-demand approach with one bounded gradient-boosted forecast under identical target, information cutoff, folds, horizon, and evaluation rows. Better average error alone cannot change the recommendation.
 - APP-3 uses public aggregate sources for definitions and context only. Public reporting cannot establish current local operations, cause, staffing need, safety events, or intervention effect.
-- APP-3 Module 01 is a runnable release candidate at Commons 0.66.0. Module 02 is next.
+- APP-3 Module 01 is a runnable release candidate at Commons 0.66.0.
+- APP-3 Module 02 version 0.1.0 generates the `cgh-ed-01-operational-v1` release with seed 73002: nine tables, 318,732 raw rows, 1,092 shifts, 52 weeks, and 12 declared defects.
+- The clean release accepts 43,628 adult encounters. It conserves 39,975 completed and 3,653 left-before-seen encounters, retains one additional unavailable clinician clock, and validates 43,627 full event sequences.
+- Seventeen measure specifications cover demand, access, outcome, process, data quality, safety, flow, capacity, workforce, balancing, and supported equity roles with exact denominators, clocks, owners, unavailable states, and claim limits.
+- Four SQL files produce eight deterministic outputs. All 30 query checks pass. Trigger sensitivity is 75.2796 percent, incident capture is 40.0447 percent, and trigger specificity is 99.0302 percent against 894 generated true safety events.
+- The learner workspace has 49 files and 34 immutable manifest rows. The reference has 58 files and 43 immutable manifest rows. Complete validation passes 215 checks and starter validation passes 150 structural checks.
+- Generator, upstream handoff, measure builder, workspace builder, and validator self-checks pass. The validator rejects raw mutation, a missing table, wrong SQL denominator, public linkage, a staffing claim, wrong score, invalid progression, missing record, and incomplete starter.
+- The reference scores 20 of 20 and passes all 15 gates. Progression is `continue with conditions`, permitting Module 03 curriculum construction while bottleneck, staffing, causal, clinical, and implementation claims remain prohibited.
+- APP-3 Module 02 is a runnable release candidate at Commons 0.67.0. Module 03 is next.
 
 ## Pending confirmation
 
@@ -482,9 +490,9 @@
 ## Next resume instructions
 
 1. Read the master architecture, APP-3 course specification, APP-3 source record, Module 01 specification and package, curriculum catalog, and this ledger.
-2. Write the durable APP-3 Module 02 specification before building its package.
-3. Instantiate the declared `CGH-ED-01` encounters, process-events, staffing, queue-snapshots, safety-events, calendar-demand, scenarios, and known-truth contracts without using a public facility identity.
-4. Build versioned quality, safety, access, flow, capacity, workload, balancing, and supported-equity measure specifications with exact units, numerators, denominators, exclusions, clocks, unavailable states, and owners.
-5. Preserve seeded raw defects and repair them through declared transformations while conserving encounter counts across every branch.
-6. Validate source and derived fields, event order, duplicate inclusion, impossible time, missing transitions, queue conservation, staff-capacity intervals, safety-event detection, and subgroup support.
-7. Release the 20-point measure build, advance semver, update this ledger, commit, and push before Module 03 begins.
+2. Read the accepted Module 02 specification, source manifest, measure specifications, SQL, outputs, gates, conditions, and progression decision.
+3. Write the durable APP-3 Module 03 specification before building its package.
+4. Freeze the accepted Module 02 source and measure identities without changing denominators, clocks, defects, or unavailable states.
+5. Declare chart families, centerline and limit rules, low-count handling, time and subgroup comparisons, and safety-signal review rules before interpretation.
+6. Reconcile process transitions, queues, wait, service time, throughput, utilization, staffing, and capacity before naming one bounded bottleneck.
+7. Release the 20-point performance diagnostic and 40-point Week 3 handoff, advance semver, update this ledger, commit, and push before Module 04 begins.

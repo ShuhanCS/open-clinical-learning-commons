@@ -1,0 +1,13 @@
+defect_id,source_table,defect,clean_rule,disposition,measure_effect,owner,status
+D001,encounters,duplicate encounter row,retain one stable encounter record,deduplicate,accepted encounter denominator changes,data steward,closed
+D002,encounters,missing encounter arrival,recover arrival from the unique arrival event,repair,arrival clocks become available,data steward,closed
+D003,encounters,public-like service identifier,exclude the row from the fictional service,quarantine,accepted encounter denominator changes,privacy steward,closed
+D004,encounters,underage encounter,exclude age below 18 from the declared adult population,quarantine,accepted encounter denominator changes,measure steward,closed
+D005,encounters,departure before arrival,recover departure from the unique departure event,repair,visit duration becomes valid,data steward,closed
+D006,process-events,duplicate process event,retain one stable event per encounter and type,deduplicate,event sequence count changes,data steward,closed
+D007,process-events,swapped triage and roomed times,use declared sequence and repaired timestamps,repair,event sequence becomes valid,process owner,closed
+D008,process-events,missing clinician event,retain the encounter and mark clinician time unavailable,retain unavailable,clinician duration support decreases,clinical data owner,closed
+D009,queue-snapshots,negative queue end,recalculate queue end from queue start plus arrivals minus exits,repair,queue conservation becomes valid,flow data owner,closed
+D010,staffing,negative actual staff hours,recalculate from actual count shift hours and overtime,repair,staff-hour ratios become valid,workforce data owner,closed
+D011,safety-events,duplicate safety candidate,retain one stable candidate record,deduplicate,safety candidate count changes,safety data owner,closed
+D012,calendar-demand,calendar and encounter arrival mismatch,derive demand from accepted encounter arrivals,repair,shift arrival count changes,demand data owner,closed

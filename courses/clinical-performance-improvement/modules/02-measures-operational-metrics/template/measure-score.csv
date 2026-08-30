@@ -1,0 +1,7 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+R01,Measure definitions and denominators,4,REPLACE,REPLACE
+R02,Event logic and data repair,4,REPLACE,REPLACE
+R03,Operational metric construction,4,REPLACE,REPLACE
+R04,Validation and responsible interpretation,4,REPLACE,REPLACE
+R05,Reproducibility and progression,4,REPLACE,REPLACE
+TOTAL,Module 02 readiness score,20,REPLACE,REPLACE

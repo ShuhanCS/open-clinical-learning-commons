@@ -1,0 +1,11 @@
+relative_path,source_path,bytes,sha256,role
+upstream/claim-boundary.csv,reference/claim-boundary.csv,1440,45c236cbe581612250b48efd060ccad728bb4455ab7512ca72d5ca48b8f5fd89,accepted APP-3 Module 01 handoff
+upstream/clinical-performance-charter.md,reference/clinical-performance-charter.md,3306,77e190b3e87f04618ae85546fd92d6ee41218d5f8a4273aa1fd62dc041fdc5dd,accepted APP-3 Module 01 handoff
+upstream/measure-family.csv,reference/measure-family.csv,1743,def62e1e7946486ef573cbea45459c284bdfa414c6fd1b83a1ea6098c47a0a63,accepted APP-3 Module 01 handoff
+upstream/module01-decision-contract.json,decision-contract.json,2353,5cf0ec44132cebbb0480de4d34286aedf209ed2e0b96d739ed75bafdc5cc7fea,accepted APP-3 Module 01 handoff
+upstream/module01-source-inventory.csv,data/source-inventory.csv,1369,3f43f4eaaca3bbc5843660047e6aeb1466d87f01ea59a37881d25cd7afc38fe3,accepted APP-3 Module 01 handoff
+upstream/process-boundary.csv,reference/process-boundary.csv,1284,e772a29dbd8b03e192b73545c23b1a64a835f8d50cf61d36dc5402c56198a1c3,accepted APP-3 Module 01 handoff
+upstream/progression-decision.md,reference/progression-decision.md,3425,223b621ae925c283cf6b0c45043418c3dd95a67ca40396750a41e88e23c3b595,accepted APP-3 Module 01 handoff
+upstream/source-feasibility-interpretation.md,reference/source-feasibility-interpretation.md,3101,8e2eb48a0c18b0ecab163c21052ead04e09ded06797a1d1d0cda9dc774a7c458,accepted APP-3 Module 01 handoff
+upstream/synthetic-service-declaration.md,reference/synthetic-service-declaration.md,885,e042cf3c0284f64ce500ab1664055aa889252602be428bf09a95d7ce567eb786,accepted APP-3 Module 01 handoff
+upstream/unit-of-flow.csv,reference/unit-of-flow.csv,1097,60b0c058d9bc7d066668b7fc9cdb1a13d7ac0e698d1463431c07b8f18aa82d62,accepted APP-3 Module 01 handoff

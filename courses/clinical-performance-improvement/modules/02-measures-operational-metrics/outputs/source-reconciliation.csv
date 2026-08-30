@@ -1,0 +1,10 @@
+table_name,raw_rows,clean_rows,disposition
+encounters,43631,43628,deduplicate repair and quarantine
+process-events,250821,250808,deduplicate repair and eligible encounter join
+staffing,4368,4368,repair impossible hours
+queue-snapshots,17520,17520,recalculate queue end
+safety-events,1274,1273,deduplicate and eligible encounter join
+calendar-demand,1092,1092,derive demand from accepted encounters
+scenarios,4,4,unchanged declaration
+known-truth,10,10,unchanged generated truth
+defect-register,12,12,unchanged audit record

@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.66.0 through Module 01.
+- Current Commons release: 0.67.0 through Module 02.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -257,6 +257,7 @@ No operational diagnosis or staffing proposal is allowed in Module 01.
 - Specification: `docs/curriculum/courses/APP-3/modules/02-measures-operational-metrics-spec.md`.
 - Decision: whether the measure logic and linked operational tables are valid enough to diagnose performance over time.
 - Submission: 20-point measure and operational metric build.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.67.0`.
 
 Learners specify quality, safety, access, flow, capacity, workforce, and balancing measures. Every measure records the numerator or summary, denominator or population, exclusions, unit, direction, event clock, attribution, reporting window, refresh cadence, owner, threshold origin, unavailable state, and interpretation limit.
 

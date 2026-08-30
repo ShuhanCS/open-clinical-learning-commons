@@ -1,0 +1,13 @@
+defect_id,defect,raw_value,clean_value,expected_result
+D001,duplicate encounter row,2,1,2 raw rows become 1 accepted encounter
+D002,missing encounter arrival,1,1,1 blank raw arrival becomes 1 repaired arrival
+D003,public-like service identifier,1,0,1 invalid raw encounter becomes 0 accepted encounters
+D004,underage encounter,1,0,1 outside-population row becomes 0 accepted encounters
+D005,departure before arrival,1,1,1 impossible raw clock becomes 1 repaired clock
+D006,duplicate process event,2,1,2 raw rows become 1 accepted event
+D007,swapped triage and rooming times,2,1,2 affected raw events yield 1 valid accepted sequence
+D008,missing clinician event,0,0,0 raw clinician events remain 0 available clinician times
+D009,negative queue end,1,1,1 impossible raw queue becomes 1 conserved queue row
+D010,negative actual staff hours,1,1,1 impossible raw staffing row becomes 1 repaired row
+D011,duplicate safety candidate,2,1,2 raw rows become 1 accepted safety candidate
+D012,calendar and encounter arrival mismatch,55,50,raw count is five above accepted encounter-derived demand
