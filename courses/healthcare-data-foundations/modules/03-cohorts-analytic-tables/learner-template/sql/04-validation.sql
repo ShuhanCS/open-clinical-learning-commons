@@ -1,0 +1,1 @@
+-- [REPLACE: Write one read-only WITH query returning check_id, check_name, observed_value, expected_value, and status.]

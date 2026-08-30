@@ -1,0 +1,16 @@
+record_version: 1.0.0
+module: oclc-fnd1-03
+upstream_module: oclc-fnd1-02
+source_id: synthea-sample-data-csv-apr2020
+publisher: The MITRE Corporation / Synthea
+source_url: https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip
+archive_bytes: 8982431
+archive_sha256: 4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a
+database_bytes: 141234176
+database_sha256: 1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a
+license_spdx: Apache-2.0
+license_url: https://github.com/synthetichealth/synthea/blob/master/LICENSE
+synthetic: true
+contains_real_patients: false
+learner_verification: "[REPLACE: Record date, command, and matched fingerprints.]"
+claim_limit: "[REPLACE: State the technical and clinical claim boundary.]"

@@ -2,7 +2,7 @@
   "use strict";
 
   const curriculum = {
-  "version": "0.29.0",
+  "version": "0.30.0",
   "courseCount": 11,
   "moduleCount": 77,
   "courses": [
@@ -22,7 +22,12 @@
           "outcome": "Set up a working analytic environment and explain why reproducibility is part of data quality.",
           "topics": "Environments, Git, version numbers, reproducibility, AI-use disclosure.",
           "submission": "Working repository, versioned setup check, environment note, AI-use statement.",
-          "hours": 15.5
+          "hours": 15.5,
+          "resource": {
+            "title": "Runnable workspace package",
+            "description": "Build and verify a portable SQL, Python, notebook, R, and Git workspace.",
+            "url": "courses/healthcare-data-foundations/modules/01-reproducible-workspace/README.md"
+          }
         },
         {
           "week": 2,
@@ -30,7 +35,12 @@
           "outcome": "Explain what a database is and retrieve healthcare records from one.",
           "topics": "Relational model, schemas, keys, table grain, healthcare source systems, FHIR and JSON basics.",
           "submission": "Data model diagram, schema notes, first SQL extracts.",
-          "hours": 16
+          "hours": 16,
+          "resource": {
+            "title": "Runnable database package",
+            "description": "Rebuild the complete pinned Synthea relational source and run checked extracts.",
+            "url": "courses/healthcare-data-foundations/modules/02-databases-retrieval/README.md"
+          }
         },
         {
           "week": 3,
@@ -38,7 +48,12 @@
           "outcome": "Build a validated cohort and a derived analytic table.",
           "topics": "Joins, aggregation, common table expressions, index dates, time windows, inclusion and exclusion logic, attrition, denominators.",
           "submission": "Tested SQL cohort, cohort flow counts, table specification.",
-          "hours": 16.5
+          "hours": 16.5,
+          "resource": {
+            "title": "Runnable cohort package",
+            "description": "Build 1,048 eligible events and a tested 374-row analytic table from the accepted database.",
+            "url": "courses/healthcare-data-foundations/modules/03-cohorts-analytic-tables/README.md"
+          }
         },
         {
           "week": 4,

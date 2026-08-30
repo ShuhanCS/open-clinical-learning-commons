@@ -198,6 +198,72 @@ if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 02 query-runner self-check failed
 & python (Join-Path $fnd1Module02Root 'validate_database.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 02 validator self-check failed.' }
 
+$fnd1Module03Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\03-cohorts-analytic-tables'
+$fnd1Module03Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\03-cohorts-analytic-tables-spec.md'
+$fnd1Module03Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'ai-use.md', 'assessment.md', 'build_cohort.py',
+    'cohort-spec.md', 'data-dictionary.csv', 'instructor-notes.md', 'release.json',
+    'reproducibility-check.md', 'source-record.yml', 'table-spec.md', 'transformation-record.md',
+    'validate_cohort.py', 'sql\01-eligible-events.sql', 'sql\02-index-cohort.sql',
+    'sql\03-analytic-table.sql', 'sql\04-validation.sql', 'outputs\eligible-events.csv',
+    'outputs\index-cohort.csv', 'outputs\analytic-table.csv', 'outputs\cohort-flow.csv',
+    'outputs\query-checks.csv', 'learner-template\.gitattributes', 'learner-template\README.md',
+    'learner-template\VERSION', 'learner-template\ai-use.md', 'learner-template\cohort-spec.md',
+    'learner-template\data-dictionary.csv', 'learner-template\reproducibility-check.md',
+    'learner-template\source-record.yml', 'learner-template\table-spec.md',
+    'learner-template\transformation-record.md', 'learner-template\sql\01-eligible-events.sql',
+    'learner-template\sql\02-index-cohort.sql', 'learner-template\sql\03-analytic-table.sql',
+    'learner-template\sql\04-validation.sql'
+)
+$fnd1Module03Missing = @($fnd1Module03Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Module03Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Module03Spec) -or $fnd1Module03Missing.Count -gt 0) {
+    throw "FND-1 Module 03 is missing its specification or package files: $($fnd1Module03Missing -join ', ')."
+}
+$fnd1Module03Content = Get-Content -Raw -LiteralPath $fnd1Module03Spec
+$fnd1Module03Sections = [regex]::Matches($fnd1Module03Content, '(?m)^## \d+\.').Count
+if ($fnd1Module03Sections -ne 21 -or $fnd1Module03Content -match '[—–]' -or $fnd1Module03Content -match '(?im)[A-Z]:\\Users\\') {
+    throw "FND-1 Module 03 must define 21 plain-ASCII contract sections without local absolute paths; found $fnd1Module03Sections sections."
+}
+$fnd1Module03Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Module03Root 'release.json') | ConvertFrom-Json
+$fnd1Module03Dictionary = Import-Csv -LiteralPath (Join-Path $fnd1Module03Root 'data-dictionary.csv')
+$fnd1Module03StarterDictionary = Import-Csv -LiteralPath (Join-Path $fnd1Module03Root 'learner-template\data-dictionary.csv')
+$fnd1Module03Eligible = Import-Csv -LiteralPath (Join-Path $fnd1Module03Root 'outputs\eligible-events.csv')
+$fnd1Module03Index = Import-Csv -LiteralPath (Join-Path $fnd1Module03Root 'outputs\index-cohort.csv')
+$fnd1Module03Analytic = Import-Csv -LiteralPath (Join-Path $fnd1Module03Root 'outputs\analytic-table.csv')
+$fnd1Module03Flow = Import-Csv -LiteralPath (Join-Path $fnd1Module03Root 'outputs\cohort-flow.csv')
+$fnd1Module03Checks = Import-Csv -LiteralPath (Join-Path $fnd1Module03Root 'outputs\query-checks.csv')
+$fnd1Module03AnalyticPath = Join-Path $fnd1Module03Root 'outputs\analytic-table.csv'
+if (
+    $fnd1Module03Release.module.version -ne '0.1.0' -or
+    $fnd1Module03Release.module.commons_release -ne '0.30.0' -or
+    $fnd1Module03Release.module.hours -ne 16.5 -or
+    $fnd1Module03Release.module.checkpoint_component_weight_percent -ne 25 -or
+    $fnd1Module03Release.upstream.database_bytes -ne 141234176 -or
+    $fnd1Module03Release.upstream.database_sha256 -ne '1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a' -or
+    $fnd1Module03Release.cohort.adult_eligible_events -ne 1048 -or
+    $fnd1Module03Release.cohort.included_patients -ne 374 -or
+    $fnd1Module03Release.analytic_table.fields -ne 29 -or
+    $fnd1Module03Release.validation.complete_submission_checks -ne 614 -or
+    $fnd1Module03Eligible.Count -ne 1048 -or
+    $fnd1Module03Index.Count -ne 374 -or
+    $fnd1Module03Analytic.Count -ne 374 -or
+    $fnd1Module03Dictionary.Count -ne 29 -or
+    $fnd1Module03StarterDictionary.Count -ne 29 -or
+    $fnd1Module03Flow.Count -ne 4 -or
+    $fnd1Module03Checks.Count -ne 16 -or
+    @($fnd1Module03Checks | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    (Get-Item -LiteralPath $fnd1Module03AnalyticPath).Length -ne 121787 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $fnd1Module03AnalyticPath).Hash.ToLowerInvariant() -ne '3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a'
+) {
+    throw 'FND-1 Module 03 release metadata, cohort outputs, dictionary, or fingerprints do not match the 0.1.0 contract.'
+}
+& python (Join-Path $fnd1Module03Root 'build_cohort.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 03 builder self-check failed.' }
+& python (Join-Path $fnd1Module03Root 'validate_cohort.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 03 validator self-check failed.' }
+
 function Test-ModuleContract {
     param(
         [Parameter(Mandatory)] [string] $Label,
@@ -836,3 +902,4 @@ Write-Output "DA-730 Checkpoint 3 passed: 17 contract sections and $($checkpoint
 Write-Output "FND-1 specification passed: $fnd1ModuleCount modules, $fnd1Hours hours, $fnd1CheckpointCount checkpoints."
 Write-Output "FND-1 Module 01 passed: $fnd1Module01Sections contract sections and $($fnd1Module01Files.Count) required files."
 Write-Output "FND-1 Module 02 passed: $fnd1Module02Sections contract sections and $($fnd1Module02Files.Count) required files."
+Write-Output "FND-1 Module 03 passed: $fnd1Module03Sections contract sections and $($fnd1Module03Files.Count) required files."

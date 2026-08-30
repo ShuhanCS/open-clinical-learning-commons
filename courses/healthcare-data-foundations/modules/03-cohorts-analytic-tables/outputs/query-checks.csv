@@ -1,0 +1,17 @@
+check_id,check_name,observed_value,expected_value,status
+1,source patients,1171,1171,pass
+2,source encounters,53346,53346,pass
+3,acute events in index period,1243,1243,pass
+4,emergency events in index period,687,687,pass
+5,inpatient events in index period,556,556,pass
+6,patients with any acute event,481,481,pass
+7,patients without an acute event,690,690,pass
+8,patients with only under-18 acute events,107,107,pass
+9,adult eligible events,1048,1048,pass
+10,included adult patients,374,374,pass
+11,eligible non-index events,674,674,pass
+12,unique included patients,374,374,pass
+13,unique index encounters,374,374,pass
+14,emergency index encounters,314,314,pass
+15,inpatient index encounters,60,60,pass
+16,flow conservation,1171,1171,pass

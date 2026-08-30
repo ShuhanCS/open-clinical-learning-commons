@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd1-03",
+    "title": "Cohorts and analytic tables",
+    "version": "0.1.0",
+    "commons_release": "0.30.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "week": 3,
+    "hours": 16.5,
+    "checkpoint_component_weight_percent": 25
+  },
+  "decision": {
+    "owner": "senior clinical data analyst",
+    "question": "Do the cohort definition, denominators, temporal windows, and one-row-per-person table match?",
+    "dispositions": ["accept", "accept with conditions", "revise", "refer"]
+  },
+  "upstream": {
+    "module": "oclc-fnd1-02",
+    "source_url": "https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip",
+    "archive_bytes": 8982431,
+    "archive_sha256": "4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a",
+    "database_bytes": 141234176,
+    "database_sha256": "1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a",
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "cohort": {
+    "source_patients": 1171,
+    "acute_period_events": 1243,
+    "candidate_patients": 481,
+    "no_acute_exclusions": 690,
+    "under_18_only_exclusions": 107,
+    "adult_eligible_events": 1048,
+    "included_patients": 374,
+    "eligible_nonindex_events": 674,
+    "index_emergency": 314,
+    "index_inpatient": 60
+  },
+  "analytic_table": {
+    "rows": 374,
+    "fields": 29,
+    "next_30d_state": {
+      "No encounter recorded": 263,
+      "Scheduled care": 92,
+      "Urgent care": 4,
+      "Acute return": 15
+    },
+    "acute_return_90d": 36,
+    "death_90d": 8,
+    "endpoint_90d": {
+      "Death": 8,
+      "Acute return": 36,
+      "No acute return recorded": 330
+    },
+    "followup_90d_complete": 374,
+    "history_counts": {
+      "prior_365d_encounter_count": {"minimum": 0, "maximum": 187, "sum": 2138},
+      "prior_365d_acute_count": {"minimum": 0, "maximum": 13, "sum": 113},
+      "prior_365d_condition_count": {"minimum": 0, "maximum": 5, "sum": 468},
+      "prior_365d_medication_count": {"minimum": 0, "maximum": 185, "sum": 1007}
+    }
+  },
+  "outputs": {
+    "eligible-events.csv": {"rows": 1048, "bytes": 229592, "sha256": "28163b5bb5db0ac78dc3a1e3ada606cb582dd5c6835678d2322550f4178878f3"},
+    "index-cohort.csv": {"rows": 374, "bytes": 82045, "sha256": "27bb741f914da2efcfcaa70a2a5a527b9dc32c06946afdcc5ac451216e314891"},
+    "analytic-table.csv": {"rows": 374, "bytes": 121787, "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a"},
+    "cohort-flow.csv": {"rows": 4, "bytes": 259, "sha256": "d9addbe256d4a94e878a84ae3a59b15f849e8110bec3a50d54f97cbac968d2c6"},
+    "query-checks.csv": {"rows": 16, "bytes": 739, "sha256": "e82b275e698634fda7072d816abd0a51cc0a0d11dcc581f842fec821b1eb3319"}
+  },
+  "environment": {
+    "tested_platform": "Windows",
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "external_python_dependencies": 0
+  },
+  "package": {
+    "learner_template_files": 14,
+    "sql_files": 4,
+    "reference_outputs": 5,
+    "release_validation_checks": 600,
+    "database_reproduction_checks": 613,
+    "complete_submission_checks": 614
+  },
+  "assessment": {
+    "points": 100,
+    "minimum_passing_points": 80,
+    "noncompensable_gates": 12
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, SQL, teaching assets, and validation"}
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "The pinned Module 02 database produced 1,048 eligible events, 374 analytic rows, 16 passing query checks, and five byte-reproducible outputs."
+    },
+    "required_human_roles": [
+      {"role": "FND-1 faculty owner", "reviewer": null, "status": "pending"},
+      {"role": "SQL and data engineering", "reviewer": null, "status": "pending"},
+      {"role": "clinical informatics and cohort meaning", "reviewer": null, "status": "pending"},
+      {"role": "denominator and temporal logic", "reviewer": null, "status": "pending"},
+      {"role": "accessibility", "reviewer": null, "status": "pending"},
+      {"role": "privacy and data governance", "reviewer": null, "status": "pending"},
+      {"role": "responsible AI", "reviewer": null, "status": "pending"},
+      {"role": "independent reproduction and teachability", "reviewer": null, "status": "pending"}
+    ]
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "upstream_database_rebuild": "pass",
+    "read_only_sql": "pass",
+    "query_checks": 16,
+    "reference_outputs": 5,
+    "complete_submission_checks": 614,
+    "byte_for_byte_reproduction": "pass",
+    "nonempty_target_refusal": "pass",
+    "incomplete_package_rejection": "pass"
+  },
+  "known_issues": [
+    "Named faculty, SQL, clinical-informatics, temporal-logic, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "Windows reproduction is complete; named macOS and Linux reproduction remains pending.",
+    "The generated 141 MB upstream SQLite database is rebuilt and not stored in Git.",
+    "The source is synthetic and older and cannot support real population or clinical estimates."
+  ]
+}

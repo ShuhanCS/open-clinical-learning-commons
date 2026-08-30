@@ -1,0 +1,5 @@
+step,starting,excluded,remaining,rule
+1,1171,0,1171,All source patients
+2,1171,690,481,Has emergency or inpatient encounter in index period
+3,481,107,374,Has at least one qualifying event at age 18 or older
+4,374,0,374,Select first eligible event per patient

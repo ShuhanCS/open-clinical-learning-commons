@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.29.0
+- Current release: 0.30.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Module 02, Databases and retrieving healthcare data
-- Next unit: FND-1 Module 03, Cohorts and analytic tables
+- Last completed unit: FND-1 Module 03, Cohorts and analytic tables
+- Next unit: FND-1 Week 3 checkpoint, cumulative workspace, database, and cohort release
 
 ## Confirmed decisions
 
@@ -130,6 +130,13 @@
 - Five reference extracts return 16, 6, 3, 25, and 25 rows. The standard-library runner accepts only named read-only SQL and protects nonempty output directories.
 - The canonical validator passes 96 database checks and 126 complete-submission checks. Builder, query-runner, validator, source revalidation, invalid-FHIR, incomplete-record, target-overwrite, and output-overwrite checks pass.
 - Module 02 is a runnable release candidate. Faculty, data engineering, clinical informatics, FHIR, rights, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Module 03 uses four read-only SQL files to select 1,048 adult eligible emergency or inpatient events from the accepted Module 02 database.
+- Deterministic event ordering selects one index for each of 374 synthetic adults: 314 emergency indexes and 60 inpatient indexes. The conserved flow excludes 690 patients with no acute event in the period and 107 with only under-18 acute events.
+- The one-row-per-person analytic table contains 374 rows and 29 fields. Its SHA-256 is `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
+- Thirty-day states are 263 no encounter recorded, 92 scheduled care, 4 urgent care, and 15 acute return. Ninety-day fields contain 36 acute-return flags, 8 death flags, and complete source coverage for all 374 rows.
+- Separate pre-index aggregation prevents join multiplication. Encounter, acute, condition, and medication history-count sums are 2,138, 113, 468, and 1,007.
+- Five committed outputs reproduce byte for byte from the pinned database. The validator passes 600 package checks, 613 checks with upstream database reproduction, and 614 complete-submission checks; incomplete packages and existing build targets are rejected.
+- Module 03 is a runnable release candidate. Faculty, SQL, clinical informatics, temporal logic, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -138,9 +145,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course specification, Module 01 and 02 specifications and release records, source record, master architecture, and this ledger.
-2. Treat the accepted Module 02 database schema, source manifest, table counts, optionality, and fingerprints as immutable upstream inputs.
-3. Write the 21-section Module 03 specification for the adult acute-care cohort and one-row-per-person analytic table.
-4. Lock the index period, adult rule, index event, lookback, follow-up, inclusion/exclusion order, attrition counts, table grain, denominators, and query tests.
-5. Build tested SQL, cohort flow, analytic-table specification, learner assessment, instructor key, validator, and Checkpoint 1 component records.
-6. Update the Commons version and this ledger, then commit and push Module 03 before assembling the Week 3 checkpoint.
+1. Read the FND-1 course specification, Modules 01 through 03 specifications and release records, source record, master architecture, and this ledger.
+2. Treat the accepted Module 02 database and Module 03 cohort definition, analytic table, flow, SQL, and fingerprints as immutable upstream inputs.
+3. Write the cumulative Week 3 checkpoint specification mapping the 15-percent Module 01 workspace component and 25-percent Module 03 cohort component to the official 40-percent checkpoint.
+4. Assemble the exact workspace, relational database evidence, tested cohort, analytic table, source record, query checks, AI disclosure, and release disposition into one portable submission contract.
+5. Build the checkpoint assembler, validator, learner templates, rubric, instructor key, release record, and clean reproduction evidence.
+6. Update the Commons version and this ledger, then commit and push the Week 3 checkpoint before beginning Module 04.

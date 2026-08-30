@@ -11,9 +11,9 @@ FND-1 teaches learners to build, check, describe, and hand off healthcare data a
 - Continuing case: a synthetic longitudinal acute-care data system built from Synthea and documented public-source contrasts
 - Final deliverable: a reproducible healthcare data toolkit
 - Course specification status: complete candidate
-- Module package status: Modules 01 and 02 are runnable release candidates; Modules 03 through 07 are not yet built
+- Module package status: Modules 01 through 03 are runnable release candidates; Modules 04 through 07 are not yet built
 - Course package version: 0.1.0
-- Commons release: 0.29.0
+- Commons release: 0.30.0
 
 ## Seven technical modules
 
@@ -25,7 +25,7 @@ FND-1 teaches learners to build, check, describe, and hand off healthcare data a
 6. Accessible charts and time-indexed data.
 7. Reproducible handoff and AI audit.
 
-Module 01 package:
+Runnable module packages:
 
 - [Setting up a reproducible workspace](modules/01-reproducible-workspace/README.md)
 - [Durable Module 01 specification](../../docs/curriculum/courses/FND-1/modules/01-reproducible-workspace-spec.md)
@@ -33,6 +33,9 @@ Module 01 package:
 - [Databases and retrieving healthcare data](modules/02-databases-retrieval/README.md)
 - [Durable Module 02 specification](../../docs/curriculum/courses/FND-1/modules/02-databases-retrieval-spec.md)
 - [Module 02 release record](modules/02-databases-retrieval/release.json)
+- [Cohorts and analytic tables](modules/03-cohorts-analytic-tables/README.md)
+- [Durable Module 03 specification](../../docs/curriculum/courses/FND-1/modules/03-cohorts-analytic-tables-spec.md)
+- [Module 03 release record](modules/03-cohorts-analytic-tables/release.json)
 
 ## Three cumulative checkpoints
 

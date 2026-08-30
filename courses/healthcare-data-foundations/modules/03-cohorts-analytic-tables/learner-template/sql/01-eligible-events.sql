@@ -1,0 +1,1 @@
+-- [REPLACE: Write one read-only WITH query that returns the exact 15-field eligible-event contract.]

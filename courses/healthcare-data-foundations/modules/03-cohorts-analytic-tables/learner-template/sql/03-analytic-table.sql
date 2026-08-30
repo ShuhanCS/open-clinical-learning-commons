@@ -1,0 +1,1 @@
+-- [REPLACE: Write one read-only WITH query that returns the exact 29-field analytic-table contract.]

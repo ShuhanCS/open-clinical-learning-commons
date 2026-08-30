@@ -1,0 +1,1 @@
+-- [REPLACE: Write one read-only WITH query that deterministically selects one index per patient.]
