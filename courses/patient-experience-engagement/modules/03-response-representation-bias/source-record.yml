@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+publisher: Agency for Healthcare Research and Quality
+product: MEPS HC-256 2024 Full Year Consolidated Data File
+release_date: 2026-08
+landing_page: https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-256
+source_files: 5
+source_bytes: 12353779
+pdf_files: 2
+pdf_pages: 869
+source_rows: 19140
+positive_person_weight_rows: 18683
+target_definition: adults age 18 or older with positive PERWT24F and at least one 2024 inpatient discharge
+target_rows: 1255
+target_base_weighted_population: 18879474.284615
+public_data_class: public-use federal survey data and public-derived grouped fields
+synthetic_data_class: deterministic invitation response Q21 Q22 Q23 mode and item-missingness overlay
+official_base_weight: PERWT24F
+variance_fields: VARSTR and VARPSU
+teaching_use: response flow representation item missingness transparent bounded response adjustment and known-truth comparison
+prohibited_use: real HCAHPS or hospital response estimate patient targeting clinical action hospital ranking causal mode claim equity conclusion and synthetic-as-real claim

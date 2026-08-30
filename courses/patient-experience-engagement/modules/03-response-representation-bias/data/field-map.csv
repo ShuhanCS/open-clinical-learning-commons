@@ -1,0 +1,18 @@
+source_name,start,end,kind,derived_use
+DUPERSID,11,20,text,stable synthetic draw key not released
+PANEL,21,22,integer,source profile
+REGION24,88,89,integer,representation audit
+PROXY24,112,112,integer,proxy audit and generator input
+INTVLANG,113,114,integer,interview language audit
+AGE24X,192,193,integer,adult selection age band and generator input
+SEX,202,202,integer,representation audit
+RACETHX,209,209,integer,race and ethnicity audit
+OTHLGSPK,272,273,integer,language audit response cell and generator input
+RTHLTH53,442,443,integer,health audit and generator input
+SAQELIG,597,597,integer,public adjacent response example
+POVCAT24,2037,2037,integer,poverty audit response cell and generator input
+INSCOV24,2805,2805,integer,insurance audit
+IPDIS24,3980,3981,integer,inpatient discharge target selection
+PERWT24F,4599,4610,decimal,official public base person weight
+VARSTR,4635,4638,integer,variance stratum retained for later analysis
+VARPSU,4639,4639,integer,variance PSU retained for later analysis

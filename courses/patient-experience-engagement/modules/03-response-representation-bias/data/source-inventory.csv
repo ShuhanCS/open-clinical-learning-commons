@@ -1,0 +1,6 @@
+source_id,title,relative_path,url,media_type,bytes,sha256,pages,role
+MEPS-H256-DATA,MEPS HC-256 2024 Full Year Consolidated ASCII data,data/raw/h256dat.zip,https://meps.ahrq.gov/data_files/pufs/h256/h256dat.zip,application/zip,6125956,d0779e49de4f5ff0b0fff6774167023382366a0ef0905e6a3c40126114f988c9,,full public person file
+MEPS-H256-DOC,MEPS HC-256 documentation,data/raw/h256doc.pdf,https://meps.ahrq.gov/data_stats/download_data/pufs/h256/h256doc.pdf,application/pdf,1703083,31a3adfe4131b78a34f7abddc34b890201ace8dcad4be7bdcc3c3521de50c140,240,population weight and design documentation
+MEPS-H256-CB,MEPS HC-256 codebook,data/raw/h256cb.pdf,https://meps.ahrq.gov/data_stats/download_data/pufs/h256/h256cb.pdf,application/pdf,3905395,c5f0de30624e7337559f9b14a535b3b20118769e2eea074ee54103cf4f168885,629,field positions values and frequencies
+MEPS-H256-SAS,MEPS HC-256 SAS programming statements,data/raw/h256su.txt,https://meps.ahrq.gov/data_stats/download_data/pufs/h256/h256su.txt,text/plain,565233,a7bd4eca49833f40df45b53aad803dfca15b1a3a9b1de03aa6e79f508c5e24be,,fixed-width field and format reference
+MEPS-H256-R,MEPS HC-256 R programming statements,data/raw/h256ru.txt,https://meps.ahrq.gov/data_stats/download_data/pufs/h256/h256ru.txt,text/plain,54112,193736376d85c3a6fe1d41ddf7e04d3eec3b083ab823b1ad083e795d2ca5ee0c,,independent import reference

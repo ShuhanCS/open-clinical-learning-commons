@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app2-cp01",
+    "title": "Measurement and representation readiness",
+    "version": "0.1.0",
+    "commons_release": "0.58.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "due_point": "end of instructional Week 3",
+    "course_points": 20,
+    "point_source": "oclc-app2-02 exactly once"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app2-01", "version": "0.1.0", "commons_release": "0.56.0", "assembled_files": 25, "manifest_bytes": 1787, "manifest_sha256": "c693e04592994f6f7bef14459b83669a5c824d0bf0b027a0624bab12a3cb4862", "points": 0},
+    {"id": "oclc-app2-02", "version": "0.1.0", "commons_release": "0.57.0", "assembled_files": 66, "manifest_bytes": 6890, "manifest_sha256": "c261307b45be842c00c9ded66614a3770f379d41a1d7efecb68032f9c090a870", "points": 20},
+    {"id": "oclc-app2-03", "version": "0.1.0", "commons_release": "0.58.0", "assembled_files": 44, "manifest_bytes": 4045, "manifest_sha256": "3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30", "points": 0}
+  ],
+  "accepted_evidence": {
+    "component_files": 135,
+    "module02_measurement_score": "20.00 of 20.00",
+    "module02_measurement_gates": "18 of 18 pass",
+    "module03_response_gates": "19 of 19 pass",
+    "checkpoint_integrity_gates": "15 of 15 pass",
+    "failed_gates": "none",
+    "target_rows": 1255,
+    "synthetic_respondents": 782,
+    "response_cells": 13,
+    "response_factor_cap_hits": 1,
+    "composite_adjusted_absolute_bias_pp": 4.20274444
+  },
+  "package": {
+    "candidate_manifest_rows": 135,
+    "candidate_manifest_bytes": 23489,
+    "candidate_manifest_sha256": "5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903",
+    "checkpoint_editable_records": 6,
+    "assembled_files": 149,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for linked analysis",
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited",
+    "real_fielding": "prohibited",
+    "patient_targeting": "prohibited",
+    "machine_learning": "reserved for Module 06"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 714,
+    "starter_checks": 683,
+    "two_assemblies_match": "pass",
+    "existing_target_rejection": "pass",
+    "candidate_mutation_rejection": "pass",
+    "duplicate_point_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, cumulative assembly, evidence-chain validation, and release record"}
+  ],
+  "known_issues": [
+    "Named APP-2 faculty, patient or caregiver, measurement, survey-methods, accessibility, language-access, privacy, responsible-AI, clinical, and independent reproduction reviews remain pending before alpha.",
+    "The point score cannot compensate for a failed measurement, response, integrity, protection, or progression gate.",
+    "Public, public-derived, and synthetic data classes must remain distinct in every downstream analysis.",
+    "The response adjustment improves the synthetic known-truth comparison but leaves residual bias.",
+    "No package authorizes fielding, patient targeting, clinical action, hospital ranking, or machine-learning response adjustment.",
+    "An actual course section must map the checkpoint to the official half-term calendar before assigning a due date."
+  ]
+}

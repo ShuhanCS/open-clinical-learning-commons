@@ -1,0 +1,4 @@
+measure,full_frame_truth_percent,respondent_base_weighted_percent,response_adjusted_percent,base_absolute_bias_pp,adjusted_absolute_bias_pp,interpretation
+Q22,72.09313297,75.96031760,75.23813405,3.86718463,3.14500108,adjustment improves the simulation result but leaves positive bias
+Q23,69.37964258,75.32394643,74.64013037,5.94430386,5.26048779,adjustment improves the simulation result but leaves positive bias
+teaching_composite,70.73638777,75.64213202,74.93913221,4.90574425,4.20274444,adjustment improves the simulation result but does not remove bias

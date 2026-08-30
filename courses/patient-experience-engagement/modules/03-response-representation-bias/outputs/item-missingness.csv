@@ -1,0 +1,21 @@
+item,dimension,group,applicable_respondents,answered_n,missing_n,missing_percent,support_flag
+Q22,total,all applicable respondents,642,585,57,8.87850467,adequate_for_descriptive_audit
+Q22,age_band,18-44,127,119,8,6.29921260,adequate_for_descriptive_audit
+Q22,age_band,45-64,154,145,9,5.84415584,adequate_for_descriptive_audit
+Q22,age_band,65+,361,321,40,11.08033241,adequate_for_descriptive_audit
+Q22,other_language_at_home,missing or inapplicable,1,1,0,0.00000000,limited_support
+Q22,other_language_at_home,no,554,511,43,7.76173285,adequate_for_descriptive_audit
+Q22,other_language_at_home,yes,87,73,14,16.09195402,adequate_for_descriptive_audit
+Q22,assigned_mode,mail,207,189,18,8.69565217,adequate_for_descriptive_audit
+Q22,assigned_mode,phone,203,187,16,7.88177340,adequate_for_descriptive_audit
+Q22,assigned_mode,web,232,209,23,9.91379310,adequate_for_descriptive_audit
+Q23,total,all applicable respondents,642,589,53,8.25545171,adequate_for_descriptive_audit
+Q23,age_band,18-44,127,114,13,10.23622047,adequate_for_descriptive_audit
+Q23,age_band,45-64,154,138,16,10.38961039,adequate_for_descriptive_audit
+Q23,age_band,65+,361,337,24,6.64819945,adequate_for_descriptive_audit
+Q23,other_language_at_home,missing or inapplicable,1,1,0,0.00000000,limited_support
+Q23,other_language_at_home,no,554,522,32,5.77617329,adequate_for_descriptive_audit
+Q23,other_language_at_home,yes,87,66,21,24.13793103,adequate_for_descriptive_audit
+Q23,assigned_mode,mail,207,187,20,9.66183575,adequate_for_descriptive_audit
+Q23,assigned_mode,phone,203,183,20,9.85221675,adequate_for_descriptive_audit
+Q23,assigned_mode,web,232,219,13,5.60344828,adequate_for_descriptive_audit

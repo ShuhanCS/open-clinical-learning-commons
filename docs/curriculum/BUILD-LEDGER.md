@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.57.0
+- Current release: 0.58.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Module 02, patient-reported measurement and scale construction
-- Next unit: APP-2 Module 03, response, representation, and survey bias
+- Last completed unit: APP-2 Checkpoint 01, measurement and representation readiness
+- Next unit: APP-2 Module 04, linked patient evidence
 
 ## Confirmed decisions
 
@@ -385,22 +385,36 @@
 - Reference validation passes 239 checks at 20 of 20 points with all 18 gates. Starter validation passes 202 checks. Two-build, existing-target, changed-source, invalid-score, failed-gate, invalid-naming, invalid-progression, synthetic-as-real, and missing-record routes pass.
 - The reference progression is `continue with conditions`. Module 03 may begin response and representation work; clinical action, hospital ranking, official comparison for partial use, and response weighting in Module 02 remain prohibited.
 - APP-2 Module 02 is a runnable release candidate at Commons 0.57.0.
+- APP-2 Module 03 version 0.1.0 retains the full five-file MEPS HC-256 source suite: 12,353,779 bytes and 869 PDF pages. The data ZIP contains all 19,140 public-use rows, including 18,683 with positive `PERWT24F`.
+- The accepted public analytic target contains 1,255 adults with positive person weight and at least one reported 2024 inpatient discharge. Its base-weighted population is 18,879,474.284615. The teaching frame and invitation set each contain all 1,255 records, so coverage is complete only by construction.
+- The deterministic synthetic overlay produces 782 respondents, a 62.31075697 percent unweighted response rate, 642 respondent Q21 home records, 585 answered Q22 records, and 589 answered Q23 records. Total nonresponse, not-applicable states, and item missingness remain separate.
+- The release contains 40 subgroup-response rows, 20 item-missingness rows, and 13 response cells. One limited-support cell has raw factor 3.13328156 and hits the declared 3.0 bound. The one-record missing-language cell remains separate rather than being recoded to no.
+- Kish effective sample size changes from 548.95483815 under respondent base weights to 527.00399458 under the teaching response adjustment. The teaching factor is never called an official MEPS or HCAHPS weight.
+- The bounded adjustment improves Q22, Q23, and the teaching composite relative to base weighting alone. Adjusted absolute bias remains 3.14500108, 5.26048779, and 4.20274444 percentage points, respectively.
+- The Module 03 workspace has 31 immutable rows, 12 editable records, and 44 files. Its 4,045-byte manifest SHA-256 is `3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30`.
+- Reference validation passes 190 checks and learner validation passes 175 checks. Evidence two-build equality, copied validation, response mutation, failed gate, invalid progression, and existing-target routes pass.
+- APP-2 Module 03 is a runnable release candidate at Commons 0.58.0 and permits linked analysis with conditions. Fielding, patient targeting, clinical action, hospital ranking, real population claims, and machine learning remain prohibited.
+- APP-2 Checkpoint 01 version 0.1.0 freezes 25 Module 01 files, 66 Module 02 files, and 44 Module 03 files without editing accepted evidence.
+- The checkpoint has 135 accepted component files and 149 assembled files. Its 23,489-byte candidate manifest SHA-256 is `5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903`.
+- The checkpoint carries the 20-point Module 02 score exactly once. Module 01 and Module 03 add zero points, while 18 measurement gates, 19 response gates, and 15 checkpoint integrity gates are required.
+- Reference checkpoint validation passes 714 checks and learner validation passes 683 checks. Two-build equality, copied validation, candidate mutation, duplicate-point, failed-gate, invalid-progression, and existing-target routes pass.
+- APP-2 Checkpoint 01 is a runnable release candidate at Commons 0.58.0 and permits Module 04 linked analysis with all patient-partner, survey-methods, accessibility, language-access, privacy, responsible-AI, clinical, faculty, and independent-review conditions retained.
 
 ## Pending confirmation
 
 - Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha.
 - Name and confirm the APP-2 patient/caregiver partner co-lead, compensation, decision rights, preparation, access needs, recording consent, and review terms.
-- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions before alpha.
+- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions and the Module 03 MEPS population, response, weighting, privacy, and progression decisions before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, Module 02 release and progression record, source record, and this ledger.
-2. Write the durable Module 03 response, representation, and survey-bias specification before implementation.
-3. Preserve the exact Q21-Q23 item, scoring, language, mode, naming, and access contract from Module 02.
-4. Define the eligible population, sampling frame, invitation, response, item missingness, consent, and mode records without claiming the public aggregate file contains patient-level responses.
-5. Add one transparent bounded weighting exercise only after unweighted response and coverage evidence is complete.
-6. Build the cumulative Week 3 readiness release without rescoring the 20-point Module 02 component.
-7. Include learner and reference packages, exact tests, public and synthetic source boundaries, assessment, instructor materials, AI record, release metadata, and a Module 04 handoff.
-8. Validate, advance semver, commit, and push before Module 04.
+1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 03 progression record, source record, and this ledger.
+2. Write the durable Module 04 linked patient-evidence specification before implementation.
+3. Preserve the exact Q21-Q23 measurement, target population, data-class, response-state, base-weight, teaching-factor, bound, and claim contracts from the Week 3 release.
+4. Pin and fingerprint the required MEPS HC-254 event files before creating a linked person-event analytic table.
+5. Align person, event, access, communication, engagement, and service-use denominators and periods before comparison.
+6. Use `PERWT24F`, `VARSTR`, and `VARPSU` correctly or record a specialist referral before population inference.
+7. Build the 25-point linked-evidence component with learner and reference packages, exact tests, source boundaries, assessment, instructor materials, AI record, release metadata, and a Module 05 handoff.
+8. Validate, advance semver, commit, and push before Module 05.

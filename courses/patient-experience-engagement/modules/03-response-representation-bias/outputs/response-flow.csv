@@ -1,0 +1,8 @@
+stage,count,percent_of_frame,base_weighted_population,notes
+public_analytic_target,1255,100.00000000,18879474.284615,MEPS public-derived adults with positive weight and at least one inpatient discharge
+teaching_sampling_frame,1255,100.00000000,18879474.284615,complete teaching frame by construction
+invited,1255,100.00000000,18879474.284615,every frame member invited once
+respondents,782,62.31075697,11836947.304214,synthetic total response
+respondent_q21_home,642,51.15537849,9895794.823450,synthetic Q22 and Q23 applicability among respondents
+q22_answered,585,46.61354582,9172342.102540,Q22 yes or no with item-specific denominator
+q23_answered,589,46.93227092,9111098.220966,Q23 yes or no with item-specific denominator

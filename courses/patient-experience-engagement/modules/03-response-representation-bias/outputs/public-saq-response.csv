@@ -1,0 +1,2 @@
+population,eligible_n,has_saq_data_n,unweighted_has_data_percent,eligible_base_weight,has_data_base_weight,base_weighted_has_data_percent,interpretation
+adult positive-weight people with at least one 2024 inpatient discharge and SAQELIG 1 or 2,1251,993,79.37649880,18802467.670324,14964318.803545,79.58699393,real public MEPS SAQ data-status example; not HCAHPS response and not synthetic generator truth

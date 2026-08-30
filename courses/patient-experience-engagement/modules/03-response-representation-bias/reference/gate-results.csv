@@ -1,0 +1,20 @@
+gate_id,gate,status,evidence,action_if_failed
+G01,exact Module 02 measurement contract preserved,pass,Q21 Q22 Q23 scoring naming and intended use unchanged,return to Module 02
+G02,full official HC-256 source suite fingerprinted,pass,5 files and 12353779 bytes verified,restore official sources
+G03,source positive-weight target frame and invitation counts reconcile,pass,19140 18683 1255 1255 and 1255,repair extraction and flow
+G04,target population and frame are stated separately,pass,target-frame.md names both,revise population contract
+G05,constructed coverage is bounded,pass,100 percent labeled teaching construction,remove real-world coverage claim
+G06,total nonresponse skip state and item missingness are separate,pass,three states preserved in response-study.csv,restore response states
+G07,overall and subgroup rates name denominators,pass,response flow and 40 subgroup rows audited,recompute rates
+G08,small support remains visible,pass,limited_support flags retained,restore support flags
+G09,PERWT24F remains the official final person weight,pass,source and weighting records match AHRQ,correct base-weight label
+G10,synthetic response factor is teaching-only,pass,data class and decision label are explicit,correct adjustment claim
+G11,all response cells and bound hit are reported,pass,13 cells and one cap hit visible,restore cells and cap
+G12,weight concentration and effective sample size are reported,pass,two weight sets include CV Kish n and largest share,complete diagnostics
+G13,Q21 Q22 Q23 and composite rules remain exact,pass,item-specific answered denominators preserved,restore measurement contract
+G14,adjusted estimates are compared with known truth,pass,12-row estimate table and bias-recovery record agree,rebuild comparison
+G15,improvement is not called bias removal,pass,remaining 3.14500108 5.26048779 and 4.20274444 point errors stated,narrow interpretation
+G16,privacy consent access burden and stop rules are complete,pass,privacy-consent.md covers all required controls,complete protection plan
+G17,AI use is accountable and independently checked,pass,ai-use.md names task files verification correction and owner,complete disclosure
+G18,no synthetic-as-real causal mode hospital clinical or population claim appears,pass,claim boundary retained across records,correct overclaim
+G19,Module 04 progression is explicit,pass,continue with conditions and linked-analysis permission recorded,revise progression

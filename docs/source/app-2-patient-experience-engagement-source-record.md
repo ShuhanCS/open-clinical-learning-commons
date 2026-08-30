@@ -104,6 +104,20 @@ Relevant 2024 event files are HC-254D inpatient stays, HC-254E emergency visits,
 
 The Commons creates documented synthetic data only where public sources do not contain the needed teaching evidence. The planned synthetic layers are a nonidentifiable patient-comment corpus and a known response-selection mechanism applied to a public-use analytic population. Neither may be described as observed patient testimony, real nonresponse, or population prevalence.
 
+## Accepted Module 03 source release
+
+Module 03 pins the complete HC-256 source suite needed for the public analytic target and design interpretation:
+
+- ASCII data ZIP, 6,125,956 bytes, SHA-256 `d0779e49de4f5ff0b0fff6774167023382366a0ef0905e6a3c40126114f988c9`;
+- documentation PDF, 1,703,083 bytes and 240 pages;
+- codebook PDF, 3,905,395 bytes and 629 pages;
+- SAS fixed-width programming statements, 565,233 bytes; and
+- R programming statements, 54,112 bytes.
+
+The five official files total 12,353,779 bytes. The full data file contains 19,140 rows, of which 18,683 have positive `PERWT24F`. The accepted target contains 1,255 adults with a positive person weight and at least one reported 2024 inpatient discharge. It retains grouped public fields, `PERWT24F`, `VARSTR`, and `VARPSU`, while omitting `DUPERSID` and exact age from the derived teaching frame.
+
+The invitation, mode, response, Q21, Q22, Q23, and item-missingness fields are deterministic synthetic procedural data. The 13-cell teaching factor adjusts only that synthetic response layer and never replaces or relabels the official MEPS final person weight. The released known-truth comparison shows improvement with residual bias, so it cannot support a real patient-experience, hospital, access, equity, prevalence, mode, or clinical claim.
+
 ## Stable source decisions
 
 - APP-2 remains a distinct applied course.

@@ -1,0 +1,3 @@
+weight_set,n,sum,minimum,maximum,mean,coefficient_of_variation,kish_effective_n,largest_weight_share_percent
+respondent_base_weight,782,11836947.304214,1370.543693,67368.963182,15136.761259,0.65155598,548.95483815,0.56914136
+respondent_response_adjusted_weight,782,18852099.411738,2993.071597,146089.999188,24107.544005,0.69560026,527.00399458,0.77492695

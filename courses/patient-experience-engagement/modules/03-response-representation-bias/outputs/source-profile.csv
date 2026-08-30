@@ -1,0 +1,11 @@
+metric,value,unit,evidence
+official_source_files,5,files,source inventory and fingerprints
+official_source_bytes,12353779,bytes,five retained official files
+official_pdf_pages,869,pages,HC-256 documentation and codebook
+source_rows,19140,people,full h256.dat
+fixed_width_characters,4690,characters,maximum decoded record width
+positive_person_weight_rows,18683,people,PERWT24F greater than zero
+target_rows,1255,people,age 18 plus positive weight and IPDIS24 at least one
+target_base_weighted_population,18879474.284615,people,sum PERWT24F in target
+variance_strata_in_target,105,strata,distinct VARSTR
+panels_in_target,2,panels,distinct PANEL

@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app2-03",
+    "title": "Response, representation, and survey bias",
+    "version": "0.1.0",
+    "commons_release": "0.58.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": 3,
+    "hours": 16.5,
+    "course_points_awarded_here": 0,
+    "carried_week3_measurement_points": 20
+  },
+  "source_suite": {
+    "publisher": "Agency for Healthcare Research and Quality",
+    "product": "MEPS HC-256 2024 Full Year Consolidated Data File",
+    "landing_page": "https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-256",
+    "files": 5,
+    "bytes": 12353779,
+    "pdf_files": 2,
+    "pdf_pages": 869,
+    "data_zip_bytes": 6125956,
+    "data_zip_sha256": "d0779e49de4f5ff0b0fff6774167023382366a0ef0905e6a3c40126114f988c9",
+    "source_rows": 19140,
+    "positive_person_weight_rows": 18683,
+    "fixed_width_characters": 4690
+  },
+  "public_target": {
+    "definition": "adults age 18 or older with positive PERWT24F and at least one reported 2024 inpatient discharge",
+    "rows": 1255,
+    "base_weighted_population": 18879474.284615,
+    "frame_rows": 1255,
+    "invited_rows": 1255,
+    "constructed_coverage_percent": 100.0,
+    "released_source_id": false,
+    "released_exact_age": false,
+    "variance_fields_retained": ["VARSTR", "VARPSU"]
+  },
+  "synthetic_response": {
+    "generator_id": "app2-m03-response-v1",
+    "respondents": 782,
+    "nonrespondents": 473,
+    "unweighted_response_percent": 62.31075697,
+    "base_weighted_response_percent": 62.69744128,
+    "full_frame_q21_home": 1006,
+    "respondent_q21_home": 642,
+    "q22_answered": 585,
+    "q22_missing": 57,
+    "q23_answered": 589,
+    "q23_missing": 53,
+    "data_class": "synthetic procedural response overlay"
+  },
+  "public_saq_example": {
+    "eligible": 1251,
+    "has_data": 993,
+    "unweighted_has_data_percent": 79.37649880,
+    "base_weighted_has_data_percent": 79.58699393,
+    "claim_boundary": "real public MEPS SAQ data status, not HCAHPS response and not synthetic generator truth"
+  },
+  "weighting": {
+    "official_base_weight": "PERWT24F",
+    "teaching_response_cells": 13,
+    "factor_cap": 3.0,
+    "cap_hits": 1,
+    "base_weight_kish_effective_n": 548.95483815,
+    "adjusted_weight_kish_effective_n": 527.00399458,
+    "largest_adjusted_weight_share_percent": 0.77492695,
+    "claim_boundary": "teaching response adjustment only, not an official MEPS or HCAHPS weight"
+  },
+  "known_truth_comparison": {
+    "q22_truth_percent": 72.09313297,
+    "q22_base_weighted_percent": 75.96031760,
+    "q22_response_adjusted_percent": 75.23813405,
+    "q22_adjusted_absolute_bias_pp": 3.14500108,
+    "q23_truth_percent": 69.37964258,
+    "q23_base_weighted_percent": 75.32394643,
+    "q23_response_adjusted_percent": 74.64013037,
+    "q23_adjusted_absolute_bias_pp": 5.26048779,
+    "composite_truth_percent": 70.73638777,
+    "composite_base_weighted_percent": 75.64213202,
+    "composite_response_adjusted_percent": 74.93913221,
+    "composite_adjusted_absolute_bias_pp": 4.20274444,
+    "all_three_improve": true,
+    "all_three_retain_residual_bias": true
+  },
+  "generated_evidence": {
+    "files": 12,
+    "bytes": 583571,
+    "public_frame_rows": 1255,
+    "synthetic_overlay_rows": 1255,
+    "subgroup_rows": 40,
+    "item_missingness_rows": 20,
+    "response_cell_rows": 13,
+    "estimate_rows": 12,
+    "invariant_rows": 23
+  },
+  "package": {
+    "immutable_manifest_rows": 31,
+    "editable_records": 12,
+    "assembled_files": 44,
+    "manifest_bytes": 4045,
+    "manifest_sha256": "3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30",
+    "external_python_dependencies": 0
+  },
+  "assessment": {
+    "course_points_awarded_here": 0,
+    "carried_week3_measurement_points": 20,
+    "noncompensable_response_gates": 19,
+    "reference_failed_gates": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for linked analysis",
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited",
+    "real_fielding": "prohibited",
+    "machine_learning": "reserved for Module 06"
+  },
+  "validation": {
+    "evidence_builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 190,
+    "starter_checks": 175,
+    "two_evidence_builds_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_response_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, public-source verification, deterministic teaching build, and validation"}
+  ],
+  "known_issues": [
+    "Named APP-2 faculty, patient or caregiver, survey-methods, accessibility, language-access, privacy, responsible-AI, clinical, and independent reproduction reviews remain pending before alpha.",
+    "The teaching frame has complete coverage only because it is constructed from the analytic target.",
+    "The response, mode, Q21, Q22, Q23, and item-missingness fields are synthetic and cannot support real patient, hospital, HCAHPS, access, equity, prevalence, or causal claims.",
+    "The one-record missing-language response cell is retained as limited support and must not be interpreted.",
+    "The bounded adjustment improves known-truth error in the simulation but leaves residual bias for both items and the composite.",
+    "Design-aware uncertainty and linked analysis remain owned by Module 04, while machine-learning response modeling remains owned by Module 06.",
+    "No package authorizes fielding, patient targeting, clinical action, or hospital ranking.",
+    "An actual course section must map the module to the official half-term calendar before assigning a due date."
+  ]
+}

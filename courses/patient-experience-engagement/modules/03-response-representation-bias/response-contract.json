@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app2-03",
+    "version": "0.1.0",
+    "commons_release": "0.58.0",
+    "week": 3,
+    "hours": 16.5
+  },
+  "upstream": {
+    "module_id": "oclc-app2-02",
+    "version": "0.1.0",
+    "commons_release": "0.57.0",
+    "manifest_sha256": "c261307b45be842c00c9ded66614a3770f379d41a1d7efecb68032f9c090a870",
+    "score": "20 of 20",
+    "failed_gates": "none"
+  },
+  "target": {
+    "age_minimum": 18,
+    "minimum_inpatient_discharges": 1,
+    "positive_person_weight_required": true,
+    "source_rows": 19140,
+    "positive_person_weight_rows": 18683,
+    "target_rows": 1255,
+    "target_weighted_population": 18879474.284615,
+    "frame_coverage_percent": 100.0
+  },
+  "generator": {
+    "id": "app2-m03-response-v1",
+    "draw": "first 64 bits of SHA-256(generator_id|DUPERSID|label) divided by 2^64",
+    "mode": {"mail_upper": 0.38, "phone_upper": 0.70, "otherwise": "web"},
+    "another_facility_probability": {"intercept": 0.12, "age_65_plus": 0.08, "fair_or_poor_health": 0.11, "proxy": 0.05},
+    "q22_yes_probability": {"intercept": 0.84, "lower_income": -0.13, "other_language": -0.12, "fair_or_poor_health": -0.13, "age_65_plus": 0.03, "minimum": 0.25, "maximum": 0.94},
+    "q23_yes_probability": {"intercept": 0.80, "lower_income": -0.12, "other_language": -0.14, "fair_or_poor_health": -0.10, "age_65_plus": 0.04, "minimum": 0.25, "maximum": 0.94},
+    "response_probability": {"intercept": 0.66, "age_18_44": -0.06, "age_65_plus": 0.05, "other_language": -0.14, "fair_or_poor_health": -0.09, "lower_income": -0.08, "proxy": -0.12, "mail": -0.06, "phone": 0.0, "web": 0.07, "home_and_both_yes": 0.08, "minimum": 0.22, "maximum": 0.90},
+    "q22_missing_probability": {"intercept": 0.04, "other_language": 0.08, "fair_or_poor_health": 0.04, "mail": 0.03},
+    "q23_missing_probability": {"intercept": 0.05, "other_language": 0.10, "lower_income": 0.04, "mail": 0.03}
+  },
+  "weighting": {
+    "cell": ["age_band", "other_language_at_home", "income_group"],
+    "lower_bound": 1.0,
+    "upper_bound": 3.0,
+    "raw_factor": "sum base weight in frame cell / sum base weight among respondent cell",
+    "analysis_weight": "PERWT24F multiplied by bounded teaching response factor"
+  },
+  "measurement": {
+    "instrument": "updated HCAHPS Discharge Information pair",
+    "q21_another_health_facility": "Q22 and Q23 are not applicable",
+    "q22": "yes divided by item-specific answered yes plus no",
+    "q23": "yes divided by item-specific answered yes plus no",
+    "teaching_composite": "mean of Q22 and Q23 question-level proportions",
+    "official_score_claim": "prohibited"
+  },
+  "expected_reference": {
+    "respondents": 782,
+    "full_frame_q21_home": 1006,
+    "respondent_q21_home": 642,
+    "q22_answered": 585,
+    "q23_answered": 589,
+    "public_saq_eligible": 1251,
+    "public_saq_has_data": 993,
+    "response_cells": 13,
+    "response_factor_cap_hits": 1
+  },
+  "boundaries": {
+    "synthetic_as_real": "prohibited",
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited",
+    "causal_mode_claim": "prohibited",
+    "machine_learning": "reserved for Module 06",
+    "linked_analysis": "reserved for Module 04"
+  }
+}

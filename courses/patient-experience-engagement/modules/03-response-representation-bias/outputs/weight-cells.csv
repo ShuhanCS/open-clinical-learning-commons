@@ -1,0 +1,14 @@
+response_cell,frame_n,respondent_n,frame_base_weight,respondent_base_weight,raw_response_factor,bounded_response_factor,bound_hit,support_flag
+18-44|no|lower income,81,45,1346177.191976,793947.887881,1.69554855,1.69554855,no,adequate_for_descriptive_adjustment
+18-44|no|middle or high income,113,70,2818942.529839,1798792.567708,1.56713041,1.56713041,no,adequate_for_descriptive_adjustment
+18-44|yes|lower income,44,14,643548.754410,205391.293845,3.13328156,3.00000000,yes,limited_support
+18-44|yes|middle or high income,36,19,876870.656143,529406.446965,1.65632788,1.65632788,no,limited_support
+45-64|missing or inapplicable|middle or high income,1,1,16718.948334,16718.948334,1.00000000,1.00000000,no,limited_support
+45-64|no|lower income,128,69,1740149.310317,935495.680011,1.86013613,1.86013613,no,adequate_for_descriptive_adjustment
+45-64|no|middle or high income,136,90,2472707.563823,1604049.712973,1.54154048,1.54154048,no,adequate_for_descriptive_adjustment
+45-64|yes|lower income,26,12,299900.313734,146657.413472,2.04490388,2.04490388,no,limited_support
+45-64|yes|middle or high income,19,9,268629.831244,142672.486752,1.88284257,1.88284257,no,limited_support
+65+|no|lower income,211,134,2356591.457116,1516476.076518,1.55399185,1.55399185,no,adequate_for_descriptive_adjustment
+65+|no|middle or high income,370,270,4933452.648205,3564856.244398,1.38391349,1.38391349,no,adequate_for_descriptive_adjustment
+65+|yes|lower income,43,19,380119.723137,168652.729891,2.25386048,2.25386048,no,limited_support
+65+|yes|middle or high income,47,30,725665.356337,413829.815466,1.75353570,1.75353570,no,adequate_for_descriptive_adjustment

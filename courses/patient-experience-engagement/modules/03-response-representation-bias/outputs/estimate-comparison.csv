@@ -1,0 +1,13 @@
+measure,estimator,answered_n,estimate_percent,truth_percent,bias_pp,absolute_bias_pp,weight_definition,claim_boundary
+Q22,full_frame_truth,1006,72.09313297,72.09313297,0.00000000,0.00000000,PERWT24F across all synthetically applicable frame records,synthetic procedural comparison only; not a real patient-experience estimate
+Q22,respondent_unweighted,585,77.77777778,72.09313297,5.68464481,5.68464481,equal weight among item-answering synthetic respondents,synthetic procedural comparison only; not a real patient-experience estimate
+Q22,respondent_base_weighted,585,75.96031760,72.09313297,3.86718463,3.86718463,PERWT24F among item-answering synthetic respondents,synthetic procedural comparison only; not a real patient-experience estimate
+Q22,respondent_response_adjusted,585,75.23813405,72.09313297,3.14500108,3.14500108,PERWT24F times bounded teaching response factor,synthetic procedural comparison only; not a real patient-experience estimate
+Q23,full_frame_truth,1006,69.37964258,69.37964258,0.00000000,0.00000000,PERWT24F across all synthetically applicable frame records,synthetic procedural comparison only; not a real patient-experience estimate
+Q23,respondent_unweighted,589,74.19354839,69.37964258,4.81390581,4.81390581,equal weight among item-answering synthetic respondents,synthetic procedural comparison only; not a real patient-experience estimate
+Q23,respondent_base_weighted,589,75.32394643,69.37964258,5.94430386,5.94430386,PERWT24F among item-answering synthetic respondents,synthetic procedural comparison only; not a real patient-experience estimate
+Q23,respondent_response_adjusted,589,74.64013037,69.37964258,5.26048779,5.26048779,PERWT24F times bounded teaching response factor,synthetic procedural comparison only; not a real patient-experience estimate
+teaching_composite,full_frame_truth,Q22=1006;Q23=1006,70.73638777,70.73638777,0.00000000,0.00000000,PERWT24F across all synthetically applicable frame records,synthetic procedural comparison only; not a real patient-experience estimate
+teaching_composite,respondent_unweighted,Q22=585;Q23=589,75.98566308,70.73638777,5.24927531,5.24927531,equal weight among item-answering synthetic respondents,synthetic procedural comparison only; not a real patient-experience estimate
+teaching_composite,respondent_base_weighted,Q22=585;Q23=589,75.64213202,70.73638777,4.90574425,4.90574425,PERWT24F among item-answering synthetic respondents,synthetic procedural comparison only; not a real patient-experience estimate
+teaching_composite,respondent_response_adjusted,Q22=585;Q23=589,74.93913221,70.73638777,4.20274444,4.20274444,PERWT24F times bounded teaching response factor,synthetic procedural comparison only; not a real patient-experience estimate

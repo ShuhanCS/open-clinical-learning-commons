@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.57.0 through runnable Module 02.
+- Current Commons release: 0.58.0 through runnable Module 03 and Checkpoint 01.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -228,12 +228,17 @@ The released teaching selection is the updated HCAHPS Q22/Q23 Discharge Informat
 
 - Module ID: `oclc-app2-03`.
 - Hours: 16.5.
+- Package path: `courses/patient-experience-engagement/modules/03-response-representation-bias/`.
+- Specification: `docs/curriculum/courses/APP-2/modules/03-response-representation-bias-spec.md`.
+- Status: runnable release candidate at Commons 0.58.0.
 - Decision: who the evidence represents and whether it may enter linked analysis.
 - Submission: response and representation audit with cumulative Week 3 release.
 
 Learners define the target population and sampling frame, compute overall and subgroup response, separate item missingness from total nonresponse, compare responders with the eligible frame, inspect coverage and mode effects, apply one bounded weighting method, and document privacy and consent limits.
 
 The Week 3 package scores the Module 02 measurement lab at 20 points. Module 03 response evidence is a noncompensable gate for the later 25-point response and linked-evidence component.
+
+The released case retains the full five-file MEPS HC-256 suite and builds a 1,255-person public-derived frame with a deterministic synthetic response layer. The 13-cell teaching adjustment improves Q22, Q23, and the composite relative to base weighting but leaves known residual bias. No synthetic rate is a real patient, hospital, HCAHPS, access, equity, prevalence, or clinical result.
 
 ## 12. Module 04 brief: Linked patient evidence
 
@@ -285,7 +290,9 @@ Leadership cannot repair an invalid measure or unrepresentative evidence. The pa
 
 - Timing: end of instructional Week 3.
 - Course points: 20.
-- Future path: `courses/patient-experience-engagement/checkpoints/01-measurement-representation-readiness/`.
+- Package path: `courses/patient-experience-engagement/checkpoints/01-measurement-representation-readiness/`.
+- Specification: `docs/curriculum/courses/APP-2/checkpoints/01-measurement-representation-readiness-spec.md`.
+- Status: runnable release candidate at Commons 0.58.0.
 - Decision: may the selected measure and response evidence enter linked analysis?
 
 Required evidence includes the Module 01 charter, instrument and rights record, scoring checks, validity and reliability interpretation, meaningful-change and burden decisions, target population, sampling frame, response and item-missingness profile, mode and coverage review, bounded weighting evidence, source and AI records, 20-point measurement score, gates, and progression decision.

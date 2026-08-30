@@ -1,0 +1,93 @@
+{
+  "status": "pass",
+  "source": {
+    "files": 5,
+    "bytes": 12353779,
+    "pdf_pages": 869,
+    "source_rows": 19140,
+    "positive_weight_rows": 18683,
+    "line_width": 4690
+  },
+  "target": {
+    "rows": 1255,
+    "base_weighted_population": "18879474.284615",
+    "frame_coverage_percent": 100.0
+  },
+  "synthetic_response": {
+    "respondents": 782,
+    "unweighted_response_percent": "62.31075697",
+    "base_weighted_response_percent": "62.69744128",
+    "full_frame_q21_home": 1006,
+    "respondent_q21_home": 642,
+    "q22_answered": 585,
+    "q23_answered": 589
+  },
+  "public_saq": {
+    "eligible": 1251,
+    "has_data": 993,
+    "unweighted_has_data_percent": "79.37649880",
+    "base_weighted_has_data_percent": "79.58699393"
+  },
+  "weighting": {
+    "cells": 13,
+    "cap": 3.0,
+    "cap_hits": 1
+  },
+  "estimates": {
+    "Q22": {
+      "full_frame_truth": {
+        "estimate_percent": "72.09313297",
+        "bias_pp": "0.00000000"
+      },
+      "respondent_unweighted": {
+        "estimate_percent": "77.77777778",
+        "bias_pp": "5.68464481"
+      },
+      "respondent_base_weighted": {
+        "estimate_percent": "75.96031760",
+        "bias_pp": "3.86718463"
+      },
+      "respondent_response_adjusted": {
+        "estimate_percent": "75.23813405",
+        "bias_pp": "3.14500108"
+      }
+    },
+    "Q23": {
+      "full_frame_truth": {
+        "estimate_percent": "69.37964258",
+        "bias_pp": "0.00000000"
+      },
+      "respondent_unweighted": {
+        "estimate_percent": "74.19354839",
+        "bias_pp": "4.81390581"
+      },
+      "respondent_base_weighted": {
+        "estimate_percent": "75.32394643",
+        "bias_pp": "5.94430386"
+      },
+      "respondent_response_adjusted": {
+        "estimate_percent": "74.64013037",
+        "bias_pp": "5.26048779"
+      }
+    },
+    "teaching_composite": {
+      "full_frame_truth": {
+        "estimate_percent": "70.73638777",
+        "bias_pp": "0.00000000"
+      },
+      "respondent_unweighted": {
+        "estimate_percent": "75.98566308",
+        "bias_pp": "5.24927531"
+      },
+      "respondent_base_weighted": {
+        "estimate_percent": "75.64213202",
+        "bias_pp": "4.90574425"
+      },
+      "respondent_response_adjusted": {
+        "estimate_percent": "74.93913221",
+        "bias_pp": "4.20274444"
+      }
+    }
+  },
+  "invariant_checks": 23
+}

@@ -1,0 +1,7 @@
+quantity,numerator,denominator,value,interpretation
+unweighted_synthetic_response,782,1255,62.31075697 percent,total response among every invited teaching-frame record
+base_weighted_synthetic_response,11836947.304214,18879474.284615,62.69744128 percent,PERWT24F-weighted response to the synthetic local layer
+respondent_q21_home,642,782,82.09718670 percent,Q22 and Q23 applicability among synthetic respondents
+q22_item_response,585,642,91.12149533 percent,Q22 answered among applicable respondents
+q23_item_response,589,642,91.74454829 percent,Q23 answered among applicable respondents
+public_meps_saq_has_data,993,1251,79.37649880 percent,adjacent real public MEPS SAQ data status and not HCAHPS response

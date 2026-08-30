@@ -1,0 +1,36 @@
+field,code,label
+REGION24,1,Northeast
+REGION24,2,Midwest
+REGION24,3,South
+REGION24,4,West
+PROXY24,1,respondent is reporting-unit member
+PROXY24,2,proxy respondent
+INTVLANG,1,English
+INTVLANG,2,Spanish
+INTVLANG,3,English and Spanish
+INTVLANG,91,other language
+SEX,1,male
+SEX,2,female
+RACETHX,1,Hispanic
+RACETHX,2,non-Hispanic White only
+RACETHX,3,non-Hispanic Black only
+RACETHX,4,non-Hispanic Asian only
+RACETHX,5,non-Hispanic other or multiple races
+OTHLGSPK,1,yes
+OTHLGSPK,2,no
+RTHLTH53,1,excellent
+RTHLTH53,2,very good
+RTHLTH53,3,good
+RTHLTH53,4,fair
+RTHLTH53,5,poor
+SAQELIG,0,not eligible
+SAQELIG,1,eligible and has SAQ data
+SAQELIG,2,eligible and no SAQ data
+POVCAT24,1,poor or negative
+POVCAT24,2,near poor
+POVCAT24,3,low income
+POVCAT24,4,middle income
+POVCAT24,5,high income
+INSCOV24,1,any private insurance
+INSCOV24,2,public insurance only
+INSCOV24,3,uninsured

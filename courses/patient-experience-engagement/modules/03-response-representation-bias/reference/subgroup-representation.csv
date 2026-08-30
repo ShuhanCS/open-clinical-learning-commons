@@ -1,0 +1,6 @@
+finding_id,dimension,frame_support,respondent_support,finding,decision_use
+R01,other language at home yes,215,103,response support is lower than the no group and the immutable table gives the exact weighted difference,retain language access and representation condition
+R02,age 18 to 44 other-language lower-income cell,44,14,raw factor 3.13328156 exceeds the declared 3.0 cap,show bound hit and limited support
+R03,missing other-language state,1,1,missing state remains its own cell with factor 1.0,do not recode missing to no and do not interpret the cell
+R04,assigned mode mail,443,245,synthetic response is lower than web under the programmed response mechanism,do not infer a real causal mode effect
+R05,insurance uninsured,17,10,support is limited,retain the audit row but prohibit a stable comparison

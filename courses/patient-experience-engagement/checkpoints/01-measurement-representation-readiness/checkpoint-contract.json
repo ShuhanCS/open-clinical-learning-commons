@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_id": "oclc-app2-cp01",
+  "version": "0.1.0",
+  "commons_release": "0.58.0",
+  "course": "APP-2: Data for Patient Experience and Engagement",
+  "due_point": "end of instructional Week 3",
+  "course_points": 20,
+  "point_source": "oclc-app2-02 exactly once",
+  "accepted_component_files": 135,
+  "accepted_modules": [
+    {"id": "oclc-app2-01", "version": "0.1.0", "commons_release": "0.56.0", "assembled_files": 25, "manifest_bytes": 1787, "manifest_sha256": "c693e04592994f6f7bef14459b83669a5c824d0bf0b027a0624bab12a3cb4862", "points": 0},
+    {"id": "oclc-app2-02", "version": "0.1.0", "commons_release": "0.57.0", "assembled_files": 66, "manifest_bytes": 6890, "manifest_sha256": "c261307b45be842c00c9ded66614a3770f379d41a1d7efecb68032f9c090a870", "points": 20},
+    {"id": "oclc-app2-03", "version": "0.1.0", "commons_release": "0.58.0", "assembled_files": 44, "manifest_bytes": 4045, "manifest_sha256": "3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30", "points": 0}
+  ],
+  "required_gates": {
+    "module02_measurement": 18,
+    "module03_response": 19,
+    "checkpoint_integrity": 15
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "continue_permission": "permitted for linked analysis",
+    "next_module": "oclc-app2-04"
+  },
+  "boundaries": {
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited",
+    "real_fielding": "prohibited",
+    "patient_targeting": "prohibited",
+    "machine_learning": "reserved for Module 06"
+  }
+}

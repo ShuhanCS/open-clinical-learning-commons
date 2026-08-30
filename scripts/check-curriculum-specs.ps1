@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.57.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.58.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1751,7 +1751,7 @@ if (
     $app2Content -match '(?im)[A-Z]:\\Users\\' -or
     $app2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app2Content -notmatch 'Current Commons release: 0\.57\.0' -or
+    $app2Content -notmatch 'Current Commons release: 0\.58\.0' -or
     $app2Content -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '25,906' -or
@@ -1967,6 +1967,168 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 02 measurement builder self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 02 workspace builder self-check failed.' }
 & python (Join-Path $app2Module02Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 02 validator self-check failed.' }
+
+$app2Module03Root = Join-Path $repo 'courses\patient-experience-engagement\modules\03-response-representation-bias'
+$app2Module03Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\modules\03-response-representation-bias-spec.md'
+$app2Module03Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md', 'build_response_evidence.py',
+    'build_workspace.py', 'data-spec.md', 'instructor-notes.md', 'response-contract.json',
+    'source-record.yml', 'validate_workspace.py', 'release.json', 'build-report.json',
+    'data\source-inventory.csv', 'data\field-map.csv', 'data\category-map.csv',
+    'data\raw\h256dat.zip', 'data\raw\h256doc.pdf', 'data\raw\h256cb.pdf',
+    'data\raw\h256su.txt', 'data\raw\h256ru.txt',
+    'data\public\adult-inpatient-frame.csv', 'data\synthetic\response-study.csv',
+    'outputs\source-profile.csv', 'outputs\public-saq-response.csv', 'outputs\response-flow.csv',
+    'outputs\subgroup-response.csv', 'outputs\item-missingness.csv', 'outputs\weight-cells.csv',
+    'outputs\weight-diagnostics.csv', 'outputs\estimate-comparison.csv', 'outputs\invariant-checks.csv',
+    'template\target-frame.md', 'template\response-flow.csv', 'template\subgroup-representation.csv',
+    'template\item-missingness.csv', 'template\mode-coverage-interpretation.md',
+    'template\weighting-decision.md', 'template\bias-recovery.csv', 'template\privacy-consent.md',
+    'template\reproducibility-check.md', 'template\gate-results.csv', 'template\ai-use.md',
+    'template\progression-decision.md',
+    'reference\target-frame.md', 'reference\response-flow.csv', 'reference\subgroup-representation.csv',
+    'reference\item-missingness.csv', 'reference\mode-coverage-interpretation.md',
+    'reference\weighting-decision.md', 'reference\bias-recovery.csv', 'reference\privacy-consent.md',
+    'reference\reproducibility-check.md', 'reference\gate-results.csv', 'reference\ai-use.md',
+    'reference\progression-decision.md'
+)
+$app2Module03Missing = @()
+if (-not (Test-Path -LiteralPath $app2Module03Spec)) { $app2Module03Missing += 'specification' }
+foreach ($relative in $app2Module03Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Module03Root $relative))) {
+        $app2Module03Missing += $relative
+    }
+}
+if ($app2Module03Missing.Count -gt 0) {
+    throw "APP-2 Module 03 is missing its specification or package files: $($app2Module03Missing -join ', ')."
+}
+$app2Module03Content = Get-Content -Raw -LiteralPath $app2Module03Spec
+$app2Module03Sections = [regex]::Matches($app2Module03Content, '(?m)^## \d+\.').Count
+$app2Module03Release = Get-Content -Raw -LiteralPath (Join-Path $app2Module03Root 'release.json') | ConvertFrom-Json
+$app2Module03Sources = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'data\source-inventory.csv'))
+$app2Module03Frame = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'data\public\adult-inpatient-frame.csv'))
+$app2Module03Response = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'data\synthetic\response-study.csv'))
+$app2Module03Subgroups = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'outputs\subgroup-response.csv'))
+$app2Module03Missingness = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'outputs\item-missingness.csv'))
+$app2Module03Cells = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'outputs\weight-cells.csv'))
+$app2Module03Estimates = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'outputs\estimate-comparison.csv'))
+$app2Module03Invariants = @(Import-Csv -LiteralPath (Join-Path $app2Module03Root 'outputs\invariant-checks.csv'))
+if (
+    $app2Module03Sections -ne 21 -or
+    $app2Module03Content -match '[—–]' -or
+    $app2Module03Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Module03Content -notmatch '12,353,779 bytes' -or
+    $app2Module03Content -notmatch '4,045 bytes' -or
+    $app2Module03Content -notmatch '3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30' -or
+    $app2Module03Content -notmatch '190 checks' -or
+    $app2Module03Content -notmatch '175 checks' -or
+    $app2Module03Release.module.id -ne 'oclc-app2-03' -or
+    $app2Module03Release.module.version -ne '0.1.0' -or
+    $app2Module03Release.module.commons_release -ne '0.58.0' -or
+    $app2Module03Release.source_suite.files -ne 5 -or
+    $app2Module03Release.source_suite.bytes -ne 12353779 -or
+    $app2Module03Release.source_suite.pdf_pages -ne 869 -or
+    $app2Module03Release.source_suite.source_rows -ne 19140 -or
+    $app2Module03Release.source_suite.positive_person_weight_rows -ne 18683 -or
+    $app2Module03Release.public_target.rows -ne 1255 -or
+    $app2Module03Release.public_target.base_weighted_population -ne 18879474.284615 -or
+    $app2Module03Release.synthetic_response.respondents -ne 782 -or
+    $app2Module03Release.synthetic_response.q22_answered -ne 585 -or
+    $app2Module03Release.synthetic_response.q23_answered -ne 589 -or
+    $app2Module03Release.weighting.teaching_response_cells -ne 13 -or
+    $app2Module03Release.weighting.cap_hits -ne 1 -or
+    $app2Module03Release.known_truth_comparison.composite_adjusted_absolute_bias_pp -ne 4.20274444 -or
+    $app2Module03Release.generated_evidence.files -ne 12 -or
+    $app2Module03Release.generated_evidence.bytes -ne 583571 -or
+    $app2Module03Release.package.immutable_manifest_rows -ne 31 -or
+    $app2Module03Release.package.editable_records -ne 12 -or
+    $app2Module03Release.package.assembled_files -ne 44 -or
+    $app2Module03Release.package.manifest_bytes -ne 4045 -or
+    $app2Module03Release.package.manifest_sha256 -ne '3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30' -or
+    $app2Module03Release.validation.complete_reference_checks -ne 190 -or
+    $app2Module03Release.validation.starter_checks -ne 175 -or
+    $app2Module03Release.progression.reference -ne 'continue with conditions' -or
+    $app2Module03Release.progression.module04_permission -ne 'permitted for linked analysis' -or
+    $app2Module03Release.progression.real_fielding -ne 'prohibited' -or
+    $app2Module03Sources.Count -ne 5 -or
+    ($app2Module03Sources | Measure-Object -Property bytes -Sum).Sum -ne 12353779 -or
+    $app2Module03Frame.Count -ne 1255 -or
+    $app2Module03Response.Count -ne 1255 -or
+    @($app2Module03Response | Where-Object { $_.response_status -eq 'respondent' }).Count -ne 782 -or
+    $app2Module03Subgroups.Count -ne 40 -or
+    $app2Module03Missingness.Count -ne 20 -or
+    $app2Module03Cells.Count -ne 13 -or
+    @($app2Module03Cells | Where-Object { $_.bound_hit -eq 'yes' }).Count -ne 1 -or
+    $app2Module03Estimates.Count -ne 12 -or
+    @($app2Module03Estimates | Where-Object { $_.measure -eq 'teaching_composite' -and $_.estimator -eq 'respondent_response_adjusted' -and $_.absolute_bias_pp -eq '4.20274444' }).Count -ne 1 -or
+    $app2Module03Invariants.Count -ne 23 -or
+    @($app2Module03Invariants | Where-Object { $_.status -ne 'pass' }).Count -ne 0
+) {
+    throw 'APP-2 Module 03 release metadata, specification, sources, response, weighting, validation, manifest, or progression facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Module03Root 'build_response_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 03 evidence builder self-check failed.' }
+& python (Join-Path $app2Module03Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 03 workspace builder self-check failed.' }
+& python (Join-Path $app2Module03Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 03 validator self-check failed.' }
+
+$app2Checkpoint01Root = Join-Path $repo 'courses\patient-experience-engagement\checkpoints\01-measurement-representation-readiness'
+$app2Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\checkpoints\01-measurement-representation-readiness-spec.md'
+$app2Checkpoint01Files = @(
+    '.gitattributes', 'VERSION', 'assessment.md', 'instructor-notes.md', 'checkpoint-contract.json',
+    'build_checkpoint.py', 'validate_checkpoint.py', 'release.json',
+    'template\README.md', 'template\evidence-index.csv', 'template\measurement-representation-review.md',
+    'template\reproducibility-check.md', 'template\ai-use.md', 'template\progression-decision.md',
+    'reference\README.md', 'reference\evidence-index.csv', 'reference\measurement-representation-review.md',
+    'reference\reproducibility-check.md', 'reference\ai-use.md', 'reference\progression-decision.md'
+)
+$app2Checkpoint01Missing = @()
+if (-not (Test-Path -LiteralPath $app2Checkpoint01Spec)) { $app2Checkpoint01Missing += 'specification' }
+foreach ($relative in $app2Checkpoint01Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Checkpoint01Root $relative))) {
+        $app2Checkpoint01Missing += $relative
+    }
+}
+if ($app2Checkpoint01Missing.Count -gt 0) {
+    throw "APP-2 Checkpoint 01 is missing its specification or package files: $($app2Checkpoint01Missing -join ', ')."
+}
+$app2Checkpoint01Content = Get-Content -Raw -LiteralPath $app2Checkpoint01Spec
+$app2Checkpoint01Sections = [regex]::Matches($app2Checkpoint01Content, '(?m)^## \d+\.').Count
+$app2Checkpoint01Release = Get-Content -Raw -LiteralPath (Join-Path $app2Checkpoint01Root 'release.json') | ConvertFrom-Json
+if (
+    $app2Checkpoint01Sections -ne 17 -or
+    $app2Checkpoint01Content -match '[—–]' -or
+    $app2Checkpoint01Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Checkpoint01Content -notmatch '23,489 bytes' -or
+    $app2Checkpoint01Content -notmatch '5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903' -or
+    $app2Checkpoint01Content -notmatch '714 checks' -or
+    $app2Checkpoint01Content -notmatch '683 checks' -or
+    $app2Checkpoint01Release.checkpoint.id -ne 'oclc-app2-cp01' -or
+    $app2Checkpoint01Release.checkpoint.version -ne '0.1.0' -or
+    $app2Checkpoint01Release.checkpoint.commons_release -ne '0.58.0' -or
+    $app2Checkpoint01Release.checkpoint.course_points -ne 20 -or
+    $app2Checkpoint01Release.accepted_modules.Count -ne 3 -or
+    ($app2Checkpoint01Release.accepted_modules | Measure-Object -Property points -Sum).Sum -ne 20 -or
+    $app2Checkpoint01Release.accepted_evidence.component_files -ne 135 -or
+    $app2Checkpoint01Release.accepted_evidence.synthetic_respondents -ne 782 -or
+    $app2Checkpoint01Release.accepted_evidence.response_cells -ne 13 -or
+    $app2Checkpoint01Release.package.candidate_manifest_rows -ne 135 -or
+    $app2Checkpoint01Release.package.candidate_manifest_bytes -ne 23489 -or
+    $app2Checkpoint01Release.package.candidate_manifest_sha256 -ne '5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903' -or
+    $app2Checkpoint01Release.package.assembled_files -ne 149 -or
+    $app2Checkpoint01Release.validation.complete_reference_checks -ne 714 -or
+    $app2Checkpoint01Release.validation.starter_checks -ne 683 -or
+    $app2Checkpoint01Release.progression.reference -ne 'continue with conditions' -or
+    $app2Checkpoint01Release.progression.module04_permission -ne 'permitted for linked analysis' -or
+    $app2Checkpoint01Release.progression.real_fielding -ne 'prohibited'
+) {
+    throw 'APP-2 Checkpoint 01 release metadata, specification, candidate manifest, point, validation, or progression facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Checkpoint01Root 'build_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 01 builder self-check failed.' }
+& python (Join-Path $app2Checkpoint01Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 01 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -3265,3 +3427,5 @@ Write-Output "APP-1 final checkpoint passed: $app1Checkpoint03Sections contract 
 Write-Output "APP-2 specification passed: $app2ModuleCount modules, $app2Hours hours, and $app2CheckpointCount checkpoints."
 Write-Output "APP-2 Module 01 passed: $app2Module01Sections contract sections and $($app2Module01Files.Count) required files."
 Write-Output "APP-2 Module 02 passed: $app2Module02Sections contract sections and $($app2Module02Files.Count) required non-source files plus 28 verified source files."
+Write-Output "APP-2 Module 03 passed: $app2Module03Sections contract sections and $($app2Module03Files.Count) required files."
+Write-Output "APP-2 Checkpoint 01 passed: $app2Checkpoint01Sections contract sections and $($app2Checkpoint01Files.Count) required files."

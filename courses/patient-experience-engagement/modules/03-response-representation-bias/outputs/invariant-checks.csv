@@ -1,0 +1,24 @@
+check_id,check,expected,actual,status
+I01,official source suite fingerprinted,5 files,5 files,pass
+I02,archive contains only h256.dat,h256.dat,h256.dat,pass
+I03,full source row count,19140,19140,pass
+I04,fixed-width record length,4690,4690,pass
+I05,positive person-weight row count,18683,18683,pass
+I06,target and frame count,1255,1255,pass
+I07,target weighted population,18879474.284615,18879474.284615,pass
+I08,frame identifiers unique,1255,1255,pass
+I09,every frame record invited,1255,1255,pass
+I10,constructed frame coverage,100.00000000,100.00000000,pass
+I11,synthetic respondents,782,782,pass
+I12,full-frame Q21 home truth,1006,1006,pass
+I13,respondent Q21 home,642,642,pass
+I14,Q22 answered count,585,585,pass
+I15,Q23 answered count,589,589,pass
+I16,nonrespondents have no observed item,all unobserved,all unobserved,pass
+I17,Q21 another facility preserves not applicable,all not applicable,all not applicable,pass
+I18,response cell count,13,13,pass
+I19,response factor cap hits,1,1,pass
+I20,bounded factors do not exceed 3,maximum 3.0,3.0,pass
+I21,bounded adjustment improves both items and composite,all improve,all improve,pass
+I22,residual known-truth bias remains visible,all nonzero,all nonzero,pass
+I23,public SAQ eligible and has-data counts,1251/993,1251/993,pass
