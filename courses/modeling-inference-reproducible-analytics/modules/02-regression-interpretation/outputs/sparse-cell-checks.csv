@@ -1,0 +1,12 @@
+field,category,training_rows,training_positives,training_negatives,absent_from_training,fewer_than_10_rows,zero_positive_or_negative_cell,action
+gender,F,155,14,141,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+gender,M,69,11,58,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+race,asian,15,3,12,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+race,black,16,2,14,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+race,native,3,0,3,no,yes,yes,do not fit or rank unsupported category effects; preserve count and review
+race,other,0,0,0,yes,yes,yes,do not fit or rank unsupported category effects; preserve count and review
+race,white,190,20,170,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+ethnicity,hispanic,14,2,12,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+ethnicity,nonhispanic,210,23,187,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+index_class,emergency,180,15,165,no,no,no,do not fit or rank unsupported category effects; preserve count and review
+index_class,inpatient,44,10,34,no,no,no,do not fit or rank unsupported category effects; preserve count and review

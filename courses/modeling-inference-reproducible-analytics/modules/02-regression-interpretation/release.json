@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd2-02",
+    "title": "Regression models and interpretation",
+    "version": "0.1.0",
+    "commons_release": "0.40.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "week": 2,
+    "hours": 16.0,
+    "week_3_component_points": 10
+  },
+  "decision": {
+    "owner": "biostatistical methods reviewer",
+    "question": "Are the fitted regression evidence, diagnostics, uncertainty, and interpretation accurate enough to enter prediction evaluation?",
+    "allowed": ["accept", "accept with conditions", "revise", "refer"],
+    "reference": "accept with conditions",
+    "module_03_progression": "allowed with recorded conditions"
+  },
+  "upstream": {
+    "module": "oclc-fnd2-01",
+    "version": "0.1.0",
+    "modeling_cohort_rows": 374,
+    "modeling_cohort_fields": 34,
+    "modeling_cohort_sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332",
+    "split_registry_sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1",
+    "baseline_sha256": "613651013e397beeadc84b17482026ca7cb4674abf61bf521699d79af0a3c9af",
+    "feature_role_sha256": "599f29ca612cb5f23aed277c56937af78c488ba952c2926faa94166f33449c83"
+  },
+  "linear_case": {
+    "all_available_rows": 111,
+    "training_fit_rows": 69,
+    "validation_rows_not_fit": 21,
+    "test_rows_not_fit": 21,
+    "structural_blanks": 263,
+    "outcome_min_days": "0.90000000",
+    "outcome_max_days": "29.95833300",
+    "r_squared": "0.07951657",
+    "jarque_bera_p_value": "0.04655734",
+    "max_cooks_distance": "0.07408089"
+  },
+  "logistic_case": {
+    "training_rows": 224,
+    "positive_outcomes": 25,
+    "age_center_training_mean": "46.245535714286",
+    "handoff_model": "LOG01",
+    "prior_acute_odds_ratio": "2.20423495",
+    "prior_acute_or_lower95": "1.34053977",
+    "prior_acute_or_upper95": "3.62439954",
+    "maximum_fitted_probability": "0.99962269",
+    "validation_used": false,
+    "test_used": false
+  },
+  "added_terms": {
+    "LOG02": {"term": "age_centered_decade_sq", "training_lr_p_value": "0.81417483", "status": "interpretation exercise only"},
+    "LOG03": {"term": "prior_acute_x_inpatient", "training_lr_p_value": "0.55542782", "status": "interpretation exercise only"}
+  },
+  "outputs": {
+    "linear-subset-registry.csv": {"rows": 111, "fields": 7, "bytes": 17195, "sha256": "547e21378c40241ae33982da67eebc58ef5a67bb89bfdda1638b9cb3ab85696b"},
+    "linear-coefficients.csv": {"rows": 4, "fields": 13, "bytes": 983, "sha256": "74a1b688949921468149c2d90bbbbfb5c0279331681de7a019fd4a913fc0d1da"},
+    "linear-diagnostics.csv": {"rows": 13, "fields": 5, "bytes": 835, "sha256": "10c620213cda7cb089b208cc2918225c2f59c74b9d3aa07f8097a5f594a63f1b"},
+    "linear-prediction-examples.csv": {"rows": 3, "fields": 10, "bytes": 625, "sha256": "fd034d7b207161c1df084d7552f3744c8cfae3a9c5279ae3adad7a63cebdb007"},
+    "logistic-coefficients.csv": {"rows": 14, "fields": 13, "bytes": 3121, "sha256": "4af1eee015652d064bdc583f931b1191b494910e15c70166dbde5af76375b6f4"},
+    "logistic-diagnostics.csv": {"rows": 45, "fields": 5, "bytes": 2581, "sha256": "6e3a610a5d7e1b474e655d6d75cf5ca70eae0ae1c94b0926a67f1739cb95d07e"},
+    "logistic-prediction-examples.csv": {"rows": 3, "fields": 8, "bytes": 545, "sha256": "0fa6420cde11bb0f20bb57c8527c9ededc6f53c565729d36fd7709d17c1ffbc1"},
+    "model-matrix-fields.csv": {"rows": 18, "fields": 6, "bytes": 1535, "sha256": "7a91e166796ae1030518da95e49f6a19ecc687d7cf5784f76718509c0abc9c38"},
+    "model-comparison.csv": {"rows": 3, "fields": 10, "bytes": 530, "sha256": "d1dcdc7b89adb8d10b0614ced7ab9e81dab52e5c47a76ddbf9826d918d070d0c"},
+    "sparse-cell-checks.csv": {"rows": 11, "fields": 9, "bytes": 1331, "sha256": "affb962905af94b0f7ba6b205c00c414441ec509d51f8cf93df13cb92ee6261e"},
+    "assumption-register.csv": {"rows": 14, "fields": 6, "bytes": 2181, "sha256": "7c6322667a383458a34aea49b687d1a6716aaaf0f780ccf060f1c99d671956e3"},
+    "r-reading-fixture.csv": {"rows": 8, "fields": 9, "bytes": 1472, "sha256": "89fe104cd40f81718d4f4d46842ec3aba1ef62bda85fd41f5576f86307c3d322"},
+    "regression-checks.csv": {"rows": 24, "fields": 5, "bytes": 1001, "sha256": "fd2472e946a84923aca7c07d42ec592615c67d6d86e8ee48053d7079f2242da6"},
+    "build-report.json": {"bytes": 3526, "sha256": "f7d23e0608d3f98738cdb510135ba16cd974807fd57893b2762c8ff75ac370a9"}
+  },
+  "environment": {
+    "tested_platform": "Windows 11",
+    "python": "3.12.10",
+    "numpy": "2.0.2",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6",
+    "r_reference_execution": "pending named reviewer"
+  },
+  "assessment": {
+    "course_points": 10,
+    "minimum_passing_points": 8,
+    "noncompensable_gates": 17
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, regression build, validation, and teaching package"}
+  ],
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "release_checks": 2025,
+    "starter_checks": 1972,
+    "regression_checks": 24,
+    "existing_target_refusal": "pass",
+    "incomplete_submission_rejection": "pass"
+  },
+  "known_issues": [
+    "Named biostatistics, clinical-informatics, R, Python, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "The release machine has no R runtime; the exact R script and numeric target are present but named R execution remains pending.",
+    "The linear case is conditional on recorded next-encounter timing and does not model time to encounter for all 374 people.",
+    "The logistic case has 25 training outcomes, extreme fitted probabilities, and sparse categories and supports no causal or real-clinical claim."
+  ]
+}

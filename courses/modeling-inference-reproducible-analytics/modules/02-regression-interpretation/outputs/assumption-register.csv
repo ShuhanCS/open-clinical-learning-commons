@@ -1,0 +1,15 @@
+assumption_id,model_id,assumption,evidence,status,required_action
+A01,LIN01,selected conditional outcome,111 total available timing rows and 69 training timing rows; 263 structural blanks remain blank,limit,interpret only among people with a recorded different encounter within 30 days
+A02,LIN01,independent modeling rows,69 unique patients across 69 training rows,pass,retain one-row grain
+A03,LIN01,linear conditional mean,bounded additive formula; residual and nonlinear alternatives require review,review,do not interpret fit as proof of linearity
+A04,LIN01,constant residual variance,Breusch-Pagan p=0.14825876,pass,report HC3 comparison and inspect residual pattern
+A05,LIN01,normal-error approximation,Jarque-Bera p=0.04655734,review,keep uncertainty conditional and avoid small-sample certainty
+A06,LIN01,no single row dominates,maximum Cook distance=0.07408089; maximum leverage=0.58620136,review,inspect influential rows and retain supported extremes
+A07,LOG01,independent binary rows,224 unique training patients and index encounters,pass,retain Module 01 grain and split
+A08,LOG01,binary outcome and events,25 positive and 199 negative training rows,pass,report event count with every interpretation
+A09,LOG01,linearity in the log odds for age,LOG02 adds one squared centered-age term on training data,review,interpret the comparison without selecting on test evidence
+A10,LOG01,no separation or unstable extremes,maximum fitted probability=0.99962269; maximum standard error=0.67192100,review,retain convergence and extreme-probability checks; consider regularization in Module 03
+A11,LOG01,adequate categorical support,2 training category rows have an absent or zero outcome cell,review,do not add or rank unsupported category effects
+A12,LOG01,model specification is sufficient,small declared formula omits many possible mechanisms,limit,call estimates model-conditional and retain omitted-variable boundary
+A13,ALL,causal identification,no intervention contrast assignment design or exchangeability argument,not supported,use no causal effect language
+A14,ALL,real-population transport,synthetic older teaching cohort,not supported,use teaching-only interpretation

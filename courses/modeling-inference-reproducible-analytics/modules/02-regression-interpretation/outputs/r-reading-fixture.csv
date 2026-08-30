@@ -1,0 +1,9 @@
+model_id,term,estimate_target,std_error_target,lower95_target,upper95_target,interval_reference,tolerance,status
+LIN01,const,18.19672324,3.47264894,11.26136440,25.13208208,t with 65 residual degrees of freedom,0.000001,Python-generated numeric target; learner R execution required
+LIN01,age_at_index,0.00303591,0.06725466,-0.13128091,0.13735274,t with 65 residual degrees of freedom,0.000001,Python-generated numeric target; learner R execution required
+LIN01,prior_365d_encounter_count,-0.10110471,0.04938821,-0.19973978,-0.00246963,t with 65 residual degrees of freedom,0.000001,Python-generated numeric target; learner R execution required
+LIN01,index_class_inpatient,-3.42865028,3.41679847,-10.25246804,3.39516747,t with 65 residual degrees of freedom,0.000001,Python-generated numeric target; learner R execution required
+LOG01,const,-2.61394455,0.28931918,-3.18099973,-2.04688938,normal approximation,0.000001,Python-generated numeric target; learner R execution required
+LOG01,age_centered_decade,0.04355405,0.11636500,-0.18451716,0.27162525,normal approximation,0.000001,Python-generated numeric target; learner R execution required
+LOG01,prior_365d_acute_count,0.79038049,0.25373331,0.29307235,1.28768863,normal approximation,0.000001,Python-generated numeric target; learner R execution required
+LOG01,index_class_inpatient,-0.08146926,0.67192100,-1.39841023,1.23547171,normal approximation,0.000001,Python-generated numeric target; learner R execution required

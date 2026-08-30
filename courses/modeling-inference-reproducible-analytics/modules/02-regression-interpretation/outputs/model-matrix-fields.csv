@@ -1,0 +1,19 @@
+model_id,column_position,term,origin,expression,interpretation_unit
+LIN01,1,const,constant,1,intercept
+LIN01,2,age_at_index,source,age_at_index,one-year increase
+LIN01,3,prior_365d_encounter_count,source,prior_365d_encounter_count,one-count increase
+LIN01,4,index_class_inpatient,derived,1 when index_class is inpatient else 0,emergency reference
+LOG01,1,const,constant,1,intercept
+LOG01,2,age_centered_decade,derived,(age_at_index - 46.245535714286) / 10,one-decade increase from training mean
+LOG01,3,prior_365d_acute_count,source,prior_365d_acute_count,one-count increase
+LOG01,4,index_class_inpatient,derived,1 when index_class is inpatient else 0,emergency reference
+LOG02,1,const,constant,1,intercept
+LOG02,2,age_centered_decade,derived,(age_at_index - 46.245535714286) / 10,one-decade increase from training mean
+LOG02,3,age_centered_decade_sq,derived,age_centered_decade squared,nonlinear curvature term
+LOG02,4,prior_365d_acute_count,source,prior_365d_acute_count,one-count increase
+LOG02,5,index_class_inpatient,derived,1 when index_class is inpatient else 0,emergency reference
+LOG03,1,const,constant,1,intercept
+LOG03,2,age_centered_decade,derived,(age_at_index - 46.245535714286) / 10,one-decade increase from training mean
+LOG03,3,prior_365d_acute_count,source,prior_365d_acute_count,one-count increase
+LOG03,4,index_class_inpatient,derived,1 when index_class is inpatient else 0,emergency reference
+LOG03,5,prior_acute_x_inpatient,derived,prior_365d_acute_count multiplied by index_class_inpatient,interaction departure

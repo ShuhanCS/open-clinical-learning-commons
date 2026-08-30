@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.39.0
+- Current release: 0.40.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Module 01, Analytic aims and a reproducible modeling workspace
-- Next unit: FND-2 Module 02, Regression models and interpretation
+- Last completed unit: FND-2 Module 02, Regression models and interpretation
+- Next unit: FND-2 Module 03, Prediction workflows and evaluation
 
 ## Confirmed decisions
 
@@ -200,6 +200,17 @@
 - The builder self-check passes and refuses existing targets. The validator passes 15937 reference checks and 15907 starter checks and rejects prompted or broken submissions.
 - The reference disposition is `accept with conditions`. The package is for synthetic teaching only; test and sparse-group precision limits remain visible; high-cardinality fields remain excluded; test data cannot guide selection; and named human reviews remain pending.
 - FND-2 Module 01 is a runnable release candidate at Commons 0.39.0.
+- FND-2 Module 02 version 0.1.0 fingerprints the exact Module 01 modeling cohort, split registry, baseline, and 34-row field-role contract before fitting.
+- The conditional linear case contains 111 recorded-next-encounter timing rows across the cohort but fits only 69 training rows. All 263 structural blanks remain blank; the 21 validation and 21 test timing rows are excluded.
+- `LIN01` has R-squared 0.07951657, Jarque-Bera p-value 0.04655734, maximum Cook distance 0.07408089, and maximum leverage 0.58620136. Classical and HC3 uncertainty remain visible.
+- `LOG01` fits 224 training rows with 25 outcomes. The prior-acute-count odds ratio is 2.20423495 with model-based 95-percent interval 1.34053977 to 3.62439954; this is an odds quantity, not risk, probability change, or causal effect.
+- `LOG02` adds centered age squared and `LOG03` adds a prior-acute by inpatient interaction. Their training-only likelihood-ratio p-values are 0.81417483 and 0.55542782; both remain interpretation exercises rather than selected prediction models.
+- Sparse training cells remain explicit: native race has 3 rows and no outcome, and other race has no training row. No unsupported category effect is fit or ranked.
+- The package releases 13 exact CSV evidence tables plus a build report. The builder refuses existing targets and reproduces byte-for-byte from copied inputs.
+- The validator passes 2025 reference checks and 1972 starter checks and rejects prompted or broken submissions. All 24 regression invariants pass.
+- The release machine has no R runtime. The exact base-R script and eight-row numeric target are present, but named R execution and tolerance reconciliation remain a condition before alpha.
+- The reference disposition is `accept with conditions`: `LOG01` may enter Module 03, while selected-sample, diagnostic, sparse, extreme-probability, R, synthetic-source, and no-causation limits remain binding.
+- FND-2 Module 02 is a runnable release candidate at Commons 0.40.0.
 
 ## Pending confirmation
 
@@ -208,10 +219,11 @@
 
 ## Next resume instructions
 
-1. Read the FND-2 course specification, Module 01 specification and release, FND-1 Module 05 descriptive release, master architecture, and this ledger.
-2. Write the 21-section Module 02 specification for bounded linear and logistic regression, formulas, reference levels, estimates, uncertainty, assumptions, and diagnostics.
-3. Preserve the exact Module 01 modeling cohort, role contract, split registry, baseline, and conditions.
-4. Build the 111-row recorded-next-encounter linear-regression subset without converting 263 structural blanks to zero.
-5. Build the bounded logistic-regression interpretation lab on training data only and keep prediction evaluation in Module 03.
-6. Create learner and instructor packages, protected build, standard-library validation, and the Module 02 portion of the 25-point Week 3 component.
-7. Update the Commons version and this ledger, then commit and push Module 02 before starting Module 03.
+1. Read the FND-2 course specification, Module 01 and 02 specifications and releases, master architecture, and this ledger.
+2. Write the 21-section Module 03 specification for leakage-safe pipelines, resampling, validation comparison, threshold lock, one-time test evaluation, calibration, exact confusion counts, uncertainty, and subgroup suppression.
+3. Preserve the exact 224/75/75 split, 25/7/4 outcomes, training-prevalence baseline, `LOG01` transform contract, and Module 02 conditions.
+4. Build training-only preprocessing and resampling, then compare the baseline, `LOG01`, and one bounded machine-learning baseline on validation evidence.
+5. Add a deliberately leaked critique model that is never eligible for selection.
+6. Freeze the selection rule and threshold before the single test run; report exact test predictions, calibration, threshold, subgroup, and uncertainty evidence with four positives visible.
+7. Create the 15-point Module 03 package and cumulative 40-point Week 3 checkpoint handoff.
+8. Update the Commons version and this ledger, then commit and push Module 03 before building Checkpoint 1.

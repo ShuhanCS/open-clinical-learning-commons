@@ -97,7 +97,7 @@ if (
     $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
-    $fnd2PackageContent -notmatch 'Commons release: 0\.39\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.40\.0' -or
     $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch '21,850' -or
@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.39.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.40.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -207,6 +207,80 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $fnd2Module01Root 'validate_modeling_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'FND-2 Module 01 validator self-check failed.'
+}
+
+$fnd2Module02Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\modules\02-regression-interpretation'
+$fnd2Module02Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\modules\02-regression-interpretation-spec.md'
+$fnd2Module02Files = @(
+    'README.md', 'VERSION', 'requirements.txt', 'build_regression_evidence.py',
+    'validate_regression_evidence.py', 'data-spec.md', 'source-record.yml',
+    'formula-registry.csv', 'reference-levels.csv', 'interpretation-quantity-guide.csv',
+    'paired-models.R', 'regression-interpretation.md', 'environment-note.md',
+    'reproducibility-check.md', 'r-run-record.md', 'ai-use.md', 'progression-decision.md',
+    'assessment.md', 'instructor-notes.md', 'release.json',
+    'learner-template\.gitattributes', 'learner-template\.gitignore',
+    'learner-template\README.md', 'learner-template\VERSION',
+    'learner-template\formula-registry.csv', 'learner-template\reference-levels.csv',
+    'learner-template\interpretation-quantity-guide.csv',
+    'learner-template\regression-interpretation.md', 'learner-template\environment-note.md',
+    'learner-template\reproducibility-check.md', 'learner-template\r-run-record.md',
+    'learner-template\ai-use.md', 'learner-template\progression-decision.md',
+    'outputs\linear-subset-registry.csv', 'outputs\linear-coefficients.csv',
+    'outputs\linear-diagnostics.csv', 'outputs\linear-prediction-examples.csv',
+    'outputs\logistic-coefficients.csv', 'outputs\logistic-diagnostics.csv',
+    'outputs\logistic-prediction-examples.csv', 'outputs\model-matrix-fields.csv',
+    'outputs\model-comparison.csv', 'outputs\sparse-cell-checks.csv',
+    'outputs\assumption-register.csv', 'outputs\r-reading-fixture.csv',
+    'outputs\regression-checks.csv', 'outputs\build-report.json'
+)
+$fnd2Module02Missing = @($fnd2Module02Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd2Module02Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd2Module02Spec) -or $fnd2Module02Missing.Count -gt 0) {
+    throw "FND-2 Module 02 is missing its specification or package files: $($fnd2Module02Missing -join ', ')."
+}
+$fnd2Module02Content = Get-Content -Raw -LiteralPath $fnd2Module02Spec
+$fnd2Module02Sections = [regex]::Matches($fnd2Module02Content, '(?m)^## \d+\.').Count
+if (
+    $fnd2Module02Sections -ne 21 -or
+    $fnd2Module02Content -match '[—–]' -or
+    $fnd2Module02Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Module02Content -notmatch 'Commons release: 0\.40\.0' -or
+    $fnd2Module02Content -notmatch '2025 release checks' -or
+    $fnd2Module02Content -notmatch '2\.20423495' -or
+    $fnd2Module02Content -notmatch '4af1eee015652d064bdc583f931b1191b494910e15c70166dbde5af76375b6f4'
+) {
+    throw 'FND-2 Module 02 must define 21 plain-ASCII sections with the exact release, regression, validation, and interpretation contract.'
+}
+$fnd2Module02Release = Get-Content -Raw -LiteralPath (Join-Path $fnd2Module02Root 'release.json') | ConvertFrom-Json
+if (
+    $fnd2Module02Release.module.id -ne 'oclc-fnd2-02' -or
+    $fnd2Module02Release.module.version -ne '0.1.0' -or
+    $fnd2Module02Release.module.commons_release -ne '0.40.0' -or
+    $fnd2Module02Release.module.hours -ne 16.0 -or
+    $fnd2Module02Release.upstream.modeling_cohort_sha256 -ne '6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332' -or
+    $fnd2Module02Release.linear_case.all_available_rows -ne 111 -or
+    $fnd2Module02Release.linear_case.training_fit_rows -ne 69 -or
+    $fnd2Module02Release.linear_case.structural_blanks -ne 263 -or
+    $fnd2Module02Release.logistic_case.training_rows -ne 224 -or
+    $fnd2Module02Release.logistic_case.positive_outcomes -ne 25 -or
+    $fnd2Module02Release.logistic_case.prior_acute_odds_ratio -ne '2.20423495' -or
+    $fnd2Module02Release.logistic_case.validation_used -ne $false -or
+    $fnd2Module02Release.logistic_case.test_used -ne $false -or
+    $fnd2Module02Release.outputs.'linear-coefficients.csv'.sha256 -ne '74a1b688949921468149c2d90bbbbfb5c0279331681de7a019fd4a913fc0d1da' -or
+    $fnd2Module02Release.outputs.'logistic-coefficients.csv'.sha256 -ne '4af1eee015652d064bdc583f931b1191b494910e15c70166dbde5af76375b6f4' -or
+    $fnd2Module02Release.validation.release_checks -ne 2025 -or
+    $fnd2Module02Release.validation.starter_checks -ne 1972
+) {
+    throw 'FND-2 Module 02 release metadata does not match the 0.1.0 regression-evidence contract.'
+}
+& python (Join-Path $fnd2Module02Root 'build_regression_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 02 builder self-check failed.'
+}
+& python (Join-Path $fnd2Module02Root 'validate_regression_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 02 validator self-check failed.'
 }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
@@ -1483,3 +1557,4 @@ Write-Output "FND-1 Checkpoint 2 passed: $fnd1Checkpoint02Sections contract sect
 Write-Output "FND-1 final checkpoint passed: $fnd1Checkpoint03Sections contract sections and $($fnd1Checkpoint03Files.Count) required files."
 Write-Output "FND-2 specification passed: $fnd2ModuleCount modules, $fnd2Hours hours, $fnd2CheckpointCount checkpoints."
 Write-Output "FND-2 Module 01 passed: $fnd2Module01Sections contract sections and $($fnd2Module01Files.Count) required files."
+Write-Output "FND-2 Module 02 passed: $fnd2Module02Sections contract sections and $($fnd2Module02Files.Count) required files."

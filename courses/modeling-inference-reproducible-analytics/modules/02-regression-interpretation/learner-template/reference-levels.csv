@@ -1,0 +1,6 @@
+encoding_id,field_or_term,reference_or_center,encoded_value,applies_to,interpretation
+REF01,index_class,REPLACE,REPLACE,REPLACE,REPLACE
+REF02,acute_return_90d,REPLACE,REPLACE,REPLACE,REPLACE
+REF03,age_at_index,REPLACE,REPLACE,REPLACE,REPLACE
+REF04,prior_365d_acute_count,REPLACE,REPLACE,REPLACE,REPLACE
+REF05,next_30d_days_after_index_stop,REPLACE,REPLACE,REPLACE,REPLACE

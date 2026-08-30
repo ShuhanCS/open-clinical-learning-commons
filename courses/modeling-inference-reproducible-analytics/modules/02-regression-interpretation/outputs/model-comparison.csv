@@ -1,0 +1,4 @@
+model_id,training_rows,parameters,log_likelihood,aic,likelihood_ratio_vs_LOG01,lr_df,lr_p_value,module_03_status,interpretation
+LOG01,224,4,-62.84070914,133.68141828,,,,handoff,declared bounded handoff model
+LOG02,224,5,-62.81308638,135.62617275,0.05524553,1,0.81417483,interpretation exercise only,training-only teaching comparison; does not select a prediction model
+LOG03,224,5,-62.66686777,135.33373554,0.34768274,1,0.55542782,interpretation exercise only,training-only teaching comparison; does not select a prediction model

@@ -1,0 +1,6 @@
+encoding_id,field_or_term,reference_or_center,encoded_value,applies_to,interpretation
+REF01,index_class,emergency,index_class_inpatient=1 for inpatient,all models,inpatient coefficient is relative to emergency
+REF02,acute_return_90d,0,1 is recorded acute return,logistic models,model estimates log odds for outcome 1
+REF03,age_at_index,training mean 46.245535714286,age_centered_decade=(age-mean)/10,logistic models,one unit is one decade from training mean
+REF04,prior_365d_acute_count,0,source count,logistic models,coefficient is per one-count increase
+REF05,next_30d_days_after_index_stop,recorded timing rows only,structural blanks excluded,LIN01,conditional outcome among recorded next encounters

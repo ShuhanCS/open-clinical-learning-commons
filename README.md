@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.39.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification and its first runnable module.
+- Current version: `0.40.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification and its first two runnable modules.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -38,6 +38,8 @@ The [FND-1 final checkpoint](courses/healthcare-data-foundations/checkpoints/03-
 The separate second technical foundation is specified in [FND-2: Modeling, Inference, and Reproducible Analytics](docs/curriculum/courses/FND-2/course-spec.md), with its source fingerprint and normalization record in [the FND-2 source record](docs/source/fnd-2-modeling-inference-reproducible-analytics-source-record.md). It starts from the accepted FND-1 toolkit, teaches general modeling and inference straight through, and keeps package acceptance separate from model-use permission.
 
 Its first runnable unit is [FND-2 Module 01: Analytic aims and a reproducible modeling workspace](courses/modeling-inference-reproducible-analytics/modules/01-aims-reproducible-workspace/README.md), governed by the durable [Module 01 specification](docs/curriculum/courses/FND-2/modules/01-aims-reproducible-workspace-spec.md). It freezes the exact 374-row source, classifies all 34 source and derived fields, creates the 224/75/75 temporal split, and registers the training-prevalence baseline before any candidate model is fit.
+
+The second runnable unit is [FND-2 Module 02: Regression models and interpretation](courses/modeling-inference-reproducible-analytics/modules/02-regression-interpretation/README.md), governed by the durable [Module 02 specification](docs/curriculum/courses/FND-2/modules/02-regression-interpretation-spec.md). It fits bounded training-only linear and logistic cases, preserves structural blanks, exposes residual, influence, sparsity, and extreme-probability conditions, and keeps coefficients separate from causal or predictive-performance claims.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

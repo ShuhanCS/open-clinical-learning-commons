@@ -1,0 +1,15 @@
+model_id,term,log_odds_estimate,odds_ratio,std_error_model,or_lower95_model,or_upper95_model,p_value_model,std_error_hc3,or_lower95_hc3,or_upper95_hc3,p_value_hc3,quantity_boundary
+LOG01,const,-2.61394455,0.07324505,0.28931918,0.04154410,0.12913597,0.00000000,0.29038436,0.04145746,0.12940585,0.00000000,conditional odds ratio; not risk ratio probability change or causal effect
+LOG01,age_centered_decade,0.04355405,1.04451645,0.11636500,0.83150567,1.31209521,0.70818990,0.11648086,0.83131687,1.31239320,0.70846688,conditional odds ratio; not risk ratio probability change or causal effect
+LOG01,prior_365d_acute_count,0.79038049,2.20423495,0.25373331,1.34053977,3.62439954,0.00183942,0.26845033,1.30242449,3.73046712,0.00323755,conditional odds ratio; not risk ratio probability change or causal effect
+LOG01,index_class_inpatient,-0.08146926,0.92176105,0.67192100,0.24698931,3.44000081,0.90349439,0.66532904,0.25020112,3.39584188,0.90254298,conditional odds ratio; not risk ratio probability change or causal effect
+LOG02,const,-2.66601167,0.06952898,0.36574291,0.03395040,0.14239239,0.00000000,0.37222511,0.03352179,0.14421301,0.00000000,conditional odds ratio; not risk ratio probability change or causal effect
+LOG02,age_centered_decade,0.03043303,1.03090085,0.12758088,0.80282310,1.32377427,0.81146295,0.11060871,0.82997803,1.28046350,0.78320761,conditional odds ratio; not risk ratio probability change or causal effect
+LOG02,age_centered_decade_sq,0.01331066,1.01339964,0.05587498,0.90828026,1.13068496,0.81170876,0.05669992,0.90681289,1.13251460,0.81439794,conditional odds ratio; not risk ratio probability change or causal effect
+LOG02,prior_365d_acute_count,0.77421142,2.16888112,0.26141780,1.29932115,3.62038691,0.00306059,0.26346800,1.29411055,3.63496404,0.00329761,conditional odds ratio; not risk ratio probability change or causal effect
+LOG02,index_class_inpatient,-0.06441304,0.93761765,0.67414951,0.25014318,3.51449460,0.92388027,0.65224136,0.26111807,3.36677910,0.92133165,conditional odds ratio; not risk ratio probability change or causal effect
+LOG03,const,-2.55715500,0.07752499,0.29690789,0.04332247,0.13872992,0.00000000,0.28868615,0.04402624,0.13651230,0.00000000,conditional odds ratio; not risk ratio probability change or causal effect
+LOG03,age_centered_decade,0.06420213,1.06630791,0.12211932,0.83933334,1.35466150,0.59907390,0.12045759,0.84207145,1.35025663,0.59404374,conditional odds ratio; not risk ratio probability change or causal effect
+LOG03,prior_365d_acute_count,0.52502509,1.69050127,0.47101741,0.67155990,4.25545737,0.26499539,0.33029392,0.88484828,3.22970006,0.11193191,conditional odds ratio; not risk ratio probability change or causal effect
+LOG03,index_class_inpatient,-0.31101430,0.73270340,0.80994250,0.14979727,3.58387215,0.70098176,0.89103928,0.12778333,4.20128573,0.72705427,conditional odds ratio; not risk ratio probability change or causal effect
+LOG03,prior_acute_x_inpatient,0.36114171,1.43496679,0.57978886,0.46060079,4.47053008,0.53336018,0.50641786,0.53183655,3.87173405,0.47576540,conditional odds ratio; not risk ratio probability change or causal effect

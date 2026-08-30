@@ -1,0 +1,112 @@
+model_row_id,patient_id,split,index_start,next_30d_days_after_index_stop,selection_condition,fit_use
+FND2-0005,d4adfa2e-89ba-4ae6-9770-ef5a7ec4173a,train,2015-01-08T06:09:18Z,28.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0007,8be62b06-5994-47fe-aad8-a27a02e054fa,train,2015-01-09T13:12:11Z,17.913889,recorded different encounter within 30 days,fit and interpretation
+FND2-0009,b656a85d-637d-458a-abd8-17219816280f,train,2015-01-11T17:28:26Z,6.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0010,3acf9313-1874-4dff-ab2a-3187516d92d6,train,2015-01-12T13:57:11Z,0.947917,recorded different encounter within 30 days,fit and interpretation
+FND2-0013,36421d27-328e-4b13-9fca-903c19fe49dd,train,2015-01-17T00:42:46Z,26.833333,recorded different encounter within 30 days,fit and interpretation
+FND2-0014,4e83ed9f-f2ed-4add-8434-2fc116de704b,train,2015-01-21T01:22:58Z,29.885417,recorded different encounter within 30 days,fit and interpretation
+FND2-0015,e8b73cd5-45fb-423d-b51c-db52adb5d6a5,train,2015-01-22T00:53:22Z,28.943056,recorded different encounter within 30 days,fit and interpretation
+FND2-0016,0edbb001-5914-42b6-9194-0a3c753b5c25,train,2015-01-23T21:26:16Z,27.937500,recorded different encounter within 30 days,fit and interpretation
+FND2-0023,1474f954-3781-4de1-9d5d-27a2b8688419,train,2015-02-21T17:53:01Z,26.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0024,471eb0f1-acfb-4df9-a7cf-f3af761ebd32,train,2015-02-24T08:50:15Z,12.919444,recorded different encounter within 30 days,fit and interpretation
+FND2-0028,4374229d-f618-43e5-ac4f-381a47c5de8f,train,2015-03-04T09:59:52Z,29.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0032,f9149e25-1799-44bf-a5aa-449b41161345,train,2015-03-10T11:09:02Z,27.937500,recorded different encounter within 30 days,fit and interpretation
+FND2-0033,e974e5c3-9b22-41f2-b3a3-c12848f29a73,train,2015-03-10T13:04:22Z,1.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0036,f6f561cc-1e0a-4f36-80c9-4b734d4b1a2e,train,2015-03-29T16:26:18Z,9.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0037,d07f23f8-3bd1-4db1-9a36-51aedbe60821,train,2015-03-30T00:54:28Z,18.927778,recorded different encounter within 30 days,fit and interpretation
+FND2-0041,13a3a783-ecc5-4ec5-b3dc-168b15cebb88,train,2015-04-09T08:37:29Z,7.000000,recorded different encounter within 30 days,fit and interpretation
+FND2-0042,36cfc9c6-c720-41a3-ba03-bc9d11840564,train,2015-04-10T15:33:30Z,15.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0043,1a7e8f38-95df-4c27-8897-21ed04c3b98b,train,2015-04-11T20:06:53Z,0.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0044,2335bebd-0843-4322-9585-8ab90f49def3,train,2015-04-11T23:10:53Z,1.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0050,99070f34-0b6f-4e84-97ea-cfc44ffaf5e8,train,2015-05-14T11:20:37Z,0.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0053,9ab883b3-d1dd-4120-b19c-e78d3ea8c25c,train,2015-05-26T03:23:18Z,20.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0059,cecb7ece-fb70-4a7f-b51d-6e8dd1506ad9,train,2015-06-13T06:11:10Z,6.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0061,73f124a4-e69e-4b8c-a447-e72d23dc54be,train,2015-06-18T02:46:28Z,12.989583,recorded different encounter within 30 days,fit and interpretation
+FND2-0062,23365743-e8f2-4aba-8242-15463f81f81b,train,2015-06-18T16:45:39Z,29.917361,recorded different encounter within 30 days,fit and interpretation
+FND2-0065,1930a1b6-6533-4509-ab9f-df36f00fb8ec,train,2015-06-25T08:36:17Z,1.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0072,65243e61-da11-42a6-826e-a43d960d1e84,train,2015-07-05T10:11:52Z,20.937500,recorded different encounter within 30 days,fit and interpretation
+FND2-0073,eabfe6f1-0b13-43b2-9b6e-291363b2f856,train,2015-07-08T04:51:51Z,21.988889,recorded different encounter within 30 days,fit and interpretation
+FND2-0080,11e1992a-28b9-4ee8-bb7f-1c3a7041b57d,train,2015-08-13T17:31:29Z,0.900000,recorded different encounter within 30 days,fit and interpretation
+FND2-0083,ed55adb7-3395-4c69-a0b8-b85936c1731c,train,2015-08-23T18:42:30Z,16.941667,recorded different encounter within 30 days,fit and interpretation
+FND2-0086,9ec4030b-2529-4647-b325-b04c6b44874b,train,2015-08-28T15:17:08Z,6.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0091,c2128123-c579-48b9-8452-d1741f5a3c4c,train,2015-09-16T16:05:34Z,0.937500,recorded different encounter within 30 days,fit and interpretation
+FND2-0103,3f336702-bf73-4fc8-bd59-3ba77fd65d0d,train,2015-10-30T09:55:43Z,2.947917,recorded different encounter within 30 days,fit and interpretation
+FND2-0104,ec3f12e0-5f62-4378-aab7-2538d037df0f,train,2015-10-31T00:43:10Z,29.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0105,fdb2a2ee-09c2-499b-b324-d998d5226f19,train,2015-10-31T06:49:10Z,23.943750,recorded different encounter within 30 days,fit and interpretation
+FND2-0106,799d0738-d5cd-4161-bdb8-e3c49e21ec66,train,2015-11-04T21:35:53Z,29.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0107,09867b02-24b8-4896-b38b-86782dd64ef1,train,2015-11-08T03:13:02Z,29.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0109,3e234e30-d471-4c3e-b433-220f2aa4a91d,train,2015-11-17T19:48:00Z,20.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0110,21a5c5d3-a090-450d-91c1-a9bf3f2902d1,train,2015-11-19T03:59:33Z,18.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0118,8c956d17-23d5-44d1-b41e-7f26833c77fd,train,2015-12-17T17:15:54Z,29.916667,recorded different encounter within 30 days,fit and interpretation
+FND2-0119,c2910dc6-102b-44fe-8f7a-900d875ccb14,train,2016-01-03T08:52:16Z,29.912500,recorded different encounter within 30 days,fit and interpretation
+FND2-0122,28f36cfa-7696-4f73-ac4f-427e802199d9,train,2016-01-08T02:07:14Z,3.000000,recorded different encounter within 30 days,fit and interpretation
+FND2-0126,5c06120a-9af5-4204-951b-7a8bfc465df3,train,2016-01-29T01:41:15Z,14.989583,recorded different encounter within 30 days,fit and interpretation
+FND2-0130,3c851902-c01a-499c-bf65-00125386275f,train,2016-02-20T20:52:27Z,13.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0137,e5c44cce-6c6e-4c4a-8839-b18a71e59bfe,train,2016-03-19T01:47:24Z,18.000000,recorded different encounter within 30 days,fit and interpretation
+FND2-0142,e51205c4-1713-4360-8257-8e3fac3afb67,train,2016-04-04T02:31:51Z,29.906944,recorded different encounter within 30 days,fit and interpretation
+FND2-0145,cad44a83-848c-4019-a175-291a150b9d05,train,2016-04-23T06:16:01Z,23.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0147,6c7ce9c1-78a9-4b72-beff-366cf7aeef5c,train,2016-04-26T16:25:43Z,20.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0148,76acc19c-38d4-4fa9-83e4-cf9bdc82340d,train,2016-04-29T20:52:23Z,12.989583,recorded different encounter within 30 days,fit and interpretation
+FND2-0149,278c5ad9-1e68-45f5-b274-0bdbb60569be,train,2016-04-30T21:48:45Z,29.912500,recorded different encounter within 30 days,fit and interpretation
+FND2-0154,59de0d88-e84d-4c2b-8c9b-12167eb03949,train,2016-06-04T08:37:28Z,4.000000,recorded different encounter within 30 days,fit and interpretation
+FND2-0159,714b9c18-783d-4f52-aa64-cc3a05a286d9,train,2016-06-29T04:48:12Z,0.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0162,ba8a1afb-f089-4229-8e13-06213df0f74d,train,2016-08-13T03:41:39Z,8.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0167,848e0227-5d5d-4bdf-8603-207cdea72e2a,train,2016-09-25T13:40:23Z,1.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0171,c9e63df1-a715-4c9e-b76c-e31ec0fc3e96,train,2016-10-08T18:22:49Z,23.941667,recorded different encounter within 30 days,fit and interpretation
+FND2-0173,2c71dd97-7085-416a-aa07-d675bbe3adf2,train,2016-10-13T20:51:21Z,7.900694,recorded different encounter within 30 days,fit and interpretation
+FND2-0175,ca8803ac-66ef-4895-a8c4-290313fcee6f,train,2016-10-17T12:09:39Z,1.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0177,a0b45d77-e330-44a3-9085-f06e636e5175,train,2016-10-28T16:31:58Z,20.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0180,ee7f6c74-a8ed-4147-b8e2-4879c8657b0f,train,2016-10-31T08:40:57Z,29.911806,recorded different encounter within 30 days,fit and interpretation
+FND2-0181,fd3be685-fa44-4ccd-836a-f4a47b2d4d34,train,2016-11-03T00:09:26Z,6.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0194,10ab86b6-a248-4dcf-bebb-3ba143c0ea29,train,2016-12-12T01:38:25Z,29.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0195,275e4aea-c071-42d9-8ab1-a462ef4732e0,train,2016-12-13T08:34:42Z,27.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0200,8dd20f15-2beb-4568-83d4-2109123f5ffd,train,2017-01-17T04:58:48Z,6.937500,recorded different encounter within 30 days,fit and interpretation
+FND2-0204,144edc8e-936e-42d7-8e7d-f3578cf80cc2,train,2017-02-04T18:04:39Z,6.937500,recorded different encounter within 30 days,fit and interpretation
+FND2-0210,f0f6572b-1588-4828-bb8b-e3148692e536,train,2017-02-14T12:56:15Z,0.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0216,baffdce5-d444-4c8c-a815-e7d00a01f7ca,train,2017-03-09T09:13:02Z,29.902778,recorded different encounter within 30 days,fit and interpretation
+FND2-0219,ea32ff72-a209-4c99-a5e5-09f047152280,train,2017-03-19T07:40:03Z,25.937500,recorded different encounter within 30 days,fit and interpretation
+FND2-0220,0447625b-b860-483c-9f30-17ed375b1493,train,2017-03-21T09:16:22Z,27.927083,recorded different encounter within 30 days,fit and interpretation
+FND2-0223,711d2093-5eb9-45a6-ad09-4b5c0371ad85,train,2017-04-01T08:25:36Z,29.958333,recorded different encounter within 30 days,fit and interpretation
+FND2-0224,d6a2da1f-ef65-4292-b637-8a0d6ac9b3ec,train,2017-04-02T22:37:34Z,12.895833,recorded different encounter within 30 days,fit and interpretation
+FND2-0231,9ec6d974-df2b-44ec-acc2-77d96725f4f4,validation,2017-04-25T21:45:22Z,8.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0232,81813194-e1ed-41c2-8f7a-122a60b06550,validation,2017-05-02T00:25:40Z,17.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0233,bfd66698-4139-4e5e-9982-efa459aa9dca,validation,2017-05-07T12:14:06Z,29.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0250,0b48619e-1602-488c-a23b-3d4937153dff,validation,2017-07-24T15:18:00Z,20.937500,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0251,dea008f8-c3da-4b74-9b12-db1de6e07730,validation,2017-07-27T11:02:24Z,6.937500,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0254,9394cb52-7d92-4577-976e-d017af06ed8f,validation,2017-08-05T06:41:05Z,26.947917,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0259,b574b7cc-3294-4d3b-8cfe-81dcf7456ab4,validation,2017-08-24T19:20:41Z,9.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0260,5ce924c7-ec4c-4b5f-93ff-2ae274654c74,validation,2017-08-28T01:26:16Z,15.916667,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0262,c7ab72b3-8095-4913-8207-59f049a2ba98,validation,2017-09-14T00:23:49Z,5.989583,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0263,2e4df8c7-8b04-4165-a1fb-e4234d8aebe7,validation,2017-09-14T20:01:15Z,29.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0267,508d609e-4740-4458-a1b0-3d2fcb0ba804,validation,2017-09-30T13:14:07Z,6.937500,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0271,59486a8b-389b-4355-9df4-edc62bbd1a11,validation,2017-10-12T08:39:57Z,28.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0272,ba1525cd-efbe-40b3-ad47-e4a670c8d802,validation,2017-10-19T06:46:19Z,9.945833,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0274,ed6fb8d6-c14d-4e34-a029-2dab33855ddd,validation,2017-10-22T05:37:04Z,11.937500,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0276,9c489755-e480-4304-9e44-7e10e9b74766,validation,2017-10-31T01:50:52Z,28.989583,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0280,04a29a39-c12f-480b-9521-f2d20559089f,validation,2017-12-08T05:41:47Z,29.902083,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0281,1be72444-925b-4a44-ac45-608a4ba2e8d5,validation,2017-12-12T21:14:08Z,8.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0294,bd6049cf-d394-4818-8b37-a4498547844d,validation,2018-03-05T13:12:11Z,13.000000,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0296,2d3e8561-04d7-48eb-8bac-a978d10f5641,validation,2018-03-16T05:52:38Z,27.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0298,505609ce-7420-4cad-8c97-e1c42c4c79c7,validation,2018-04-03T05:39:17Z,19.000000,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0299,33c2184c-bda1-4d31-b0cb-4f18c46822da,validation,2018-04-03T15:08:54Z,6.937500,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0301,13db4bb8-d1dc-4158-a820-d2d1b7084fc4,test,2018-04-23T07:53:01Z,1.000000,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0303,18794a7c-c7fa-47d6-8387-9fc133c4e1e3,test,2018-05-05T09:39:17Z,0.916667,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0310,b4f1aa40-1a13-43cc-9528-8dcde700ecf0,test,2018-06-12T02:57:15Z,16.938194,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0311,a708bca4-8fc9-4567-8c22-8b13d44f4f45,test,2018-06-18T04:27:38Z,3.941667,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0313,25f2b770-8821-48f0-a7fe-460dfe3b15b8,test,2018-07-05T17:01:01Z,3.000000,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0316,ea521af0-e6c4-4a3c-899c-89c35c49287d,test,2018-07-19T06:26:11Z,6.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0317,953f1037-d691-4543-9a24-85baa47c9902,test,2018-07-22T10:25:45Z,2.944444,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0325,7a8d17ee-0ec1-4dcc-8304-4e42ccaa6a38,test,2018-10-14T19:40:02Z,3.936806,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0330,96e4e7cd-b134-4d6a-9f30-89cf6104f923,test,2018-11-29T09:12:09Z,28.916667,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0334,bfbb7a29-dc54-4302-a8ca-7a3f792d9243,test,2018-12-17T12:23:52Z,29.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0338,9e431420-959d-4b8d-8f94-c35632fec209,test,2019-01-09T23:26:15Z,16.897917,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0339,dac134fa-7f57-4211-923a-e943a5c11d93,test,2019-01-17T04:29:33Z,6.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0347,5b891358-1bb3-4bbf-b8a6-a73fbe58efe7,test,2019-03-22T21:31:19Z,6.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0348,0e1ad739-81d1-4170-841d-414ddc97c93a,test,2019-03-28T15:24:44Z,0.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0349,6abdc54d-098e-47dc-8e11-701464386c67,test,2019-03-31T09:59:52Z,13.937500,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0351,88159e4d-29e0-4f53-a821-e9cc3faf21b4,test,2019-04-25T08:20:16Z,0.937500,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0354,8960bea5-7854-4446-a6a3-2baaace4cdfa,test,2019-05-23T12:59:39Z,20.000000,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0358,d7d1f837-a2c8-4648-b498-a02278b91a08,test,2019-06-12T08:16:35Z,29.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0359,475b2a8b-19a0-451a-b965-9c6bebf16434,test,2019-06-28T23:35:03Z,29.914583,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0362,69b60335-4bd9-4043-ad76-26b75d7dd40a,test,2019-09-07T10:26:36Z,1.958333,recorded different encounter within 30 days,not used in Module 02 fitting
+FND2-0370,7bac2205-8289-4efd-a05a-47203b0b85d7,test,2019-11-29T13:42:37Z,27.958333,recorded different encounter within 30 days,not used in Module 02 fitting

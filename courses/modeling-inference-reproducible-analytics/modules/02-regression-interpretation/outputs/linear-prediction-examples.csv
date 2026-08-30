@@ -1,0 +1,4 @@
+scenario_id,age_at_index,prior_365d_encounter_count,index_class,predicted_mean_days,mean_lower95,mean_upper95,new_observation_lower95,new_observation_upper95,scope
+LP01,40,0,emergency,18.31815977,15.19871076,21.43760878,-3.31694228,39.95326182,selected training rows with a recorded different encounter within 30 days
+LP02,70,4,emergency,18.00481835,13.83728937,22.17234733,-3.80607289,39.81570958,selected training rows with a recorded different encounter within 30 days
+LP03,70,4,inpatient,14.57616807,7.89717738,21.25515875,-7.85050345,37.00283958,selected training rows with a recorded different encounter within 30 days

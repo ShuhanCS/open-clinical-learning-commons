@@ -1,0 +1,10 @@
+quantity,scale,supported_wording,unsupported_substitution
+linear coefficient,outcome days,conditional mean difference in recorded next-encounter days,individual outcome or causal effect
+logistic coefficient,log odds,conditional change in log odds,probability change risk ratio or causal effect
+odds ratio,odds,conditional multiplicative change in odds,risk ratio or percent probability increase
+scenario probability,probability,model-conditional estimated probability for a declared covariate pattern,individual truth or treatment benefit
+confidence interval,parameter uncertainty,range under the fitted model and stated variance method,range containing individual outcomes
+prediction interval,linear outcome scale,range for one new conditional linear outcome,confidence interval for the mean
+likelihood-ratio comparison,training model fit,evidence about one nested added term under model assumptions,prediction performance or clinical utility
+p-value,model-based compatibility,numerical evidence under a null and assumptions,importance truth absence of effect or decision rule
+causal effect,counterfactual outcome contrast,not supported in this module,regression coefficient with covariates

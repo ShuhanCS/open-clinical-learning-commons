@@ -1,0 +1,4 @@
+scenario_id,age_at_index,prior_365d_acute_count,index_class,predicted_probability,probability_lower95,probability_upper95,quantity_boundary
+GP01,46.245536,0,emergency,0.06824635,0.03988703,0.11436707,model-conditional training estimate; not individual truth or causal effect
+GP02,46.245536,1,emergency,0.13900676,0.07681854,0.23853133,model-conditional training estimate; not individual truth or causal effect
+GP03,46.245536,1,inpatient,0.12953986,0.05159873,0.28930003,model-conditional training estimate; not individual truth or causal effect

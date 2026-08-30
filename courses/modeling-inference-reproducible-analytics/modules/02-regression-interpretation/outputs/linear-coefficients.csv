@@ -1,0 +1,5 @@
+model_id,term,estimate,std_error_classical,lower95_classical,upper95_classical,p_value_classical,std_error_hc3,lower95_hc3,upper95_hc3,p_value_hc3,quantity,bounded_interpretation
+LIN01,const,18.19672324,3.47264894,11.26136440,25.13208208,0.00000186,3.66569556,10.87582368,25.51762279,0.00000527,days,expected days at numeric zero and emergency reference
+LIN01,age_at_index,0.00303591,0.06725466,-0.13128091,0.13735274,0.96413366,0.07156466,-0.13988858,0.14596041,0.96629236,days per one-year increase,conditional mean difference per year
+LIN01,prior_365d_encounter_count,-0.10110471,0.04938821,-0.19973978,-0.00246963,0.04469060,0.02616379,-0.15335741,-0.04885200,0.00025970,days per one-count increase,conditional mean difference per prior encounter row
+LIN01,index_class_inpatient,-3.42865028,3.41679847,-10.25246804,3.39516747,0.31935586,3.20322098,-9.82592433,2.96862376,0.28840877,days versus emergency reference,conditional mean difference for inpatient versus emergency index

@@ -1,0 +1,46 @@
+model_id,metric,value,reference,status
+LOG01,n,224,224,pass
+LOG01,positives,25,25,pass
+LOG01,converged,true,True,pass
+LOG01,log_likelihood,-62.84070914,training descriptive,review
+LOG01,aic,133.68141828,training descriptive; not validation,review
+LOG01,deviance,125.68141828,training descriptive,review
+LOG01,mcfadden_pseudo_r2,0.19814492,not ordinary R-squared,review
+LOG01,minimum_fitted_probability,0.05633610,>0 preferred,review
+LOG01,maximum_fitted_probability,0.99962269,<1 preferred,review
+LOG01,fitted_probability_at_least_0_99,4,0,review
+LOG01,maximum_absolute_coefficient,2.61394455,review above 10,pass
+LOG01,maximum_standard_error,0.67192100,review above 10,pass
+LOG01,maximum_cooks_distance,0.19351112,review above 4/n=0.01785714,review
+LOG01,maximum_leverage,0.17117289,review influential rows,review
+LOG01,condition_number,5.53127282,review scale and collinearity,review
+LOG02,n,224,224,pass
+LOG02,positives,25,25,pass
+LOG02,converged,true,True,pass
+LOG02,log_likelihood,-62.81308638,training descriptive,review
+LOG02,aic,135.62617275,training descriptive; not validation,review
+LOG02,deviance,125.62617275,training descriptive,review
+LOG02,mcfadden_pseudo_r2,0.19849739,not ordinary R-squared,review
+LOG02,minimum_fitted_probability,0.06021015,>0 preferred,review
+LOG02,maximum_fitted_probability,0.99962794,<1 preferred,review
+LOG02,fitted_probability_at_least_0_99,4,0,review
+LOG02,maximum_absolute_coefficient,2.66601167,review above 10,pass
+LOG02,maximum_standard_error,0.67414951,review above 10,pass
+LOG02,maximum_cooks_distance,0.15927787,review above 4/n=0.01785714,review
+LOG02,maximum_leverage,0.24319275,review influential rows,review
+LOG02,condition_number,17.04072782,review scale and collinearity,review
+LOG03,n,224,224,pass
+LOG03,positives,25,25,pass
+LOG03,converged,true,True,pass
+LOG03,log_likelihood,-62.66686777,training descriptive,review
+LOG03,aic,135.33373554,training descriptive; not validation,review
+LOG03,deviance,125.33373554,training descriptive,review
+LOG03,mcfadden_pseudo_r2,0.20036315,not ordinary R-squared,review
+LOG03,minimum_fitted_probability,0.04523856,>0 preferred,review
+LOG03,maximum_fitted_probability,0.99958363,<1 preferred,review
+LOG03,fitted_probability_at_least_0_99,3,0,review
+LOG03,maximum_absolute_coefficient,2.55715500,review above 10,pass
+LOG03,maximum_standard_error,0.80994250,review above 10,pass
+LOG03,maximum_cooks_distance,0.22891339,review above 4/n=0.01785714,review
+LOG03,maximum_leverage,0.35054863,review influential rows,review
+LOG03,condition_number,6.63546832,review scale and collinearity,review

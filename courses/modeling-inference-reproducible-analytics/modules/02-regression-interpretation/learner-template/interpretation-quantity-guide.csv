@@ -1,0 +1,10 @@
+quantity,scale,supported_wording,unsupported_substitution
+linear coefficient,REPLACE,REPLACE,REPLACE
+logistic coefficient,REPLACE,REPLACE,REPLACE
+odds ratio,REPLACE,REPLACE,REPLACE
+scenario probability,REPLACE,REPLACE,REPLACE
+confidence interval,REPLACE,REPLACE,REPLACE
+prediction interval,REPLACE,REPLACE,REPLACE
+likelihood-ratio comparison,REPLACE,REPLACE,REPLACE
+p-value,REPLACE,REPLACE,REPLACE
+causal effect,REPLACE,REPLACE,REPLACE

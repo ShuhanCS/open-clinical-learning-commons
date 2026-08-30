@@ -1,0 +1,14 @@
+model_id,metric,value,reference,status
+LIN01,n,69,69,pass
+LIN01,outcome_min_days,0.90000000,0.9,pass
+LIN01,outcome_max_days,29.95833300,29.958333,pass
+LIN01,r_squared,0.07951657,descriptive,review
+LIN01,adjusted_r_squared,0.03703272,descriptive,review
+LIN01,rmse_days,10.40449778,descriptive,review
+LIN01,residual_mean,-0.00000000,approximately zero,pass
+LIN01,jarque_bera_p_value,0.04655734,>=0.05 preferred for normal-error approximation,review
+LIN01,breusch_pagan_p_value,0.14825876,>=0.05 preferred for constant-variance approximation,pass
+LIN01,durbin_watson,1.51073136,near 2 under ordered residual independence,review
+LIN01,max_cooks_distance,0.07408089,review above 4/n=0.05797101,review
+LIN01,max_leverage,0.58620136,review above 2p/n=0.11594203,review
+LIN01,condition_number,157.99534422,review scale and collinearity,review

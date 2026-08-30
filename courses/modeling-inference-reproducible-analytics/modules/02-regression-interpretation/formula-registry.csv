@@ -1,0 +1,5 @@
+model_id,family,fit_partition,outcome,formula,purpose,module_03_status
+LIN01,ordinary least squares,train rows with recorded next-encounter timing,next_30d_days_after_index_stop,intercept + age_at_index + prior_365d_encounter_count + index_class_inpatient,conditional timing interpretation,not a prediction candidate
+LOG01,binomial logistic,train,acute_return_90d,intercept + age_centered_decade + prior_365d_acute_count + index_class_inpatient,bounded binary-outcome interpretation,handoff formula
+LOG02,binomial logistic,train,acute_return_90d,LOG01 + age_centered_decade_sq,nonlinear-term interpretation,interpretation exercise only
+LOG03,binomial logistic,train,acute_return_90d,LOG01 + prior_acute_x_inpatient,interaction interpretation,interpretation exercise only
