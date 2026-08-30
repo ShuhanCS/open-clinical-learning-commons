@@ -1,0 +1,13 @@
+result_id,cell_id,row_variable,row_category,column_variable,column_category,n,row_denominator,row_percent,cohort_denominator,missing_n,retained_conditions,interpretation_limit
+CT01,CT01-C01,gender,F,endpoint_90d,Acute return,20,236,8.474576,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT01,CT01-C02,gender,F,endpoint_90d,Death,6,236,2.542373,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT01,CT01-C03,gender,F,endpoint_90d,No acute return recorded,210,236,88.983051,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT01,CT01-C04,gender,M,endpoint_90d,Acute return,16,138,11.594203,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT01,CT01-C05,gender,M,endpoint_90d,Death,2,138,1.449275,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT01,CT01-C06,gender,M,endpoint_90d,No acute return recorded,120,138,86.956522,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT02,CT02-C01,index_class,emergency,endpoint_90d,Acute return,24,314,7.643312,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT02,CT02-C02,index_class,emergency,endpoint_90d,Death,7,314,2.229299,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT02,CT02-C03,index_class,emergency,endpoint_90d,No acute return recorded,283,314,90.127389,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT02,CT02-C04,index_class,inpatient,endpoint_90d,Acute return,12,60,20.000000,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT02,CT02-C05,index_class,inpatient,endpoint_90d,Death,1,60,1.666667,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.
+CT02,CT02-C06,index_class,inpatient,endpoint_90d,No acute return recorded,47,60,78.333333,374,0,N08,Complete unadjusted synthetic-cohort cross-tab; no group effect or real-population inference.

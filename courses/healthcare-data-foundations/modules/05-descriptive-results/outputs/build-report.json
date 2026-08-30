@@ -1,0 +1,57 @@
+{
+  "status": "pass",
+  "version": "0.1.0",
+  "source": {
+    "rows": 374,
+    "fields": 29,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a"
+  },
+  "quality_results": {
+    "rows": 28,
+    "bytes": 3607,
+    "sha256": "c301cd46d6058329d72cc2b71649f5bb1ccf9fbff43f6c97e8b2fc008f791c06"
+  },
+  "outputs": {
+    "variable-profile.csv": {
+      "rows": 17,
+      "fields": 18,
+      "bytes": 3116,
+      "sha256": "9d9bd1f8db71ebfdf3b775de13eb4450e30db9d52f8c71b2be0bf66918341f73"
+    },
+    "cross-tabs.csv": {
+      "rows": 12,
+      "fields": 13,
+      "bytes": 2304,
+      "sha256": "97628ab9fd557e8fb87203e98db4082c4d754c1d8966fdc8fc5b574167808f6f"
+    },
+    "rates.csv": {
+      "rows": 6,
+      "fields": 13,
+      "bytes": 1893,
+      "sha256": "2398b283e449d6f876a3a3ea123e7905c637ba222f56c6aa03882cfc158942f3"
+    },
+    "stratified-table.csv": {
+      "rows": 2,
+      "fields": 18,
+      "bytes": 762,
+      "sha256": "a98abab5616039d8ded9e1c26845fb102b1dff33b6f5491dae38d42cde54a62b"
+    },
+    "denominator-registry.csv": {
+      "rows": 27,
+      "fields": 12,
+      "bytes": 10094,
+      "sha256": "e13bd0e1cf0716b912476fd81c7e4dd8bc827b2df468421aa2efc33f1f234be6"
+    },
+    "descriptive-checks.csv": {
+      "rows": 18,
+      "fields": 5,
+      "bytes": 732,
+      "sha256": "9fb7970cda77bf1be25639265a762eab97a227106824b9f913f208000d99a1fa"
+    }
+  },
+  "decision": {
+    "disposition": "accept with conditions",
+    "module_06_source": "exact released CSV tables"
+  }
+}

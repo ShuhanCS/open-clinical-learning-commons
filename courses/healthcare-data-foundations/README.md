@@ -11,9 +11,9 @@ FND-1 teaches learners to build, check, describe, and hand off healthcare data a
 - Continuing case: a synthetic longitudinal acute-care data system built from Synthea and documented public-source contrasts
 - Final deliverable: a reproducible healthcare data toolkit
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 04 are runnable release candidates; Modules 05 through 07 are not yet built
+- Module package status: Modules 01 through 05 are runnable release candidates; Modules 06 and 07 are not yet built
 - Course package version: 0.1.0
-- Commons release: 0.32.0
+- Commons release: 0.33.0
 
 ## Seven technical modules
 
@@ -39,6 +39,9 @@ Runnable module packages:
 - [Cleaning and profiling](modules/04-cleaning-profiling/README.md)
 - [Durable Module 04 specification](../../docs/curriculum/courses/FND-1/modules/04-cleaning-profiling-spec.md)
 - [Module 04 release record](modules/04-cleaning-profiling/release.json)
+- [Descriptive results](modules/05-descriptive-results/README.md)
+- [Durable Module 05 specification](../../docs/curriculum/courses/FND-1/modules/05-descriptive-results-spec.md)
+- [Module 05 release record](modules/05-descriptive-results/release.json)
 
 ## Three cumulative checkpoints
 

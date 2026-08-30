@@ -1,0 +1,20 @@
+record_version: 1.0.0
+module: oclc-fnd1-05
+source_module: oclc-fnd1-04
+source_path: data/resolved-analytic-table.csv
+source_rows: 374
+source_fields: 29
+source_bytes: 121787
+source_sha256: 3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a
+quality_results_path: data/quality-rule-results.csv
+quality_results_rows: 28
+quality_results_bytes: 3607
+quality_results_sha256: c301cd46d6058329d72cc2b71649f5bb1ccf9fbff43f6c97e8b2fc008f791c06
+source_release: synthea-csv-apr2020
+cohort_definition_version: 0.1.0
+synthetic: true
+contains_real_patients: false
+source_url: https://synthea.mitre.org/downloads
+source_dictionary_url: https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary
+teaching_use: exact descriptive summaries and denominator control
+claim_boundary: no real clinical or population inference

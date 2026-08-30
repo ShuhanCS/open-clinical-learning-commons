@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.32.0
+- Current release: 0.33.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Module 04, Cleaning and profiling
-- Next unit: FND-1 Module 05, Descriptive results
+- Last completed unit: FND-1 Module 05, Descriptive results
+- Next unit: FND-1 Module 06, Accessible charts and time-indexed data
 
 ## Confirmed decisions
 
@@ -149,6 +149,13 @@
 - The reference initial decision is `fix`; after deterministic restoration it is `proceed with conditions`. The resolved table matches the accepted file byte for byte.
 - Builder, profiler, and validator self-checks pass. A clean build reproduces 13 generated artifacts byte for byte; the notebook executes four code cells in a fresh exact-version environment; validation passes 344 release checks and 340 complete-submission checks.
 - Module 04 is a runnable release candidate. Faculty, notebook, clinical-informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Module 05 uses the exact 374-row Module 04 resolved table and all 28 passing quality-rule results. Both upstream fingerprints are enforced before calculation.
+- The descriptive release contains 17 one-variable profiles, 12 cells across two complete cross-tabs, six cohort rates with Wilson intervals, two unadjusted index-class rows, 27 denominator records, and 18 passing invariants.
+- Next-event timing uses 111 available recorded encounters rather than treating 263 structural blanks as zero. Supported ages and utilization extremes and small internal cells remain visible through N01 through N08.
+- The six output SHA-256 values are recorded in the module release. A clean build reproduces all six CSV files and the build report byte for byte.
+- The notebook executes four code cells in a fresh exact-version environment. The validator passes 1,101 release checks and 1,100 complete-submission checks.
+- The reference decision is `accept with conditions`: Module 06 must use exact released rows, preserve denominator and interpretation limits, label strata unadjusted, and make no real-population claim.
+- Module 05 is a runnable release candidate. Faculty, descriptive-statistics, clinical-informatics, notebook, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -157,9 +164,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course, Modules 01 through 04, Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
-2. Treat Module 04 `outputs/resolved-analytic-table.csv` and its N01 through N08 retained conditions as immutable Module 05 inputs.
-3. Write the 21-section Module 05 specification around exact descriptive evidence, denominator ownership, and interpretation limits.
-4. Lock every requested variable profile, cross-tab, rate, stratified table, denominator definition, missing-value rule, and synthetic-data claim boundary before building outputs.
-5. Build the descriptive notebook, machine-readable tables, denominator registry, interpretation memo, learner assessment, instructor key, validator, and decision records.
-6. Update the Commons version and this ledger, then commit and push Module 05 before beginning Module 06.
+1. Read the FND-1 course, Modules 01 through 05, Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
+2. Treat the Module 04 quality outputs and Module 05 six exact descriptive CSV files and denominator registry as immutable Module 06 inputs.
+3. Write the 21-section Module 06 specification around three accessible inspection views and their exact table and text alternatives.
+4. Lock chart mappings, dimensions, labels, units, accessible colors and non-color cues, alt-text fields, time-indexed source, and false-cause boundaries before rendering figures.
+5. Build the figures, exact tables, text alternatives, learner assessment, instructor key, validator, and Week 6 checkpoint handoff.
+6. Update the Commons version and this ledger, then commit and push Module 06 before building Checkpoint 2.

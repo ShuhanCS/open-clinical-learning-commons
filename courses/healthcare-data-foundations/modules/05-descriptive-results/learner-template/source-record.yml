@@ -1,0 +1,16 @@
+record_version: 1.0.0
+module: oclc-fnd1-05
+source_path: data/resolved-analytic-table.csv
+source_rows: REPLACE
+source_fields: REPLACE
+source_bytes: REPLACE
+source_sha256: REPLACE
+quality_results_path: data/quality-rule-results.csv
+quality_results_rows: REPLACE
+quality_results_bytes: REPLACE
+quality_results_sha256: REPLACE
+source_release: REPLACE
+cohort_definition_version: REPLACE
+synthetic: true
+contains_real_patients: false
+claim_boundary: REPLACE

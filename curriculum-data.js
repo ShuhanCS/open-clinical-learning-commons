@@ -2,7 +2,7 @@
   "use strict";
 
   const curriculum = {
-  "version": "0.32.0",
+  "version": "0.33.0",
   "courseCount": 11,
   "moduleCount": 77,
   "courses": [
@@ -74,7 +74,12 @@
           "outcome": "Produce descriptive results that retain their clinical meaning.",
           "topics": "Single-variable and two-variable summaries, cross-tabs, rates, denominators, stratification, multivariable tables.",
           "submission": "Descriptive analysis notebook and interpretation memo.",
-          "hours": 16
+          "hours": 16,
+          "resource": {
+            "title": "Runnable descriptive evidence package",
+            "description": "Build exact profiles, cross-tabs, rates, strata, and a 27-row denominator registry from the accepted cohort.",
+            "url": "courses/healthcare-data-foundations/modules/05-descriptive-results/README.md"
+          }
         },
         {
           "week": 6,

@@ -1,8 +1,8 @@
 # FND-1: Healthcare Data Foundations
 
-- Status: course specification complete; Modules 01 through 04 and Checkpoint 1 are runnable release candidates
+- Status: course specification complete; Modules 01 through 05 and Checkpoint 1 are runnable release candidates
 - Course specification version: 0.1.0
-- Commons release: 0.32.0
+- Commons release: 0.33.0
 - Credits: 3
 - Delivery: asynchronous online half-term with scheduled technical clinics and review
 - Planning model: seven instructional weeks mapped to official half-term dates
@@ -678,7 +678,7 @@ Handoff: Module 05 receives the resolved analytic-table version plus unresolved 
 - Checkpoint role: the 25-percent source assessment component is drafted for inclusion in Checkpoint 2.
 - Out of scope: hypothesis testing as a substitute for description, standardized or risk-adjusted estimates, regression, prediction, causal claims, and real population inference from synthetic data.
 
-Planned module package:
+Released module package:
 
 ```text
 module-05/
@@ -701,11 +701,11 @@ module-05/
   release.json
 ```
 
-Full future specification:
+Full specification:
 
 `docs/curriculum/courses/FND-1/modules/05-descriptive-results-spec.md`
 
-Runnable future package:
+Runnable package:
 
 `courses/healthcare-data-foundations/modules/05-descriptive-results/`
 
@@ -1574,7 +1574,7 @@ Each module adds its own source, data, code, output, and release checks.
 - [x] Module 03 has a complete specification and runnable package.
 - [x] Checkpoint 1 has a runnable assembler, templates, validator, and instructor notes.
 - [x] Module 04 has a complete specification and runnable package.
-- [ ] Module 05 has a complete specification and runnable package.
+- [x] Module 05 has a complete specification and runnable package.
 - [ ] Module 06 has a complete specification and runnable package.
 - [ ] Checkpoint 2 has a runnable assembler, templates, validator, and instructor notes.
 - [ ] Module 07 has a complete specification and runnable package.

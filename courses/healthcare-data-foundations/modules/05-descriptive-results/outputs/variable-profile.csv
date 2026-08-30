@@ -1,0 +1,18 @@
+result_id,field_name,summary_role,total_rows,available_n,missing_n,missing_percent,distinct_available,mean,sample_sd,median,q1,q3,minimum,maximum,category_counts,retained_conditions,interpretation_limit
+VP01,death_date,date availability,374,31,343,91.711230,31,,,,,,2015-01-12,2019-08-07,,N01,Available dates describe recorded synthetic deaths only.
+VP02,age_at_index,continuous,374,374,0,0.000000,75,46.120321,20.125717,43.500000,30.000000,62.750000,18.000000,107.000000,,N04,Five accepted ages are at least 100 and remain included.
+VP03,gender,categorical,374,374,0,0.000000,2,,,,,,,,F=236|M=138,,Values preserve the pinned source vocabulary and do not define identity universally.
+VP04,race,categorical,374,374,0,0.000000,5,,,,,,,,asian=27|black=33|native=5|other=1|white=308,N07,Rare categories remain exact internally and require cautious display.
+VP05,ethnicity,categorical,374,374,0,0.000000,2,,,,,,,,hispanic=31|nonhispanic=343,,Values preserve the pinned source vocabulary.
+VP06,index_class,categorical,374,374,0,0.000000,2,,,,,,,,emergency=314|inpatient=60,,Class describes the selected synthetic index encounter.
+VP07,index_reason_code,text availability,374,148,226,60.427807,17,,,,,,,,,N02,Available values use a smaller denominator; blank is not no reason clinically.
+VP08,index_reason_description,text availability,374,148,226,60.427807,17,,,,,,,,,N02,Availability is paired with the source reason code.
+VP09,prior_365d_encounter_count,count,374,374,0,0.000000,22,5.716578,12.907586,3.000000,1.000000,9.000000,0.000000,187.000000,,N05,Two supported counts above 100 remain included; rows are not unique services.
+VP10,prior_365d_acute_count,count,374,374,0,0.000000,9,0.302139,1.351058,0.000000,0.000000,0.000000,0.000000,13.000000,,,Counts describe source rows in the declared lookback.
+VP11,prior_365d_condition_count,count,374,374,0,0.000000,6,1.251337,0.848235,1.000000,1.000000,2.000000,0.000000,5.000000,,,"Counts describe source condition rows, not unique clinical burden."
+VP12,prior_365d_medication_count,count,374,374,0,0.000000,23,2.692513,11.353879,1.000000,0.000000,2.000000,0.000000,185.000000,,N06,One supported count above 100 remains included; rows are not unique therapies.
+VP13,next_30d_state,categorical,374,374,0,0.000000,4,,,,,,,,Acute return=15|No encounter recorded=263|Scheduled care=92|Urgent care=4,N03|N08,No encounter recorded is source-specific; small states require cautious display.
+VP14,next_30d_days_after_index_stop,continuous available-case,374,111,263,70.320856,68,16.011993,10.792264,15.958333,6.937500,27.947916,0.900000,29.958333,,N03,"Timing describes 111 recorded next encounters, not all 374 people."
+VP15,acute_return_90d,binary categorical,374,374,0,0.000000,2,,,,,,,,0=338|1=36,,Flag describes a recorded synthetic event in the declared window.
+VP16,death_90d,binary categorical,374,374,0,0.000000,2,,,,,,,,0=366|1=8,N08,The small synthetic-death cell requires cautious interpretation.
+VP17,endpoint_90d,categorical,374,374,0,0.000000,3,,,,,,,,Acute return=36|Death=8|No acute return recorded=330,N08,Endpoint uses death precedence and small-cell caution.

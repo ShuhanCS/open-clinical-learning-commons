@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd1-05",
+    "title": "Descriptive results",
+    "version": "0.1.0",
+    "commons_release": "0.33.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "week": 5,
+    "hours": 16.0,
+    "checkpoint_component_weight_percent": 25
+  },
+  "decision": {
+    "owner": "clinical analytics reviewer",
+    "question": "Do the results preserve cohort, denominators, status, uncertainty, and source limits?",
+    "allowed": ["accept", "accept with conditions", "revise", "refer"],
+    "reference": "accept with conditions"
+  },
+  "upstream": {
+    "module": "oclc-fnd1-04",
+    "rows": 374,
+    "fields": 29,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a",
+    "quality_results_rows": 28,
+    "quality_results_sha256": "c301cd46d6058329d72cc2b71649f5bb1ccf9fbff43f6c97e8b2fc008f791c06",
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "outputs": {
+    "variable-profile.csv": {"rows": 17, "fields": 18, "bytes": 3116, "sha256": "9d9bd1f8db71ebfdf3b775de13eb4450e30db9d52f8c71b2be0bf66918341f73"},
+    "cross-tabs.csv": {"rows": 12, "fields": 13, "bytes": 2304, "sha256": "97628ab9fd557e8fb87203e98db4082c4d754c1d8966fdc8fc5b574167808f6f"},
+    "rates.csv": {"rows": 6, "fields": 13, "bytes": 1893, "sha256": "2398b283e449d6f876a3a3ea123e7905c637ba222f56c6aa03882cfc158942f3"},
+    "stratified-table.csv": {"rows": 2, "fields": 18, "bytes": 762, "sha256": "a98abab5616039d8ded9e1c26845fb102b1dff33b6f5491dae38d42cde54a62b"},
+    "denominator-registry.csv": {"rows": 27, "fields": 12, "bytes": 10094, "sha256": "e13bd0e1cf0716b912476fd81c7e4dd8bc827b2df468421aa2efc33f1f234be6"},
+    "descriptive-checks.csv": {"rows": 18, "fields": 5, "bytes": 732, "sha256": "9fb7970cda77bf1be25639265a762eab97a227106824b9f913f208000d99a1fa"}
+  },
+  "reference_facts": {
+    "recorded_next_30d": 111,
+    "scheduled_30d": 92,
+    "urgent_30d": 4,
+    "acute_return_30d": 15,
+    "acute_return_90d": 36,
+    "death_90d": 8,
+    "emergency_index": 314,
+    "inpatient_index": 60
+  },
+  "methods": {
+    "rounding_decimal_places": 6,
+    "standard_deviation": "sample",
+    "quartiles": "inclusive linear interpolation",
+    "interval": "Wilson 95 percent",
+    "strata": "unadjusted"
+  },
+  "environment": {
+    "tested_platform": "Windows",
+    "python": "3.12.10",
+    "notebook": {"jupyterlab": "4.6.3", "nbclient": "0.10.2", "pandas": "3.0.5"}
+  },
+  "package": {
+    "learner_template_files": 10,
+    "reference_outputs": 6,
+    "release_validation_checks": 1101,
+    "complete_submission_checks": 1100
+  },
+  "assessment": {
+    "points": 100,
+    "minimum_passing_points": 80,
+    "noncompensable_gates": 19
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, descriptive build, notebook, and validation"}
+  ],
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "descriptive_checks": 18,
+    "notebook_clean_execution": "pass",
+    "byte_for_byte_reproduction": "pass",
+    "nonempty_target_refusal": "pass",
+    "incomplete_submission_rejection": "pass"
+  },
+  "known_issues": [
+    "Named faculty, descriptive-statistics, clinical-informatics, notebook, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "Windows reproduction is complete; named macOS and Linux reproduction remains pending.",
+    "The source is synthetic and older and cannot support real population or clinical estimates.",
+    "Wilson intervals are descriptive arithmetic here and are not real-population estimates."
+  ]
+}

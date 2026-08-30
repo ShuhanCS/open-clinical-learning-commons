@@ -1,0 +1,3 @@
+result_id,index_class,n,percent_of_cohort,age_mean,age_sample_sd,age_median,age_q1,age_q3,prior_encounter_median,prior_encounter_q1,prior_encounter_q3,acute_return_90d_n,acute_return_90d_percent,death_90d_n,death_90d_percent,retained_conditions,interpretation_limit
+ST01,emergency,314,83.957219,46.095541,20.360421,43.000000,30.000000,62.750000,3.000000,1.000000,9.000000,24,7.643312,7,2.229299,N04|N05|N06|N08,"Unadjusted synthetic-cohort stratum; no class effect, fair comparison, or real-population inference."
+ST02,inpatient,60,16.042781,46.250000,19.012596,47.000000,29.250000,62.250000,4.000000,2.000000,6.250000,12,20.000000,1,1.666667,N04|N05|N06|N08,"Unadjusted synthetic-cohort stratum; no class effect, fair comparison, or real-population inference."

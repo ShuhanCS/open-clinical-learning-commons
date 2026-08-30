@@ -1,0 +1,19 @@
+check_id,check,observed,expected,status
+CHK01,source rows,374,374,pass
+CHK02,source fields,29,29,pass
+CHK03,unique patients,374,374,pass
+CHK04,unique index encounters,374,374,pass
+CHK05,passing upstream rules,28,28,pass
+CHK06,retained natural rules,8,8,pass
+CHK07,variable profile rows,17,17,pass
+CHK08,profile count reconciliation,17,17,pass
+CHK09,cross-tab cells,12,12,pass
+CHK10,cross-tab table totals,2,2,pass
+CHK11,rate rows,6,6,pass
+CHK12,30-day state conservation,111,111,pass
+CHK13,stratum rows,2,2,pass
+CHK14,stratum population conservation,374,374,pass
+CHK15,denominator registry rows,27,27,pass
+CHK16,unique registry result IDs,27,27,pass
+CHK17,retained condition coverage,8,8,pass
+CHK18,source version rows,374,374,pass
