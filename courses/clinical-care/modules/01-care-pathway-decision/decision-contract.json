@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app1-01",
+    "title": "Framing a care-pathway decision",
+    "version": "0.1.0",
+    "commons_release": "0.49.0",
+    "course": "APP-1: Data for Clinical Care",
+    "week": 1,
+    "hours": 15.5
+  },
+  "decision": {
+    "owner": "hospital medicine care-improvement council",
+    "question": "Should a hospital medicine care-improvement council design and prospectively evaluate a pathway that increases scheduled follow-up within 30 days after an adult's first qualifying acute-care discharge?",
+    "next_action": "build and validate the longitudinal cohort before deciding whether to design a bounded prospective improvement test"
+  },
+  "source": {
+    "course_docx_bytes": 25134,
+    "course_docx_sha256": "00e1ecf99fe3ad365b21e934fca64c225b1a63a00067afcf451a06050a372d57",
+    "archive_url": "https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip",
+    "archive_bytes": 8982431,
+    "archive_sha256": "4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a",
+    "tables": 16,
+    "rows": 471836,
+    "uncompressed_bytes": 82293440,
+    "synthetic_people": 1171,
+    "contains_real_patient_records": false
+  },
+  "pathway": {
+    "index_classes": ["emergency", "inpatient"],
+    "index_start_inclusive": "2010-01-01T00:00:00Z",
+    "index_start_exclusive": "2019-04-01T00:00:00Z",
+    "minimum_age": 18,
+    "origin": "qualifying index encounter stop",
+    "exposure_classes": ["ambulatory", "outpatient", "wellness"],
+    "exposure_window_days": 30,
+    "landmark_day": 30,
+    "outcome_classes": ["emergency", "inpatient"],
+    "outcome_start_day_open": 30,
+    "outcome_end_day_closed": 365
+  },
+  "fixed_evidence": {
+    "initial_index_cohort": 518,
+    "early_deaths": 8,
+    "early_acute_returns": 25,
+    "landmark_eligible": 485,
+    "scheduled_followup": 129,
+    "later_acute_returns": 87,
+    "exposed_later_acute_returns": 25,
+    "unexposed_later_acute_returns": 62,
+    "distinct_index_organizations": 64,
+    "raw_site_comparison": "not ready"
+  },
+  "package": {
+    "immutable_manifest_rows": 9,
+    "editable_records": 9,
+    "assembled_files": 19
+  },
+  "assessment": {
+    "readiness_points": 20,
+    "minimum_points": 16,
+    "criteria": 5,
+    "noncompensable_gates": 12,
+    "course_points_awarded_here": 0
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction"
+  }
+}

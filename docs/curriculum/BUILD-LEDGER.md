@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.48.0
+- Current release: 0.49.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: FND-2 Final Checkpoint 3, governed analytics package and model-use decision
-- Next unit: APP-1 Module 01, clinical-care question, cohort, and decision contract
+- Last completed unit: APP-1 Module 01, framing a care-pathway decision
+- Next unit: APP-1 Module 02, longitudinal cohorts and follow-up
 
 ## Confirmed decisions
 
@@ -28,6 +28,9 @@
 - The FND-1 specification defines seven straight-through technical modules totaling 112.5 hours, three cumulative checkpoints, and a final accept/condition/revise/refer decision owned by a health-system analytics engineering lead.
 - The FND-2 source file is byte-for-byte identical in both supplied archives: 21,850 bytes and SHA-256 `eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03`.
 - The FND-2 specification defines seven straight-through technical modules totaling 112.5 hours and preserves source assessment weights of 15, 25, 25, and 35 percent through Week 3, Week 6, and official-end-date checkpoints.
+- The APP-1 source file is byte-for-byte identical in both supplied archives: 25,134 bytes and SHA-256 `00e1ecf99fe3ad365b21e934fca64c225b1a63a00067afcf451a06050a372d57`.
+- The APP-1 specification defines seven distinct applied modules totaling 112.5 hours and preserves 20, 45, and 35 course points through Week 3, Week 6, and official-end-date checkpoints.
+- APP-1 revisits longitudinal cohorts, survival, risk adjustment, clinical variation, equity, improvement, and leadership through one continuing clinical-care decision. Module 06 contains eight hours of application and equity work plus an eight-hour embedded machine-learning extension. Module 07 is clinician led.
 - FND-2 owns analytic aims and targets, regression, prediction evaluation, validity, adjustment, longitudinal boundaries, forecasting, testing, agent verification, model cards, monitoring, governance, and defense. It does not repeat FND-1 data-pipeline work.
 - The primary modeling case preserves the accepted 374-row FND-1 synthetic analytic table and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
 - The 90-day acute-return label contains 36 positive and 338 negative rows. The fixed temporal split contains 224, 75, and 75 rows with 25, 7, and 4 positive outcomes.
@@ -278,6 +281,14 @@
 - Complete reference validation passes 947 checks and learner-starter validation passes 901. Existing targets, incomplete records, changed candidate bytes, overscoring, failed gates, early tags, and inconsistent decisions are rejected.
 - The reference package disposition is `accept with conditions`; the separate model-use recommendation is `teaching use only`. The annotated tag `fnd2-governed-candidate-v0.1.0` remains proposed and uncreated pending named human acceptance of the exact reviewed commit.
 - All seven FND-2 modules and all three cumulative checkpoints are runnable release candidates. FND-2 technical construction is complete at Commons 0.48.0.
+- APP-1 Module 01 version 0.1.0 profiles the complete pinned 16-table, 471,836-row, 82,293,440-byte Synthea April 2020 release containing 1,171 synthetic people.
+- The reference decision asks whether a hospital medicine care-improvement council should design and prospectively evaluate a pathway that increases scheduled follow-up within 30 days after an adult's first qualifying acute-care discharge.
+- The full-source cohort has 518 initial synthetic adults, 8 early deaths, 25 early acute returns, 485 day-30 landmark-eligible people, 129 people with scheduled follow-up, and 87 later acute returns. The later outcomes divide into 25 exposed and 62 unexposed events.
+- Sixty-four distinct index organizations are too sparse for raw site ranking. The controlled readiness result is `not ready`, and Module 02 owns the exact deterministic six-site teaching extension.
+- The package assembles 9 immutable records, 9 editable records, and one release manifest into 19 files. The manifest is 1,063 bytes with SHA-256 `d89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a`.
+- The standard-library profiler, builder, and validator self-checks pass. Complete reference validation passes 131 checks and learner-starter validation passes 95 checks. Existing targets, changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records are rejected.
+- The reference progression is `continue with conditions`; Module 02 is permitted for curriculum construction. Clinical use and real-patient, causal, efficacy, fairness, prevalence, and site-ranking claims remain prohibited.
+- APP-1 Module 01 is a runnable release candidate at Commons 0.49.0.
 
 ## Pending confirmation
 
@@ -286,11 +297,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-1 course brief and ownership map in the master architecture, the source records, the two completed foundation handoffs, and this ledger.
-2. Write the durable APP-1 Module 01 specification before broad implementation.
-3. Make the clinical-care decision, target population, cohort, time zero, follow-up, outcome, and evidence boundary explicit.
-4. Revisit FND-1 data foundations through a domain-specific longitudinal clinical-care cohort rather than repeating the foundation course.
-5. Register and carry the open or synthetic clinical source in full with rights, fingerprints, transformation records, and teaching checks.
-6. Define the Week 3, Week 6, and official-end-date deliverables before building later modules.
-7. Preserve the applied-course structure: three weeks of applied statistics and math, three weeks of applications and exercises with embedded half-week machine learning, then clinician-led leadership.
-8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 02.
+1. Read the APP-1 course specification, Module 01 specification and release, source record, two foundation handoffs, and this ledger.
+2. Write the durable APP-1 Module 02 specification before broad implementation.
+3. Reproduce the full-source 518/8/25/485 cohort flow and the 129/87/25/62 exposure and outcome facts from the accepted Synthea database.
+4. Define the longitudinal phenotype, index encounter, lookback, day-30 landmark, time at risk, follow-up, censoring, early-event branches, and survival-analysis handoff exactly.
+5. Create and register the deterministic six-site synthetic teaching extension with a fixed seed, known truths, transformation record, checks, and a clear boundary from source observations.
+6. Keep source and extension columns distinguishable and preserve the source archive, table inventory, feasibility profile, and Module 01 manifest fingerprints.
+7. Build the learner package, complete reference, instructor materials, assessment, runnable checks, and progression decision into Module 03.
+8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 03.

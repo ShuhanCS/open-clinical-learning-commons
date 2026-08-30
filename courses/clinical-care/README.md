@@ -1,0 +1,63 @@
+# APP-1: Data for Clinical Care
+
+APP-1 is the first domain-specific applied course. Learners use a continuing synthetic clinical pathway to build a longitudinal cohort, analyze time-to-event outcomes, compare care fairly, inspect variation and equity, test a bounded machine-learning extension, and defend a feasible improvement recommendation.
+
+- Credits: 3
+- Delivery: online half-term
+- Learner work: 112.5 hours
+- Prerequisites: accepted FND-1 and FND-2 technical releases
+- Core tools: SQL and Python
+- Final deliverable: clinical care improvement brief with reproducible evidence and a defense
+- Course package version: 0.1.0
+- Commons release: 0.49.0
+- Current package status: Module 01 is a runnable release candidate
+
+## Seven applied modules
+
+1. Framing a care-pathway decision - 15.5 hours.
+2. Longitudinal cohorts and follow-up - 16.0 hours.
+3. Survival and time-to-event outcomes - 16.5 hours.
+4. Risk adjustment and fair comparison - 16.5 hours.
+5. Clinical variation and patterns of care - 16.0 hours.
+6. Equity, feasible improvement, and embedded machine learning - 16.0 hours.
+7. Clinician leadership, recommendation, and defense - 16.0 hours.
+
+Module 06 contains eight hours of cumulative application and equity work plus an eight-hour bounded machine-learning extension. Module 07 is the clinician-led leadership block. Joe Joseph, MD, is the designated clinician, subject to direct identity and publishable-biography confirmation before learner-facing release.
+
+## Runnable module
+
+- [Module 01: Framing a care-pathway decision](modules/01-care-pathway-decision/README.md)
+- [Module 01 durable specification](../../docs/curriculum/courses/APP-1/modules/01-care-pathway-decision-spec.md)
+
+Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 8 early deaths and 25 early acute returns, and defines a 485-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
+
+The 19-file learner workspace contains nine frozen source and contract records, nine editable decision records, and one deterministic release manifest. The standard-library profiler, builder, and validator reproduce exact evidence and reject changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records.
+
+## Three cumulative checkpoints
+
+- Week 3: decision charter, longitudinal cohort, and survival-readiness release - 20 course points.
+- Week 6: survival and risk-adjusted comparison, variation, equity, improvement, and simple-versus-machine-learning release - 45 course points.
+- Official half-term end date: clinician-led improvement brief, implementation and monitoring plan, and defense - 35 course points.
+
+The 7.5-week phrase is a planning model. Published dates use the official MGH Institute half-term calendar:
+
+https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf
+
+## Data and claim boundary
+
+The course reuses the full pinned Synthea April 2020 CSV release:
+
+https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip
+
+No real patient records are used. Synthetic frequencies do not estimate real prevalence, quality, access, equity, outcomes, treatment effects, or facility performance. The package supports technical education and prospective-test design only.
+
+## Durable records
+
+- [Course specification](../../docs/curriculum/courses/APP-1/course-spec.md)
+- [Source record](../../docs/source/app-1-clinical-care-source-record.md)
+- [Master curriculum architecture](../../docs/specs/2026-08-29-curriculum-master-architecture-spec.md)
+- [Build ledger](../../docs/curriculum/BUILD-LEDGER.md)
+
+## Build order
+
+Module 01 is complete. Module 02 next owns the exact longitudinal cohort and deterministic six-site teaching extension.

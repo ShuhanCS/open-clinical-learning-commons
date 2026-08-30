@@ -1,0 +1,8 @@
+stakeholder_id,role,decision_need,affected_or_accountable,power_or_burden,engagement_point,owner,unresolved_question
+S01,clinical decision owner,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S02,care team,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S03,analytics team,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S04,quality or operations partner,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S05,patient or community partner,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S06,access and equity partner,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S07,governance reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

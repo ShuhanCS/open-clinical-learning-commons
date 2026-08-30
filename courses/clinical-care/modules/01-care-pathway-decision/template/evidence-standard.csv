@@ -1,0 +1,4 @@
+stage_id,decision_stage,minimum_evidence,automatic_stop,owner
+E01,continue longitudinal analysis,REPLACE,REPLACE,REPLACE
+E02,design bounded prospective improvement test,REPLACE,REPLACE,REPLACE
+E03,consider wider implementation,REPLACE,REPLACE,REPLACE

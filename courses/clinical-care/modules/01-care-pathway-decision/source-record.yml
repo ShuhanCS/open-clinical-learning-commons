@@ -1,0 +1,32 @@
+schema_version: 1.0.0
+source_id: app1-synthea-care-pathway-feasibility
+title: APP-1 complete-source care-pathway feasibility release
+version: 0.1.0
+verified: 2026-08-30
+publisher: The MITRE Corporation / Synthea
+source_type: public synthetic longitudinal EHR-style CSV release
+synthetic: true
+contains_real_patient_records: false
+supports_clinical_claims: false
+archive:
+  filename: synthea_sample_data_csv_apr2020.zip
+  url: https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip
+  bytes: 8982431
+  sha256: 4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a
+  tables: 16
+  rows: 471836
+  uncompressed_bytes: 82293440
+rights:
+  generator_spdx: Apache-2.0
+  generator_url: https://github.com/synthetichealth/synthea
+  data_information_url: https://synthetichealth.github.io/synthea/
+teaching_purpose:
+  - define a measurable post-acute care pathway
+  - audit longitudinal index exposure landmark and outcome feasibility
+  - prepare a full-source phenotype and cohort build in Module 02
+prohibited_interpretation:
+  - real prevalence quality access utilization equity or site performance
+  - treatment effect or clinical efficacy
+  - real facility ranking
+  - implementation permission
+change_policy: A changed source byte or pathway rule requires a new source profile, module version decision, and renewed review.

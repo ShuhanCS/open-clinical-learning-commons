@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app1-01",
+    "title": "Framing a care-pathway decision",
+    "version": "0.1.0",
+    "commons_release": "0.49.0",
+    "course": "APP-1: Data for Clinical Care",
+    "week": 1,
+    "hours": 15.5,
+    "course_points_awarded_here": 0
+  },
+  "source": {
+    "course_docx_bytes": 25134,
+    "course_docx_sha256": "00e1ecf99fe3ad365b21e934fca64c225b1a63a00067afcf451a06050a372d57",
+    "archive_url": "https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip",
+    "archive_bytes": 8982431,
+    "archive_sha256": "4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a",
+    "tables": 16,
+    "rows": 471836,
+    "uncompressed_bytes": 82293440,
+    "synthetic_people": 1171,
+    "contains_real_patient_records": false
+  },
+  "fixed_evidence": {
+    "initial_index_cohort": 518,
+    "early_deaths": 8,
+    "early_acute_returns": 25,
+    "landmark_eligible": 485,
+    "scheduled_followup": 129,
+    "later_acute_returns": 87,
+    "exposed_later_acute_returns": 25,
+    "unexposed_later_acute_returns": 62,
+    "distinct_index_organizations": 64,
+    "raw_site_comparison": "not ready"
+  },
+  "package": {
+    "immutable_manifest_rows": 9,
+    "editable_records": 9,
+    "assembled_files": 19,
+    "manifest_bytes": 1063,
+    "manifest_sha256": "d89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a",
+    "source_inventory_bytes": 1842,
+    "source_inventory_sha256": "15efc286e19c1c6640775770be8993fadc684656262e852c599356751ab922bd",
+    "source_feasibility_bytes": 1498,
+    "source_feasibility_sha256": "e01bccc43cde605c47ecb6883839570d9c8d53d1b2a5e05ab17b0c795af44863",
+    "external_builder_dependencies": 0
+  },
+  "assessment": {
+    "readiness_points": 20,
+    "minimum_points": 16,
+    "criteria": 5,
+    "noncompensable_gates": 12,
+    "reference_points": 20
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction",
+    "clinical_use": "prohibited"
+  },
+  "validation": {
+    "profiler_self_check": "pass",
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 131,
+    "starter_checks": 95,
+    "two_build_manifest_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_source_rejection": "pass",
+    "missing_pathway_state_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "course and module specification, source profiling, package assembly, and validation"}
+  ],
+  "known_issues": [
+    "Named program, clinical, patient or community, accessibility, governance, responsible-AI, and independent reproduction reviews remain pending before alpha.",
+    "The source is synthetic and dated April 2020; its frequencies do not estimate real care, access, quality, outcomes, or treatment effects.",
+    "Sixty-four sparse source organizations do not support raw site ranking.",
+    "Module 02 must create and register the deterministic six-site teaching extension before comparative site instruction.",
+    "Patient-reported burden, follow-up completion quality, and real access barriers remain evidence gaps.",
+    "An actual course section must map the module to the official half-term calendar before assigning a due date."
+  ]
+}

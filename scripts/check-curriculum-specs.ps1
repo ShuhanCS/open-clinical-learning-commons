@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.48.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.49.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -888,6 +888,148 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $fnd2Checkpoint03Root 'validate_final.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'FND-2 final checkpoint validator self-check failed.'
+}
+
+$app1 = Join-Path $repo 'docs\curriculum\courses\APP-1\course-spec.md'
+$app1Source = Join-Path $repo 'docs\source\app-1-clinical-care-source-record.md'
+$app1Package = Join-Path $repo 'courses\clinical-care\README.md'
+if (-not (Test-Path -LiteralPath $app1) -or -not (Test-Path -LiteralPath $app1Source) -or -not (Test-Path -LiteralPath $app1Package)) {
+    throw 'APP-1 must include its course specification, source record, and course package README.'
+}
+$app1Content = Get-Content -Raw -LiteralPath $app1
+$app1SourceContent = Get-Content -Raw -LiteralPath $app1Source
+$app1PackageContent = Get-Content -Raw -LiteralPath $app1Package
+$app1Sections = [regex]::Matches($app1Content, '(?m)^## \d+\.').Count
+$app1ModuleCount = [regex]::Matches($app1Content, '(?m)^## \d+\. Module \d{2} brief:').Count
+$app1HourMatches = [regex]::Matches(
+    $app1Content,
+    '(?m)^\| \d{2} \| [^|]+ \| \d \| (?<hours>\d+(?:\.\d+)?) \|'
+)
+$app1Hours = ($app1HourMatches | ForEach-Object { [decimal]$_.Groups['hours'].Value } | Measure-Object -Sum).Sum
+$app1CheckpointCount = [regex]::Matches($app1Content, '(?m)^### (?:Checkpoint \d|Final checkpoint):').Count
+if (
+    $app1Sections -ne 24 -or
+    $app1ModuleCount -ne 7 -or
+    $app1HourMatches.Count -ne 7 -or
+    $app1Hours -ne [decimal]112.5 -or
+    $app1CheckpointCount -ne 3
+) {
+    throw "APP-1 must define 24 course sections, seven modules, seven schedule rows totaling 112.5 hours, and three checkpoints; found $app1Sections sections, $app1ModuleCount modules, $($app1HourMatches.Count) rows, $app1Hours hours, and $app1CheckpointCount checkpoints."
+}
+if (
+    $app1Content -match '[—–]' -or
+    $app1SourceContent -match '[—–]' -or
+    $app1PackageContent -match '[—–]' -or
+    $app1Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app1SourceContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app1PackageContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app1Content -notmatch '00e1ecf99fe3ad365b21e934fca64c225b1a63a00067afcf451a06050a372d57' -or
+    $app1SourceContent -notmatch '00e1ecf99fe3ad365b21e934fca64c225b1a63a00067afcf451a06050a372d57' -or
+    $app1SourceContent -notmatch '25,134' -or
+    $app1SourceContent -notmatch 'Curriculum-30-Credits-2026-08-29\.zip' -or
+    $app1SourceContent -notmatch 'OneDrive_2026-08-29 \(1\)\.zip' -or
+    $app1Content -notmatch '20 points' -or
+    $app1Content -notmatch '45 points' -or
+    $app1Content -notmatch '35 points' -or
+    $app1Content -notmatch 'eight-hour machine-learning extension' -or
+    $app1Content -notmatch 'Joe Joseph, MD' -or
+    $app1PackageContent -notmatch 'Commons release: 0\.49\.0' -or
+    $app1PackageContent -notmatch 'Module 01 is a runnable release candidate'
+) {
+    throw 'APP-1 is missing its source, version, workload, checkpoint, machine-learning, leadership, or plain-ASCII contract.'
+}
+
+$app1Module01Root = Join-Path $repo 'courses\clinical-care\modules\01-care-pathway-decision'
+$app1Module01Spec = Join-Path $repo 'docs\curriculum\courses\APP-1\modules\01-care-pathway-decision-spec.md'
+$app1Module01Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'decision-contract.json', 'source-record.yml',
+    'data-spec.md', 'assessment.md', 'instructor-notes.md', 'profile_source.py',
+    'build_workspace.py', 'validate_workspace.py', 'release.json',
+    'data\source-table-inventory.csv', 'data\source-feasibility.csv',
+    'template\care-pathway-decision-charter.md', 'template\pathway-map.csv',
+    'template\outcome-set.csv', 'template\evidence-standard.csv',
+    'template\stakeholder-map.csv', 'template\improvement-options.csv',
+    'template\source-feasibility-interpretation.md', 'template\ai-use.md',
+    'template\progression-decision.md',
+    'reference\care-pathway-decision-charter.md', 'reference\pathway-map.csv',
+    'reference\outcome-set.csv', 'reference\evidence-standard.csv',
+    'reference\stakeholder-map.csv', 'reference\improvement-options.csv',
+    'reference\source-feasibility-interpretation.md', 'reference\ai-use.md',
+    'reference\progression-decision.md'
+)
+$app1Module01Missing = @($app1Module01Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $app1Module01Root $_))
+})
+if (-not (Test-Path -LiteralPath $app1Module01Spec) -or $app1Module01Missing.Count -gt 0) {
+    throw "APP-1 Module 01 is missing its specification or package files: $($app1Module01Missing -join ', ')."
+}
+$app1Module01Content = Get-Content -Raw -LiteralPath $app1Module01Spec
+$app1Module01Sections = [regex]::Matches($app1Module01Content, '(?m)^## \d+\.').Count
+if (
+    $app1Module01Sections -ne 21 -or
+    $app1Module01Content -match '[—–]' -or
+    $app1Module01Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app1Module01Content -notmatch 'Commons release target: 0\.49\.0' -or
+    $app1Module01Content -notmatch '131 complete-reference checks' -or
+    $app1Module01Content -notmatch '95 learner-starter checks' -or
+    $app1Module01Content -notmatch 'd89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a'
+) {
+    throw 'APP-1 Module 01 must define 21 plain-ASCII sections with the exact release, validation, and manifest contract.'
+}
+$app1Module01Release = Get-Content -Raw -LiteralPath (Join-Path $app1Module01Root 'release.json') | ConvertFrom-Json
+$app1InventoryPath = Join-Path $app1Module01Root 'data\source-table-inventory.csv'
+$app1FeasibilityPath = Join-Path $app1Module01Root 'data\source-feasibility.csv'
+$app1Inventory = @(Import-Csv -LiteralPath $app1InventoryPath)
+$app1Feasibility = @(Import-Csv -LiteralPath $app1FeasibilityPath)
+if (
+    $app1Module01Release.module.id -ne 'oclc-app1-01' -or
+    $app1Module01Release.module.version -ne '0.1.0' -or
+    $app1Module01Release.module.commons_release -ne '0.49.0' -or
+    $app1Module01Release.module.hours -ne 15.5 -or
+    $app1Module01Release.source.tables -ne 16 -or
+    $app1Module01Release.source.rows -ne 471836 -or
+    $app1Module01Release.source.uncompressed_bytes -ne 82293440 -or
+    $app1Module01Release.fixed_evidence.initial_index_cohort -ne 518 -or
+    $app1Module01Release.fixed_evidence.early_deaths -ne 8 -or
+    $app1Module01Release.fixed_evidence.early_acute_returns -ne 25 -or
+    $app1Module01Release.fixed_evidence.landmark_eligible -ne 485 -or
+    $app1Module01Release.fixed_evidence.scheduled_followup -ne 129 -or
+    $app1Module01Release.fixed_evidence.later_acute_returns -ne 87 -or
+    $app1Module01Release.fixed_evidence.exposed_later_acute_returns -ne 25 -or
+    $app1Module01Release.fixed_evidence.unexposed_later_acute_returns -ne 62 -or
+    $app1Module01Release.fixed_evidence.distinct_index_organizations -ne 64 -or
+    $app1Module01Release.fixed_evidence.raw_site_comparison -ne 'not ready' -or
+    $app1Module01Release.package.immutable_manifest_rows -ne 9 -or
+    $app1Module01Release.package.editable_records -ne 9 -or
+    $app1Module01Release.package.assembled_files -ne 19 -or
+    $app1Module01Release.package.manifest_bytes -ne 1063 -or
+    $app1Module01Release.package.manifest_sha256 -ne 'd89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a' -or
+    $app1Module01Release.validation.complete_reference_checks -ne 131 -or
+    $app1Module01Release.validation.starter_checks -ne 95 -or
+    $app1Module01Release.progression.reference -ne 'continue with conditions' -or
+    $app1Module01Release.progression.module02_permission -ne 'permitted for curriculum construction' -or
+    $app1Inventory.Count -ne 16 -or
+    (($app1Inventory | Measure-Object -Property source_rows -Sum).Sum) -ne 471836 -or
+    (($app1Inventory | Measure-Object -Property source_bytes -Sum).Sum) -ne 82293440 -or
+    $app1Feasibility.Count -ne 11 -or
+    (Get-Item -LiteralPath $app1InventoryPath).Length -ne 1842 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $app1InventoryPath).Hash.ToLowerInvariant() -ne '15efc286e19c1c6640775770be8993fadc684656262e852c599356751ab922bd' -or
+    (Get-Item -LiteralPath $app1FeasibilityPath).Length -ne 1498 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $app1FeasibilityPath).Hash.ToLowerInvariant() -ne 'e01bccc43cde605c47ecb6883839570d9c8d53d1b2a5e05ab17b0c795af44863'
+) {
+    throw 'APP-1 Module 01 release metadata or frozen source evidence does not match the 0.1.0 care-pathway decision contract.'
+}
+& python (Join-Path $app1Module01Root 'profile_source.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'APP-1 Module 01 source profiler self-check failed.'
+}
+& python (Join-Path $app1Module01Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'APP-1 Module 01 builder self-check failed.'
+}
+& python (Join-Path $app1Module01Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'APP-1 Module 01 validator self-check failed.'
 }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
@@ -2173,3 +2315,5 @@ Write-Output "FND-2 Module 07 passed: $fnd2Module07Sections contract sections an
 Write-Output "FND-2 Checkpoint 1 passed: $fnd2Checkpoint01Sections contract sections and $($fnd2Checkpoint01Files.Count) required files."
 Write-Output "FND-2 Checkpoint 2 passed: $fnd2Checkpoint02Sections contract sections and $($fnd2Checkpoint02Files.Count) required files."
 Write-Output "FND-2 final checkpoint passed: $fnd2Checkpoint03Sections contract sections and $($fnd2Checkpoint03Files.Count) required files."
+Write-Output "APP-1 specification passed: $app1ModuleCount modules, $app1Hours hours, and $app1CheckpointCount checkpoints."
+Write-Output "APP-1 Module 01 passed: $app1Module01Sections contract sections and $($app1Module01Files.Count) required files."
