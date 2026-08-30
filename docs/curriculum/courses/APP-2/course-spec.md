@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.56.0 through runnable Module 01.
+- Current Commons release: 0.57.0 through runnable Module 02.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -214,10 +214,15 @@ Progression requires an exact source identity, one accountable decision, one tar
 
 - Module ID: `oclc-app2-02`.
 - Hours: 16.0.
+- Package path: `courses/patient-experience-engagement/modules/02-patient-reported-measurement/`.
+- Specification: `docs/curriculum/courses/APP-2/modules/02-patient-reported-measurement-spec.md`.
+- Status: runnable release candidate at Commons 0.57.0.
 - Decision: which patient-reported instrument and scoring rule fit the recovery-at-home question.
 - Submission: 20-point patient-measurement lab component.
 
 Learners compare candidate instruments, distinguish construct and content validity from reliability, implement scoring and direction rules, inspect item behavior, interpret meaningful change, and audit language, format, proxy, and burden requirements. No instrument may be altered or combined without an explicit rights and validation decision.
+
+The released teaching selection is the updated HCAHPS Q22/Q23 Discharge Information pair. The package retains all 22 current mode-language instruments and five guidance PDFs, keeps Q20 separate, applies Q21 skip logic, and distinguishes the unadjusted teaching calculation from the official adjusted CMS composite.
 
 ## 11. Module 03 brief: Response, representation, and survey bias
 
@@ -397,7 +402,7 @@ Build Modules 01 through 07 in order. Build each checkpoint after its upstream m
 
 - Confirm Joe Joseph's participation, schedule, format, recording permission, and final biography wording.
 - Name and confirm the patient/caregiver partner co-lead, compensation, authority, access, preparation, and review terms.
-- Confirm exact HCAHPS instrument-version use and reproduction rights before Module 02 packages any survey text.
+- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions before alpha.
 - Pin and fingerprint MEPS HC-256 and selected HC-254 event archives before Module 03 or Module 04 uses them.
 - Build and review the synthetic comment corpus before Module 05; no real comments may be copied into it.
 - Define and test the known response-selection generator before Module 06.

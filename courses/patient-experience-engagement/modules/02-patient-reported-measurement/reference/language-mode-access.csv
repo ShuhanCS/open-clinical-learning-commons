@@ -1,0 +1,23 @@
+audit_id,mode,language,official_file,local_route,access_review,status
+A01,mail,English,data/raw/instruments/mail/english.pdf,written non-digital route,large print screen-reader and literacy review still local,conditional
+A02,mail,Spanish,data/raw/instruments/mail/spanish.pdf,written non-digital route,confirm language preference and local availability,conditional
+A03,mail,Chinese,data/raw/instruments/mail/chinese.pdf,written non-digital route,confirm language preference and local availability,conditional
+A04,mail,Russian,data/raw/instruments/mail/russian.pdf,written non-digital route,confirm language preference and local availability,conditional
+A05,mail,Vietnamese,data/raw/instruments/mail/vietnamese.pdf,written non-digital route,confirm language preference and local availability,conditional
+A06,mail,Portuguese,data/raw/instruments/mail/portuguese.pdf,written non-digital route,confirm language preference and local availability,conditional
+A07,mail,German,data/raw/instruments/mail/german.pdf,written non-digital route,confirm language preference and local availability,conditional
+A08,mail,Tagalog,data/raw/instruments/mail/tagalog.pdf,written non-digital route,confirm language preference and local availability,conditional
+A09,mail,Arabic,data/raw/instruments/mail/arabic.pdf,written non-digital route,confirm language preference and right-to-left presentation,conditional
+A10,phone,English,data/raw/instruments/phone/english.pdf,telephone route,confirm hearing speech cognitive and proxy support,conditional
+A11,phone,Spanish,data/raw/instruments/phone/spanish.pdf,telephone route,confirm hearing speech cognitive and proxy support,conditional
+A12,phone,Chinese,data/raw/instruments/phone/chinese.pdf,telephone route,confirm hearing speech cognitive and proxy support,conditional
+A13,phone,Russian,data/raw/instruments/phone/russian.pdf,telephone route,confirm hearing speech cognitive and proxy support,conditional
+A14,web,English,data/raw/instruments/web/english.pdf,digital route,screen-reader keyboard contrast literacy and device review,conditional
+A15,web,Spanish,data/raw/instruments/web/spanish.pdf,digital route,confirm language preference accessibility and device access,conditional
+A16,web,Chinese,data/raw/instruments/web/chinese.pdf,digital route,confirm language preference accessibility and device access,conditional
+A17,web,Russian,data/raw/instruments/web/russian.pdf,digital route,confirm language preference accessibility and device access,conditional
+A18,web,Vietnamese,data/raw/instruments/web/vietnamese.pdf,digital route,confirm language preference accessibility and device access,conditional
+A19,web,Portuguese,data/raw/instruments/web/portuguese.pdf,digital route,confirm language preference accessibility and device access,conditional
+A20,web,German,data/raw/instruments/web/german.pdf,digital route,confirm language preference accessibility and device access,conditional
+A21,web,Tagalog,data/raw/instruments/web/tagalog.pdf,digital route,confirm language preference accessibility and device access,conditional
+A22,web,Arabic,data/raw/instruments/web/arabic.pdf,digital route,confirm language preference accessibility device access and right-to-left presentation,conditional

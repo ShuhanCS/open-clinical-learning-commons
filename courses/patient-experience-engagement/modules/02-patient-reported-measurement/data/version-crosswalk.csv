@@ -1,0 +1,5 @@
+crosswalk_id,legacy_question,updated_question,updated_role,public_reporting_start,decision_note
+X01,none,Q20,Information About Symptoms individual measure,2026-10,new item kept separate from Discharge Information
+X02,Q15,Q21,discharge destination screener,2026-10,controls whether Q22 and Q23 apply
+X03,Q16,Q22,Discharge Information composite item,2026-10,unchanged composite content
+X04,Q17,Q23,Discharge Information composite item,2026-10,unchanged composite content

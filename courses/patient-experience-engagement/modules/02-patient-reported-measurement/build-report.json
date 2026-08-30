@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "source": {
+    "files": 28,
+    "bytes": 25032907,
+    "pages": 1343,
+    "pdf_files": 27,
+    "instrument_files": 22
+  },
+  "synthetic_rows": 240,
+  "scores": {
+    "q20_top_box_percent": 56.8181818182,
+    "q22_top_box_percent": 84.0909090909,
+    "q23_top_box_percent": 78.2608695652,
+    "question_weighted_composite_percent": 81.1758893281,
+    "person_weighted_mean_percent": 80.0,
+    "phi": 0.4900980294,
+    "raw_alpha": 0.6549707602,
+    "standardized_alpha": 0.6578064258
+  },
+  "published_concordance": {
+    "complete_facilities": 3610,
+    "exact_matches": 1734,
+    "nonexact_matches": 1876,
+    "min_difference": -3.0,
+    "max_difference": 3.5
+  },
+  "invariant_checks": 18
+}

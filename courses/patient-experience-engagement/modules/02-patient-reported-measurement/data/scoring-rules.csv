@@ -1,0 +1,13 @@
+rule_id,scope,rule,failure_if_violated
+R01,Q21,another health facility makes Q22 and Q23 not applicable,not applicable recoded as no
+R02,Q22,yes scores 1 and no scores 0,changed direction
+R03,Q23,yes scores 1 and no scores 0,changed direction
+R04,Q22,denominator includes answered yes or no only,shared or hidden denominator
+R05,Q23,denominator includes answered yes or no only,shared or hidden denominator
+R06,teaching composite,average the Q22 and Q23 question-level proportions,person mean called the official formula
+R07,public composite,retain the published CMS H_COMP_6_Y_P value,simple item mean called official
+R08,reliability,two-item synthetic alpha is procedural only,synthetic diagnostic called validation
+R09,meaning,no meaningful-change threshold is established,threshold invented without evidence
+R10,naming,partial use is public-domain HCAHPS-derived items local unadjusted unofficial,partial use called official HCAHPS
+R11,comparison,do not compare partial local scores with official adjusted HCAHPS results,unsupported benchmark
+R12,progression,response weighting begins only in Module 03,weighting added in Module 02

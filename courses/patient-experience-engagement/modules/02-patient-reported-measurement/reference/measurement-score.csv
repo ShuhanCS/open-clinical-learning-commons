@@ -1,0 +1,6 @@
+criterion_id,criterion,points_possible,points_awarded,evidence
+P01,instrument fit and construct/content validity,4,4,instrument-comparison.csv and construct-content-validity.md
+P02,scoring correctness and reproduction,4,4,scoring-reproduction.csv and generated exact outputs
+P03,reliability and meaningful interpretation,4,4,reliability-interpretation.md and meaningful-interpretation.md
+P04,language mode proxy access and burden,4,4,language-mode-access.csv and proxy-burden-record.md
+P05,source rights claims reproducibility and responsible agent use,4,4,rights-naming-decision.md ai-use.md and passing validator

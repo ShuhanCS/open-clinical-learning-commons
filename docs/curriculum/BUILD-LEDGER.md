@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.56.0
+- Current release: 0.57.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Module 01, patient-experience decision framing
-- Next unit: APP-2 Module 02, patient-reported measurement and scale construction
+- Last completed unit: APP-2 Module 02, patient-reported measurement and scale construction
+- Next unit: APP-2 Module 03, response, representation, and survey bias
 
 ## Confirmed decisions
 
@@ -375,22 +375,32 @@
 - Module 01 awards zero course points and hands the cumulative Week 3 package one accepted decision-framing record set. The 20-point measurement component remains owned by Module 02.
 - The reference progression is `continue with conditions`. Module 02 is permitted for curriculum construction. Clinical action and hospital ranking remain prohibited.
 - APP-2 Module 01 is a runnable release candidate at Commons 0.56.0.
+- APP-2 Module 02 version 0.1.0 verifies the current 32-question HCAHPS suite governed by QAG V19.0 and its April 2026 addendum.
+- The retained source suite contains 22 instrument PDFs, five guidance PDFs, and the full HCAHPS gzip: 28 files, 25,032,907 bytes, and 1,343 PDF pages. The instruments cover nine mail languages, four phone languages, and nine web languages.
+- The teaching selection is updated Q22/Q23 Discharge Information. Q20 remains a separate individual item, and Q21 another-health-facility responses make Q22/Q23 not applicable rather than no.
+- The deterministic 240-row synthetic fixture produces Q22 and Q23 top-box values of 84.09090909 and 78.26086957 percent. The question-weighted teaching composite is 81.17588933 percent and the person-weighted mean is 80.0 percent.
+- The 160 complete synthetic pairs produce raw alpha 0.6549707602 and standardized alpha 0.6578064258. These are procedural diagnostics, not instrument validation or the QAG hospital-level reliability target.
+- The public concordance contains 3,610 complete facilities. A simple mean of rounded published item percentages matches the official adjusted composite for 1,734 facilities and differs for 1,876, from -3.0 to 3.5 percentage points. No ranking is permitted.
+- The Module 02 workspace contains 52 immutable rows, 13 editable records, and 66 files. Its manifest is 6,890 bytes with SHA-256 `c261307b45be842c00c9ded66614a3770f379d41a1d7efecb68032f9c090a870`.
+- Reference validation passes 239 checks at 20 of 20 points with all 18 gates. Starter validation passes 202 checks. Two-build, existing-target, changed-source, invalid-score, failed-gate, invalid-naming, invalid-progression, synthetic-as-real, and missing-record routes pass.
+- The reference progression is `continue with conditions`. Module 03 may begin response and representation work; clinical action, hospital ranking, official comparison for partial use, and response weighting in Module 02 remain prohibited.
+- APP-2 Module 02 is a runnable release candidate at Commons 0.57.0.
 
 ## Pending confirmation
 
 - Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha.
 - Name and confirm the APP-2 patient/caregiver partner co-lead, compensation, decision rights, preparation, access needs, recording consent, and review terms.
-- Confirm exact HCAHPS instrument-version use and reproduction rights before Module 02 packages survey text.
+- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, Module 01 release and progression record, source record, and this ledger.
-2. Write the durable Module 02 patient-reported measurement and scale-construction specification before implementation.
-3. Confirm an exact fit-for-purpose public instrument version and its reproduction, translation, scoring, and use terms. Do not copy instrument text until the rights decision is recorded.
-4. Preserve the recovery-at-home construct, patient-partner authority, full HCAHPS source identity, and all seven Module 01 open conditions.
-5. Build the 20-point patient-measurement lab with instrument comparison, construct and content validity, scoring direction, reliability, meaningful interpretation, language and accessibility, proxy rules, and burden.
-6. Include learner and reference packages, scoring code, exact tests, source and rights records, assessment, instructor materials, AI record, release metadata, and a Module 03 handoff.
-7. Keep Module 02 distinct from Module 03 response and representation work. It may identify the future sampling frame but must not perform nonresponse weighting yet.
-8. Validate, advance semver, commit, and push before Module 03.
+1. Read the APP-2 course specification, Module 02 release and progression record, source record, and this ledger.
+2. Write the durable Module 03 response, representation, and survey-bias specification before implementation.
+3. Preserve the exact Q21-Q23 item, scoring, language, mode, naming, and access contract from Module 02.
+4. Define the eligible population, sampling frame, invitation, response, item missingness, consent, and mode records without claiming the public aggregate file contains patient-level responses.
+5. Add one transparent bounded weighting exercise only after unweighted response and coverage evidence is complete.
+6. Build the cumulative Week 3 readiness release without rescoring the 20-point Module 02 component.
+7. Include learner and reference packages, exact tests, public and synthetic source boundaries, assessment, instructor materials, AI record, release metadata, and a Module 04 handoff.
+8. Validate, advance semver, commit, and push before Module 04.

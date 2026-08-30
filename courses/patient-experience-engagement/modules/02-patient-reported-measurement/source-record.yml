@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+publisher: Centers for Medicare & Medicaid Services
+instrument: Updated HCAHPS Survey
+instrument_questions: 32
+instrument_effective_date: 2025-01-01
+quality_assurance_guidelines: 19.0
+addendum_date: 2026-04
+instrument_page: https://www.hcahpsonline.org/en/survey-instruments/
+quality_assurance_page: https://www.hcahpsonline.org/en/quality-assurance/
+updated_survey_page: https://www.hcahpsonline.org/en/updated-hcahps-survey/
+dataset_id: dgck-syfz
+dataset_page: https://data.cms.gov/provider-data/dataset/dgck-syfz
+stored_source_files: 28
+stored_source_bytes: 25032907
+stored_pdf_files: 27
+stored_pdf_pages: 1343
+stored_instrument_files: 22
+stored_guidance_files: 5
+stored_dataset_files: 1
+public_domain_questions: 1-32
+cahps_trademarked: true
+contains_patient_level_rows: false
+synthetic_patient_level_rows: 240
+teaching_use: exact item selection, scoring, reliability distinctions, language and mode access, rights, naming, and progression
+prohibited_use: official HCAHPS representation for a partial survey, official-score comparison, hospital ranking, causal inference, clinical action, and response weighting

@@ -1,0 +1,6 @@
+diagnostic_id,diagnostic,value,unit,interpretation
+D01,complete cases,160,records,synthetic records with both Q22 and Q23 answered
+D02,phi correlation,0.4900980294,coefficient,synthetic procedural diagnostic only
+D03,raw Cronbach alpha,0.6549707602,coefficient,synthetic procedural diagnostic only; not HCAHPS validation
+D04,standardized Cronbach alpha,0.6578064258,coefficient,synthetic procedural diagnostic only; not hospital-level reliability
+D05,QAG aggregate reliability target,at least 0.8,signal-to-noise reliability,hospital-level target generally based on at least 300 completed surveys over 12 months

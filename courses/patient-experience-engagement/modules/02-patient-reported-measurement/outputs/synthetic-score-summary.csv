@@ -1,0 +1,6 @@
+metric_id,metric,numerator,denominator,value,unit,data_class,official_status
+S01,Q20 yes definitely top box,100,176,56.81818182,percent,synthetic,individual teaching calculation
+S02,Q22 yes top box,148,176,84.09090909,percent,synthetic,unadjusted teaching calculation
+S03,Q23 yes top box,144,184,78.26086957,percent,synthetic,unadjusted teaching calculation
+S04,Q22 Q23 question-weighted composite,mean of S02 and S03,2 question proportions,81.17588933,percent,synthetic,unadjusted teaching composite
+S05,Q22 Q23 person-weighted mean,mean available response within person,200,80.00000000,percent,synthetic,alternative teaching calculation

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app2-02",
+    "version": "0.1.0",
+    "commons_release": "0.57.0",
+    "hours": 16.0,
+    "week": 2
+  },
+  "source": {
+    "files": 28,
+    "bytes": 25032907,
+    "instrument_pdfs": 22,
+    "guidance_pdfs": 5,
+    "dataset_gzip_files": 1,
+    "survey_questions": 32,
+    "current_from": "2025-01-01",
+    "qag": "19.0"
+  },
+  "synthetic": {
+    "rows": 240,
+    "eligible_q22_q23": 200,
+    "q22_answered": 176,
+    "q23_answered": 184,
+    "complete_cases": 160
+  },
+  "assessment": {
+    "points": 20,
+    "pass_points": 16,
+    "noncompensable_gates": 18,
+    "week3_checkpoint_component": true
+  },
+  "package": {
+    "immutable_manifest_rows": 52,
+    "editable_records": 13,
+    "assembled_files": 66,
+    "external_python_dependencies": 0
+  },
+  "boundaries": {
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited",
+    "response_weighting": "Module 03",
+    "partial_survey_name": "public-domain HCAHPS-derived items; local, unadjusted, unofficial"
+  }
+}

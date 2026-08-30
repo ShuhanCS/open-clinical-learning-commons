@@ -1,0 +1,7 @@
+metric_id,metric,numerator,denominator_or_formula,value,unit,data_class,interpretation
+M01,Q20 yes definitely top box,100,176,56.81818182,percent,synthetic,individual teaching calculation kept outside the composite
+M02,Q22 yes top box,148,176,84.09090909,percent,synthetic,question-specific answered denominator
+M03,Q23 yes top box,144,184,78.26086957,percent,synthetic,question-specific answered denominator
+M04,Q22 Q23 question-weighted composite,mean of M02 and M03,2 question proportions,81.17588933,percent,synthetic,unadjusted teaching composite
+M05,Q22 Q23 person-weighted mean,mean available response within person,200 synthetic people,80.00000000,percent,synthetic,alternative calculation and not the official composite formula
+M06,published complete-facility concordance,1734 exact and 1876 nonexact,3610 facilities,-3.0 to 3.5,percentage-point difference,public adjusted aggregates,simple rounded item mean does not reproduce the official composite consistently

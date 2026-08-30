@@ -1,0 +1,2 @@
+gate_id,gate,status,evidence,action_if_failed
+G01,REPLACE,REPLACE,REPLACE,REPLACE

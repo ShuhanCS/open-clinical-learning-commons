@@ -1,0 +1,19 @@
+check_id,check,status,evidence
+I01,source files,pass,28 immutable source files
+I02,source bytes,pass,"25,032,907 retained bytes"
+I03,PDF suite,pass,"27 PDFs and 1,343 pages"
+I04,instrument suite,pass,22 mode-language instruments
+I05,synthetic rows,pass,240 visibly synthetic records
+I06,eligible records,pass,200 Q22/Q23-eligible records
+I07,Q22 denominator,pass,176 answered Q22 records
+I08,Q22 numerator,pass,148 Q22 yes responses
+I09,Q23 denominator,pass,184 answered Q23 records
+I10,Q23 numerator,pass,144 Q23 yes responses
+I11,teaching composite,pass,81.17588933 percent
+I12,person-weighted mean,pass,80.0 percent and distinct formula
+I13,complete cases,pass,160 complete synthetic item pairs
+I14,synthetic alpha boundary,pass,procedural diagnostic only
+I15,public complete facilities,pass,"3,610 complete published facility rows"
+I16,public mismatch,pass,"1,734 exact and 1,876 nonexact"
+I17,public difference bounds,pass,-3.0 to 3.5 points
+I18,claim boundary,pass,unadjusted teaching and official adjusted values remain distinct

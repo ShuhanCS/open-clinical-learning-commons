@@ -1,0 +1,6 @@
+item_id,measure_type,construct,response_choices,top_box,skip_logic,score_role,claim_limit
+Q20,PREM,caregiver information about symptoms,yes definitely|yes somewhat|no|no caregiver,yes definitely,none,individual public measure beginning October 2026,not part of Discharge Information
+Q21,screener,discharge destination,own home|someone else's home|another health facility,not_scored,another health facility ends the discharge section,eligibility for Q22 and Q23,not a patient-experience score
+Q22,PREM,help needed after discharge,yes|no,yes,asked only when Q21 is home,Discharge Information item,not a PROM or clinical outcome
+Q23,PREM,written symptom or health-problem information,yes|no,yes,asked only when Q21 is home,Discharge Information item,not a PROM or clinical outcome
+H_COMP_6_Y_P,PREM composite,discharge information,mean of Q22 and Q23 question proportions,higher is more positive,question-specific answered denominators,official adjusted public composite,teaching unadjusted score is not official

@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app2-02",
+    "title": "Patient-reported measurement and scale construction",
+    "version": "0.1.0",
+    "commons_release": "0.57.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": 2,
+    "hours": 16.0,
+    "week3_measurement_component_points": 20
+  },
+  "source_suite": {
+    "files": 28,
+    "bytes": 25032907,
+    "pdf_files": 27,
+    "pdf_bytes": 22837360,
+    "pdf_pages": 1343,
+    "instrument_files": 22,
+    "guidance_files": 5,
+    "mail_languages": 9,
+    "phone_languages": 4,
+    "web_languages": 9,
+    "source_inventory_bytes": 9478,
+    "source_inventory_sha256": "ecfbf728e9548148b0d0756497878c934c97a8c769f01d3016a598f48adc8543",
+    "qag_version": "19.0",
+    "instrument_effective_date": "2025-01-01",
+    "public_domain_questions": "1-32",
+    "cahps_trademarked": true
+  },
+  "public_dataset": {
+    "dataset_id": "dgck-syfz",
+    "dataset_page": "https://data.cms.gov/provider-data/dataset/dgck-syfz",
+    "gzip_bytes": 2195547,
+    "gzip_sha256": "56c6c11f1d61820f367417a00b1e2abaaf02d0b7104d7a5429031e750332503c",
+    "rows": 325720,
+    "facilities": 4790,
+    "measure_ids": 68,
+    "period_start": "2024-10-01",
+    "period_end": "2025-09-30",
+    "patient_level_rows": 0
+  },
+  "generated_evidence": {
+    "synthetic_fixture": {
+      "rows": 240,
+      "bytes": 19672,
+      "sha256": "e61a2c8ee256a57df71aecc1da4b138f5727db12f53fa341a3fc91e9d31d0881"
+    },
+    "score_summary": {
+      "rows": 5,
+      "bytes": 639,
+      "sha256": "4e3d79cc621c6e331b4519b73512742b8a961de350721160aa425ba2e960226a"
+    },
+    "reliability_diagnostics": {
+      "rows": 5,
+      "bytes": 612,
+      "sha256": "7d845fb046e5d57241cfe2ef1232b357e852a1fd408f234df0979eaea2f154f1"
+    },
+    "published_concordance": {
+      "rows": 3610,
+      "bytes": 363588,
+      "sha256": "b714a2400da8aa94497dbef7b268cf8dce351fb0b6a29cb6ad629f04b925d83d",
+      "exact_matches": 1734,
+      "nonexact_matches": 1876,
+      "minimum_difference_points": -3.0,
+      "maximum_difference_points": 3.5
+    },
+    "invariant_checks": {
+      "rows": 18,
+      "bytes": 1036,
+      "sha256": "47daa4da65dd9c96e358c3b8bb3d95cb82d87a7fc77e237fe13ec706d9b15dc6"
+    }
+  },
+  "fixed_measurement_results": {
+    "q20_top_box_percent": 56.81818182,
+    "q22_top_box_percent": 84.09090909,
+    "q23_top_box_percent": 78.26086957,
+    "question_weighted_composite_percent": 81.17588933,
+    "person_weighted_mean_percent": 80.0,
+    "complete_cases": 160,
+    "phi": 0.4900980294,
+    "raw_alpha": 0.6549707602,
+    "standardized_alpha": 0.6578064258
+  },
+  "package": {
+    "immutable_manifest_rows": 52,
+    "editable_records": 13,
+    "assembled_files": 66,
+    "manifest_bytes": 6890,
+    "manifest_sha256": "c261307b45be842c00c9ded66614a3770f379d41a1d7efecb68032f9c090a870",
+    "external_python_dependencies": 0
+  },
+  "assessment": {
+    "points": 20,
+    "pass_points": 16,
+    "noncompensable_gates": 18,
+    "reference_points": 20,
+    "reference_failed_gates": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module03_permission": "permitted for response and representation study",
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited",
+    "response_weighting": "reserved for Module 03"
+  },
+  "validation": {
+    "measurement_reproduction": "pass",
+    "measurement_builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 239,
+    "starter_checks": 202,
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_source_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_naming_rejection": "pass",
+    "invalid_progression_rejection": "pass",
+    "synthetic_as_real_rejection": "pass",
+    "missing_record_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, public-source verification, package assembly, and validation"}
+  ],
+  "known_issues": [
+    "Named APP-2 faculty, patient/caregiver partner, measurement, survey-methods, language-access, disability-access, privacy, responsible-AI, clinical, and independent reproduction reviews remain pending before alpha.",
+    "The accepted public reporting period crosses the January 2025 instrument transition without patient-level version markers.",
+    "Official patient-mix and mode-adjustment inputs are not present in the public aggregate file.",
+    "No meaningful-change threshold is established in this module.",
+    "No package authorizes fielding, clinical action, hospital ranking, response weighting, or official HCAHPS comparison for a partial local item set.",
+    "An actual course section must map the module to the official half-term calendar before assigning a due date."
+  ]
+}

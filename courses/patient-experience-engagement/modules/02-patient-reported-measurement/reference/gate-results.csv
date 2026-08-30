@@ -1,0 +1,19 @@
+gate_id,gate,status,evidence,action_if_failed
+G01,current source suite and version are exact,pass,28 fingerprints and QAG V19.0 verified,stop and restore source contract
+G02,Q22 Q23 pair selected and Q20 kept separate,pass,item map and decision match official crosswalk,revise item selection
+G03,Q21 skip logic preserves not applicable,pass,synthetic fixture and scoring rule preserve state,correct response coding
+G04,Q22 uses its own answered denominator,pass,148 of 176 reproduced,correct formula
+G05,Q23 uses its own answered denominator,pass,144 of 184 reproduced,correct formula
+G06,teaching composite uses question proportions,pass,81.17588933 percent reproduced,correct formula and label
+G07,official and teaching scores remain distinct,pass,3610-facility concordance documents mismatch,retain CMS composite for official reporting
+G08,construct is named as a PREM,pass,construct record rejects PROM outcome and satisfaction claims,revise construct
+G09,validity claim is bounded,pass,no local validation claim is made,remove fabricated validity claim
+G10,reliability concepts remain distinct,pass,synthetic alpha and hospital signal-to-noise target separated,revise reliability interpretation
+G11,no meaningful-change threshold is invented,pass,meaningful threshold recorded as not established,remove threshold
+G12,official language and mode inventory is complete,pass,9 mail 4 phone and 9 web files audited,complete source and route audit
+G13,proxy disability literacy and non-digital access are addressed,pass,proxy-burden record defines equivalent routes,revise access plan
+G14,burden and stop rules are explicit,pass,decline fatigue distress and unavailable access trigger stop,add burden protection
+G15,public-domain and trademark naming rules are correct,pass,local use labeled public-domain HCAHPS-derived local unadjusted unofficial,correct naming and comparison
+G16,synthetic data are never represented as observed,pass,every row and interpretation is visibly synthetic,correct data-class claim
+G17,hospital ranking is prohibited,pass,concordance is source reproduction only,remove ranking
+G18,agent use reproduction and progression are disclosed,pass,AI record checks outputs and progression reserves weighting for Module 03,complete disclosure and handoff
