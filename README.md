@@ -6,7 +6,7 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.54.0`
+- Current version: `0.55.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 has a complete course specification, its first six runnable modules, and its Week 3 and Week 6 checkpoints.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
@@ -74,6 +74,10 @@ The fifth runnable unit is [APP-1 Module 05: Clinical variation and patterns of 
 The sixth runnable unit is [APP-1 Module 06: Equity, feasible improvement, and embedded machine learning](courses/clinical-care/modules/06-equity-improvement-embedded-ml/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/APP-1/modules/06-equity-improvement-embedded-ml-spec.md). It prespecifies 12 subgroup summaries, preserves support and suppression, maps observed and missing pathway states, designs a capacity-aware prospective workflow, and shows that one bounded random forest does not improve the held-out case enough to change the decision.
 
 The cumulative [APP-1 Week 6 checkpoint](courses/clinical-care/checkpoints/02-adjusted-variation-improvement-release/README.md) freezes 100 accepted artifacts from Modules 04 through 06. It assigns 25 points to Module 04 and 20 points to Module 05 exactly once, while keeping Module 06 as a required non-scored gate before clinician leadership review.
+
+The seventh runnable unit is [APP-1 Module 07: Clinician leadership, recommendation, and defense](courses/clinical-care/modules/07-clinician-leadership-defense/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/APP-1/modules/07-clinician-leadership-defense-spec.md). It freezes both cumulative checkpoints in a 236-file leadership candidate, assigns stakeholder and decision ownership, defines a universal-offer prospective measurement proposal, and separates package acceptance from clinical authorization. Joe Joseph, MD, SFHM, is the designated clinician of record; his dated public identity is confirmed and participation details remain a pre-alpha condition.
+
+The [APP-1 final checkpoint](courses/clinical-care/checkpoints/03-clinical-care-improvement-package/README.md) freezes all 236 candidate files and adds the final 35-point score, 24 gates, 12-question defense, reviewers, reproduction, conditions, package disposition, and separate clinical recommendation. Its durable [checkpoint specification](docs/curriculum/courses/APP-1/checkpoints/03-clinical-care-improvement-package-spec.md) records `accept with conditions` for the curriculum package and `revise before testing` for the clinical recommendation. It does not authorize a test, workflow change, targeting, or model deployment.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

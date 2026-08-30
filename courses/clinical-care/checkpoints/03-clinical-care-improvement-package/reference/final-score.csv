@@ -1,0 +1,6 @@
+criterion_id,criterion,maximum,score,evidence,status
+C01,Correct evidence decision and claim boundary,8.00,8.00,evidence-synthesis.md and technical-appendix.md,pass
+R01,Reproducible evidence package and handoff,5.00,5.00,reproducibility-check.md and final-review/final-reproduction.md,pass
+L01,Sound clinical reasoning equity safety and feasibility,10.00,10.00,people-equity-safety.md and workflow-feasibility.md,pass
+A01,Clear and action-guiding recommendation ownership and monitoring,8.00,8.00,improvement-recommendation.md and measures-monitoring.csv,pass
+H01,Responsible agent use accessibility and defense,4.00,4.00,ai-use.md and accessibility-review.md and final-review/final-defense.md,pass

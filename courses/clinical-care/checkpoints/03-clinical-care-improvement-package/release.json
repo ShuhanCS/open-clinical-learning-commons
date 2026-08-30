@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app1-cp03",
+    "title": "Clinical care improvement package",
+    "version": "0.1.0",
+    "commons_release": "0.55.0",
+    "course": "APP-1: Data for Clinical Care",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_candidate": {
+    "id": "oclc-app1-07",
+    "version": "0.1.0",
+    "commons_release": "0.55.0",
+    "candidate_files": 236,
+    "immutable_manifest_rows": 214,
+    "immutable_manifest_bytes": 40140,
+    "immutable_manifest_sha256": "2c90713fb220b6fdc1af492898e89605051b0dffed44b2fb2883b2942aefde62",
+    "release_sha256": "939fc4c08f46974e3d7db1c2b387f2c7251287cdba2317e2867ce326edbac933"
+  },
+  "course_score": {
+    "week3": 20,
+    "week6": 45,
+    "final": 35,
+    "total": 100,
+    "final_score": "35.00 of 35.00",
+    "double_counted_components": 0
+  },
+  "reference_decision": {
+    "gates": "24 of 24 pass or pass with an allowed condition",
+    "defense": "adequate for curriculum construction",
+    "package_disposition": "accept with conditions",
+    "clinical_recommendation": "revise before testing",
+    "clinical_implementation": "prohibited",
+    "model_deployment": "prohibited",
+    "patient_targeting": "prohibited",
+    "course_status": "complete for curriculum construction only",
+    "proposed_tag": "app1-clinical-care-candidate-v0.1.0",
+    "tag_status": "proposed - not created"
+  },
+  "package": {
+    "candidate_files": 236,
+    "final_review_files": 15,
+    "assembled_files": 251,
+    "candidate_manifest_rows": 236,
+    "candidate_manifest_bytes": 38238,
+    "candidate_manifest_sha256": "aab1eef0c746700b6322ac1300c5dac3571d861f0fb283c86a0602e3dad9a54b"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 1276,
+    "starter_checks": 1231,
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "inside_candidate_target_rejection": "pass",
+    "changed_candidate_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "early_tag_rejection": "pass",
+    "inconsistent_decision_rejection": "pass"
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "checkpoint specification, deterministic final assembly, review package, and validation"
+    }
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, and final biography wording before alpha.",
+    "Named clinical, improvement, methods, equity, informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "Independent human clean reproduction and a live or equivalent learner defense remain pending.",
+    "The official course section and half-term dates remain to be assigned from the published calendar.",
+    "Local workflow, capacity, patient-partner, prospective-data, and governance evidence is required before any test authorization.",
+    "The accepted curriculum package does not authorize clinical implementation, model deployment, patient targeting, or unsupported real-population claims."
+  ]
+}

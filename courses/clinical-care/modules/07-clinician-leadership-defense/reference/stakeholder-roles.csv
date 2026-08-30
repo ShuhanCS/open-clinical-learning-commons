@@ -1,0 +1,9 @@
+stakeholder_id,raci_role,stakeholder,decision_responsibility,required_action,evidence,owner_status
+S01,accountable,Hospital medicine medical director,Authorize pause stop or referral,Approve the exact local protocol and capacity boundary,improvement-recommendation.md,pending named local owner
+S02,responsible,Improvement lead,Coordinate test design and review,Maintain protocol measures conditions and review cadence,bounded-test-plan.md,pending named local owner
+S03,responsible,Scheduling or access lead,Confirm capacity and operate scheduling workflow,Document slots workload appointment state and exceptions,workflow-feasibility.md,pending named local owner
+S04,responsible,Data steward,Maintain prospective definitions and quality checks,Verify denominators missingness access rules and privacy,measures-monitoring.csv,pending named local owner
+S05,consulted,Patient or caregiver partner,Review choice burden access and meaning,Approve offer language refusal route and burden questions,people-equity-safety.md,pending named partner
+S06,consulted,Frontline discharge clinician and nurse,Review safety and workflow fit,Test handoffs exceptions training and discharge-delay risk,workflow-feasibility.md,pending named representatives
+S07,consulted,Methods and equity reviewers,Review evidence limits and group support,Confirm claims suppression uncertainty and analysis plan,technical-appendix.md,pending named reviewers
+S08,informed,Primary care and follow-up practices,Receive workflow and capacity notice,Confirm contact route and escalation process,bounded-test-plan.md,pending local engagement

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app1-07",
+    "version": "0.1.0",
+    "commons_release": "0.55.0",
+    "course": "APP-1: Data for Clinical Care",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "decision": "What should the care-improvement council do next, who owns it, how should it be tested, and when must it stop or change?",
+  "clinician_of_record": {
+    "name": "Joe Joseph, MD, SFHM",
+    "role": "clinician leadership instructor",
+    "current_employer_claim": "none",
+    "pre_alpha_confirmation": "required"
+  },
+  "accepted_inputs": {
+    "checkpoint1": {
+      "id": "oclc-app1-cp01",
+      "version": "0.1.0",
+      "commons_release": "0.51.0",
+      "assembled_files": 91,
+      "candidate_manifest_sha256": "ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860",
+      "release_sha256": "ef2ee1dd1fcac47dda2efd680b9605862a0006962867d59a836dec4c276b090c"
+    },
+    "checkpoint2": {
+      "id": "oclc-app1-cp02",
+      "version": "0.1.0",
+      "commons_release": "0.54.0",
+      "assembled_files": 113,
+      "candidate_manifest_sha256": "f5f892c2b5f6c193f5389c10f7e60df81b1400ca5a163734a103efa745c54ed1",
+      "release_sha256": "58cc270fad6649feec5e958b0850ea3dff3a8119599c30f2e900d68ad5f591da"
+    }
+  },
+  "allowed_recommendations": [
+    "run bounded prospective improvement test",
+    "revise before testing",
+    "refer",
+    "stop"
+  ],
+  "reference_recommendation": "revise before testing",
+  "reference_package_status": "accept with conditions",
+  "score": {
+    "maximum": 35.0,
+    "minimum_to_pass": 28.0,
+    "criteria": {
+      "C01": 8.0,
+      "R01": 5.0,
+      "L01": 10.0,
+      "A01": 8.0,
+      "H01": 4.0
+    }
+  },
+  "required_gates": 24,
+  "defense_questions": 12,
+  "measure_minimums": {
+    "process": 2,
+    "outcome": 1,
+    "balancing": 2,
+    "access": 2,
+    "implementation": 1,
+    "data-quality": 2
+  },
+  "prohibited": [
+    "clinical implementation",
+    "model deployment",
+    "patient-level targeting",
+    "causal or efficacy claim",
+    "fairness certification",
+    "real site or group ranking"
+  ]
+}

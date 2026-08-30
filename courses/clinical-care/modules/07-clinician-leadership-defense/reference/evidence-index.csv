@@ -1,0 +1,17 @@
+claim_id,claim,evidence_path,evidence_type,owner,status
+E01,Accepted Week 3 package identity,evidence/provenance/checkpoint1-release.json,release record,Checkpoint 1,accepted
+E02,Accepted Week 6 package identity,evidence/provenance/checkpoint2-release.json,release record,Checkpoint 2,accepted
+E03,Landmark cohort has 476 people,evidence/checkpoint1/candidate/module-02/outputs/analysis-cohort.csv,exact table,Module 02,accepted
+E04,Cohort has 87 events,evidence/checkpoint1/candidate/module-03/outputs/cohort-summary.csv,exact table,Module 03,accepted
+E05,Proportional-hazards screen fails,evidence/checkpoint1/candidate/module-03/outputs/ph-check.csv,exact check,Module 03,accepted
+E06,Risk-adjusted evidence and limits,evidence/checkpoint2/candidate/module-04/risk-adjustment-memo.md,accepted report,Module 04,accepted
+E07,Clinical variation evidence and limits,evidence/checkpoint2/candidate/module-05/variation-memo.md,accepted report,Module 05,accepted
+E08,Equity counts uncertainty and suppression,evidence/checkpoint2/candidate/module-06/outputs/equity-summary.csv,exact table,Module 06,accepted
+E09,Prospective pathway states are unobserved,evidence/checkpoint2/candidate/module-06/outputs/pathway-nodes.csv,exact table,Module 06,accepted
+E10,Transparent and random-forest performance,evidence/checkpoint2/candidate/module-06/outputs/model-performance.csv,exact table,Module 06,accepted
+E11,Machine learning does not change the decision,evidence/checkpoint2/candidate/module-06/ml-comparison.md,accepted interpretation,Module 06,accepted
+E12,Reference recommendation is revise before testing,improvement-recommendation.md,leadership decision,Module 07,draft final
+E13,Universal offer is proposed without model targeting,bounded-test-plan.md,test proposal,Module 07,draft final
+E14,People equity and safety conditions,people-equity-safety.md,leadership review,Module 07,draft final
+E15,Measures and monitoring contract,measures-monitoring.csv,prospective contract,Module 07,draft final
+E16,Stop rollback and escalation contract,stop-escalation-rules.csv,prospective contract,Module 07,draft final

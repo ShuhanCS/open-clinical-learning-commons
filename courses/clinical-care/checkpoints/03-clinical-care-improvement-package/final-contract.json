@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint": {
+    "id": "oclc-app1-cp03",
+    "version": "0.1.0",
+    "commons_release": "0.55.0",
+    "course": "APP-1: Data for Clinical Care",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_module07": {
+    "id": "oclc-app1-07",
+    "version": "0.1.0",
+    "candidate_files": 236,
+    "immutable_manifest_rows": 214,
+    "immutable_manifest_bytes": 40140,
+    "immutable_manifest_sha256": "2c90713fb220b6fdc1af492898e89605051b0dffed44b2fb2883b2942aefde62",
+    "release_sha256": "939fc4c08f46974e3d7db1c2b387f2c7251287cdba2317e2867ce326edbac933"
+  },
+  "accepted_releases": {
+    "checkpoint1_sha256": "ef2ee1dd1fcac47dda2efd680b9605862a0006962867d59a836dec4c276b090c",
+    "checkpoint2_sha256": "58cc270fad6649feec5e958b0850ea3dff3a8119599c30f2e900d68ad5f591da"
+  },
+  "package": {
+    "candidate_files": 236,
+    "final_review_files": 15,
+    "assembled_files": 251,
+    "final_manifest_rows": 236
+  },
+  "score": {
+    "maximum": 35.0,
+    "minimum_to_pass": 28.0,
+    "criteria": {
+      "C01": 8.0,
+      "R01": 5.0,
+      "L01": 10.0,
+      "A01": 8.0,
+      "H01": 4.0
+    }
+  },
+  "required_gates": 24,
+  "defense_questions": 12,
+  "allowed_package_dispositions": ["accept", "accept with conditions", "revise", "refer"],
+  "allowed_clinical_recommendations": ["run bounded prospective improvement test", "revise before testing", "refer", "stop"],
+  "reference": {
+    "package_disposition": "accept with conditions",
+    "clinical_recommendation": "revise before testing",
+    "course_status": "complete for curriculum construction only",
+    "clinical_implementation": "prohibited",
+    "model_deployment": "prohibited",
+    "patient_targeting": "prohibited",
+    "proposed_tag": "app1-clinical-care-candidate-v0.1.0",
+    "tag_status": "proposed - not created"
+  }
+}

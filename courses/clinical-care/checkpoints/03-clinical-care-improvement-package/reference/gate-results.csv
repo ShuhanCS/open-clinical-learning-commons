@@ -1,0 +1,25 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,Checkpoint 1 Checkpoint 2 and Module 07 release identities exact,pass,final-review/submission-record.md,APP-1 faculty owner,
+G02,Candidate has 236 files and final manifest has 236 rows,pass,final-review/candidate-manifest.csv,Independent reproducer,
+G03,Module 07 immutable manifest has 214 exact rows,pass,release-manifest.csv,Independent reproducer,
+G04,Repository commit versions releases and proposed tag recorded,pass with condition,final-review/submission-record.md,APP-1 faculty owner,COND-04
+G05,Source rights synthetic status and prohibited-data scan complete,pass,final-review/final-audit.md,Data-governance reviewer,
+G06,Cohort time zero follow-up event and censoring facts unchanged,pass,evidence-synthesis.md,Methods reviewer,
+G07,Failed proportional-hazards screen and count-first interpretation visible,pass,technical-appendix.md,Methods reviewer,
+G08,Risk-adjustment variation subgroup and confounding limits visible,pass,technical-appendix.md,Methods reviewer,
+G09,Machine learning does not change decision and is not deployed,pass,improvement-recommendation.md,Responsible-AI reviewer,
+G10,Every material claim traces to accepted evidence,pass,evidence-index.csv,Independent instructor,
+G11,Package disposition and clinical recommendation are separate,pass,final-review/final-decision.md,APP-1 faculty owner,
+G12,Allowed recommendation states authorization boundary,pass,improvement-recommendation.md,Clinical decision owner,
+G13,People equity safety burden and exclusion addressed,pass with condition,people-equity-safety.md,Patient partner,COND-02
+G14,Stakeholder roles and decision authority complete,pass with condition,stakeholder-roles.csv,Clinical decision owner,COND-02
+G15,Workflow and capacity assumptions explicit,pass with condition,workflow-feasibility.md,Operations reviewer,COND-02
+G16,Test plan has eligibility comparison duration and learning aim,pass with condition,bounded-test-plan.md,Improvement reviewer,COND-02
+G17,All required measure families are complete,pass,measures-monitoring.csv,Improvement reviewer,
+G18,Monitoring pause stop rollback and escalation rules complete,pass,stop-escalation-rules.csv,Clinical decision owner,
+G19,Exact tables and equivalent access routes complete,pass with condition,accessibility-review.md,Accessibility reviewer,COND-03
+G20,Clean reproduction and nested validation pass,pass with condition,final-review/final-reproduction.md,Independent reproducer,COND-04
+G21,Agent trace independent checks and human ownership complete,pass,ai-use.md,Responsible-AI reviewer,
+G22,All 12 defense answers adequate,pass with condition,final-review/final-defense.md,Clinical defense chair,COND-05
+G23,Reviewer roles and condition ownership complete,pass with condition,final-review/reviewer-record.md,APP-1 faculty owner,COND-03
+G24,Acceptance does not authorize implementation targeting deployment or unsupported claims,pass,final-review/release-acceptance.md,Clinical decision owner,

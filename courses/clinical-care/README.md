@@ -9,8 +9,8 @@ APP-1 is the first domain-specific applied course. Learners use a continuing syn
 - Core tools: SQL and Python
 - Final deliverable: clinical care improvement brief with reproducible evidence and a defense
 - Course package version: 0.1.0
-- Commons release: 0.54.0
-- Current package status: Modules 01 through 06 and the Week 3 and Week 6 checkpoints are runnable release candidates
+- Commons release: 0.55.0
+- Current package status: all seven modules and all three cumulative checkpoints are runnable release candidates
 
 ## Seven applied modules
 
@@ -22,7 +22,7 @@ APP-1 is the first domain-specific applied course. Learners use a continuing syn
 6. Equity, feasible improvement, and embedded machine learning - 16.0 hours.
 7. Clinician leadership, recommendation, and defense - 16.0 hours.
 
-Module 06 contains eight hours of cumulative application and equity work plus an eight-hour bounded machine-learning extension. Module 07 is the clinician-led leadership block. Joe Joseph, MD, is the designated clinician, subject to direct identity and publishable-biography confirmation before learner-facing release.
+Module 06 contains eight hours of cumulative application and equity work plus an eight-hour bounded machine-learning extension. Module 07 is the clinician-led leadership block. Joe Joseph, MD, SFHM, is the designated clinician of record. Sound Physicians' dated public archive confirms the intended hospital medicine leader; participation, schedule, session format, recording permission, and final biography wording remain pre-alpha conditions.
 
 ## Runnable module
 
@@ -42,6 +42,10 @@ Module 06 contains eight hours of cumulative application and equity work plus an
 - [Module 06 durable specification](../../docs/curriculum/courses/APP-1/modules/06-equity-improvement-embedded-ml-spec.md)
 - [Week 6 checkpoint](checkpoints/02-adjusted-variation-improvement-release/README.md)
 - [Week 6 checkpoint durable specification](../../docs/curriculum/courses/APP-1/checkpoints/02-adjusted-variation-improvement-release-spec.md)
+- [Module 07: Clinician leadership, recommendation, and defense](modules/07-clinician-leadership-defense/README.md)
+- [Module 07 durable specification](../../docs/curriculum/courses/APP-1/modules/07-clinician-leadership-defense-spec.md)
+- [Final checkpoint](checkpoints/03-clinical-care-improvement-package/README.md)
+- [Final checkpoint durable specification](../../docs/curriculum/courses/APP-1/checkpoints/03-clinical-care-improvement-package-spec.md)
 
 Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns, and defines a 476-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
 
@@ -60,6 +64,10 @@ Module 05 reads 1,694 post-landmark encounter rows, 742 medication rows, 1,832 p
 Module 06 preserves 12 fixed equity groups, reports counts and uncertainty, and suppresses unsupported process or outcome summaries without combining small groups. Its pathway separates the observed 476 to 129/347 record split from offer, preference, scheduling, completion, barriers, and burden that require prospective collection. On 143 held-out people and 17 events, the transparent model has Brier score 0.09609243 and AUC 0.66363212; the bounded random forest has 0.10745654 and 0.62371615. The forest catches three more events but adds 32 false positives and 35 flags, so it does not change the capacity-aware scheduling proposal.
 
 The Week 6 checkpoint assembles 32 Module 04 files, 30 Module 05 files, and 38 Module 06 files into a 113-file package. It scores 45.00 points exactly once and continues to Module 07 with clinical implementation and model deployment prohibited.
+
+Module 07 freezes the complete 91-file Week 3 and 113-file Week 6 packages plus both release records. Its 214-row immutable manifest is 40,140 bytes with SHA-256 `2c90713fb220b6fdc1af492898e89605051b0dffed44b2fb2883b2942aefde62`; the complete leadership candidate has 236 files. The reference package earns a draft 35.00 of 35.00 because it is complete and honest while recommending `revise before testing`. It prohibits model targeting and requires local workflow, capacity, patient-partner, prospective-data, and governance evidence before any test authorization.
+
+The final checkpoint freezes all 236 candidate files in a 38,238-byte manifest with SHA-256 `aab1eef0c746700b6322ac1300c5dac3571d861f0fb283c86a0602e3dad9a54b` and adds 15 final-review files. It records the 35-point component once, bringing APP-1 to 100 course points. The package disposition is `accept with conditions`; the separate clinical recommendation is `revise before testing`.
 
 ## Three cumulative checkpoints
 
@@ -88,4 +96,4 @@ No real patient records are used. Synthetic frequencies do not estimate real pre
 
 ## Build order
 
-Modules 01 through 06 and the Week 3 and Week 6 checkpoints are complete. Module 07 next owns clinician leadership, recommendation, stakeholder action, monitoring, and defense.
+All seven modules and all three checkpoints are complete as runnable curriculum-construction release candidates. The next applied course in the master build order is APP-2: Patient Experience and Engagement.

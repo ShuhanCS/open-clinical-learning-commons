@@ -13,7 +13,7 @@
 - R role: read, run, and interpret published survival and risk-adjustment code; writing R from scratch is not graded.
 - Final deliverable: clinical care improvement brief with complete reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.54.0 through runnable Module 06 and the Week 6 checkpoint.
+- Current Commons release: 0.55.0 through runnable Module 07 and the final checkpoint.
 - Specification status: construction candidate.
 
 APP-1 is the first applied course. Learners follow a clinical cohort over time, compare care and outcomes while accounting for baseline differences, and recommend a feasible care-pathway improvement. The course takes longitudinal cohorts, censoring, survival analysis, risk adjustment, and clinical variation from foundation recognition to working skill.
@@ -327,13 +327,15 @@ Equity, improvement, and simple-versus-ML comparison are required gates and draf
 
 - Module ID: `oclc-app1-07`.
 - Hours: 16.0.
-- Leadership clinician: Joe Joseph, MD, subject to identity and publishable-biography confirmation.
+- Leadership clinician: Joe Joseph, MD, SFHM. Dated public identity is confirmed; participation details and final biography wording require direct confirmation before alpha.
 - Decision: what the care-improvement council should do next, who owns it, how it should be tested, and when it must stop or change.
 - Submission: final clinical care improvement brief and defense.
 
 The learner reads the analysis as a clinical decision owner, identifies people affected, weighs evidence, feasibility, equity, safety, workload, and operational constraints, makes a specific bounded recommendation, defines implementation and stakeholder roles, chooses process/outcome/balancing measures, sets monitoring and reassessment triggers, and defends the decision under questioning.
 
 The leadership block cannot repair weak technical evidence by rhetoric. It may narrow, defer, refer, or stop the recommendation.
+
+The runnable Module 07 package freezes both accepted cumulative checkpoints in a 236-file candidate. Its reference recommendation is `revise before testing`. The final checkpoint records `accept with conditions` for package quality and keeps clinical implementation, patient targeting, and model deployment prohibited.
 
 ## 16. Three cumulative checkpoint contracts
 
@@ -544,7 +546,7 @@ Learners receive:
 - a weekly question clinic and monitored help channel; and
 - clinician-led leadership and defense work in Module 07.
 
-Joe Joseph, MD, is the designated clinician for the leadership block, subject to direct identity and publishable-biography confirmation. The architecture does not depend on a current employer or title.
+Joe Joseph, MD, SFHM, is the designated clinician for the leadership block. Sound Physicians' dated public archive confirms the intended hospital medicine physician leader through FHM, SFHM, and Regional Chief Medical Officer references from 2015, 2017, and 2019. The course makes no current-employer or current-title claim. Participation, schedule, session format, recording permission, and final biography wording require direct confirmation before alpha.
 
 The leadership work uses the learner's own project. It focuses on decision ownership, people affected, evidence, feasibility, equity, safety, workflow, implementation, monitoring, escalation, reassessment, and defense under questioning.
 
@@ -599,7 +601,7 @@ Build Modules 01 through 07 one at a time. After Modules 01 through 03, build Ch
 
 ## 24. Known issues and decisions still requiring confirmation
 
-- Confirm the intended Joe Joseph, MD, and approved public biography before learner-facing publication.
+- Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha publication.
 - The pinned 2020 Synthea source is intentionally stable but old and synthetic.
 - The raw landmark cohort spans 64 sparse organizations; stable site-comparison instruction requires the documented six-site extension in Module 02.
 - The exact extension generator, case-mix coefficients, site effects, and known-truth contract are owned by Module 02 and must not be invented in later modules.

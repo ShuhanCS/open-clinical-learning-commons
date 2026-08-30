@@ -1,0 +1,6 @@
+criterion_id,criterion,maximum,score,evidence,status
+C01,Correct evidence decision and claim boundary,8.00,REPLACE,REPLACE,REPLACE
+R01,Reproducible evidence package and handoff,5.00,REPLACE,REPLACE,REPLACE
+L01,Sound clinical reasoning equity safety and feasibility,10.00,REPLACE,REPLACE,REPLACE
+A01,Clear and action-guiding recommendation ownership and monitoring,8.00,REPLACE,REPLACE,REPLACE
+H01,Responsible agent use accessibility and defense,4.00,REPLACE,REPLACE,REPLACE

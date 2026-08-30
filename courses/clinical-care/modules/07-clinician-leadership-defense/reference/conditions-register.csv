@@ -1,0 +1,7 @@
+condition_id,condition,owner,due_point,evidence,verifier,status,escalation_trigger
+COND-01,Confirm Joe Joseph participation schedule format recording permission and final biography wording,APP-1 faculty owner,before alpha,clinician-profile.md,Curriculum sponsor,open,Do not publish or schedule the named session without confirmation
+COND-02,Supply local workflow capacity patient-partner prospective-field and governance evidence,Named local clinical and improvement owners,before any test authorization,workflow-feasibility.md and bounded-test-plan.md,Care-improvement council,open,Recommendation remains revise before testing
+COND-03,Complete named clinical improvement methods equity informatics accessibility privacy responsible-AI and instructor review,APP-1 faculty owner,before alpha,reviewer-record.md,Program owner,open,Do not describe the package as program approved
+COND-04,Complete independent human clean reproduction on a supported teaching environment,Independent reproducer,before alpha,reproducibility-check.md,APP-1 faculty owner,open,Do not issue an accepted alpha tag
+COND-05,Conduct a live or equivalent learner defense with actual acknowledgments,Clinical defense chair,for learner completion,technical-defense.md,APP-1 faculty owner,open,Reference answers do not count as learner defense
+COND-06,Assign the official section and half-term dates from the published calendar,Registrar or APP-1 faculty owner,before enrollment,README.md,Program owner,open,Do not infer a due date by adding 7.5 weeks

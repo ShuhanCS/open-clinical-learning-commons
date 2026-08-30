@@ -1,0 +1,9 @@
+rule_id,trigger,immediate_action,owner,notification,restart_evidence,final_authority
+STOP01,Serious or unexpected patient-safety concern,Stop the workflow and provide usual care,Clinical decision owner,Notify safety and council leads,Documented safety review and approved correction,Hospital medicine medical director
+STOP02,Accountable owner or required oversight is unavailable,Pause enrollment or expansion,Improvement lead,Notify council chair,Named owner and oversight restored,Care-improvement council
+STOP03,Workflow delay or workload exceeds approved capacity,Pause expansion and review staffing,Scheduling lead,Notify clinical and operations owners,Capacity plan and acceptable run-in evidence,Hospital medicine medical director
+STOP04,Required denominator or state completeness falls below trigger,Pause interpretation and correct collection,Data steward,Notify methods and improvement leads,Data-quality checks above trigger for approved period,Data-governance owner
+STOP05,Access burden or unsupported group-specific action appears,Pause the affected process and review without targeting,Equity reviewer,Notify patient partner and council,Approved equitable correction and supported monitoring,Care-improvement council
+STOP06,Patient-level model targeting or unauthorized model use appears,Stop model use immediately,Clinical decision owner,Notify responsible-AI privacy and council leads,Removal verification and renewed governance review,Hospital medicine medical director
+STOP07,Privacy rights integrity or security concern appears,Stop affected collection or access,Data steward,Notify privacy security and governance leads,Incident resolution and written restart approval,Data-governance owner
+STOP08,Delivered workflow materially differs from reviewed protocol,Pause the test and version the change,Improvement lead,Notify all decision owners,Revised protocol review training and approval,Care-improvement council

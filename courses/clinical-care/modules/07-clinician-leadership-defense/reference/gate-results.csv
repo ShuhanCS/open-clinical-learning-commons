@@ -1,0 +1,25 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,Checkpoint 1 identity and 91-file package exact,pass,evidence/provenance/checkpoint1-release.json,APP-1 faculty owner,
+G02,Checkpoint 2 identity and 113-file package exact,pass,evidence/provenance/checkpoint2-release.json,APP-1 faculty owner,
+G03,Immutable manifest and assembly protection pass,pass,release-manifest.csv,Independent reproducer,
+G04,Repository version release and candidate identity complete,pass,README.md,APP-1 faculty owner,
+G05,Synthetic source and rights limits visible,pass,technical-appendix.md,Data-governance reviewer,
+G06,Cohort time zero follow-up event and censoring unchanged,pass,evidence-synthesis.md,Methods reviewer,
+G07,Failed proportional-hazards screen and count-first interpretation visible,pass,evidence-synthesis.md,Methods reviewer,
+G08,Risk-adjustment support and residual-confounding limits visible,pass,technical-appendix.md,Methods reviewer,
+G09,Variation evidence does not rank real sites or establish causation,pass,technical-appendix.md,Clinical reviewer,
+G10,Subgroup counts missingness uncertainty and suppression retained,pass,people-equity-safety.md,Equity reviewer,
+G11,Machine learning does not change decision and is not deployed,pass,improvement-recommendation.md,Responsible-AI reviewer,
+G12,Material leadership claims trace to exact evidence,pass,evidence-index.csv,Independent instructor,
+G13,Allowed recommendation states authorization boundary,pass,improvement-recommendation.md,Clinical decision owner,
+G14,People burden exclusion equity and safety addressed,pass with condition,people-equity-safety.md,Patient partner,COND-02
+G15,Stakeholder roles include accountable and responsible owners,pass with condition,stakeholder-roles.csv,Clinical decision owner,COND-02
+G16,Workflow and capacity assumptions explicit,pass with condition,workflow-feasibility.md,Operations reviewer,COND-02
+G17,Bounded test has eligibility comparison duration and learning aim,pass with condition,bounded-test-plan.md,Improvement reviewer,COND-02
+G18,Required measure families and contracts complete,pass,measures-monitoring.csv,Improvement reviewer,
+G19,Monitoring stop rollback and escalation rules complete,pass,stop-escalation-rules.csv,Clinical decision owner,
+G20,Exact tables and equivalent access routes complete,pass with condition,accessibility-review.md,Accessibility reviewer,COND-03
+G21,Clean validation and immutable comparison pass,pass with condition,reproducibility-check.md,Independent reproducer,COND-04
+G22,Material agent use has independent check and human owner,pass,ai-use.md,Responsible-AI reviewer,
+G23,All 12 defense answers adequate,pass with condition,technical-defense.md,Clinical defense chair,COND-05
+G24,Package recommendation progression and prohibited use separate,pass,progression-decision.md,APP-1 faculty owner,

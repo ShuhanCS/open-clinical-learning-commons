@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.54.0
+- Current release: 0.55.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-1 Checkpoint 2, adjusted variation and feasible improvement
-- Next unit: APP-1 Module 07, clinician leadership, recommendation, and defense
+- Last completed unit: APP-1 final checkpoint, clinical care improvement package
+- Next unit: APP-2 course specification, Patient Experience and Engagement
 
 ## Confirmed decisions
 
@@ -347,19 +347,34 @@
 - The checkpoint assigns 25 points to Module 04 and 20 points to Module 05 exactly once. Module 06 contributes 24 required gates and zero extra points.
 - Reference validation passes 496 checks and learner validation passes 473 checks. Two-build equality, copied validation, candidate mutation, score mutation, and progression mutation routes pass.
 - APP-1 Checkpoint 2 is a runnable release candidate at Commons 0.54.0 and permits Module 07 construction with all clinical, improvement, methods, equity, informatics, accessibility, privacy, responsible-AI, and independent-review conditions retained.
+- APP-1 Module 07 version 0.1.0 freezes the complete 91-file Week 3 package, 113-file Week 6 package, and both accepted release records without changing upstream evidence.
+- Joe Joseph, MD, SFHM, is the designated clinician of record. Sound Physicians' dated public archive confirms the intended hospital medicine leader through 2015 FHM, 2017 SFHM, and 2019 Regional Chief Medical Officer references. The package makes no current-employer or current-title claim.
+- Four clinician-led segments cover the clinical decision, people and workflow, recommendation and monitoring, and council defense across 16 hours. Participation, schedule, format, recording permission, and final biography wording remain pre-alpha conditions.
+- The 214-row immutable candidate manifest is 40,140 bytes with SHA-256 `2c90713fb220b6fdc1af492898e89605051b0dffed44b2fb2883b2942aefde62`. The complete Module 07 candidate has 236 files and 21 leadership records.
+- The reference candidate drafts 35.00 of 35.00 points, passes all 24 gates with allowed conditions, and has an adequate 12-question construction defense. Package status is `accept with conditions`; clinical recommendation is `revise before testing`.
+- The proposal is universal offer and prospective measurement, not model targeting. Local workflow, capacity, patient-partner, prospective-field, and governance evidence is required before any test authorization.
+- Module 07 complete validation passes 1,233 checks and learner validation passes 1,185 checks. Two-build equality, copied validation, accepted-evidence, score, gate, recommendation, and progression failure routes pass.
+- APP-1 Module 07 is a runnable release candidate at Commons 0.55.0.
+- APP-1 final checkpoint version 0.1.0 freezes all 236 Module 07 candidate files without editing them and adds 15 final-review files.
+- Its 236-row final candidate manifest is 38,238 bytes with SHA-256 `aab1eef0c746700b6322ac1300c5dac3571d861f0fb283c86a0602e3dad9a54b`; the complete final package has 251 files.
+- The final checkpoint records the 35-point component once. APP-1 totals 20 Week 3 points, 45 Week 6 points, and 35 final points, with no double counting.
+- The final package disposition is `accept with conditions`; the separate clinical recommendation is `revise before testing`. Clinical implementation, model deployment, and patient targeting remain prohibited.
+- Final reference validation passes 1,276 checks and learner validation passes 1,231 checks. Two-build equality, candidate, score, gate, early-tag, and inconsistent-decision failure routes pass.
+- APP-1 is a complete runnable curriculum-construction release candidate at Commons 0.55.0.
 
 ## Pending confirmation
 
-- Confirm that the intended Joe Joseph, MD, is the Sound Physicians hospital medicine leader publicly listed with FHM/SFHM and Regional Chief Medical Officer experience.
-- Confirm publishable biography and current title directly before release.
+- Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha.
+- Assign the official APP-1 section and half-term dates from the published calendar.
+- Complete named program review, independent human reproduction, and a live or equivalent learner defense before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-1 course specification, accepted Week 3 and Week 6 checkpoints, Modules 04 through 06 specifications and releases, the Module 07 ownership boundary, and this ledger.
-2. Confirm the intended Joe Joseph, MD, identity and approved publishable biography before learner-facing release.
-3. Write the durable APP-1 Module 07 specification before broad implementation.
-4. Preserve the exact 45-point Week 6 score, every open condition, the equity question, the capacity-aware scheduling proposal, and the no-deployment decision.
-5. Define the clinician decision, stakeholders, feasibility, workflow, safety, equity, workload, and unintended-consequence review.
-6. Set implementation, process, outcome, access, balancing, monitoring, reassessment, rollback, stop, and escalation rules.
-7. Build the final clinical care improvement brief, accessible technical appendix, stakeholder plan, defense, and official-end-date checkpoint without rescoring earlier evidence.
-8. Validate, advance semver, commit, and push before beginning the next applied course.
+1. Read the master architecture, APP-1 final handoff, supplied APP-2 source course, and this ledger.
+2. Write the durable APP-2 course specification before broad implementation.
+3. Keep APP-2 distinct: patient-reported measures, scale construction, response patterns, missingness, representation, survey bias, linked patient evidence, patient partnership, and engagement strategy.
+4. Define seven APP-2 modules totaling 112.5 hours, with an embedded Module 06 machine-learning extension and clinician-led Module 07.
+5. Preserve source assessment weights through Week 3, Week 6, and official-end-date checkpoints.
+6. Select and fingerprint open patient-experience or survey sources, with documented synthetic data only where a public source cannot safely support the teaching case.
+7. Build APP-2 Module 01, its durable specification, learner and reference package, instructor materials, data, checks, release record, and handoff.
+8. Validate, advance semver, commit, and push before Module 02.

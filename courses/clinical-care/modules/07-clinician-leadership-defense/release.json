@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app1-07",
+    "title": "Clinician leadership, recommendation, and defense",
+    "version": "0.1.0",
+    "commons_release": "0.55.0",
+    "course": "APP-1: Data for Clinical Care",
+    "week": "final clinician-led block",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "clinician_of_record": {
+    "name": "Joe Joseph, MD, SFHM",
+    "identity_status": "confirmed from dated Sound Physicians public sources",
+    "current_employer_claim": "none",
+    "participation_confirmation": "required before alpha"
+  },
+  "accepted_inputs": [
+    {
+      "id": "oclc-app1-cp01",
+      "version": "0.1.0",
+      "commons_release": "0.51.0",
+      "assembled_files": 91,
+      "candidate_manifest_sha256": "ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860",
+      "release_sha256": "ef2ee1dd1fcac47dda2efd680b9605862a0006962867d59a836dec4c276b090c"
+    },
+    {
+      "id": "oclc-app1-cp02",
+      "version": "0.1.0",
+      "commons_release": "0.54.0",
+      "assembled_files": 113,
+      "candidate_manifest_sha256": "f5f892c2b5f6c193f5389c10f7e60df81b1400ca5a163734a103efa745c54ed1",
+      "release_sha256": "58cc270fad6649feec5e958b0850ea3dff3a8119599c30f2e900d68ad5f591da"
+    }
+  ],
+  "reference_decision": {
+    "candidate_score": "35.00 of 35.00",
+    "gates": "24 of 24 pass or pass with an allowed condition",
+    "defense": "adequate for curriculum construction",
+    "candidate_status": "accept with conditions",
+    "clinical_recommendation": "revise before testing",
+    "final_checkpoint": "permitted for curriculum construction",
+    "clinical_implementation": "prohibited",
+    "model_deployment": "prohibited",
+    "patient_targeting": "prohibited"
+  },
+  "reference_facts": {
+    "initial_people": 518,
+    "landmark_people": 476,
+    "events": 87,
+    "scheduled_followup": 129,
+    "no_recorded_scheduled_followup": 347,
+    "ph_p_value": "0.00636020",
+    "transparent_brier": "0.09609243",
+    "bounded_rf_brier": "0.10745654",
+    "transparent_auc": "0.66363212",
+    "bounded_rf_auc": "0.62371615",
+    "ml_changes_decision": "no"
+  },
+  "package": {
+    "immutable_controls": 8,
+    "accepted_evidence_files": 206,
+    "immutable_manifest_rows": 214,
+    "leadership_records": 21,
+    "candidate_files": 236,
+    "manifest_bytes": 40140,
+    "manifest_sha256": "2c90713fb220b6fdc1af492898e89605051b0dffed44b2fb2883b2942aefde62"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 1233,
+    "starter_checks": 1185,
+    "copied_validator_check": "pass",
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_evidence_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_recommendation_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, leadership package, deterministic assembly, and validation"
+    }
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, and final biography wording before alpha.",
+    "Named clinical, improvement, methods, equity, informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "Independent human clean reproduction and a live or equivalent learner defense remain pending.",
+    "The source is synthetic and cannot establish real clinical benefit, access, quality, equity, fairness, safety, site performance, or model utility.",
+    "Local workflow, capacity, patient-partner, prospective-data, and governance evidence is required before any test authorization.",
+    "The package does not authorize clinical implementation, model deployment, or patient targeting."
+  ]
+}
