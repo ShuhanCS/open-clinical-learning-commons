@@ -27,6 +27,44 @@ if ($content -match '[—–]') {
     throw 'DA-730 contains a Unicode em dash or en dash.'
 }
 
+$fnd1 = Join-Path $repo 'docs\curriculum\courses\FND-1\course-spec.md'
+$fnd1Source = Join-Path $repo 'docs\source\fnd-1-healthcare-data-foundations-source-record.md'
+$fnd1Package = Join-Path $repo 'courses\healthcare-data-foundations\README.md'
+if (-not (Test-Path -LiteralPath $fnd1) -or -not (Test-Path -LiteralPath $fnd1Source) -or -not (Test-Path -LiteralPath $fnd1Package)) {
+    throw 'FND-1 must include its course specification, source record, and course package README.'
+}
+
+$fnd1Content = Get-Content -Raw -LiteralPath $fnd1
+$fnd1ModuleCount = [regex]::Matches($fnd1Content, '(?m)^## Module \d{2} brief:').Count
+if ($fnd1ModuleCount -ne 7) {
+    throw "FND-1 must define seven module briefs; found $fnd1ModuleCount."
+}
+
+$fnd1HourMatches = [regex]::Matches(
+    $fnd1Content,
+    '(?m)^\| \d{2} \| [^|]+ \| \d \| (?<hours>\d+(?:\.\d+)?) \|'
+)
+$fnd1Hours = ($fnd1HourMatches | ForEach-Object { [decimal]$_.Groups['hours'].Value } | Measure-Object -Sum).Sum
+if ($fnd1HourMatches.Count -ne 7 -or $fnd1Hours -ne [decimal]112.5) {
+    throw "FND-1 must define seven schedule rows totaling 112.5 hours; found $($fnd1HourMatches.Count) rows and $fnd1Hours hours."
+}
+
+$fnd1CheckpointCount = [regex]::Matches($fnd1Content, '(?m)^## (?:Checkpoint \d|Final checkpoint):').Count
+if ($fnd1CheckpointCount -ne 3) {
+    throw "FND-1 must define three cumulative checkpoints; found $fnd1CheckpointCount."
+}
+
+if (
+    $fnd1Content -match '[—–]' -or
+    $fnd1Content -notmatch '40%' -or
+    $fnd1Content -notmatch '25%' -or
+    $fnd1Content -notmatch '35%' -or
+    $fnd1Content -notmatch '70a78f38824066770b724aca907211ce6df94b3232cbeb8dbfa8389a24556692' -or
+    $fnd1Content -notmatch 'FND-1 and FND-2 are separate technical foundations'
+) {
+    throw 'FND-1 is missing its source fingerprint, assessment weights, ownership boundary, or plain-ASCII punctuation contract.'
+}
+
 function Test-ModuleContract {
     param(
         [Parameter(Mandatory)] [string] $Label,
@@ -662,3 +700,4 @@ Write-Output "DA-730 $($module13.Label) passed: $($module13.Sections) contract s
 Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."
 Write-Output "DA-730 Checkpoint 2 passed: 17 contract sections and $($checkpoint02Files.Count) package files."
 Write-Output "DA-730 Checkpoint 3 passed: 17 contract sections and $($checkpoint03Files.Count) package files."
+Write-Output "FND-1 specification passed: $fnd1ModuleCount modules, $fnd1Hours hours, $fnd1CheckpointCount checkpoints."

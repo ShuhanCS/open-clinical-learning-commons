@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.26.0
+- Current release: 0.27.0
 - Last updated: 2026-08-30
-- Active phase: foundation-course specification and build
-- Last completed unit: DA-730 final checkpoint, Decision-story capstone and defense
-- Next unit: FND-1 straight-through technical foundations course
+- Active phase: FND-1 module build
+- Last completed unit: FND-1 course specification
+- Next unit: FND-1 Module 01, Setting up a reproducible workspace
 
 ## Confirmed decisions
 
@@ -18,11 +18,15 @@
 - DA-730 remains separate and moves from a Tableau-centered source course to a concept-first, software-flexible visualization course.
 - Public clinical sources, open datasets, and documented synthetic teaching data are core course materials.
 - Every module requires exact learner, instructor, data, assessment, rubric, accessibility, and release deliverables.
+- FND-1 preserves the source assessment weights through cumulative checkpoints: 40 percent at Week 3, 25 percent at Week 6, and 35 percent on the official last day.
 
 ## Source status
 
 - `Curriculum-30-Credits-2026-08-29.zip` inspected: 11 DOCX course files.
 - `OneDrive_2026-08-29 (1).zip` inspected: same 11 DOCX course files and file sizes.
+- The FND-1 source file is byte-for-byte identical in both archives: 24,148 bytes and SHA-256 `70a78f38824066770b724aca907211ce6df94b3232cbeb8dbfa8389a24556692`.
+- The FND-1 specification defines seven straight-through technical modules totaling 112.5 hours, three cumulative checkpoints, and a final accept/condition/revise/refer decision owned by a health-system analytics engineering lead.
+- FND-1 uses the pinned Synthea April 2020 CSV archive as its continuing synthetic source. The database, deterministic defect layer, cohort, and learner release are separate versioned layers.
 - MGH Institute 2026-2027 academic calendar checked: offerings are labeled half-terms and span 49 to 52 elapsed days.
 - Master architecture: `docs/specs/2026-08-29-curriculum-master-architecture-spec.md`.
 - DA-730 Module 01 uses the CMS HCAHPS 2026-08-13 release, filtered to all 65 Massachusetts `H_RECMND_DY` rows. The file contains 56 reported and 9 unavailable results for 2024-10-01 through 2025-09-30.
@@ -118,9 +122,9 @@
 
 ## Next resume instructions
 
-1. Read the master curriculum architecture and the source curriculum documents for the first foundation course.
-2. Confirm the exact FND-1 course title, catalog number, source-module ownership, and checkpoint outcomes from the extracted curriculum evidence.
-3. Keep FND-1 separate from FND-2 and teach its technical sequence straight through rather than using the applied-course rhythm.
-4. Write the durable FND-1 course specification before broad implementation.
-5. Define exact Week 3, Week 6, and final deliverables, public or synthetic datasets, reproducibility, accessibility, AI accountability, assessment, and release checks.
-6. Build and release FND-1 modules one by one, then move to the separate FND-2 build.
+1. Read the FND-1 course specification, source record, master architecture, and this ledger.
+2. Write the 21-section Module 01 specification.
+3. Build the smallest cross-platform starter workspace with Python and SQLite smoke tests, environment and version records, reproduction instructions, and an AI-use record.
+4. Add the learner assessment, instructor key, standard-library validator, release record, and clean-target test.
+5. Update the Commons version and this ledger, then commit and push Module 01 before moving to Module 02.
+6. Keep FND-1 separate from FND-2 throughout the build.
