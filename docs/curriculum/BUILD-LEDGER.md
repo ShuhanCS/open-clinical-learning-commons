@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.37.0
+- Current release: 0.38.0
 - Last updated: 2026-08-30
-- Active phase: FND-2 course specification
-- Last completed unit: FND-1 final checkpoint, Reproducible healthcare data toolkit
-- Next unit: FND-2 course specification and source normalization
+- Active phase: FND-2 module build
+- Last completed unit: FND-2 course specification and source normalization
+- Next unit: FND-2 Module 01, Analytic aims and a reproducible modeling workspace
 
 ## Confirmed decisions
 
@@ -26,6 +26,13 @@
 - `OneDrive_2026-08-29 (1).zip` inspected: same 11 DOCX course files and file sizes.
 - The FND-1 source file is byte-for-byte identical in both archives: 24,148 bytes and SHA-256 `70a78f38824066770b724aca907211ce6df94b3232cbeb8dbfa8389a24556692`.
 - The FND-1 specification defines seven straight-through technical modules totaling 112.5 hours, three cumulative checkpoints, and a final accept/condition/revise/refer decision owned by a health-system analytics engineering lead.
+- The FND-2 source file is byte-for-byte identical in both supplied archives: 21,850 bytes and SHA-256 `eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03`.
+- The FND-2 specification defines seven straight-through technical modules totaling 112.5 hours and preserves source assessment weights of 15, 25, 25, and 35 percent through Week 3, Week 6, and official-end-date checkpoints.
+- FND-2 owns analytic aims and targets, regression, prediction evaluation, validity, adjustment, longitudinal boundaries, forecasting, testing, agent verification, model cards, monitoring, governance, and defense. It does not repeat FND-1 data-pipeline work.
+- The primary modeling case preserves the accepted 374-row FND-1 synthetic analytic table and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
+- The 90-day acute-return label contains 36 positive and 338 negative rows. The fixed temporal split contains 224, 75, and 75 rows with 25, 7, and 4 positive outcomes.
+- The public forecasting case reuses all 6,208 CDC NHSN jurisdiction-week rows across 67 jurisdictions and the exact 94-week Massachusetts series. Their SHA-256 values are `8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1` and `394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616`.
+- Package acceptance and model-use recommendation are separate. The reference model is expected to remain `teaching use only` because synthetic data, a four-positive test period, and sparse subgroups do not support deployment or real clinical claims.
 - FND-1 uses the pinned Synthea April 2020 CSV archive as its continuing synthetic source. The database, deterministic defect layer, cohort, and learner release are separate versioned layers.
 - MGH Institute 2026-2027 academic calendar checked: offerings are labeled half-terms and span 49 to 52 elapsed days.
 - Master architecture: `docs/specs/2026-08-29-curriculum-master-architecture-spec.md`.
@@ -193,9 +200,9 @@
 
 ## Next resume instructions
 
-1. Read the master curriculum architecture, this ledger, the FND-1 ownership boundary, and the FND-2 source DOCX from the supplied curriculum archive.
-2. Create the durable FND-2 course specification and source-normalization record before building Module 01.
-3. Preserve the source assessment weights, seven-module sequence, three checkpoints, and 112.5-hour total.
-4. Define what FND-2 owns that FND-1 does not, including its distinct modeling and inference decisions.
-5. Select public or documented synthetic clinical data that support the full FND-2 sequence without restricted data.
-6. Record the next module handoff, version decision, checker updates, commit, and push before building FND-2 Module 01.
+1. Read the FND-2 course specification, FND-2 source record, FND-1 final-checkpoint release, FND-1 Module 04 release, master architecture, and this ledger.
+2. Write the 21-section Module 01 specification around aim classification, prediction time, feature roles, the fixed temporal split, the baseline, and reproducible workspace.
+3. Preserve the accepted 374-row FND-1 analytic table and exact fingerprint as immutable input.
+4. Build the separate modeling cohort, all-29-field role contract, 224/75/75 split, and 25/7/4 positive reconciliation.
+5. Create the aim-and-method exercise, learner template, instructor key, protected builder, standard-library validator, and 15-point draft score.
+6. Update the Commons version and this ledger, then commit and push Module 01 before starting Module 02.

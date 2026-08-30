@@ -65,6 +65,60 @@ if (
     throw 'FND-1 is missing its source fingerprint, assessment weights, ownership boundary, or plain-ASCII punctuation contract.'
 }
 
+$fnd2 = Join-Path $repo 'docs\curriculum\courses\FND-2\course-spec.md'
+$fnd2Source = Join-Path $repo 'docs\source\fnd-2-modeling-inference-reproducible-analytics-source-record.md'
+$fnd2Package = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\README.md'
+if (-not (Test-Path -LiteralPath $fnd2) -or -not (Test-Path -LiteralPath $fnd2Source) -or -not (Test-Path -LiteralPath $fnd2Package)) {
+    throw 'FND-2 must include its course specification, source record, and course package README.'
+}
+$fnd2Content = Get-Content -Raw -LiteralPath $fnd2
+$fnd2SourceContent = Get-Content -Raw -LiteralPath $fnd2Source
+$fnd2PackageContent = Get-Content -Raw -LiteralPath $fnd2Package
+$fnd2ModuleCount = [regex]::Matches($fnd2Content, '(?m)^## Module \d{2} brief:').Count
+$fnd2HourMatches = [regex]::Matches(
+    $fnd2Content,
+    '(?m)^\| \d{2} \| [^|]+ \| \d \| (?<hours>\d+(?:\.\d+)?) \|'
+)
+$fnd2Hours = ($fnd2HourMatches | ForEach-Object { [decimal]$_.Groups['hours'].Value } | Measure-Object -Sum).Sum
+$fnd2CheckpointCount = [regex]::Matches($fnd2Content, '(?m)^## (?:Checkpoint \d|Final checkpoint):').Count
+if (
+    $fnd2ModuleCount -ne 7 -or
+    $fnd2HourMatches.Count -ne 7 -or
+    $fnd2Hours -ne [decimal]112.5 -or
+    $fnd2CheckpointCount -ne 3
+) {
+    throw "FND-2 must define seven modules, seven schedule rows totaling 112.5 hours, and three checkpoints; found $fnd2ModuleCount modules, $($fnd2HourMatches.Count) rows, $fnd2Hours hours, and $fnd2CheckpointCount checkpoints."
+}
+if (
+    $fnd2Content -match '[—–]' -or
+    $fnd2SourceContent -match '[—–]' -or
+    $fnd2PackageContent -match '[—–]' -or
+    $fnd2Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.38\.0' -or
+    $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
+    $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
+    $fnd2SourceContent -notmatch '21,850' -or
+    $fnd2SourceContent -notmatch 'Curriculum-30-Credits-2026-08-29\.zip' -or
+    $fnd2SourceContent -notmatch 'OneDrive_2026-08-29 \(1\)\.zip' -or
+    $fnd2Content -notmatch 'FND-1 and FND-2 are separate straight-through technical foundations' -or
+    $fnd2Content -notmatch '3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a' -or
+    $fnd2Content -notmatch '224, 75, and 75' -or
+    $fnd2Content -notmatch '25, 7, and 4' -or
+    $fnd2Content -notmatch '8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1' -or
+    $fnd2Content -notmatch '394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616' -or
+    $fnd2Content -notmatch 'teaching use only' -or
+    $fnd2Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
+    $fnd2Content -notmatch '15%' -or
+    ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
+    $fnd2Content -notmatch '35%' -or
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.38.0'
+) {
+    throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
+}
+
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
 $fnd1Module01Files = @(
@@ -659,7 +713,6 @@ $fnd1Checkpoint03Scores = Import-Csv -LiteralPath (Join-Path $fnd1Checkpoint03Ro
 $fnd1Checkpoint03Gates = Import-Csv -LiteralPath (Join-Path $fnd1Checkpoint03Root 'reference\gate-results.csv')
 $fnd1Checkpoint03Defense = Import-Csv -LiteralPath (Join-Path $fnd1Checkpoint03Root 'reference\defense-score.csv')
 if (
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.37.0' -or
     $fnd1Checkpoint03Release.checkpoint.version -ne '0.1.0' -or
     $fnd1Checkpoint03Release.checkpoint.commons_release -ne '0.37.0' -or
     $fnd1Checkpoint03Release.checkpoint.course_weight_percent -ne 35 -or
@@ -1338,3 +1391,4 @@ Write-Output "FND-1 Module 07 passed: $fnd1Module07Sections contract sections an
 Write-Output "FND-1 Checkpoint 1 passed: $fnd1Checkpoint01Sections contract sections and $($fnd1Checkpoint01Files.Count) required files."
 Write-Output "FND-1 Checkpoint 2 passed: $fnd1Checkpoint02Sections contract sections and $($fnd1Checkpoint02Files.Count) required files."
 Write-Output "FND-1 final checkpoint passed: $fnd1Checkpoint03Sections contract sections and $($fnd1Checkpoint03Files.Count) required files."
+Write-Output "FND-2 specification passed: $fnd2ModuleCount modules, $fnd2Hours hours, $fnd2CheckpointCount checkpoints."
