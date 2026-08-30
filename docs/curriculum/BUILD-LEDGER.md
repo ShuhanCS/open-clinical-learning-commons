@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.13.0
+- Current release: 0.14.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 02, Perception and visual accuracy
-- Next unit: DA-730 Module 03, Chart selection in practice
+- Last completed unit: DA-730 Module 03, Chart selection in practice
+- Next unit: Reconcile and complete DA-730 Module 04, Distributions versus summaries
 
 ## Confirmed decisions
 
@@ -31,6 +31,9 @@
 - DA-730 Module 02 reuses the Module 01 HCAHPS extract through a 10-row perception-task release with two dot, bar, table, pie, and bubble trials.
 - Module 02 task SHA-256: `b792637411a00c67baa30d70688e5a9b8353cee8a2758251419e84c0c4c1cbe6`.
 - Module 02 build, 12-check validator, 10 stimuli, scorer, two critique charts, assessment, instructor key, and release record are complete as a runnable release candidate.
+- DA-730 Module 03 reuses the Module 01 HCAHPS extract and adds a 10-case chart-selection table covering comparison, lookup, relationship, distribution, time, composition, flow, geography, monitoring, and evidence verification.
+- Module 03 case SHA-256: `0f295bd9bf94e9f5800e4fdaebea303d8cc0b28ccd3afcb01603d8e1c0a2eff8`.
+- Module 03 build, 13-check validator, two HCAHPS charts, one exact-value table, two selection matrices, one flawed-dashboard critique, assessment, instructor key, and release record are complete as a runnable release candidate.
 
 ## Pending confirmation
 
@@ -39,9 +42,9 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, DA-730 course specification, Module 01 encoding map, and Module 02 handoff.
-2. Write `docs/curriculum/courses/DA-730/modules/03-chart-selection-spec.md` using the module specification contract.
-3. Reuse the HCAHPS source where useful and add only a registered source needed to make question-to-display choices meaningfully different.
-4. Build a repeatable selection matrix covering comparison, distribution, time, relationship, lookup, multiple-view, and no-display cases.
-5. Add the learner lesson, three-tier lab, critique set, assessment, instructor notes, accessibility checks, and release record.
-6. Verify the package from a clean module directory before reconciling Module 04.
+1. Read the master architecture, DA-730 course specification, Module 03 handoff, and the existing Module 04 build specification.
+2. Audit the Module 04 synthetic emergency-department package against the current 21-section module contract.
+3. Resolve the documented provenance gap by recording an approved public calibration source or a clearly bounded synthetic-source decision.
+4. Preserve the existing tiered lesson where it satisfies the course contract and add only missing learner, instructor, accessibility, assessment, and release evidence.
+5. Run the full Module 04 package and inspect every generated figure.
+6. Release Module 04 before starting Module 05.

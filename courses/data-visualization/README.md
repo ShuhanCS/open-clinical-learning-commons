@@ -4,7 +4,7 @@ This course teaches people to choose, build, critique, and explain visualization
 
 - Source course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 - Format: three credits, seven weeks, asynchronous online
-- Course status: full course specification complete; Modules 01, 02, and 04 are runnable release candidates
+- Course status: full course specification complete; Modules 01, 02, 03, and 04 are runnable release candidates
 - Default reproducible lab: R and ggplot2
 - Tool policy: Tableau, Python, Power BI, Observable, and other approved tools may be used when the source file is submitted and the result can be reproduced
 
@@ -78,12 +78,15 @@ Vendor-specific menu recall is not a standalone course outcome. A learner may us
 - [Module 02: Perception and visual accuracy](modules/02-perception-accuracy/README.md)
 - [Module 02 specification](../../docs/curriculum/courses/DA-730/modules/02-perception-accuracy-spec.md)
 - [Module 02 release record](modules/02-perception-accuracy/release.json)
+- [Module 03: Chart selection in practice](modules/03-chart-selection/README.md)
+- [Module 03 specification](../../docs/curriculum/courses/DA-730/modules/03-chart-selection-spec.md)
+- [Module 03 release record](modules/03-chart-selection/release.json)
 - [Module 04: Distributions versus summaries](modules/04-distributions-vs-summaries/README.md)
 - [Module 04 build specification](../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 - [Syllabus redesign](syllabus-redesign.md)
 - [Course redesign plan](../../docs/plans/2026-08-26-clinical-data-visualization-course-redesign-plan.md)
 
-Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 04 contains the equivalent teaching package around a synthetic emergency-department dataset. All three remain candidates until their required human reviews are recorded.
+Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 03 uses the same source to choose among comparison, lookup, relationship, and no-display responses through a 10-case matrix. Module 04 contains the equivalent teaching package around a synthetic emergency-department dataset. All four remain candidates until their required human reviews are recorded.
 
 ## Source record
 

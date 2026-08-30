@@ -102,6 +102,28 @@ if ($module02.Release.module.version -ne '0.1.0' -or $module02.Release.data.task
     throw 'DA-730 Module 02 release metadata does not match the 0.1.0, 10-task contract.'
 }
 
+$module03 = Test-ModuleContract `
+    -Label 'Module 03' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\03-chart-selection-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\03-chart-selection') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_selection_cases.R',
+        'validate_selection_cases.R',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\selection_cases_2026.csv'
+    )
+if ($module03.Release.module.version -ne '0.1.0' -or $module03.Release.data.case_rows -ne 10) {
+    throw 'DA-730 Module 03 release metadata does not match the 0.1.0, 10-case contract.'
+}
+
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
 Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
 Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."
+Write-Output "DA-730 $($module03.Label) passed: $($module03.Sections) contract sections and $($module03.FileCount) required files."

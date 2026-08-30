@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.3.0`
+- Register version: `0.4.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -40,7 +40,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 |---|---|---|
 | 01. Encoding and the grammar of graphics | CMS HCAHPS | Released extract: all 65 Massachusetts `H_RECMND_DY` rows from the CMS 2026-08-13 release, including 9 unavailable results and footnotes. |
 | 02. Perception and visual accuracy | CMS HCAHPS | Released 10-trial task table using the Module 01 HCAHPS extract, with two trials each for dot, bar, table, pie, and bubble displays. |
-| 03. Chart selection in practice | CMS hospitals | Planned multi-measure hospital table with result, response-rate, survey-volume, and source fields. |
+| 03. Chart selection in practice | CMS hospitals | Released 10-case decision table plus two HCAHPS charts and one exact-value table using the Module 01 extract. |
 | 04. Distributions versus summaries | Current synthetic teaching release; public calibration pending | Encounter-level emergency-department length of stay with known aggregate and subgroup patterns. |
 | 05. Rates, denominators, and adjustment | CDC PLACES plus ACS | Planned county estimate, population context, denominator, margin of error, and adjustment fields. |
 | 06. Uncertainty, variation, and small numbers | ClinicalTrials.gov or CMS | Planned estimates with sample size and uncertainty, including null and small-number cases. |
@@ -77,6 +77,18 @@ Public access does not automatically permit every reuse. Keep the source terms w
 - Stimuli: 10 matched trials plus 2 critique charts
 - Scoring self-check: 100% correct with zero gap error for a perfect response file
 - Task SHA-256: `b792637411a00c67baa30d70688e5a9b8353cee8a2758251419e84c0c4c1cbe6`
+
+### DA-730 chart-selection release
+
+- Module: DA-730 Module 03, Chart selection in practice
+- Upstream extract: Module 01 CMS HCAHPS Massachusetts recommendation release
+- Case file: `courses/data-visualization/modules/03-chart-selection/data/selection_cases_2026.csv`
+- Source record: `courses/data-visualization/modules/03-chart-selection/source-record.yml`
+- Build: `courses/data-visualization/modules/03-chart-selection/build_selection_cases.R`
+- Validation: 13 of 13 checks pass
+- Cases: 10 question-to-display decisions covering comparison, lookup, relationship, distribution, time, composition, flow, geography, monitoring, and evidence verification
+- Runnable outputs: two HCAHPS charts, one exact lookup table, two matrices, and one intentionally flawed dashboard
+- Case SHA-256: `0f295bd9bf94e9f5800e4fdaebea303d8cc0b28ccd3afcb01603d8e1c0a2eff8`
 
 ## Module 04 provenance gap
 

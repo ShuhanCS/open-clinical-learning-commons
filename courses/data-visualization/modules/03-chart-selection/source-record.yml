@@ -1,0 +1,43 @@
+schema_version: "1.0.0"
+source_id: "oclc-da730-m03-selection-cases-2026"
+title: "DA-730 chart-selection case release"
+creator: "Open Clinical Learning Commons"
+created: "2026-08-29"
+rights:
+  documentation_spdx: "CC-BY-4.0"
+  documentation_url: "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+case_release:
+  path: "data/selection_cases_2026.csv"
+  rows: 10
+  columns: 13
+  sha256: "0f295bd9bf94e9f5800e4fdaebea303d8cc0b28ccd3afcb01603d8e1c0a2eff8"
+  build_script: "build_selection_cases.R"
+  validator: "validate_selection_cases.R"
+upstream_hcahps:
+  publisher: "Centers for Medicare & Medicaid Services"
+  title: "Patient survey (HCAHPS) - Hospital"
+  landing_page: "https://data.cms.gov/provider-data/dataset/dgck-syfz"
+  released: "2026-08-13"
+  coverage_start: "2024-10-01"
+  coverage_end: "2025-09-30"
+  path: "../01-encoding-grammar/data/hcahps_ma_recommend_2026.csv"
+  source_record: "../01-encoding-grammar/source-record.yml"
+  rows: 65
+  sha256: "56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74"
+public_case_sources:
+  - "https://data.cms.gov/provider-data/dataset/dgck-syfz"
+  - "https://synthetichealth.github.io/synthea/"
+  - "https://data.cms.gov/provider-data/dataset/yv7e-xc69"
+  - "https://wonder.cdc.gov/datasets.html"
+  - "https://data.cdc.gov/d/fu4u-a9bh"
+  - "https://data.cms.gov/provider-data/topics/hospitals"
+transformations:
+  - "Created 10 decision-first curricular cases spanning the required reader-task families."
+  - "Built HCAHPS comparison and relationship views from reported rows."
+  - "Created a 15-hospital exact-value table selected by completed survey count."
+  - "Retained one explicit no-display case with an evidence request."
+teaching_use: "Select and defend the smallest useful chart, table, coordinated views, or no-display decision."
+limits:
+  - "Case reference choices are task-specific starting points, not universal rules."
+  - "Several cases define future data requirements without importing those datasets into this module."
+  - "HCAHPS worked views remain descriptive and do not establish cause, statistical distinction, or overall quality."

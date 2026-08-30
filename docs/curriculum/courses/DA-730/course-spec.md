@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.13.0
+- Specification version: 0.14.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -181,6 +181,8 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Lab: complete ten question-to-display decisions, build two, and justify one case where a table is better.
 - Critique: diagnose a dashboard that uses one visual form for every question.
 - Submission: `module-03/selection-matrix.md`, `module-03/analysis.R`, `module-03/figures/`, `module-03/source-record.yml`, `module-03/alt-text.md`, and `module-03/decision-note.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/03-chart-selection-spec.md`.
+- Runnable package: `courses/data-visualization/modules/03-chart-selection/`.
 - Handoff: Module 04 shows why a valid summary and plausible chart may still conceal the decision-relevant structure.
 
 ## Module 04 brief: Distributions versus summaries
@@ -554,7 +556,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01, 02, and 04 are current runnable candidates. Their human reviews remain pending.
+Modules 01, 02, 03, and 04 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 

@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-03",
+    "title": "Chart selection in practice",
+    "version": "0.1.0",
+    "commons_release": "0.14.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "case_id": "oclc-da730-m03-selection-cases-2026",
+    "case_version": "0.1.0",
+    "case_path": "data/selection_cases_2026.csv",
+    "case_rows": 10,
+    "case_columns": 13,
+    "case_sha256": "0f295bd9bf94e9f5800e4fdaebea303d8cc0b28ccd3afcb01603d8e1c0a2eff8",
+    "upstream_path": "../01-encoding-grammar/data/hcahps_ma_recommend_2026.csv",
+    "upstream_sha256": "56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74"
+  },
+  "environment": {
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation_and_cases": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "cms_source_data": {
+      "spdx": "LicenseRef-US-Government-Public-Domain",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "DA-730 course redesign and content ownership"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, case system, teaching assets, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The case validator passed 13 of 13 checks. Two HCAHPS charts, one exact table, two matrices, and the flawed dashboard rendered or exported successfully."
+    },
+    "required_human_roles": [
+      {"role": "visualization faculty and selection fidelity", "reviewer": null, "status": "pending", "date": null},
+      {"role": "hospital executive or clinical content", "reviewer": null, "status": "pending", "date": null},
+      {"role": "accessibility", "reviewer": null, "status": "pending", "date": null},
+      {"role": "independent teachability", "reviewer": null, "status": "pending", "date": null}
+    ]
+  },
+  "validation": {
+    "case_checks": "13 of 13 pass",
+    "lab_execution": "pass: two charts, one table, and two matrices",
+    "critique_execution": "pass: one four-panel flawed dashboard",
+    "visual_preview": "pass after comparison, relationship, and dashboard inspection"
+  },
+  "known_issues": [
+    "Human visualization, executive or clinical, accessibility, and independent-instructor reviews are pending.",
+    "Several cases define data requirements for future modules without importing those source extracts here.",
+    "Reference choices are task-specific starting points and must not become a rigid chart taxonomy.",
+    "The HCAHPS worked examples remain descriptive and do not establish cause, statistical distinction, fair ranking, or total hospital quality.",
+    "AHRQ pages returned a request-blocked title in the automated headless Chromium check, but both exact URLs resolved with full official content through an independent web fetch on 2026-08-29.",
+    "macOS and Linux clean-run verification remains pending."
+  ]
+}
