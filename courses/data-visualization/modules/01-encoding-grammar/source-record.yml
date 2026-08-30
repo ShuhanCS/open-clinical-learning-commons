@@ -1,0 +1,45 @@
+schema_version: "1.0.0"
+source_id: "cms-hcahps-hospital-dgck-syfz-2026-08-13"
+publisher: "Centers for Medicare & Medicaid Services"
+title: "Patient survey (HCAHPS) - Hospital"
+dataset_identifier: "dgck-syfz"
+landing_page: "https://data.cms.gov/provider-data/dataset/dgck-syfz"
+metadata_url: "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/dgck-syfz"
+api_query_url: "https://data.cms.gov/provider-data/api/1/datastore/query/dgck-syfz/0?limit=1500&format=csv&conditions%5B0%5D%5Bproperty%5D=hcahps_measure_id&conditions%5B0%5D%5Bvalue%5D=H_RECMND_DY&conditions%5B0%5D%5Boperator%5D=%3D&conditions%5B1%5D%5Bproperty%5D=state&conditions%5B1%5D%5Bvalue%5D=MA&conditions%5B1%5D%5Boperator%5D=%3D"
+pinned_full_csv_url: "https://data.cms.gov/provider-data/sites/default/files/resources/78a50346fbe828ea0ce2837847af6a7c_1785189950/HCAHPS-Hospital.csv"
+original_filename: "HCAHPS-Hospital.csv"
+original_size_bytes: 105461119
+original_sha256: "b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc"
+data_dictionary_url: "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+issued: "2023-07-05"
+modified: "2026-07-22"
+released: "2026-08-13"
+retrieved: "2026-08-29"
+coverage_start: "2024-10-01"
+coverage_end: "2025-09-30"
+public_access_level: "public"
+rights: "U.S. government public-reporting data are in the public domain; attribution is appreciated and reuse must not imply federal endorsement."
+filters:
+  state: "MA"
+  hcahps_measure_id: "H_RECMND_DY"
+source_rows: 65
+reported_rows: 56
+not_available_rows: 9
+transformations:
+  - "Selected identity, measure, percentage, survey-count, response-rate, footnote, and period fields."
+  - "Renamed fields to stable snake-case names."
+  - "Converted reported numeric text to numbers and CMS unavailable values to blank numeric cells."
+  - "Converted dates to ISO format and sorted by facility_id."
+extract:
+  path: "data/hcahps_ma_recommend_2026.csv"
+  rows: 65
+  columns: 16
+  sha256: "56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74"
+  build_script: "build_hcahps.R"
+  validator: "validate_hcahps.R"
+teaching_use: "Map hospital, recommendation percentage, survey count, reference statistic, release, and reporting period to appropriate visual or documentary roles."
+limits:
+  - "Hospital-level aggregate survey results are not patient records."
+  - "The 15-hospital lab view is selected for readability and is not a clinical peer group."
+  - "The module does not establish statistical significance, causes, intervention effects, or overall hospital quality."
+  - "Unavailable values and CMS footnotes must not be dropped from the source record."

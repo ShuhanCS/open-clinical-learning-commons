@@ -1,7 +1,7 @@
 # Clinical data visualization source register
 
-- Register version: `0.1.0`
-- Retrieved or verified: 2026-08-26
+- Register version: `0.2.0`
+- Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
 ## Required source record
@@ -38,19 +38,33 @@ Public access does not automatically permit every reuse. Keep the source terms w
 
 | Module | Required source | Planned extract |
 |---|---|---|
-| 01. From healthcare question to display | CMS HCAHPS | Selected communication, discharge-information, overall-rating, completed-survey, and response-rate fields. |
-| 02. Categories and comparisons | CMS HCAHPS | Hospital and state comparisons with denominator and footnote fields. |
-| 03. Patient distributions | Synthea; Module 04 teaching release | Encounter-level lengths of stay or another continuous care-process measure. |
-| 04. Change over time | CMS timely care or CDC WONDER | Multi-period process measure or mortality rate with reporting dates. |
-| 05. Relationships | CDC PLACES plus ACS | County estimate, denominator, margin of error, and community context. |
-| 06. Uncertainty and benchmarking | ClinicalTrials.gov or CMS | Reported result estimates with uncertainty, or hospital outcome and volume measures. |
-| 07. Patient journeys and clinical flow | Synthea | Encounter class, condition, procedure, and next state for an explicitly defined cohort. |
-| 08. Clinical networks | ClinicalTrials.gov or Synthea | Sponsor-condition-site relationships or patient-level condition and service links. |
-| 09. Composition and hierarchy | CDC WONDER or openFDA | Cause hierarchy or adverse-event terminology with counts and reporting limits. |
-| 10. Equity and subgroup comparisons | CDC PLACES plus ACS | Population-health measure, demographic context, estimate uncertainty, and geography. |
-| 11. Place and access | CDC PLACES, ACS, and HRSA AHRF | County health measure, population denominator, and workforce ratio. |
-| 12. Clinical dashboards | CMS hospitals | Small measure set for one named hospital audience and monitoring decision. |
-| 13. Capstone | One approved source above | Versioned learner extract with full provenance record. |
+| 01. Encoding and the grammar of graphics | CMS HCAHPS | Released extract: all 65 Massachusetts `H_RECMND_DY` rows from the CMS 2026-08-13 release, including 9 unavailable results and footnotes. |
+| 02. Perception and visual accuracy | CMS HCAHPS | Planned comparison variants using the Module 01 release plus measured reading tasks. |
+| 03. Chart selection in practice | CMS hospitals | Planned multi-measure hospital table with result, response-rate, survey-volume, and source fields. |
+| 04. Distributions versus summaries | Current synthetic teaching release; public calibration pending | Encounter-level emergency-department length of stay with known aggregate and subgroup patterns. |
+| 05. Rates, denominators, and adjustment | CDC PLACES plus ACS | Planned county estimate, population context, denominator, margin of error, and adjustment fields. |
+| 06. Uncertainty, variation, and small numbers | ClinicalTrials.gov or CMS | Planned estimates with sample size and uncertainty, including null and small-number cases. |
+| 07. Color and accessible visual communication | CMS or another released module dataset | Planned clinical quality display variants for screen, print, grayscale, and text alternatives. |
+| 08. Time and process variation | CMS timely care or CDC WONDER | Planned multi-period process measure or mortality rate with reporting dates. |
+| 09. Comparison and small multiples | CMS, CDC PLACES, or module-approved source | Planned repeated measure across hospitals, counties, or patient groups. |
+| 10. Maps, geography, and place | CDC PLACES, ACS, and HRSA AHRF | Planned county health measure, population denominator, geography, and workforce ratio. |
+| 11. Flow, networks, composition, and hierarchy | Synthea, ClinicalTrials.gov, or openFDA | Planned patient transitions, research relationships, or reporting hierarchy with explicit grain. |
+| 12. Dashboards and multi-view composition | CMS hospitals | Planned small hospital monitoring set for one named audience and decision. |
+| 13. Audience, annotation, narrative, and capstone | One approved source above | Versioned learner extract with full provenance record. |
+
+## Released source packages
+
+### CMS HCAHPS Massachusetts recommendation extract
+
+- Module: DA-730 Module 01, Encoding and the grammar of graphics
+- CMS release: 2026-08-13
+- Coverage: 2024-10-01 through 2025-09-30
+- Extract: `courses/data-visualization/modules/01-encoding-grammar/data/hcahps_ma_recommend_2026.csv`
+- Source record: `courses/data-visualization/modules/01-encoding-grammar/source-record.yml`
+- Build: `courses/data-visualization/modules/01-encoding-grammar/build_hcahps.R`
+- Validation: 15 of 15 checks pass
+- Original CMS file: `HCAHPS-Hospital.csv`, 105,461,119 bytes, SHA-256 `b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc`
+- Teaching extract SHA-256: `56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74`
 
 ## Module 04 provenance gap
 

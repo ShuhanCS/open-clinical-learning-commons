@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.11.0
+- Current release: 0.12.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 standalone course specification
-- Next unit: DA-730 Module 01, Encoding and the grammar of graphics
+- Last completed unit: DA-730 Module 01, Encoding and the grammar of graphics
+- Next unit: DA-730 Module 02, Perception and visual accuracy
 
 ## Confirmed decisions
 
@@ -25,6 +25,9 @@
 - `OneDrive_2026-08-29 (1).zip` inspected: same 11 DOCX course files and file sizes.
 - MGH Institute 2026-2027 academic calendar checked: offerings are labeled half-terms and span 49 to 52 elapsed days.
 - Master architecture: `docs/specs/2026-08-29-curriculum-master-architecture-spec.md`.
+- DA-730 Module 01 uses the CMS HCAHPS 2026-08-13 release, filtered to all 65 Massachusetts `H_RECMND_DY` rows. The file contains 56 reported and 9 unavailable results for 2024-10-01 through 2025-09-30.
+- Module 01 teaching extract SHA-256: `56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74`.
+- Module 01 build, 15-check validator, tiered lab, two critique charts, assessment, instructor key, and release record are complete as a runnable release candidate.
 
 ## Pending confirmation
 
@@ -33,9 +36,9 @@
 
 ## Next resume instructions
 
-1. Read the master architecture and `docs/curriculum/courses/DA-730/course-spec.md`.
-2. Read the Module 01 brief and the source discussion of encoding and the grammar of graphics.
-3. Write `docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md` using the module specification contract.
-4. Select and register the exact CMS HCAHPS release and fields used by the worked case.
-5. Build the learner lesson, tiered R lab, critique set, assessment, instructor notes, data checks, and release record.
-6. Verify the package from a clean module directory before moving to Module 02.
+1. Read the master architecture, `docs/curriculum/courses/DA-730/course-spec.md`, and the Module 01 handoff.
+2. Write `docs/curriculum/courses/DA-730/modules/02-perception-accuracy-spec.md` using the module specification contract.
+3. Reuse the Module 01 HCAHPS release unless the perceptual task needs a second explicitly registered dataset.
+4. Build controlled position, length, angle, area, and color comparison tasks with recorded expected answers.
+5. Add the learner lesson, three-tier lab, critique set, assessment, instructor notes, accessibility checks, and release record.
+6. Verify the package from a clean module directory before moving to Module 03.

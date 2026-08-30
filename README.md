@@ -6,12 +6,14 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.11.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The master architecture is approved, and the complete DA-730 course specification now defines 13 concept-first modules, 112.5 learner hours, exact week-3, week-6, and final checkpoint packages, an open-data portfolio, and the module build order. Module-level rebuilding is in progress.
+- Current version: `0.12.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Module 01 is now a runnable release candidate with a pinned CMS HCAHPS extract, tiered lab, critique set, assessment, instructor key, and validation.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
 The first full course specification is [DA-730: Clinical data visualization and decision storytelling](docs/curriculum/courses/DA-730/course-spec.md).
+
+The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
 ## Program course path
 
@@ -46,15 +48,18 @@ The shared [curriculum-data.js](curriculum-data.js) file is the single source fo
 
 ## Current working course example
 
-The first application is DA-730: Analyzing, Visualizing, and Storytelling with Data.
+The first standalone course build is DA-730: Clinical Data Visualization and Decision Storytelling.
 
 The course teaches learners to choose, build, critique, and explain healthcare visualizations based on the decision, the data structure, the audience, and what the display leaves out. Its concept modules are independent of software and clinical domain. R and ggplot2 provide the first lab environment.
 
-The first build is Module 04, Distributions versus summaries. Learners examine an emergency department where median length of stay improves while the longest stays become much worse. They must find the hidden change, choose one chart for leadership, and explain what decision should change. The synthetic reference dataset is included; it is not a stable teaching release until the required reviews are recorded.
+Module 01 is the first complete sequential rebuild. Learners map real CMS HCAHPS variables to marks and channels, compare Massachusetts hospital recommendation results, diagnose two flawed encodings, and submit a reproducible six-file decision package. Module 04 remains a runnable synthetic-data candidate about emergency-department length-of-stay distributions. Both require the recorded human reviews before alpha release.
 
 The public preview also includes a [chart atlas](courses/data-visualization/atlas.html#atlas) covering comparison, distribution, time, relationship, uncertainty, flow, network, composition, place, and dashboard views. Each family includes a healthcare example and matching R code. The complete runnable script is [chart_gallery.R](courses/data-visualization/chart_gallery.R).
 
 - [Data visualization course](courses/data-visualization/README.md)
+- [Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md)
+- [Module 01 specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md)
+- [Module 01 release record](courses/data-visualization/modules/01-encoding-grammar/release.json)
 - [Module 04: Distributions versus summaries](courses/data-visualization/modules/04-distributions-vs-summaries/README.md)
 - [Module 04 build specification](docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 - [Module 04 assessment](courses/data-visualization/modules/04-distributions-vs-summaries/assessment.md)

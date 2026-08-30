@@ -4,7 +4,7 @@ This course teaches people to choose, build, critique, and explain visualization
 
 - Source course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 - Format: three credits, seven weeks, asynchronous online
-- Course status: redesign draft; Module 04 is the first runnable candidate
+- Course status: full course specification complete; Modules 01 and 04 are runnable release candidates
 - Default reproducible lab: R and ggplot2
 - Tool policy: Tableau, Python, Power BI, Observable, and other approved tools may be used when the source file is submitted and the result can be reproduced
 
@@ -30,21 +30,23 @@ See the [course data-source register](data-source-register.md) for approved star
 
 ## Seven-week course structure
 
-| Week | Module | Visualizations | Clinical application | Primary source |
-|---|---|---|---|---|
-| 1 | 01. From healthcare question to display | Tables, bars, dots, lollipops | Compare hospital performance while keeping denominators and sample size visible. | CMS HCAHPS |
-| 1 | 02. Categories and comparisons | Grouped bars, dumbbells, slopegraphs | Compare patient experience or quality measures across hospitals and groups. | CMS HCAHPS |
-| 2 | 03. Patient distributions | Histograms, density, box, violin, ridgeline | Find long waits, multiple care processes, and patient experiences hidden by an average. | Synthea plus the Module 04 teaching release |
-| 2 | 04. Change over time | Line, slope, run, control, calendar heatmap | Separate a sustained process change from ordinary variation and seasonality. | CMS timely care or CDC WONDER |
-| 3 | 05. Relationships | Scatter, bubble, hexbin, regression | Examine relationships among access, outcomes, volume, and community context without implying causation. | CDC PLACES plus Census ACS |
-| 3 | 06. Uncertainty and benchmarking | Intervals, forest plots, caterpillar plots, funnel plots | Show how much confidence a clinical result or hospital comparison deserves. | ClinicalTrials.gov or CMS hospital quality data |
-| 4 | 07. Patient journeys and clinical flow | Sankey, alluvial, cohort funnel, state transition | Show where patients wait, transfer, leave a pathway, or reach an outcome. | Synthea encounters |
-| 4 | 08. Clinical networks | Node-link, adjacency matrix, chord diagram | Examine relationships among conditions, services, trial sites, or referral patterns. | ClinicalTrials.gov or Synthea |
-| 5 | 09. Composition and hierarchy | Stacked bars, treemap, sunburst | Explain how diagnoses, services, or causes contribute to a total without confusing area with rate. | CDC WONDER or openFDA |
-| 5 | 10. Equity and subgroup comparisons | Small multiples, diverging bars, dumbbells, ridgelines | Compare care or outcomes across populations while preserving denominators and uncertainty. | CDC PLACES plus Census ACS |
-| 6 | 11. Place and access | Choropleth, proportional symbol, bivariate map | Locate access gaps and decide where outreach, workforce, or services may be needed. | CDC PLACES, Census ACS, and HRSA AHRF |
-| 6 | 12. Clinical dashboards | KPI cards, sparklines, heatmaps, tables, coordinated views | Monitor a defined care process without compressing every question into one score. | CMS hospital datasets |
-| 7 | 13. Annotation, narrative, and capstone | Annotated figure, board-ready display, accessible table | Communicate sourced evidence and a recommendation to a named healthcare audience. | One approved source from the register |
+| Week | Module | Hours | Primary decision |
+|---|---|---:|---|
+| 1 | 01. Encoding and the grammar of graphics | 7.0 | Which visual channels faithfully represent the variables in this healthcare question? |
+| 1 | 02. Perception and visual accuracy | 8.0 | Which display will the audience read most accurately and quickly? |
+| 2 | 03. Chart selection in practice | 8.0 | Should this question use a chart, table, multiple views, or no display? |
+| 2 | 04. Distributions versus summaries | 8.0 | Does the summary hide a patient group or operational tail that changes the decision? |
+| 3 | 05. Rates, denominators, and adjustment | 8.0 | Does the comparison remain meaningful after population size and denominator differences are visible? |
+| 3 | 06. Uncertainty, variation, and small numbers | 8.5 | How much confidence should the audience place in the difference or trend? |
+| 4 | 07. Color and accessible visual communication | 7.5 | Can every decision owner distinguish the information without relying on color alone? |
+| 4 | 08. Time and process variation | 8.5 | Is the observed change a trend, seasonal pattern, signal, or ordinary variation? |
+| 5 | 09. Comparison and small multiples | 7.5 | How can groups be compared without hiding scale, order, denominators, or within-group variation? |
+| 5 | 10. Maps, geography, and place | 8.5 | Does geography help answer the decision, and what does aggregation conceal? |
+| 6 | 11. Flow, networks, composition, and hierarchy | 8.0 | Which structure best represents a pathway, relationship, or part-to-whole question? |
+| 6 | 12. Dashboards and multi-view composition | 8.5 | What minimum set of views allows a named audience to monitor and act? |
+| 7 | 13. Audience, annotation, narrative, and capstone | 16.5 | How should sourced evidence help a named healthcare audience make and revisit a decision? |
+
+Total learner time is 112.5 hours. The complete course, checkpoint, data, accessibility, AI, and release contracts are in the [DA-730 course specification](../../docs/curriculum/courses/DA-730/course-spec.md).
 
 ## Learning design
 
@@ -67,15 +69,18 @@ Each module follows the same sequence:
 
 Vendor-specific menu recall is not a standalone course outcome. A learner may use an approved tool, but the submission must remain reproducible and the visualization must support the stated healthcare decision.
 
-## Available module
+## Available modules and tools
 
 - [Clinical visualization chart atlas in R](chart_gallery.R)
+- [Module 01: Encoding and the grammar of graphics](modules/01-encoding-grammar/README.md)
+- [Module 01 specification](../../docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md)
+- [Module 01 release record](modules/01-encoding-grammar/release.json)
 - [Module 04: Distributions versus summaries](modules/04-distributions-vs-summaries/README.md)
 - [Module 04 build specification](../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 - [Syllabus redesign](syllabus-redesign.md)
 - [Course redesign plan](../../docs/plans/2026-08-26-clinical-data-visualization-course-redesign-plan.md)
 
-Module 04 contains a synthetic emergency-department dataset, generator, validation checks, R lab, critique charts, assessment, answer key, and release record. It remains a candidate until faculty, emergency department, accessibility, and independent-instructor reviews are recorded.
+Module 01 contains a pinned public CMS HCAHPS extract, reproducible build, validation checks, tiered R lab, critique charts, assessment, instructor key, and release record. Module 04 contains the equivalent teaching package around a synthetic emergency-department dataset. Both remain candidates until their required human reviews are recorded.
 
 ## Source record
 

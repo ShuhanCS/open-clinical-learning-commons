@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.11.0
+- Specification version: 0.12.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -151,6 +151,8 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Lab: rebuild one comparison from table to layered chart and trace each variable-to-channel mapping.
 - Critique: diagnose a chart that maps an ordered measure to unordered color and a chart that uses area for a precise comparison.
 - Submission: `module-01/encoding-map.md`, `module-01/analysis.R`, `module-01/figure.png`, `module-01/source-record.yml`, `module-01/alt-text.md`, and `module-01/decision-note.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md`.
+- Runnable package: `courses/data-visualization/modules/01-encoding-grammar/`.
 - Handoff: Module 02 tests whether those encodings can be read accurately.
 
 ## Module 02 brief: Perception and visual accuracy
@@ -550,7 +552,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Module 04 is the only current runnable candidate. Its human reviews remain pending.
+Modules 01 and 04 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 

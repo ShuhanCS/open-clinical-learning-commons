@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-01",
+    "title": "Encoding and the grammar of graphics",
+    "version": "0.1.0",
+    "commons_release": "0.12.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "id": "cms-hcahps-hospital-dgck-syfz-2026-08-13-ma-recommend",
+    "version": "0.1.0",
+    "path": "data/hcahps_ma_recommend_2026.csv",
+    "synthetic": false,
+    "publisher": "Centers for Medicare & Medicaid Services",
+    "source_release": "2026-08-13",
+    "measurement_period": "2024-10-01 to 2025-09-30",
+    "row_count": 65,
+    "reported_rows": 56,
+    "not_available_rows": 9,
+    "columns": 16,
+    "sha256": "56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74"
+  },
+  "environment": {
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "source_data": {
+      "spdx": "LicenseRef-US-Government-Public-Domain",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "source": {
+    "landing_page": "https://data.cms.gov/provider-data/dataset/dgck-syfz",
+    "metadata": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/dgck-syfz",
+    "original_filename": "HCAHPS-Hospital.csv",
+    "original_size_bytes": 105461119,
+    "original_sha256": "b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc",
+    "record": "source-record.yml",
+    "build_script": "build_hcahps.R",
+    "validator": "validate_hcahps.R"
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "DA-730 course redesign and content ownership"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, data pipeline, teaching assets, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The data validator passed 15 of 15 checks. The build script recreated the extract, and the lab and two critique charts rendered successfully."
+    },
+    "required_human_roles": [
+      {
+        "role": "visualization faculty and source fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "clinical or patient-experience content",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "data_checks": "15 of 15 pass",
+    "build_recreates_extract": "pass",
+    "lab_execution": "pass",
+    "critique_execution": "pass",
+    "visual_preview": "pass after rendered-chart inspection",
+    "measured_results": {
+      "state_rows": 65,
+      "reported_rows": 56,
+      "not_available_rows": 9,
+      "reported_min_percent": 42,
+      "reported_max_percent": 93,
+      "worked_peer_set_rows": 15,
+      "worked_peer_set_spread_percentage_points": 34,
+      "all_reported_hospitals_unweighted_median_percent": 70.5
+    }
+  },
+  "known_issues": [
+    "Human visualization-faculty, patient-experience, accessibility, and independent-instructor reviews are pending.",
+    "The 15-hospital worked view is selected for readability and is not a clinical peer-group definition.",
+    "The module does not teach HCAHPS adjustment, response bias, reliability, uncertainty, or causal interpretation.",
+    "The rebuild script intentionally stops after CMS publishes a different release until an instructor reviews and versions the update."
+  ]
+}
