@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.60.0 through runnable Module 05 and Checkpoint 01.
+- Current Commons release: 0.61.0 through runnable Module 06 and Checkpoint 01.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -278,12 +278,17 @@ The public MEPS review prespecifies four dimensions, 13 source groups, and four 
 - Hours: 16.0.
 - Application block: 8.0 hours.
 - Embedded ML extension: 8.0 hours.
+- Package path: `courses/patient-experience-engagement/modules/06-partnered-improvement-embedded-ml/`.
+- Specification: `docs/curriculum/courses/APP-2/modules/06-partnered-improvement-embedded-ml-spec.md`.
+- Status: runnable release candidate at Commons 0.61.0.
 - Decision: whether the evidence supports a feasible improvement proposal and whether ML changes the response-adjustment decision.
 - Submission: cumulative Week 6 release.
 
 Patient partners record interpretations and disagreements before the team drafts a driver diagram, workflow, measures, burden review, feedback loop, and revision rule.
 
-The ML extension compares a transparent response-propensity or weighting benchmark with one bounded model under the same eligible fields, train/test separation, simulated selection mechanism, and recovery targets. Weight stability, bias recovery, subgroup support, calibration, error costs, and failure cases matter more than one discrimination score.
+The released construction reference labels all eight partnership interpretations as simulated and retains actual named patient or caregiver review as an alpha condition. Its proposal uses a universal offer with phone, mail, web, interpreter-supported, proxy-supported, accessible-format, and no-contact choices. Fourteen measures cover implementation, process, response, outcome, access, burden, accountability, and safety.
+
+The ML extension compares the 13-cell transparent benchmark with one bounded random forest using the same three fields and a fixed 878/377 training and evaluation split. Both methods pass weight-stability rules. The random forest improves the held-out teaching-composite absolute bias by 0.08367520 percentage points, below the prespecified 0.50 threshold, and has a Brier score 0.00172582 worse than the transparent method. It does not change the response-adjustment decision.
 
 The Week 6 package scores Module 04 at 25 points and Module 05 at 20 points. Module 06 gates are required but add no points.
 
@@ -426,7 +431,7 @@ Build Modules 01 through 07 in order. Build each checkpoint after its upstream m
 - Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions before alpha.
 - Complete named review of the accepted 25-file MEPS HC-256 and HC-254D through HC-254G release, linkage rules, denominator decisions, and Module 05 handoff before alpha.
 - Complete named patient, qualitative-methods, equity, accessibility, and language-access review of the accepted synthetic corpus, codebook, group interpretation, and Module 06 handoff before alpha.
-- Define and test the known response-selection generator before Module 06.
+- Retain the tested response-selection generator and obtain named survey-methods and model review before alpha.
 - Confirm R survey and psychometric execution in one supported teaching environment.
 - Assign the official course section and half-term dates before publishing due dates.
 - Named measurement, survey, patient, qualitative, accessibility, equity, governance, model, clinical, and reproduction reviews remain pending before alpha.

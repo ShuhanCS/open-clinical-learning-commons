@@ -1,0 +1,13 @@
+question_id,topic,question,decision_right,reference_status
+Q01,meaning,"What would make discharge warning-sign information understandable when someone is tired, in pain, or worried?",partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q02,help,"What should count as a usable source of help after discharge, including nights and weekends?",partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q03,cost,Where could a feedback or follow-up process create new costs for patients or caregivers?,partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q04,language,"Which interpreter, translated, plain-language, or proxy-supported choices must be offered?",partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q05,disability access,"Which visual, hearing, cognitive, mobility, or fatigue-related access needs should the workflow expect?",partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q06,channel,"What phone, mail, web, in-person, and no-contact choices are needed?",partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q07,privacy,"When could a follow-up contact, proxy, message, or recording create a privacy problem?",partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q08,burden,How much time and repetition would make the process more burdensome than useful?,partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q09,measure,What would patients want measured besides response and item scores?,partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q10,feedback,How and when should results and resulting changes return to patients?,partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q11,disagreement,What should happen when patient partners and the project team interpret the same evidence differently?,partner may add revise defer or stop,simulation prompt; actual response pending before alpha
+Q12,stop rule,What finding or workflow failure should stop or redesign the proposal?,partner may add revise defer or stop,simulation prompt; actual response pending before alpha

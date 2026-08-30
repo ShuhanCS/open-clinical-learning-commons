@@ -1,0 +1,3 @@
+method,threshold,true_negative,false_positive,false_negative,true_positive,false_positive_cost,false_negative_cost,weighted_teaching_cost,claim_limit
+transparent_benchmark,0.60000000,54,88,51,184,2,1,227,error-cost exercise only; not patient value or outreach policy
+bounded_random_forest,0.60000000,57,85,55,180,2,1,225,error-cost exercise only; not patient value or outreach policy

@@ -1,0 +1,14 @@
+input_id,relative_path,rows,fields,bytes,sha256,status
+frame,modules/03-response-representation-bias/data/public/adult-inpatient-frame.csv,1255,19,294946,96e7b493aabf51bdb6c6072e2175ebe560a8ab211287983c6b38e851244e8d4a,accepted exact input
+response,modules/03-response-representation-bias/data/synthetic/response-study.csv,1255,16,271547,eb593a7883c10ff8b83456a4b66b7c8132a3a787d1151d1baf4093d21f10a0af,accepted exact input
+response_contract,modules/03-response-representation-bias/response-contract.json,,,3224,399e60c91895b6ce797b20c9229a21056be7bddb860b469aedc2ab2b8a39b133,accepted exact input
+module03_release,modules/03-response-representation-bias/release.json,,,6161,58e15614fa749d21cccaccc8cd952d114c23ab7cb4b3d87c73b22c5bbad62352,accepted exact input
+module04_release,modules/04-linked-patient-evidence/release.json,,,5063,de31b805351946d644dccc5125deffdffdb993470fbdd74670278c2ca6e7e1d0,accepted exact input
+module05_release,modules/05-patient-voice-equity/release.json,,,5261,a73f007335ac7ce4a3c8b79eeb164b141288b70a6f5d55bf4414b231b6ee22a8,accepted exact input
+voice_contract,modules/05-patient-voice-equity/voice-equity-contract.json,,,1205,43317518d8c65dc3a498083129b2227ff6f877f114185eeb8775a3e550cd42e3,accepted exact input
+group_support,modules/05-patient-voice-equity/outputs/group-support.csv,13,7,2343,dad581097558df657c8ffffb048e071bc51179c4e63e76b946b76661b32647fe,accepted exact input
+group_estimates,modules/05-patient-voice-equity/outputs/group-estimates.csv,52,15,9421,e763215283afd8e841d14118ec9cda1a5a3fba15a4a424a828dcda887ae879d1,accepted exact input
+group_contrasts,modules/05-patient-voice-equity/outputs/group-contrasts.csv,36,12,6433,edacc84e7b63564140b3759cbb88c1c3806018a4e2328375dbf1adae0813ee66,accepted exact input
+channel_audit,modules/05-patient-voice-equity/outputs/channel-exclusion-audit.csv,13,7,2707,7944ce86afa40fdcb41bc559e682e060a51da90e98f60da2a8337afee6606291,accepted exact input
+equity_memo,modules/05-patient-voice-equity/reference/equity-patient-voice-memo.md,,,1594,ebafba2577d706dc838c0ae843eb386633744780ff1f9754c1865d6a54ce4d1f,accepted exact input
+module05_progression,modules/05-patient-voice-equity/reference/progression-decision.md,,,690,bafc2913a5873ca21acd8d3cd32cf11f7d633cfaaf1fe5e30a5ba3f89d6dacad,accepted exact input

@@ -1,0 +1,11 @@
+evidence_id,source,finding,value,use,limit
+E01,Module 03,accepted target frame,1255 frame records,define invited population and denominator,public-derived teaching target
+E02,Module 03,synthetic total response,782 respondents and 473 nonrespondents,monitor returned and missing voice,not observed HCAHPS response
+E03,Module 03,transparent adjustment,13 cells with factors bounded at 3.0,required response benchmark,teaching adjustment only
+E04,Module 04,linked public evidence,1255 people and 28455 events,bound access communication engagement and service questions,descriptive public-derived evidence
+E05,Module 05,synthetic comments,420 generated comments across 8 themes,teach coding and prepare partner questions,not patient testimony prevalence or saturation
+E06,Module 05,human coding benchmark,120 double-coded simulations with kappa 0.77142857,preserve human review,simulated training coders
+E07,Module 05,lower-income delayed-cost contrast,4.02137981 percentage points,ask about cost burden and alternatives,descriptive exploratory teaching contrasts; not proof of inequity or cause
+E08,Module 05,lower-income telehealth contrast,-6.88053616 percentage points,require non-digital alternatives,descriptive exploratory teaching contrasts; not proof of inequity or cause
+E09,Module 05,unsupported estimates,17 of 52 estimates and 17 of 36 contrasts suppressed,retain uncertainty and missing evidence,do not fill blanks or merge groups
+E10,Module 06,patient partnership,simulated construction record only,test the facilitation and documentation package,named actual partner review required before alpha

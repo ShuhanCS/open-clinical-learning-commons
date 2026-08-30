@@ -1,0 +1,1256 @@
+frame_record_id,split,response_status,response_cell,base_person_weight,split_rule
+FRAME-0001,training,respondent,65+|no|middle or high income,16532.17940100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0002,evaluation,respondent,65+|no|middle or high income,6895.35205800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0003,training,nonrespondent,65+|no|middle or high income,10604.87331900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0004,evaluation,respondent,45-64|no|middle or high income,19142.73573500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0005,training,nonrespondent,65+|no|lower income,9953.07901000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0006,training,nonrespondent,65+|no|middle or high income,11307.30487400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0007,training,nonrespondent,45-64|no|middle or high income,21296.91433500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0008,training,respondent,65+|yes|lower income,14629.30223800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0009,training,nonrespondent,18-44|yes|lower income,12202.33663800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0010,training,respondent,45-64|no|lower income,7016.81172400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0011,training,respondent,65+|no|middle or high income,11801.28184900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0012,training,nonrespondent,45-64|yes|middle or high income,20484.29526500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0013,training,nonrespondent,45-64|no|middle or high income,16205.11219400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0014,training,respondent,18-44|no|middle or high income,8293.54538600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0015,training,respondent,18-44|yes|middle or high income,14168.18089400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0016,evaluation,respondent,45-64|no|middle or high income,13835.31011100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0017,training,respondent,65+|no|lower income,14651.75211500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0018,evaluation,nonrespondent,65+|no|middle or high income,13271.02387000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0019,evaluation,nonrespondent,65+|no|lower income,6499.04241300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0020,evaluation,respondent,18-44|yes|middle or high income,29557.58027200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0021,training,nonrespondent,65+|yes|lower income,6083.90013000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0022,training,respondent,65+|no|lower income,2607.20642500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0023,evaluation,respondent,45-64|yes|lower income,4412.66112700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0024,training,nonrespondent,65+|no|lower income,11971.63001100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0025,training,nonrespondent,65+|yes|lower income,6671.41031000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0026,training,respondent,65+|no|middle or high income,11199.31931500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0027,training,nonrespondent,45-64|no|lower income,9067.45989700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0028,training,respondent,65+|no|lower income,5888.24272500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0029,training,nonrespondent,18-44|no|middle or high income,17987.79306000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0030,training,respondent,18-44|no|lower income,13484.43611700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0031,training,respondent,45-64|no|middle or high income,12088.40784000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0032,evaluation,respondent,65+|no|lower income,3258.88165300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0033,evaluation,nonrespondent,45-64|yes|lower income,8662.74429300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0034,evaluation,respondent,45-64|yes|lower income,7291.09035800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0035,evaluation,nonrespondent,18-44|no|middle or high income,14315.67280300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0036,evaluation,respondent,65+|yes|middle or high income,3791.92106000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0037,evaluation,respondent,65+|yes|middle or high income,5469.76111300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0038,training,nonrespondent,65+|no|middle or high income,11295.49281000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0039,evaluation,nonrespondent,65+|no|lower income,5830.64409900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0040,training,respondent,65+|yes|middle or high income,10397.68463900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0041,training,respondent,65+|no|middle or high income,7152.19471300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0042,training,respondent,65+|no|lower income,9957.30077100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0043,training,nonrespondent,65+|no|lower income,7446.38666400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0044,evaluation,nonrespondent,18-44|yes|lower income,1919.10822200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0045,training,nonrespondent,45-64|no|lower income,19570.91620500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0046,training,nonrespondent,45-64|no|middle or high income,25734.12215700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0047,training,respondent,65+|no|lower income,7444.05987700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0048,training,respondent,65+|no|middle or high income,6885.68118600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0049,training,respondent,65+|no|middle or high income,9421.44965600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0050,evaluation,respondent,18-44|no|middle or high income,21099.72770300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0051,training,respondent,45-64|no|middle or high income,14333.69405200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0052,training,respondent,65+|yes|middle or high income,8986.53003400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0053,training,nonrespondent,18-44|yes|middle or high income,24843.78253800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0054,training,respondent,65+|no|middle or high income,17772.15152700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0055,evaluation,respondent,45-64|no|middle or high income,11023.03173000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0056,training,respondent,45-64|no|middle or high income,14610.82631900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0057,evaluation,nonrespondent,18-44|no|middle or high income,14447.26319000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0058,training,nonrespondent,18-44|no|middle or high income,42441.10172900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0059,training,nonrespondent,45-64|no|middle or high income,9639.18829600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0060,training,nonrespondent,65+|yes|middle or high income,35162.05944700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0061,training,nonrespondent,18-44|no|middle or high income,28115.98283800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0062,evaluation,nonrespondent,65+|no|lower income,1441.08050600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0063,training,respondent,45-64|yes|lower income,26908.08085100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0064,training,respondent,65+|no|middle or high income,7193.04299400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0065,training,respondent,65+|yes|lower income,1973.13455300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0066,evaluation,respondent,45-64|no|lower income,14041.00594500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0067,training,nonrespondent,65+|no|middle or high income,7110.57349200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0068,training,nonrespondent,65+|no|middle or high income,9580.58702700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0069,training,nonrespondent,65+|no|lower income,5811.07525100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0070,training,nonrespondent,65+|no|lower income,22335.27216800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0071,training,respondent,65+|no|lower income,19501.67936000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0072,training,respondent,45-64|no|middle or high income,12961.69095600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0073,evaluation,respondent,45-64|no|middle or high income,8822.91281200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0074,evaluation,respondent,18-44|no|middle or high income,10408.95496700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0075,training,respondent,65+|no|lower income,11815.55744000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0076,training,respondent,65+|no|middle or high income,10344.82912900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0077,training,nonrespondent,45-64|no|middle or high income,17897.22070200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0078,evaluation,respondent,65+|no|middle or high income,7820.11237600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0079,evaluation,respondent,45-64|no|middle or high income,14763.75298400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0080,training,respondent,65+|no|middle or high income,14819.97622200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0081,evaluation,respondent,65+|no|middle or high income,10602.47562000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0082,training,nonrespondent,65+|no|middle or high income,29612.59071600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0083,evaluation,respondent,65+|no|middle or high income,7366.70854300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0084,evaluation,nonrespondent,65+|no|lower income,25030.45173600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0085,evaluation,respondent,45-64|no|middle or high income,13208.28289300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0086,training,respondent,18-44|no|lower income,46820.10371100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0087,training,nonrespondent,45-64|no|middle or high income,18945.30936700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0088,evaluation,respondent,65+|no|middle or high income,3739.13948200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0089,training,nonrespondent,45-64|no|middle or high income,11050.58185100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0090,training,nonrespondent,45-64|yes|lower income,11139.88642400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0091,training,respondent,45-64|no|middle or high income,36481.56076600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0092,training,respondent,45-64|no|lower income,11157.10386200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0093,training,respondent,45-64|no|middle or high income,6643.02496500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0094,evaluation,nonrespondent,18-44|no|lower income,3825.96021400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0095,evaluation,nonrespondent,18-44|yes|lower income,3255.20821700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0096,training,respondent,65+|no|middle or high income,20029.03836600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0097,training,respondent,65+|no|middle or high income,18401.27878000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0098,evaluation,nonrespondent,65+|no|middle or high income,11471.89107200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0099,training,nonrespondent,45-64|no|middle or high income,26947.40127100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0100,evaluation,respondent,65+|no|middle or high income,11578.04414800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0101,training,respondent,65+|no|middle or high income,8346.63147100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0102,evaluation,respondent,65+|no|middle or high income,32303.16712400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0103,training,respondent,18-44|yes|middle or high income,20385.64261600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0104,training,respondent,45-64|no|middle or high income,15883.23960000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0105,evaluation,respondent,18-44|no|middle or high income,53999.77823000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0106,training,respondent,65+|no|middle or high income,6245.98246000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0107,training,nonrespondent,65+|no|middle or high income,3200.30161500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0108,training,respondent,65+|no|middle or high income,11756.93472700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0109,training,nonrespondent,65+|no|middle or high income,6291.11819900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0110,evaluation,nonrespondent,65+|yes|lower income,8906.08827800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0111,training,nonrespondent,65+|no|middle or high income,6267.78023800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0112,training,respondent,45-64|no|middle or high income,47560.65441400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0113,evaluation,nonrespondent,65+|no|lower income,9380.19461700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0114,training,nonrespondent,65+|no|middle or high income,14289.15225000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0115,training,respondent,65+|no|lower income,13474.77064200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0116,evaluation,respondent,45-64|no|lower income,19315.94401400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0117,evaluation,respondent,18-44|no|middle or high income,26951.05365300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0118,training,respondent,45-64|no|middle or high income,7403.93450500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0119,training,nonrespondent,65+|no|middle or high income,7878.43934700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0120,training,respondent,65+|no|middle or high income,13082.38355100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0121,training,nonrespondent,65+|no|lower income,4711.53792100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0122,training,respondent,18-44|yes|middle or high income,44420.80070700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0123,evaluation,respondent,65+|no|lower income,9880.44203000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0124,training,respondent,45-64|no|lower income,10487.28487400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0125,training,nonrespondent,45-64|no|lower income,10917.23854800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0126,training,nonrespondent,45-64|yes|middle or high income,9187.48038100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0127,training,nonrespondent,65+|no|lower income,14785.47101800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0128,training,respondent,18-44|yes|middle or high income,17415.01820600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0129,evaluation,nonrespondent,45-64|yes|lower income,14933.42145400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0130,training,respondent,18-44|no|middle or high income,29083.83745600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0131,training,respondent,45-64|no|middle or high income,6842.52213000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0132,training,nonrespondent,18-44|yes|lower income,10563.01312900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0133,training,respondent,65+|no|middle or high income,27398.01703000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0134,training,respondent,18-44|no|lower income,19641.26783500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0135,training,nonrespondent,18-44|no|middle or high income,18710.33524200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0136,evaluation,respondent,65+|no|lower income,12262.19537400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0137,training,respondent,18-44|yes|middle or high income,43133.60803600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0138,training,respondent,45-64|no|middle or high income,35962.32996500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0139,training,respondent,45-64|no|lower income,7957.95002000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0140,training,nonrespondent,45-64|no|middle or high income,27398.27787500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0141,training,respondent,65+|yes|middle or high income,21501.03776100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0142,training,nonrespondent,65+|no|middle or high income,14691.06781800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0143,training,respondent,65+|no|middle or high income,10110.90284400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0144,training,respondent,65+|no|middle or high income,7088.14117100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0145,training,nonrespondent,65+|no|middle or high income,6971.93115000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0146,training,nonrespondent,18-44|no|lower income,18004.02049900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0147,training,respondent,65+|no|lower income,2801.31765800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0148,training,nonrespondent,45-64|no|middle or high income,17133.74624500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0149,evaluation,respondent,65+|no|middle or high income,11381.85124200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0150,training,respondent,18-44|no|middle or high income,13491.01623400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0151,evaluation,respondent,18-44|no|middle or high income,29352.42720000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0152,evaluation,respondent,18-44|no|middle or high income,25076.57737800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0153,training,respondent,65+|no|middle or high income,10549.36820000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0154,evaluation,nonrespondent,65+|no|lower income,5488.56988100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0155,training,respondent,65+|no|lower income,5349.31842600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0156,training,respondent,65+|no|middle or high income,9933.12620500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0157,training,respondent,45-64|yes|lower income,1572.01665900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0158,training,respondent,18-44|no|lower income,8838.49824200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0159,evaluation,respondent,45-64|no|lower income,6883.41051200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0160,training,nonrespondent,45-64|yes|lower income,3684.86549000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0161,training,respondent,18-44|yes|lower income,6250.30588500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0162,training,nonrespondent,18-44|no|lower income,10416.13466000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0163,training,respondent,18-44|no|middle or high income,10853.86486000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0164,training,nonrespondent,18-44|yes|middle or high income,17095.25718400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0165,training,respondent,65+|no|lower income,7683.53289000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0166,training,respondent,65+|no|lower income,6394.68208600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0167,training,respondent,65+|no|lower income,7567.73151600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0168,training,nonrespondent,65+|no|lower income,6959.38515400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0169,training,nonrespondent,45-64|no|middle or high income,21694.69183100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0170,training,nonrespondent,18-44|no|lower income,15686.96906000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0171,evaluation,nonrespondent,65+|no|middle or high income,33632.99686300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0172,training,respondent,65+|no|lower income,4046.89369900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0173,training,respondent,65+|yes|lower income,11728.78611800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0174,training,nonrespondent,65+|no|middle or high income,17927.88029700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0175,evaluation,respondent,65+|no|lower income,6773.06385900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0176,training,respondent,65+|no|lower income,24492.56516100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0177,evaluation,respondent,18-44|no|lower income,28148.11980300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0178,training,nonrespondent,45-64|no|middle or high income,9797.38342900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0179,training,respondent,65+|no|middle or high income,10049.41054800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0180,evaluation,nonrespondent,65+|yes|lower income,3669.46404700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0181,training,nonrespondent,65+|no|middle or high income,3336.39346500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0182,evaluation,respondent,45-64|no|lower income,12460.41609000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0183,training,nonrespondent,45-64|no|lower income,15028.02378400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0184,training,nonrespondent,45-64|no|middle or high income,25511.89627500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0185,training,respondent,18-44|no|middle or high income,67368.96318200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0186,evaluation,respondent,65+|no|lower income,26951.26996400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0187,training,respondent,65+|no|middle or high income,13348.78545600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0188,training,respondent,45-64|yes|lower income,3261.19313600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0189,training,respondent,65+|no|lower income,12645.29363000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0190,training,respondent,45-64|no|lower income,5963.06850000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0191,evaluation,respondent,65+|no|lower income,10695.85325600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0192,training,respondent,65+|no|middle or high income,13956.19226300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0193,training,respondent,65+|no|middle or high income,16488.96372700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0194,evaluation,respondent,45-64|no|lower income,23119.19728400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0195,evaluation,respondent,65+|no|lower income,11311.20049600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0196,training,respondent,45-64|no|lower income,7890.84529000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0197,training,nonrespondent,65+|no|lower income,24138.27861700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0198,training,nonrespondent,18-44|yes|middle or high income,17492.03511600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0199,training,respondent,65+|no|middle or high income,9843.56345200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0200,training,respondent,65+|no|lower income,5384.95273500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0201,training,respondent,65+|no|middle or high income,16686.15628000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0202,training,respondent,18-44|no|middle or high income,29329.72553200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0203,training,respondent,65+|no|middle or high income,5356.23382700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0204,training,respondent,18-44|no|middle or high income,19315.51374100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0205,evaluation,respondent,18-44|yes|middle or high income,34769.91167100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0206,evaluation,respondent,18-44|no|middle or high income,4021.86600400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0207,training,respondent,45-64|yes|lower income,5148.45754400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0208,training,respondent,65+|no|middle or high income,8852.69603000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0209,training,respondent,65+|no|middle or high income,5211.55532900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0210,training,nonrespondent,65+|yes|middle or high income,9961.56835900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0211,training,respondent,18-44|no|middle or high income,20488.73330600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0212,training,nonrespondent,65+|no|middle or high income,5634.54139800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0213,training,nonrespondent,45-64|no|lower income,5345.98520600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0214,training,respondent,65+|yes|lower income,7236.77432500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0215,training,nonrespondent,18-44|no|lower income,45540.24955600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0216,evaluation,nonrespondent,65+|no|lower income,16134.70682700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0217,training,nonrespondent,65+|no|lower income,14253.57959300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0218,training,respondent,65+|no|middle or high income,7876.65037100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0219,training,nonrespondent,65+|no|middle or high income,18398.97911200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0220,training,respondent,18-44|yes|lower income,3731.77007900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0221,training,nonrespondent,65+|no|lower income,10039.29624400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0222,training,nonrespondent,65+|yes|lower income,11090.25869400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0223,training,nonrespondent,45-64|yes|middle or high income,6862.61013100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0224,evaluation,respondent,65+|yes|lower income,11445.42510400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0225,training,respondent,18-44|yes|lower income,18359.04500200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0226,training,respondent,65+|yes|middle or high income,4703.32611600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0227,evaluation,nonrespondent,45-64|yes|middle or high income,4124.68808400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0228,training,nonrespondent,18-44|no|middle or high income,38648.08681200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0229,training,respondent,65+|no|lower income,9614.83832500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0230,training,respondent,65+|no|lower income,4902.68982700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0231,training,nonrespondent,18-44|yes|lower income,15457.73550500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0232,training,respondent,65+|no|lower income,5893.72081000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0233,evaluation,nonrespondent,65+|no|lower income,9736.47068200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0234,evaluation,nonrespondent,45-64|no|middle or high income,28571.24377400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0235,training,respondent,65+|no|middle or high income,9116.73456600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0236,training,respondent,65+|no|middle or high income,8916.27985400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0237,training,respondent,65+|no|middle or high income,8022.36871600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0238,training,respondent,65+|no|lower income,7152.67644500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0239,training,respondent,65+|no|middle or high income,8232.04906100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0240,training,nonrespondent,65+|no|middle or high income,5964.80860400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0241,evaluation,respondent,18-44|no|lower income,18385.44309000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0242,training,nonrespondent,18-44|no|middle or high income,20425.70022000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0243,training,respondent,18-44|no|lower income,9306.88038700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0244,training,nonrespondent,65+|no|middle or high income,36067.36993700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0245,training,nonrespondent,45-64|no|lower income,10353.80389700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0246,training,nonrespondent,65+|no|middle or high income,14342.96636900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0247,evaluation,respondent,65+|no|lower income,2216.35669300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0248,evaluation,respondent,65+|no|middle or high income,17633.00961500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0249,evaluation,respondent,45-64|no|middle or high income,19527.45477100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0250,training,respondent,65+|no|middle or high income,23095.76870000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0251,evaluation,respondent,18-44|no|lower income,28151.31102700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0252,training,respondent,65+|no|lower income,6271.94491300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0253,evaluation,respondent,65+|no|middle or high income,4142.96980500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0254,training,respondent,65+|no|middle or high income,7483.93317600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0255,evaluation,respondent,65+|no|middle or high income,14417.82097300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0256,evaluation,respondent,65+|no|middle or high income,7324.55002800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0257,evaluation,nonrespondent,45-64|no|lower income,4797.50655900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0258,evaluation,nonrespondent,18-44|no|lower income,19619.06351400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0259,evaluation,respondent,65+|no|lower income,3319.90706900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0260,evaluation,respondent,45-64|no|lower income,14974.55829300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0261,training,nonrespondent,65+|no|middle or high income,9081.70110600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0262,training,respondent,65+|no|lower income,8852.11367100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0263,training,respondent,65+|no|middle or high income,20918.18503600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0264,evaluation,nonrespondent,65+|no|middle or high income,4109.26088600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0265,training,respondent,18-44|no|lower income,22082.34329600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0266,evaluation,respondent,45-64|no|middle or high income,12814.77309600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0267,training,respondent,65+|no|middle or high income,11939.42478300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0268,evaluation,nonrespondent,65+|no|middle or high income,24595.78695500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0269,evaluation,respondent,65+|no|middle or high income,11164.28876300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0270,training,nonrespondent,18-44|yes|lower income,4016.75915200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0271,training,respondent,65+|no|middle or high income,14605.50932000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0272,evaluation,respondent,18-44|no|middle or high income,15149.77550700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0273,training,nonrespondent,45-64|no|lower income,8215.89201100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0274,training,respondent,65+|no|lower income,8512.90384400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0275,evaluation,respondent,18-44|no|middle or high income,34266.09073100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0276,evaluation,nonrespondent,65+|no|middle or high income,9525.79954600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0277,evaluation,respondent,18-44|no|lower income,9576.30154200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0278,evaluation,respondent,65+|no|middle or high income,11209.19578900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0279,training,respondent,65+|no|middle or high income,6863.51353400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0280,evaluation,respondent,65+|no|middle or high income,9483.05788500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0281,evaluation,respondent,65+|no|lower income,1926.05360500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0282,training,respondent,65+|no|middle or high income,9581.21528700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0283,training,respondent,18-44|no|lower income,9491.54989400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0284,training,respondent,65+|no|middle or high income,23159.23455400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0285,training,respondent,45-64|no|lower income,20318.95855200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0286,training,respondent,45-64|no|middle or high income,19768.04879500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0287,training,respondent,65+|no|middle or high income,9722.82867200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0288,evaluation,respondent,65+|no|middle or high income,13519.27455400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0289,evaluation,respondent,65+|no|middle or high income,8240.81720200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0290,evaluation,respondent,18-44|no|middle or high income,10517.89419300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0291,training,nonrespondent,18-44|no|lower income,6125.95177600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0292,evaluation,respondent,18-44|no|middle or high income,15695.99944000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0293,evaluation,nonrespondent,65+|yes|lower income,7899.55359800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0294,training,respondent,18-44|no|middle or high income,7480.29886700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0295,evaluation,nonrespondent,18-44|no|middle or high income,10524.46183100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0296,training,respondent,65+|no|middle or high income,9196.60936800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0297,evaluation,respondent,65+|no|lower income,19612.46185500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0298,evaluation,respondent,65+|no|lower income,5742.41130600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0299,evaluation,respondent,65+|no|middle or high income,12822.98131200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0300,training,respondent,18-44|no|middle or high income,10910.08492700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0301,training,respondent,45-64|no|middle or high income,26811.11867900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0302,training,nonrespondent,65+|no|middle or high income,10756.54527400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0303,training,nonrespondent,45-64|no|lower income,17364.43966700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0304,training,respondent,65+|no|middle or high income,6803.49515500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0305,training,respondent,65+|yes|middle or high income,4797.72401700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0306,training,respondent,65+|no|middle or high income,8902.80460800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0307,training,respondent,65+|no|middle or high income,17711.08599300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0308,training,respondent,45-64|no|lower income,11889.53856400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0309,training,respondent,45-64|no|middle or high income,15185.77343100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0310,training,nonrespondent,45-64|no|middle or high income,15587.35816600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0311,evaluation,respondent,45-64|no|middle or high income,10799.12303300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0312,training,respondent,65+|no|middle or high income,12446.58253700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0313,evaluation,nonrespondent,18-44|no|middle or high income,2766.98393400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0314,evaluation,respondent,65+|no|middle or high income,4982.19812100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0315,training,nonrespondent,18-44|no|middle or high income,21804.82586400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0316,training,respondent,65+|yes|lower income,9906.01482000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0317,training,respondent,65+|no|middle or high income,8061.83154100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0318,training,respondent,65+|no|middle or high income,9451.37634200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0319,training,nonrespondent,65+|no|middle or high income,11367.11604800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0320,training,respondent,65+|no|middle or high income,10039.36364100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0321,training,respondent,65+|no|middle or high income,32527.47035700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0322,training,respondent,65+|no|middle or high income,15356.23930200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0323,training,respondent,65+|no|lower income,13756.93411000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0324,training,respondent,65+|no|lower income,18649.29520500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0325,training,respondent,45-64|no|lower income,14747.29862600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0326,evaluation,respondent,65+|yes|lower income,7439.91052400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0327,training,respondent,65+|no|lower income,7302.02588900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0328,evaluation,nonrespondent,18-44|yes|middle or high income,27824.67208200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0329,training,respondent,65+|no|middle or high income,4075.27896500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0330,training,respondent,18-44|no|middle or high income,42775.27762900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0331,evaluation,nonrespondent,18-44|yes|lower income,9318.48022200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0332,training,respondent,18-44|no|middle or high income,18821.99337600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0333,evaluation,respondent,65+|no|middle or high income,6344.47913700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0334,training,nonrespondent,18-44|no|lower income,19297.18423300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0335,evaluation,respondent,65+|no|middle or high income,11210.12212000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0336,evaluation,respondent,65+|yes|lower income,1526.84816700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0337,evaluation,nonrespondent,18-44|no|lower income,6367.84401600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0338,training,respondent,65+|no|middle or high income,21327.06097000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0339,training,nonrespondent,65+|yes|middle or high income,3040.61978600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0340,evaluation,respondent,65+|no|lower income,15888.99024300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0341,evaluation,nonrespondent,65+|no|middle or high income,12155.35467900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0342,training,nonrespondent,45-64|no|lower income,11595.74625500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0343,training,respondent,65+|no|middle or high income,9708.31923900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0344,training,respondent,65+|no|middle or high income,25115.13835500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0345,training,respondent,65+|no|middle or high income,11702.82366600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0346,evaluation,respondent,45-64|no|middle or high income,11579.42088000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0347,evaluation,respondent,45-64|no|middle or high income,55870.52391300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0348,evaluation,respondent,45-64|yes|lower income,10775.58871900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0349,evaluation,nonrespondent,18-44|yes|lower income,6385.58999900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0350,training,respondent,65+|no|middle or high income,10951.74245700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0351,training,respondent,65+|no|middle or high income,13684.38196600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0352,training,nonrespondent,65+|no|middle or high income,22676.14361800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0353,training,respondent,45-64|yes|lower income,5999.94435100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0354,training,respondent,45-64|no|middle or high income,12849.44273100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0355,training,nonrespondent,45-64|no|middle or high income,16367.13110400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0356,training,nonrespondent,65+|no|lower income,13906.36525500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0357,training,respondent,45-64|no|lower income,13258.65626400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0358,evaluation,nonrespondent,45-64|no|lower income,11882.99052600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0359,evaluation,nonrespondent,65+|yes|middle or high income,5385.94903100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0360,training,respondent,65+|no|lower income,7651.70024000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0361,training,nonrespondent,18-44|no|middle or high income,29426.71307500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0362,training,respondent,65+|no|lower income,2762.58516200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0363,training,nonrespondent,65+|no|middle or high income,8684.32169100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0364,training,respondent,45-64|no|middle or high income,14413.32381500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0365,training,nonrespondent,18-44|no|middle or high income,27232.79018500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0366,training,nonrespondent,65+|no|lower income,12924.46670300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0367,evaluation,nonrespondent,65+|no|middle or high income,12645.53965300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0368,training,nonrespondent,65+|no|lower income,6262.52857600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0369,training,respondent,65+|no|middle or high income,11988.95083300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0370,training,respondent,18-44|no|lower income,10768.49024800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0371,evaluation,nonrespondent,45-64|no|middle or high income,35508.74330900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0372,evaluation,respondent,45-64|no|middle or high income,10764.38170500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0373,training,nonrespondent,45-64|no|lower income,8401.58679100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0374,evaluation,respondent,18-44|yes|lower income,48696.66639600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0375,training,respondent,18-44|yes|lower income,4556.41141100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0376,evaluation,nonrespondent,45-64|no|lower income,5136.17772000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0377,training,respondent,18-44|no|middle or high income,18172.98202200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0378,training,nonrespondent,18-44|yes|lower income,8619.20187200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0379,training,respondent,45-64|yes|middle or high income,13926.37964700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0380,training,respondent,45-64|no|middle or high income,12170.43095100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0381,training,respondent,65+|no|middle or high income,9924.54601100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0382,evaluation,nonrespondent,65+|no|lower income,6959.30021400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0383,evaluation,nonrespondent,65+|no|lower income,6696.80060400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0384,training,nonrespondent,45-64|no|lower income,7004.52927100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0385,training,nonrespondent,18-44|yes|lower income,9670.35966900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0386,evaluation,nonrespondent,65+|no|lower income,8745.68241600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0387,training,nonrespondent,45-64|no|lower income,8795.00781900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0388,evaluation,nonrespondent,65+|no|middle or high income,7474.94156300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0389,training,respondent,45-64|no|middle or high income,8291.80370300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0390,training,respondent,65+|no|lower income,22542.67829300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0391,training,nonrespondent,65+|yes|middle or high income,21402.11120100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0392,training,respondent,45-64|no|lower income,13676.58247600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0393,evaluation,nonrespondent,18-44|yes|middle or high income,23794.20983500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0394,training,respondent,65+|no|lower income,1972.86287400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0395,training,nonrespondent,65+|no|lower income,5846.83790600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0396,evaluation,nonrespondent,65+|no|lower income,5379.26916800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0397,training,respondent,65+|yes|middle or high income,39824.95480800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0398,training,respondent,18-44|no|middle or high income,40099.15348500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0399,evaluation,respondent,45-64|yes|middle or high income,12651.95595700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0400,evaluation,nonrespondent,65+|yes|lower income,1927.64018700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0401,evaluation,respondent,65+|no|lower income,22073.35625900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0402,training,respondent,18-44|no|lower income,5081.32303000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0403,training,respondent,45-64|no|lower income,12406.72408700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0404,training,nonrespondent,18-44|no|lower income,12626.86186000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0405,training,nonrespondent,18-44|no|middle or high income,35191.34387700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0406,training,nonrespondent,65+|yes|lower income,6876.82587100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0407,training,nonrespondent,45-64|yes|lower income,5620.24267500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0408,training,respondent,65+|no|middle or high income,12537.15280600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0409,evaluation,nonrespondent,65+|no|lower income,9837.15997600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0410,training,nonrespondent,65+|no|middle or high income,8176.24989200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0411,training,respondent,65+|no|middle or high income,2928.07760300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0412,evaluation,nonrespondent,45-64|no|middle or high income,12061.12189300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0413,training,nonrespondent,65+|yes|middle or high income,33147.78398300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0414,evaluation,nonrespondent,65+|no|middle or high income,18199.40555400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0415,training,nonrespondent,45-64|no|middle or high income,41151.77472700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0416,training,nonrespondent,45-64|no|middle or high income,43341.94930300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0417,training,respondent,65+|no|lower income,6566.63638000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0418,evaluation,nonrespondent,18-44|no|middle or high income,38574.95384600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0419,training,nonrespondent,65+|no|lower income,18522.97323700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0420,evaluation,nonrespondent,18-44|no|lower income,6395.12112600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0421,training,respondent,65+|no|lower income,17433.48767100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0422,training,respondent,18-44|yes|middle or high income,6839.43037300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0423,training,respondent,65+|no|middle or high income,14537.42124100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0424,training,nonrespondent,18-44|no|middle or high income,14884.69027700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0425,training,respondent,65+|yes|lower income,10398.68454100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0426,training,respondent,65+|no|middle or high income,6508.63682800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0427,training,respondent,18-44|yes|middle or high income,16603.97276300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0428,training,respondent,65+|no|middle or high income,12921.53354400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0429,training,respondent,18-44|no|lower income,4783.20911400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0430,training,respondent,45-64|no|lower income,8674.59916000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0431,training,nonrespondent,18-44|no|middle or high income,21899.39411600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0432,training,respondent,65+|no|middle or high income,13351.48740800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0433,training,nonrespondent,65+|no|middle or high income,6968.63072100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0434,training,nonrespondent,65+|no|lower income,1809.70828500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0435,training,nonrespondent,18-44|no|lower income,20060.22243700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0436,training,respondent,45-64|no|middle or high income,6032.19437200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0437,training,respondent,45-64|no|middle or high income,20763.83637500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0438,training,nonrespondent,65+|no|lower income,11264.91582600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0439,training,respondent,65+|no|middle or high income,19083.94583900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0440,training,respondent,65+|no|middle or high income,13202.73054500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0441,training,respondent,45-64|no|lower income,10059.69072000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0442,training,respondent,65+|no|middle or high income,5853.08272800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0443,training,respondent,65+|no|middle or high income,19743.25363700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0444,training,respondent,65+|no|middle or high income,26115.56796300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0445,training,respondent,65+|no|middle or high income,9053.75233600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0446,evaluation,nonrespondent,18-44|yes|lower income,7349.11226000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0447,training,respondent,65+|no|lower income,10289.28010700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0448,training,respondent,18-44|no|middle or high income,9902.50679900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0449,evaluation,respondent,45-64|no|middle or high income,19769.43839100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0450,training,respondent,65+|yes|middle or high income,7562.58660800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0451,evaluation,respondent,18-44|no|lower income,28744.86300600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0452,training,respondent,65+|no|lower income,17404.47348300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0453,training,respondent,45-64|no|lower income,9232.47343700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0454,evaluation,respondent,65+|yes|middle or high income,12852.65496400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0455,evaluation,respondent,18-44|no|middle or high income,57015.93163200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0456,training,respondent,65+|yes|middle or high income,17337.08645300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0457,training,respondent,65+|yes|middle or high income,15702.95668300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0458,training,respondent,65+|no|lower income,4632.99965800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0459,evaluation,respondent,65+|no|middle or high income,5045.66300700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0460,training,respondent,65+|no|middle or high income,5292.01554100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0461,evaluation,respondent,65+|no|lower income,5128.48424400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0462,training,nonrespondent,18-44|no|lower income,8470.69440300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0463,evaluation,respondent,65+|no|middle or high income,12091.65029600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0464,evaluation,respondent,65+|no|middle or high income,2230.34197200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0465,evaluation,nonrespondent,65+|yes|middle or high income,21594.43308500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0466,training,respondent,45-64|no|middle or high income,9996.49144400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0467,training,nonrespondent,18-44|yes|lower income,17322.49918400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0468,training,respondent,65+|no|lower income,15469.95295400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0469,evaluation,respondent,18-44|no|middle or high income,19866.82030300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0470,training,nonrespondent,65+|yes|lower income,7407.27240300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0471,training,nonrespondent,65+|no|lower income,4955.69084700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0472,training,respondent,65+|no|lower income,6060.66734300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0473,evaluation,nonrespondent,65+|no|lower income,8982.85351000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0474,evaluation,respondent,45-64|yes|lower income,21910.98394600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0475,evaluation,respondent,45-64|no|lower income,21086.91163100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0476,training,nonrespondent,18-44|no|lower income,13622.14045400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0477,evaluation,respondent,65+|no|middle or high income,10220.02647600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0478,evaluation,nonrespondent,65+|no|middle or high income,11372.67492300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0479,training,nonrespondent,18-44|no|lower income,7172.84150500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0480,training,respondent,65+|no|lower income,5547.60868200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0481,training,nonrespondent,45-64|yes|middle or high income,9463.91161700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0482,training,nonrespondent,65+|no|lower income,10813.69247800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0483,training,nonrespondent,65+|no|lower income,7476.66428200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0484,training,respondent,65+|no|middle or high income,7550.72984500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0485,training,respondent,65+|no|lower income,12601.57553700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0486,training,respondent,65+|no|middle or high income,11414.22510900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0487,training,respondent,45-64|no|lower income,31856.00491900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0488,evaluation,respondent,45-64|no|middle or high income,17816.11455100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0489,training,respondent,18-44|no|lower income,5880.63219000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0490,evaluation,respondent,65+|no|lower income,11253.49409100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0491,evaluation,respondent,65+|no|lower income,7015.44430000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0492,training,nonrespondent,45-64|no|lower income,4224.13707100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0493,training,respondent,65+|no|middle or high income,24892.89516100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0494,training,respondent,65+|no|middle or high income,14540.01397300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0495,training,nonrespondent,65+|no|middle or high income,11663.08533000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0496,training,nonrespondent,18-44|no|lower income,41480.67252600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0497,training,respondent,65+|no|middle or high income,10180.93888900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0498,training,respondent,65+|no|lower income,12440.12879100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0499,training,nonrespondent,65+|no|middle or high income,49847.96104700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0500,training,nonrespondent,18-44|no|lower income,15613.82492500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0501,training,respondent,65+|no|lower income,9998.74468800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0502,training,nonrespondent,45-64|yes|lower income,4496.56249500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0503,training,respondent,65+|no|middle or high income,9941.02562300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0504,training,respondent,65+|no|middle or high income,7974.72434900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0505,training,respondent,65+|no|lower income,2048.63925900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0506,evaluation,respondent,65+|yes|middle or high income,7941.53750800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0507,training,respondent,18-44|yes|lower income,22898.32983300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0508,evaluation,nonrespondent,65+|no|middle or high income,12305.35808900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0509,evaluation,respondent,65+|no|middle or high income,13125.76674000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0510,evaluation,nonrespondent,65+|no|middle or high income,19515.73178600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0511,training,respondent,45-64|no|lower income,52591.29595600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0512,training,respondent,65+|no|middle or high income,15291.31772800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0513,training,nonrespondent,65+|no|middle or high income,11819.48913100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0514,training,respondent,18-44|no|lower income,4838.50971200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0515,evaluation,respondent,65+|no|middle or high income,6712.96284500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0516,evaluation,nonrespondent,18-44|no|lower income,8915.54683700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0517,training,respondent,65+|no|middle or high income,19936.82036100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0518,training,respondent,45-64|no|lower income,13763.25812000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0519,training,respondent,45-64|no|middle or high income,25124.71155800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0520,training,nonrespondent,18-44|no|lower income,14081.75157800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0521,training,respondent,65+|yes|middle or high income,32869.61141400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0522,training,nonrespondent,65+|no|lower income,9673.66073900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0523,training,respondent,65+|no|middle or high income,9352.22498100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0524,training,respondent,65+|no|middle or high income,4931.25832900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0525,training,respondent,65+|no|middle or high income,6712.96284500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0526,training,respondent,18-44|no|lower income,15428.71048100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0527,training,nonrespondent,65+|no|middle or high income,13871.39834500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0528,training,respondent,65+|no|middle or high income,12081.80535700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0529,training,respondent,18-44|no|lower income,26363.88836400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0530,training,respondent,65+|no|middle or high income,16314.88526500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0531,evaluation,respondent,45-64|no|lower income,16431.61739300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0532,evaluation,nonrespondent,65+|no|middle or high income,6715.97142800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0533,evaluation,respondent,65+|no|middle or high income,9115.11912200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0534,evaluation,respondent,65+|no|middle or high income,5731.20609800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0535,training,nonrespondent,65+|no|middle or high income,6607.32367000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0536,training,nonrespondent,18-44|yes|middle or high income,11124.15153600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0537,training,nonrespondent,45-64|no|lower income,2881.67554200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0538,training,nonrespondent,18-44|no|lower income,9007.03099100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0539,training,respondent,45-64|no|lower income,16517.76597600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0540,training,nonrespondent,45-64|no|lower income,10269.81689200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0541,training,nonrespondent,45-64|no|lower income,11273.98553800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0542,evaluation,respondent,65+|no|lower income,13872.92528500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0543,training,nonrespondent,45-64|no|lower income,8542.60268100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0544,training,respondent,45-64|no|lower income,22818.95415000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0545,evaluation,nonrespondent,65+|no|lower income,6847.22537400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0546,training,nonrespondent,65+|no|lower income,20092.67267200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0547,training,nonrespondent,45-64|no|middle or high income,9343.14320300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0548,training,respondent,65+|no|middle or high income,9970.78975800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0549,training,nonrespondent,65+|no|lower income,7629.42657300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0550,training,nonrespondent,45-64|no|lower income,22942.67700900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0551,training,nonrespondent,45-64|no|lower income,15223.98304000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0552,training,nonrespondent,65+|no|lower income,3053.78709800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0553,training,respondent,65+|no|lower income,28397.18007900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0554,evaluation,respondent,65+|no|lower income,33386.32616100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0555,evaluation,nonrespondent,65+|no|middle or high income,9939.80708100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0556,training,respondent,45-64|no|lower income,2695.23980400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0557,evaluation,respondent,45-64|yes|lower income,28763.47072000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0558,training,nonrespondent,18-44|yes|middle or high income,9028.93077000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0559,training,respondent,18-44|no|lower income,8902.09684700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0560,training,respondent,45-64|no|middle or high income,14958.94030000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0561,training,respondent,45-64|no|middle or high income,14143.07925900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0562,training,respondent,18-44|no|middle or high income,31204.28914800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0563,training,respondent,65+|no|middle or high income,16432.46291000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0564,training,respondent,65+|yes|middle or high income,12449.68446300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0565,training,nonrespondent,65+|no|middle or high income,13982.37277600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0566,evaluation,nonrespondent,65+|no|lower income,9296.20851700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0567,evaluation,nonrespondent,18-44|yes|lower income,8633.49430200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0568,training,respondent,65+|no|middle or high income,9195.25421700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0569,training,respondent,18-44|no|middle or high income,14026.48990300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0570,training,nonrespondent,65+|no|middle or high income,10926.65537800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0571,evaluation,respondent,65+|no|middle or high income,13107.61150700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0572,training,respondent,65+|no|lower income,8511.14052900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0573,training,respondent,45-64|no|lower income,4235.01095700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0574,training,respondent,45-64|no|middle or high income,7654.23358000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0575,training,respondent,65+|no|middle or high income,5920.35549500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0576,training,respondent,65+|no|middle or high income,12232.05449600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0577,training,respondent,45-64|no|middle or high income,23052.87801300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0578,training,respondent,65+|no|lower income,18544.54943700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0579,evaluation,respondent,45-64|no|lower income,13079.30420300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0580,evaluation,respondent,65+|no|middle or high income,18123.04602700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0581,training,respondent,45-64|no|lower income,8358.68006600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0582,training,respondent,65+|no|lower income,8554.65624800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0583,evaluation,nonrespondent,65+|no|middle or high income,13177.13993000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0584,training,respondent,65+|no|middle or high income,9359.81096400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0585,evaluation,nonrespondent,45-64|no|lower income,11987.42270900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0586,training,respondent,45-64|no|middle or high income,9637.85271900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0587,training,respondent,65+|no|middle or high income,12233.90473700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0588,evaluation,respondent,45-64|no|middle or high income,14328.14445500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0589,training,respondent,65+|no|lower income,10227.25648900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0590,training,respondent,65+|no|middle or high income,12988.42279500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0591,evaluation,respondent,18-44|yes|lower income,8375.89192700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0592,training,respondent,18-44|no|middle or high income,51423.71700600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0593,evaluation,respondent,65+|no|lower income,7844.85163300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0594,training,nonrespondent,18-44|no|middle or high income,44310.06166000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0595,training,respondent,45-64|no|middle or high income,7672.42170000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0596,evaluation,nonrespondent,45-64|yes|lower income,21393.62093100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0597,training,nonrespondent,45-64|no|middle or high income,8238.22194600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0598,training,respondent,65+|yes|lower income,9098.01612200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0599,training,respondent,18-44|no|middle or high income,6547.42104000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0600,training,nonrespondent,65+|no|lower income,13775.66353300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0601,training,respondent,65+|no|middle or high income,13569.98345300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0602,training,nonrespondent,45-64|no|middle or high income,5088.91633300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0603,training,respondent,65+|no|lower income,10640.58635700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0604,training,respondent,65+|no|middle or high income,6858.12367200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0605,training,nonrespondent,65+|no|middle or high income,10336.28932300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0606,training,respondent,18-44|no|middle or high income,33582.92561600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0607,training,respondent,65+|no|middle or high income,23465.84555700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0608,evaluation,respondent,65+|yes|middle or high income,6569.35063300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0609,training,respondent,65+|no|lower income,13562.92571200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0610,evaluation,respondent,65+|no|middle or high income,9011.13540000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0611,training,nonrespondent,65+|no|middle or high income,12213.06739900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0612,training,respondent,65+|no|middle or high income,18833.36177600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0613,training,respondent,65+|no|middle or high income,18833.36177600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0614,training,nonrespondent,65+|no|middle or high income,10461.11841800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0615,training,nonrespondent,18-44|no|middle or high income,25683.23285000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0616,training,respondent,65+|no|lower income,16236.12744800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0617,training,respondent,65+|no|middle or high income,12277.52473400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0618,training,respondent,18-44|no|middle or high income,17904.05856400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0619,evaluation,respondent,65+|no|lower income,13118.27320800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0620,evaluation,nonrespondent,65+|yes|middle or high income,29503.69804500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0621,training,nonrespondent,65+|no|lower income,9341.50350800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0622,evaluation,respondent,65+|no|lower income,8283.76697400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0623,training,respondent,65+|no|middle or high income,8954.56223800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0624,training,respondent,65+|no|lower income,12015.20812100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0625,training,respondent,65+|yes|lower income,18631.14898600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0626,evaluation,respondent,45-64|no|middle or high income,12738.49197700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0627,training,nonrespondent,18-44|no|middle or high income,30355.80450500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0628,evaluation,respondent,65+|no|middle or high income,19160.87756900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0629,training,respondent,65+|no|middle or high income,8172.96848900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0630,training,nonrespondent,65+|no|lower income,18098.19248500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0631,evaluation,respondent,65+|no|middle or high income,8264.77518500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0632,training,respondent,45-64|no|middle or high income,15374.10008000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0633,evaluation,respondent,65+|no|middle or high income,13782.06436200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0634,training,respondent,65+|no|lower income,3716.43522400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0635,evaluation,nonrespondent,45-64|no|middle or high income,3625.25420400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0636,training,respondent,18-44|no|middle or high income,15405.44428000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0637,training,respondent,65+|no|middle or high income,23431.60383800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0638,evaluation,respondent,18-44|no|middle or high income,13222.99116200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0639,evaluation,respondent,65+|yes|lower income,6181.37118800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0640,training,nonrespondent,45-64|no|lower income,15494.89639000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0641,training,nonrespondent,45-64|no|middle or high income,13000.03207100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0642,evaluation,respondent,18-44|no|lower income,18652.63121600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0643,training,respondent,18-44|yes|lower income,19784.27357900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0644,training,nonrespondent,65+|no|lower income,7504.91279600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0645,training,respondent,45-64|no|middle or high income,7665.33653500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0646,evaluation,respondent,18-44|no|middle or high income,18361.97267000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0647,training,respondent,65+|no|lower income,13413.55806300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0648,training,respondent,45-64|no|middle or high income,9641.59854300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0649,training,respondent,65+|no|middle or high income,11647.21621100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0650,training,respondent,65+|no|lower income,25499.94675700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0651,training,respondent,45-64|no|lower income,10447.09548200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0652,training,nonrespondent,18-44|no|middle or high income,29317.05606600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0653,training,respondent,18-44|no|lower income,13189.15981300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0654,evaluation,respondent,65+|no|middle or high income,13447.25839300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0655,training,nonrespondent,65+|no|lower income,13043.59282000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0656,evaluation,respondent,65+|no|middle or high income,10947.85383500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0657,training,nonrespondent,45-64|no|lower income,39457.54190900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0658,training,nonrespondent,45-64|no|lower income,16301.25062000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0659,training,respondent,18-44|no|lower income,12650.85627200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0660,evaluation,respondent,45-64|no|middle or high income,6894.08355100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0661,evaluation,respondent,18-44|no|middle or high income,35950.79277200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0662,evaluation,respondent,65+|no|middle or high income,11731.83615300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0663,evaluation,respondent,65+|no|lower income,8155.11151600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0664,training,respondent,65+|no|middle or high income,23150.07645800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0665,evaluation,respondent,45-64|no|middle or high income,26393.43923200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0666,training,nonrespondent,18-44|yes|lower income,17279.06463500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0667,training,respondent,65+|no|middle or high income,19480.01310400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0668,training,nonrespondent,45-64|yes|middle or high income,2751.92511100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0669,training,nonrespondent,45-64|no|middle or high income,11105.15626900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0670,training,respondent,65+|yes|middle or high income,2315.86028400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0671,evaluation,nonrespondent,45-64|no|lower income,9059.28528900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0672,evaluation,respondent,18-44|yes|middle or high income,16593.67960300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0673,training,nonrespondent,18-44|no|middle or high income,17844.86126400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0674,training,nonrespondent,65+|yes|lower income,23665.55549400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0675,training,respondent,65+|no|lower income,16423.27475200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0676,training,respondent,65+|no|middle or high income,9169.59463000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0677,training,respondent,18-44|no|lower income,24141.61007500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0678,evaluation,nonrespondent,18-44|no|middle or high income,23196.54200900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0679,training,respondent,65+|no|middle or high income,8609.12957700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0680,training,nonrespondent,65+|no|middle or high income,19972.44009800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0681,training,nonrespondent,45-64|no|middle or high income,8901.92313000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0682,training,respondent,45-64|no|middle or high income,27651.54835900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0683,training,respondent,45-64|no|middle or high income,31493.01002800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0684,training,nonrespondent,65+|no|lower income,9046.31369400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0685,training,respondent,65+|no|lower income,18909.01524400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0686,evaluation,respondent,65+|no|middle or high income,33076.70752600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0687,evaluation,respondent,65+|no|middle or high income,18571.76679400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0688,evaluation,nonrespondent,65+|no|lower income,9702.11281500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0689,evaluation,respondent,65+|no|middle or high income,12918.19486600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0690,training,respondent,65+|no|middle or high income,4557.76827200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0691,training,nonrespondent,45-64|no|lower income,18384.14634100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0692,training,respondent,18-44|no|middle or high income,28414.23636900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0693,evaluation,nonrespondent,18-44|no|middle or high income,19607.71007200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0694,training,respondent,65+|no|middle or high income,17893.62704100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0695,evaluation,respondent,18-44|no|lower income,14368.14773100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0696,training,respondent,65+|no|middle or high income,9043.22792200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0697,training,respondent,65+|no|middle or high income,9618.16316500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0698,training,respondent,65+|no|middle or high income,7094.19122500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0699,evaluation,respondent,45-64|no|middle or high income,11554.85708300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0700,evaluation,respondent,45-64|no|lower income,11512.77627200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0701,training,respondent,65+|no|lower income,11020.55549200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0702,training,respondent,65+|no|lower income,14616.05672200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0703,training,respondent,18-44|no|middle or high income,17110.78819600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0704,training,respondent,65+|no|middle or high income,8049.72520400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0705,training,respondent,65+|no|middle or high income,9243.19859600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0706,evaluation,respondent,65+|no|lower income,3314.53063000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0707,training,nonrespondent,45-64|no|lower income,21203.24941100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0708,evaluation,nonrespondent,65+|no|lower income,11070.11508900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0709,evaluation,respondent,45-64|no|middle or high income,11953.53951400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0710,evaluation,nonrespondent,45-64|no|middle or high income,12298.76566000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0711,evaluation,nonrespondent,45-64|no|middle or high income,13319.49055100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0712,training,nonrespondent,65+|no|lower income,6491.06271500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0713,training,nonrespondent,65+|no|lower income,4268.13180500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0714,training,respondent,65+|yes|middle or high income,10395.09582800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0715,training,nonrespondent,65+|no|middle or high income,5680.77198400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0716,training,respondent,65+|no|lower income,2803.32070400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0717,training,respondent,18-44|no|lower income,6812.44015800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0718,training,nonrespondent,18-44|no|middle or high income,12816.77315000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0719,training,respondent,45-64|no|middle or high income,5386.33812400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0720,training,nonrespondent,45-64|yes|middle or high income,28352.56015500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0721,training,respondent,65+|no|middle or high income,10909.87970900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0722,training,nonrespondent,65+|no|lower income,5097.26974700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0723,evaluation,nonrespondent,65+|yes|middle or high income,15183.79047800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0724,evaluation,nonrespondent,65+|no|lower income,7092.00408200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0725,training,respondent,65+|no|middle or high income,16100.49871800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0726,evaluation,respondent,65+|no|lower income,10152.34672300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0727,training,respondent,18-44|yes|lower income,8955.58882000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0728,evaluation,nonrespondent,65+|no|middle or high income,25202.39739100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0729,training,respondent,45-64|no|middle or high income,33699.75145600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0730,training,nonrespondent,65+|yes|middle or high income,8447.33541200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0731,training,respondent,65+|no|lower income,17377.46480200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0732,training,nonrespondent,65+|no|lower income,5387.27739600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0733,training,respondent,65+|no|middle or high income,51878.79250900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0734,training,nonrespondent,18-44|no|lower income,19522.30701800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0735,evaluation,respondent,65+|no|lower income,20586.70675000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0736,training,respondent,65+|no|middle or high income,14483.31526400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0737,training,respondent,65+|no|middle or high income,16057.24387500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0738,training,respondent,45-64|no|middle or high income,20050.09464300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0739,training,nonrespondent,45-64|no|lower income,12426.91957400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0740,training,respondent,45-64|no|middle or high income,11388.41013100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0741,training,respondent,65+|no|lower income,6483.20050800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0742,training,respondent,65+|no|lower income,4935.95793200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0743,training,respondent,45-64|no|lower income,47792.21129300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0744,evaluation,respondent,65+|no|middle or high income,10235.74903900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0745,evaluation,respondent,65+|no|middle or high income,10852.04651400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0746,training,respondent,18-44|no|middle or high income,15201.33428700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0747,training,respondent,18-44|no|lower income,18492.01425400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0748,evaluation,respondent,45-64|no|lower income,14552.74858700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0749,training,respondent,45-64|no|lower income,5867.44051600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0750,training,nonrespondent,65+|no|lower income,4019.30035800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0751,training,respondent,65+|no|middle or high income,11726.00386000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0752,training,nonrespondent,45-64|no|middle or high income,13509.72368800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0753,training,respondent,65+|no|middle or high income,12479.80532700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0754,training,nonrespondent,45-64|no|lower income,8963.79602300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0755,training,respondent,65+|no|middle or high income,13388.76351900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0756,training,respondent,65+|no|middle or high income,26229.84035000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0757,evaluation,nonrespondent,65+|no|middle or high income,22579.55551600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0758,evaluation,nonrespondent,45-64|no|lower income,14136.31192800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0759,evaluation,respondent,45-64|no|lower income,10603.03680700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0760,training,respondent,65+|no|middle or high income,9087.23934000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0761,evaluation,respondent,18-44|no|middle or high income,33697.50373100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0762,training,respondent,65+|no|middle or high income,10724.39299500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0763,training,respondent,65+|no|middle or high income,14510.22211400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0764,evaluation,respondent,45-64|no|middle or high income,15464.16399800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0765,evaluation,respondent,65+|no|lower income,3779.20258500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0766,training,nonrespondent,65+|no|middle or high income,20582.13974300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0767,evaluation,respondent,45-64|no|lower income,7208.53751400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0768,training,respondent,65+|no|lower income,7637.50980700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0769,training,respondent,18-44|no|middle or high income,33243.29196000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0770,training,respondent,18-44|no|lower income,15630.40906400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0771,training,respondent,45-64|no|lower income,21389.77140100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0772,training,nonrespondent,18-44|no|lower income,12141.10400400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0773,evaluation,nonrespondent,65+|no|middle or high income,10883.83089700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0774,evaluation,nonrespondent,45-64|yes|lower income,5633.70279600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0775,training,nonrespondent,45-64|no|lower income,6099.66229700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0776,training,nonrespondent,65+|no|lower income,22379.33430700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0777,evaluation,nonrespondent,18-44|no|lower income,8435.55606400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0778,evaluation,nonrespondent,65+|no|middle or high income,13784.14163100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0779,training,respondent,18-44|no|middle or high income,19443.64412000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0780,training,respondent,45-64|no|lower income,9170.71355000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0781,training,nonrespondent,18-44|no|middle or high income,10790.69577600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0782,evaluation,respondent,45-64|no|middle or high income,12695.48573000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0783,training,nonrespondent,65+|no|middle or high income,12334.31207900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0784,training,respondent,65+|no|middle or high income,7855.92930200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0785,training,respondent,65+|yes|lower income,9211.55803000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0786,training,respondent,45-64|no|lower income,17866.45862300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0787,evaluation,respondent,65+|no|lower income,23431.10701000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0788,training,nonrespondent,18-44|no|middle or high income,24522.55402400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0789,evaluation,respondent,65+|no|middle or high income,7729.32179900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0790,evaluation,respondent,45-64|no|middle or high income,10858.40305500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0791,training,respondent,18-44|no|lower income,13524.37824500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0792,training,nonrespondent,18-44|yes|lower income,32371.48802900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0793,training,respondent,65+|no|middle or high income,19464.67912400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0794,evaluation,respondent,65+|yes|middle or high income,15324.17278400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0795,training,respondent,65+|no|middle or high income,14295.86315500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0796,training,respondent,45-64|yes|middle or high income,36227.85071800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0797,training,respondent,65+|no|middle or high income,23107.62848200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0798,training,respondent,45-64|no|middle or high income,16568.64168100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0799,training,nonrespondent,18-44|no|lower income,25449.43184000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0800,training,respondent,18-44|no|lower income,23132.39586800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0801,training,nonrespondent,65+|no|middle or high income,34006.55957500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0802,training,respondent,45-64|no|lower income,10821.34882200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0803,evaluation,nonrespondent,45-64|no|lower income,8255.67402100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0804,training,nonrespondent,45-64|no|middle or high income,13857.54674400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0805,training,respondent,18-44|no|middle or high income,36875.69817500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0806,evaluation,respondent,65+|no|middle or high income,24845.14596000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0807,training,nonrespondent,45-64|no|middle or high income,13029.00122200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0808,training,nonrespondent,65+|no|middle or high income,19003.78182600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0809,evaluation,respondent,65+|no|middle or high income,17199.36929500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0810,training,nonrespondent,18-44|yes|lower income,33899.20661900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0811,training,respondent,65+|no|middle or high income,14185.71696500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0812,training,respondent,45-64|yes|middle or high income,10789.56073100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0813,training,respondent,18-44|no|middle or high income,59532.57180200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0814,training,nonrespondent,65+|no|middle or high income,13564.68715800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0815,training,respondent,65+|no|middle or high income,13619.27377600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0816,training,respondent,65+|no|middle or high income,11243.19345600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0817,training,nonrespondent,45-64|no|lower income,9595.02705900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0818,training,respondent,18-44|no|middle or high income,32580.12326600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0819,training,nonrespondent,18-44|yes|middle or high income,7696.98013300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0820,training,respondent,45-64|missing or inapplicable|middle or high income,16718.94833400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0821,training,respondent,65+|no|middle or high income,17409.23077900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0822,evaluation,respondent,65+|no|middle or high income,16857.71853900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0823,evaluation,respondent,65+|no|middle or high income,21436.96373000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0824,evaluation,nonrespondent,65+|no|lower income,17129.12201100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0825,training,respondent,65+|no|middle or high income,9864.01681900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0826,training,respondent,18-44|yes|middle or high income,30369.01031200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0827,training,nonrespondent,65+|yes|middle or high income,21235.61228700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0828,training,respondent,65+|no|lower income,15252.99456100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0829,training,respondent,45-64|no|lower income,18888.00667600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0830,evaluation,respondent,65+|no|middle or high income,8435.49101300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0831,evaluation,nonrespondent,18-44|no|lower income,24933.76733200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0832,evaluation,respondent,65+|no|middle or high income,11119.74702200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0833,evaluation,respondent,45-64|no|middle or high income,24886.41975400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0834,training,nonrespondent,65+|no|middle or high income,2826.65170100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0835,training,nonrespondent,65+|no|middle or high income,2706.07907900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0836,evaluation,respondent,65+|no|lower income,3837.10777900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0837,training,nonrespondent,18-44|yes|middle or high income,16517.13433100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0838,evaluation,respondent,65+|no|middle or high income,9966.05402000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0839,evaluation,nonrespondent,45-64|no|lower income,25939.31584600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0840,training,respondent,45-64|no|middle or high income,42729.67912400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0841,training,nonrespondent,18-44|no|middle or high income,27806.68380300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0842,training,respondent,65+|no|middle or high income,4011.40528900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0843,evaluation,respondent,18-44|no|middle or high income,44639.47451300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0844,training,nonrespondent,45-64|no|middle or high income,9098.88646300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0845,training,respondent,45-64|no|middle or high income,21991.41783000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0846,training,respondent,65+|no|lower income,19499.55174100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0847,training,respondent,65+|no|middle or high income,6559.35352800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0848,training,nonrespondent,45-64|no|middle or high income,37528.22962600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0849,training,nonrespondent,18-44|yes|lower income,10227.43306900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0850,evaluation,nonrespondent,18-44|yes|lower income,24634.62905400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0851,training,respondent,18-44|no|middle or high income,31981.04384700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0852,evaluation,nonrespondent,18-44|no|lower income,15658.11492100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0853,evaluation,respondent,18-44|no|middle or high income,16253.78993000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0854,training,respondent,65+|no|lower income,15636.06159500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0855,training,nonrespondent,45-64|yes|middle or high income,28025.07224600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0856,training,respondent,65+|no|middle or high income,31068.70345000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0857,training,respondent,65+|no|middle or high income,20539.29152700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0858,training,nonrespondent,65+|no|middle or high income,32332.70660900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0859,training,respondent,65+|no|middle or high income,12938.11213700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0860,training,respondent,65+|yes|middle or high income,7142.43968300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0861,training,nonrespondent,45-64|yes|middle or high income,5959.43366700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0862,evaluation,respondent,45-64|no|middle or high income,9416.29712800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0863,evaluation,respondent,18-44|no|lower income,27037.21203300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0864,training,nonrespondent,65+|no|lower income,1500.57618700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0865,training,nonrespondent,45-64|no|middle or high income,26018.70276700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0866,training,nonrespondent,65+|yes|lower income,14115.68719000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0867,evaluation,respondent,65+|no|lower income,27340.82771100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0868,training,respondent,65+|no|middle or high income,14742.09223800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0869,evaluation,respondent,45-64|no|lower income,7049.26805800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0870,evaluation,respondent,18-44|no|middle or high income,24305.16424400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0871,training,respondent,65+|no|middle or high income,11244.65678300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0872,evaluation,respondent,45-64|no|lower income,2854.04247800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0873,training,nonrespondent,65+|no|middle or high income,8911.90036600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0874,evaluation,respondent,65+|no|middle or high income,16314.91222300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0875,evaluation,respondent,65+|no|middle or high income,8906.69377300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0876,training,respondent,18-44|no|middle or high income,20625.51901800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0877,evaluation,respondent,45-64|no|middle or high income,18944.62763400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0878,evaluation,nonrespondent,65+|yes|lower income,4233.46949800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0879,training,respondent,18-44|no|lower income,22223.41029200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0880,training,respondent,65+|no|middle or high income,18678.87705800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0881,training,nonrespondent,18-44|no|lower income,14716.95055700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0882,training,nonrespondent,65+|no|middle or high income,16955.68779800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0883,training,respondent,65+|no|middle or high income,7141.11777800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0884,training,nonrespondent,18-44|no|middle or high income,31119.86967800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0885,training,nonrespondent,65+|no|middle or high income,30464.00066500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0886,training,respondent,45-64|no|lower income,10140.44820100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0887,training,respondent,45-64|no|lower income,9236.89835400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0888,evaluation,nonrespondent,18-44|no|middle or high income,30281.80775100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0889,training,respondent,65+|no|middle or high income,10319.60810600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0890,evaluation,nonrespondent,65+|yes|lower income,4700.02828700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0891,evaluation,respondent,65+|no|lower income,12989.71478400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0892,training,respondent,18-44|yes|middle or high income,25289.94744300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0893,evaluation,nonrespondent,65+|yes|lower income,8111.04516500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0894,evaluation,respondent,45-64|no|lower income,7651.23817700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0895,evaluation,nonrespondent,65+|yes|middle or high income,19737.57580400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0896,evaluation,respondent,18-44|no|lower income,17195.63519300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0897,training,respondent,65+|no|middle or high income,14808.88156500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0898,evaluation,respondent,45-64|no|lower income,9068.07567300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0899,training,respondent,65+|no|middle or high income,21676.84165900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0900,training,respondent,18-44|yes|middle or high income,27008.44226100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0901,training,respondent,45-64|yes|lower income,19997.33865000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0902,training,nonrespondent,45-64|no|lower income,3218.74061600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0903,training,respondent,65+|no|lower income,18833.71090200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0904,training,nonrespondent,45-64|no|lower income,25566.33817100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0905,training,respondent,45-64|no|lower income,6453.94105100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0906,training,nonrespondent,45-64|no|lower income,14518.13887500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0907,training,respondent,45-64|no|lower income,25385.75936100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0908,evaluation,respondent,45-64|no|middle or high income,14882.43992900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0909,training,nonrespondent,45-64|no|lower income,20220.93930400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0910,training,nonrespondent,18-44|no|lower income,23161.30095100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0911,training,respondent,45-64|no|middle or high income,46566.49339400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0912,training,nonrespondent,65+|no|middle or high income,16318.45052900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0913,training,nonrespondent,18-44|yes|middle or high income,17481.44170400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0914,training,respondent,45-64|no|lower income,11689.87175200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0915,training,respondent,65+|no|middle or high income,21281.65922000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0916,training,respondent,45-64|no|lower income,12168.26654300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0917,evaluation,nonrespondent,65+|no|lower income,12864.03766600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0918,evaluation,nonrespondent,45-64|no|lower income,7177.32387900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0919,evaluation,nonrespondent,18-44|yes|lower income,33196.90539500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0920,training,nonrespondent,65+|no|middle or high income,12006.66296000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0921,training,nonrespondent,45-64|no|lower income,11991.48462800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0922,training,respondent,65+|yes|lower income,2172.60832200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0923,training,respondent,65+|no|lower income,14183.78759300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0924,training,respondent,65+|no|middle or high income,23176.72778500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0925,evaluation,respondent,18-44|no|middle or high income,30277.63095500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0926,training,respondent,65+|no|lower income,15175.35951500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0927,evaluation,nonrespondent,65+|no|lower income,17984.34947300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0928,training,nonrespondent,18-44|yes|lower income,15065.81653800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0929,evaluation,nonrespondent,45-64|no|lower income,13508.37352900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0930,training,nonrespondent,65+|yes|lower income,10173.81767900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0931,training,respondent,18-44|yes|lower income,17154.97162500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0932,training,respondent,65+|no|middle or high income,25221.67707900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0933,training,respondent,45-64|no|middle or high income,12979.33704400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0934,training,nonrespondent,65+|yes|middle or high income,20944.64134000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0935,evaluation,respondent,18-44|no|middle or high income,11760.97273900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0936,evaluation,nonrespondent,65+|no|middle or high income,17079.58792900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0937,evaluation,nonrespondent,45-64|no|middle or high income,15134.94718200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0938,training,respondent,65+|no|lower income,7721.70065600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0939,evaluation,respondent,45-64|no|middle or high income,12262.51340800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0940,training,nonrespondent,65+|no|middle or high income,7747.20884000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0941,training,nonrespondent,65+|no|middle or high income,18206.25842700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0942,training,respondent,65+|no|lower income,4715.78964900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0943,training,respondent,65+|yes|middle or high income,2575.65031300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0944,training,respondent,45-64|yes|middle or high income,3608.69284200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0945,training,respondent,65+|no|middle or high income,26551.20104500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0946,training,respondent,18-44|yes|middle or high income,34087.21744300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0947,training,respondent,45-64|no|middle or high income,49027.80343300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0948,training,respondent,65+|no|lower income,4034.52638400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0949,training,nonrespondent,65+|no|lower income,30304.42409000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0950,evaluation,respondent,45-64|no|lower income,4643.64622700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0951,training,respondent,65+|no|lower income,18128.98279800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0952,training,respondent,18-44|no|middle or high income,19638.26415800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0953,training,respondent,65+|yes|lower income,6391.24298600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0954,evaluation,nonrespondent,18-44|yes|lower income,31159.47080000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0955,training,respondent,65+|no|middle or high income,11295.07702700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0956,evaluation,respondent,45-64|no|middle or high income,29471.19057100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0957,evaluation,nonrespondent,65+|yes|lower income,5870.32440000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0958,training,respondent,45-64|no|lower income,18753.60245100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0959,training,respondent,18-44|yes|lower income,25563.89098400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0960,training,nonrespondent,18-44|yes|lower income,15027.25226700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0961,training,respondent,45-64|no|lower income,13877.80520000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0962,training,nonrespondent,65+|no|lower income,13148.67458700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0963,evaluation,nonrespondent,18-44|yes|lower income,10934.42624500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0964,evaluation,respondent,18-44|yes|lower income,14452.77952300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0965,training,nonrespondent,65+|no|lower income,15258.68117900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0966,evaluation,nonrespondent,45-64|yes|lower income,6916.57239500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0967,evaluation,nonrespondent,65+|yes|lower income,8491.40821000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0968,evaluation,respondent,18-44|no|middle or high income,32681.87926700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0969,training,respondent,65+|no|middle or high income,9813.42751900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0970,evaluation,respondent,65+|no|middle or high income,10205.52775900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0971,training,respondent,18-44|no|lower income,22647.67447900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0972,evaluation,respondent,65+|no|lower income,12343.78648100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0973,training,respondent,65+|yes|lower income,4419.62414800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0974,evaluation,respondent,65+|no|middle or high income,9751.89382000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0975,evaluation,nonrespondent,65+|no|lower income,14172.84851100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0976,training,respondent,65+|no|lower income,2541.92435400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0977,training,nonrespondent,65+|no|middle or high income,9827.57410500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0978,evaluation,respondent,65+|no|middle or high income,11695.72378700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0979,training,respondent,65+|no|middle or high income,6484.52284200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0980,training,respondent,65+|no|middle or high income,21059.24858000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0981,training,nonrespondent,45-64|no|lower income,5281.64184300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0982,evaluation,nonrespondent,65+|no|lower income,11215.01925600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0983,training,respondent,45-64|yes|middle or high income,19138.12988600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0984,training,respondent,65+|no|middle or high income,8971.57219100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0985,training,nonrespondent,65+|no|middle or high income,10724.09396400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0986,evaluation,nonrespondent,45-64|no|lower income,27150.04330000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0987,training,respondent,18-44|no|middle or high income,17532.20231100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0988,training,nonrespondent,18-44|no|middle or high income,23585.40454500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0989,evaluation,respondent,18-44|no|lower income,4449.74241200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0990,evaluation,respondent,45-64|no|lower income,23836.71570900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0991,training,respondent,18-44|no|middle or high income,3328.11811800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0992,training,respondent,65+|no|lower income,12377.72809400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0993,training,nonrespondent,45-64|yes|lower income,8144.25167700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0994,training,nonrespondent,65+|no|middle or high income,11931.40615800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0995,training,nonrespondent,45-64|yes|lower income,30993.37201900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0996,training,respondent,65+|yes|middle or high income,13082.64845800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0997,evaluation,nonrespondent,65+|yes|middle or high income,35105.10394500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0998,training,respondent,65+|no|lower income,14303.15226700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-0999,training,respondent,65+|no|middle or high income,13101.14476500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1000,training,respondent,45-64|no|lower income,13359.37346400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1001,training,respondent,65+|no|lower income,7223.45615600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1002,training,nonrespondent,45-64|yes|lower income,14579.27919900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1003,training,nonrespondent,18-44|no|middle or high income,6513.04497100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1004,training,respondent,18-44|no|middle or high income,14016.14659600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1005,evaluation,nonrespondent,45-64|no|middle or high income,15737.62129000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1006,training,respondent,45-64|no|middle or high income,20454.84278500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1007,training,nonrespondent,65+|yes|middle or high income,10438.06201400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1008,training,nonrespondent,18-44|yes|middle or high income,25484.64326500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1009,training,respondent,65+|no|middle or high income,4220.71070500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1010,evaluation,respondent,45-64|yes|middle or high income,18253.73870300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1011,evaluation,nonrespondent,45-64|no|lower income,11755.00576000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1012,training,respondent,45-64|no|middle or high income,7237.87083300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1013,training,nonrespondent,45-64|no|lower income,12975.21360400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1014,training,respondent,45-64|no|lower income,9466.91964000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1015,training,respondent,18-44|no|lower income,9568.18769800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1016,training,respondent,18-44|no|lower income,26179.91833900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1017,training,nonrespondent,65+|no|lower income,13163.02618100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1018,evaluation,nonrespondent,18-44|yes|lower income,19726.57935400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1019,training,respondent,65+|no|middle or high income,7665.09753000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1020,evaluation,nonrespondent,45-64|yes|lower income,6256.43089400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1021,training,nonrespondent,18-44|yes|lower income,18264.26830700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1022,training,nonrespondent,65+|yes|lower income,14530.98639000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1023,training,nonrespondent,45-64|no|middle or high income,8120.55931800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1024,training,respondent,65+|no|lower income,17631.70323500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1025,training,nonrespondent,45-64|yes|middle or high income,10745.36783500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1026,training,nonrespondent,18-44|yes|lower income,4066.86507100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1027,evaluation,nonrespondent,45-64|no|lower income,14813.31456000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1028,evaluation,nonrespondent,18-44|no|middle or high income,48712.44122200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1029,training,respondent,45-64|no|lower income,14574.09349200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1030,training,respondent,65+|no|middle or high income,12565.05435300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1031,training,nonrespondent,18-44|no|middle or high income,33953.20828200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1032,evaluation,nonrespondent,65+|yes|middle or high income,4102.14301000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1033,training,respondent,65+|no|middle or high income,20397.21023800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1034,training,nonrespondent,65+|no|lower income,9696.11670600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1035,evaluation,nonrespondent,18-44|no|lower income,11018.07841700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1036,evaluation,nonrespondent,65+|yes|lower income,4122.38259100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1037,training,nonrespondent,18-44|yes|lower income,8845.41800700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1038,training,nonrespondent,65+|no|lower income,9799.24840500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1039,training,respondent,45-64|no|lower income,2872.42763900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1040,evaluation,respondent,65+|no|lower income,7299.37616200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1041,training,respondent,65+|no|middle or high income,17350.90670500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1042,training,respondent,18-44|yes|lower income,1995.65358700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1043,training,respondent,65+|yes|middle or high income,29547.92150900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1044,evaluation,respondent,45-64|no|lower income,4946.45170300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1045,training,respondent,18-44|no|middle or high income,18789.90058200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1046,training,nonrespondent,65+|yes|lower income,6049.64826800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1047,evaluation,respondent,65+|no|middle or high income,15394.63168700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1048,training,respondent,65+|no|lower income,15155.63623400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1049,training,respondent,65+|yes|lower income,8974.98330900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1050,training,respondent,65+|no|middle or high income,21328.69977900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1051,training,nonrespondent,65+|no|middle or high income,7843.68021200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1052,training,nonrespondent,45-64|no|lower income,5858.41994900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1053,training,nonrespondent,45-64|no|lower income,8746.81591400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1054,training,respondent,65+|yes|middle or high income,13942.23740600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1055,training,respondent,65+|no|middle or high income,14490.32625300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1056,training,respondent,18-44|no|middle or high income,37166.21340800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1057,training,respondent,45-64|no|lower income,10463.90378000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1058,training,respondent,65+|no|lower income,14958.88661800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1059,training,nonrespondent,45-64|yes|lower income,10787.94752000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1060,training,respondent,18-44|no|lower income,13089.79787300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1061,training,respondent,45-64|no|middle or high income,22772.06325100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1062,evaluation,respondent,65+|no|middle or high income,16783.28004900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1063,training,nonrespondent,18-44|no|lower income,11456.07221800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1064,training,respondent,45-64|no|lower income,19322.76905200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1065,training,nonrespondent,65+|no|lower income,10528.04235100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1066,evaluation,respondent,65+|no|middle or high income,10649.35454700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1067,evaluation,respondent,65+|no|middle or high income,27575.69904300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1068,training,nonrespondent,65+|no|middle or high income,15609.90320500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1069,training,respondent,45-64|no|lower income,12291.71086300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1070,evaluation,nonrespondent,65+|no|middle or high income,11960.87453700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1071,training,respondent,45-64|no|middle or high income,23930.26394200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1072,training,respondent,45-64|no|middle or high income,25496.97568100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1073,training,respondent,18-44|no|lower income,18159.72370500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1074,training,respondent,45-64|no|middle or high income,18495.40617300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1075,training,respondent,65+|no|middle or high income,13891.10034400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1076,evaluation,respondent,65+|yes|lower income,1370.54369300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1077,evaluation,respondent,65+|no|middle or high income,13353.09919200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1078,training,respondent,65+|yes|lower income,25916.75271700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1079,training,nonrespondent,18-44|no|lower income,9391.68906400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1080,training,respondent,65+|no|lower income,9235.93497000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1081,training,nonrespondent,45-64|no|middle or high income,15921.39929900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1082,training,nonrespondent,65+|no|lower income,7379.37860100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1083,training,nonrespondent,45-64|no|lower income,8770.94838700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1084,training,respondent,65+|no|middle or high income,6404.92221500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1085,evaluation,respondent,65+|no|middle or high income,8336.21465500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1086,training,respondent,65+|no|middle or high income,13599.67050100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1087,evaluation,nonrespondent,18-44|no|middle or high income,16495.06606600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1088,training,respondent,45-64|no|middle or high income,16328.70903000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1089,training,respondent,45-64|no|lower income,17708.60000400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1090,training,respondent,65+|no|lower income,12540.79653600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1091,training,nonrespondent,45-64|no|middle or high income,18663.00181700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1092,evaluation,respondent,65+|no|lower income,13669.28476700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1093,training,respondent,65+|no|lower income,18905.90174500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1094,evaluation,respondent,65+|no|middle or high income,9739.91228700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1095,evaluation,nonrespondent,65+|no|middle or high income,7048.23436900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1096,training,nonrespondent,18-44|no|lower income,19537.12760700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1097,evaluation,respondent,65+|no|middle or high income,8885.83786000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1098,evaluation,nonrespondent,65+|yes|lower income,20198.52749700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1099,training,nonrespondent,65+|no|middle or high income,6949.65398800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1100,training,respondent,18-44|no|lower income,23118.34929700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1101,training,respondent,65+|no|middle or high income,12660.37724600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1102,training,nonrespondent,65+|no|middle or high income,12511.78262800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1103,training,nonrespondent,18-44|no|lower income,12342.82908800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1104,training,respondent,65+|no|middle or high income,16391.58107400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1105,training,respondent,65+|no|middle or high income,19703.97865800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1106,evaluation,respondent,18-44|no|lower income,31989.96035600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1107,training,nonrespondent,65+|yes|lower income,5884.79483500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1108,training,respondent,18-44|no|middle or high income,54241.74164300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1109,training,respondent,45-64|no|middle or high income,12328.91716700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1110,training,nonrespondent,45-64|no|lower income,13849.76695000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1111,training,nonrespondent,45-64|no|lower income,26381.23740100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1112,training,nonrespondent,18-44|yes|middle or high income,24487.37482500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1113,evaluation,respondent,65+|no|lower income,11327.46851000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1114,training,nonrespondent,65+|no|middle or high income,17834.10742200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1115,training,nonrespondent,65+|no|middle or high income,11515.56083300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1116,training,nonrespondent,18-44|no|lower income,6916.79674200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1117,training,respondent,65+|yes|middle or high income,7962.73088600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1118,evaluation,nonrespondent,65+|no|middle or high income,18906.50805300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1119,training,respondent,65+|no|middle or high income,10186.84788900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1120,training,nonrespondent,65+|no|middle or high income,6010.51243200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1121,training,respondent,65+|no|lower income,8191.91081300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1122,training,respondent,45-64|no|middle or high income,8808.85135000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1123,evaluation,respondent,18-44|no|middle or high income,43821.99841000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1124,evaluation,respondent,65+|no|lower income,3837.10777900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1125,evaluation,respondent,45-64|yes|lower income,10616.58741100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1126,training,respondent,65+|no|middle or high income,19485.22516900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1127,evaluation,respondent,65+|no|middle or high income,10226.54801800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1128,training,nonrespondent,45-64|no|middle or high income,22200.45153100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1129,training,respondent,45-64|yes|middle or high income,24277.86876800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1130,evaluation,nonrespondent,65+|no|middle or high income,11495.85366300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1131,evaluation,nonrespondent,18-44|no|middle or high income,24722.51425900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1132,training,respondent,18-44|no|middle or high income,28957.31205900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1133,training,nonrespondent,45-64|no|lower income,34527.76652300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1134,training,nonrespondent,18-44|yes|lower income,12103.61859100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1135,training,respondent,65+|yes|middle or high income,24605.42933800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1136,training,nonrespondent,45-64|no|lower income,10706.02496000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1137,training,respondent,18-44|yes|lower income,4615.71519400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1138,evaluation,nonrespondent,65+|no|lower income,6584.19550300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1139,training,respondent,45-64|no|middle or high income,16542.76509100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1140,training,nonrespondent,65+|no|lower income,18508.03721800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1141,training,nonrespondent,18-44|yes|middle or high income,60234.22005600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1142,training,nonrespondent,45-64|no|middle or high income,17016.38992800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1143,training,respondent,65+|yes|middle or high income,8682.92951000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1144,training,respondent,65+|yes|middle or high income,19634.35748700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1145,training,respondent,18-44|no|middle or high income,28919.66564600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1146,training,respondent,45-64|no|lower income,7254.77073500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1147,training,nonrespondent,45-64|no|lower income,28320.70663400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1148,training,respondent,65+|no|lower income,21074.61361100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1149,evaluation,respondent,65+|no|middle or high income,10434.17544900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1150,evaluation,nonrespondent,18-44|no|middle or high income,22328.64864600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1151,training,respondent,65+|no|middle or high income,14785.48856800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1152,training,respondent,65+|no|middle or high income,7346.43160800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1153,training,respondent,45-64|no|middle or high income,16635.20708500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1154,training,respondent,65+|no|middle or high income,9175.57698300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1155,training,respondent,18-44|no|middle or high income,34068.86664000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1156,evaluation,respondent,65+|no|lower income,9538.06660400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1157,training,nonrespondent,65+|yes|lower income,10225.39436900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1158,evaluation,respondent,18-44|no|middle or high income,26092.84245800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1159,training,respondent,65+|no|middle or high income,13215.79259900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1160,training,nonrespondent,18-44|yes|middle or high income,20726.04124800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1161,training,respondent,65+|no|middle or high income,14761.30546300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1162,training,respondent,65+|no|middle or high income,12413.17342000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1163,evaluation,respondent,65+|no|lower income,8138.45429700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1164,evaluation,respondent,45-64|no|middle or high income,16138.47953700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1165,evaluation,respondent,65+|no|middle or high income,30939.99638800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1166,training,nonrespondent,65+|no|lower income,10979.96520700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1167,training,respondent,65+|no|lower income,5218.55584500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1168,training,respondent,18-44|yes|middle or high income,35618.33440300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1169,training,nonrespondent,65+|no|middle or high income,20038.99544400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1170,evaluation,respondent,65+|no|middle or high income,7738.40814500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1171,training,nonrespondent,65+|no|middle or high income,8615.05629500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1172,training,respondent,65+|no|lower income,12218.89437700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1173,evaluation,respondent,45-64|no|middle or high income,9756.15729400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1174,training,nonrespondent,65+|no|middle or high income,8885.83786000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1175,training,nonrespondent,65+|no|middle or high income,21270.14234000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1176,training,respondent,45-64|no|middle or high income,25543.66061400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1177,training,respondent,45-64|no|lower income,15338.77339200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1178,evaluation,respondent,18-44|no|lower income,14493.58109700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1179,training,nonrespondent,18-44|no|middle or high income,22268.63909800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1180,evaluation,nonrespondent,18-44|yes|lower income,8729.48444100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1181,evaluation,nonrespondent,18-44|no|lower income,13389.59049900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1182,training,respondent,65+|no|middle or high income,15675.97125500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1183,training,respondent,65+|no|middle or high income,17242.10470100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1184,evaluation,nonrespondent,45-64|no|middle or high income,14594.96109500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1185,training,nonrespondent,18-44|yes|middle or high income,12902.97072800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1186,evaluation,nonrespondent,65+|no|lower income,7595.18719700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1187,evaluation,respondent,18-44|no|lower income,4880.63852800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1188,training,nonrespondent,18-44|no|middle or high income,14687.06798200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1189,evaluation,nonrespondent,18-44|yes|middle or high income,15605.54414600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1190,evaluation,respondent,18-44|no|lower income,59790.27567200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1191,training,nonrespondent,65+|no|lower income,18165.04174000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1192,training,respondent,65+|no|lower income,11413.42560500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1193,evaluation,respondent,18-44|yes|middle or high income,17900.32905300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1194,training,nonrespondent,65+|no|lower income,22795.89711300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1195,training,respondent,65+|no|lower income,15587.68278700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1196,evaluation,respondent,65+|yes|middle or high income,7791.04622300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1197,training,respondent,65+|no|lower income,21884.67493500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1198,evaluation,nonrespondent,65+|no|middle or high income,13622.92429300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1199,evaluation,respondent,45-64|no|middle or high income,15387.05182300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1200,training,respondent,65+|no|lower income,13227.24294600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1201,evaluation,respondent,65+|no|lower income,15787.19448800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1202,training,nonrespondent,45-64|no|lower income,24067.32991100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1203,training,respondent,45-64|no|middle or high income,20104.43417500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1204,evaluation,nonrespondent,18-44|no|middle or high income,32767.95357300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1205,training,nonrespondent,65+|no|middle or high income,12037.71996000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1206,training,respondent,18-44|no|middle or high income,36476.95400500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1207,training,respondent,65+|no|middle or high income,14675.42630000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1208,training,nonrespondent,45-64|no|middle or high income,24928.13115100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1209,training,nonrespondent,18-44|yes|lower income,27912.63577200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1210,evaluation,respondent,65+|no|lower income,11315.08206200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1211,training,respondent,18-44|yes|middle or high income,49683.92197300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1212,training,respondent,18-44|yes|middle or high income,51337.23260400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1213,training,respondent,65+|no|middle or high income,17701.25108400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1214,evaluation,respondent,18-44|no|lower income,13811.76027500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1215,evaluation,respondent,65+|no|middle or high income,17160.55362900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1216,evaluation,nonrespondent,65+|no|middle or high income,14664.31995700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1217,evaluation,nonrespondent,45-64|no|middle or high income,48412.30168500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1218,training,nonrespondent,18-44|no|middle or high income,14649.61325700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1219,training,respondent,65+|no|lower income,2568.10665600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1220,evaluation,respondent,65+|no|middle or high income,10822.61423000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1221,evaluation,respondent,65+|no|middle or high income,19595.72427100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1222,training,respondent,65+|no|middle or high income,29426.83408900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1223,training,nonrespondent,65+|yes|middle or high income,17443.05364400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1224,evaluation,respondent,45-64|no|middle or high income,21310.92409800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1225,training,nonrespondent,18-44|yes|middle or high income,15124.81968100,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1226,training,respondent,18-44|yes|middle or high income,14224.18633200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1227,training,respondent,65+|no|middle or high income,16858.81741700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1228,evaluation,respondent,65+|no|lower income,10808.94940000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1229,training,respondent,18-44|no|middle or high income,21778.17951300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1230,training,nonrespondent,65+|no|lower income,16102.68159800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1231,training,nonrespondent,18-44|no|middle or high income,16801.97384000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1232,training,nonrespondent,45-64|no|lower income,16899.57500500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1233,training,respondent,65+|no|middle or high income,13714.72737500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1234,training,nonrespondent,65+|no|middle or high income,20891.22497900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1235,evaluation,nonrespondent,65+|yes|lower income,10561.50985500,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1236,evaluation,respondent,65+|no|middle or high income,6860.85734400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1237,training,nonrespondent,45-64|no|lower income,12207.79925700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1238,training,respondent,65+|no|middle or high income,8260.19729200,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1239,training,nonrespondent,18-44|no|lower income,21828.50160300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1240,evaluation,respondent,65+|no|middle or high income,13491.74389900,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1241,training,respondent,65+|no|middle or high income,14324.26068700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1242,training,nonrespondent,65+|no|middle or high income,16667.18270700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1243,training,respondent,65+|yes|middle or high income,38068.88748300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1244,training,nonrespondent,65+|no|middle or high income,4456.12574600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1245,training,respondent,65+|no|middle or high income,7888.31410700,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1246,training,respondent,18-44|no|middle or high income,17898.99983800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1247,evaluation,nonrespondent,65+|no|middle or high income,13805.01077400,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1248,training,respondent,65+|no|middle or high income,24672.54833600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1249,training,respondent,45-64|yes|middle or high income,3798.30950000,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1250,evaluation,nonrespondent,45-64|no|middle or high income,28123.92457300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1251,evaluation,respondent,45-64|no|middle or high income,22783.75207800,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1252,training,respondent,65+|no|middle or high income,10893.50548600,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1253,training,nonrespondent,18-44|no|middle or high income,17612.64088300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1254,training,respondent,65+|no|middle or high income,16717.78204300,stratified train_test_split test_size 0.30 random_state 20260830
+FRAME-1255,training,respondent,65+|no|middle or high income,24422.73647200,stratified train_test_split test_size 0.30 random_state 20260830

@@ -1,0 +1,14 @@
+response_cell,training_frame_n,training_respondent_n,training_frame_base_weight,training_respondent_base_weight,response_probability,raw_response_factor,bounded_response_factor,bound_hit,claim_limit
+18-44|no|lower income,56,30,907942.92605500,474272.26490000,0.52235912,1.91439178,1.91439178,no,training-only transparent teaching factor; not an official survey adjustment
+18-44|no|middle or high income,75,45,1865710.60084500,1144302.65791600,0.61333342,1.63043456,1.63043456,no,training-only transparent teaching factor; not an official survey adjustment
+18-44|yes|lower income,29,11,406780.92805300,133865.95599900,0.32908612,3.03871828,3.00000000,yes,training-only transparent teaching factor; not an official survey adjustment
+18-44|yes|middle or high income,29,15,710824.72948100,430584.94636600,0.60575403,1.65083507,1.65083507,no,training-only transparent teaching factor; not an official survey adjustment
+45-64|missing or inapplicable|middle or high income,1,1,16718.94833400,16718.94833400,1.00000000,1.00000000,1.00000000,no,training-only transparent teaching factor; not an official survey adjustment
+45-64|no|lower income,95,49,1329231.66212100,690176.77744100,0.51922987,1.92592928,1.92592928,no,training-only transparent teaching factor; not an official survey adjustment
+45-64|no|middle or high income,91,56,1687461.47015300,1046191.99451900,0.61997978,1.61295582,1.61295582,no,training-only transparent teaching factor; not an official survey adjustment
+45-64|yes|lower income,14,6,152333.43869000,62887.03119100,0.41282486,2.42233471,2.42233471,no,training-only transparent teaching factor; not an official survey adjustment
+45-64|yes|middle or high income,16,7,233599.44850000,111766.79209200,0.47845486,2.09006132,2.09006132,no,training-only transparent teaching factor; not an official survey adjustment
+65+|no|lower income,144,93,1629429.36937700,1047008.64092200,0.64256154,1.55627118,1.55627118,no,training-only transparent teaching factor; not an official survey adjustment
+65+|no|middle or high income,269,197,3628172.23626100,2660717.75534200,0.73334935,1.36360658,1.36360658,no,training-only transparent teaching factor; not an official survey adjustment
+65+|yes|lower income,26,14,263464.18284800,140688.63121500,0.53399528,1.87267571,1.87267571,no,training-only transparent teaching factor; not an official survey adjustment
+65+|yes|middle or high income,33,23,535312.21865400,354089.37118100,0.66146327,1.51179974,1.51179974,no,training-only transparent teaching factor; not an official survey adjustment

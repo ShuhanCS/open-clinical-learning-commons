@@ -1,0 +1,4 @@
+method,respondent_rows,minimum_factor,median_factor,p95_factor,maximum_factor,factor_cap_hits,base_weight_kish_effective_n,adjusted_weight_kish_effective_n,effective_n_ratio,largest_adjusted_weight_share_percent,stability_status,claim_limit
+respondent_base_weighted,235,1.00000000,1.00000000,1.00000000,1.00000000,0,162.74112887,162.74112887,1.00000000,1.69681558,pass,held-out respondent teaching weights; not official MEPS or HCAHPS weights
+transparent_benchmark,235,1.36360658,1.55627118,1.92592928,3.00000000,3,162.74112887,149.24493670,0.91706957,2.51758904,pass,held-out respondent teaching weights; not official MEPS or HCAHPS weights
+bounded_random_forest,235,1.37226053,1.58290043,1.99338483,2.31608015,0,162.74112887,153.14870360,0.94105715,2.06536112,pass,held-out respondent teaching weights; not official MEPS or HCAHPS weights

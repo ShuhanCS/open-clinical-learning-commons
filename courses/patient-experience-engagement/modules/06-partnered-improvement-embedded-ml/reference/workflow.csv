@@ -1,0 +1,13 @@
+step_id,step,owner,timing,input,output,access_alternative,failure_mode,failure_response,stop_rule
+W01,identify eligible discharge,discharge team,before discharge,eligibility rule,eligibility record,manual review,wrong exclusion,correct record and audit rule,repeated identity errors
+W02,offer participation,trained staff,before discharge,eligibility record,offer or no-offer reason,interpreter or proxy-supported offer,offer not made,record reason and review capacity,systematic missing offers
+W03,record preferences,trained staff,before contact,patient choice,language channel format proxy and no-contact choices,phone mail web accessible format,choice inferred,delete inference and ask directly,inference cannot be prevented
+W04,confirm contact consent,trained staff,before follow-up,contact choice,consent status,no-contact choice,pressure or unclear consent,stop contact and correct process,consent failure
+W05,review discharge information,clinical discharge owner,before discharge,unchanged discharge content,content delivered or declined,interpreter and accessible format,content unavailable,use safe existing escalation route,unsafe or inaccurate content
+W06,check understanding,trained staff,before discharge,warning-sign and help-source content,completed declined or unable status,proxy or interpreter-supported check,check becomes a test,stop and retrain staff,repeated coercive use
+W07,route question,clinical owner,before discharge,unresolved question,documented safe route,phone or in-person route,incorrect advice route,use approved escalation and incident review,safety routing failure
+W08,make follow-up attempt,feedback team,agreed time,consent and channel choice,attempt status,chosen non-digital route,wrong channel or unwanted contact,stop contact and record event,unwanted-contact limit crossed
+W09,collect feedback,feedback team,agreed time,attempt and consent,response or nonresponse,plain-language phone mail or web,burden or inaccessible form,offer alternative or end contact,burden limit crossed
+W10,monitor missing voice,analyst,weekly,opportunities responses and missing items,response dashboard,suppressed accessible table,unsupported group display,blank estimate and review process,support rule failure
+W11,review with patient advisory group,accountability owner,monthly,bounded aggregate evidence,interpretation disagreement and revision record,accessible meeting and asynchronous review,partner access unmet,reschedule with required support,partner terms unmet
+W12,return results,accountability owner,within agreed interval,approved aggregate record,patient-facing response,print phone web and accessible formats,no visible change or explanation,record owner date and reason,repeated failure to return results

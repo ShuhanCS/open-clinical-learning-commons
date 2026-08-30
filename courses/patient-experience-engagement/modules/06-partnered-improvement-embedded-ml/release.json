@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app2-06",
+    "title": "Partnered improvement and embedded machine learning",
+    "version": "0.1.0",
+    "commons_release": "0.61.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": 6,
+    "hours": 16.0,
+    "application_hours": 8.0,
+    "embedded_ml_hours": 8.0,
+    "course_points": 0,
+    "checkpoint_points": 45
+  },
+  "upstream": {
+    "accepted_files": 13,
+    "accepted_bytes": 610595,
+    "frame_rows": 1255,
+    "synthetic_respondents": 782,
+    "synthetic_nonrespondents": 473,
+    "module03_manifest_sha256": "3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30",
+    "module04_manifest_sha256": "bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8",
+    "module05_manifest_sha256": "6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa",
+    "module05_permission": "permitted for partnered improvement and embedded ML"
+  },
+  "partnership_and_improvement": {
+    "reference_record": "simulated curriculum example",
+    "actual_patient_or_caregiver_statements": 0,
+    "partner_requirements": 12,
+    "simulated_interpretation_records": 8,
+    "driver_diagram_rows": 14,
+    "workflow_steps": 12,
+    "measures": 14,
+    "reference_disposition": "leadership review with conditions",
+    "alpha_condition": "named patient or caregiver partner participation and final review required"
+  },
+  "response_model": {
+    "eligible_features": ["age_band", "other_language_at_home", "income_group"],
+    "training_rows": 878,
+    "training_respondents": 547,
+    "evaluation_rows": 377,
+    "evaluation_respondents": 235,
+    "transparent_cells": 13,
+    "factor_lower_bound": 1.0,
+    "factor_upper_bound": 3.0,
+    "ml_model": "one bounded RandomForestClassifier",
+    "comment_text_features": 0
+  },
+  "reference_results": {
+    "transparent_brier": "0.22962545",
+    "bounded_rf_brier": "0.23135127",
+    "ml_minus_transparent_brier": "0.00172582",
+    "transparent_auc": "0.54335192",
+    "bounded_rf_auc": "0.53869891",
+    "transparent_false_positives": 88,
+    "transparent_false_negatives": 51,
+    "bounded_rf_false_positives": 85,
+    "bounded_rf_false_negatives": 55,
+    "transparent_teaching_cost": 227,
+    "bounded_rf_teaching_cost": 225,
+    "transparent_composite_absolute_bias_pp": "2.48289986",
+    "bounded_rf_composite_absolute_bias_pp": "2.39922466",
+    "composite_absolute_bias_improvement_pp": "0.08367520",
+    "transparent_weight_stability": "pass",
+    "bounded_rf_weight_stability": "pass",
+    "ml_changes_response_adjustment_decision": "no",
+    "teaching_adjustment": "retain transparent benchmark"
+  },
+  "generated_evidence": {
+    "files": 17,
+    "bytes": 283224,
+    "analysis_checks_passed": 22,
+    "invariants_passed": 30,
+    "failure_case_rows": 22,
+    "subgroup_audit_rows": 26,
+    "suppressed_subgroup_model_rows": 8,
+    "external_python_dependencies": 3
+  },
+  "package": {
+    "immutable_manifest_rows": 28,
+    "editable_records": 17,
+    "assembled_files": 46,
+    "manifest_bytes": 4361,
+    "manifest_sha256": "b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2"
+  },
+  "assessment": {
+    "module04_points_carried_once": 25,
+    "module05_points_carried_once": 20,
+    "module06_points": 0,
+    "week6_points": 45,
+    "noncompensable_gates": 24,
+    "reference_failed_gates": 0
+  },
+  "validation": {
+    "evidence_builder_self_check": "pass",
+    "committed_evidence_rebuild": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "source_reference_checks": 155,
+    "assembled_reference_checks": 242,
+    "learner_starter_checks": 220,
+    "two_evidence_builds_match": "pass",
+    "two_workspace_assemblies_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_response_rejection": "pass",
+    "changed_output_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "checkpoint02_permission": "permitted for cumulative Week 6 assembly",
+    "patient_partner_status": "named actual partner pending before alpha",
+    "comment_text_machine_learning": "prohibited",
+    "patient_targeting": "prohibited",
+    "group_ranking": "prohibited",
+    "official_hcahps_reporting": "prohibited",
+    "fielding": "prohibited",
+    "clinical_action": "prohibited",
+    "implementation": "prohibited",
+    "model_deployment": "prohibited"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, simulated partnership package, bounded response-model comparison, assessment, validation, and release record"}
+  ],
+  "known_issues": [
+    "The named APP-2 patient or caregiver partner, compensation, access needs, participation terms, and final review are pending before alpha.",
+    "The reference partnership record is a labelled simulation and cannot count as actual engagement.",
+    "The response mechanism, items, missingness, comments, coding records, and partner reference record are synthetic or simulated.",
+    "The response model intentionally omits several known generator fields so that it uses the same eligible fields as the transparent benchmark.",
+    "Response adjustment does not correct item nonresponse or unmeasured selection.",
+    "Public MEPS teaching evidence cannot establish local feasibility, patient preference, discrimination, trust, burden, causal effect, or improvement benefit.",
+    "Named faculty, patient, survey, qualitative, health-services data, equity, accessibility, language-access, privacy, responsible-AI, clinical, governance, model, and independent reproduction reviews remain pending before alpha.",
+    "No package authorizes fielding, contact, targeting, official HCAHPS reporting, clinical action, implementation, or model deployment."
+  ]
+}

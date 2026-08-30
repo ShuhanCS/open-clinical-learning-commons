@@ -1,0 +1,15 @@
+row_id,level,parent,statement,measure_link,simulated_partner_note,status
+DD01,aim,none,Improve understandable discharge information without adding avoidable burden,M07 and M10,understanding and burden must move together,proposed
+DD02,primary driver,DD01,Patient choice and decision rights,M02 and M11,no-contact is a valid choice,required
+DD03,primary driver,DD01,Understandable warning-sign and help-source information,M04 and M07,information must be usable when tired or worried,required
+DD04,primary driver,DD01,Language and communication access,M03 and M09,do not infer language need from a category,required
+DD05,primary driver,DD01,Reliable workflow ownership,M01 and M05,a choice without an owner is not an option,required
+DD06,primary driver,DD01,Feedback and accountability,M12,patients should see what changed,required
+DD07,secondary driver,DD02,Consent and contact preference at each contact,M02 and M11,avoid pressure to respond,required
+DD08,secondary driver,DD03,Plain-language teach-back with decline option,M04,do not turn teach-back into a compliance test,required
+DD09,secondary driver,DD04,Phone mail web interpreter proxy and accessible formats,M03 and M09,alternatives must work in practice,required
+DD10,secondary driver,DD05,Named owner and safe escalation route,M05 and M13,record failures instead of hiding them,required
+DD11,candidate change,DD07,Preference record with no-contact choice,M02 and M11,review wording with actual partners,pending alpha review
+DD12,candidate change,DD08,Unchanged discharge content plus understanding check,M04 and M07,keep official items separate,proposed
+DD13,candidate change,DD09,Parallel non-digital contact paths,M03 and M09,do not make web the default,pending capacity review
+DD14,candidate change,DD10,Dated patient-facing results and revision log,M12,feedback must close the loop,proposed

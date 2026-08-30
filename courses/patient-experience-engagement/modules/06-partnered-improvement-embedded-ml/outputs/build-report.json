@@ -1,0 +1,152 @@
+{
+  "analysis_id": "app2-partnered-improvement-response-ml-v1",
+  "comparison": {
+    "composite_absolute_bias_improvement_pp": "0.08367520",
+    "maximum_item_absolute_bias_worsening_pp": "-0.04991741",
+    "ml_changes_response_adjustment_decision": "no",
+    "ml_minus_transparent_brier": "0.00172582",
+    "weight_stability": "pass"
+  },
+  "models": {
+    "eligible_features": [
+      "age_band",
+      "other_language_at_home",
+      "income_group"
+    ],
+    "machine_learning": "bounded RandomForestClassifier",
+    "transparent": "training-only response cells"
+  },
+  "outputs": {
+    "analysis-checks.csv": {
+      "bytes": 948,
+      "fields": 5,
+      "rows": 22,
+      "sha256": "659c124566d452590e3987b97984e311e1b54f371a43f0082618c6b66818f6c5"
+    },
+    "calibration-bins.csv": {
+      "bytes": 1546,
+      "fields": 9,
+      "rows": 10,
+      "sha256": "18278d1fce6a99a50a554148f5cd6b495d876015c923872850b30e70b493b3d0"
+    },
+    "estimate-recovery.csv": {
+      "bytes": 2893,
+      "fields": 9,
+      "rows": 12,
+      "sha256": "8bb63732e3fa8fa46d89ecffedb2171ad433bcf5e5306ceee154b1ea1bd67ce0"
+    },
+    "failure-cases.csv": {
+      "bytes": 6215,
+      "fields": 10,
+      "rows": 22,
+      "sha256": "afe98d565d6707695d5fd01cf2a7c29d069f816a6516abf36cf9c9c389b94bdd"
+    },
+    "feature-importance.csv": {
+      "bytes": 953,
+      "fields": 5,
+      "rows": 8,
+      "sha256": "22bdacb1160e44ec4a871faa4de4f6a31e7b10c73fe6447be203db1cff7ed0be"
+    },
+    "improvement-evidence.csv": {
+      "bytes": 1608,
+      "fields": 6,
+      "rows": 10,
+      "sha256": "732e66ac81eb02bb4da3195ed09432c582e26652c8dc1f00bf02deb962783e7c"
+    },
+    "invariant-checks.csv": {
+      "bytes": 1344,
+      "fields": 5,
+      "rows": 30,
+      "sha256": "bdfb9c9cf15e0d8f0d2ee02f93c974505aa08d2827ba2c9d6f49116af625612e"
+    },
+    "model-performance.csv": {
+      "bytes": 594,
+      "fields": 15,
+      "rows": 2,
+      "sha256": "7389e48967089caad0c923e25fd63ce9dc89fa543ecdb1bde8c840581f74ae34"
+    },
+    "model-predictions.csv": {
+      "bytes": 74045,
+      "fields": 12,
+      "rows": 377,
+      "sha256": "548622e0c35d1c2accf4fbe56f805607577796bada89f5157a7b09510f024866"
+    },
+    "partner-question-register.csv": {
+      "bytes": 2379,
+      "fields": 5,
+      "rows": 12,
+      "sha256": "fa1164a705417da2cd43a4dcfa70aa9cb84f9696f65c636a764fabc3165a988e"
+    },
+    "response-weight-diagnostics.csv": {
+      "bytes": 841,
+      "fields": 13,
+      "rows": 3,
+      "sha256": "d13065059589d2debb40776cbac373b87ccfdfe56ab17dd86d466a763f44508d"
+    },
+    "split-registry.csv": {
+      "bytes": 174128,
+      "fields": 6,
+      "rows": 1255,
+      "sha256": "42c39232a484c707a16a327e75fe5fb2e11836e40f88b74425dcf4bd61f568d7"
+    },
+    "subgroup-model-audit.csv": {
+      "bytes": 6223,
+      "fields": 13,
+      "rows": 26,
+      "sha256": "1faa45276c16754bda106d2795c4e6c784fe34015222ac15bb5c39ed783ef681"
+    },
+    "threshold-errors.csv": {
+      "bytes": 384,
+      "fields": 10,
+      "rows": 2,
+      "sha256": "13470cf54a7f897f8b811e7dc77e4ccaa4e2c584e0a39b1945569fcb66c96ace"
+    },
+    "transparent-weight-cells.csv": {
+      "bytes": 2536,
+      "fields": 10,
+      "rows": 13,
+      "sha256": "72254411d287b483f7aa79b0f6726b98d4b515cac7cf42bcdc81deb42b36fd4a"
+    },
+    "upstream-inventory.csv": {
+      "bytes": 2288,
+      "fields": 7,
+      "rows": 13,
+      "sha256": "6baff24f1e459b3f9584c48895f720cd98174da82d7dd8dc391150271082f46d"
+    }
+  },
+  "partnership": {
+    "actual_patient_partner_statements": 0,
+    "alpha_condition": "named patient or caregiver partner review required",
+    "reference_record": "simulated curriculum example"
+  },
+  "points": {
+    "module04": 25,
+    "module05": 20,
+    "module06": 0,
+    "week6_total": 45
+  },
+  "population": {
+    "nonrespondents": 473,
+    "respondents": 782,
+    "rows": 1255
+  },
+  "prohibited": [
+    "comment-text modeling",
+    "patient targeting",
+    "group ranking",
+    "official HCAHPS reporting",
+    "fielding",
+    "clinical action",
+    "implementation",
+    "model deployment"
+  ],
+  "schema_version": "1.0.0",
+  "source_inputs": 13,
+  "split": {
+    "evaluation_respondents": 235,
+    "evaluation_rows": 377,
+    "training_respondents": 547,
+    "training_rows": 878
+  },
+  "status": "pass"
+}

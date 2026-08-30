@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.60.0
+- Current release: 0.61.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Module 05, patient voice, group differences, and equity
-- Next unit: APP-2 Module 06, partnered improvement and embedded machine learning
+- Last completed unit: APP-2 Module 06, partnered improvement and embedded machine learning
+- Next unit: APP-2 Checkpoint 02, linked evidence and patient voice
 
 ## Confirmed decisions
 
@@ -413,22 +413,31 @@
 - The Module 05 workspace has 33 immutable rows, 15 editable records, and 49 assembled files. Its 4,598-byte manifest SHA-256 is `6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa`.
 - Reference validation passes 217 checks at 20 of 20 points with all 22 gates. Learner validation passes 199 checks. Evidence and workspace two-build equality, copied validation, comment mutation rejection, failed-gate rejection, invalid-progression rejection, and existing-target rejection pass.
 - APP-2 Module 05 is a runnable release candidate at Commons 0.60.0 and permits Module 06 partnered improvement and embedded machine learning with conditions. Comment-text ML, proof-of-inequity claims, clinical action, patient targeting, group ranking, and causal claims remain prohibited.
+- APP-2 Module 06 version 0.1.0 accepts 13 exact Module 03 through Module 05 inputs totaling 610,595 bytes. The 1,255 frame identities and 782/473 synthetic response split remain unchanged.
+- The construction reference contains 12 partnership requirements, eight labelled simulated interpretation records, a 14-row driver diagram, 12 workflow steps, and 14 measures. It makes no claim of actual patient engagement; a named patient or caregiver partner remains required before alpha.
+- The response comparison uses the same three eligible fields for a 13-cell transparent benchmark and one bounded random forest. The fixed split has 878 training rows with 547 respondents and 377 evaluation rows with 235 respondents.
+- The transparent and ML Brier scores are 0.22962545 and 0.23135127. Their AUC values are 0.54335192 and 0.53869891. Both methods pass weight-stability rules.
+- Transparent and ML teaching-composite absolute bias is 2.48289986 and 2.39922466 percentage points. The 0.08367520-point improvement is below the prespecified 0.50 threshold, so ML does not change the response-adjustment decision.
+- Seventeen deterministic outputs total 283,224 bytes. The 28-row immutable manifest is 4,361 bytes with SHA-256 `b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2`.
+- Source reference validation passes 155 checks, assembled reference validation passes 242 checks, and learner validation passes 220 checks. Evidence and workspace two-build equality, copied validation, changed-response rejection, changed-output rejection, failed-gate rejection, invalid-progression rejection, and existing-target rejection pass.
+- APP-2 Module 06 is a runnable release candidate at Commons 0.61.0. It carries 25 Module 04 points and 20 Module 05 points exactly once into the future Week 6 checkpoint, adds zero points, and requires all 24 gates.
+- Checkpoint 02 construction may begin with conditions. Comment-text ML, fabricated patient voice, patient targeting, group ranking, official HCAHPS reporting, fielding, clinical action, implementation, and model deployment remain prohibited.
 
 ## Pending confirmation
 
 - Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha.
 - Name and confirm the APP-2 patient/caregiver partner co-lead, compensation, decision rights, preparation, access needs, recording consent, and review terms.
-- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; the Module 04 MEPS linkage and denominators; and the Module 05 synthetic comments, qualitative coding, group support, equity language, and handoff before alpha.
+- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; the Module 04 MEPS linkage and denominators; the Module 05 synthetic comments, qualitative coding, group support, and equity language; and the Module 06 partnership, improvement, model, and handoff before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 05 progression record, source record, and this ledger.
-2. Write the durable Module 06 partnered-improvement and embedded-machine-learning specification before implementation.
-3. Preserve the exact target, response, linkage, denominator, synthetic-comment, human-benchmark, group-support, suppression, and claim contracts from Modules 03 through 05.
-4. Use the first eight hours for patient-partner interpretation, disagreement, driver diagram, workflow, measures, burden, access alternatives, feedback, and revision rules.
-5. Use the second eight hours for the embedded ML extension. Compare one transparent response-adjustment benchmark with one bounded model under the same eligible fields, split, simulated selection mechanism, and recovery targets.
-6. Keep comment text out of model training. Do not let ML replace patient partnership, transparent weighting, human comment review, or the existing support rules.
-7. Build the required non-scored Module 06 gates and the cumulative 45-point Week 6 handoff, carrying the Module 04 score of 25 and Module 05 score of 20 exactly once.
-8. Validate, advance semver, commit, and push before Checkpoint 02.
+1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 06 release and progression records, source record, and this ledger.
+2. Write the durable Checkpoint 02 linked-evidence and patient-voice specification before implementation.
+3. Freeze the exact accepted Module 04, Module 05, and Module 06 packages without recomputing or changing their evidence.
+4. Carry the Module 04 score of 25 and Module 05 score of 20 exactly once. Module 06 adds zero points.
+5. Require all 24 Module 06 partnership, improvement, model, protection, and progression gates in addition to the scored components.
+6. Retain the simulated-partnership label and the named actual patient or caregiver partner condition before alpha.
+7. Permit Module 07 construction only when the complete 45-point package, all gates, conditions, and prohibited uses remain consistent.
+8. Validate, advance semver, commit, and push before Module 07.

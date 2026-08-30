@@ -292,10 +292,10 @@
         },
         {
           "week": 6,
-          "title": "Patient partnership and improvement design",
-          "outcome": "Co-design a feasible improvement and its feedback measures.",
-          "topics": "Patient partnership, co-design, driver diagrams, implementation, balancing measures, feedback loops, unintended effects.",
-          "submission": "Draft improvement package.",
+          "title": "Partnered improvement and embedded machine learning",
+          "outcome": "Co-design a feasible improvement and decide whether a bounded response model changes the transparent adjustment.",
+          "topics": "Patient partnership, disagreement, driver diagrams, access and burden, feedback, response weighting, calibration, subgroup support, model failure cases.",
+          "submission": "Cumulative Week 6 linked-evidence and patient-voice release.",
           "hours": 16
         },
         {

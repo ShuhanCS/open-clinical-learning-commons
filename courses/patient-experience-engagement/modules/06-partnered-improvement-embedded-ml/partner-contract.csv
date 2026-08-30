@@ -1,0 +1,13 @@
+requirement_id,requirement,required_before_session,reference_status,alpha_status,claim_limit
+P01,named patient or caregiver partner,yes,simulated reference only,pending,one partner does not represent all patients
+P02,role and decision rights,yes,demonstrated in simulation,pending direct agreement,partner may change narrow defer or stop proposal
+P03,compensation and payment timing,yes,example terms only,pending direct agreement,no uncompensated assumed labor
+P04,preparation time and materials,yes,example terms only,pending direct agreement,materials must be understandable and bounded
+P05,language and communication access,yes,example options only,pending needs review,do not infer need from source category
+P06,disability and format access,yes,example options only,pending needs review,offer non-digital and accessible alternatives
+P07,technology and scheduling support,yes,example options only,pending needs review,participation cannot require portal or video use
+P08,privacy and recording choice,yes,recording off in simulation,pending direct consent,no recording by default
+P09,attribution or anonymity choice,yes,anonymous simulation,pending direct choice,no public attribution without permission
+P10,disagreement without forced consensus,yes,demonstrated in simulation,pending direct agreement,retain dissent and owner
+P11,review of final record,yes,simulated review complete,pending direct review,partner can correct interpretation
+P12,return of results and changes,yes,example route only,pending direct agreement,team owes a dated response

@@ -1,0 +1,11 @@
+method,calibration_group,rows,respondents,mean_predicted_response,observed_response,minimum_probability,maximum_probability,claim_limit
+transparent_benchmark,1,76,38,0.45948867,0.56079689,0.32908612,0.52235912,base-weighted held-out calibration group; not a fielding threshold
+transparent_benchmark,2,76,44,0.59210345,0.65529895,0.52235912,0.61997978,base-weighted held-out calibration group; not a fielding threshold
+transparent_benchmark,3,75,50,0.62664954,0.66885266,0.61997978,0.64256154,base-weighted held-out calibration group; not a fielding threshold
+transparent_benchmark,4,75,50,0.67733345,0.60650988,0.64256154,0.73334935,base-weighted held-out calibration group; not a fielding threshold
+transparent_benchmark,5,75,53,0.73334935,0.69415034,0.73334935,0.73334935,base-weighted held-out calibration group; not a fielding threshold
+bounded_random_forest,1,76,40,0.48450590,0.60702386,0.43176399,0.51477740,base-weighted held-out calibration group; not a fielding threshold
+bounded_random_forest,2,76,46,0.59079222,0.64451392,0.51477740,0.61384959,base-weighted held-out calibration group; not a fielding threshold
+bounded_random_forest,3,75,46,0.62297801,0.64300909,0.61384959,0.63175168,base-weighted held-out calibration group; not a fielding threshold
+bounded_random_forest,4,75,50,0.67623698,0.60650988,0.63175168,0.72872460,base-weighted held-out calibration group; not a fielding threshold
+bounded_random_forest,5,75,53,0.72872460,0.69415034,0.72872460,0.72872460,base-weighted held-out calibration group; not a fielding threshold

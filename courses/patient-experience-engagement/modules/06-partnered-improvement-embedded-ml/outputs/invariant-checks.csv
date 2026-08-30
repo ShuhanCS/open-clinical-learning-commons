@@ -1,0 +1,31 @@
+invariant_id,invariant,expected,observed,status
+I01,all source fingerprints accepted,13,13,pass
+I02,frame identities unique,1255,1255,pass
+I03,response identities match frame,1255,1255,pass
+I04,accepted respondent count,782,782,pass
+I05,accepted nonrespondent count,473,473,pass
+I06,eligible feature count,3,3,pass
+I07,response cells reconstruct exactly,all,all,pass
+I08,split covers every row once,1255,1255,pass
+I09,training rows,878,878,pass
+I10,evaluation rows,377,377,pass
+I11,stratified evaluation respondents,235,235,pass
+I12,transparent training cells,13,13,pass
+I13,transparent probabilities finite,all,377,pass
+I14,ML probabilities finite,all,377,pass
+I15,transparent factors bounded,1 through 3,1.36360658 through 3.00000000,pass
+I16,ML factors bounded,1 through 3,1.37226053 through 2.31608015,pass
+I17,model methods,2,2,pass
+I18,calibration rows,10,10,pass
+I19,weight diagnostic rows,3,3,pass
+I20,weight stability,all pass,3,pass
+I21,known-truth rows,12,12,pass
+I22,fixed group audit rows,26,26,pass
+I23,comment text excluded,0,0,pass
+I24,audit-only fields excluded,0,0,pass
+I25,actual patient statements,0,0,pass
+I26,Module 06 points,0,0,pass
+I27,Week 6 score carried once,45,45,pass
+I28,ML decision criteria evaluated,4,4,pass
+I29,clinical authorization,prohibited,prohibited,pass
+I30,model deployment,prohibited,prohibited,pass

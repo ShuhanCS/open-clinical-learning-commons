@@ -1,0 +1,23 @@
+check_id,check,expected,observed,status
+CHK01,accepted frame rows,1255,1255,pass
+CHK02,accepted respondents,782,782,pass
+CHK03,accepted nonrespondents,473,473,pass
+CHK04,one-to-one identities,1255,1255,pass
+CHK05,eligible features,3,3,pass
+CHK06,transparent cells,13,13,pass
+CHK07,training plus evaluation rows,1255,1255,pass
+CHK08,evaluation proportion,0.30 fixed,0.30039841,pass
+CHK09,ML model count,1,1,pass
+CHK10,factor upper bound,at most 3.0,3.00000000,pass
+CHK11,factor lower bound,at least 1.0,1.36360658,pass
+CHK12,calibration groups per method,5,5,pass
+CHK13,known-truth measures,3,3,pass
+CHK14,known-truth estimators per measure,4,4,pass
+CHK15,Module 05 fixed groups,13,13,pass
+CHK16,comment text predictors,0,0,pass
+CHK17,actual patient statements,0,0,pass
+CHK18,carried Module 04 points,25,25,pass
+CHK19,carried Module 05 points,20,20,pass
+CHK20,Module 06 points,0,0,pass
+CHK21,Week 6 points,45,45,pass
+CHK22,required gates,24,24,pass

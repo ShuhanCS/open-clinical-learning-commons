@@ -1,0 +1,378 @@
+frame_record_id,response_status,response_cell,base_person_weight,transparent_probability,transparent_factor,transparent_class,ml_probability,ml_factor,ml_class,absolute_probability_difference,claim_limit
+FRAME-1186,nonrespondent,65+|no|lower income,7595.18719700,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0094,nonrespondent,18-44|no|lower income,3825.96021400,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0822,respondent,65+|no|middle or high income,16857.71853900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0895,nonrespondent,65+|yes|middle or high income,19737.57580400,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0789,respondent,65+|no|middle or high income,7729.32179900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0778,nonrespondent,65+|no|middle or high income,13784.14163100,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0268,nonrespondent,65+|no|middle or high income,24595.78695500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0455,respondent,18-44|no|middle or high income,57015.93163200,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0278,respondent,65+|no|middle or high income,11209.19578900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1204,nonrespondent,18-44|no|middle or high income,32767.95357300,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0869,respondent,45-64|no|lower income,7049.26805800,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0654,respondent,65+|no|middle or high income,13447.25839300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0982,nonrespondent,65+|no|lower income,11215.01925600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0386,nonrespondent,65+|no|lower income,8745.68241600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0622,respondent,65+|no|lower income,8283.76697400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1035,nonrespondent,18-44|no|lower income,11018.07841700,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1165,respondent,65+|no|middle or high income,30939.99638800,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0290,respondent,18-44|no|middle or high income,10517.89419300,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0034,respondent,45-64|yes|lower income,7291.09035800,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1149,respondent,65+|no|middle or high income,10434.17544900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0773,nonrespondent,65+|no|middle or high income,10883.83089700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0723,nonrespondent,65+|yes|middle or high income,15183.79047800,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0023,respondent,45-64|yes|lower income,4412.66112700,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0259,respondent,65+|no|lower income,3319.90706900,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1215,respondent,65+|no|middle or high income,17160.55362900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0490,respondent,65+|no|lower income,11253.49409100,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0635,nonrespondent,45-64|no|middle or high income,3625.25420400,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0744,respondent,65+|no|middle or high income,10235.74903900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0585,nonrespondent,45-64|no|lower income,11987.42270900,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0571,respondent,65+|no|middle or high income,13107.61150700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1123,respondent,18-44|no|middle or high income,43821.99841000,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0567,nonrespondent,18-44|yes|lower income,8633.49430200,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0335,respondent,65+|no|middle or high income,11210.12212000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0255,respondent,65+|no|middle or high income,14417.82097300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0852,nonrespondent,18-44|no|lower income,15658.11492100,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0966,nonrespondent,45-64|yes|lower income,6916.57239500,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0117,respondent,18-44|no|middle or high income,26951.05365300,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0461,respondent,65+|no|lower income,5128.48424400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1127,respondent,65+|no|middle or high income,10226.54801800,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0340,respondent,65+|no|lower income,15888.99024300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0566,nonrespondent,65+|no|lower income,9296.20851700,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0465,nonrespondent,65+|yes|middle or high income,21594.43308500,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1028,nonrespondent,18-44|no|middle or high income,48712.44122200,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0970,respondent,65+|no|middle or high income,10205.52775900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0954,nonrespondent,18-44|yes|lower income,31159.47080000,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0280,respondent,65+|no|middle or high income,9483.05788500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0256,respondent,65+|no|middle or high income,7324.55002800,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0628,respondent,65+|no|middle or high income,19160.87756900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0939,respondent,45-64|no|middle or high income,12262.51340800,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1250,nonrespondent,45-64|no|middle or high income,28123.92457300,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1220,respondent,65+|no|middle or high income,10822.61423000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0671,nonrespondent,45-64|no|lower income,9059.28528900,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0066,respondent,45-64|no|lower income,14041.00594500,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0891,respondent,65+|no|lower income,12989.71478400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0758,nonrespondent,45-64|no|lower income,14136.31192800,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0095,nonrespondent,18-44|yes|lower income,3255.20821700,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0044,nonrespondent,18-44|yes|lower income,1919.10822200,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0506,respondent,65+|yes|middle or high income,7941.53750800,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0272,respondent,18-44|no|middle or high income,15149.77550700,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0347,respondent,45-64|no|middle or high income,55870.52391300,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0083,respondent,65+|no|middle or high income,7366.70854300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0314,respondent,65+|no|middle or high income,4982.19812100,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1067,respondent,65+|no|middle or high income,27575.69904300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1217,nonrespondent,45-64|no|middle or high income,48412.30168500,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1199,respondent,45-64|no|middle or high income,15387.05182300,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0534,respondent,65+|no|middle or high income,5731.20609800,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0194,respondent,45-64|no|lower income,23119.19728400,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0297,respondent,65+|no|lower income,19612.46185500,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0591,respondent,18-44|yes|lower income,8375.89192700,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1113,respondent,65+|no|lower income,11327.46851000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1095,nonrespondent,65+|no|middle or high income,7048.23436900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0289,respondent,65+|no|middle or high income,8240.81720200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0081,respondent,65+|no|middle or high income,10602.47562000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0412,nonrespondent,45-64|no|middle or high income,12061.12189300,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0695,respondent,18-44|no|lower income,14368.14773100,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0688,nonrespondent,65+|no|lower income,9702.11281500,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0610,respondent,65+|no|middle or high income,9011.13540000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0276,nonrespondent,65+|no|middle or high income,9525.79954600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0975,nonrespondent,65+|no|lower income,14172.84851100,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0843,respondent,18-44|no|middle or high income,44639.47451300,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0593,respondent,65+|no|lower income,7844.85163300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0699,respondent,45-64|no|middle or high income,11554.85708300,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1062,respondent,65+|no|middle or high income,16783.28004900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0234,nonrespondent,45-64|no|middle or high income,28571.24377400,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0388,nonrespondent,65+|no|middle or high income,7474.94156300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0893,nonrespondent,65+|yes|lower income,8111.04516500,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0986,nonrespondent,45-64|no|lower income,27150.04330000,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1076,respondent,65+|yes|lower income,1370.54369300,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0765,respondent,65+|no|lower income,3779.20258500,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0088,respondent,65+|no|middle or high income,3739.13948200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1224,respondent,45-64|no|middle or high income,21310.92409800,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0275,respondent,18-44|no|middle or high income,34266.09073100,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0418,nonrespondent,18-44|no|middle or high income,38574.95384600,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0248,respondent,65+|no|middle or high income,17633.00961500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1005,nonrespondent,45-64|no|middle or high income,15737.62129000,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0935,respondent,18-44|no|middle or high income,11760.97273900,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0281,respondent,65+|no|lower income,1926.05360500,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0836,respondent,65+|no|lower income,3837.10777900,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0787,respondent,65+|no|lower income,23431.10701000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0459,respondent,65+|no|middle or high income,5045.66300700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0295,nonrespondent,18-44|no|middle or high income,10524.46183100,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1032,nonrespondent,65+|yes|middle or high income,4102.14301000,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0078,respondent,65+|no|middle or high income,7820.11237600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0474,respondent,45-64|yes|lower income,21910.98394600,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0180,nonrespondent,65+|yes|lower income,3669.46404700,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0728,nonrespondent,65+|no|middle or high income,25202.39739100,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1097,respondent,65+|no|middle or high income,8885.83786000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1240,respondent,65+|no|middle or high income,13491.74389900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0393,nonrespondent,18-44|yes|middle or high income,23794.20983500,0.60575403,1.65083507,1,0.57531404,1.73818112,0,0.03043999,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0678,nonrespondent,18-44|no|middle or high income,23196.54200900,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0620,nonrespondent,65+|yes|middle or high income,29503.69804500,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0967,nonrespondent,65+|yes|lower income,8491.40821000,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0989,respondent,18-44|no|lower income,4449.74241200,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1011,nonrespondent,45-64|no|lower income,11755.00576000,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1214,respondent,18-44|no|lower income,13811.76027500,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0073,respondent,45-64|no|middle or high income,8822.91281200,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0264,nonrespondent,65+|no|middle or high income,4109.26088600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0631,respondent,65+|no|middle or high income,8264.77518500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0074,respondent,18-44|no|middle or high income,10408.95496700,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0872,respondent,45-64|no|lower income,2854.04247800,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0542,respondent,65+|no|lower income,13872.92528500,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0359,nonrespondent,65+|yes|middle or high income,5385.94903100,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0833,respondent,45-64|no|middle or high income,24886.41975400,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1077,respondent,65+|no|middle or high income,13353.09919200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0409,nonrespondent,65+|no|lower income,9837.15997600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0451,respondent,18-44|no|lower income,28744.86300600,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0358,nonrespondent,45-64|no|lower income,11882.99052600,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1235,nonrespondent,65+|yes|lower income,10561.50985500,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0396,nonrespondent,65+|no|lower income,5379.26916800,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0748,respondent,45-64|no|lower income,14552.74858700,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0660,respondent,45-64|no|middle or high income,6894.08355100,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0646,respondent,18-44|no|middle or high income,18361.97267000,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1106,respondent,18-44|no|lower income,31989.96035600,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0004,respondent,45-64|no|middle or high income,19142.73573500,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0956,respondent,45-64|no|middle or high income,29471.19057100,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0665,respondent,45-64|no|middle or high income,26393.43923200,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0761,respondent,18-44|no|middle or high income,33697.50373100,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0105,respondent,18-44|no|middle or high income,53999.77823000,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0136,respondent,65+|no|lower income,12262.19537400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0079,respondent,45-64|no|middle or high income,14763.75298400,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0878,nonrespondent,65+|yes|lower income,4233.46949800,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1125,respondent,45-64|yes|lower income,10616.58741100,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1196,respondent,65+|yes|middle or high income,7791.04622300,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0149,respondent,65+|no|middle or high income,11381.85124200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1138,nonrespondent,65+|no|lower income,6584.19550300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0331,nonrespondent,18-44|yes|lower income,9318.48022200,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0186,respondent,65+|no|lower income,26951.26996400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0555,nonrespondent,65+|no|middle or high income,9939.80708100,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1180,nonrespondent,18-44|yes|lower income,8729.48444100,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0326,respondent,65+|yes|lower income,7439.91052400,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1189,nonrespondent,18-44|yes|middle or high income,15605.54414600,0.60575403,1.65083507,1,0.57531404,1.73818112,0,0.03043999,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0020,respondent,18-44|yes|middle or high income,29557.58027200,0.60575403,1.65083507,1,0.57531404,1.73818112,0,0.03043999,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1066,respondent,65+|no|middle or high income,10649.35454700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0102,respondent,65+|no|middle or high income,32303.16712400,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0927,nonrespondent,65+|no|lower income,17984.34947300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0545,nonrespondent,65+|no|lower income,6847.22537400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0420,nonrespondent,18-44|no|lower income,6395.12112600,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1210,respondent,65+|no|lower income,11315.08206200,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0929,nonrespondent,45-64|no|lower income,13508.37352900,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1228,respondent,65+|no|lower income,10808.94940000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0171,nonrespondent,65+|no|middle or high income,33632.99686300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0227,nonrespondent,45-64|yes|middle or high income,4124.68808400,0.47845486,2.09006132,0,0.56866089,1.75851727,0,0.09020603,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0997,nonrespondent,65+|yes|middle or high income,35105.10394500,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1164,respondent,45-64|no|middle or high income,16138.47953700,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0019,nonrespondent,65+|no|lower income,6499.04241300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1130,nonrespondent,65+|no|middle or high income,11495.85366300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0672,respondent,18-44|yes|middle or high income,16593.67960300,0.60575403,1.65083507,1,0.57531404,1.73818112,0,0.03043999,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0035,nonrespondent,18-44|no|middle or high income,14315.67280300,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1187,respondent,18-44|no|lower income,4880.63852800,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0376,nonrespondent,45-64|no|lower income,5136.17772000,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0191,respondent,65+|no|lower income,10695.85325600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1156,respondent,65+|no|lower income,9538.06660400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0348,respondent,45-64|yes|lower income,10775.58871900,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0084,nonrespondent,65+|no|lower income,25030.45173600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0557,respondent,45-64|yes|lower income,28763.47072000,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0782,respondent,45-64|no|middle or high income,12695.48573000,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0036,respondent,65+|yes|middle or high income,3791.92106000,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0853,respondent,18-44|no|middle or high income,16253.78993000,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0687,respondent,65+|no|middle or high income,18571.76679400,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0964,respondent,18-44|yes|lower income,14452.77952300,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0596,nonrespondent,45-64|yes|lower income,21393.62093100,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0216,nonrespondent,65+|no|lower income,16134.70682700,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0686,respondent,65+|no|middle or high income,33076.70752600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0032,respondent,65+|no|lower income,3258.88165300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1193,respondent,18-44|yes|middle or high income,17900.32905300,0.60575403,1.65083507,1,0.57531404,1.73818112,0,0.03043999,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0372,respondent,45-64|no|middle or high income,10764.38170500,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1173,respondent,45-64|no|middle or high income,9756.15729400,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0516,nonrespondent,18-44|no|lower income,8915.54683700,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0978,respondent,65+|no|middle or high income,11695.72378700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0608,respondent,65+|yes|middle or high income,6569.35063300,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1181,nonrespondent,18-44|no|lower income,13389.59049900,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0206,respondent,18-44|no|middle or high income,4021.86600400,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0661,respondent,18-44|no|middle or high income,35950.79277200,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0224,respondent,65+|yes|lower income,11445.42510400,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1047,respondent,65+|no|middle or high income,15394.63168700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0936,nonrespondent,65+|no|middle or high income,17079.58792900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0251,respondent,18-44|no|lower income,28151.31102700,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0002,respondent,65+|no|middle or high income,6895.35205800,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0874,respondent,65+|no|middle or high income,16314.91222300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0292,respondent,18-44|no|middle or high income,15695.99944000,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0464,respondent,65+|no|middle or high income,2230.34197200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0055,respondent,45-64|no|middle or high income,11023.03173000,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1201,respondent,65+|no|lower income,15787.19448800,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0823,respondent,65+|no|middle or high income,21436.96373000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0100,respondent,65+|no|middle or high income,11578.04414800,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1247,nonrespondent,65+|no|middle or high income,13805.01077400,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0642,respondent,18-44|no|lower income,18652.63121600,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1098,nonrespondent,65+|yes|lower income,20198.52749700,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0349,nonrespondent,18-44|yes|lower income,6385.58999900,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0588,respondent,45-64|no|middle or high income,14328.14445500,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0925,respondent,18-44|no|middle or high income,30277.63095500,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0313,nonrespondent,18-44|no|middle or high income,2766.98393400,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0693,nonrespondent,18-44|no|middle or high income,19607.71007200,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0277,respondent,18-44|no|lower income,9576.30154200,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0478,nonrespondent,65+|no|middle or high income,11372.67492300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0247,respondent,65+|no|lower income,2216.35669300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0579,respondent,45-64|no|lower income,13079.30420300,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0016,respondent,45-64|no|middle or high income,13835.31011100,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1092,respondent,65+|no|lower income,13669.28476700,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0710,nonrespondent,45-64|no|middle or high income,12298.76566000,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0473,nonrespondent,65+|no|lower income,8982.85351000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0963,nonrespondent,18-44|yes|lower income,10934.42624500,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0249,respondent,45-64|no|middle or high income,19527.45477100,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0626,respondent,45-64|no|middle or high income,12738.49197700,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0039,nonrespondent,65+|no|lower income,5830.64409900,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1070,nonrespondent,65+|no|middle or high income,11960.87453700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0532,nonrespondent,65+|no|middle or high income,6715.97142800,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0033,nonrespondent,45-64|yes|lower income,8662.74429300,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0662,respondent,65+|no|middle or high income,11731.83615300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0957,nonrespondent,65+|yes|lower income,5870.32440000,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1087,nonrespondent,18-44|no|middle or high income,16495.06606600,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1094,respondent,65+|no|middle or high income,9739.91228700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1131,nonrespondent,18-44|no|middle or high income,24722.51425900,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1170,respondent,65+|no|middle or high income,7738.40814500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0382,nonrespondent,65+|no|lower income,6959.30021400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0374,respondent,18-44|yes|lower income,48696.66639600,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0469,respondent,18-44|no|middle or high income,19866.82030300,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0689,respondent,65+|no|middle or high income,12918.19486600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0862,respondent,45-64|no|middle or high income,9416.29712800,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0159,respondent,45-64|no|lower income,6883.41051200,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0266,respondent,45-64|no|middle or high income,12814.77309600,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0260,respondent,45-64|no|lower income,14974.55829300,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0777,nonrespondent,18-44|no|lower income,8435.55606400,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0633,respondent,65+|no|middle or high income,13782.06436200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0333,respondent,65+|no|middle or high income,6344.47913700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0328,nonrespondent,18-44|yes|middle or high income,27824.67208200,0.60575403,1.65083507,1,0.57531404,1.73818112,0,0.03043999,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0400,nonrespondent,65+|yes|lower income,1927.64018700,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0790,respondent,45-64|no|middle or high income,10858.40305500,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0875,respondent,65+|no|middle or high income,8906.69377300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0656,respondent,65+|no|middle or high income,10947.85383500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0449,respondent,45-64|no|middle or high income,19769.43839100,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0463,respondent,65+|no|middle or high income,12091.65029600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0764,respondent,45-64|no|middle or high income,15464.16399800,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0491,respondent,65+|no|lower income,7015.44430000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0890,nonrespondent,65+|yes|lower income,4700.02828700,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0877,respondent,45-64|no|middle or high income,18944.62763400,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0037,respondent,65+|yes|middle or high income,5469.76111300,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0937,nonrespondent,45-64|no|middle or high income,15134.94718200,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0414,nonrespondent,65+|no|middle or high income,18199.40555400,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1221,respondent,65+|no|middle or high income,19595.72427100,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0726,respondent,65+|no|lower income,10152.34672300,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0759,respondent,45-64|no|lower income,10603.03680700,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0195,respondent,65+|no|lower income,11311.20049600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0446,nonrespondent,18-44|yes|lower income,7349.11226000,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1018,nonrespondent,18-44|yes|lower income,19726.57935400,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0708,nonrespondent,65+|no|lower income,11070.11508900,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0488,respondent,45-64|no|middle or high income,17816.11455100,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0735,respondent,65+|no|lower income,20586.70675000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0098,nonrespondent,65+|no|middle or high income,11471.89107200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0258,nonrespondent,18-44|no|lower income,19619.06351400,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0974,respondent,65+|no|middle or high income,9751.89382000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0724,nonrespondent,65+|no|lower income,7092.00408200,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0918,nonrespondent,45-64|no|lower income,7177.32387900,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0399,respondent,45-64|yes|middle or high income,12651.95595700,0.47845486,2.09006132,0,0.56866089,1.75851727,0,0.09020603,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0950,respondent,45-64|no|lower income,4643.64622700,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0298,respondent,65+|no|lower income,5742.41130600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0311,respondent,45-64|no|middle or high income,10799.12303300,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0794,respondent,65+|yes|middle or high income,15324.17278400,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0806,respondent,65+|no|middle or high income,24845.14596000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0509,respondent,65+|no|middle or high income,13125.76674000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0809,respondent,65+|no|middle or high income,17199.36929500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0533,respondent,65+|no|middle or high income,9115.11912200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0706,respondent,65+|no|lower income,3314.53063000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0116,respondent,45-64|no|lower income,19315.94401400,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0870,respondent,18-44|no|middle or high income,24305.16424400,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0700,respondent,45-64|no|lower income,11512.77627200,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0477,respondent,65+|no|middle or high income,10220.02647600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0663,respondent,65+|no|lower income,8155.11151600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0515,respondent,65+|no|middle or high income,6712.96284500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0371,nonrespondent,45-64|no|middle or high income,35508.74330900,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0383,nonrespondent,65+|no|lower income,6696.80060400,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0475,respondent,45-64|no|lower income,21086.91163100,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0908,respondent,45-64|no|middle or high income,14882.43992900,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1020,nonrespondent,45-64|yes|lower income,6256.43089400,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0050,respondent,18-44|no|middle or high income,21099.72770300,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0774,nonrespondent,45-64|yes|lower income,5633.70279600,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0831,nonrespondent,18-44|no|lower income,24933.76733200,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1027,nonrespondent,45-64|no|lower income,14813.31456000,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0898,respondent,45-64|no|lower income,9068.07567300,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1044,respondent,45-64|no|lower income,4946.45170300,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1163,respondent,65+|no|lower income,8138.45429700,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0830,respondent,65+|no|middle or high income,8435.49101300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0619,respondent,65+|no|lower income,13118.27320800,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0919,nonrespondent,18-44|yes|lower income,33196.90539500,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0990,respondent,45-64|no|lower income,23836.71570900,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0968,respondent,18-44|no|middle or high income,32681.87926700,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0638,respondent,18-44|no|middle or high income,13222.99116200,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0337,nonrespondent,18-44|no|lower income,6367.84401600,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0299,respondent,65+|no|middle or high income,12822.98131200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1178,respondent,18-44|no|lower income,14493.58109700,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1158,respondent,18-44|no|middle or high income,26092.84245800,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1198,nonrespondent,65+|no|middle or high income,13622.92429300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0241,respondent,18-44|no|lower income,18385.44309000,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0123,respondent,65+|no|lower income,9880.44203000,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0839,nonrespondent,45-64|no|lower income,25939.31584600,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0888,nonrespondent,18-44|no|middle or high income,30281.80775100,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1085,respondent,65+|no|middle or high income,8336.21465500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0639,respondent,65+|yes|lower income,6181.37118800,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1040,respondent,65+|no|lower income,7299.37616200,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0867,respondent,65+|no|lower income,27340.82771100,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1184,nonrespondent,45-64|no|middle or high income,14594.96109500,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0850,nonrespondent,18-44|yes|lower income,24634.62905400,0.32908612,3.00000000,0,0.43176399,2.31608015,0,0.10267787,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0508,nonrespondent,65+|no|middle or high income,12305.35808900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0401,respondent,65+|no|lower income,22073.35625900,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0110,nonrespondent,65+|yes|lower income,8906.08827800,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1124,respondent,65+|no|lower income,3837.10777900,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0205,respondent,18-44|yes|middle or high income,34769.91167100,0.60575403,1.65083507,1,0.57531404,1.73818112,0,0.03043999,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0510,nonrespondent,65+|no|middle or high income,19515.73178600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0154,nonrespondent,65+|no|lower income,5488.56988100,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0972,respondent,65+|no|lower income,12343.78648100,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0233,nonrespondent,65+|no|lower income,9736.47068200,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0531,respondent,45-64|no|lower income,16431.61739300,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0580,respondent,65+|no|middle or high income,18123.04602700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0085,respondent,45-64|no|middle or high income,13208.28289300,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0711,nonrespondent,45-64|no|middle or high income,13319.49055100,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0113,nonrespondent,65+|no|lower income,9380.19461700,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0554,respondent,65+|no|lower income,33386.32616100,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0583,nonrespondent,65+|no|middle or high income,13177.13993000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0767,respondent,45-64|no|lower income,7208.53751400,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0824,nonrespondent,65+|no|lower income,17129.12201100,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0832,respondent,65+|no|middle or high income,11119.74702200,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0151,respondent,18-44|no|middle or high income,29352.42720000,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0257,nonrespondent,45-64|no|lower income,4797.50655900,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1236,respondent,65+|no|middle or high income,6860.85734400,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0175,respondent,65+|no|lower income,6773.06385900,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0863,respondent,18-44|no|lower income,27037.21203300,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0367,nonrespondent,65+|no|middle or high income,12645.53965300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0288,respondent,65+|no|middle or high income,13519.27455400,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0709,respondent,45-64|no|middle or high income,11953.53951400,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0917,nonrespondent,65+|no|lower income,12864.03766600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0454,respondent,65+|yes|middle or high income,12852.65496400,0.66146327,1.51179974,1,0.68712028,1.45534927,1,0.02565701,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1150,nonrespondent,18-44|no|middle or high income,22328.64864600,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0803,nonrespondent,45-64|no|lower income,8255.67402100,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0346,respondent,45-64|no|middle or high income,11579.42088000,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1216,nonrespondent,65+|no|middle or high income,14664.31995700,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0129,nonrespondent,45-64|yes|lower income,14933.42145400,0.41282486,2.42233471,0,0.45787389,2.18400748,0,0.04504903,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0062,nonrespondent,65+|no|lower income,1441.08050600,0.64256154,1.55627118,1,0.63175168,1.58290043,1,0.01080986,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0293,nonrespondent,65+|yes|lower income,7899.55359800,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0838,respondent,65+|no|middle or high income,9966.05402000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0336,respondent,65+|yes|lower income,1526.84816700,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0894,respondent,45-64|no|lower income,7651.23817700,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1036,nonrespondent,65+|yes|lower income,4122.38259100,0.53399528,1.87267571,0,0.56732072,1.76267140,0,0.03332543,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0018,nonrespondent,65+|no|middle or high income,13271.02387000,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1190,respondent,18-44|no|lower income,59790.27567200,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0757,nonrespondent,65+|no|middle or high income,22579.55551600,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0341,nonrespondent,65+|no|middle or high income,12155.35467900,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0745,respondent,65+|no|middle or high income,10852.04651400,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1010,respondent,45-64|yes|middle or high income,18253.73870300,0.47845486,2.09006132,0,0.56866089,1.75851727,0,0.09020603,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1251,respondent,45-64|no|middle or high income,22783.75207800,0.61997978,1.61295582,1,0.61384959,1.62906357,1,0.00613019,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0896,respondent,18-44|no|lower income,17195.63519300,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-1118,nonrespondent,65+|no|middle or high income,18906.50805300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0177,respondent,18-44|no|lower income,28148.11980300,0.52235912,1.91439178,0,0.50165928,1.99338483,0,0.02069984,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0182,respondent,45-64|no|lower income,12460.41609000,0.51922987,1.92592928,0,0.51477740,1.94258721,0,0.00445246,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0269,respondent,65+|no|middle or high income,11164.28876300,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0152,respondent,18-44|no|middle or high income,25076.57737800,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0253,respondent,65+|no|middle or high income,4142.96980500,0.73334935,1.36360658,1,0.72872460,1.37226053,1,0.00462475,held-out synthetic response prediction; no targeting or contact decision
+FRAME-0057,nonrespondent,18-44|no|middle or high income,14447.26319000,0.61333342,1.63043456,1,0.62137826,1.60932568,1,0.00804485,held-out synthetic response prediction; no targeting or contact decision

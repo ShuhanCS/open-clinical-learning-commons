@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.60.0.
-- Current build: Modules 01 through 05 and the cumulative Week 3 checkpoint runnable; Modules 06 through 07 and the later checkpoints specified at course level but not yet built.
+- Current Commons release: 0.61.0.
+- Current build: Modules 01 through 06 and the cumulative Week 3 checkpoint runnable; Module 07 and the later checkpoints specified at course level but not yet built.
 
 APP-2 teaches patient-reported measurement, survey representation, response bias, linked patient evidence, patient voice, patient partnership, and accountable improvement.
 
@@ -20,7 +20,7 @@ The course uses the complete public CMS HCAHPS hospital file as its first source
 | 03 | Response, representation, and survey bias | 16.5 | Runnable release candidate |
 | 04 | Linked patient evidence | 16.5 | Runnable release candidate |
 | 05 | Patient voice, group differences, and equity | 16.0 | Runnable release candidate |
-| 06 | Partnered improvement and embedded machine learning | 16.0 | Specified in course contract |
+| 06 | Partnered improvement and embedded machine learning | 16.0 | Runnable release candidate |
 | 07 | Clinician and patient leadership, accountability, and defense | 16.0 | Specified in course contract |
 | Total |  | 112.5 |  |
 
@@ -43,6 +43,8 @@ The course uses the complete public CMS HCAHPS hospital file as its first source
 [Module 04](modules/04-linked-patient-evidence/README.md) uses all five official MEPS person and event products to teach governed linkage, aligned denominators, access and communication measures, digital-channel limits, and noncausal service-use interpretation. Its durable contract is [the Module 04 specification](../../docs/curriculum/courses/APP-2/modules/04-linked-patient-evidence-spec.md).
 
 [Module 05](modules/05-patient-voice-equity/README.md) uses a governed 420-comment synthetic corpus, a transparent coding and agreement exercise, bounded assisted classification, and design-aware public MEPS group comparisons to teach patient voice and equity reasoning without prevalence, causal, targeting, or proof-of-inequity claims. Its durable contract is [the Module 05 specification](../../docs/curriculum/courses/APP-2/modules/05-patient-voice-equity-spec.md).
+
+[Module 06](modules/06-partnered-improvement-embedded-ml/README.md) turns the accepted evidence into a patient-partnered improvement proposal and compares the exact transparent response cells with one bounded random forest on 377 held-out records. The model does not meet the prespecified threshold for changing the adjustment decision. Its reference partnership record is a labelled simulation, and a named patient or caregiver partner remains required before alpha. Its durable contract is [the Module 06 specification](../../docs/curriculum/courses/APP-2/modules/06-partnered-improvement-embedded-ml-spec.md).
 
 The full course contract is [the APP-2 course specification](../../docs/curriculum/courses/APP-2/course-spec.md). Source normalization is recorded in [the APP-2 source record](../../docs/source/app-2-patient-experience-engagement-source-record.md).
 

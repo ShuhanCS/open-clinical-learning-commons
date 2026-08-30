@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "app2-partnered-improvement-response-ml-v1",
+  "module": {
+    "id": "oclc-app2-06",
+    "version": "0.1.0",
+    "commons_release": "0.61.0",
+    "week": 6,
+    "hours": 16.0,
+    "application_hours": 8.0,
+    "ml_hours": 8.0,
+    "course_points": 0,
+    "checkpoint_points": 45
+  },
+  "population": "1255 accepted Module 03 adult inpatient frame records",
+  "outcome": "accepted synthetic total response status",
+  "eligible_features": ["age_band", "other_language_at_home", "income_group"],
+  "preprocessing": {
+    "class": "ColumnTransformer",
+    "encoder": "OneHotEncoder",
+    "handle_unknown": "ignore",
+    "sparse_output": false,
+    "fit_rows": "training only"
+  },
+  "split": {
+    "method": "train_test_split",
+    "test_size": 0.30,
+    "stratify": "response_status",
+    "random_state": 20260830
+  },
+  "transparent_benchmark": {
+    "method": "training-only base-weighted response cell factor",
+    "cell": ["age_band", "other_language_at_home", "income_group"],
+    "factor_formula": "training frame base weight divided by training respondent base weight in cell"
+  },
+  "machine_learning_model": {
+    "class": "RandomForestClassifier",
+    "n_estimators": 200,
+    "max_depth": 3,
+    "min_samples_leaf": 25,
+    "max_features": null,
+    "random_state": 20260830,
+    "n_jobs": 1,
+    "sample_weight": "base_person_weight"
+  },
+  "factor_bounds": {"lower": 1.0, "upper": 3.0},
+  "response_threshold": 0.60,
+  "error_costs": {"false_positive": 2, "false_negative": 1, "use": "teaching scenario only"},
+  "calibration_groups": 5,
+  "weight_stability": {
+    "minimum_ess_ratio": 0.85,
+    "maximum_largest_weight_share_percent": 3.0
+  },
+  "subgroup_support": {
+    "minimum_evaluation_rows": 30,
+    "minimum_respondents": 10,
+    "minimum_nonrespondents": 10,
+    "merge_small_groups": "prohibited",
+    "ranking": "prohibited"
+  },
+  "ml_changes_decision_if": {
+    "minimum_composite_absolute_bias_improvement_pp": 0.50,
+    "maximum_item_absolute_bias_worsening_pp": 0.25,
+    "maximum_ml_minus_transparent_brier": 0.005,
+    "all_weight_stability_rules_pass": true,
+    "all_required_evidence_complete": true,
+    "all_gates_pass": true
+  },
+  "known_truth_targets": ["Q22", "Q23", "teaching_composite"],
+  "claim_boundary": "public-derived and synthetic teaching evidence; no actual patient engagement fielding targeting official reporting clinical action or model deployment"
+}

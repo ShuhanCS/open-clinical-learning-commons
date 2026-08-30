@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.60.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.61.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1751,7 +1751,7 @@ if (
     $app2Content -match '(?im)[A-Z]:\\Users\\' -or
     $app2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app2Content -notmatch 'Current Commons release: 0\.60\.0' -or
+    $app2Content -notmatch 'Current Commons release: 0\.61\.0' -or
     $app2Content -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '25,906' -or
@@ -2325,6 +2325,161 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 05 evidence builder self-check fa
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 05 workspace builder self-check failed.' }
 & python (Join-Path $app2Module05Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 05 validator self-check failed.' }
+
+$app2Module06Root = Join-Path $repo 'courses\patient-experience-engagement\modules\06-partnered-improvement-embedded-ml'
+$app2Module06Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\modules\06-partnered-improvement-embedded-ml-spec.md'
+$app2Module06Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md',
+    'build_partnered_improvement_ml.py', 'build_workspace.py', 'environment.yml',
+    'feature-contract.csv', 'module06-contract.json', 'partner-contract.csv',
+    'release.json', 'source-record.yml', 'validate_workspace.py',
+    'outputs\upstream-inventory.csv', 'outputs\analysis-checks.csv',
+    'outputs\improvement-evidence.csv', 'outputs\partner-question-register.csv',
+    'outputs\transparent-weight-cells.csv', 'outputs\split-registry.csv',
+    'outputs\model-predictions.csv', 'outputs\model-performance.csv',
+    'outputs\calibration-bins.csv', 'outputs\threshold-errors.csv',
+    'outputs\response-weight-diagnostics.csv', 'outputs\estimate-recovery.csv',
+    'outputs\subgroup-model-audit.csv', 'outputs\feature-importance.csv',
+    'outputs\failure-cases.csv', 'outputs\invariant-checks.csv', 'outputs\build-report.json'
+)
+foreach ($editable in @(
+    'README.md', 'engagement-status.md', 'patient-partner-session.md',
+    'interpretation-disagreement.csv', 'improvement-brief.md', 'driver-diagram.csv',
+    'workflow.csv', 'measure-registry.csv', 'burden-access-review.md',
+    'feedback-accountability.md', 'ml-comparison.md', 'failure-case-review.md',
+    'responsible-claims.md', 'reproducibility-check.md', 'ai-use.md',
+    'gate-results.csv', 'progression-decision.md'
+)) {
+    $app2Module06Files += "template\$editable", "reference\$editable"
+}
+$app2Module06Missing = @()
+if (-not (Test-Path -LiteralPath $app2Module06Spec)) { $app2Module06Missing += 'specification' }
+foreach ($relative in $app2Module06Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Module06Root $relative))) {
+        $app2Module06Missing += $relative
+    }
+}
+if ($app2Module06Missing.Count -gt 0) {
+    throw "APP-2 Module 06 is missing its specification or package files: $($app2Module06Missing -join ', ')."
+}
+$app2Module06Content = Get-Content -Raw -LiteralPath $app2Module06Spec
+$app2Module06Sections = [regex]::Matches($app2Module06Content, '(?m)^## \d+\.').Count
+$app2Module06Release = Get-Content -Raw -LiteralPath (Join-Path $app2Module06Root 'release.json') | ConvertFrom-Json
+$app2Module06Upstream = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\upstream-inventory.csv'))
+$app2Module06Checks = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\analysis-checks.csv'))
+$app2Module06Cells = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\transparent-weight-cells.csv'))
+$app2Module06Split = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\split-registry.csv'))
+$app2Module06Predictions = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\model-predictions.csv'))
+$app2Module06Performance = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\model-performance.csv'))
+$app2Module06Calibration = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\calibration-bins.csv'))
+$app2Module06Diagnostics = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\response-weight-diagnostics.csv'))
+$app2Module06Recovery = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\estimate-recovery.csv'))
+$app2Module06Subgroups = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\subgroup-model-audit.csv'))
+$app2Module06Failures = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\failure-cases.csv'))
+$app2Module06Invariants = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'outputs\invariant-checks.csv'))
+$app2Module06Gates = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'reference\gate-results.csv'))
+$app2Module06Disagreements = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'reference\interpretation-disagreement.csv'))
+$app2Module06Measures = @(Import-Csv -LiteralPath (Join-Path $app2Module06Root 'reference\measure-registry.csv'))
+$app2Module06Progression = Get-Content -Raw -LiteralPath (Join-Path $app2Module06Root 'reference\progression-decision.md')
+$app2Module06Engagement = Get-Content -Raw -LiteralPath (Join-Path $app2Module06Root 'reference\engagement-status.md')
+if (
+    $app2Module06Files.Count -ne 64 -or
+    $app2Module06Sections -ne 22 -or
+    $app2Module06Content -match '[—–]' -or
+    $app2Module06Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Module06Content -notmatch '283,224 bytes' -or
+    $app2Module06Content -notmatch '4,361 bytes' -or
+    $app2Module06Content -notmatch 'b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2' -or
+    $app2Module06Content -notmatch '155 checks' -or
+    $app2Module06Content -notmatch '242 checks' -or
+    $app2Module06Content -notmatch '220 checks' -or
+    $app2Module06Release.module.id -ne 'oclc-app2-06' -or
+    $app2Module06Release.module.version -ne '0.1.0' -or
+    $app2Module06Release.module.commons_release -ne '0.61.0' -or
+    $app2Module06Release.module.hours -ne 16 -or
+    $app2Module06Release.module.application_hours -ne 8 -or
+    $app2Module06Release.module.embedded_ml_hours -ne 8 -or
+    $app2Module06Release.module.course_points -ne 0 -or
+    $app2Module06Release.module.checkpoint_points -ne 45 -or
+    $app2Module06Release.upstream.accepted_files -ne 13 -or
+    $app2Module06Release.upstream.accepted_bytes -ne 610595 -or
+    $app2Module06Release.upstream.frame_rows -ne 1255 -or
+    $app2Module06Release.upstream.synthetic_respondents -ne 782 -or
+    $app2Module06Release.upstream.synthetic_nonrespondents -ne 473 -or
+    $app2Module06Release.partnership_and_improvement.actual_patient_or_caregiver_statements -ne 0 -or
+    $app2Module06Release.partnership_and_improvement.partner_requirements -ne 12 -or
+    $app2Module06Release.partnership_and_improvement.simulated_interpretation_records -ne 8 -or
+    $app2Module06Release.partnership_and_improvement.driver_diagram_rows -ne 14 -or
+    $app2Module06Release.partnership_and_improvement.workflow_steps -ne 12 -or
+    $app2Module06Release.partnership_and_improvement.measures -ne 14 -or
+    $app2Module06Release.response_model.training_rows -ne 878 -or
+    $app2Module06Release.response_model.training_respondents -ne 547 -or
+    $app2Module06Release.response_model.evaluation_rows -ne 377 -or
+    $app2Module06Release.response_model.evaluation_respondents -ne 235 -or
+    $app2Module06Release.response_model.transparent_cells -ne 13 -or
+    $app2Module06Release.response_model.comment_text_features -ne 0 -or
+    $app2Module06Release.reference_results.transparent_brier -ne '0.22962545' -or
+    $app2Module06Release.reference_results.bounded_rf_brier -ne '0.23135127' -or
+    $app2Module06Release.reference_results.ml_minus_transparent_brier -ne '0.00172582' -or
+    $app2Module06Release.reference_results.transparent_auc -ne '0.54335192' -or
+    $app2Module06Release.reference_results.bounded_rf_auc -ne '0.53869891' -or
+    $app2Module06Release.reference_results.composite_absolute_bias_improvement_pp -ne '0.08367520' -or
+    $app2Module06Release.reference_results.ml_changes_response_adjustment_decision -ne 'no' -or
+    $app2Module06Release.reference_results.teaching_adjustment -ne 'retain transparent benchmark' -or
+    $app2Module06Release.generated_evidence.files -ne 17 -or
+    $app2Module06Release.generated_evidence.bytes -ne 283224 -or
+    $app2Module06Release.generated_evidence.analysis_checks_passed -ne 22 -or
+    $app2Module06Release.generated_evidence.invariants_passed -ne 30 -or
+    $app2Module06Release.package.immutable_manifest_rows -ne 28 -or
+    $app2Module06Release.package.editable_records -ne 17 -or
+    $app2Module06Release.package.assembled_files -ne 46 -or
+    $app2Module06Release.package.manifest_bytes -ne 4361 -or
+    $app2Module06Release.package.manifest_sha256 -ne 'b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2' -or
+    $app2Module06Release.assessment.week6_points -ne 45 -or
+    $app2Module06Release.assessment.noncompensable_gates -ne 24 -or
+    $app2Module06Release.progression.reference -ne 'continue with conditions' -or
+    $app2Module06Release.progression.checkpoint02_permission -ne 'permitted for cumulative Week 6 assembly' -or
+    $app2Module06Release.progression.comment_text_machine_learning -ne 'prohibited' -or
+    $app2Module06Upstream.Count -ne 13 -or
+    ($app2Module06Upstream | Measure-Object -Property bytes -Sum).Sum -ne 610595 -or
+    $app2Module06Checks.Count -ne 22 -or
+    @($app2Module06Checks | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app2Module06Cells.Count -ne 13 -or
+    @($app2Module06Cells | Where-Object { $_.bound_hit -eq 'yes' }).Count -ne 1 -or
+    $app2Module06Split.Count -ne 1255 -or
+    @($app2Module06Split | Where-Object { $_.split -eq 'training' }).Count -ne 878 -or
+    @($app2Module06Split | Where-Object { $_.split -eq 'evaluation' }).Count -ne 377 -or
+    $app2Module06Predictions.Count -ne 377 -or
+    $app2Module06Performance.Count -ne 2 -or
+    @($app2Module06Performance | Where-Object { $_.method -eq 'transparent_benchmark' -and $_.base_weighted_brier -eq '0.22962545' }).Count -ne 1 -or
+    @($app2Module06Performance | Where-Object { $_.method -eq 'bounded_random_forest' -and $_.base_weighted_brier -eq '0.23135127' }).Count -ne 1 -or
+    $app2Module06Calibration.Count -ne 10 -or
+    $app2Module06Diagnostics.Count -ne 3 -or
+    @($app2Module06Diagnostics | Where-Object { $_.stability_status -ne 'pass' }).Count -ne 0 -or
+    $app2Module06Recovery.Count -ne 12 -or
+    @($app2Module06Recovery | Where-Object { $_.measure -eq 'teaching_composite' -and $_.estimator -eq 'bounded_ml_adjusted' -and $_.absolute_bias_pp -eq '2.39922466' }).Count -ne 1 -or
+    $app2Module06Subgroups.Count -ne 26 -or
+    @($app2Module06Subgroups | Where-Object { $_.support_status -like 'suppress:*' }).Count -ne 8 -or
+    $app2Module06Failures.Count -ne 22 -or
+    $app2Module06Invariants.Count -ne 30 -or
+    @($app2Module06Invariants | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app2Module06Gates.Count -ne 24 -or
+    @($app2Module06Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app2Module06Disagreements.Count -ne 8 -or
+    @($app2Module06Disagreements | Where-Object { $_.data_class -ne 'simulated_reference' }).Count -ne 0 -or
+    $app2Module06Measures.Count -ne 14 -or
+    $app2Module06Engagement -notmatch 'Actual patient or caregiver statements in this package: `0`' -or
+    $app2Module06Progression -notmatch 'Week 6 score: `45.00 of 45.00`' -or
+    $app2Module06Progression -notmatch 'ML changes response-adjustment decision: `no`'
+) {
+    throw 'APP-2 Module 06 release metadata, specification, partnership, improvement, model, validation, manifest, or progression facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Module06Root 'build_partnered_improvement_ml.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 06 evidence builder self-check failed.' }
+& python (Join-Path $app2Module06Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 06 workspace builder self-check failed.' }
+& python (Join-Path $app2Module06Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 06 validator self-check failed.' }
 
 $app2Checkpoint01Root = Join-Path $repo 'courses\patient-experience-engagement\checkpoints\01-measurement-representation-readiness'
 $app2Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\checkpoints\01-measurement-representation-readiness-spec.md'
@@ -3683,4 +3838,5 @@ Write-Output "APP-2 Module 02 passed: $app2Module02Sections contract sections an
 Write-Output "APP-2 Module 03 passed: $app2Module03Sections contract sections and $($app2Module03Files.Count) required files."
 Write-Output "APP-2 Module 04 passed: $app2Module04Sections contract sections and $($app2Module04Files.Count) required files."
 Write-Output "APP-2 Module 05 passed: $app2Module05Sections contract sections and $($app2Module05Files.Count) required files."
+Write-Output "APP-2 Module 06 passed: $app2Module06Sections contract sections and $($app2Module06Files.Count) required files."
 Write-Output "APP-2 Checkpoint 01 passed: $app2Checkpoint01Sections contract sections and $($app2Checkpoint01Files.Count) required files."

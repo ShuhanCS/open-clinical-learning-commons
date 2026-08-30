@@ -1,0 +1,9 @@
+feature,category,importance,rank,claim_limit
+age_band,18-44,0.05067616,5,training-fit impurity importance; not causal importance or a patient trait
+age_band,45-64,0.04491063,6,training-fit impurity importance; not causal importance or a patient trait
+age_band,65+,0.39797011,1,training-fit impurity importance; not causal importance or a patient trait
+other_language_at_home,missing or inapplicable,0.00000000,8,training-fit impurity importance; not causal importance or a patient trait
+other_language_at_home,no,0.04125847,7,training-fit impurity importance; not causal importance or a patient trait
+other_language_at_home,yes,0.09252477,4,training-fit impurity importance; not causal importance or a patient trait
+income_group,lower income,0.19145108,2,training-fit impurity importance; not causal importance or a patient trait
+income_group,middle or high income,0.18120877,3,training-fit impurity importance; not causal importance or a patient trait

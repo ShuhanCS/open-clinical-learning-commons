@@ -1,0 +1,23 @@
+feature,source,eligible,role,transformation,reason
+age_band,Module 03 public-derived frame,yes,predictor,one-hot encode,exact transparent response-cell field
+other_language_at_home,Module 03 public-derived frame,yes,predictor,one-hot encode,exact transparent response-cell field
+income_group,Module 03 public-derived frame,yes,predictor,one-hot encode,exact transparent response-cell field
+assigned_mode,Module 03 synthetic response overlay,no,prohibited,none,not in transparent benchmark and cannot support a causal mode claim
+health_status,Module 03 public-derived frame,no,prohibited,none,not in transparent benchmark
+proxy_status,Module 03 public-derived frame,no,prohibited,none,not in transparent benchmark
+insurance_coverage,Module 03 public-derived frame,no,audit only,none,retained for support audit only
+sex,Module 03 public-derived frame,no,audit only,none,not in transparent benchmark and source category is not established identity
+race_ethnicity,Module 03 public-derived frame,no,audit only,none,not in transparent benchmark and cannot certify fairness
+region,Module 03 public-derived frame,no,prohibited,none,not in transparent benchmark
+panel,Module 03 public-derived frame,no,prohibited,none,not in transparent benchmark
+public_saq_status,Module 03 public-derived frame,no,prohibited,none,unrelated public response example
+response_probability,Module 03 synthetic response overlay,no,leakage,none,known generator truth
+response_status,Module 03 synthetic response overlay,no,target,none,model outcome
+q21_truth,Module 03 synthetic response overlay,no,prohibited,none,post-invitation synthetic outcome
+q22_truth,Module 03 synthetic response overlay,no,prohibited,none,known-truth recovery target
+q23_truth,Module 03 synthetic response overlay,no,prohibited,none,known-truth recovery target
+q21_observed,Module 03 synthetic response overlay,no,leakage,none,observed only after response
+q22_observed,Module 03 synthetic response overlay,no,leakage,none,observed only after response
+q23_observed,Module 03 synthetic response overlay,no,leakage,none,observed only after response
+comment_text,Module 05 synthetic comment corpus,no,prohibited,none,comment-text modeling is prohibited
+group_results,Module 05 group outputs,no,audit only,none,interpretation and support evidence cannot be a predictor

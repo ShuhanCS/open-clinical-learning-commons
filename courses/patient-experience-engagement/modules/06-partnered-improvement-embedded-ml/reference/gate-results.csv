@@ -1,0 +1,25 @@
+gate_id,gate,evidence,status,condition
+G01,accepted upstream identities,upstream-inventory.csv,pass,none
+G02,one-to-one frame identities,analysis-checks.csv CHK04,pass,none
+G03,data classes separated,source-record.yml and engagement-status.md,pass,retain labels
+G04,simulation not actual engagement,engagement-status.md,pass,named actual partner required before alpha
+G05,partnership terms complete,partner-contract.csv,pass,direct agreement required before alpha
+G06,interpretation and disagreement recorded,interpretation-disagreement.csv,pass,replace simulation before alpha
+G07,no proof-of-inequity or cause claim,responsible-claims.md,pass,named equity review pending
+G08,support and suppression retained,subgroup-model-audit.csv,pass,unsupported metrics stay blank
+G09,synthetic comments bounded,responsible-claims.md,pass,human qualitative review pending
+G10,improvement package complete,driver-diagram.csv workflow.csv and measure-registry.csv,pass,local capacity review pending
+G11,no retrospective proxy for prospective field,workflow.csv,pass,prospective collection required
+G12,comment text and prohibited predictors excluded,feature-contract.csv,pass,none
+G13,same fields and split,module06-contract.json and split-registry.csv,pass,none
+G14,training-only preprocessing,module06-contract.json and build script,pass,independent model review pending
+G15,one bounded ML model,module06-contract.json,pass,no model search
+G16,calibration errors costs and weights complete,calibration-bins.csv threshold-errors.csv and response-weight-diagnostics.csv,pass,none
+G17,known-truth recovery complete,estimate-recovery.csv,pass,item nonresponse remains
+G18,subgroup support enforced,subgroup-model-audit.csv,pass,no merging or ranking
+G19,failure cases reviewed,failure-case-review.md and failure-cases.csv,pass,none
+G20,prespecified ML decision used,ml-comparison.md,pass,ML does not change decision
+G21,ML does not replace people or transparent method,ml-comparison.md and engagement-status.md,pass,actual partnership pending
+G22,prohibited uses retained,responsible-claims.md,pass,fielding and deployment prohibited
+G23,workspace reproduces,reproducibility-check.md,pass,independent reproduction pending
+G24,points and progression consistent,progression-decision.md,pass,Checkpoint 02 must carry 25 plus 20 once
