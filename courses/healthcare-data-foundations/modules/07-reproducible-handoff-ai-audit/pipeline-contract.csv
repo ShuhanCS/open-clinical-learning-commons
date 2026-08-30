@@ -1,0 +1,24 @@
+artifact_id,source_unit,source_module_dir,source_path,target_path,byte_count,sha256,role
+P01,M01,01-reproducible-workspace,template/requirements.txt,requirements.txt,49,69dfed32ce23c42ed94c378e5221e1babff2ae18da6e5a94c375e3a977130f29,Python dependency pins
+P02,M02,02-databases-retrieval,build_database.py,source-code/module02/build_database.py,15418,9e8436b4e5ce9db9dbbbac85dbb980974b03ac6202a375f9d86de4c132474252,pinned database builder
+P03,M02,02-databases-retrieval,run_queries.py,source-code/module02/run_queries.py,4162,333308b8d79b3ba4316500d309dc1684cab5fcc396c905cc2adcbc02c35a525c,named read-only query runner
+P04,M02,02-databases-retrieval,schema.sql,source-code/module02/schema.sql,6689,b993745841c376220ede66b8bea2799b9fdd80e7ed8fc9dd4d02453653102ec5,relational schema
+P05,M02,02-databases-retrieval,source-manifest.csv,source-code/module02/source-manifest.csv,1842,15efc286e19c1c6640775770be8993fadc684656262e852c599356751ab922bd,source member contract
+P06,M02,02-databases-retrieval,template/VERSION,source-code/module02/template/VERSION,6,e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67,database workspace version
+P07,M02,02-databases-retrieval,template/validation-notes.md,source-code/module02/template/validation-notes.md,700,9dda41d0bb763259a912094aef21748cda53ad9b7c07789c586e4e87d26c4bce,database review template
+P08,M02,02-databases-retrieval,template/fhir-json-reading.md,source-code/module02/template/fhir-json-reading.md,983,49f75bfb4a050033d24c667a082a175856fe2275504b0c9a1cdadbd87bf32e97,FHIR reading template
+P09,M02,02-databases-retrieval,template/data-model.mmd,source-code/module02/template/data-model.mmd,668,1c95271151c4a12fff8365a80eab8ecfd29b6a5feae6f38468f7197a60e5880c,relationship model template
+P10,M02,02-databases-retrieval,template/ai-use.md,source-code/module02/template/ai-use.md,726,f63e722cff3cb2e342e4594870d899da8bad192f12b2d6ccd46748857133f655,database AI record template
+P11,M02,02-databases-retrieval,template/schema-description.md,source-code/module02/template/schema-description.md,1110,9536cebd64619efdc730839c5bf6f42d588bd761a9a8a6649a5df3b5f9f43f16,schema description template
+P12,M02,02-databases-retrieval,template/README.md,source-code/module02/template/README.md,2065,5071faef820790531bd6fa9f15f8d25a8871f123d1976a19047412fc468f0020,database workspace guide
+P13,M02,02-databases-retrieval,template/source-record.yml,source-code/module02/template/source-record.yml,869,749f93e589a81adfec28b3129ba88408911a49901aca0fbc02df917a3b3a5559,database source record template
+P14,M02,02-databases-retrieval,template/sql/01-first-extracts.sql,source-code/module02/template/sql/01-first-extracts.sql,765,3321299d5be5e8502206c6414d9fa367919976fa106a30d6684fe74ff93b5de4,first extracts SQL
+P15,M03,03-cohorts-analytic-tables,build_cohort.py,source-code/module03/build_cohort.py,5278,464b585ca2729a40432369596e74ca08ff2cce1224b5646a816ddbf5aa4a0784,cohort builder
+P16,M03,03-cohorts-analytic-tables,sql/01-eligible-events.sql,source-code/module03/sql/01-eligible-events.sql,1406,d1189d87c15ee6135d4a86384f2f2a40d137f542808e5f0be4f988d9aa659b5a,eligible events query
+P17,M03,03-cohorts-analytic-tables,sql/02-index-cohort.sql,source-code/module03/sql/02-index-cohort.sql,1527,e8f023425af19476e6912f258cefa79349b06359a2651e480bdc130b6eeb6766,index cohort query
+P18,M03,03-cohorts-analytic-tables,sql/03-analytic-table.sql,source-code/module03/sql/03-analytic-table.sql,5884,7421b75728d7e07ab00fe816be7a4f402b778e6457babc4e2cf8469a1d0fab76,analytic table query
+P19,M03,03-cohorts-analytic-tables,sql/04-validation.sql,source-code/module03/sql/04-validation.sql,3186,d74e38c5dbcd69b80a8d0c301ce1989950050d93dad4b11b16295bc405804332,cohort validation query
+P20,M04,04-cleaning-profiling,build_defect_release.py,source-code/module04/build_defect_release.py,20814,4b8e1f6c9f1ab517369bd237f296767cdf5ce625c5fbe7049cca1164b7abc012,deterministic defect builder
+P21,M04,04-cleaning-profiling,profile_quality.py,source-code/module04/profile_quality.py,14312,1624dc66fbbcb003fa0b80f6be2facbc1a974e5e28030c428ddb6a28fd7da73b,quality profiler
+P22,M05,05-descriptive-results,build_descriptive.py,source-code/module05/build_descriptive.py,21207,34128d662c58007ded5727cd8cfdbea7ea7938be5c4dba4f1f361950b671f56a,descriptive evidence builder
+P23,M06,06-accessible-charts-time-data,render_figures.py,source-code/module06/render_figures.py,20499,b4f249f756360e09e70e0eff4cac206fdd2d9397caf33d774a5ca884f48f7f22,accessible figure renderer

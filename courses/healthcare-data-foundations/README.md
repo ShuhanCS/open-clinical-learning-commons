@@ -11,9 +11,9 @@ FND-1 teaches learners to build, check, describe, and hand off healthcare data a
 - Continuing case: a synthetic longitudinal acute-care data system built from Synthea and documented public-source contrasts
 - Final deliverable: a reproducible healthcare data toolkit
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 06 and Checkpoints 1 and 2 are runnable release candidates; Module 07 is not yet built
+- Module package status: Modules 01 through 07 and Checkpoints 1 and 2 are runnable release candidates; the final checkpoint is not yet built
 - Course package version: 0.1.0
-- Commons release: 0.35.0
+- Commons release: 0.36.0
 
 ## Seven technical modules
 
@@ -45,6 +45,9 @@ Runnable module packages:
 - [Accessible charts and time-indexed data](modules/06-accessible-charts-time-data/README.md)
 - [Durable Module 06 specification](../../docs/curriculum/courses/FND-1/modules/06-accessible-charts-time-data-spec.md)
 - [Module 06 release record](modules/06-accessible-charts-time-data/release.json)
+- [Reproducible handoff and AI audit](modules/07-reproducible-handoff-ai-audit/README.md)
+- [Durable Module 07 specification](../../docs/curriculum/courses/FND-1/modules/07-reproducible-handoff-ai-audit-spec.md)
+- [Module 07 release record](modules/07-reproducible-handoff-ai-audit/release.json)
 
 ## Three cumulative checkpoints
 

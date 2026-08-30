@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.35.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 Modules 01 through 06 and its Week 3 and Week 6 checkpoints are runnable release candidates, covering reproducible setup, the full relational source, a tested 374-person cohort, deterministic quality evidence, denominator-controlled descriptive results, accessible exact-table-linked figures, and a frozen Module 07 handoff.
+- Current version: `0.36.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 now has all seven technical modules plus its Week 3 and Week 6 checkpoints as runnable release candidates, ending in a 90-file reproducible toolkit candidate with a material AI audit and technical handoff.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -30,6 +30,8 @@ The fifth unit is [FND-1 Module 05: Descriptive results](courses/healthcare-data
 The sixth unit is [FND-1 Module 06: Accessible charts and time-indexed data](courses/healthcare-data-foundations/modules/06-accessible-charts-time-data/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/FND-1/modules/06-accessible-charts-time-data-spec.md). It releases three exact tables, six accessible figure exports, three structured text alternatives, and a fingerprinted Week 6 handoff.
 
 The cumulative [FND-1 Week 6 checkpoint](courses/healthcare-data-foundations/checkpoints/02-quality-descriptive-accessible-release/README.md) freezes 35 accepted artifacts from Modules 04 through 06 into one 25-point decision package. Its durable [checkpoint specification](docs/curriculum/courses/FND-1/checkpoints/02-quality-descriptive-accessible-release-spec.md) defines the exact quality, denominator, accessibility, defense, and Module 07 progression contract.
+
+The seventh unit is [FND-1 Module 07: Reproducible handoff and AI audit](courses/healthcare-data-foundations/modules/07-reproducible-handoff-ai-audit/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/FND-1/modules/07-reproducible-handoff-ai-audit-spec.md). It assembles the accepted evidence and 23 exact pipeline-source files into a 90-file candidate with a 74-row immutable manifest, data brief, release records, material AI audit, and technical defense.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

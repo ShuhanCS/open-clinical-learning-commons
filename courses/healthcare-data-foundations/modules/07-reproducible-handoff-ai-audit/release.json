@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd1-07",
+    "title": "Reproducible handoff and AI audit",
+    "version": "0.1.0",
+    "commons_release": "0.36.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "week": 7,
+    "hours": 16.0,
+    "cumulative_hours": 112.5,
+    "final_component_points": 35,
+    "required_tag": "fnd1-handoff-v0.1.0"
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-fnd1-cp2",
+    "checkpoint_version": "0.1.0",
+    "checkpoint_artifacts": 35,
+    "checkpoint_contract_sha256": "ec031d23a50628b07ce15091c90a76f03241e3f4c4a17927211b74b854754a6b",
+    "checkpoint_manifest_sha256": "d7bb0e561309f4b61353f4485fe1d647d8a15c47e064f93acd816a77e512489d",
+    "progression": "allowed with conditions"
+  },
+  "decision": {
+    "owner": "health-system analytics engineering lead",
+    "question": "Can the complete versioned toolkit be accepted for downstream modeling or applied analysis while preserving all technical and claim conditions?",
+    "dispositions": ["accept", "accept with conditions", "revise", "refer"],
+    "final_checkpoint_progression": ["accept", "accept with conditions"],
+    "reference": "accept with conditions"
+  },
+  "analytic_table": {
+    "rows": 374,
+    "fields": 29,
+    "unique_patients": 374,
+    "unique_index_encounters": 374,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a",
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "pipeline_contract": {
+    "rows": 23,
+    "bytes": 4478,
+    "sha256": "d61f208046663b80f8a591be66cc4f22fecbf0c5be7803786f75fd74cdd1d783",
+    "module_01_files": 1,
+    "module_02_files": 13,
+    "module_03_files": 5,
+    "module_04_files": 2,
+    "module_05_files": 1,
+    "module_06_files": 1
+  },
+  "package": {
+    "assembled_files": 90,
+    "immutable_manifest_rows": 74,
+    "checkpoint_evidence_files": 35,
+    "checkpoint_record_files": 10,
+    "checkpoint_provenance_files": 4,
+    "pipeline_source_files": 23,
+    "module_07_immutable_files": 2,
+    "manifest_bytes": 10856,
+    "manifest_sha256": "804d454dcdf43d0f625c90130b9bd5c698b51451ddcc1fd0910ca52e1bbd9111",
+    "validator_bytes": 24403,
+    "validator_sha256": "305f49994375e8132e1b8598383b4dd0919d4e8fc8b2bf571ef3b0ffaf2a68dd"
+  },
+  "assessment": {
+    "course_points": 35,
+    "minimum_passing_points": 28,
+    "criteria": 8,
+    "release_identity_points": 4,
+    "manifest_integrity_points": 5,
+    "reproduction_points": 6,
+    "data_brief_points": 4,
+    "conditions_points": 3,
+    "accessibility_points": 3,
+    "ai_audit_points": 4,
+    "handoff_points": 6
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_assembly": "pass",
+    "learner_mode_assembly": "pass",
+    "starter_checks": 585,
+    "complete_reference_checks": 657,
+    "second_clean_assembly_comparison": "pass",
+    "existing_target_rejection": "pass",
+    "incomplete_record_rejection": "pass",
+    "missing_artifact_rejection": "pass"
+  },
+  "ai_audit": {
+    "reference_material_step": "structural missingness for no recorded next encounter",
+    "rows_checked": 374,
+    "matching_state_rows": 263,
+    "companion_fields_blank": 263,
+    "result": "pass",
+    "human_owner": "clinical analytics reviewer"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, toolkit contract, assembly, teaching records, and validation"}
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "Reference and learner assembly create 90 files and 74 immutable rows. Starter validation passes 585 checks and complete reference validation passes 657 checks."
+    },
+    "required_human_roles": [
+      {"role": "FND-1 faculty owner", "reviewer": null, "status": "pending"},
+      {"role": "SQL and data engineering", "reviewer": null, "status": "pending"},
+      {"role": "clinical informatics", "reviewer": null, "status": "pending"},
+      {"role": "accessibility", "reviewer": null, "status": "pending"},
+      {"role": "privacy and data governance", "reviewer": null, "status": "pending"},
+      {"role": "responsible AI", "reviewer": null, "status": "pending"},
+      {"role": "independent reproduction", "reviewer": null, "status": "pending"}
+    ]
+  },
+  "known_issues": [
+    "Named faculty, technical, clinical, accessibility, privacy, responsible-AI, and independent-reproduction reviews remain pending.",
+    "Windows technical reproduction is recorded; named macOS and Linux reproduction remains pending.",
+    "The source is synthetic and older and cannot support real clinical, operational, or population estimates."
+  ]
+}

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.35.0
+- Current release: 0.36.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Checkpoint 2, Quality, descriptive, and accessible evidence release
-- Next unit: FND-1 Module 07, Reproducible handoff and AI audit
+- Last completed unit: FND-1 Module 07, Reproducible handoff and AI audit
+- Next unit: FND-1 final checkpoint, Reproducible healthcare data toolkit
 
 ## Confirmed decisions
 
@@ -171,6 +171,15 @@
 - Starter validation passes 363 checks and complete reference validation passes 389. The self-check rejects unfinished cumulative records and a missing immutable artifact.
 - A score of at least 20 of 25, every gate, an adequate defense, and `accept` or `accept with conditions` permit Module 07. The reference disposition is `accept with conditions`.
 - Checkpoint 2 is a runnable release candidate. Named faculty, quality, clinical, accessibility, reproducibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Module 07 treats accepted Checkpoint 2 version 0.1.0 as immutable and adds no new analytic result. It packages evidence, exact pipeline source, release records, a material AI audit, and technical-defense preparation.
+- Its 23-row pipeline contract preserves 1 Module 01 dependency file, 13 Module 02 database files, 5 Module 03 cohort files, 2 Module 04 quality files, the Module 05 descriptive builder, and the Module 06 renderer.
+- The pipeline contract is 4,478 bytes with SHA-256 `d61f208046663b80f8a591be66cc4f22fecbf0c5be7803786f75fd74cdd1d783`.
+- Reference and learner assembly each create 90 files and a 74-row immutable manifest. The 10,856-byte manifest SHA-256 is `804d454dcdf43d0f625c90130b9bd5c698b51451ddcc1fd0910ca52e1bbd9111`.
+- The toolkit carries 35 Checkpoint 2 evidence artifacts, ten cumulative checkpoint records, four checkpoint provenance files, 23 pipeline-source files, the pipeline contract, and the portable validator.
+- The reference AI audit independently verifies that all 263 `No encounter recorded` rows retain blank next-event companion fields. Zero would invent an event at the follow-up origin and is rejected.
+- Starter validation passes 585 checks and complete reference validation passes 657. Existing targets, unfinished records, and a missing immutable rate table are rejected; two clean assemblies produce the same immutable manifest.
+- Module 07 drafts the exact 35-point final component. A score of at least 28, every gate, an adequate defense, and `accept` or `accept with conditions` permit final-checkpoint review.
+- All seven FND-1 technical modules are now runnable release candidates. The final checkpoint and named human review remain before course completion.
 
 ## Pending confirmation
 
@@ -179,9 +188,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course, Module 07 brief, Checkpoint 2 specification and release record, source record, master architecture, and this ledger.
-2. Treat the complete Checkpoint 2 package as Module 07's immutable input: 35 artifacts, three module releases, cumulative decisions, and the exact manifest.
-3. Specify Module 07 around reproducible handoff, provenance, release notes, independent reproduction, AI audit, and the final toolkit readiness decision.
-4. Preserve D01 through D20 resolution, N01 through N08 conditions, exact descriptive meaning, equivalent access, and synthetic claim limits without recalculation, retyping, or redrawing.
-5. Lock Module 07's exact 16-hour scope, assessment role inside the final 35-point checkpoint, data handoff, learner defense, and final-checkpoint outputs before implementation.
-6. Build, validate, version, commit, and push Module 07 before assembling the final checkpoint.
+1. Read the FND-1 course, Module 07 specification and release record, final-checkpoint brief, source record, master architecture, and this ledger.
+2. Treat the accepted 90-file Module 07 toolkit candidate and 74-row manifest as immutable final-checkpoint input.
+3. Write the 17-section final-checkpoint specification around the source 35-point rubric, technical defense, and health-system analytics engineering lead decision.
+4. Preserve D01 through D20 resolution, N01 through N08 conditions, exact descriptive meaning, equivalent access, material AI audit, and synthetic claim limits.
+5. Build the protected final assembler, learner and reviewer records, instructor answer key, validator, release record, and final `accept`, `accept with conditions`, `revise`, or `refer` disposition.
+6. Update the Commons version and this ledger, then commit and push the final checkpoint before starting FND-2.

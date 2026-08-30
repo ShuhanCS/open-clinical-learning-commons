@@ -1,0 +1,22 @@
+# Release checklist
+
+- [ ] Accepted Checkpoint 2 version and progression disposition verified.
+- [ ] All 74 immutable manifest rows verified.
+- [ ] Analytic grain, rows, fields, and fingerprint verified.
+- [ ] D01 through D20 and N01 through N08 preserved.
+- [ ] Descriptive denominators and interval meaning preserved.
+- [ ] F01 through F03 access routes preserved.
+- [ ] All 23 pipeline-source files verified.
+- [ ] Source, rights, and synthetic status recorded.
+- [ ] Environment and exact reproduction commands recorded.
+- [ ] Reproduced outputs compared to accepted fingerprints.
+- [ ] No hidden local dependency remains.
+- [ ] No source ZIP, database, secret, credential, or restricted data is committed.
+- [ ] Change log, release notes, data brief, and limitations are complete.
+- [ ] Material AI uses are logged.
+- [ ] One material AI-assisted step is independently audited.
+- [ ] Accessibility handoff is complete.
+- [ ] Complete validation passes.
+- [ ] Eight-minute handoff is ready.
+- [ ] Ten required defense responses are complete.
+- [ ] Score, gates, conditions, and disposition are recorded.

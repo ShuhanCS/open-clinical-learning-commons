@@ -447,6 +447,59 @@ if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 06 renderer self-check failed.' }
 & python (Join-Path $fnd1Module06Root 'validate_figures.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 06 validator self-check failed.' }
 
+$fnd1Module07Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\07-reproducible-handoff-ai-audit'
+$fnd1Module07Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\07-reproducible-handoff-ai-audit-spec.md'
+$fnd1Module07RecordFiles = @(
+    '.gitattributes', 'README.md', 'CHANGELOG.md', 'release-notes.md',
+    'component-score.csv', 'release-checklist.md', 'reproducibility-check.md',
+    'review-disposition.md', 'documentation\data-brief.md', 'documentation\limitations.md',
+    'documentation\ai-audit.md', 'audit\prompt-log.csv', 'defense\handoff-brief.md',
+    'defense\questions-and-responses.md'
+)
+$fnd1Module07Files = @(
+    '.gitattributes', '.gitignore', 'VERSION', 'README.md', 'pipeline-contract.csv',
+    'assemble_toolkit.py', 'validate_toolkit.py', 'assessment.md', 'instructor-notes.md', 'release.json'
+) + @($fnd1Module07RecordFiles | ForEach-Object { "template\$_" }) + @($fnd1Module07RecordFiles | ForEach-Object { "reference\$_" })
+$fnd1Module07Missing = @($fnd1Module07Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Module07Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Module07Spec) -or $fnd1Module07Missing.Count -gt 0) {
+    throw "FND-1 Module 07 is missing its specification or package files: $($fnd1Module07Missing -join ', ')."
+}
+$fnd1Module07Content = Get-Content -Raw -LiteralPath $fnd1Module07Spec
+$fnd1Module07Sections = [regex]::Matches($fnd1Module07Content, '(?m)^## \d+\.').Count
+$fnd1Module07Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Module07Root 'release.json') | ConvertFrom-Json
+$fnd1Module07ContractPath = Join-Path $fnd1Module07Root 'pipeline-contract.csv'
+$fnd1Module07Contract = Import-Csv -LiteralPath $fnd1Module07ContractPath
+$fnd1Module07Scores = Import-Csv -LiteralPath (Join-Path $fnd1Module07Root 'reference\component-score.csv')
+if (
+    $fnd1Module07Sections -ne 21 -or
+    $fnd1Module07Content -match '[—–]' -or
+    $fnd1Module07Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd1Module07Release.module.version -ne '0.1.0' -or
+    $fnd1Module07Release.module.commons_release -ne '0.36.0' -or
+    $fnd1Module07Release.module.hours -ne 16 -or
+    $fnd1Module07Release.module.cumulative_hours -ne 112.5 -or
+    $fnd1Module07Release.module.final_component_points -ne 35 -or
+    $fnd1Module07Release.pipeline_contract.rows -ne 23 -or
+    $fnd1Module07Release.package.assembled_files -ne 90 -or
+    $fnd1Module07Release.package.immutable_manifest_rows -ne 74 -or
+    $fnd1Module07Release.package.manifest_sha256 -ne '804d454dcdf43d0f625c90130b9bd5c698b51451ddcc1fd0910ca52e1bbd9111' -or
+    $fnd1Module07Release.validation.starter_checks -ne 585 -or
+    $fnd1Module07Release.validation.complete_reference_checks -ne 657 -or
+    $fnd1Module07Contract.Count -ne 23 -or
+    @($fnd1Module07Contract | Where-Object { $_.source_unit -eq 'M02' }).Count -ne 13 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $fnd1Module07ContractPath).Hash.ToLowerInvariant() -ne 'd61f208046663b80f8a591be66cc4f22fecbf0c5be7803786f75fd74cdd1d783' -or
+    ($fnd1Module07Scores | Measure-Object -Property course_points -Sum).Sum -ne 35 -or
+    ($fnd1Module07Scores | Measure-Object -Property score -Sum).Sum -ne 35
+) {
+    throw 'FND-1 Module 07 release metadata, specification, pipeline contract, score, or validation facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $fnd1Module07Root 'assemble_toolkit.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 07 assembler self-check failed.' }
+& python (Join-Path $fnd1Module07Root 'validate_toolkit.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 07 validator self-check failed.' }
+
 $fnd1Checkpoint01Root = Join-Path $repo 'courses\healthcare-data-foundations\checkpoints\01-validated-cohort-release'
 $fnd1Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\checkpoints\01-validated-cohort-release-spec.md'
 $fnd1Checkpoint01Files = @(
@@ -1222,5 +1275,6 @@ Write-Output "FND-1 Module 03 passed: $fnd1Module03Sections contract sections an
 Write-Output "FND-1 Module 04 passed: $fnd1Module04Sections contract sections and $($fnd1Module04Files.Count) required files."
 Write-Output "FND-1 Module 05 passed: $fnd1Module05Sections contract sections and $($fnd1Module05Files.Count) required files."
 Write-Output "FND-1 Module 06 passed: $fnd1Module06Sections contract sections and $($fnd1Module06Files.Count) required files."
+Write-Output "FND-1 Module 07 passed: $fnd1Module07Sections contract sections and $($fnd1Module07Files.Count) required files."
 Write-Output "FND-1 Checkpoint 1 passed: $fnd1Checkpoint01Sections contract sections and $($fnd1Checkpoint01Files.Count) required files."
 Write-Output "FND-1 Checkpoint 2 passed: $fnd1Checkpoint02Sections contract sections and $($fnd1Checkpoint02Files.Count) required files."

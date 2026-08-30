@@ -1,8 +1,8 @@
 # FND-1: Healthcare Data Foundations
 
-- Status: course specification complete; Modules 01 through 06 and Checkpoints 1 and 2 are runnable release candidates
+- Status: course specification complete; Modules 01 through 07 and Checkpoints 1 and 2 are runnable release candidates
 - Course specification version: 0.1.0
-- Commons release: 0.35.0
+- Commons release: 0.36.0
 - Credits: 3
 - Delivery: asynchronous online half-term with scheduled technical clinics and review
 - Planning model: seven instructional weeks mapped to official half-term dates
@@ -794,25 +794,30 @@ Handoff: the Week 6 checkpoint freezes the complete evidence set before final pa
 - Checkpoint role: final checkpoint due on the official last day of the half-term.
 - Out of scope: fitting or selecting a production model, causal inference, real clinical approval, production deployment, and unreviewed use of restricted data.
 
-Planned module package:
+Runnable module package:
 
 ```text
 module-07/
+  .gitattributes
+  VERSION
   README.md
-  release-checklist.md
-  data-brief.md
-  ai-audit.md
-  defense-questions.md
+  pipeline-contract.csv
+  assemble_toolkit.py
+  validate_toolkit.py
   assessment.md
   instructor-notes.md
   release.json
+  template/
+    [learner-owned release, audit, and defense records]
+  reference/
+    [completed instructor records]
 ```
 
-Full future specification:
+Full specification:
 
 `docs/curriculum/courses/FND-1/modules/07-reproducible-handoff-ai-audit-spec.md`
 
-Runnable future package:
+Runnable package:
 
 `courses/healthcare-data-foundations/modules/07-reproducible-handoff-ai-audit/`
 
@@ -1611,14 +1616,14 @@ Each module adds its own source, data, code, output, and release checks.
 - [x] Module 05 has a complete specification and runnable package.
 - [x] Module 06 has a complete specification and runnable package.
 - [x] Checkpoint 2 has a runnable assembler, templates, validator, and instructor notes.
-- [ ] Module 07 has a complete specification and runnable package.
+- [x] Module 07 has a complete specification and runnable package.
 - [ ] The final checkpoint has a runnable assembler, templates, validator, and instructor notes.
 - [ ] Named human reviews are recorded.
 - [ ] The course has reached beta after a taught pilot.
 
 ## Remaining implementation decisions
 
-These decisions do not block Module 07 specification and build:
+These decisions do not block final-checkpoint specification and build:
 
 1. Confirm whether the CMS Synthetic Medicare Claims extension is needed in a later course; the FND-1 default path remains the pinned Synthea release.
 2. Name the faculty, data engineering, clinical informatics, accessibility, privacy, AI, and independent-instructor reviewers.
@@ -1626,11 +1631,13 @@ These decisions do not block Module 07 specification and build:
 
 ## Context-safe continuation
 
-Checkpoint 2 version 0.1.0 is complete. Resume at Module 07 and preserve the 35-artifact Week 6 contract without recalculation, retyping, redrawing, suppression, or claim broadening.
+Module 07 version 0.1.0 is complete. Resume at the final checkpoint and preserve the exact 90-file candidate, 74 immutable rows, 35-point score contract, material AI audit, defense evidence, and all upstream conditions.
 
 Read:
 
 - this course specification;
+- `docs/curriculum/courses/FND-1/modules/07-reproducible-handoff-ai-audit-spec.md`;
+- `courses/healthcare-data-foundations/modules/07-reproducible-handoff-ai-audit/release.json`;
 - `docs/curriculum/courses/FND-1/checkpoints/02-quality-descriptive-accessible-release-spec.md`;
 - `courses/healthcare-data-foundations/checkpoints/02-quality-descriptive-accessible-release/release.json`;
 - `docs/source/fnd-1-healthcare-data-foundations-source-record.md`;
@@ -1639,13 +1646,13 @@ Read:
 
 Then:
 
-1. write the 21-section Module 07 specification;
-2. treat the complete Checkpoint 2 package as immutable input;
-3. build the reproducible handoff, provenance, release-note, and data-brief artifacts;
-4. build independent reproduction and material AI-audit exercises;
-5. create learner records, assessment, instructor key, and validator;
-6. preserve exact quality, denominator, accessibility, and claim conditions;
-7. reproduce Module 07 from a clean target;
+1. write the 17-section final-checkpoint specification;
+2. treat the accepted Module 07 toolkit candidate as immutable input;
+3. preserve the exact 35-point rubric and every noncompensable gate;
+4. define the final technical defense, review roles, and decision record;
+5. create the protected final assembler, learner and reviewer records, instructor key, and validator;
+6. preserve exact quality, denominator, accessibility, AI, and claim conditions;
+7. reproduce the final checkpoint from a clean target;
 8. update versions, checker, course status, and ledger;
-9. commit and push Module 07; and
-10. proceed to the final checkpoint without merging FND-2 content into FND-1.
+9. commit and push the final checkpoint; and
+10. record named human review before alpha or beta promotion.

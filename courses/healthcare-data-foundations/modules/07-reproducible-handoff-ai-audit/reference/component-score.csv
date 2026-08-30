@@ -1,0 +1,9 @@
+criterion_id,criterion,course_points,score,evidence,status
+R01,"Repository identity, semantic version, change log, release notes, and tag evidence",4.00,4.00,"README; CHANGELOG; release notes; version and tag contract",pass
+R02,"Complete package, ownership map, immutable manifest, and fingerprint integrity",5.00,5.00,"90 files; 74-row manifest; provenance and pipeline contracts",pass
+R03,"Environment, clean reproduction, output comparison, and hidden-dependency removal",6.00,6.00,"requirements; source code; reproduction record; validation",pass
+D01,"Data brief, source, rights, grain, cohort, and denominator clarity",4.00,4.00,"data brief; source record; analytic table; denominator registry",pass
+D02,"Quality conditions, descriptive limits, permitted use, and stop rules",3.00,3.00,"limitations; quality decision; interpretation memo",pass
+A01,"Accessible schema and figure routes, exact tables, alternatives, and handoff communication",3.00,3.00,"figure registry; exact tables; alternatives; handoff brief",pass
+AI01,"Complete AI-use inventory, prompt log, material audit, verification, and human ownership",4.00,4.00,"prompt log; AI audit; checkpoint AI-use record",pass
+H01,"Release checklist, eight-minute handoff, defense, conditions, and disposition",6.00,6.00,"checklist; defense records; review disposition",pass
