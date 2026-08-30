@@ -12,9 +12,9 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - Continuing forecast case: the pinned 6,208-row CDC NHSN jurisdiction-week public release
 - Final deliverable: a reproducible model or agent-assisted analytics package with a model card
 - Course specification status: complete candidate
-- Module package status: no module package is built yet
+- Module package status: Module 01 is a runnable release candidate
 - Course package version: 0.1.0
-- Commons release: 0.38.0
+- Commons release: 0.39.0
 
 ## Seven technical modules
 
@@ -25,6 +25,13 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 5. Forecasting and temporal validation.
 6. Agent-assisted modeling and testing.
 7. Model cards, governance, and defense.
+
+## Runnable modules
+
+- [Module 01: Analytic aims and a reproducible modeling workspace](modules/01-aims-reproducible-workspace/README.md)
+- [Module 01 durable specification](../../docs/curriculum/courses/FND-2/modules/01-aims-reproducible-workspace-spec.md)
+
+Module 01 preserves the accepted 374-row FND-1 table, assigns all 29 source fields and five derived fields a role, freezes the 224/75/75 temporal split with 25/7/4 positive outcomes, and registers the training-prevalence baseline before model fitting. Its standard-library builder and validator create a protected learner workspace and reject incomplete submissions.
 
 ## Three cumulative checkpoints
 

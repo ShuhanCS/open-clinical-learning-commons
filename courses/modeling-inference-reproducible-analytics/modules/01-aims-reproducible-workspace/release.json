@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd2-01",
+    "title": "Analytic aims and a reproducible modeling workspace",
+    "version": "0.1.0",
+    "commons_release": "0.39.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "week": 1,
+    "hours": 15.5,
+    "checkpoint_component_points": 15
+  },
+  "decision": {
+    "owner": "senior quantitative analyst acting as modeling-workflow reviewer",
+    "question": "May this aim, prediction time, feature contract, split, baseline, and repository state enter regression and prediction work?",
+    "allowed": ["accept", "accept with conditions", "revise", "refer"],
+    "reference": "accept with conditions",
+    "module_02_progression": "allowed with recorded conditions"
+  },
+  "source": {
+    "module": "oclc-fnd1-04",
+    "rows": 374,
+    "fields": 29,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a",
+    "source_release": "synthea-csv-apr2020",
+    "cohort_definition_version": "0.1.0",
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "prediction_contract": {
+    "unit": "one selected synthetic adult and one index encounter",
+    "prediction_time": "index_stop",
+    "label": "acute_return_90d",
+    "horizon_days": 90,
+    "allowed_predictors": 9,
+    "feature_contract_rows": 34,
+    "test_selection_use": "prohibited"
+  },
+  "split": {
+    "ordering": ["index_start", "patient_id"],
+    "train": {"rows": 224, "positives": 25, "negatives": 199, "first": "2015-01-01", "last": "2017-04-02"},
+    "validation": {"rows": 75, "positives": 7, "negatives": 68, "first": "2017-04-05", "last": "2018-04-03"},
+    "test": {"rows": 75, "positives": 4, "negatives": 71, "first": "2018-04-18", "last": "2019-12-28"}
+  },
+  "baseline": {
+    "fit_split": "train",
+    "positives": 25,
+    "rows": 224,
+    "constant_probability": "0.111607142857",
+    "frozen_before_candidate_comparison": true
+  },
+  "outputs": {
+    "modeling-cohort.csv": {"rows": 374, "fields": 34, "bytes": 138503, "sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332"},
+    "split-registry.csv": {"rows": 374, "fields": 8, "bytes": 51910, "sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1"},
+    "baseline-metrics.csv": {"rows": 1, "fields": 10, "bytes": 306, "sha256": "613651013e397beeadc84b17482026ca7cb4674abf61bf521699d79af0a3c9af"},
+    "modeling-checks.csv": {"rows": 24, "fields": 5, "bytes": 3869, "sha256": "e04dea1392d1cde03823f34b1e2548d7275bdd2a9ff55814e5e1ae6b6f04f24b"},
+    "build-report.json": {"bytes": 1653, "sha256": "468e494314a8d7326d81d8e6ed17a42a81f025642c4a58b5b4a10fd5bd5b6c67"}
+  },
+  "reference_facts": {
+    "total_positives": 36,
+    "total_negatives": 338,
+    "source_race_counts": {"white": 308, "black": 33, "asian": 27, "native": 5, "other": 1},
+    "source_gender_counts": {"F": 236, "M": 138},
+    "aim_classes": 6,
+    "practice_requests": 12
+  },
+  "environment": {
+    "tested_platform": "Windows 11",
+    "python": "3.12.10",
+    "builder_runtime": "Python standard library",
+    "analysis_dependencies": "requirements.txt"
+  },
+  "assessment": {
+    "course_points": 15,
+    "minimum_passing_points": 12,
+    "noncompensable_gates": 15,
+    "week_3_checkpoint_total_points": 40
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, deterministic build, validation, and teaching package"}
+  ],
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "release_checks": 15937,
+    "starter_checks": 15907,
+    "existing_target_refusal": "pass",
+    "incomplete_submission_rejection": "pass"
+  },
+  "known_issues": [
+    "Named quantitative-methods, clinical-informatics, Python, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "The source is synthetic and older and cannot support real clinical, population, causal, operational, or deployment claims.",
+    "The test split contains four positive outcomes, so final performance and subgroup evidence will be imprecise.",
+    "Named clean reproduction on macOS and Linux remains pending."
+  ]
+}

@@ -1,0 +1,2 @@
+baseline_id,fit_split,application_scope,n,positives,negatives,constant_probability,threshold,classification_rule,selection_status
+BL01,train,all later prediction comparisons,224,25,199,0.111607142857,0.500000,predict positive when probability is at least threshold,frozen before candidate-model comparison

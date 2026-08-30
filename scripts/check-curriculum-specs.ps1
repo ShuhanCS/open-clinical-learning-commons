@@ -97,7 +97,7 @@ if (
     $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
-    $fnd2PackageContent -notmatch 'Commons release: 0\.38\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.39\.0' -or
     $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch '21,850' -or
@@ -114,9 +114,99 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.38.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.39.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
+}
+
+$fnd2Module01Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\modules\01-aims-reproducible-workspace'
+$fnd2Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\modules\01-aims-reproducible-workspace-spec.md'
+$fnd2Module01Files = @(
+    'README.md',
+    'VERSION',
+    'requirements.txt',
+    'build_modeling_workspace.py',
+    'validate_modeling_workspace.py',
+    'data-spec.md',
+    'source-record.yml',
+    'aim-classification-exercises.csv',
+    'aim-and-method-plan.md',
+    'estimand-target-registry.csv',
+    'feature-role-contract.csv',
+    'environment-note.md',
+    'reproducibility-check.md',
+    'ai-use.md',
+    'progression-decision.md',
+    'assessment.md',
+    'instructor-notes.md',
+    'release.json',
+    'learner-template\.gitattributes',
+    'learner-template\.gitignore',
+    'learner-template\README.md',
+    'learner-template\VERSION',
+    'learner-template\aim-and-method-plan.md',
+    'learner-template\estimand-target-registry.csv',
+    'learner-template\feature-role-contract.csv',
+    'learner-template\environment-note.md',
+    'learner-template\reproducibility-check.md',
+    'learner-template\ai-use.md',
+    'learner-template\progression-decision.md',
+    'outputs\modeling-cohort.csv',
+    'outputs\split-registry.csv',
+    'outputs\baseline-metrics.csv',
+    'outputs\modeling-checks.csv',
+    'outputs\build-report.json'
+)
+$fnd2Module01Missing = @($fnd2Module01Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd2Module01Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd2Module01Spec) -or $fnd2Module01Missing.Count -gt 0) {
+    throw "FND-2 Module 01 is missing its specification or package files: $($fnd2Module01Missing -join ', ')."
+}
+$fnd2Module01Content = Get-Content -Raw -LiteralPath $fnd2Module01Spec
+$fnd2Module01Sections = [regex]::Matches($fnd2Module01Content, '(?m)^## \d+\.').Count
+if (
+    $fnd2Module01Sections -ne 21 -or
+    $fnd2Module01Content -match '[—–]' -or
+    $fnd2Module01Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Module01Content -notmatch 'Commons release: 0\.39\.0' -or
+    $fnd2Module01Content -notmatch '15937 release checks' -or
+    $fnd2Module01Content -notmatch '0\.111607142857' -or
+    $fnd2Module01Content -notmatch '6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332'
+) {
+    throw 'FND-2 Module 01 must define 21 plain-ASCII sections with the exact release, validation, baseline, and modeling-cohort contract.'
+}
+$fnd2Module01Release = Get-Content -Raw -LiteralPath (Join-Path $fnd2Module01Root 'release.json') | ConvertFrom-Json
+if (
+    $fnd2Module01Release.module.id -ne 'oclc-fnd2-01' -or
+    $fnd2Module01Release.module.version -ne '0.1.0' -or
+    $fnd2Module01Release.module.commons_release -ne '0.39.0' -or
+    $fnd2Module01Release.module.hours -ne 15.5 -or
+    $fnd2Module01Release.source.rows -ne 374 -or
+    $fnd2Module01Release.source.fields -ne 29 -or
+    $fnd2Module01Release.source.sha256 -ne '3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a' -or
+    $fnd2Module01Release.outputs.'modeling-cohort.csv'.rows -ne 374 -or
+    $fnd2Module01Release.outputs.'modeling-cohort.csv'.fields -ne 34 -or
+    $fnd2Module01Release.outputs.'modeling-cohort.csv'.sha256 -ne '6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332' -or
+    $fnd2Module01Release.split.train.rows -ne 224 -or
+    $fnd2Module01Release.split.validation.rows -ne 75 -or
+    $fnd2Module01Release.split.test.rows -ne 75 -or
+    $fnd2Module01Release.split.train.positives -ne 25 -or
+    $fnd2Module01Release.split.validation.positives -ne 7 -or
+    $fnd2Module01Release.split.test.positives -ne 4 -or
+    $fnd2Module01Release.baseline.constant_probability -ne '0.111607142857' -or
+    $fnd2Module01Release.validation.release_checks -ne 15937 -or
+    $fnd2Module01Release.validation.starter_checks -ne 15907
+) {
+    throw 'FND-2 Module 01 release metadata does not match the 0.1.0 modeling-workspace contract.'
+}
+& python (Join-Path $fnd2Module01Root 'build_modeling_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 01 builder self-check failed.'
+}
+& python (Join-Path $fnd2Module01Root 'validate_modeling_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 01 validator self-check failed.'
 }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
@@ -1392,3 +1482,4 @@ Write-Output "FND-1 Checkpoint 1 passed: $fnd1Checkpoint01Sections contract sect
 Write-Output "FND-1 Checkpoint 2 passed: $fnd1Checkpoint02Sections contract sections and $($fnd1Checkpoint02Files.Count) required files."
 Write-Output "FND-1 final checkpoint passed: $fnd1Checkpoint03Sections contract sections and $($fnd1Checkpoint03Files.Count) required files."
 Write-Output "FND-2 specification passed: $fnd2ModuleCount modules, $fnd2Hours hours, $fnd2CheckpointCount checkpoints."
+Write-Output "FND-2 Module 01 passed: $fnd2Module01Sections contract sections and $($fnd2Module01Files.Count) required files."

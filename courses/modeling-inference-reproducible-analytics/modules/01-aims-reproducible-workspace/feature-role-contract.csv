@@ -1,0 +1,35 @@
+field_name,origin,role,available_at_prediction_time,default_predictor,use_condition,leakage_action,reason
+patient_id,source,key_tracking,yes,no,joins and row tracking only,block,identity is not a clinical predictor
+birth_date,source,excluded_default,yes,no,use age_at_index instead,block,redundant direct date and disclosure risk
+death_date,source,post_index_leakage,no,no,none,block,future vital-status information
+age_at_index,source,allowed_predictor,yes,yes,core model,allow,known at prediction time
+gender,source,allowed_predictor,yes,yes,core model with source-vocabulary note,allow,known at prediction time
+race,source,allowed_predictor,yes,yes,core model with sparsity review,allow,known at prediction time
+ethnicity,source,allowed_predictor,yes,yes,core model with source-vocabulary note,allow,known at prediction time
+index_encounter_id,source,key_tracking,yes,no,joins and row tracking only,block,identity is not a clinical predictor
+index_start,source,metadata_time_zero,yes,no,ordering and audit only,block,time field can memorize calendar drift
+index_stop,source,metadata_prediction_time,yes,no,defines prediction time,block,time field can memorize calendar drift
+index_class,source,allowed_predictor,yes,yes,core model,allow,known at prediction time
+index_code,source,excluded_default,yes,no,separate high-cardinality plan required,block,high-cardinality code may overfit
+index_description,source,excluded_default,yes,no,separate text plan required,block,text duplicates high-cardinality code
+index_reason_code,source,excluded_default,yes,no,separate missingness and code plan required,block,optional high-cardinality field
+index_reason_description,source,excluded_default,yes,no,separate text and missingness plan required,block,optional high-cardinality text
+prior_365d_encounter_count,source,allowed_predictor,yes,yes,core model,allow,defined pre-index lookback count
+prior_365d_acute_count,source,allowed_predictor,yes,yes,core model,allow,defined pre-index lookback count
+prior_365d_condition_count,source,allowed_predictor,yes,yes,core model,allow,defined pre-index lookback count
+prior_365d_medication_count,source,allowed_predictor,yes,yes,core model,allow,defined pre-index lookback count
+next_30d_state,source,post_index_leakage,no,no,critique fixture only,block,occurs after prediction time
+next_30d_encounter_id,source,post_index_leakage,no,no,tracking after outcome only,block,occurs after prediction time
+next_30d_start,source,post_index_leakage,no,no,outcome audit only,block,occurs after prediction time
+next_30d_days_after_index_stop,source,post_index_leakage,no,no,Module 02 selected outcome only,block,occurs after prediction time
+acute_return_90d,source,label,no,no,outcome only,block,registered prediction label
+death_90d,source,post_index_leakage,no,no,outcome audit only,block,future outcome information
+endpoint_90d,source,outcome_derived_leakage,no,no,outcome audit only,block,encodes future outcome state
+followup_90d_complete,source,post_index_leakage,no,no,outcome-completeness audit only,block,known after the horizon
+source_release,source,metadata,yes,no,provenance only,block,constant release identifier
+cohort_definition_version,source,metadata,yes,no,provenance only,block,constant cohort identifier
+model_row_id,derived,key_tracking,yes,no,row tracking only,block,derived identity
+prediction_time,derived,metadata_prediction_time,yes,no,boundary audit only,block,calendar time is excluded from core model
+outcome_horizon_days,derived,metadata,yes,no,contract audit only,block,constant contract field
+split,derived,split_metadata,yes,no,data partitioning only,block,split membership is not patient information
+split_order,derived,split_metadata,yes,no,reproduction only,block,order would encode calendar and partition

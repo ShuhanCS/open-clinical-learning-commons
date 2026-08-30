@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.38.0
+- Current release: 0.39.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 course specification and source normalization
-- Next unit: FND-2 Module 01, Analytic aims and a reproducible modeling workspace
+- Last completed unit: FND-2 Module 01, Analytic aims and a reproducible modeling workspace
+- Next unit: FND-2 Module 02, Regression models and interpretation
 
 ## Confirmed decisions
 
@@ -192,6 +192,14 @@
 - Complete reference validation passes 493 checks and learner starter validation passes 404 checks. Existing targets, unfinished review records, and a missing candidate artifact are rejected.
 - The reference technical disposition is `accept with conditions`. Named human decisions and a real learner defense remain before alpha; named macOS and Linux reproduction remains before stable; the final learner commit and annotated tag remain part of a real acceptance.
 - All seven FND-1 modules and all three cumulative checkpoints are runnable release candidates. FND-1 technical construction is complete at Commons 0.37.0.
+- FND-2 Module 01 version 0.1.0 preserves the accepted FND-1 table as immutable input: 374 rows, 29 fields, 121787 bytes, and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
+- Its modeling cohort has 374 rows and 34 fields. The 34-row role contract allows nine default pre-prediction fields and blocks IDs, unsupported high-cardinality fields, post-index information, outcome-derived fields, and split metadata.
+- The deterministic split orders `index_start` then `patient_id`: 224 train, 75 validation, and 75 test rows with 25, 7, and 4 positive outcomes. Date ranges are 2015-01-01 through 2017-04-02, 2017-04-05 through 2018-04-03, and 2018-04-18 through 2019-12-28.
+- The training-prevalence baseline is frozen at `25 / 224 = 0.111607142857`. Module 01 does not calculate validation or test performance.
+- Reference output SHA-256 values are `6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332` for the modeling cohort, `05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1` for the split registry, `613651013e397beeadc84b17482026ca7cb4674abf61bf521699d79af0a3c9af` for the baseline, and `e04dea1392d1cde03823f34b1e2548d7275bdd2a9ff55814e5e1ae6b6f04f24b` for the 24 release checks.
+- The builder self-check passes and refuses existing targets. The validator passes 15937 reference checks and 15907 starter checks and rejects prompted or broken submissions.
+- The reference disposition is `accept with conditions`. The package is for synthetic teaching only; test and sparse-group precision limits remain visible; high-cardinality fields remain excluded; test data cannot guide selection; and named human reviews remain pending.
+- FND-2 Module 01 is a runnable release candidate at Commons 0.39.0.
 
 ## Pending confirmation
 
@@ -200,9 +208,10 @@
 
 ## Next resume instructions
 
-1. Read the FND-2 course specification, FND-2 source record, FND-1 final-checkpoint release, FND-1 Module 04 release, master architecture, and this ledger.
-2. Write the 21-section Module 01 specification around aim classification, prediction time, feature roles, the fixed temporal split, the baseline, and reproducible workspace.
-3. Preserve the accepted 374-row FND-1 analytic table and exact fingerprint as immutable input.
-4. Build the separate modeling cohort, all-29-field role contract, 224/75/75 split, and 25/7/4 positive reconciliation.
-5. Create the aim-and-method exercise, learner template, instructor key, protected builder, standard-library validator, and 15-point draft score.
-6. Update the Commons version and this ledger, then commit and push Module 01 before starting Module 02.
+1. Read the FND-2 course specification, Module 01 specification and release, FND-1 Module 05 descriptive release, master architecture, and this ledger.
+2. Write the 21-section Module 02 specification for bounded linear and logistic regression, formulas, reference levels, estimates, uncertainty, assumptions, and diagnostics.
+3. Preserve the exact Module 01 modeling cohort, role contract, split registry, baseline, and conditions.
+4. Build the 111-row recorded-next-encounter linear-regression subset without converting 263 structural blanks to zero.
+5. Build the bounded logistic-regression interpretation lab on training data only and keep prediction evaluation in Module 03.
+6. Create learner and instructor packages, protected build, standard-library validation, and the Module 02 portion of the 25-point Week 3 component.
+7. Update the Commons version and this ledger, then commit and push Module 02 before starting Module 03.

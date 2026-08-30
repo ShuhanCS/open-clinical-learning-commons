@@ -1,0 +1,13 @@
+exercise_id,request,decision_context,learner_aim,learner_reason,learner_rejected_method
+EX01,How many cohort members had a recorded 90-day acute return?,Describe this accepted cohort,REPLACE,REPLACE,REPLACE
+EX02,Is index encounter class associated with a recorded 90-day acute return after declared adjustment?,Explain a conditional relationship,REPLACE,REPLACE,REPLACE
+EX03,Which people are likely to have a recorded 90-day acute return?,Estimate risk at index stop,REPLACE,REPLACE,REPLACE
+EX04,Would a discharge-navigation program reduce 90-day acute returns?,Choose whether to implement an intervention,REPLACE,REPLACE,REPLACE
+EX05,How does utilization change within a person across quarterly observations?,Describe repeated trajectories,REPLACE,REPLACE,REPLACE
+EX06,How many Massachusetts respiratory admissions will be reported four weeks from now?,Plan a jurisdiction-level forecast,REPLACE,REPLACE,REPLACE
+EX07,What is the median age in the accepted cohort?,Summarize one source field,REPLACE,REPLACE,REPLACE
+EX08,Does prior acute utilization have a conditional relationship with time to the next recorded encounter?,Explain a bounded coefficient,REPLACE,REPLACE,REPLACE
+EX09,Can pre-index fields separate people with and without the registered outcome?,Compare a model with a baseline,REPLACE,REPLACE,REPLACE
+EX10,What would the return rate have been if every eligible person received an intervention?,Estimate a counterfactual outcome,REPLACE,REPLACE,REPLACE
+EX11,Do repeated symptom scores change differently by care pathway?,Compare within-person trajectories,REPLACE,REPLACE,REPLACE
+EX12,Will weekly aggregate admissions exceed a declared level next month?,Estimate a future aggregate value,REPLACE,REPLACE,REPLACE

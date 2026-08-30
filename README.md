@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.38.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 now has a complete source-normalized course specification and is ready for its first module build.
+- Current version: `0.39.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification and its first runnable module.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -36,6 +36,8 @@ The seventh unit is [FND-1 Module 07: Reproducible handoff and AI audit](courses
 The [FND-1 final checkpoint](courses/healthcare-data-foundations/checkpoints/03-reproducible-toolkit/README.md) freezes all 90 candidate files and adds the final score, 20 gates, defense score, reviewer record, reproduction record, disposition, and FND-2 acceptance record. Its durable [checkpoint specification](docs/curriculum/courses/FND-1/checkpoints/03-reproducible-toolkit-spec.md) defines the exact 35-point course decision and 100-file release contract.
 
 The separate second technical foundation is specified in [FND-2: Modeling, Inference, and Reproducible Analytics](docs/curriculum/courses/FND-2/course-spec.md), with its source fingerprint and normalization record in [the FND-2 source record](docs/source/fnd-2-modeling-inference-reproducible-analytics-source-record.md). It starts from the accepted FND-1 toolkit, teaches general modeling and inference straight through, and keeps package acceptance separate from model-use permission.
+
+Its first runnable unit is [FND-2 Module 01: Analytic aims and a reproducible modeling workspace](courses/modeling-inference-reproducible-analytics/modules/01-aims-reproducible-workspace/README.md), governed by the durable [Module 01 specification](docs/curriculum/courses/FND-2/modules/01-aims-reproducible-workspace-spec.md). It freezes the exact 374-row source, classifies all 34 source and derived fields, creates the 224/75/75 temporal split, and registers the training-prevalence baseline before any candidate model is fit.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

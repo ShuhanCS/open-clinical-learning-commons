@@ -1,0 +1,67 @@
+{
+  "status": "pass",
+  "version": "0.1.0",
+  "source": {
+    "rows": 374,
+    "fields": 29,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a"
+  },
+  "outputs": {
+    "modeling-cohort.csv": {
+      "rows": 374,
+      "fields": 34,
+      "bytes": 138503,
+      "sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332"
+    },
+    "split-registry.csv": {
+      "rows": 374,
+      "fields": 8,
+      "bytes": 51910,
+      "sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1"
+    },
+    "baseline-metrics.csv": {
+      "rows": 1,
+      "fields": 10,
+      "bytes": 306,
+      "sha256": "613651013e397beeadc84b17482026ca7cb4674abf61bf521699d79af0a3c9af"
+    },
+    "modeling-checks.csv": {
+      "rows": 24,
+      "fields": 5,
+      "bytes": 3869,
+      "sha256": "e04dea1392d1cde03823f34b1e2548d7275bdd2a9ff55814e5e1ae6b6f04f24b"
+    }
+  },
+  "split": {
+    "train": {
+      "rows": 224,
+      "positives": 25,
+      "negatives": 199,
+      "first_index_date": "2015-01-01",
+      "last_index_date": "2017-04-02"
+    },
+    "validation": {
+      "rows": 75,
+      "positives": 7,
+      "negatives": 68,
+      "first_index_date": "2017-04-05",
+      "last_index_date": "2018-04-03"
+    },
+    "test": {
+      "rows": 75,
+      "positives": 4,
+      "negatives": 71,
+      "first_index_date": "2018-04-18",
+      "last_index_date": "2019-12-28"
+    }
+  },
+  "baseline": {
+    "fit_split": "train",
+    "constant_probability": "0.111607142857"
+  },
+  "decision": {
+    "reference_disposition": "accept with conditions",
+    "module_02_progression": "allowed"
+  }
+}
