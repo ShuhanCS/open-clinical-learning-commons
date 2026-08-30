@@ -1,0 +1,4 @@
+verification_id,claim,method,observed,expected,status
+V01,test confusion is 48/23/2/2,recount 75 row-level observed and selected labels,48/23/2/2,48/23/2/2,pass
+V02,HOLT_DAMPED aggregate MAE is 14.99587157,recalculate from 20 row-level actual and prediction values,14.99587157,14.99587157,pass
+V03,HOLT_DAMPED aggregate RMSE is 21.07855007,recalculate from 20 row-level squared errors,21.07855007,21.07855007,pass

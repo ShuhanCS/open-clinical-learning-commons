@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "module": "oclc-fnd2-06",
+  "module_version": "0.1.0",
+  "accepted_artifacts": 13,
+  "accepted_contract_tests": 18,
+  "seeded_failures": 10,
+  "independent_verifications": 3,
+  "agent_claims_adjudicated": 4,
+  "summary_gates": 7,
+  "required_failure_codes": [
+    "LEAKAGE_FIELD",
+    "TEST_ROW_IN_FIT",
+    "LABEL_INVERTED",
+    "SPLIT_CHANGED",
+    "FUTURE_ROW_IN_FIT",
+    "CONFUSION_DENOMINATOR",
+    "CALIBRATION_BIN_OMITTED",
+    "FINGERPRINT_CHANGED",
+    "USE_BOUNDARY_MISSING",
+    "AGENT_CLAIM_UNVERIFIED"
+  ],
+  "independence_rule": "derive material values from lower-level rows with separate code; repeating the same prompt is not independent",
+  "human_owner_required": true,
+  "prohibited_data": ["PHI", "identifiable", "workplace confidential", "restricted", "secret", "credential"],
+  "reference_decision": "accept Week 6 gate and continue to Checkpoint 2 with conditions"
+}

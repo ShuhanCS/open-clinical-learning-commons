@@ -1,0 +1,11 @@
+fixture_id,failure,expected_code,observed_code,rejected,intended_reason,status
+F01,post-index leakage field in predictors,LEAKAGE_FIELD,LEAKAGE_FIELD,yes,yes,pass
+F02,test row included in fitting,TEST_ROW_IN_FIT,TEST_ROW_IN_FIT,yes,yes,pass
+F03,outcome label inversion,LABEL_INVERTED,LABEL_INVERTED,yes,yes,pass
+F04,changed split assignment,SPLIT_CHANGED,SPLIT_CHANGED,yes,yes,pass
+F05,forecast fit reads future row,FUTURE_ROW_IN_FIT,FUTURE_ROW_IN_FIT,yes,yes,pass
+F06,confusion matrix wrong denominator,CONFUSION_DENOMINATOR,CONFUSION_DENOMINATOR,yes,yes,pass
+F07,calibration bin omitted without disclosure,CALIBRATION_BIN_OMITTED,CALIBRATION_BIN_OMITTED,yes,yes,pass
+F08,changed source fingerprint,FINGERPRINT_CHANGED,FINGERPRINT_CHANGED,yes,yes,pass
+F09,missing model-card use boundary,USE_BOUNDARY_MISSING,USE_BOUNDARY_MISSING,yes,yes,pass
+F10,agent claim has no independent evidence,AGENT_CLAIM_UNVERIFIED,AGENT_CLAIM_UNVERIFIED,yes,yes,pass

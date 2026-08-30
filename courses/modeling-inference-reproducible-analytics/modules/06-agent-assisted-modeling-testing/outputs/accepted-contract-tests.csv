@@ -1,0 +1,19 @@
+test_id,family,assertion,observed,expected,status
+A01,data,split registry has 374 rows,374,374,pass
+A02,data,split counts stay 224/75/75,224/75/75,224/75/75,pass
+A03,data,test labels retain four outcomes,4,4,pass
+A04,model,selected model and threshold stay locked,ML01/0.08513264,ML01/0.08513264,pass
+A05,leakage,declared leakage model remains ineligible,False,False,pass
+A06,leakage,transformed features are train-only,15,15,pass
+A07,model,test prediction schema has 75 unique rows,75,75,pass
+A08,metric,confusion cells sum to 75,75,75,pass
+A09,metric,confusion positives sum to four,4,4,pass
+A10,calibration,five declared calibration groups cover all test rows,75,75,pass
+A11,validity,all 16 validity invariants pass,16,16,pass
+A12,forecast,forecast contract keeps five origins and four-week horizon,"[74, 78, 82, 86, 90]","[74, 78, 82, 86, 90]",pass
+A13,forecast,fold registry has zero future rows in fit,0,0,pass
+A14,forecast,eligible models share 20 forecast targets,60,60,pass
+A15,forecast,forecast predictions record zero future rows,0,0,pass
+A16,metric,candidate MAE beats both benchmarks,14.99587157,below both benchmarks,pass
+A17,documentation,prediction use boundary prohibits clinical deployment,synthetic teaching evidence only; no clinical use or deployment,explicit prohibition,pass
+A18,documentation,forecast contract prohibits staffing and deployment,"single-hospital staffing, capacity, care, causal, or deployment decision",explicit prohibition,pass

@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+module: oclc-fnd2-06
+module_version: 0.1.0
+commons_release: 0.45.0
+repository: https://github.com/ShuhanCS/open-clinical-learning-commons
+accepted_modules:
+  - id: oclc-fnd2-03
+    version: 0.1.0
+    evidence: prediction contract, split, features, test predictions, confusion, calibration
+  - id: oclc-fnd2-04
+    version: 0.1.0
+    evidence: release and validity checks
+  - id: oclc-fnd2-05
+    version: 0.1.0
+    evidence: release, forecast contract, folds, predictions, metrics
+artifact_count: 13
+data_classes:
+  allowed: public aggregate and documented synthetic
+  prohibited: PHI, identifiable, workplace confidential, restricted, secret, credential
+privacy:
+  new_row_level_data: false
+  patient_data: false
+  credentials: false
+provenance_rule: exact byte and SHA-256 match before any test runs
+decision_boundary: technical gate evidence only; no clinical or deployment approval

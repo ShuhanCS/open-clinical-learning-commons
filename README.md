@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.44.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification, its first five runnable modules, and its cumulative Week 3 checkpoint.
+- Current version: `0.45.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification, its first six runnable modules, and its cumulative Week 3 checkpoint.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -48,6 +48,8 @@ The cumulative [FND-2 Week 3 checkpoint](courses/modeling-inference-reproducible
 The fourth runnable unit is [FND-2 Module 04: Validity, adjustment, and longitudinal structure](courses/modeling-inference-reproducible-analytics/modules/04-validity-adjustment-longitudinal/README.md), governed by the durable [Module 04 specification](docs/curriculum/courses/FND-2/modules/04-validity-adjustment-longitudinal-spec.md). It combines the accepted Synthea selection case with deterministic treatment, repeated-measures, and survival fixtures; releases structured DAG, overlap, balance, missingness, clustered, and censoring evidence; and carries explicit conditions into Module 05.
 
 The fifth runnable unit is [FND-2 Module 05: Forecasting and temporal validation](courses/modeling-inference-reproducible-analytics/modules/05-forecasting-temporal-validation/README.md), governed by the durable [Module 05 specification](docs/curriculum/courses/FND-2/modules/05-forecasting-temporal-validation-spec.md). It reuses the exact 6,208-row public CDC NHSN release and 94-week Massachusetts series, evaluates three methods on five time-ordered four-week folds, preserves fold-specific failures and wide interval limits, and passes a bounded damped-Holt pipeline into Module 06 testing.
+
+The sixth runnable unit is [FND-2 Module 06: Agent-assisted modeling and testing](courses/modeling-inference-reproducible-analytics/modules/06-agent-assisted-modeling-testing/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/FND-2/modules/06-agent-assisted-modeling-testing-spec.md). It fingerprints 13 accepted artifacts, runs 18 positive contract tests, rejects ten seeded failures for exact reasons, independently recalculates three material results, and requires trace evidence plus human sign-off before Checkpoint 2.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -226,7 +228,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 ## Build order
 
 1. Build FND-1 as its own straight-through technical foundations course.
-2. Build FND-2 Module 06 from the accepted prediction and forecast handoffs.
+2. Build FND-2 Checkpoint 2 from the accepted validity, forecasting, and test handoffs.
 3. Complete the named DA-730 human reviews before alpha promotion.
 
 ## Licensing

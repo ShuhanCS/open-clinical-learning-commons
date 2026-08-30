@@ -1,0 +1,8 @@
+summary_id,measure,value,required,status
+S01,accepted artifacts,13,13,pass
+S02,accepted contract tests,18,18,pass
+S03,seeded failures rejected,10,10,pass
+S04,independent verifications,3,3,pass
+S05,agent claims adjudicated,4,4,pass
+S06,test families represented,8,8,pass
+S07,human owners recorded,4,4,pass

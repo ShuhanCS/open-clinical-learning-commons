@@ -1,0 +1,2 @@
+trace_id,tool,task,data_class,inputs_shared,output_retained,affected_artifact,risk,independent_check,result,action,human_owner
+REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

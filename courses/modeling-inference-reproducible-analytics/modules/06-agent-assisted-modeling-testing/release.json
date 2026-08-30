@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd2-06",
+    "title": "Agent-assisted modeling and testing",
+    "version": "0.1.0",
+    "commons_release": "0.45.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "week": 6,
+    "hours": 16.0,
+    "course_points": 0,
+    "checkpoint_gate": "required"
+  },
+  "decision": {
+    "owner": "responsible-AI and model-validation reviewer",
+    "allowed": ["accept Week 6 gate and continue to Checkpoint 2 with conditions", "revise Module 06", "return affected upstream module", "refer responsible-AI or validation design", "stop"],
+    "reference": "accept Week 6 gate and continue to Checkpoint 2 with conditions",
+    "module_07": "allowed only after Checkpoint 2",
+    "human_owner": "required"
+  },
+  "tests": {
+    "accepted_artifacts": 13,
+    "accepted_tests": 18,
+    "seeded_failures": 10,
+    "independent_verifications": 3,
+    "agent_claims": 4,
+    "summary_gates": 7
+  },
+  "fixed_evidence": {
+    "split": "224/75/75",
+    "test_outcomes": 4,
+    "selected_model": "ML01",
+    "locked_threshold": "0.08513264",
+    "test_confusion": "48/23/2/2",
+    "validity_checks": 16,
+    "forecast_origins": [74, 78, 82, 86, 90],
+    "forecast_predictions": 60,
+    "forecast_common_targets": 20,
+    "candidate_mae": "14.99587157",
+    "candidate_rmse": "21.07855007"
+  },
+  "failure_codes": ["LEAKAGE_FIELD", "TEST_ROW_IN_FIT", "LABEL_INVERTED", "SPLIT_CHANGED", "FUTURE_ROW_IN_FIT", "CONFUSION_DENOMINATOR", "CALIBRATION_BIN_OMITTED", "FINGERPRINT_CHANGED", "USE_BOUNDARY_MISSING", "AGENT_CLAIM_UNVERIFIED"],
+  "outputs": {
+    "accepted-artifact-manifest.csv": {"rows": 13, "fields": 5, "bytes": 1723, "sha256": "fca34772b28e70b973908ccc9513baf12f9cb283c2f4950b8031191ffa914a85"},
+    "accepted-contract-tests.csv": {"rows": 18, "fields": 6, "bytes": 1469, "sha256": "3f6d0d55eb3c9e039a40a81cbf2502f1fe306ecb71d423352b72ead9ed7bb7c8"},
+    "seeded-failure-results.csv": {"rows": 10, "fields": 7, "bytes": 947, "sha256": "177f8bab9a8153c884241cbcdf2562b4d8bb53f629068100fa5f48591fc14a2e"},
+    "independent-verification.csv": {"rows": 3, "fields": 6, "bytes": 414, "sha256": "68d433efe9d70dfd43a64799b16c2eb90b452a7145438b62af2f282d38f37fd2"},
+    "claim-adjudication.csv": {"rows": 4, "fields": 7, "bytes": 759, "sha256": "14d9b6181a33c2825a9d71ecc54dd198764896c3762d0118f964a48cfd70f3c2"},
+    "data-class-rules.csv": {"rows": 7, "fields": 5, "bytes": 719, "sha256": "91c856f528eb618230caa57617efc011dac55c5e2b027b9045c6ce307676ce8b"},
+    "test-summary.csv": {"rows": 7, "fields": 5, "bytes": 305, "sha256": "0444e4cada84f5a0234719695ecf86bd9dd10ed1d0172314c850afe7eea9b56d"},
+    "failure-fixtures.json": {"fixtures": 10, "bytes": 2906, "sha256": "a2c8db98363a084a552147ae2ad6b011876efb7979d00a642ee154b8ff0a5a92"},
+    "test-summary.md": {"bytes": 808, "sha256": "651a45fbef2146a254db97ce80a894b28932a12a531e17e68f010211ef93e477"},
+    "build-report.json": {"bytes": 3831, "sha256": "d7e0e53e0a6e5e0d2640605401f3ae3e0c8e115359b823e4a78b872590cca4ac"}
+  },
+  "environment": {"tested_platform": "Windows 11", "python": "3.12.10", "dependencies": "standard library only"},
+  "validation_record": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "release_checks": 519,
+    "starter_checks": 490,
+    "existing_target_refusal": "pass",
+    "incomplete_submission_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, test suite, validation, and teaching package"}
+  ],
+  "known_issues": [
+    "Actual learner and reviewer signatures remain pending.",
+    "Named responsible-AI, model-validation, privacy, security, clinical, forecasting, accessibility, and independent-instructor reviews remain pending.",
+    "The suite tests declared contracts; it does not establish clinical safety, fairness, utility, or deployment readiness."
+  ]
+}

@@ -12,9 +12,9 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - Continuing forecast case: the pinned 6,208-row CDC NHSN jurisdiction-week public release
 - Final deliverable: a reproducible model or agent-assisted analytics package with a model card
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 05 and Checkpoint 1 are runnable release candidates
+- Module package status: Modules 01 through 06 and Checkpoint 1 are runnable release candidates
 - Course package version: 0.1.0
-- Commons release: 0.44.0
+- Commons release: 0.45.0
 
 ## Seven technical modules
 
@@ -38,6 +38,8 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - [Module 04 durable specification](../../docs/curriculum/courses/FND-2/modules/04-validity-adjustment-longitudinal-spec.md)
 - [Module 05: Forecasting and temporal validation](modules/05-forecasting-temporal-validation/README.md)
 - [Module 05 durable specification](../../docs/curriculum/courses/FND-2/modules/05-forecasting-temporal-validation-spec.md)
+- [Module 06: Agent-assisted modeling and testing](modules/06-agent-assisted-modeling-testing/README.md)
+- [Module 06 durable specification](../../docs/curriculum/courses/FND-2/modules/06-agent-assisted-modeling-testing-spec.md)
 
 Module 01 preserves the accepted 374-row FND-1 table, assigns all 29 source fields and five derived fields a role, freezes the 224/75/75 temporal split with 25/7/4 positive outcomes, and registers the training-prevalence baseline before model fitting. Its standard-library builder and validator create a protected learner workspace and reject incomplete submissions.
 
@@ -48,6 +50,8 @@ Module 03 fits all preprocessing inside training, compares the constant baseline
 Module 04 separates prediction from causal adjustment and makes selection, missingness, within-person dependence, and censoring visible. It preserves the 374-row public-safe Synthea case, adds a 600-person treatment fixture with a known -6-point effect and 91 missing severity values, compares seven adjustment routes, models 2,400 repeated observations from 600 people, and reads a 600-person survival case with 449 events and 151 censored records. All results remain synthetic teaching evidence.
 
 Module 05 reuses all 6,208 public CDC NHSN jurisdiction-week rows and the exact 94-week Massachusetts series. Five expanding-window origins each forecast four later weeks with last-value, 52-week seasonal-naive, and damped-Holt methods. Damped Holt has aggregate MAE 14.99587157 admissions versus 28.20000000 and 93.15000000 for the benchmarks, while fold losses, low-count percentage limits, changing reporting coverage, and very wide illustrative intervals prevent operational claims.
+
+Module 06 preserves 13 accepted artifacts from Modules 03 through 05 and checks them with Python's standard library. All 18 accepted-contract tests pass, all ten seeded failures reject for their intended codes, three material values independently recalculate, and four agent claims are adjudicated. The technical reference passes, while actual learner and reviewer signatures remain required at Checkpoint 2.
 
 ## Runnable checkpoint
 

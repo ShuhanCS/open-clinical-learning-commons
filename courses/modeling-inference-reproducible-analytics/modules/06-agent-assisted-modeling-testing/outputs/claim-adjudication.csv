@@ -1,0 +1,5 @@
+claim_id,agent_claim,evidence,independent_check,adjudication,action,human_owner
+C01,Damped Holt has lower aggregate MAE than both benchmarks.,V02 and aggregate-metrics.csv,V02,accept,retain bounded numeric claim,accountable analyst
+C02,The forecast is ready for staffing decisions.,none,source and use-boundary review,reject,remove; public aggregate supports teaching only,accountable analyst
+C03,Ljung-Box p-values prove residual independence.,residual-diagnostics.csv,quantity and assumption review,modify,state failure to reject is not proof of adequacy,accountable analyst
+C04,The leaked model should win because its performance is perfect.,prediction-model-contract.json,timing review,reject,keep LEAK01 ineligible before performance,accountable analyst

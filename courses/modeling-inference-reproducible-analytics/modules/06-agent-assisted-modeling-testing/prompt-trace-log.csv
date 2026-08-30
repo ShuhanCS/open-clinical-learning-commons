@@ -1,0 +1,4 @@
+trace_id,tool,task,data_class,inputs_shared,output_retained,affected_artifact,risk,independent_check,result,action,human_owner
+TR01,OpenAI Codex,draft contract test architecture,public aggregate and documented synthetic,accepted schema and aggregate evidence,test plan,module specification,wrong or invented assertion,executed standard-library suite,accepted,retain bounded tests,Shuhan He
+TR02,OpenAI Codex,implement seeded failures,no additional row-level data,structured contract cases,ten mutation definitions,failure fixture registry,test might fail for wrong reason,exact expected-code comparison,accepted,retain all ten,Shuhan He
+TR03,OpenAI Codex,summarize agent claims,public and synthetic outputs,accepted numeric tables,four claim drafts,claim adjudication,unsupported approval,independent row recalculation and scope review,modified or rejected,record actions,Shuhan He

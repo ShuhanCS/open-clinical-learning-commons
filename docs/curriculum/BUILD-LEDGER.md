@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.44.0
+- Current release: 0.45.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Module 05, Forecasting and temporal validation
-- Next unit: FND-2 Module 06, Agent-assisted modeling and testing
+- Last completed unit: FND-2 Module 06, Agent-assisted modeling and testing
+- Next unit: FND-2 Checkpoint 2, validity, forecast, and test release
 
 ## Confirmed decisions
 
@@ -247,6 +247,14 @@
 - The builder passes copied-workspace reproduction and existing-target refusal. The validator passes 2,666 release checks and 2,604 starter checks and rejects prompted or broken submissions. All 20 forecast invariants pass.
 - The reference disposition is `continue to Module 06 with conditions`. The pipeline is for public-data teaching and exact testing only, not a single-hospital, staffing, capacity, care, causal, or deployment decision.
 - FND-2 Module 05 is a runnable release candidate at Commons 0.44.0.
+- FND-2 Module 06 version 0.1.0 fingerprints 13 accepted prediction, validity, and forecast artifacts without refitting or changing them.
+- Eighteen accepted-contract tests cover split, labels, feature timing, predictions, confusion, calibration, validity, temporal folds, forecast metrics, and use boundaries. All pass.
+- Ten deterministic mutations cover leakage, test contamination, label inversion, split drift, future-row use, wrong confusion denominator, omitted calibration bin, source fingerprint drift, missing use boundary, and unsupported agent claims. Every mutation rejects for its exact intended code.
+- Three independent standard-library recalculations reproduce the 48/23/2/2 test confusion, damped-Holt MAE 14.99587157, and RMSE 21.07855007.
+- Four representative agent claims are adjudicated: one accepted, one modified, and two rejected. Seven data-class rules prohibit PHI, identifiable, workplace-confidential, restricted, credential, and secret data.
+- The builder passes copied-workspace reproduction and existing-target refusal. The validator passes 519 release checks and 490 starter checks and rejects prompted or broken submissions.
+- The reference disposition is `accept Week 6 gate and continue to Checkpoint 2 with conditions`. Actual learner and reviewer signatures remain required, and no clinical or deployment permission expands.
+- FND-2 Module 06 is a runnable release candidate at Commons 0.45.0.
 
 ## Pending confirmation
 
@@ -255,11 +263,11 @@
 
 ## Next resume instructions
 
-1. Read the accepted FND-2 Module 05 specification, package, progression decision, Module 04 validity release, Module 03 prediction release, course specification, master architecture, and this ledger.
-2. Write the 21-section Module 06 specification for agent-assisted modeling and testing.
-3. Treat accepted prediction and forecast outputs, source fingerprints, conditions, and expected failures as immutable inputs.
-4. Build deterministic tests for data contracts, leakage, folds, metrics, claims, failures, and stop behavior without silently repairing evidence.
-5. Teach agent task decomposition, test generation, adversarial fixtures, review logs, human verification, and failure recovery at the course-specified mastery levels.
-6. Produce the Week 6 checkpoint component, learner package, validator, accessibility route, responsible-agent record, and Module 07 handoff.
-7. Keep tools from owning model-use, clinical, governance, or progression decisions.
-8. Update the Commons version and this ledger, then commit and push Module 06 before building Checkpoint 2.
+1. Read the accepted Module 04, 05, and 06 specifications, releases, progression decisions, assessments, course specification, master architecture, and this ledger.
+2. Write the 17-section FND-2 Checkpoint 2 specification.
+3. Assemble accepted Module 04 validity evidence, Module 05 forecasting evidence, and Module 06 test and accountability evidence without recomputation.
+4. Preserve the exact 15-point Module 04 and 10-point Module 05 score map plus every Module 06 gate.
+5. Add cumulative interpretation, technical defense, reviewer, reproduction, accessibility, AI-use, human-sign-off, and Module 07 progression records.
+6. Validate immutable manifests, score, gates, signatures, conditions, and a clean copied package.
+7. Keep model-use, clinical, operational, staffing, capacity, causal, and deployment boundaries unchanged.
+8. Update the Commons version and this ledger, then commit and push Checkpoint 2 before building Module 07.

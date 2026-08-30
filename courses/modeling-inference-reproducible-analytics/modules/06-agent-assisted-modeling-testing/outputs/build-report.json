@@ -1,0 +1,123 @@
+{
+  "status": "pass",
+  "version": "0.1.0",
+  "upstream": {
+    "prediction-model-contract.json": {
+      "bytes": 2831,
+      "sha256": "0aab6eb29fbcbd921e191c62d5a0a44554de0a683fd560359991fcc9db034015"
+    },
+    "split-registry.csv": {
+      "bytes": 51910,
+      "sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1"
+    },
+    "test-predictions.csv": {
+      "bytes": 7994,
+      "sha256": "531c00d310292aeeaea476d1c94e128f5c81c34c2fc60e014d2c157e152b7438"
+    },
+    "confusion-table.csv": {
+      "bytes": 110,
+      "sha256": "a899fc8ebaee87fd2990354f6310c6feb87f748e17545c5c39c5a413e630be87"
+    },
+    "calibration-table.csv": {
+      "bytes": 644,
+      "sha256": "fce4d9b0a05085ab51cb5af1c9a2dcb209a9fb2d099b3245650543a09c461b5c"
+    },
+    "transformed-feature-names.csv": {
+      "bytes": 859,
+      "sha256": "da0ce00b3c2f8d36dbe4e3741c66991f46b97d205368e2508d6c44d741e36acf"
+    },
+    "module-04-release.json": {
+      "bytes": 7013,
+      "sha256": "ffcf57c30d77be5c2271488a4d2dd08cc44d430cc590025e918c0ec8f1c4e12e"
+    },
+    "validity-checks.csv": {
+      "bytes": 594,
+      "sha256": "f4767ae3ae934e996b1e9f41b9c7f46898a63a80d798ace36e12ccb85d83c4ea"
+    },
+    "module-05-release.json": {
+      "bytes": 6906,
+      "sha256": "d81bcc3ac2ac2971cb1a03467673d86a905a125f7aed859f2e7669e9c7003f6d"
+    },
+    "forecast-contract.json": {
+      "bytes": 1048,
+      "sha256": "56f6cb46af960588044b76a42977fff1ceab1066db4ddfda4f601566ec5b1d1a"
+    },
+    "temporal-folds.csv": {
+      "bytes": 489,
+      "sha256": "9ac64675bf9d2765c93d52351f4801644082cc329f1928313c2c2f94cc8a5aa6"
+    },
+    "forecast-predictions.csv": {
+      "bytes": 7728,
+      "sha256": "dfc91a5e38e2255437dc17a5227cccdb14d4970eb79e14b0260ab203aec8de7a"
+    },
+    "aggregate-metrics.csv": {
+      "bytes": 459,
+      "sha256": "68e0147ad1dbd627c0274f31ee4ce0035a2a1c1c55ac0c89277d996983891973"
+    }
+  },
+  "tests": {
+    "accepted": 18,
+    "seeded_failures": 10,
+    "independent_verifications": 3,
+    "agent_claims": 4,
+    "summary_gates": 7
+  },
+  "outputs": {
+    "accepted-artifact-manifest.csv": {
+      "rows": 13,
+      "fields": 5,
+      "bytes": 1723,
+      "sha256": "fca34772b28e70b973908ccc9513baf12f9cb283c2f4950b8031191ffa914a85"
+    },
+    "accepted-contract-tests.csv": {
+      "rows": 18,
+      "fields": 6,
+      "bytes": 1469,
+      "sha256": "3f6d0d55eb3c9e039a40a81cbf2502f1fe306ecb71d423352b72ead9ed7bb7c8"
+    },
+    "seeded-failure-results.csv": {
+      "rows": 10,
+      "fields": 7,
+      "bytes": 947,
+      "sha256": "177f8bab9a8153c884241cbcdf2562b4d8bb53f629068100fa5f48591fc14a2e"
+    },
+    "independent-verification.csv": {
+      "rows": 3,
+      "fields": 6,
+      "bytes": 414,
+      "sha256": "68d433efe9d70dfd43a64799b16c2eb90b452a7145438b62af2f282d38f37fd2"
+    },
+    "claim-adjudication.csv": {
+      "rows": 4,
+      "fields": 7,
+      "bytes": 759,
+      "sha256": "14d9b6181a33c2825a9d71ecc54dd198764896c3762d0118f964a48cfd70f3c2"
+    },
+    "data-class-rules.csv": {
+      "rows": 7,
+      "fields": 5,
+      "bytes": 719,
+      "sha256": "91c856f528eb618230caa57617efc011dac55c5e2b027b9045c6ce307676ce8b"
+    },
+    "test-summary.csv": {
+      "rows": 7,
+      "fields": 5,
+      "bytes": 305,
+      "sha256": "0444e4cada84f5a0234719695ecf86bd9dd10ed1d0172314c850afe7eea9b56d"
+    },
+    "failure-fixtures.json": {
+      "fixtures": 10,
+      "bytes": 2906,
+      "sha256": "a2c8db98363a084a552147ae2ad6b011876efb7979d00a642ee154b8ff0a5a92"
+    },
+    "test-summary.md": {
+      "bytes": 808,
+      "sha256": "651a45fbef2146a254db97ce80a894b28932a12a531e17e68f010211ef93e477"
+    }
+  },
+  "decision": {
+    "reference": "accept Week 6 gate and continue to Checkpoint 2 with conditions",
+    "module_07": "allowed after Checkpoint 2",
+    "human_owner": "required"
+  }
+}

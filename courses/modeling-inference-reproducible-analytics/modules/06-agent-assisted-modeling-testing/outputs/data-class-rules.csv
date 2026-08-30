@@ -1,0 +1,8 @@
+class_id,data_class,share_with_agent,example,control
+D01,public aggregate,allowed,CDC jurisdiction-week source,retain source and rights record
+D02,documented synthetic,allowed,Synthea and deterministic fixtures,state synthetic boundary
+D03,deidentified research,prohibited in this release,study extract,use approved environment and governance route
+D04,protected health information,prohibited,identifiable patient record,stop
+D05,workplace confidential,prohibited,internal operations file,stop and use approved local process
+D06,credential or secret,prohibited,"token, password, key","stop, rotate if exposed"
+D07,restricted licensed,prohibited unless approved,nonredistributable dataset,verify license and environment

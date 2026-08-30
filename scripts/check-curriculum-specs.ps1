@@ -97,7 +97,7 @@ if (
     $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
-    $fnd2PackageContent -notmatch 'Commons release: 0\.44\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.45\.0' -or
     $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch '21,850' -or
@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.44.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.45.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -527,6 +527,82 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $fnd2Module05Root 'validate_forecast_evidence.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'FND-2 Module 05 validator self-check failed.'
+}
+
+$fnd2Module06Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\modules\06-agent-assisted-modeling-testing'
+$fnd2Module06Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\modules\06-agent-assisted-modeling-testing-spec.md'
+$fnd2Module06Files = @(
+    '.gitattributes', '.gitignore', 'README.md', 'VERSION', 'requirements.txt',
+    'run_contract_tests.py', 'build_agent_test_evidence.py',
+    'validate_agent_test_evidence.py', 'data-spec.md', 'source-record.yml',
+    'test-contract.json', 'prompt-constraints.md', 'assessment.md',
+    'instructor-notes.md', 'agent-task-plan.md', 'prompt-trace-log.csv',
+    'agent-critique.md', 'claim-adjudication.csv', 'independent-verification.md',
+    'human-sign-off.md', 'reproducibility-check.md', 'accessibility-review.md',
+    'ai-use.md', 'progression-decision.md', 'release.json',
+    'learner-template\.gitattributes', 'learner-template\.gitignore',
+    'learner-template\README.md', 'learner-template\VERSION',
+    'learner-template\agent-task-plan.md', 'learner-template\prompt-trace-log.csv',
+    'learner-template\agent-critique.md', 'learner-template\claim-adjudication.csv',
+    'learner-template\independent-verification.md',
+    'learner-template\human-sign-off.md',
+    'learner-template\reproducibility-check.md',
+    'learner-template\accessibility-review.md', 'learner-template\ai-use.md',
+    'learner-template\progression-decision.md',
+    'outputs\accepted-artifact-manifest.csv',
+    'outputs\accepted-contract-tests.csv', 'outputs\seeded-failure-results.csv',
+    'outputs\independent-verification.csv', 'outputs\claim-adjudication.csv',
+    'outputs\data-class-rules.csv', 'outputs\test-summary.csv',
+    'outputs\failure-fixtures.json', 'outputs\test-summary.md',
+    'outputs\build-report.json'
+)
+$fnd2Module06Missing = @($fnd2Module06Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd2Module06Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd2Module06Spec) -or $fnd2Module06Missing.Count -gt 0) {
+    throw "FND-2 Module 06 is missing its specification or package files: $($fnd2Module06Missing -join ', ')."
+}
+$fnd2Module06Content = Get-Content -Raw -LiteralPath $fnd2Module06Spec
+$fnd2Module06Sections = [regex]::Matches($fnd2Module06Content, '(?m)^## \d+\.').Count
+if (
+    $fnd2Module06Sections -ne 21 -or
+    $fnd2Module06Content -match '[—–]' -or
+    $fnd2Module06Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Module06Content -notmatch 'Commons release target: 0\.45\.0' -or
+    $fnd2Module06Content -notmatch '519 release validator checks' -or
+    $fnd2Module06Content -notmatch '490 starter validator checks' -or
+    $fnd2Module06Content -notmatch '18 accepted tests' -or
+    $fnd2Module06Content -notmatch '177f8bab9a8153c884241cbcdf2562b4d8bb53f629068100fa5f48591fc14a2e'
+) {
+    throw 'FND-2 Module 06 must define 21 plain-ASCII sections with the exact accepted-test, seeded-failure, agent-audit, human-owner, and validation contract.'
+}
+$fnd2Module06Release = Get-Content -Raw -LiteralPath (Join-Path $fnd2Module06Root 'release.json') | ConvertFrom-Json
+if (
+    $fnd2Module06Release.module.id -ne 'oclc-fnd2-06' -or
+    $fnd2Module06Release.module.version -ne '0.1.0' -or
+    $fnd2Module06Release.module.commons_release -ne '0.45.0' -or
+    $fnd2Module06Release.module.hours -ne 16.0 -or
+    $fnd2Module06Release.tests.accepted_artifacts -ne 13 -or
+    $fnd2Module06Release.tests.accepted_tests -ne 18 -or
+    $fnd2Module06Release.tests.seeded_failures -ne 10 -or
+    $fnd2Module06Release.tests.independent_verifications -ne 3 -or
+    $fnd2Module06Release.tests.agent_claims -ne 4 -or
+    $fnd2Module06Release.tests.summary_gates -ne 7 -or
+    $fnd2Module06Release.fixed_evidence.test_confusion -ne '48/23/2/2' -or
+    $fnd2Module06Release.fixed_evidence.candidate_mae -ne '14.99587157' -or
+    $fnd2Module06Release.outputs.'seeded-failure-results.csv'.sha256 -ne '177f8bab9a8153c884241cbcdf2562b4d8bb53f629068100fa5f48591fc14a2e' -or
+    $fnd2Module06Release.validation_record.release_checks -ne 519 -or
+    $fnd2Module06Release.validation_record.starter_checks -ne 490
+) {
+    throw 'FND-2 Module 06 release metadata does not match the 0.1.0 agent-test contract.'
+}
+& python (Join-Path $fnd2Module06Root 'build_agent_test_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 06 builder self-check failed.'
+}
+& python (Join-Path $fnd2Module06Root 'validate_agent_test_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 06 validator self-check failed.'
 }
 
 $fnd2Checkpoint01Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\checkpoints\01-modeling-readiness-release'
@@ -1879,4 +1955,5 @@ Write-Output "FND-2 Module 02 passed: $fnd2Module02Sections contract sections an
 Write-Output "FND-2 Module 03 passed: $fnd2Module03Sections contract sections and $($fnd2Module03Files.Count) required files."
 Write-Output "FND-2 Module 04 passed: $fnd2Module04Sections contract sections and $($fnd2Module04Files.Count) required files."
 Write-Output "FND-2 Module 05 passed: $fnd2Module05Sections contract sections and $($fnd2Module05Files.Count) required files."
+Write-Output "FND-2 Module 06 passed: $fnd2Module06Sections contract sections and $($fnd2Module06Files.Count) required files."
 Write-Output "FND-2 Checkpoint 1 passed: $fnd2Checkpoint01Sections contract sections and $($fnd2Checkpoint01Files.Count) required files."
