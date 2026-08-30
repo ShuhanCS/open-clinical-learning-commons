@@ -1,0 +1,8 @@
+evidence_id,claim_family,evidence_path,status,interpretation_limit
+E01,source and cohort,REPLACE,REPLACE,REPLACE
+E02,split and prediction time,REPLACE,REPLACE,REPLACE
+E03,baseline and evaluation,REPLACE,REPLACE,REPLACE
+E04,validity and missingness,REPLACE,REPLACE,REPLACE
+E05,forecast and coverage,REPLACE,REPLACE,REPLACE
+E06,tests failures and agent audit,REPLACE,REPLACE,REPLACE
+E07,governance and use,REPLACE,REPLACE,REPLACE

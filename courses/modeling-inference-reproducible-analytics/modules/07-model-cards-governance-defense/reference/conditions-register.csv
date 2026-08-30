@@ -1,0 +1,8 @@
+condition_id,source,status,condition,owner,next_check,verification,escalation_trigger
+C01,Checkpoint 1,open,Preserve four-outcome test split threshold confusion and subgroup limits,FND-2 faculty owner,final checkpoint,manifest and exact appendix,changed identity or expanded performance claim
+C02,Checkpoint 2,open,Preserve validity forecast test trace and use conditions,model-risk lead,final checkpoint,nested validation and condition audit,changed upstream evidence or claim
+C03,Module 04,open,Complete paired R execution and reconciliation,FND-2 faculty owner,before alpha,named managed R run,material unreconciled difference
+C04,Module 07,open,Complete named independent reproduction,independent reproducer,before alpha,clean assembly and manifest comparison,hidden dependency or changed output
+C05,Human review,open,Complete named panel review live learner defense and actual sign-off,FND-2 faculty owner,before alpha,reviewer and defense records,missing accountable approval
+C06,Release,open,Create tag only after final checkpoint identifies accepted commit,release owner,final checkpoint,annotated tag target audit,early lightweight or mismatched tag
+C07,Use,open,Keep model and forecast teaching-only without new protocol and evidence,clinical model-risk lead,every downstream handoff,separate recommendation and governance review,patient clinical staffing fairness safety or deployment request

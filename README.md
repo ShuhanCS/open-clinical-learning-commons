@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.46.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification, its first six runnable modules, and cumulative Week 3 and Week 6 checkpoints.
+- Current version: `0.47.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has all seven runnable technical modules and its cumulative Week 3 and Week 6 checkpoints.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -52,6 +52,8 @@ The fifth runnable unit is [FND-2 Module 05: Forecasting and temporal validation
 The sixth runnable unit is [FND-2 Module 06: Agent-assisted modeling and testing](courses/modeling-inference-reproducible-analytics/modules/06-agent-assisted-modeling-testing/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/FND-2/modules/06-agent-assisted-modeling-testing-spec.md). It fingerprints 13 accepted artifacts, runs 18 positive contract tests, rejects ten seeded failures for exact reasons, independently recalculates three material results, and requires trace evidence plus human sign-off before Checkpoint 2.
 
 The cumulative [FND-2 Week 6 checkpoint](courses/modeling-inference-reproducible-analytics/checkpoints/02-validity-forecast-testing-release/README.md) freezes 111 accepted upstream artifacts and six checkpoint controls into a 117-row immutable manifest. Its durable [checkpoint specification](docs/curriculum/courses/FND-2/checkpoints/02-validity-forecast-testing-release-spec.md) defines the 25-point validity and forecast map, 25 noncompensable gates, 12-question defense, explicit human-accountability scope, and Module 07 progression decision.
+
+The seventh runnable unit is [FND-2 Module 07: Model cards, governance, and defense](courses/modeling-inference-reproducible-analytics/modules/07-model-cards-governance-defense/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/FND-2/modules/07-model-cards-governance-defense-spec.md). It freezes 143 immutable files in a 168-file final candidate, adds ten owned monitoring signals and full lifecycle controls, and records `accept with conditions` separately from `teaching use only`.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

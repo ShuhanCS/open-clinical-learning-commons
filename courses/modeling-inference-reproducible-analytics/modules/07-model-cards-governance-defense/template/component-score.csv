@@ -1,0 +1,7 @@
+criterion_id,component,course_points_available,points_earned,status,evidence
+M01,Aim target time model and baseline,5.00,,,
+R01,Reproduction environment manifest tests and refit contract,6.00,,,
+E01,Evaluation calibration threshold subgroup and failures,7.00,,,
+V01,Validity uncertainty data forecast and claim limits,5.00,,,
+G01,Model card monitoring lifecycle and use decision,6.00,,,
+H01,Agent accessibility handoff defense reviewers and disposition,6.00,,,

@@ -1,0 +1,18 @@
+measure,value,denominator_or_scope,interval_or_comparator,evidence_path,interpretation_limit
+modeling_rows,374,accepted synthetic cohort,29 source fields plus derived modeling fields,evidence/checkpoint2/prior-checkpoint/modules/01-aims-reproducible-workspace/outputs/modeling-cohort.csv,synthetic teaching cohort
+split,224/75/75,374 rows,25/7/4 outcomes,evidence/checkpoint2/prior-checkpoint/modules/01-aims-reproducible-workspace/outputs/split-registry.csv,fixed temporal teaching split
+baseline_probability,0.111607142857,224 training rows,25/224,evidence/checkpoint2/prior-checkpoint/modules/01-aims-reproducible-workspace/outputs/modeling-cohort.csv,probability comparator not utility threshold
+selected_model,ML01,validation selection,LEAK01 never eligible,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/model-contract.json,selection does not authorize use
+test_roc_auc,0.58802817,75 test rows and 4 outcomes,0.26760563 to 0.91549296,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/test-predictions.csv,wide conditional teaching interval
+test_average_precision,0.14682471,75 test rows and 4 outcomes,baseline 0.05333333,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/test-predictions.csv,sparse outcomes
+test_brier,0.05097579,75 test rows and 4 outcomes,baseline 0.05388473,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/test-predictions.csv,small numeric difference and no utility claim
+locked_threshold,0.08513264,validation rule,locked before test,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/model-contract.json,threshold utility not established
+test_confusion,48/23/2/2,75 rows,48 TN 23 FP 2 FN 2 TP,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/confusion-table.csv,four outcomes
+test_sensitivity,0.50000000,4 outcomes,0.00000000 to 1.00000000,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/test-predictions.csv,fragile estimate
+test_specificity,0.67605634,71 nonoutcomes,0.56338028 to 0.77464789,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/test-predictions.csv,conditional teaching evidence
+test_ppv,0.08000000,25 flagged rows,0.00000000 to 0.16666667,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/test-predictions.csv,no action utility
+subgroup_suppression,5 of 10,10 group rows,fewer than 20 rows or sparse outcomes,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/subgroup-metrics.csv,no fairness ranking
+selection_case,111 timing rows and 263 structural blanks,374 cohort rows,selected on recorded next encounter,evidence/checkpoint2/modules/04-validity-adjustment-longitudinal/outputs/selection-profile.csv,no full-cohort time claim
+validity_checks,16 pass,16 declared invariants,synthetic fixtures,evidence/checkpoint2/modules/04-validity-adjustment-longitudinal/outputs/validity-checks.csv,no clinical causal claim
+forecast_mae,14.99587157,20 common targets,LAST 28.20000000 and SNAIVE52 93.15000000,evidence/checkpoint2/modules/05-forecasting-temporal-validation/outputs/aggregate-metrics.csv,jurisdiction aggregate and weak fold retained
+accountability_tests,18 pass and 10 failures reject,13 accepted artifacts,3 independent checks and 4 adjudicated claims,evidence/checkpoint2/modules/06-agent-assisted-modeling-testing/outputs/test-summary.csv,contracts do not establish safety or utility

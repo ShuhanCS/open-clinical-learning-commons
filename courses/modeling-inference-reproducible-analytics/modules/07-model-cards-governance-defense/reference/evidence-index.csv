@@ -1,0 +1,9 @@
+evidence_id,claim_family,evidence_path,status,interpretation_limit
+E01,source and FND-1 handoff,evidence/provenance/fnd1-final-release.json and evidence/provenance/fnd1-handoff-acceptance.md,accepted,synthetic technical education only
+E02,cohort split and prediction time,evidence/checkpoint2/prior-checkpoint/modules/01-aims-reproducible-workspace/outputs/split-registry.csv,accepted,374-row synthetic cohort and fixed split
+E03,model baseline evaluation and threshold,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs/test-predictions.csv,accepted,four positive test outcomes
+E04,validity missingness dependence and censoring,evidence/checkpoint2/modules/04-validity-adjustment-longitudinal/outputs/validity-threat-register.csv,accepted,synthetic fixtures and bounded readings
+E05,forecast source backtest and coverage,evidence/checkpoint2/modules/05-forecasting-temporal-validation/outputs/forecast-predictions.csv,accepted,jurisdiction aggregate and no operations use
+E06,tests failures trace and independent checks,evidence/checkpoint2/modules/06-agent-assisted-modeling-testing/outputs/test-summary.csv,accepted,declared invariants only
+E07,checkpoint conditions and progression,evidence/checkpoint2/conditions-register.csv and evidence/checkpoint2/progression-decision.md,accepted,construction disposition and open human review
+E08,module governance and model use,model-card.md and model-use-recommendation.md,accepted with conditions,teaching use only

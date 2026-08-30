@@ -1,0 +1,5 @@
+condition_id,source,status,condition,owner,next_check,verification,escalation_trigger
+C01,Checkpoint 1,open,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+C02,Checkpoint 2,open,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+C03,Module 07,open,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+C04,Human review,open,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

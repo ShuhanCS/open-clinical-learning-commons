@@ -1,0 +1,9 @@
+check_id,check,status,evidence,owner
+R01,Version changelog release notes commit and proposed tag,pass,VERSION CHANGELOG and release-notes,Commons sponsor
+R02,All 143 immutable members validate,pass,release-manifest and validator,technical reproducer
+R03,All 24 records complete,pass,candidate root records,technical reviewer
+R04,Model card and exact appendix agree,pass,model-card and performance-appendix,model-risk lead
+R05,Monitoring and lifecycle actions complete,pass,monitoring drift rollback and retirement records,model-risk lead
+R06,Reproduction and manifest comparison pass,pass,reproducibility-audit,independent reproducer pending name
+R07,AI accessibility privacy and human review complete,pass,AI accessibility sign-off and reviewer records,Commons sponsor for construction
+R08,Score gates handoff defense and decisions complete,pass,score gates handoff defense and progression,technical reviewer

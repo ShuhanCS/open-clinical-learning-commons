@@ -1,0 +1,7 @@
+criterion_id,component,course_points_available,points_earned,status,evidence
+M01,Aim target time model and baseline,5.00,5.00,pass,model card evidence index and performance appendix
+R01,Reproduction environment manifest tests and refit contract,6.00,6.00,pass,environment manifest nested validation and reproduction audit
+E01,Evaluation calibration threshold subgroup and failures,7.00,7.00,pass,performance appendix subgroup review and test evidence
+V01,Validity uncertainty data forecast and claim limits,5.00,5.00,pass,model card checkpoint threats forecast limits and conditions
+G01,Model card monitoring lifecycle and use decision,6.00,6.00,pass,model card ten signals lifecycle controls and separate recommendation
+H01,Agent accessibility handoff defense reviewers and disposition,6.00,6.00,pass,AI accessibility sign-off handoff defense review and progression

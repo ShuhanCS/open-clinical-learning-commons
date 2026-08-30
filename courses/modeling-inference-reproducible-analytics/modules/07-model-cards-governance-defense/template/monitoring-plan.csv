@@ -1,0 +1,11 @@
+signal_id,signal,denominator,window,review_trigger,owner,action,stop_condition
+S01,input schema and identity,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S02,missingness and structural blanks,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S03,population and feature drift,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S04,outcome prevalence,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S05,discrimination,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S06,calibration and probability error,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S07,threshold consequences,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S08,subgroup evidence and suppression,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S09,forecast source and reporting coverage,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+S10,pipeline test and agent integrity,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

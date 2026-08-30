@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-fnd2-07",
+    "version": "0.1.0",
+    "commons_release": "0.47.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "week": 7,
+    "hours": 16.0,
+    "cumulative_hours": 112.5,
+    "final_component_points": "35.00",
+    "minimum_points": "28.00",
+    "proposed_tag": "fnd2-governed-candidate-v0.1.0"
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-fnd2-cp2",
+    "checkpoint_version": "0.1.0",
+    "checkpoint_files": 130,
+    "checkpoint_manifest_rows": 117,
+    "checkpoint_manifest_bytes": 17699,
+    "checkpoint_manifest_sha256": "16733c55e8a9930f4903006c81e5fb1acb9e75386507f1aa46867daac89f6ccc",
+    "source_commit": "ff60b209cb083dc64382617f749ec09b16a7d5bc",
+    "progression": "accept with conditions"
+  },
+  "supplementary_provenance": {
+    "files": 7,
+    "fnd1_release_sha256": "7afffdaeb0470d2ffc918570a0a2400a255ebe3f1a47cb467ab9e862dff32dd8",
+    "fnd1_handoff_sha256": "50b1a279cbcdf4ca642bbd4189e543a158cb3a1f7f26457216041ce216752a28",
+    "fnd2_source_record_sha256": "f3ef7bb8ecbd892b70810a44f37ac146d7fde9b587e557ac145c732cf41cfc2b",
+    "fnd2_data_spec_sha256": "083f34ea5e58c2b5143bfa1efc3266150aee8f3a15515dcb677acf5d10642f19",
+    "test_metrics_sha256": "9d43a8085e835cbf368962acc37b0bed00bdfacf68e73ce87d0b359dee490bc9",
+    "subgroup_metrics_sha256": "7f95ec1f99a1f9f9bae6af566798a4f3aab9107681fe7e79c1ce27a821e07d24",
+    "prediction_report_sha256": "8559a9b97a1cf540cf122577afeb16dfb7363aae5ddd9165ac7d26c34c8d8de7"
+  },
+  "package": {
+    "checkpoint_files": 130,
+    "supplementary_files": 7,
+    "module_control_files": 6,
+    "manifest_rows": 143,
+    "editable_records": 24,
+    "assembled_files": 168
+  },
+  "assessment": {
+    "criterion_ids": ["M01", "R01", "E01", "V01", "G01", "H01"],
+    "available_points": ["5.00", "6.00", "7.00", "5.00", "6.00", "6.00"],
+    "required_gates": 18,
+    "defense_questions": 10,
+    "monitoring_signals": 10
+  },
+  "decision": {
+    "owner": "clinical analytics model-risk lead",
+    "package_dispositions": ["accept", "accept with conditions", "revise", "refer"],
+    "progression_allowed": ["accept", "accept with conditions"],
+    "model_use_recommendations": ["teaching use only", "silent prospective validation only", "revise before further validation", "stop model use"],
+    "reference_package": "accept with conditions",
+    "reference_model_use": "teaching use only"
+  },
+  "boundary": "synthetic and public aggregate teaching evidence only; no deployment, patient action, clinical efficacy, causal effect, fairness certification, stable-process, staffing, capacity, operational, safety, or real-population claim"
+}

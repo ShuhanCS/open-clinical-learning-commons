@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.46.0
+- Current release: 0.47.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Checkpoint 2, validity, forecast, testing, and agent-accountability release
-- Next unit: FND-2 Module 07, model cards, governance, and defense
+- Last completed unit: FND-2 Module 07, model cards, governance, and defense
+- Next unit: FND-2 Final Checkpoint 3, governed analytics package and model-use decision
 
 ## Confirmed decisions
 
@@ -264,6 +264,14 @@
 - The deterministic manifest is 17,699 bytes with SHA-256 `16733c55e8a9930f4903006c81e5fb1acb9e75386507f1aa46867daac89f6ccc`.
 - The reference disposition is `accept with conditions` for curriculum construction. Module 07 is permitted, while named program review, paired R execution, live learner defense, and live learner/reviewer sign-off remain required before alpha.
 - FND-2 Checkpoint 2 is a runnable release candidate at Commons 0.46.0.
+- FND-2 Module 07 version 0.1.0 nests all 130 accepted Checkpoint 2 files and adds seven exact FND-1 handoff, FND-2 source, test-metric, subgroup, and prediction-report provenance files.
+- Six Module 07 controls produce a 143-row immutable manifest. Twenty-four governance and defense records plus the generated manifest create a 168-file candidate.
+- The model card retains the 374-row cohort, 224/75/75 split, four test outcomes, `ML01`, threshold 0.08513264, ROC AUC 0.58802817 with wide uncertainty, 48/23/2/2 confusion, and five suppressed subgroup rows.
+- Ten simulated monitoring signals specify denominators, windows, review triggers, owners, actions, and stop conditions. Drift, retraining, rollback, immediate stop, retirement, safe fallback, and semantic-version rules are explicit.
+- The reference validator passes 880 complete checks and 831 starter checks. It rejects incomplete records, missing evidence, overscoring, failed gates, missing monitoring ownership, and inconsistent package/use decisions.
+- The candidate manifest is 27,316 bytes with SHA-256 `ab2537e278ea549b8152434df0a21438394d28caa6031b03e9a570a27db07c1b`.
+- The reference package disposition is `accept with conditions`; its separate model-use recommendation is `teaching use only`. The final checkpoint is permitted for curriculum construction.
+- FND-2 Module 07 is a runnable release candidate at Commons 0.47.0.
 
 ## Pending confirmation
 
@@ -272,11 +280,11 @@
 
 ## Next resume instructions
 
-1. Read the accepted Checkpoint 2 specification, contract, release, progression decision, conditions register, course specification, master architecture, and this ledger.
-2. Write the durable FND-2 Module 07 specification for model cards, governance, monitoring, stop rules, reproducibility audit, and technical defense.
-3. Consume Checkpoint 2 without changing any of its 117 immutable manifest members.
-4. Preserve the exact Week 3 and Week 6 identities, source fingerprints, causal limits, weak forecast evidence, test failures, agent adjudications, and human-accountability scope.
-5. Build the learner, instructor, data, assessment, governance, monitoring, accessibility, AI-use, and progression package.
-6. Validate deterministic outputs, model-card claims, monitoring and stop rules, reviewer ownership, and final-checkpoint readiness.
-7. Keep model-use, clinical, operational, staffing, capacity, causal, fairness, safety, and deployment boundaries unchanged unless new evidence and named review explicitly support a narrower change.
-8. Advance semver, update this ledger, commit, and push Module 07 before building the final checkpoint.
+1. Read the accepted Module 07 specification, contract, release, candidate progression, Checkpoint 1 and 2 releases, course specification, master architecture, and this ledger.
+2. Write the 17-section FND-2 Final Checkpoint 3 specification.
+3. Freeze the exact Module 07 candidate and both cumulative checkpoint identities without refitting, tuning, or rewriting evidence.
+4. Implement the final 35-point map, 27 gates, 15-question defense, named-review contract, package disposition, and separate model-use recommendation.
+5. Verify repository, exact commit, semantic version, release notes, proposed annotated tag, source rights, model evidence, governance, monitoring, accessibility, AI audit, human sign-off, and clean reproduction.
+6. Define the annotated tag target only after an allowed final disposition identifies the exact reviewed commit.
+7. Keep the reference recommendation `teaching use only` and preserve all clinical, operational, causal, fairness, safety, stable-process, and deployment prohibitions.
+8. Advance semver, update this ledger, commit, push, and only then evaluate whether the tag may be created.

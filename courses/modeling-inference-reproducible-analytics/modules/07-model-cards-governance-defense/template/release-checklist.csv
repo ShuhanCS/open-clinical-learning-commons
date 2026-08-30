@@ -1,0 +1,9 @@
+check_id,check,status,evidence,owner
+R01,Version changelog release notes commit and proposed tag,REPLACE,REPLACE,REPLACE
+R02,All 143 immutable members validate,REPLACE,REPLACE,REPLACE
+R03,All 24 records complete,REPLACE,REPLACE,REPLACE
+R04,Model card and exact appendix agree,REPLACE,REPLACE,REPLACE
+R05,Monitoring and lifecycle actions complete,REPLACE,REPLACE,REPLACE
+R06,Reproduction and manifest comparison pass,REPLACE,REPLACE,REPLACE
+R07,AI accessibility privacy and human review complete,REPLACE,REPLACE,REPLACE
+R08,Score gates handoff defense and decisions complete,REPLACE,REPLACE,REPLACE

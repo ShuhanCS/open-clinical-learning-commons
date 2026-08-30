@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd2-07",
+    "title": "Model cards, governance, and defense",
+    "version": "0.1.0",
+    "commons_release": "0.47.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "week": 7,
+    "hours": 16.0,
+    "cumulative_hours": 112.5,
+    "final_component_points": 35,
+    "proposed_tag": "fnd2-governed-candidate-v0.1.0"
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-fnd2-cp2",
+    "checkpoint_version": "0.1.0",
+    "checkpoint_files": 130,
+    "checkpoint_manifest_rows": 117,
+    "checkpoint_manifest_sha256": "16733c55e8a9930f4903006c81e5fb1acb9e75386507f1aa46867daac89f6ccc",
+    "source_commit": "ff60b209cb083dc64382617f749ec09b16a7d5bc",
+    "progression": "accept with conditions"
+  },
+  "decision": {
+    "owner": "clinical analytics model-risk lead",
+    "package_dispositions": ["accept", "accept with conditions", "revise", "refer"],
+    "model_use_recommendations": ["teaching use only", "silent prospective validation only", "revise before further validation", "stop model use"],
+    "reference_package": "accept with conditions",
+    "reference_model_use": "teaching use only",
+    "final_checkpoint": "permitted for curriculum construction with conditions"
+  },
+  "fixed_evidence": {
+    "modeling_rows": 374,
+    "split": "224/75/75",
+    "outcomes": "25/7/4",
+    "baseline_probability": "0.111607142857",
+    "selected_model": "ML01",
+    "locked_threshold": "0.08513264",
+    "test_roc_auc": "0.58802817",
+    "test_roc_auc_interval": ["0.26760563", "0.91549296"],
+    "test_brier": "0.05097579",
+    "test_confusion": "48/23/2/2",
+    "subgroup_rows": 10,
+    "suppressed_subgroup_rows": 5,
+    "selection_timing_rows": 111,
+    "structural_blanks": 263,
+    "forecast_rows": 94,
+    "forecast_candidate_mae": "14.99587157",
+    "accepted_tests": 18,
+    "seeded_failures": 10,
+    "independent_checks": 3,
+    "adjudicated_claims": 4
+  },
+  "package": {
+    "checkpoint_files": 130,
+    "supplementary_provenance_files": 7,
+    "module_control_files": 6,
+    "immutable_manifest_rows": 143,
+    "editable_records": 24,
+    "assembled_files": 168,
+    "manifest_bytes": 27316,
+    "manifest_sha256": "ab2537e278ea549b8152434df0a21438394d28caa6031b03e9a570a27db07c1b",
+    "external_assembler_dependencies": 0
+  },
+  "assessment": {
+    "course_points": 35,
+    "minimum_passing_points": 28,
+    "criteria": 6,
+    "noncompensable_gates": 18,
+    "defense_questions": 10,
+    "monitoring_signals": 10,
+    "reference_points": 35,
+    "reference_defense": "adequate"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 880,
+    "starter_checks": 831,
+    "nested_checkpoint_validation": "pass",
+    "two_build_manifest_match": "pass",
+    "existing_target_rejection": "pass",
+    "incomplete_record_rejection": "pass",
+    "missing_evidence_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "missing_monitoring_owner_rejection": "pass",
+    "inconsistent_decision_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and reference construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, candidate assembly, governance records, and validation"}
+  ],
+  "known_issues": [
+    "Named program review, live learner defense, actual learner/reviewer sign-off, and independent reproduction remain pending before alpha.",
+    "The test set has four outcomes, wide uncertainty, and five suppressed subgroup rows.",
+    "Module 04 fixtures are synthetic and paired R reconciliation remains pending.",
+    "The CDC forecast is a changing-reporting jurisdiction aggregate and loses one fold to last-value.",
+    "Monitoring is a governed teaching simulation rather than observed production evidence.",
+    "The proposed tag cannot be created until final-checkpoint acceptance identifies the exact reviewed commit."
+  ]
+}

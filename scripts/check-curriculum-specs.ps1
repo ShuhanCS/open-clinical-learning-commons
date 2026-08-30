@@ -97,7 +97,7 @@ if (
     $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
-    $fnd2PackageContent -notmatch 'Commons release: 0\.46\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.47\.0' -or
     $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch '21,850' -or
@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.46.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.47.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -604,6 +604,71 @@ if ($LASTEXITCODE -ne 0) {
 if ($LASTEXITCODE -ne 0) {
     throw 'FND-2 Module 06 validator self-check failed.'
 }
+
+$fnd2Module07Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\modules\07-model-cards-governance-defense'
+$fnd2Module07Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\modules\07-model-cards-governance-defense-spec.md'
+$fnd2Module07Files = @(
+    '.gitattributes', '.gitignore', 'README.md', 'VERSION', 'governance-contract.json',
+    'assessment.md', 'instructor-notes.md', 'assemble_candidate.py', 'validate_candidate.py',
+    'release.json', 'template\README.md', 'template\CHANGELOG.md',
+    'template\release-notes.md', 'template\environment-and-commands.md',
+    'template\evidence-index.csv', 'template\model-card.md',
+    'template\performance-appendix.csv', 'template\subgroup-equity-review.md',
+    'template\monitoring-plan.csv', 'template\drift-retraining-versioning.md',
+    'template\rollback-stop-retirement.md', 'template\model-use-recommendation.md',
+    'template\reproducibility-audit.md', 'template\accessibility-review.md',
+    'template\ai-use.md', 'template\human-sign-off.md', 'template\handoff-brief.md',
+    'template\technical-defense.md', 'template\component-score.csv',
+    'template\gate-results.csv', 'template\release-checklist.csv',
+    'template\conditions-register.csv', 'template\reviewer-record.md',
+    'template\progression-decision.md', 'reference\README.md', 'reference\CHANGELOG.md',
+    'reference\release-notes.md', 'reference\environment-and-commands.md',
+    'reference\evidence-index.csv', 'reference\model-card.md',
+    'reference\performance-appendix.csv', 'reference\subgroup-equity-review.md',
+    'reference\monitoring-plan.csv', 'reference\drift-retraining-versioning.md',
+    'reference\rollback-stop-retirement.md', 'reference\model-use-recommendation.md',
+    'reference\reproducibility-audit.md', 'reference\accessibility-review.md',
+    'reference\ai-use.md', 'reference\human-sign-off.md', 'reference\handoff-brief.md',
+    'reference\technical-defense.md', 'reference\component-score.csv',
+    'reference\gate-results.csv', 'reference\release-checklist.csv',
+    'reference\conditions-register.csv', 'reference\reviewer-record.md',
+    'reference\progression-decision.md'
+)
+$fnd2Module07Missing = @($fnd2Module07Files | Where-Object { -not (Test-Path -LiteralPath (Join-Path $fnd2Module07Root $_)) })
+if (-not (Test-Path -LiteralPath $fnd2Module07Spec) -or $fnd2Module07Missing.Count -gt 0) {
+    throw "FND-2 Module 07 is missing its specification or package files: $($fnd2Module07Missing -join ', ')."
+}
+$fnd2Module07Content = Get-Content -Raw -LiteralPath $fnd2Module07Spec
+$fnd2Module07Sections = [regex]::Matches($fnd2Module07Content, '(?m)^## \d+\.').Count
+if (
+    $fnd2Module07Sections -ne 21 -or $fnd2Module07Content -match '[—–]' -or
+    $fnd2Module07Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Module07Content -notmatch '0\.47\.0' -or
+    $fnd2Module07Content -notmatch '143 immutable manifest rows' -or
+    $fnd2Module07Content -notmatch 'ab2537e278ea549b8152434df0a21438394d28caa6031b03e9a570a27db07c1b' -or
+    $fnd2Module07Content -notmatch 'Complete reference checks: 880' -or
+    $fnd2Module07Content -notmatch 'Learner starter checks: 831'
+) { throw 'FND-2 Module 07 must define 21 plain-ASCII sections with the exact candidate, governance, monitoring, validation, and use-decision contract.' }
+$fnd2Module07Release = Get-Content -Raw -LiteralPath (Join-Path $fnd2Module07Root 'release.json') | ConvertFrom-Json
+if (
+    $fnd2Module07Release.module.id -ne 'oclc-fnd2-07' -or
+    $fnd2Module07Release.module.version -ne '0.1.0' -or
+    $fnd2Module07Release.module.commons_release -ne '0.47.0' -or
+    $fnd2Module07Release.module.hours -ne 16.0 -or
+    $fnd2Module07Release.package.immutable_manifest_rows -ne 143 -or
+    $fnd2Module07Release.package.assembled_files -ne 168 -or
+    $fnd2Module07Release.package.manifest_sha256 -ne 'ab2537e278ea549b8152434df0a21438394d28caa6031b03e9a570a27db07c1b' -or
+    $fnd2Module07Release.assessment.noncompensable_gates -ne 18 -or
+    $fnd2Module07Release.assessment.defense_questions -ne 10 -or
+    $fnd2Module07Release.assessment.monitoring_signals -ne 10 -or
+    $fnd2Module07Release.validation.complete_reference_checks -ne 880 -or
+    $fnd2Module07Release.validation.starter_checks -ne 831 -or
+    $fnd2Module07Release.decision.reference_model_use -ne 'teaching use only'
+) { throw 'FND-2 Module 07 release metadata does not match the 0.1.0 governed-candidate contract.' }
+& python (Join-Path $fnd2Module07Root 'assemble_candidate.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-2 Module 07 assembler self-check failed.' }
+& python (Join-Path $fnd2Module07Root 'validate_candidate.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-2 Module 07 validator self-check failed.' }
 
 $fnd2Checkpoint01Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\checkpoints\01-modeling-readiness-release'
 $fnd2Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\checkpoints\01-modeling-readiness-release-spec.md'
@@ -2033,5 +2098,6 @@ Write-Output "FND-2 Module 03 passed: $fnd2Module03Sections contract sections an
 Write-Output "FND-2 Module 04 passed: $fnd2Module04Sections contract sections and $($fnd2Module04Files.Count) required files."
 Write-Output "FND-2 Module 05 passed: $fnd2Module05Sections contract sections and $($fnd2Module05Files.Count) required files."
 Write-Output "FND-2 Module 06 passed: $fnd2Module06Sections contract sections and $($fnd2Module06Files.Count) required files."
+Write-Output "FND-2 Module 07 passed: $fnd2Module07Sections contract sections and $($fnd2Module07Files.Count) required files."
 Write-Output "FND-2 Checkpoint 1 passed: $fnd2Checkpoint01Sections contract sections and $($fnd2Checkpoint01Files.Count) required files."
 Write-Output "FND-2 Checkpoint 2 passed: $fnd2Checkpoint02Sections contract sections and $($fnd2Checkpoint02Files.Count) required files."
