@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.64.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.65.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2781,6 +2781,73 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-2 final checkpoint assembler self-check fa
 & python (Join-Path $app2Checkpoint03Root 'validate_final.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 final checkpoint validator self-check failed.' }
 
+$app3 = Join-Path $repo 'docs\curriculum\courses\APP-3\course-spec.md'
+$app3Source = Join-Path $repo 'docs\source\app-3-clinical-performance-improvement-source-record.md'
+$app3Package = Join-Path $repo 'courses\clinical-performance-improvement\README.md'
+if (-not (Test-Path -LiteralPath $app3) -or -not (Test-Path -LiteralPath $app3Source) -or -not (Test-Path -LiteralPath $app3Package)) {
+    throw 'APP-3 must include its course specification, source record, and course package README.'
+}
+$app3Content = Get-Content -Raw -LiteralPath $app3
+$app3SourceContent = Get-Content -Raw -LiteralPath $app3Source
+$app3PackageContent = Get-Content -Raw -LiteralPath $app3Package
+$app3Sections = [regex]::Matches($app3Content, '(?m)^## \d+\.').Count
+$app3ModuleCount = [regex]::Matches($app3Content, '(?m)^## \d+\. Module \d{2} brief:').Count
+$app3HourMatches = [regex]::Matches(
+    $app3Content,
+    '(?m)^\| \d{2} \| [^|]+ \| \d \| (?<hours>\d+(?:\.\d+)?) \|'
+)
+$app3Hours = ($app3HourMatches | ForEach-Object { [decimal]$_.Groups['hours'].Value } | Measure-Object -Sum).Sum
+$app3CheckpointCount = [regex]::Matches($app3Content, '(?m)^### (?:Checkpoint \d|Final checkpoint):').Count
+$app3SourceModuleRows = [regex]::Matches($app3SourceContent, '(?m)^\| [1-7] \| [^|]+ \| (?<hours>\d+(?:\.\d+)?) \|').Count
+if (
+    $app3Sections -ne 24 -or
+    $app3ModuleCount -ne 7 -or
+    $app3HourMatches.Count -ne 7 -or
+    $app3Hours -ne [decimal]112.5 -or
+    $app3CheckpointCount -ne 3 -or
+    $app3SourceModuleRows -ne 7
+) {
+    throw "APP-3 must define 24 course sections, seven modules, seven schedule rows totaling 112.5 hours, three checkpoints, and seven source rows; found $app3Sections sections, $app3ModuleCount modules, $($app3HourMatches.Count) schedule rows, $app3Hours hours, $app3CheckpointCount checkpoints, and $app3SourceModuleRows source rows."
+}
+if (
+    $app3Content -match '[—–]' -or
+    $app3SourceContent -match '[—–]' -or
+    $app3PackageContent -match '[—–]' -or
+    $app3Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app3SourceContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app3PackageContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app3Content -notmatch 'Current Commons release: 0\.65\.0' -or
+    $app3PackageContent -notmatch 'Current Commons release: 0\.65\.0' -or
+    $app3Content -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
+    $app3SourceContent -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
+    $app3SourceContent -notmatch '26,907' -or
+    $app3SourceContent -notmatch 'Curriculum-30-Credits-2026-08-29\.zip' -or
+    $app3SourceContent -notmatch 'OneDrive_2026-08-29 \(1\)\.zip' -or
+    ([regex]::Matches($app3SourceContent, '20%')).Count -ne 2 -or
+    $app3SourceContent -notmatch '25%' -or
+    $app3SourceContent -notmatch '35%' -or
+    $app3Content -notmatch '40 \+ 25 \+ 35 = 100' -or
+    $app3Content -notmatch 'CGH-ED-01' -or
+    $app3SourceContent -notmatch 'CGH-ED-01' -or
+    $app3PackageContent -notmatch 'CGH-ED-01' -or
+    $app3Content -notmatch '1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516' -or
+    $app3SourceContent -notmatch '1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516' -or
+    $app3Content -notmatch 'f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b' -or
+    $app3Content -notmatch 'https://data\.cms\.gov/provider-data/dataset/yv7e-xc69' -or
+    $app3Content -notmatch 'https://data\.cms\.gov/provider-data/dataset/ynj2-r877' -or
+    $app3Content -notmatch 'https://healthdata\.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u' -or
+    $app3Content -notmatch 'Application and monitoring block: 8\.0 hours' -or
+    $app3Content -notmatch 'Embedded ML extension: 8\.0 hours' -or
+    $app3Content -notmatch 'gradient-boosted' -or
+    $app3Content -notmatch 'Joe Joseph, MD, SFHM' -or
+    $app3Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
+    $app3Content -notmatch 'Module 01 is not yet built' -or
+    $app3PackageContent -notmatch 'modules and checkpoints not yet built' -or
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.65.0'
+) {
+    throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
+}
+
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
 $fnd1Module01Files = @(
@@ -4086,3 +4153,4 @@ Write-Output "APP-2 Checkpoint 01 passed: $app2Checkpoint01Sections contract sec
 Write-Output "APP-2 Checkpoint 02 passed: $app2Checkpoint02Sections contract sections and $($app2Checkpoint02Files.Count) required files."
 Write-Output "APP-2 Module 07 passed: $app2Module07Sections contract sections and $($app2Module07Files.Count) required files."
 Write-Output "APP-2 final checkpoint passed: $app2Checkpoint03Sections contract sections and $($app2Checkpoint03Files.Count) required files."
+Write-Output "APP-3 course architecture passed: $app3Sections sections, $app3ModuleCount modules, $app3Hours hours, and $app3CheckpointCount checkpoints."

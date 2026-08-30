@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.64.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each.
+- Current version: `0.65.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 now has its complete course contract and open-data architecture; its modules remain to be built.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -100,6 +100,10 @@ The cumulative [APP-2 Week 6 checkpoint](courses/patient-experience-engagement/c
 The seventh runnable unit is [APP-2 Module 07: Clinician and patient leadership, accountability, and defense](courses/patient-experience-engagement/modules/07-clinician-patient-leadership-defense/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/APP-2/modules/07-clinician-patient-leadership-defense-spec.md). It freezes both accepted checkpoints in a 358-file candidate, requires shared clinician and patient authority, defines patient-facing feedback and 14 monitoring and stop contracts, and separates curriculum acceptance from authorization to test. Joe Joseph, MD, SFHM, is the designated clinician of record, and a named patient or caregiver co-lead remains required before alpha.
 
 The [APP-2 final checkpoint](courses/patient-experience-engagement/checkpoints/03-patient-experience-engagement-package/README.md) freezes all 358 Module 07 files and adds the final 35-point score, 26 gates, 14-question defense, reviewers, reproduction, conditions, package disposition, and separate organizational recommendation. Its durable [checkpoint specification](docs/curriculum/courses/APP-2/checkpoints/03-patient-experience-engagement-package-spec.md) records `accept with conditions` for the curriculum package and `revise before testing` for the organizational proposal. It does not authorize contact, fielding, official reporting, targeting, implementation, or deployment.
+
+The third applied course is specified in [APP-3: Data for Clinical Performance and Improvement](docs/curriculum/courses/APP-3/course-spec.md), with its exact DOCX fingerprint, public-source roles, synthetic operational-data contract, and source routing in [the APP-3 source record](docs/source/app-3-clinical-performance-improvement-source-record.md). APP-3 owns clinical performance measures, safety signals, statistical process control, operational flow, demand and capacity, improvement scenarios, monitoring, and clinician-led defense. It preserves the source assessment weights as 40 points at Week 3, 25 points at Week 6, and 35 points on the official half-term end date.
+
+The [APP-3 course package](courses/clinical-performance-improvement/README.md) maps seven distinct modules totaling 112.5 hours. Its continuing case uses the explicitly fictional `CGH-ED-01` service, full public CMS quality and safety releases, historical HHS capacity data, and a generated operational layer that can never be attributed to a public hospital. Module 01 is the next runnable unit.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -277,7 +281,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Specify and build APP-3, Data for Clinical Performance and Improvement.
+1. Build APP-3 Module 01, Framing a clinical performance and improvement decision.
 2. Continue APP-4 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 

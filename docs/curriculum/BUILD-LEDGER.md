@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.64.0
+- Current release: 0.65.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 final checkpoint, patient-experience and engagement package
-- Next unit: APP-3 course specification and source architecture
+- Last completed unit: APP-3 course specification and source architecture
+- Next unit: APP-3 Module 01, framing a clinical performance and improvement decision
 
 ## Confirmed decisions
 
@@ -19,6 +19,7 @@
 - Public clinical sources, open datasets, and documented synthetic teaching data are core course materials.
 - Every module requires exact learner, instructor, data, assessment, rubric, accessibility, and release deliverables.
 - FND-1 preserves the source assessment weights through cumulative checkpoints: 40 percent at Week 3, 25 percent at Week 6, and 35 percent on the official last day.
+- APP-3 preserves its own source assessment weights through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day. The generic APP-1 and APP-2 `20 / 45 / 35` pattern does not apply.
 
 ## Source status
 
@@ -34,6 +35,11 @@
 - The APP-2 source file is byte-for-byte identical in both supplied archives: 25,906 bytes and SHA-256 `3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009`.
 - The APP-2 specification defines seven distinct applied modules totaling 112.5 hours and preserves 20, 45, and 35 course points through Week 3, Week 6, and official-end-date checkpoints.
 - APP-2 owns patient-reported measures, scale construction, response patterns, missingness, representation, survey bias, linked patient evidence, patient voice, patient partnership, and engagement strategy. Module 06 contains eight hours of partnered improvement and an eight-hour response-adjustment ML extension. Module 07 is clinician led with a required patient-partner co-lead.
+- The APP-3 source file is byte-for-byte identical in both supplied archives: 26,907 bytes and SHA-256 `084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3`.
+- The APP-3 specification defines seven distinct applied modules totaling 112.5 hours and preserves source assessment weights of 20, 20, 25, and 35 percent through 40-point Week 3, 25-point Week 6, and 35-point official-end-date checkpoints.
+- APP-3 owns clinical performance measures, safety signals, process reliability, statistical process control, operational flow, demand and capacity, bottlenecks, improvement scenarios, balancing measures, monitoring, and a performance recommendation.
+- APP-3 uses the explicitly fictional `CGH-ED-01` adult emergency service. No synthetic operational result may be attributed to a public hospital.
+- APP-3 Module 06 contains eight hours of feasibility and monitoring plus an eight-hour gradient-boosted arrival-demand ML extension. Module 07 is clinician led.
 - FND-2 owns analytic aims and targets, regression, prediction evaluation, validity, adjustment, longitudinal boundaries, forecasting, testing, agent verification, model cards, monitoring, governance, and defense. It does not repeat FND-1 data-pipeline work.
 - The primary modeling case preserves the accepted 374-row FND-1 synthetic analytic table and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
 - The 90-day acute-return label contains 36 positive and 338 negative rows. The fixed temporal split contains 224, 75, and 75 rows with 25, 7, and 4 positive outcomes.
@@ -447,6 +453,16 @@
 - Complete validation passes 1,890 checks and learner validation passes 1,841 checks. Deterministic assembly, overwrite and inside-target refusal, and changed-candidate, score, gate, tag, partnership, and decision failure routes pass.
 - Tag `app2-patient-experience-engagement-candidate-v0.1.0` is proposed and not created. Named human approval, direct patient review, clean reproduction, learner defense, and exact-commit verification remain required.
 - APP-2 is complete for curriculum construction at Commons 0.64.0. Contact, fielding, official HCAHPS reporting, targeting, clinical implementation, and model deployment remain prohibited.
+- APP-3 course specification version target 0.1.0 is registered at Commons 0.65.0 with seven modules, 112.5 hours, and three cumulative checkpoints.
+- APP-3 preserves the source 20-point measure build and 20-point performance diagnostic together at Week 3, the 25-point forecast, scenario, and evaluation component at Week 6, and the 35-point final package on the official half-term end date.
+- The continuing decision asks whether the explicitly fictional `CGH-ED-01` adult emergency service should propose a bounded 12-week flex-staffing and fast-track test. The specification does not authorize a real staffing or workflow change.
+- The public measurement anchor is the accepted 138,084-row CMS Timely and Effective Care release, 34,150,899 bytes, SHA-256 `1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516`.
+- The course source architecture also requires a pinned full CMS Complications and Deaths release and a pinned full HHS historical facility-capacity snapshot before Module 01 can complete.
+- The synthetic operational release must contain encounters, process events, staffing, queue snapshots, safety events, calendar demand, scenarios, and known truth with exact generator, seed, relationship, defect, row, byte, and checksum evidence.
+- Modules 01 through 03 form the technical performance block. Modules 04 through 06 form the application block. Module 06 splits evenly between feasibility and monitoring and the embedded ML comparison. Module 07 is clinician led.
+- The ML extension compares the accepted transparent arrival-demand approach with one bounded gradient-boosted forecast under identical target, information cutoff, folds, horizon, and evaluation rows. Better average error alone cannot change the recommendation.
+- APP-3 uses public aggregate sources for definitions and context only. Public reporting cannot establish current local operations, cause, staffing need, safety events, or intervention effect.
+- APP-3 course architecture is complete at Commons 0.65.0. Module 01 is not yet built.
 
 ## Pending confirmation
 
@@ -454,15 +470,17 @@
 - Name and confirm the APP-2 patient/caregiver partner co-lead, compensation, decision rights, preparation, access needs, recording consent, and review terms.
 - Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; the Module 04 MEPS linkage and denominators; the Module 05 synthetic comments, qualitative coding, group support, and equity language; and the Module 06 partnership, improvement, model, and handoff before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
+- Assign the official APP-3 section and half-term dates from the published calendar.
+- Pin and fingerprint the full CMS Complications and Deaths release and full HHS historical facility-capacity snapshot used by APP-3 Module 01.
+- Complete human review of the APP-3 synthetic operational generator, safety-event design, subgroup construction, staffing assumptions, workload language, forecast contract, and scenario boundaries before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the master architecture, roadmap sources, curriculum catalog, APP-1 and APP-2 ownership maps, and this ledger.
-2. Write the durable APP-3 course specification and source record before its first module.
-3. Keep APP-3 distinct: it owns clinical performance, safety signals, process reliability, demand and capacity, operational variation, and improvement testing.
-4. Define seven modules totaling 112.5 hours with cumulative 20-point Week 3, 45-point Week 6, and 35-point official-end-date checkpoints.
-5. Give each module a different foundations revisit, an open-data decision, clear learner deliverables, and a protected handoff.
-6. Keep the embedded ML work inside Module 06 and the clinician leadership block inside Module 07.
-7. Select and fingerprint full public quality, safety, utilization, capacity, or operations sources before creating derived teaching evidence.
-8. Build, validate, advance semver, commit, and push one unit at a time.
+1. Read the master architecture, APP-3 course specification, APP-3 source record, curriculum catalog, and this ledger.
+2. Write the durable APP-3 Module 01 specification before building its package.
+3. Pin and fingerprint the complete CMS Complications and Deaths release and HHS historical facility-capacity snapshot selected for the module. Reuse the accepted full CMS Timely and Effective Care identity without silently refreshing it.
+4. Build the `CGH-ED-01` source-feasibility and decision-framing workspace with a clinical performance charter, unit of flow, measure family, process boundary, accountability map, claim boundary, AI record, instructor materials, and progression decision.
+5. Keep public aggregate evidence separate from the fictional local service. Module 01 must not diagnose a bottleneck, prescribe staffing, or imply that synthetic results describe a public hospital.
+6. Validate the reference and incomplete learner package, including deterministic builds, source mutation, false-local-claim, failed-gate, and existing-target failure routes.
+7. Advance semver, update this ledger, commit, and push before Module 02 begins.
