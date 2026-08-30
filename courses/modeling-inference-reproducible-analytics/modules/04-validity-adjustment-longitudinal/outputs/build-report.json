@@ -1,0 +1,189 @@
+{
+  "status": "pass",
+  "version": "0.1.0",
+  "seed": 20260830,
+  "upstream": {
+    "checkpoint-release.json": {
+      "bytes": 4914,
+      "sha256": "03c147d2e75cd446a43b9d56e49495df69af90d42d2b14ad4d860aea9d67239f"
+    },
+    "checkpoint-contract.json": {
+      "bytes": 2351,
+      "sha256": "e32c4d31b675fe7943ed22f432464938a258fc0bb4e7d40e2ac688791dcbad93"
+    },
+    "checkpoint-progression.md": {
+      "bytes": 1502,
+      "sha256": "42207a796e0ee0f6af29b9941cae6f19a273725d4b4ea2527c54c789b5c36470"
+    },
+    "modeling-cohort.csv": {
+      "bytes": 138503,
+      "sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332"
+    },
+    "split-registry.csv": {
+      "bytes": 51910,
+      "sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1"
+    },
+    "linear-subset-registry.csv": {
+      "bytes": 17195,
+      "sha256": "547e21378c40241ae33982da67eebc58ef5a67bb89bfdda1638b9cb3ab85696b"
+    },
+    "assumption-register.csv": {
+      "bytes": 2181,
+      "sha256": "7c6322667a383458a34aea49b687d1a6716aaaf0f780ccf060f1c99d671956e3"
+    },
+    "prediction-model-contract.json": {
+      "bytes": 2831,
+      "sha256": "0aab6eb29fbcbd921e191c62d5a0a44554de0a683fd560359991fcc9db034015"
+    },
+    "prediction-progression.md": {
+      "bytes": 1665,
+      "sha256": "063c10d34c03e9a9a6dfb05781dd373abec4c8d6ff5a8db3076e918db6cc3334"
+    }
+  },
+  "selection_case": {
+    "cohort_rows": 374,
+    "timing_rows": 111,
+    "structural_blanks": 263
+  },
+  "treatment_case": {
+    "rows": 600,
+    "treated": 255,
+    "missing_severity": 91,
+    "known_ate": "-6.00000000"
+  },
+  "repeated_case": {
+    "rows": 2400,
+    "people": 600,
+    "visits_per_person": 4
+  },
+  "survival_case": {
+    "rows": 600,
+    "events": 449,
+    "censored": 151
+  },
+  "outputs": {
+    "treatment-fixture.csv": {
+      "rows": 600,
+      "fields": 15,
+      "bytes": 63344,
+      "sha256": "ea82788315dafab0921fd797623741d4ea850e92c3a65b634db32941833dd1c7"
+    },
+    "repeated-measures-fixture.csv": {
+      "rows": 2400,
+      "fields": 7,
+      "bytes": 91590,
+      "sha256": "1e1e5c6a2a95a0c02db033640283f69f881685b6abff42fdd35928546cebbb5b"
+    },
+    "survival-fixture.csv": {
+      "rows": 600,
+      "fields": 10,
+      "bytes": 40728,
+      "sha256": "643a86f9a8a4c2647e08fb836ed64cdb18e4e215e5fa8ef1b690a91ca61566cd"
+    },
+    "analytic-aim-validity-map.csv": {
+      "rows": 5,
+      "fields": 9,
+      "bytes": 1124,
+      "sha256": "241fb331731c03f3acc8a6eca23dd4b5ff7b4b7f83ff6937d21825ac636eac2e"
+    },
+    "dag-nodes.csv": {
+      "rows": 9,
+      "fields": 4,
+      "bytes": 419,
+      "sha256": "110accb6c960a88d5b11d91010156f9d3b8cce9b06549a1e60c148afd70e58e4"
+    },
+    "dag-edges.csv": {
+      "rows": 18,
+      "fields": 5,
+      "bytes": 2045,
+      "sha256": "dc95f998d45b6919c4ddc476b2be18777e9d27f35d472cd75fb389b1bb75e124"
+    },
+    "propensity-predictions.csv": {
+      "rows": 600,
+      "fields": 6,
+      "bytes": 69074,
+      "sha256": "d0f59a9e43b940be28e1ca8f7f3cf3abe52fc06b7f020af9d60560311a4814ff"
+    },
+    "overlap-table.csv": {
+      "rows": 22,
+      "fields": 9,
+      "bytes": 1378,
+      "sha256": "adb93515a539bf4a5b32e77b450569c27c2ca11db774d59bbbfb172312f946fa"
+    },
+    "balance-table.csv": {
+      "rows": 5,
+      "fields": 8,
+      "bytes": 581,
+      "sha256": "65d2a09da522a26310163bb38ed4a2386eac1fe4366ca8a3a448429fea92e9e0"
+    },
+    "adjustment-estimates.csv": {
+      "rows": 7,
+      "fields": 6,
+      "bytes": 1058,
+      "sha256": "b3e1f9292b355b59a434b7ff15b420278c6dbbf7d65149d3646d9bfb820edaf0"
+    },
+    "selection-profile.csv": {
+      "rows": 8,
+      "fields": 7,
+      "bytes": 1051,
+      "sha256": "26691f1fd468d79f10c8c8c7427b8a907cebe74e4c6af64ca3b80da8578e4fe3"
+    },
+    "missingness-profile.csv": {
+      "rows": 2,
+      "fields": 7,
+      "bytes": 391,
+      "sha256": "99fe08cc313b6fcf1fa8819a31ddfd4129d9bb7270851a37b06024e987fcad6c"
+    },
+    "missingness-mechanisms.csv": {
+      "rows": 3,
+      "fields": 5,
+      "bytes": 441,
+      "sha256": "9d6c48361f19116edd881ed21a1635bd63970b6f8d1d512b1efa09a9697362a6"
+    },
+    "longitudinal-models.csv": {
+      "rows": 12,
+      "fields": 9,
+      "bytes": 1835,
+      "sha256": "38a135b420ab2ae13bb7c2b3f314faf69b3f544f99da64ec9cfc6088901074f7"
+    },
+    "mixed-variance.csv": {
+      "rows": 3,
+      "fields": 3,
+      "bytes": 250,
+      "sha256": "d1ac21cd2da2d2f7676b2e6294606a029dbdef43014433637b4c0902c6a14a5e"
+    },
+    "kaplan-meier-table.csv": {
+      "rows": 10,
+      "fields": 8,
+      "bytes": 782,
+      "sha256": "4f5af4e86868fb22c31284119c1a56b14a80faf0a3605058943fcc5448164afa"
+    },
+    "cox-reading.csv": {
+      "rows": 4,
+      "fields": 9,
+      "bytes": 716,
+      "sha256": "bd0b0215a7d4e49f49fc88b3c595911e1f310f6e3fd08dc990c274c8434af76f"
+    },
+    "validity-threat-register.csv": {
+      "rows": 12,
+      "fields": 8,
+      "bytes": 1887,
+      "sha256": "ce1257bf019959f24b01706744612a28999ebe4524c7567ff860983f9f3190c3"
+    },
+    "validity-checks.csv": {
+      "rows": 16,
+      "fields": 5,
+      "bytes": 594,
+      "sha256": "f4767ae3ae934e996b1e9f41b9c7f46898a63a80d798ace36e12ccb85d83c4ea"
+    },
+    "dag.svg": {
+      "bytes": 4025,
+      "sha256": "47533b8d784ac8ef9cc2e2fa54ba587ef0af7a2e8e8feb4b701e027bb0f9bd74"
+    }
+  },
+  "decision": {
+    "reference": "continue with conditions",
+    "module_05": "allowed with recorded conditions",
+    "use": "synthetic teaching only"
+  }
+}

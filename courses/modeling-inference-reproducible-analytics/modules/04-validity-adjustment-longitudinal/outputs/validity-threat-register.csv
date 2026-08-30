@@ -1,0 +1,13 @@
+threat_id,threat,design_stage,affected_claim,reference_action,status,specialist_trigger,module_05_implication
+T01,misaligned aim,design,claim,narrow or stop,material,conditional,carry boundary; forecast uses a distinct public time series
+T02,post-index leakage,measurement,validity,exclude and return,material,conditional,carry boundary; forecast uses a distinct public time series
+T03,unmeasured confounding,design,causal contrast,refer,material,yes,carry boundary; forecast uses a distinct public time series
+T04,collider adjustment,analysis,causal contrast,remove or redefine,material,conditional,carry boundary; forecast uses a distinct public time series
+T05,poor propensity overlap,analysis,target population,restrict or refer,material,yes,carry boundary; forecast uses a distinct public time series
+T06,selected timing subset,eligibility,generalizability,conditional claim or survival method,material,conditional,carry boundary; forecast uses a distinct public time series
+T07,structural blank as zero,data,outcome meaning,stop and restore,material,conditional,carry boundary; forecast uses a distinct public time series
+T08,MAR assumption,missingness,adjusted estimate,sensitivity and refer,material,yes,carry boundary; forecast uses a distinct public time series
+T09,MNAR sensitivity,missingness,decision stability,delta analysis,material,conditional,carry boundary; forecast uses a distinct public time series
+T10,within-person dependence,analysis,uncertainty,cluster or mixed method,material,conditional,carry boundary; forecast uses a distinct public time series
+T11,censoring,follow-up,survival quantity,KM/Cox and assumptions,material,conditional,carry boundary; forecast uses a distinct public time series
+T12,synthetic transport,interpretation,external validity,teaching-only stop boundary,material,conditional,carry boundary; forecast uses a distinct public time series

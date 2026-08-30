@@ -1,0 +1,5 @@
+term,log_hazard_estimate,hazard_ratio,std_error,hr_lower95,hr_upper95,events,censored,boundary
+treatment,-0.38646537,0.67945425,0.10650325,0.55144790,0.83717443,449,151,conditional hazard ratio in synthetic fixture; not risk ratio or causal effect
+age_decade,-0.03321790,0.96732776,0.04609209,0.88377149,1.05878386,449,151,conditional hazard ratio in synthetic fixture; not risk ratio or causal effect
+severity_10,0.23359593,1.26313399,0.06748188,1.10664606,1.44175047,449,151,conditional hazard ratio in synthetic fixture; not risk ratio or causal effect
+comorbidity_count,0.11114782,1.11756009,0.04034904,1.03258478,1.20952835,449,151,conditional hazard ratio in synthetic fixture; not risk ratio or causal effect

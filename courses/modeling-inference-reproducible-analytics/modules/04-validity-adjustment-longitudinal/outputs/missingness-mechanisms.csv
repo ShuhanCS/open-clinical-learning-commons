@@ -1,0 +1,4 @@
+mechanism,status,statement,testable_from_observed_data,sensitivity_action
+MCAR,not primary,missingness independent of observed and unobserved severity,no,compare as conceptual alternative
+MAR,primary teaching assumption,missingness independent of severity after observed age and site,no,median plus indicator bounded analysis
+MNAR,sensitivity,missing severity differs after conditioning on observed age and site,no,low and high delta shifts

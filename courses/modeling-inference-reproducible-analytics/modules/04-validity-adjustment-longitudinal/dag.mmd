@@ -1,0 +1,19 @@
+flowchart LR
+  A[Age] --> S[Baseline severity]
+  A --> T[Treatment]
+  A --> Y[30-day symptom score]
+  C[Comorbidity count] --> S
+  C --> T
+  C --> Y
+  H[Site] --> S
+  H --> T
+  H --> Y
+  S --> T
+  S --> Y
+  U[Clinical preference] --> T
+  U --> Y
+  T --> M[Early response]
+  M --> Y
+  T --> Y
+  A --> R[Complete severity record]
+  H --> R

@@ -1,0 +1,10 @@
+node_id,label,role,timing
+A,Age,confounder,pre-exposure
+S,Baseline severity,confounder,pre-exposure
+C,Comorbidity count,confounder,pre-exposure
+H,Site,confounder/proxy,pre-exposure
+U,Clinical preference,unmeasured confounder,pre-exposure
+T,Treatment,exposure,time zero
+M,Early response,mediator,post-exposure
+Y,30-day symptom score,outcome,post-exposure
+R,Complete severity record,selection/collider,analysis selection

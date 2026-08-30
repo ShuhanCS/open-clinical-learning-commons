@@ -1,0 +1,11 @@
+treatment,week,rows,at_risk,cumulative_events,cumulative_censored,km_event_free_probability,boundary
+0,0,345,345,0,0,1.00000000,synthetic event-free teaching estimate
+0,13,345,200,145,0,0.57971014,synthetic event-free teaching estimate
+0,26,345,90,218,37,0.35066787,synthetic event-free teaching estimate
+0,39,345,21,251,73,0.17751610,synthetic event-free teaching estimate
+0,52,345,8,256,81,0.13017847,synthetic event-free teaching estimate
+1,0,255,255,0,0,1.00000000,synthetic event-free teaching estimate
+1,13,255,156,99,0,0.61176471,synthetic event-free teaching estimate
+1,26,255,78,158,19,0.37237475,synthetic event-free teaching estimate
+1,39,255,39,180,36,0.25583458,synthetic event-free teaching estimate
+1,52,255,9,190,56,0.15228891,synthetic event-free teaching estimate

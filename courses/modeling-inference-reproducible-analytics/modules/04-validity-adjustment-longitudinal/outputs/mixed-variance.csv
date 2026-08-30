@@ -1,0 +1,4 @@
+component,variance,interpretation
+person_random_intercept,46.82601084,between-person residual variance
+residual,9.18680087,within-person residual variance
+intraclass_correlation,0.83598751,share of residual variance attributable to person clustering

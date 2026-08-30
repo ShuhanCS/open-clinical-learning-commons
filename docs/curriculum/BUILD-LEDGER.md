@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.42.0
+- Current release: 0.43.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Checkpoint 1, modeling-readiness and prediction-evaluation release
-- Next unit: FND-2 Module 04, Adjustment, missing data, and longitudinal structure
+- Last completed unit: FND-2 Module 04, Validity, adjustment, and longitudinal structure
+- Next unit: FND-2 Module 05, Forecasting and temporal validation
 
 ## Confirmed decisions
 
@@ -229,6 +229,15 @@
 - Reference validation passes 500 checks and learner starter validation passes 465. Existing targets, prompted completions, missing immutable evidence, out-of-range scores, and failed gates are rejected. Two reference builds produce identical manifests.
 - The reference disposition is `accept with conditions`. Module 04 is permitted for curriculum construction while synthetic-data, four-outcome, false-positive, false-negative, subgroup, R-execution, human-review, and no-deployment conditions remain binding.
 - FND-2 Checkpoint 1 is a runnable release candidate at Commons 0.42.0.
+- FND-2 Module 04 version 0.1.0 fingerprints the accepted Week 3 checkpoint and eight upstream modeling records before generating validity evidence.
+- The selection case preserves all 374 public-safe Synthea rows, the 111-person recorded-next-encounter subset, and 263 structural blanks. It supports no full-cohort time-to-event claim.
+- The deterministic treatment fixture contains 600 generated people, 255 treated people, 91 missing observed severity values, and a known -6.00000000-point average effect. The unadjusted estimate is -1.27214587; all five weighted absolute standardized differences are below 0.10.
+- The repeated case contains 2,400 person-visits from 600 people. Its random-intercept reading has ICC 0.83598751 and keeps the clustering unit distinct from the row.
+- The survival case contains 449 events and 151 censored records. Its treatment hazard ratio is 0.67945425 and remains distinct from a probability, risk ratio, or causal effect.
+- The release contains 19 exact CSV tables, an accessible SVG with Mermaid and structured equivalents, a build report, ten accountable decision records, a paired R reading, and a protected learner workspace.
+- The builder passes exact copied-workspace reproduction and existing-target refusal. The validator passes 36,575 release checks and 36,512 starter checks and rejects prompted or broken submissions. All 16 validity invariants pass.
+- The reference disposition is `continue with conditions`. Module 05 may begin with its distinct public CDC time series; no causal, clinical, transport, or deployment permission carries forward.
+- FND-2 Module 04 is a runnable release candidate at Commons 0.43.0.
 
 ## Pending confirmation
 
@@ -237,11 +246,11 @@
 
 ## Next resume instructions
 
-1. Read the accepted FND-2 Checkpoint 1 specification, package, progression decision, Modules 01 through 03 releases, course specification, master architecture, and this ledger.
-2. Write the 21-section Module 04 specification for adjustment, missing data, selection, repeated measures, and time-to-event structure.
-3. Treat accepted Checkpoint 1 version 0.1.0 as immutable input and preserve its manifest and conditions.
-4. Build three bounded teaching cases: selection in the 111-row timing subset, a public or synthetic confounded treatment comparison, and a public or synthetic repeated-measures and survival fixture.
-5. Distinguish predictive feature choice from causal adjustment, and teach DAG roles, overlap, balance, missingness assumptions, sensitivity, clustering, mixed-model reading, censoring, Kaplan-Meier, and Cox recognition at the course-specified mastery levels.
-6. Produce the exact 15-point Week 6 Module 04 release with accessible DAG and structured alternative, validity-threat register, missingness evidence, adjustment evidence, repeated and survival readings, specialist-referral triggers, and Module 05 handoff.
-7. Keep all real clinical and causal claims outside the supported boundary.
-8. Update the Commons version and this ledger, then commit and push Module 04 before building Module 05.
+1. Read the accepted FND-2 Module 04 specification, package, progression decision, Checkpoint 1 release, course specification, master architecture, and this ledger.
+2. Write the 21-section Module 05 specification for forecasting and temporal validation.
+3. Treat Module 04 version 0.1.0 and its progression conditions as immutable input.
+4. Reuse the fingerprinted 6,208-row public CDC NHSN jurisdiction-week source and exact 94-week Massachusetts teaching series without changing source observations.
+5. Teach time-index integrity, naive and seasonal baselines, rolling-origin validation, forecast horizons, error measures, intervals, drift, and monitoring at the course-specified mastery levels.
+6. Produce the exact Week 6 Module 05 evidence, learner package, assessment, validator, accessibility route, responsible-agent record, and Module 06 handoff.
+7. Keep all surveillance, operational, clinical, and deployment claims inside the supported public-data boundary.
+8. Update the Commons version and this ledger, then commit and push Module 05 before building Module 06.

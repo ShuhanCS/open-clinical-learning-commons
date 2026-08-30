@@ -12,9 +12,9 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - Continuing forecast case: the pinned 6,208-row CDC NHSN jurisdiction-week public release
 - Final deliverable: a reproducible model or agent-assisted analytics package with a model card
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 03 and Checkpoint 1 are runnable release candidates
+- Module package status: Modules 01 through 04 and Checkpoint 1 are runnable release candidates
 - Course package version: 0.1.0
-- Commons release: 0.42.0
+- Commons release: 0.43.0
 
 ## Seven technical modules
 
@@ -34,12 +34,16 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - [Module 02 durable specification](../../docs/curriculum/courses/FND-2/modules/02-regression-interpretation-spec.md)
 - [Module 03: Prediction workflows and evaluation](modules/03-prediction-evaluation/README.md)
 - [Module 03 durable specification](../../docs/curriculum/courses/FND-2/modules/03-prediction-evaluation-spec.md)
+- [Module 04: Validity, adjustment, and longitudinal structure](modules/04-validity-adjustment-longitudinal/README.md)
+- [Module 04 durable specification](../../docs/curriculum/courses/FND-2/modules/04-validity-adjustment-longitudinal-spec.md)
 
 Module 01 preserves the accepted 374-row FND-1 table, assigns all 29 source fields and five derived fields a role, freezes the 224/75/75 temporal split with 25/7/4 positive outcomes, and registers the training-prevalence baseline before model fitting. Its standard-library builder and validator create a protected learner workspace and reject incomplete submissions.
 
 Module 02 fits a conditional linear case on 69 training rows within the 111-row recorded-next-encounter subset and bounded logistic cases on 224 training rows with 25 outcomes. It reports exact formulas, model matrices, classical and HC3 uncertainty, diagnostics, nonlinear and interaction exercises, sparse-cell checks, paired R reading, and a quantity-correct Module 03 handoff.
 
 Module 03 fits all preprocessing inside training, compares the constant baseline, `LOG01`, one bounded random forest, and a deliberately leaked critique model, and applies a frozen validation rule. It selects `ML01`, locks threshold 0.08513264 before test, and reports the untouched 75-row test evidence: 48 true negatives, 23 false positives, 2 false negatives, and 2 true positives. Four test outcomes, subgroup suppression, accessible exact tables, and the teaching-only boundary remain binding.
+
+Module 04 separates prediction from causal adjustment and makes selection, missingness, within-person dependence, and censoring visible. It preserves the 374-row public-safe Synthea case, adds a 600-person treatment fixture with a known -6-point effect and 91 missing severity values, compares seven adjustment routes, models 2,400 repeated observations from 600 people, and reads a 600-person survival case with 449 events and 151 censored records. All results remain synthetic teaching evidence.
 
 ## Runnable checkpoint
 

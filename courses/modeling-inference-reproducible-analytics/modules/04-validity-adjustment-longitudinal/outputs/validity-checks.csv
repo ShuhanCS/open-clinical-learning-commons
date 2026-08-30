@@ -1,0 +1,17 @@
+check_id,check,observed,expected,status
+CHK01,cohort rows,374,374,pass
+CHK02,timing subset rows,111,111,pass
+CHK03,structural blanks,263,263,pass
+CHK04,treatment fixture rows,600,600,pass
+CHK05,known effect,-6.00000000,-6.00000000,pass
+CHK06,missing severity rows,91,91,pass
+CHK07,balance covariates,5,5,pass
+CHK08,effect methods,7,7,pass
+CHK09,repeated rows,2400,2400,pass
+CHK10,repeated people,600,600,pass
+CHK11,visits per person,1,1,pass
+CHK12,survival rows,600,600,pass
+CHK13,survival conserved,600,600,pass
+CHK14,threat rows,12,12,pass
+CHK15,dag nodes,9,9,pass
+CHK16,dag edges,18,18,pass

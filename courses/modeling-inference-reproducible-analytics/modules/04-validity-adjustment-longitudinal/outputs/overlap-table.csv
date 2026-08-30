@@ -1,0 +1,23 @@
+record_type,group,bin,rows,minimum_propensity,maximum_propensity,common_support_low,common_support_high,outside_common_support
+group summary,untreated,all,345,0.05371371,0.84331318,0.12096946,0.84331318,21
+group summary,treated,all,255,0.12096946,0.89562502,0.12096946,0.84331318,6
+score bin,untreated,0.0-0.1,10,,,0.12096946,0.84331318,
+score bin,treated,0.0-0.1,0,,,0.12096946,0.84331318,
+score bin,untreated,0.1-0.2,53,,,0.12096946,0.84331318,
+score bin,treated,0.1-0.2,12,,,0.12096946,0.84331318,
+score bin,untreated,0.2-0.3,79,,,0.12096946,0.84331318,
+score bin,treated,0.2-0.3,25,,,0.12096946,0.84331318,
+score bin,untreated,0.3-0.4,83,,,0.12096946,0.84331318,
+score bin,treated,0.3-0.4,39,,,0.12096946,0.84331318,
+score bin,untreated,0.4-0.5,56,,,0.12096946,0.84331318,
+score bin,treated,0.4-0.5,48,,,0.12096946,0.84331318,
+score bin,untreated,0.5-0.6,31,,,0.12096946,0.84331318,
+score bin,treated,0.5-0.6,43,,,0.12096946,0.84331318,
+score bin,untreated,0.6-0.7,14,,,0.12096946,0.84331318,
+score bin,treated,0.6-0.7,36,,,0.12096946,0.84331318,
+score bin,untreated,0.7-0.8,10,,,0.12096946,0.84331318,
+score bin,treated,0.7-0.8,33,,,0.12096946,0.84331318,
+score bin,untreated,0.8-0.9,9,,,0.12096946,0.84331318,
+score bin,treated,0.8-0.9,19,,,0.12096946,0.84331318,
+score bin,untreated,0.9-1.0,0,,,0.12096946,0.84331318,
+score bin,treated,0.9-1.0,0,,,0.12096946,0.84331318,

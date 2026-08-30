@@ -1,0 +1,13 @@
+method,term,estimate,std_error,lower95,upper95,rows,clusters,boundary
+naive OLS,const,62.11760873,0.33689344,61.45729759,62.77791986,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+naive OLS,week,-0.28689162,0.04501928,-0.37512940,-0.19865383,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+naive OLS,treatment,1.43142247,0.51677094,0.41855143,2.44429352,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+naive OLS,treatment_x_week,-0.23518501,0.06905642,-0.37053560,-0.09983442,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+cluster-robust OLS,const,62.11760873,0.36480921,61.40258267,62.83263478,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+cluster-robust OLS,week,-0.28689162,0.01677907,-0.31977860,-0.25400464,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+cluster-robust OLS,treatment,1.43142247,0.59265969,0.26980949,2.59303546,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+cluster-robust OLS,treatment_x_week,-0.23518501,0.02676888,-0.28765201,-0.18271801,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+random-intercept mixed model,const,62.11760873,0.39289624,61.34753210,62.88768535,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+random-intercept mixed model,week,-0.28689162,0.01824432,-0.32265048,-0.25113276,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+random-intercept mixed model,treatment,1.43142247,0.60267532,0.25017885,2.61266610,2400,600,synthetic reading exercise; not a clinical longitudinal effect
+random-intercept mixed model,treatment_x_week,-0.23518501,0.02798550,-0.29003660,-0.18033342,2400,600,synthetic reading exercise; not a clinical longitudinal effect

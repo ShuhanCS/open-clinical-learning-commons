@@ -1,0 +1,8 @@
+method,rows,treated,estimate_treated_minus_untreated,target,interpretation
+known synthetic truth,600,255,-6.00000000,600-person synthetic ATE; lower outcome is better,generator audit only
+unadjusted,600,255,-1.27214587,600-person synthetic ATE; lower outcome is better,confounded by treatment assignment
+full-data IPTW audit,600,255,-6.10110832,600-person synthetic ATE; lower outcome is better,uses complete generated severity; not ordinarily observed
+complete-case IPTW,509,209,-6.17942841,600-person synthetic ATE; lower outcome is better,changes observed analysis rows
+median plus indicator,600,255,-5.62153010,600-person synthetic ATE; lower outcome is better,missing severity set to observed median plus 0.0; missing indicator included
+low delta,600,255,-5.62177960,600-person synthetic ATE; lower outcome is better,missing severity set to observed median plus -6.0; missing indicator included
+high delta,600,255,-5.62199963,600-person synthetic ATE; lower outcome is better,missing severity set to observed median plus 6.0; missing indicator included

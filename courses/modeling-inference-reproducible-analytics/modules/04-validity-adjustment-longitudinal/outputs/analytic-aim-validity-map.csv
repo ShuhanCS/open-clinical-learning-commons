@@ -1,0 +1,6 @@
+aim_id,aim_class,unit,time_zero,exposure_or_predictor,outcome,population,supported_claim,prohibited_claim
+V01,conditional description,person with recorded next encounter,index stop,declared LIN01 fields,days to recorded encounter,111 recorded timing rows,conditional mean association,full-cohort time to event
+V02,prediction,selected index per person,index stop,pre-index and index-time fields,90-day acute return,374-person synthetic cohort,locked teaching prediction evidence,causal or deployment effect
+V03,causal teaching contrast,synthetic fixture person,synthetic treatment assignment,treatment,30-day symptom score,600 generated people,method recovery against known synthetic truth,real treatment effectiveness
+V04,longitudinal reading,person-visit,visit week 0,treatment and week,repeated symptom score,600 generated people at four visits,dependence-aware method reading,clinical longitudinal effect
+V05,survival reading,synthetic fixture person,synthetic treatment assignment,treatment and baseline covariates,generated event time,600 generated people,KM and Cox quantity reading,clinical survival or causal effect

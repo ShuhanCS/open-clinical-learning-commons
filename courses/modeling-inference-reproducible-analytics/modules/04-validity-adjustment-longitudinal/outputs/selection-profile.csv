@@ -1,0 +1,9 @@
+field,selected_rows,nonselected_rows,selected_mean,nonselected_mean,standardized_difference,boundary
+age_at_index,111,263,50.20720721,44.39543726,0.28859420,descriptive selection evidence; not a correction model
+prior_365d_encounter_count,111,263,7.49549550,4.96577947,0.15560034,descriptive selection evidence; not a correction model
+prior_365d_acute_count,111,263,0.48648649,0.22433460,0.16948198,descriptive selection evidence; not a correction model
+prior_365d_condition_count,111,263,1.26126126,1.24714829,0.01603923,descriptive selection evidence; not a correction model
+prior_365d_medication_count,111,263,5.81981982,1.37262357,0.31060077,descriptive selection evidence; not a correction model
+acute_return_90d,111,263,0.20720721,0.04942966,0.48545933,descriptive selection evidence; not a correction model
+index_class_emergency,111,263,0.80180180,0.85551331,-0.14290688,descriptive selection evidence; not a correction model
+index_class_inpatient,111,263,0.19819820,0.14448669,0.14290688,descriptive selection evidence; not a correction model
