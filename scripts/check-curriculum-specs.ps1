@@ -3,8 +3,6 @@ $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent $PSScriptRoot
 $da730 = Join-Path $repo 'docs\curriculum\courses\DA-730\course-spec.md'
 $content = Get-Content -Raw -LiteralPath $da730
-$module01Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\modules\01-encoding-grammar-spec.md'
-$module01Root = Join-Path $repo 'courses\data-visualization\modules\01-encoding-grammar'
 
 $moduleCount = [regex]::Matches($content, '(?m)^## Module \d{2} brief:').Count
 if ($moduleCount -ne 13) {
@@ -29,39 +27,81 @@ if ($content -match '[—–]') {
     throw 'DA-730 contains a Unicode em dash or en dash.'
 }
 
-$requiredModule01Files = @(
-    'README.md',
-    'data-spec.md',
-    'source-record.yml',
-    'build_hcahps.R',
-    'validate_hcahps.R',
-    'lab.R',
-    'critique_charts.R',
-    'assessment.md',
-    'instructor-notes.md',
-    'release.json',
-    'data\hcahps_ma_recommend_2026.csv'
-)
-$missingModule01Files = @($requiredModule01Files | Where-Object {
-    -not (Test-Path -LiteralPath (Join-Path $module01Root $_))
-})
-if ($missingModule01Files.Count -gt 0) {
-    throw "DA-730 Module 01 is missing: $($missingModule01Files -join ', ')."
+function Test-ModuleContract {
+    param(
+        [Parameter(Mandatory)] [string] $Label,
+        [Parameter(Mandatory)] [string] $SpecPath,
+        [Parameter(Mandatory)] [string] $ModuleRoot,
+        [Parameter(Mandatory)] [string[]] $RequiredFiles
+    )
+
+    $missingFiles = @($RequiredFiles | Where-Object {
+        -not (Test-Path -LiteralPath (Join-Path $ModuleRoot $_))
+    })
+    if ($missingFiles.Count -gt 0) {
+        throw "DA-730 $Label is missing: $($missingFiles -join ', ')."
+    }
+
+    $moduleContent = Get-Content -Raw -LiteralPath $SpecPath
+    $moduleSections = [regex]::Matches($moduleContent, '(?m)^## \d+\.').Count
+    if ($moduleSections -ne 21) {
+        throw "DA-730 $Label must define 21 contract sections; found $moduleSections."
+    }
+    if ($moduleContent -match '[—–]') {
+        throw "DA-730 $Label contains a Unicode em dash or en dash."
+    }
+
+    [pscustomobject]@{
+        Label = $Label
+        Sections = $moduleSections
+        FileCount = $RequiredFiles.Count
+        Release = Get-Content -Raw -LiteralPath (Join-Path $ModuleRoot 'release.json') | ConvertFrom-Json
+    }
 }
 
-$module01Content = Get-Content -Raw -LiteralPath $module01Spec
-$module01Sections = [regex]::Matches($module01Content, '(?m)^## \d+\.').Count
-if ($module01Sections -ne 21) {
-    throw "DA-730 Module 01 must define 21 contract sections; found $module01Sections."
-}
-if ($module01Content -match '[—–]') {
-    throw 'DA-730 Module 01 contains a Unicode em dash or en dash.'
-}
-
-$module01Release = Get-Content -Raw -LiteralPath (Join-Path $module01Root 'release.json') | ConvertFrom-Json
-if ($module01Release.module.version -ne '0.1.0' -or $module01Release.data.row_count -ne 65) {
+$module01 = Test-ModuleContract `
+    -Label 'Module 01' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\01-encoding-grammar-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\01-encoding-grammar') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_hcahps.R',
+        'validate_hcahps.R',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\hcahps_ma_recommend_2026.csv'
+    )
+if ($module01.Release.module.version -ne '0.1.0' -or $module01.Release.data.row_count -ne 65) {
     throw 'DA-730 Module 01 release metadata does not match the 0.1.0, 65-row contract.'
 }
 
+$module02 = Test-ModuleContract `
+    -Label 'Module 02' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\02-perception-accuracy-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\02-perception-accuracy') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_perception_tasks.R',
+        'validate_perception_tasks.R',
+        'lab.R',
+        'score_perception_test.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\perception_tasks_2026.csv'
+    )
+if ($module02.Release.module.version -ne '0.1.0' -or $module02.Release.data.task_rows -ne 10) {
+    throw 'DA-730 Module 02 release metadata does not match the 0.1.0, 10-task contract.'
+}
+
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
-Write-Output "DA-730 Module 01 passed: $module01Sections contract sections and $($requiredModule01Files.Count) required files."
+Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
+Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."

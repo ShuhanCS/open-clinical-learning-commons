@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.12.0
+- Specification version: 0.13.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -166,6 +166,8 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Lab: compare a bar chart, dot plot, pie chart, and table for the same task and record accuracy, time, and interpretation errors.
 - Critique: repair a pie chart with close values and a bubble chart whose areas exaggerate small differences.
 - Submission: `module-02/perception-test.md`, `module-02/analysis.R`, `module-02/selected-display.png`, `module-02/source-record.yml`, `module-02/alt-text.md`, and `module-02/decision-note.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/02-perception-accuracy-spec.md`.
+- Runnable package: `courses/data-visualization/modules/02-perception-accuracy/`.
 - Handoff: Module 03 turns perception evidence into a repeatable chart-selection method.
 
 ## Module 03 brief: Chart selection in practice
@@ -552,7 +554,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01 and 04 are current runnable candidates. Their human reviews remain pending.
+Modules 01, 02, and 04 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 

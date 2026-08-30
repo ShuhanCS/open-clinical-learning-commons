@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.2.0`
+- Register version: `0.3.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -39,7 +39,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | Module | Required source | Planned extract |
 |---|---|---|
 | 01. Encoding and the grammar of graphics | CMS HCAHPS | Released extract: all 65 Massachusetts `H_RECMND_DY` rows from the CMS 2026-08-13 release, including 9 unavailable results and footnotes. |
-| 02. Perception and visual accuracy | CMS HCAHPS | Planned comparison variants using the Module 01 release plus measured reading tasks. |
+| 02. Perception and visual accuracy | CMS HCAHPS | Released 10-trial task table using the Module 01 HCAHPS extract, with two trials each for dot, bar, table, pie, and bubble displays. |
 | 03. Chart selection in practice | CMS hospitals | Planned multi-measure hospital table with result, response-rate, survey-volume, and source fields. |
 | 04. Distributions versus summaries | Current synthetic teaching release; public calibration pending | Encounter-level emergency-department length of stay with known aggregate and subgroup patterns. |
 | 05. Rates, denominators, and adjustment | CDC PLACES plus ACS | Planned county estimate, population context, denominator, margin of error, and adjustment fields. |
@@ -65,6 +65,18 @@ Public access does not automatically permit every reuse. Keep the source terms w
 - Validation: 15 of 15 checks pass
 - Original CMS file: `HCAHPS-Hospital.csv`, 105,461,119 bytes, SHA-256 `b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc`
 - Teaching extract SHA-256: `56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74`
+
+### DA-730 perception-task release
+
+- Module: DA-730 Module 02, Perception and visual accuracy
+- Upstream extract: Module 01 CMS HCAHPS Massachusetts recommendation release
+- Task file: `courses/data-visualization/modules/02-perception-accuracy/data/perception_tasks_2026.csv`
+- Source record: `courses/data-visualization/modules/02-perception-accuracy/source-record.yml`
+- Build: `courses/data-visualization/modules/02-perception-accuracy/build_perception_tasks.R`
+- Validation: 12 of 12 checks pass
+- Stimuli: 10 matched trials plus 2 critique charts
+- Scoring self-check: 100% correct with zero gap error for a perfect response file
+- Task SHA-256: `b792637411a00c67baa30d70688e5a9b8353cee8a2758251419e84c0c4c1cbe6`
 
 ## Module 04 provenance gap
 

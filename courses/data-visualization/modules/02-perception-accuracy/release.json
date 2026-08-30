@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-02",
+    "title": "Perception and visual accuracy",
+    "version": "0.1.0",
+    "commons_release": "0.13.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "upstream_id": "cms-hcahps-hospital-dgck-syfz-2026-08-13-ma-recommend",
+    "upstream_path": "../01-encoding-grammar/data/hcahps_ma_recommend_2026.csv",
+    "upstream_sha256": "56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74",
+    "task_id": "oclc-da730-m02-perception-tasks-2026",
+    "task_version": "0.1.0",
+    "task_path": "data/perception_tasks_2026.csv",
+    "task_rows": 10,
+    "task_columns": 13,
+    "task_sha256": "b792637411a00c67baa30d70688e5a9b8353cee8a2758251419e84c0c4c1cbe6"
+  },
+  "environment": {
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "source_data": {
+      "spdx": "LicenseRef-US-Government-Public-Domain",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "evidence": [
+    {
+      "citation": "Cleveland and McGill, 1984, Graphical Perception",
+      "url": "https://doi.org/10.1080/01621459.1984.10478080"
+    },
+    {
+      "citation": "Heer and Bostock, 2010, Crowdsourcing Graphical Perception",
+      "url": "https://idl.uw.edu/papers/crowdsourcing-graphical-perception"
+    },
+    {
+      "citation": "Treisman and Gelade, 1980, A Feature-Integration Theory of Attention",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7351125/"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "DA-730 course redesign and content ownership"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, task design, teaching assets, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The task validator passed 12 of 12 checks. Ten stimuli and two critique charts rendered. A perfect-response self-check returned 100 percent accuracy and zero gap error for every display."
+    },
+    "required_human_roles": [
+      {
+        "role": "visualization faculty and evidence fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "health-system quality or clinical content",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "accessibility and timed-task accommodation",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "task_checks": "12 of 12 pass",
+    "stimulus_execution": "10 of 10 pass",
+    "critique_execution": "2 of 2 pass",
+    "scoring_self_check": "pass: 100 percent higher-value accuracy and zero mean absolute gap error",
+    "visual_preview": "pass after dot, bar, table, pie, bubble, and critique inspection",
+    "link_check": "CMS, UW, PubMed, data-dictionary, and license links responded. The Cleveland and McGill DOI was verified in browser search; its publisher returned 403 to automated HEAD requests."
+  },
+  "known_issues": [
+    "Human visualization, clinical, accessibility, and independent-instructor reviews are pending.",
+    "The 10-trial exercise is too small and insufficiently controlled for generalizable graphical-perception claims.",
+    "Dot and bar stimuli use different axis ranges, which learners must name as a design confound.",
+    "Response timing can measure device, motor, language, visual, partner, and rendering differences in addition to display effort.",
+    "macOS and Linux clean-run verification remains pending."
+  ]
+}

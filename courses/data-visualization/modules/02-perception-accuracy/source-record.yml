@@ -1,0 +1,43 @@
+schema_version: "1.0.0"
+source_id: "cms-hcahps-hospital-dgck-syfz-2026-08-13-perception-tasks"
+publisher: "Centers for Medicare & Medicaid Services"
+title: "Patient survey (HCAHPS) - Hospital"
+dataset_identifier: "dgck-syfz"
+landing_page: "https://data.cms.gov/provider-data/dataset/dgck-syfz"
+metadata_url: "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/dgck-syfz"
+data_dictionary_url: "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+released: "2026-08-13"
+retrieved: "2026-08-29"
+coverage_start: "2024-10-01"
+coverage_end: "2025-09-30"
+public_access_level: "public"
+rights: "U.S. government public-reporting data are in the public domain; attribution is appreciated and reuse must not imply federal endorsement."
+upstream_extract:
+  path: "../01-encoding-grammar/data/hcahps_ma_recommend_2026.csv"
+  source_record: "../01-encoding-grammar/source-record.yml"
+  rows: 65
+  sha256: "56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74"
+derived_task_file:
+  path: "data/perception_tasks_2026.csv"
+  rows: 10
+  columns: 13
+  sha256: "b792637411a00c67baa30d70688e5a9b8353cee8a2758251419e84c0c4c1cbe6"
+  build_script: "build_perception_tasks.R"
+  validator: "validate_perception_tasks.R"
+filters:
+  state: "MA"
+  hcahps_measure_id: "H_RECMND_DY"
+transformations:
+  - "Selected 10 explicit facility pairs from reported Module 01 values."
+  - "Assigned masked Hospital A and Hospital B aliases for stimulus presentation."
+  - "Derived the higher alias, correct hospital identity, and absolute percentage-point gap."
+  - "Assigned two trials each to dot, bar, table, pie, and bubble displays."
+teaching_use: "Compare correctness, gap-estimation error, time, and confusion across plausible quantitative encodings."
+learner_response_governance:
+  classification: "educational record"
+  rule: "Do not publish named learner results or treat classroom responses as research data without appropriate consent and institutional review."
+limits:
+  - "Ten classroom trials are not a formal graphical-perception experiment."
+  - "Conditions differ in values, scales, and task mechanics."
+  - "Timing reflects device, language, motor, partner, and rendering effects."
+  - "The HCAHPS values remain aggregate hospital survey results and do not establish overall quality or causation."
