@@ -1,0 +1,5 @@
+chart_id,measure,chart_family,unit,denominator_or_exposure,baseline,limit_method,signal_rules,selection_reason,known_limit,owner
+C01,weekly left before seen,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+C02,weekly mean of shift median arrival-to-clinician time,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+C03,weekly incident reports,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+C04,weekly arrivals,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

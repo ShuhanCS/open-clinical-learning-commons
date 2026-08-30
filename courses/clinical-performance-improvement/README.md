@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.67.0.
-- Current build: course specification, source architecture, and Modules 01 and 02 complete; later modules and checkpoints not yet built.
+- Current Commons release: 0.68.0.
+- Current build: course specification, source architecture, and Modules 01 through 03 complete; later modules and checkpoints not yet built.
 
 APP-3 teaches learners to define and validate clinical performance measures, distinguish process signals from routine variation, diagnose bottlenecks, forecast demand, test capacity and workflow scenarios, and defend a monitored improvement recommendation.
 
@@ -17,7 +17,7 @@ The continuing case is an explicitly fictional adult emergency service, `CGH-ED-
 |---:|---|---:|---|
 | 01 | Framing a clinical performance and improvement decision | 15.5 | Runnable release candidate |
 | 02 | Measures and operational metrics | 16.0 | Runnable release candidate |
-| 03 | Variation, safety signals, and bottlenecks | 16.5 | Specified in course contract |
+| 03 | Variation, safety signals, and bottlenecks | 16.5 | Runnable release candidate |
 | 04 | Demand forecasting and capacity | 16.5 | Specified in course contract |
 | 05 | Improvement scenarios and evaluation | 16.0 | Specified in course contract |
 | 06 | Feasibility, monitoring, and embedded machine learning | 16.0 | Specified in course contract |
@@ -44,5 +44,7 @@ The full course contract is [the APP-3 course specification](../../docs/curricul
 The first runnable package is [Module 01](modules/01-clinical-performance-decision/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/01-clinical-performance-decision-spec.md). It defines the fictional service, unit of flow, process boundary, measure families, source feasibility, accountability, claim limits, and Module 02 progression decision.
 
 The second runnable package is [Module 02](modules/02-measures-operational-metrics/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/02-measures-operational-metrics-spec.md). It generates 318,732 linked synthetic operational rows, preserves 12 raw defects, defines 17 measures, produces eight accepted outputs, awards the 20-point Week 3 measure component, and passes 15 release gates before Module 03 begins.
+
+The third runnable package is [Module 03](modules/03-variation-safety-bottlenecks/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/03-variation-safety-bottlenecks-spec.md). It produces 13 diagnostic outputs, four accessible figures, nine audited signals, exact safety-surveillance evidence, a bounded stage diagnosis, and one human escalation rule. Its 20-point component completes the evidence needed to build the 40-point Week 3 checkpoint.
 
 No package authorizes clinical implementation, current hospital performance judgment, patient or workforce targeting, staffing change, or model deployment.

@@ -1,0 +1,10 @@
+signal_id,chart_id,rule_id,signal_week,start_week,end_week,direction,observed_value,boundary_value,review_disposition,claim_limit
+S001,C01,R1,44,44,44,high,11.198208,10.882492,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S002,C01,R2,49,42,49,above,9.26143,8.13767,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S003,C02,R2,11,4,11,above,102.143,97.636958,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S004,C02,R1,26,26,26,low,90.0,90.485606,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S005,C02,R2,42,35,52,above,104.476,97.636958,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S006,C02,R1,44,44,44,high,105.357,104.788311,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S007,C03,R2,40,33,42,below,3.811944,9.895751,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S008,C04,R2,8,1,11,above,942.0,853.0,review generated context; signal is not proof of cause,synthetic service only; no automated action
+S009,C04,R2,27,20,30,below,812.0,853.0,review generated context; signal is not proof of cause,synthetic service only; no automated action

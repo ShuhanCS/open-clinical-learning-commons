@@ -1,0 +1,4 @@
+rule_id,rule,eligible_charts,signal_point,review_action,causal_status,automation_status
+R1,one point outside the declared control limits,C01 C02 C03,the outlying week,open source clock denominator and context review,does not prove cause,no automated action
+R2,eight consecutive points strictly above or below the centerline,C01 C02 C03 C04,the eighth point,open phase calendar and surveillance review,does not prove cause,no automated action
+R3,six consecutive strictly increasing or decreasing points,C01 C02 C03 C04,the sixth point,open trend data-quality and context review,does not prove cause,no automated action

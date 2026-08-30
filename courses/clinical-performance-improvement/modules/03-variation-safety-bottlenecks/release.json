@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app3-03",
+  "module_version": "0.1.0",
+  "commons_release": "0.68.0",
+  "status": "runnable release candidate",
+  "reference_score": 20,
+  "reference_gates_passed": 18,
+  "reference_progression": "continue with conditions",
+  "bounded_diagnosis": "roomed-to-clinician constraint on evening shifts in Weeks 35 through 44",
+  "week3_checkpoint_permission": "permitted for curriculum construction",
+  "module04_permission": "not yet",
+  "action_authorized": false
+}

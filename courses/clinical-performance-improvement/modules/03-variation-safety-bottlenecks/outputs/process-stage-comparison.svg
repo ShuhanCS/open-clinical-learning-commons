@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="500" viewBox="0 0 1040 500" role="img" aria-labelledby="title desc">
+<title id="title">Median process-stage time across four predeclared comparisons</title>
+<desc id="desc">Grouped bars show baseline evening, target evening in Weeks 35 through 44, contemporaneous day and night, and recovery evening medians for five process stages. Every bar has a numeric label.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="80" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">Median process-stage time</text>
+<line x1="80" y1="390.00" x2="1010" y2="390.00" stroke="#d7dde8"/>
+<text x="72" y="394.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">0</text>
+<line x1="80" y1="310.00" x2="1010" y2="310.00" stroke="#d7dde8"/>
+<text x="72" y="314.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">55</text>
+<line x1="80" y1="230.00" x2="1010" y2="230.00" stroke="#d7dde8"/>
+<text x="72" y="234.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">111</text>
+<line x1="80" y1="150.00" x2="1010" y2="150.00" stroke="#d7dde8"/>
+<text x="72" y="154.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">166</text>
+<line x1="80" y1="70.00" x2="1010" y2="70.00" stroke="#d7dde8"/>
+<text x="72" y="74.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">222</text>
+<rect x="96.74" y="371.24" width="29.76" height="18.76" fill="#4c78a8"><title>Baseline evening, Arrival to triage: 13.0 minutes</title></rect>
+<text x="111.62" y="367.24" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">B 13</text>
+<rect x="133.94" y="371.24" width="29.76" height="18.76" fill="#e45756"><title>Target evening, Arrival to triage: 13.0 minutes</title></rect>
+<text x="148.82" y="367.24" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">T 13</text>
+<rect x="171.14" y="372.68" width="29.76" height="17.32" fill="#72b7b2"><title>Day/night control, Arrival to triage: 12.0 minutes</title></rect>
+<text x="186.02" y="368.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">C 12</text>
+<rect x="208.34" y="371.24" width="29.76" height="18.76" fill="#f2cf5b"><title>Recovery evening, Arrival to triage: 13.0 minutes</title></rect>
+<text x="223.22" y="367.24" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">R 13</text>
+<text x="173.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#172033">Arrival to triage</text>
+<rect x="282.74" y="333.72" width="29.76" height="56.28" fill="#4c78a8"><title>Baseline evening, Triage to roomed: 39.0 minutes</title></rect>
+<text x="297.62" y="329.72" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">B 39</text>
+<rect x="319.94" y="335.17" width="29.76" height="54.83" fill="#e45756"><title>Target evening, Triage to roomed: 38.0 minutes</title></rect>
+<text x="334.82" y="331.17" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">T 38</text>
+<rect x="357.14" y="336.61" width="29.76" height="53.39" fill="#72b7b2"><title>Day/night control, Triage to roomed: 37.0 minutes</title></rect>
+<text x="372.02" y="332.61" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">C 37</text>
+<rect x="394.34" y="333.72" width="29.76" height="56.28" fill="#f2cf5b"><title>Recovery evening, Triage to roomed: 39.0 minutes</title></rect>
+<text x="409.22" y="329.72" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">R 39</text>
+<text x="359.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#172033">Triage to roomed</text>
+<rect x="468.74" y="319.29" width="29.76" height="70.71" fill="#4c78a8"><title>Baseline evening, Roomed to clinician: 49.0 minutes</title></rect>
+<text x="483.62" y="315.29" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">B 49</text>
+<rect x="505.94" y="294.76" width="29.76" height="95.24" fill="#e45756"><title>Target evening, Roomed to clinician: 66.0 minutes</title></rect>
+<text x="520.82" y="290.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">T 66</text>
+<rect x="543.14" y="326.51" width="29.76" height="63.49" fill="#72b7b2"><title>Day/night control, Roomed to clinician: 44.0 minutes</title></rect>
+<text x="558.02" y="322.51" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">C 44</text>
+<rect x="580.34" y="319.29" width="29.76" height="70.71" fill="#f2cf5b"><title>Recovery evening, Roomed to clinician: 49.0 minutes</title></rect>
+<text x="595.22" y="315.29" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">R 49</text>
+<text x="545.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#172033">Roomed to clinician</text>
+<rect x="654.74" y="112.94" width="29.76" height="277.06" fill="#4c78a8"><title>Baseline evening, Clinician to disposition: 192.0 minutes</title></rect>
+<text x="669.62" y="108.94" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">B 192</text>
+<rect x="691.94" y="104.29" width="29.76" height="285.71" fill="#e45756"><title>Target evening, Clinician to disposition: 198.0 minutes</title></rect>
+<text x="706.82" y="100.29" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">T 198</text>
+<rect x="729.14" y="112.94" width="29.76" height="277.06" fill="#72b7b2"><title>Day/night control, Clinician to disposition: 192.0 minutes</title></rect>
+<text x="744.02" y="108.94" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">C 192</text>
+<rect x="766.34" y="108.61" width="29.76" height="281.39" fill="#f2cf5b"><title>Recovery evening, Clinician to disposition: 195.0 minutes</title></rect>
+<text x="781.22" y="104.61" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">R 195</text>
+<text x="731.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#172033">Clinician to disposition</text>
+<rect x="840.74" y="361.14" width="29.76" height="28.86" fill="#4c78a8"><title>Baseline evening, Disposition to departure: 20.0 minutes</title></rect>
+<text x="855.62" y="357.14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">B 20</text>
+<rect x="877.94" y="361.14" width="29.76" height="28.86" fill="#e45756"><title>Target evening, Disposition to departure: 20.0 minutes</title></rect>
+<text x="892.82" y="357.14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">T 20</text>
+<rect x="915.14" y="361.14" width="29.76" height="28.86" fill="#72b7b2"><title>Day/night control, Disposition to departure: 20.0 minutes</title></rect>
+<text x="930.02" y="357.14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">C 20</text>
+<rect x="952.34" y="361.14" width="29.76" height="28.86" fill="#f2cf5b"><title>Recovery evening, Disposition to departure: 20.0 minutes</title></rect>
+<text x="967.22" y="357.14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#172033">R 20</text>
+<text x="917.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#172033">Disposition to departure</text>
+<rect x="80" y="460" width="11" height="11" fill="#4c78a8"/><text x="96" y="470" font-family="Arial, sans-serif" font-size="11" fill="#172033">B = Baseline evening</text>
+<rect x="290" y="460" width="11" height="11" fill="#e45756"/><text x="306" y="470" font-family="Arial, sans-serif" font-size="11" fill="#172033">T = Target evening</text>
+<rect x="500" y="460" width="11" height="11" fill="#72b7b2"/><text x="516" y="470" font-family="Arial, sans-serif" font-size="11" fill="#172033">C = Day/night control</text>
+<rect x="710" y="460" width="11" height="11" fill="#f2cf5b"/><text x="726" y="470" font-family="Arial, sans-serif" font-size="11" fill="#172033">R = Recovery evening</text>
+<text x="18" y="250.00" transform="rotate(-90 18 250.00)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#172033">Median minutes</text>
+</svg>

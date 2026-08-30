@@ -1,0 +1,9 @@
+evidence_id,metric,unit,baseline_evening,target_evening,contemporaneous_day_night,recovery_evening,target_minus_baseline,supports_bounded_diagnosis,interpretation_limit
+B01,roomed_to_clinician_median,minutes,49.0,66.0,44.0,49.0,17.0,yes,localizes the constrained stage but not its root cause
+B02,arrival_to_clinician_shift_median,minutes,100.0,116.0,92.75,99.0,16.0,yes,shift median does not identify a single encounter cause
+B03,mean_queue_end_shift_median,encounters waiting,9.0,9.9688,7.1875,8.9062,0.9688,yes,queue supports congestion but not cause
+B04,max_queue_end_shift_median,encounters waiting,11.0,12.0,10.0,11.0,1.0,yes,maximum is sensitive to short intervals
+B05,completed_per_clinician_hour_shift_median,encounters per hour,1.0244,0.9393,0.875,0.9637,-0.0851,partial,lower than baseline but not lower than the contemporaneous control; not a productivity target
+B06,clinician_hours_per_arrival_shift_median,hours per encounter,0.8889,0.9535,1.0435,0.9302,0.0645,no,descriptive staffing evidence does not establish cause or adequacy
+B07,left_before_seen_percent,percent,8.9859,11.2165,7.4799,9.0575,2.2307,yes,balancing signal does not explain why an encounter left
+B08,overtime_hours_per_shift,hours,0.9881,1.1429,1.0857,0.8214,0.1548,no,does not establish burden or authorize staffing change

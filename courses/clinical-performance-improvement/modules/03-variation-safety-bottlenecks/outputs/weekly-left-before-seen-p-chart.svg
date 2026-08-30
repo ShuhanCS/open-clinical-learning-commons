@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+<title id="title">Weekly left-before-seen p-chart</title>
+<desc id="desc">Weekly synthetic left-before-seen percent with variable three-sigma binomial limits based on Weeks 1 through 24. Red squares labelled S mark predeclared signals.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="72" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">Weekly left-before-seen p-chart</text>
+<line x1="72" y1="382.00" x2="930" y2="382.00" stroke="#d7dde8"/>
+<text x="64" y="386.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">4.6</text>
+<line x1="72" y1="299.50" x2="930" y2="299.50" stroke="#d7dde8"/>
+<text x="64" y="303.50" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">6.4</text>
+<line x1="72" y1="217.00" x2="930" y2="217.00" stroke="#d7dde8"/>
+<text x="64" y="221.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">8.1</text>
+<line x1="72" y1="134.50" x2="930" y2="134.50" stroke="#d7dde8"/>
+<text x="64" y="138.50" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">9.9</text>
+<line x1="72" y1="52.00" x2="930" y2="52.00" stroke="#d7dde8"/>
+<text x="64" y="56.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">11.7</text>
+<text x="72.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">1</text>
+<text x="189.76" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">8</text>
+<text x="324.35" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">16</text>
+<text x="458.94" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">24</text>
+<text x="593.53" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">32</text>
+<text x="728.12" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">40</text>
+<text x="862.71" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">48</text>
+<text x="930.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">52</text>
+<polyline points="72.00,87.11 88.82,89.81 105.65,89.10 122.47,94.56 139.29,90.37 156.12,90.86 172.94,92.75 189.76,92.82 206.59,89.53 223.41,88.52 240.24,89.88 257.06,83.98 273.88,85.88 290.71,84.30 307.53,84.54 324.35,83.16 341.18,85.02 358.00,85.65 374.82,88.22 391.65,79.47 408.47,80.53 425.29,82.91 442.12,79.47 458.94,80.00 475.76,81.05 492.59,74.76 509.41,83.24 526.24,83.33 543.06,79.82 559.88,82.66 576.71,88.37 593.53,87.48 610.35,77.45 627.18,77.55 644.00,79.56 660.82,78.10 677.65,81.31 694.47,83.82 711.29,80.18 728.12,86.88 744.94,82.25 761.76,87.78 778.59,85.34 795.41,89.46 812.24,87.48 829.06,87.71 845.88,89.17 862.71,88.37 879.53,86.50 896.35,87.26 913.18,87.71 930.00,87.18" fill="none" stroke="#b33a3a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<polyline points="72.00,217.00 88.82,217.00 105.65,217.00 122.47,217.00 139.29,217.00 156.12,217.00 172.94,217.00 189.76,217.00 206.59,217.00 223.41,217.00 240.24,217.00 257.06,217.00 273.88,217.00 290.71,217.00 307.53,217.00 324.35,217.00 341.18,217.00 358.00,217.00 374.82,217.00 391.65,217.00 408.47,217.00 425.29,217.00 442.12,217.00 458.94,217.00 475.76,217.00 492.59,217.00 509.41,217.00 526.24,217.00 543.06,217.00 559.88,217.00 576.71,217.00 593.53,217.00 610.35,217.00 627.18,217.00 644.00,217.00 660.82,217.00 677.65,217.00 694.47,217.00 711.29,217.00 728.12,217.00 744.94,217.00 761.76,217.00 778.59,217.00 795.41,217.00 812.24,217.00 829.06,217.00 845.88,217.00 862.71,217.00 879.53,217.00 896.35,217.00 913.18,217.00 930.00,217.00" fill="none" stroke="#3a536f" stroke-width="1.5"/>
+<polyline points="72.00,346.89 88.82,344.19 105.65,344.90 122.47,339.44 139.29,343.63 156.12,343.14 172.94,341.25 189.76,341.18 206.59,344.47 223.41,345.48 240.24,344.12 257.06,350.02 273.88,348.12 290.71,349.70 307.53,349.46 324.35,350.84 341.18,348.98 358.00,348.35 374.82,345.78 391.65,354.53 408.47,353.47 425.29,351.09 442.12,354.53 458.94,354.00 475.76,352.95 492.59,359.24 509.41,350.76 526.24,350.67 543.06,354.18 559.88,351.34 576.71,345.63 593.53,346.52 610.35,356.55 627.18,356.45 644.00,354.44 660.82,355.90 677.65,352.69 694.47,350.18 711.29,353.82 728.12,347.12 744.94,351.75 761.76,346.22 778.59,348.66 795.41,344.54 812.24,346.52 829.06,346.29 845.88,344.83 862.71,345.63 879.53,347.50 896.35,346.74 913.18,346.29 930.00,346.82" fill="none" stroke="#b33a3a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<polyline points="72.00,184.97 88.82,170.82 105.65,234.07 122.47,249.87 139.29,230.99 156.12,91.27 172.94,190.21 189.76,180.78 206.59,226.10 223.41,273.03 240.24,202.31 257.06,238.57 273.88,237.69 290.71,240.29 307.53,151.79 324.35,188.33 341.18,182.84 358.00,291.61 374.82,181.39 391.65,220.01 408.47,279.40 425.29,244.33 442.12,274.46 458.94,270.95 475.76,139.92 492.59,297.43 509.41,234.61 526.24,257.92 543.06,197.88 559.88,185.30 576.71,203.50 593.53,235.63 610.35,202.72 627.18,246.79 644.00,238.62 660.82,249.56 677.65,147.54 694.47,169.61 711.29,259.80 728.12,210.62 744.94,223.40 761.76,146.49 778.59,151.53 795.41,74.78 812.24,155.14 829.06,145.97 845.88,140.39 862.71,166.45 879.53,164.78 896.35,272.07 913.18,194.09 930.00,228.57" fill="none" stroke="#145da0" stroke-width="2"/>
+<circle cx="72.00" cy="184.97" r="2.4" fill="#145da0"><title>Week 1: 8.827 Percent</title></circle>
+<circle cx="88.82" cy="170.82" r="2.4" fill="#145da0"><title>Week 2: 9.131 Percent</title></circle>
+<circle cx="105.65" cy="234.07" r="2.4" fill="#145da0"><title>Week 3: 7.770 Percent</title></circle>
+<circle cx="122.47" cy="249.87" r="2.4" fill="#145da0"><title>Week 4: 7.430 Percent</title></circle>
+<circle cx="139.29" cy="230.99" r="2.4" fill="#145da0"><title>Week 5: 7.837 Percent</title></circle>
+<circle cx="156.12" cy="91.27" r="2.4" fill="#145da0"><title>Week 6: 10.843 Percent</title></circle>
+<circle cx="172.94" cy="190.21" r="2.4" fill="#145da0"><title>Week 7: 8.714 Percent</title></circle>
+<circle cx="189.76" cy="180.78" r="2.4" fill="#145da0"><title>Week 8: 8.917 Percent</title></circle>
+<circle cx="206.59" cy="226.10" r="2.4" fill="#145da0"><title>Week 9: 7.942 Percent</title></circle>
+<circle cx="223.41" cy="273.03" r="2.4" fill="#145da0"><title>Week 10: 6.932 Percent</title></circle>
+<circle cx="240.24" cy="202.31" r="2.4" fill="#145da0"><title>Week 11: 8.454 Percent</title></circle>
+<circle cx="257.06" cy="238.57" r="2.4" fill="#145da0"><title>Week 12: 7.674 Percent</title></circle>
+<circle cx="273.88" cy="237.69" r="2.4" fill="#145da0"><title>Week 13: 7.692 Percent</title></circle>
+<circle cx="290.71" cy="240.29" r="2.4" fill="#145da0"><title>Week 14: 7.636 Percent</title></circle>
+<circle cx="307.53" cy="151.79" r="2.4" fill="#145da0"><title>Week 15: 9.541 Percent</title></circle>
+<circle cx="324.35" cy="188.33" r="2.4" fill="#145da0"><title>Week 16: 8.755 Percent</title></circle>
+<circle cx="341.18" cy="182.84" r="2.4" fill="#145da0"><title>Week 17: 8.873 Percent</title></circle>
+<circle cx="358.00" cy="291.61" r="2.4" fill="#145da0"><title>Week 18: 6.532 Percent</title></circle>
+<circle cx="374.82" cy="181.39" r="2.4" fill="#145da0"><title>Week 19: 8.904 Percent</title></circle>
+<circle cx="391.65" cy="220.01" r="2.4" fill="#145da0"><title>Week 20: 8.073 Percent</title></circle>
+<circle cx="408.47" cy="279.40" r="2.4" fill="#145da0"><title>Week 21: 6.795 Percent</title></circle>
+<circle cx="425.29" cy="244.33" r="2.4" fill="#145da0"><title>Week 22: 7.550 Percent</title></circle>
+<circle cx="442.12" cy="274.46" r="2.4" fill="#145da0"><title>Week 23: 6.901 Percent</title></circle>
+<circle cx="458.94" cy="270.95" r="2.4" fill="#145da0"><title>Week 24: 6.977 Percent</title></circle>
+<circle cx="475.76" cy="139.92" r="2.4" fill="#145da0"><title>Week 25: 9.796 Percent</title></circle>
+<circle cx="492.59" cy="297.43" r="2.4" fill="#145da0"><title>Week 26: 6.407 Percent</title></circle>
+<circle cx="509.41" cy="234.61" r="2.4" fill="#145da0"><title>Week 27: 7.759 Percent</title></circle>
+<circle cx="526.24" cy="257.92" r="2.4" fill="#145da0"><title>Week 28: 7.257 Percent</title></circle>
+<circle cx="543.06" cy="197.88" r="2.4" fill="#145da0"><title>Week 29: 8.549 Percent</title></circle>
+<circle cx="559.88" cy="185.30" r="2.4" fill="#145da0"><title>Week 30: 8.820 Percent</title></circle>
+<circle cx="576.71" cy="203.50" r="2.4" fill="#145da0"><title>Week 31: 8.428 Percent</title></circle>
+<circle cx="593.53" cy="235.63" r="2.4" fill="#145da0"><title>Week 32: 7.737 Percent</title></circle>
+<circle cx="610.35" cy="202.72" r="2.4" fill="#145da0"><title>Week 33: 8.445 Percent</title></circle>
+<circle cx="627.18" cy="246.79" r="2.4" fill="#145da0"><title>Week 34: 7.497 Percent</title></circle>
+<circle cx="644.00" cy="238.62" r="2.4" fill="#145da0"><title>Week 35: 7.672 Percent</title></circle>
+<circle cx="660.82" cy="249.56" r="2.4" fill="#145da0"><title>Week 36: 7.437 Percent</title></circle>
+<circle cx="677.65" cy="147.54" r="2.4" fill="#145da0"><title>Week 37: 9.632 Percent</title></circle>
+<circle cx="694.47" cy="169.61" r="2.4" fill="#145da0"><title>Week 38: 9.158 Percent</title></circle>
+<circle cx="711.29" cy="259.80" r="2.4" fill="#145da0"><title>Week 39: 7.216 Percent</title></circle>
+<circle cx="728.12" cy="210.62" r="2.4" fill="#145da0"><title>Week 40: 8.275 Percent</title></circle>
+<circle cx="744.94" cy="223.40" r="2.4" fill="#145da0"><title>Week 41: 8.000 Percent</title></circle>
+<circle cx="761.76" cy="146.49" r="2.4" fill="#145da0"><title>Week 42: 9.655 Percent</title></circle>
+<circle cx="778.59" cy="151.53" r="2.4" fill="#145da0"><title>Week 43: 9.547 Percent</title></circle>
+<rect x="791.41" y="70.78" width="8" height="8" fill="#c43b32" stroke="#172033"><title>Week 44 signal: 11.198 Percent</title></rect>
+<text x="795.41" y="66.78" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8c1d18">S</text>
+<circle cx="812.24" cy="155.14" r="2.4" fill="#145da0"><title>Week 45: 9.469 Percent</title></circle>
+<circle cx="829.06" cy="145.97" r="2.4" fill="#145da0"><title>Week 46: 9.666 Percent</title></circle>
+<circle cx="845.88" cy="140.39" r="2.4" fill="#145da0"><title>Week 47: 9.786 Percent</title></circle>
+<circle cx="862.71" cy="166.45" r="2.4" fill="#145da0"><title>Week 48: 9.226 Percent</title></circle>
+<rect x="875.53" y="160.78" width="8" height="8" fill="#c43b32" stroke="#172033"><title>Week 49 signal: 9.261 Percent</title></rect>
+<text x="879.53" y="156.78" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8c1d18">S</text>
+<circle cx="896.35" cy="272.07" r="2.4" fill="#145da0"><title>Week 50: 6.952 Percent</title></circle>
+<circle cx="913.18" cy="194.09" r="2.4" fill="#145da0"><title>Week 51: 8.631 Percent</title></circle>
+<circle cx="930.00" cy="228.57" r="2.4" fill="#145da0"><title>Week 52: 7.889 Percent</title></circle>
+<text x="501.00" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#172033">Week</text>
+<text x="15" y="220.00" transform="rotate(-90 15 220.00)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#172033">Percent</text>
+<rect x="735" y="20" width="8" height="8" fill="#c43b32" stroke="#172033"/><text x="749" y="28" font-family="Arial, sans-serif" font-size="10" fill="#172033">S = predeclared signal</text>
+</svg>

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app3-02",
+    "version": "0.1.0",
+    "commons_release": "0.67.0",
+    "hours": 16.0,
+    "course_points": 20
+  },
+  "service": {
+    "id": "CGH-ED-01",
+    "status": "fictional",
+    "population": "synthetic adult emergency encounters",
+    "public_hospital_linkage": "prohibited"
+  },
+  "source": {
+    "release": "cgh-ed-01-operational-v1",
+    "generator_version": "0.1.0",
+    "seed": 73002,
+    "tables": 9,
+    "rows": 318732,
+    "defects": 12
+  },
+  "measures": {
+    "specifications": 17,
+    "sql_files": 4,
+    "outputs": 8,
+    "query_checks": 30
+  },
+  "assessment": {
+    "points_available": 20,
+    "criteria": 5,
+    "noncompensable_gates": 15,
+    "pass_score": 16
+  },
+  "progression": {
+    "allowed_values": ["continue", "continue with conditions", "revise", "refer"],
+    "reference_value": "continue with conditions",
+    "module_03_permission": "permitted for curriculum construction"
+  },
+  "prohibited": [
+    "public-to-synthetic linkage",
+    "bottleneck diagnosis",
+    "staffing change",
+    "causal claim",
+    "clinical action",
+    "implementation decision"
+  ]
+}

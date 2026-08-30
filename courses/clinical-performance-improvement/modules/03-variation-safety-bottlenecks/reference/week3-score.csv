@@ -1,0 +1,7 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+R01,Chart selection and exact limits,4,4,Four chart contracts match measure type denominator exposure and temporal structure
+R02,Signal calculation and phase interpretation,4,4,Nine signals follow three predeclared rules and baseline instability is disclosed
+R03,Safety surveillance and low-count reasoning,4,4,Truth triggers reports reviewed non-events classes and exact Poisson limits remain separate
+R04,Process diagnosis and support limits,4,4,Stage queue throughput staffing balancing recovery and subgroup evidence reconcile
+R05,Communication escalation and reproducibility,4,4,Accessible outputs human escalation ownership disclosure and deterministic reproduction pass
+TOTAL,Module 03 performance diagnostic,20,20,All 18 noncompensable gates pass

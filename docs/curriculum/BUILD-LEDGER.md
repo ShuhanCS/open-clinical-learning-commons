@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.67.0
+- Current release: 0.68.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Module 02, measures and operational metrics
-- Next unit: APP-3 Module 03, variation, safety signals, and bottlenecks
+- Last completed unit: APP-3 Module 03, variation, safety signals, and bottlenecks
+- Next unit: APP-3 Checkpoint 01, measures, variation, and bottleneck readiness
 
 ## Confirmed decisions
 
@@ -475,7 +475,19 @@
 - The learner workspace has 49 files and 34 immutable manifest rows. The reference has 58 files and 43 immutable manifest rows. Complete validation passes 215 checks and starter validation passes 150 structural checks.
 - Generator, upstream handoff, measure builder, workspace builder, and validator self-checks pass. The validator rejects raw mutation, a missing table, wrong SQL denominator, public linkage, a staffing claim, wrong score, invalid progression, missing record, and incomplete starter.
 - The reference scores 20 of 20 and passes all 15 gates. Progression is `continue with conditions`, permitting Module 03 curriculum construction while bottleneck, staffing, causal, clinical, and implementation claims remain prohibited.
-- APP-3 Module 02 is a runnable release candidate at Commons 0.67.0. Module 03 is next.
+- APP-3 Module 02 is a runnable release candidate at Commons 0.67.0.
+- APP-3 Module 03 version 0.1.0 freezes 14 exact Module 02 files and preserves 43,628 encounters, 1,092 shifts, 52 weeks, 17 measure specifications, and 30 passing query checks.
+- Weeks 1 through 24 are the predeclared provisional baseline. Four chart contracts use a p-chart, XmR chart, exact low-count Poisson u-chart, and run chart. Three predeclared rules produce nine signal records.
+- The diagnostic retains baseline instability: the clinician-delay XmR series has a high run in Weeks 4 through 11. Evaluation signals include the clinician-delay high run first met at Week 42, the Week 44 high point, and the Week 44 left-before-seen high point.
+- The safety audit preserves 894 known true events, 673 trigger true positives, 358 incident true positives, 379 trigger false positives, and 379 reviewed non-events. Trigger sensitivity is 75.2796 percent, incident capture is 40.0447 percent, and specificity is 99.0302 percent.
+- The weekly incident-report chart has no exact Poisson limit breach but has a low run in Weeks 33 through 42. The run remains a review prompt and is not treated as improved safety or reduced prevalence.
+- Stage reconciliation supports a bounded roomed-to-clinician constraint during evening shifts in Weeks 35 through 44. The median rises from 49 to 66 minutes, the contemporaneous day and night median is 44 minutes, and recovery evening shifts return to 49 minutes.
+- Root cause, staffing adequacy, productivity, staffing change, clinical action, automated action, and implementation remain unestablished or prohibited. E01 opens human review within one business day and authorizes no intervention.
+- All three support groups pass the full-release threshold. In the target window, language support has 401 encounters and mobility support has 242, so a cross-group comparison is not supported.
+- The learner workspace has 41 files and 27 immutable manifest rows. The reference has 54 files and 40 immutable manifest rows. Complete validation passes 259 checks and starter validation passes 130 structural checks.
+- Upstream, diagnostic, workspace, and validator self-checks pass. Fifteen mutation and incomplete-workspace routes are rejected.
+- The reference scores 20 of 20 and passes all 18 gates. Together with the Module 02 20-point component, it permits construction of the 40-point Week 3 checkpoint. Module 04 is not yet permitted.
+- APP-3 Module 03 is a runnable release candidate at Commons 0.68.0. Checkpoint 01 is next.
 
 ## Pending confirmation
 
@@ -485,14 +497,15 @@
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Assign the official APP-3 section and half-term dates from the published calendar.
 - Complete human review of the APP-3 synthetic operational generator, safety-event design, subgroup construction, staffing assumptions, workload language, forecast contract, and scenario boundaries before alpha.
+- Run and independently review the APP-3 Module 03 base-R control-chart verification in an environment with R installed.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
 1. Read the master architecture, APP-3 course specification, APP-3 source record, Module 01 specification and package, curriculum catalog, and this ledger.
-2. Read the accepted Module 02 specification, source manifest, measure specifications, SQL, outputs, gates, conditions, and progression decision.
-3. Write the durable APP-3 Module 03 specification before building its package.
-4. Freeze the accepted Module 02 source and measure identities without changing denominators, clocks, defects, or unavailable states.
-5. Declare chart families, centerline and limit rules, low-count handling, time and subgroup comparisons, and safety-signal review rules before interpretation.
-6. Reconcile process transitions, queues, wait, service time, throughput, utilization, staffing, and capacity before naming one bounded bottleneck.
-7. Release the 20-point performance diagnostic and 40-point Week 3 handoff, advance semver, update this ledger, commit, and push before Module 04 begins.
+2. Read the accepted Module 02 and Module 03 specifications, packages, release records, scores, gates, conditions, and progression decisions.
+3. Write the durable APP-3 Checkpoint 01 specification before building its package.
+4. Freeze Modules 01 through 03 without recomputing or editing accepted evidence.
+5. Count Module 02 and Module 03 20-point components once, retain Module 01 as a required zero-point gate, and verify the 40-point total.
+6. Preserve the provisional baseline, all nine signals, safety undercapture, bounded stage diagnosis, unsupported target-window subgroup comparison, and E01 human-only escalation.
+7. Release the Week 3 checkpoint, decide whether Module 04 may begin, advance semver, update this ledger, commit, and push.

@@ -1,0 +1,19 @@
+gate_id,gate,status,evidence,owner
+G01,Module 02 identity is frozen,REPLACE,REPLACE,REPLACE
+G02,Service remains fictional and synthetic,REPLACE,REPLACE,REPLACE
+G03,Baseline and evaluation phases are declared before calculation,REPLACE,REPLACE,REPLACE
+G04,Baseline instability is disclosed,REPLACE,REPLACE,REPLACE
+G05,Chart families match measure type and denominator,REPLACE,REPLACE,REPLACE
+G06,Control limits and centers reproduce exactly,REPLACE,REPLACE,REPLACE
+G07,Signal rules are predeclared and auditable,REPLACE,REPLACE,REPLACE
+G08,A signal is not treated as proof of cause,REPLACE,REPLACE,REPLACE
+G09,Low-count safety limits remain exact,REPLACE,REPLACE,REPLACE
+G10,Safety classes and surveillance channels remain separate,REPLACE,REPLACE,REPLACE
+G11,Process handoffs and unavailable rework capture are explicit,REPLACE,REPLACE,REPLACE
+G12,Bottleneck diagnosis uses multiple evidence families,REPLACE,REPLACE,REPLACE
+G13,Root cause and staffing adequacy remain unestablished,REPLACE,REPLACE,REPLACE
+G14,Narrow subgroup support is recalculated,REPLACE,REPLACE,REPLACE
+G15,Charts and tables are accessible,REPLACE,REPLACE,REPLACE
+G16,Escalation remains human and nonclinical,REPLACE,REPLACE,REPLACE
+G17,Module 03 score and Week 3 accounting are exact,REPLACE,REPLACE,REPLACE
+G18,Package is complete portable disclosed and reproducible,REPLACE,REPLACE,REPLACE

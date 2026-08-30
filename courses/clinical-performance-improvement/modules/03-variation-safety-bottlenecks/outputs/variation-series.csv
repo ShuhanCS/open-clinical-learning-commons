@@ -1,0 +1,209 @@
+chart_id,measure,chart_family,week_index,baseline_status,numerator,denominator,value,unit,centerline,lower_limit,upper_limit,moving_range,moving_range_upper_limit,signal_ids,interpretation_status,synthetic_flag
+C01,weekly_left_before_seen,p-chart,1,baseline,76,861,8.826945,percent,8.13767,5.342305,10.933034,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,2,baseline,82,898,9.131403,percent,8.13767,5.400499,10.87484,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,3,baseline,69,888,7.77027,percent,8.13767,5.38513,10.890209,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,4,baseline,72,969,7.430341,percent,8.13767,5.502685,10.772654,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,5,baseline,71,906,7.836645,percent,8.13767,5.412611,10.862729,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,6,baseline,99,913,10.843373,percent,8.13767,5.423077,10.852262,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,7,baseline,82,941,8.714134,percent,8.13767,5.463769,10.81157,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,8,baseline,84,942,8.917197,percent,8.13767,5.465189,10.81015,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,9,baseline,71,894,7.941834,percent,8.13767,5.394383,10.880957,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,10,baseline,61,880,6.931818,percent,8.13767,5.372647,10.902692,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,11,baseline,76,899,8.453838,percent,8.13767,5.402022,10.873317,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,12,baseline,63,821,7.673569,percent,8.13767,5.275018,11.000321,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,13,baseline,65,845,7.692308,percent,8.13767,5.315964,10.959375,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,14,baseline,63,825,7.636364,percent,8.13767,5.281967,10.993373,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,15,baseline,79,828,9.541063,percent,8.13767,5.287145,10.988194,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,16,baseline,71,811,8.754624,percent,8.13767,5.257424,11.017916,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,17,baseline,74,834,8.872902,percent,8.13767,5.297417,10.977922,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,18,baseline,55,842,6.532067,percent,8.13767,5.310942,10.964397,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,19,baseline,78,876,8.90411,percent,8.13767,5.366341,10.908998,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,20,baseline,62,768,8.072917,percent,8.13767,5.17789,11.097449,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,21,baseline,53,780,6.794872,percent,8.13767,5.200746,11.074594,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,22,baseline,61,808,7.549505,percent,8.13767,5.252081,11.023258,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,23,baseline,53,768,6.901042,percent,8.13767,5.17789,11.097449,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,24,baseline,54,774,6.976744,percent,8.13767,5.189384,11.085955,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,25,evaluation,77,786,9.796438,percent,8.13767,5.211977,11.063362,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,26,evaluation,46,718,6.406685,percent,8.13767,5.076568,11.198771,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,27,evaluation,63,812,7.758621,percent,8.13767,5.259198,11.016141,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,28,evaluation,59,813,7.257073,percent,8.13767,5.260968,11.014371,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,29,evaluation,66,772,8.549223,percent,8.13767,5.185568,11.089772,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,30,evaluation,71,805,8.819876,percent,8.13767,5.24671,11.028629,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,31,evaluation,74,878,8.428246,percent,8.13767,5.3695,10.905839,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,32,evaluation,67,866,7.736721,percent,8.13767,5.350387,10.924953,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,33,evaluation,63,746,8.44504,percent,8.13767,5.134564,11.140775,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,34,evaluation,56,747,7.496653,percent,8.13767,5.136575,11.138764,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,35,evaluation,59,769,7.672302,percent,8.13767,5.179815,11.095524,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,36,evaluation,56,753,7.436919,percent,8.13767,5.148555,11.126784,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,37,evaluation,76,789,9.632446,percent,8.13767,5.217544,11.057795,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,38,evaluation,75,819,9.157509,percent,8.13767,5.271525,11.003814,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,39,evaluation,56,776,7.216495,percent,8.13767,5.193186,11.082153,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,40,evaluation,71,858,8.275058,percent,8.13767,5.337422,10.937917,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,41,evaluation,64,800,8.0,percent,8.13767,5.237689,11.03765,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,42,evaluation,84,870,9.655172,percent,8.13767,5.356801,10.918538,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,43,evaluation,80,838,9.546539,percent,8.13767,5.304204,10.971135,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,44,evaluation,100,893,11.198208,percent,8.13767,5.392847,10.882492,,,S001,review signal; do not infer cause,1
+C01,weekly_left_before_seen,p-chart,45,evaluation,82,866,9.468822,percent,8.13767,5.350387,10.924953,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,46,evaluation,84,869,9.666283,percent,8.13767,5.355202,10.920137,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,47,evaluation,87,889,9.786277,percent,8.13767,5.386679,10.88866,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,48,evaluation,81,878,9.225513,percent,8.13767,5.3695,10.905839,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,49,evaluation,79,853,9.26143,percent,8.13767,5.329227,10.946112,,,S002,review signal; do not infer cause,1
+C01,weekly_left_before_seen,p-chart,50,evaluation,60,863,6.952491,percent,8.13767,5.345546,10.929793,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,51,evaluation,75,869,8.63061,percent,8.13767,5.355202,10.920137,,,,no predeclared signal at this point,1
+C01,weekly_left_before_seen,p-chart,52,evaluation,68,862,7.888631,percent,8.13767,5.343927,10.931412,,,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,1,baseline,,3,98.048,minutes,97.636958,90.485606,104.788311,,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,2,baseline,,3,99.405,minutes,97.636958,90.485606,104.788311,1.357,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,3,baseline,,3,96.976,minutes,97.636958,90.485606,104.788311,2.429,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,4,baseline,,3,102.762,minutes,97.636958,90.485606,104.788311,5.786,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,5,baseline,,3,99.357,minutes,97.636958,90.485606,104.788311,3.405,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,6,baseline,,3,100.0,minutes,97.636958,90.485606,104.788311,0.643,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,7,baseline,,3,100.405,minutes,97.636958,90.485606,104.788311,0.405,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,8,baseline,,3,101.333,minutes,97.636958,90.485606,104.788311,0.928,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,9,baseline,,3,99.524,minutes,97.636958,90.485606,104.788311,1.809,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,10,baseline,,3,98.905,minutes,97.636958,90.485606,104.788311,0.619,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,11,baseline,,3,102.143,minutes,97.636958,90.485606,104.788311,3.238,8.783258,S003,review signal; do not infer cause,1
+C02,weekly_arrival_to_clinician,XmR,12,baseline,,3,96.119,minutes,97.636958,90.485606,104.788311,6.024,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,13,baseline,,3,99.881,minutes,97.636958,90.485606,104.788311,3.762,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,14,baseline,,3,97.0,minutes,97.636958,90.485606,104.788311,2.881,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,15,baseline,,3,95.214,minutes,97.636958,90.485606,104.788311,1.786,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,16,baseline,,3,94.976,minutes,97.636958,90.485606,104.788311,0.238,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,17,baseline,,3,96.286,minutes,97.636958,90.485606,104.788311,1.31,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,18,baseline,,3,96.262,minutes,97.636958,90.485606,104.788311,0.024,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,19,baseline,,3,99.119,minutes,97.636958,90.485606,104.788311,2.857,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,20,baseline,,3,91.119,minutes,97.636958,90.485606,104.788311,8.0,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,21,baseline,,3,92.619,minutes,97.636958,90.485606,104.788311,1.5,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,22,baseline,,3,97.905,minutes,97.636958,90.485606,104.788311,5.286,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,23,baseline,,3,92.762,minutes,97.636958,90.485606,104.788311,5.143,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,24,baseline,,3,95.167,minutes,97.636958,90.485606,104.788311,2.405,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,25,evaluation,,3,93.095,minutes,97.636958,90.485606,104.788311,2.072,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,26,evaluation,,3,90.0,minutes,97.636958,90.485606,104.788311,3.095,8.783258,S004,review signal; do not infer cause,1
+C02,weekly_arrival_to_clinician,XmR,27,evaluation,,3,99.214,minutes,97.636958,90.485606,104.788311,9.214,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,28,evaluation,,3,97.667,minutes,97.636958,90.485606,104.788311,1.547,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,29,evaluation,,3,94.429,minutes,97.636958,90.485606,104.788311,3.238,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,30,evaluation,,3,95.357,minutes,97.636958,90.485606,104.788311,0.928,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,31,evaluation,,3,98.119,minutes,97.636958,90.485606,104.788311,2.762,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,32,evaluation,,3,98.357,minutes,97.636958,90.485606,104.788311,0.238,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,33,evaluation,,3,91.048,minutes,97.636958,90.485606,104.788311,7.309,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,34,evaluation,,3,91.524,minutes,97.636958,90.485606,104.788311,0.476,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,35,evaluation,,3,100.667,minutes,97.636958,90.485606,104.788311,9.143,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,36,evaluation,,3,98.19,minutes,97.636958,90.485606,104.788311,2.477,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,37,evaluation,,3,98.429,minutes,97.636958,90.485606,104.788311,0.239,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,38,evaluation,,3,101.714,minutes,97.636958,90.485606,104.788311,3.285,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,39,evaluation,,3,97.929,minutes,97.636958,90.485606,104.788311,3.785,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,40,evaluation,,3,102.81,minutes,97.636958,90.485606,104.788311,4.881,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,41,evaluation,,3,101.595,minutes,97.636958,90.485606,104.788311,1.215,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,42,evaluation,,3,104.476,minutes,97.636958,90.485606,104.788311,2.881,8.783258,S005,review signal; do not infer cause,1
+C02,weekly_arrival_to_clinician,XmR,43,evaluation,,3,104.048,minutes,97.636958,90.485606,104.788311,0.428,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,44,evaluation,,3,105.357,minutes,97.636958,90.485606,104.788311,1.309,8.783258,S006,review signal; do not infer cause,1
+C02,weekly_arrival_to_clinician,XmR,45,evaluation,,3,99.619,minutes,97.636958,90.485606,104.788311,5.738,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,46,evaluation,,3,98.5,minutes,97.636958,90.485606,104.788311,1.119,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,47,evaluation,,3,102.357,minutes,97.636958,90.485606,104.788311,3.857,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,48,evaluation,,3,99.619,minutes,97.636958,90.485606,104.788311,2.738,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,49,evaluation,,3,98.69,minutes,97.636958,90.485606,104.788311,0.929,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,50,evaluation,,3,98.548,minutes,97.636958,90.485606,104.788311,0.142,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,51,evaluation,,3,98.333,minutes,97.636958,90.485606,104.788311,0.215,8.783258,,no predeclared signal at this point,1
+C02,weekly_arrival_to_clinician,XmR,52,evaluation,,3,98.714,minutes,97.636958,90.485606,104.788311,0.381,8.783258,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,1,baseline,6,785,7.643312,reports per 1000 completed encounters,9.895751,1.273885,21.656051,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,2,baseline,11,816,13.480392,reports per 1000 completed encounters,9.895751,1.22549,22.058824,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,3,baseline,10,819,12.210012,reports per 1000 completed encounters,9.895751,1.221001,21.978022,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,4,baseline,5,897,5.574136,reports per 1000 completed encounters,9.895751,1.114827,21.181717,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,5,baseline,7,835,8.383234,reports per 1000 completed encounters,9.895751,1.197605,21.556886,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,6,baseline,6,814,7.371007,reports per 1000 completed encounters,9.895751,1.228501,22.113022,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,7,baseline,11,859,12.805588,reports per 1000 completed encounters,9.895751,1.164144,20.954598,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,8,baseline,6,858,6.993007,reports per 1000 completed encounters,9.895751,1.165501,20.979021,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,9,baseline,11,823,13.365735,reports per 1000 completed encounters,9.895751,1.215067,21.871203,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,10,baseline,6,819,7.326007,reports per 1000 completed encounters,9.895751,1.221001,21.978022,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,11,baseline,9,823,10.935601,reports per 1000 completed encounters,9.895751,1.215067,21.871203,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,12,baseline,4,758,5.277045,reports per 1000 completed encounters,9.895751,1.319261,22.427441,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,13,baseline,3,780,3.846154,reports per 1000 completed encounters,9.895751,1.282051,21.794872,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,14,baseline,11,762,14.435696,reports per 1000 completed encounters,9.895751,1.312336,22.309711,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,15,baseline,8,749,10.680908,reports per 1000 completed encounters,9.895751,1.335113,22.696929,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,16,baseline,8,740,10.810811,reports per 1000 completed encounters,9.895751,1.351351,22.972973,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,17,baseline,11,760,14.473684,reports per 1000 completed encounters,9.895751,1.315789,22.368421,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,18,baseline,8,787,10.165184,reports per 1000 completed encounters,9.895751,1.270648,21.601017,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,19,baseline,6,798,7.518797,reports per 1000 completed encounters,9.895751,1.253133,22.556391,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,20,baseline,4,706,5.665722,reports per 1000 completed encounters,9.895751,1.416431,22.66289,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,21,baseline,4,727,5.502063,reports per 1000 completed encounters,9.895751,1.375516,22.008253,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,22,baseline,10,747,13.386881,reports per 1000 completed encounters,9.895751,1.338688,22.757697,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,23,baseline,11,715,15.384615,reports per 1000 completed encounters,9.895751,1.398601,22.377622,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,24,baseline,11,720,15.277778,reports per 1000 completed encounters,9.895751,1.388889,22.222222,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,25,evaluation,7,709,9.873061,reports per 1000 completed encounters,9.895751,1.410437,22.566996,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,26,evaluation,3,672,4.464286,reports per 1000 completed encounters,9.895751,1.488095,23.809524,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,27,evaluation,10,749,13.351135,reports per 1000 completed encounters,9.895751,1.335113,22.696929,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,28,evaluation,5,754,6.6313,reports per 1000 completed encounters,9.895751,1.32626,22.546419,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,29,evaluation,3,706,4.249292,reports per 1000 completed encounters,9.895751,1.416431,22.66289,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,30,evaluation,7,734,9.536785,reports per 1000 completed encounters,9.895751,1.362398,23.160763,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,31,evaluation,6,804,7.462687,reports per 1000 completed encounters,9.895751,1.243781,22.38806,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,32,evaluation,11,799,13.767209,reports per 1000 completed encounters,9.895751,1.251564,22.52816,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,33,evaluation,5,683,7.320644,reports per 1000 completed encounters,9.895751,1.464129,23.426061,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,34,evaluation,3,691,4.341534,reports per 1000 completed encounters,9.895751,1.447178,23.154848,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,35,evaluation,5,710,7.042254,reports per 1000 completed encounters,9.895751,1.408451,22.535211,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,36,evaluation,3,697,4.304161,reports per 1000 completed encounters,9.895751,1.43472,22.955524,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,37,evaluation,4,713,5.610098,reports per 1000 completed encounters,9.895751,1.402525,22.440393,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,38,evaluation,7,744,9.408602,reports per 1000 completed encounters,9.895751,1.344086,22.849462,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,39,evaluation,7,720,9.722222,reports per 1000 completed encounters,9.895751,1.388889,22.222222,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,40,evaluation,3,787,3.811944,reports per 1000 completed encounters,9.895751,1.270648,21.601017,,,S007,review signal; do not infer cause,1
+C03,weekly_incident_reports,exact Poisson u-chart,41,evaluation,4,736,5.434783,reports per 1000 completed encounters,9.895751,1.358696,23.097826,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,42,evaluation,5,786,6.361323,reports per 1000 completed encounters,9.895751,1.272265,21.628499,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,43,evaluation,8,758,10.55409,reports per 1000 completed encounters,9.895751,1.319261,22.427441,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,44,evaluation,4,793,5.044136,reports per 1000 completed encounters,9.895751,1.261034,21.437579,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,45,evaluation,6,784,7.653061,reports per 1000 completed encounters,9.895751,1.27551,21.683673,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,46,evaluation,8,785,10.191083,reports per 1000 completed encounters,9.895751,1.273885,21.656051,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,47,evaluation,4,802,4.987531,reports per 1000 completed encounters,9.895751,1.246883,22.44389,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,48,evaluation,8,797,10.037641,reports per 1000 completed encounters,9.895751,1.254705,22.584693,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,49,evaluation,9,774,11.627907,reports per 1000 completed encounters,9.895751,1.29199,21.963824,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,50,evaluation,7,803,8.71731,reports per 1000 completed encounters,9.895751,1.24533,22.41594,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,51,evaluation,6,794,7.556675,reports per 1000 completed encounters,9.895751,1.259446,21.410579,,,,no predeclared signal at this point,1
+C03,weekly_incident_reports,exact Poisson u-chart,52,evaluation,13,794,16.372796,reports per 1000 completed encounters,9.895751,1.259446,21.410579,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,1,baseline,861,,861.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,2,baseline,898,,898.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,3,baseline,888,,888.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,4,baseline,969,,969.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,5,baseline,906,,906.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,6,baseline,913,,913.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,7,baseline,941,,941.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,8,baseline,942,,942.0,encounters,853.0,,,,,S008,review signal; do not infer cause,1
+C04,weekly_arrivals,run chart,9,baseline,894,,894.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,10,baseline,880,,880.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,11,baseline,899,,899.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,12,baseline,821,,821.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,13,baseline,845,,845.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,14,baseline,825,,825.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,15,baseline,828,,828.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,16,baseline,811,,811.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,17,baseline,834,,834.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,18,baseline,842,,842.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,19,baseline,876,,876.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,20,baseline,768,,768.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,21,baseline,780,,780.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,22,baseline,808,,808.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,23,baseline,768,,768.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,24,baseline,774,,774.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,25,evaluation,786,,786.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,26,evaluation,718,,718.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,27,evaluation,812,,812.0,encounters,853.0,,,,,S009,review signal; do not infer cause,1
+C04,weekly_arrivals,run chart,28,evaluation,813,,813.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,29,evaluation,772,,772.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,30,evaluation,805,,805.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,31,evaluation,878,,878.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,32,evaluation,866,,866.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,33,evaluation,746,,746.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,34,evaluation,747,,747.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,35,evaluation,769,,769.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,36,evaluation,753,,753.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,37,evaluation,789,,789.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,38,evaluation,819,,819.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,39,evaluation,776,,776.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,40,evaluation,858,,858.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,41,evaluation,800,,800.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,42,evaluation,870,,870.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,43,evaluation,838,,838.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,44,evaluation,893,,893.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,45,evaluation,866,,866.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,46,evaluation,869,,869.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,47,evaluation,889,,889.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,48,evaluation,878,,878.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,49,evaluation,853,,853.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,50,evaluation,863,,863.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,51,evaluation,869,,869.0,encounters,853.0,,,,,,no predeclared signal at this point,1
+C04,weekly_arrivals,run chart,52,evaluation,862,,862.0,encounters,853.0,,,,,,no predeclared signal at this point,1

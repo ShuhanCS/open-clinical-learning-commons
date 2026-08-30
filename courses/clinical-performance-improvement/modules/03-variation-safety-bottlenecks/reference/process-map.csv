@@ -1,0 +1,7 @@
+step_id,sequence,state,owner,handoff_from,handoff_to,clock_role,rework_capture_status,failure_branch,diagnostic_use
+P01,1,arrival,access team,outside service,triage,starts encounter clock,not directly captured,invalid or missing arrival suppresses all durations,defines demand entry
+P02,2,triage,nursing,arrival,roomed,ends arrival-to-triage clock,not directly captured,missing or invalid triage suppresses triage duration,tests access stage
+P03,3,roomed,flow team,triage,clinician,starts roomed-to-clinician clock,not directly captured,left-before-seen branch can end before rooming,locates pre-clinician queue
+P04,4,clinician,clinical team,roomed,disposition,ends roomed-to-clinician and starts clinician-to-disposition clock,not directly captured,missing clinician state remains unavailable,tests first-clinician constraint
+P05,5,disposition,clinical team,clinician,departure,ends clinician-to-disposition clock,not directly captured,missing disposition suppresses completion,tests decision stage
+P06,6,departure,flow team,disposition,outside service,ends encounter clock,not directly captured,departure before arrival is invalid,defines completed exit

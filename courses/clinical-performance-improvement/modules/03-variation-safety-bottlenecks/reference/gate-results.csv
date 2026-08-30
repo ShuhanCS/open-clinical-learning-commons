@@ -1,0 +1,19 @@
+gate_id,gate,status,evidence,owner
+G01,Module 02 identity is frozen,pass,Fourteen accepted upstream files reproduce,data steward
+G02,Service remains fictional and synthetic,pass,No public provider or real record enters the diagnostic,privacy steward
+G03,Baseline and evaluation phases are declared before calculation,pass,Weeks 1-24 and 25-52 are fixed,analytics owner
+G04,Baseline instability is disclosed,pass,C02 R2 high run in Weeks 4-11 is retained,analytics owner
+G05,Chart families match measure type and denominator,pass,p XmR exact u and run chart choices are recorded,measurement lead
+G06,Control limits and centers reproduce exactly,pass,All control-limit fields match the deterministic build,analytics owner
+G07,Signal rules are predeclared and auditable,pass,R1 R2 and R3 create nine exact records,measurement lead
+G08,A signal is not treated as proof of cause,pass,Every signal retains a review disposition and claim limit,clinical performance council
+G09,Low-count safety limits remain exact,pass,C03 preserves Poisson integer limits and zero boundary,safety analytics owner
+G10,Safety classes and surveillance channels remain separate,pass,Truth trigger report false positive and reviewed non-event counts reconcile,safety lead
+G11,Process handoffs and unavailable rework capture are explicit,pass,Six-state map does not relabel duplicate data as rework,flow lead
+G12,Bottleneck diagnosis uses multiple evidence families,pass,Stage queue throughput staffing balancing control and recovery evidence reconcile,flow lead
+G13,Root cause and staffing adequacy remain unestablished,pass,Diagnosis is limited to stage scope and time window,workforce lead
+G14,Narrow subgroup support is recalculated,pass,Language and mobility target windows remain unsupported,equity and access lead
+G15,Charts and tables are accessible,pass,SVG titles descriptions labels signal markers and exact tables are present,accessibility reviewer
+G16,Escalation remains human and nonclinical,pass,E01 opens review and prohibits automated operational or clinical action,clinical performance council
+G17,Module 03 score and Week 3 accounting are exact,pass,20 Module 02 plus 20 Module 03 equals 40 with Module 01 as a zero-point gate,module owner
+G18,Package is complete portable disclosed and reproducible,pass,Builder validator fingerprints AI record and progression pass,module owner

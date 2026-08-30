@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+<title id="title">Weekly arrival-to-clinician XmR chart</title>
+<desc id="desc">Weekly mean of three shift medians with an XmR centerline and limits based on Weeks 1 through 24. Red squares labelled S mark predeclared signals.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="72" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">Weekly arrival-to-clinician XmR chart</text>
+<line x1="72" y1="382.00" x2="930" y2="382.00" stroke="#d7dde8"/>
+<text x="64" y="386.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">88.8</text>
+<line x1="72" y1="299.50" x2="930" y2="299.50" stroke="#d7dde8"/>
+<text x="64" y="303.50" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">93.2</text>
+<line x1="72" y1="217.00" x2="930" y2="217.00" stroke="#d7dde8"/>
+<text x="64" y="221.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">97.7</text>
+<line x1="72" y1="134.50" x2="930" y2="134.50" stroke="#d7dde8"/>
+<text x="64" y="138.50" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">102.1</text>
+<line x1="72" y1="52.00" x2="930" y2="52.00" stroke="#d7dde8"/>
+<text x="64" y="56.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">106.6</text>
+<text x="72.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">1</text>
+<text x="189.76" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">8</text>
+<text x="324.35" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">16</text>
+<text x="458.94" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">24</text>
+<text x="593.53" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">32</text>
+<text x="728.12" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">40</text>
+<text x="862.71" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">48</text>
+<text x="930.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">52</text>
+<polyline points="72.00,85.29 88.82,85.29 105.65,85.29 122.47,85.29 139.29,85.29 156.12,85.29 172.94,85.29 189.76,85.29 206.59,85.29 223.41,85.29 240.24,85.29 257.06,85.29 273.88,85.29 290.71,85.29 307.53,85.29 324.35,85.29 341.18,85.29 358.00,85.29 374.82,85.29 391.65,85.29 408.47,85.29 425.29,85.29 442.12,85.29 458.94,85.29 475.76,85.29 492.59,85.29 509.41,85.29 526.24,85.29 543.06,85.29 559.88,85.29 576.71,85.29 593.53,85.29 610.35,85.29 627.18,85.29 644.00,85.29 660.82,85.29 677.65,85.29 694.47,85.29 711.29,85.29 728.12,85.29 744.94,85.29 761.76,85.29 778.59,85.29 795.41,85.29 812.24,85.29 829.06,85.29 845.88,85.29 862.71,85.29 879.53,85.29 896.35,85.29 913.18,85.29 930.00,85.29" fill="none" stroke="#b33a3a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<polyline points="72.00,217.77 88.82,217.77 105.65,217.77 122.47,217.77 139.29,217.77 156.12,217.77 172.94,217.77 189.76,217.77 206.59,217.77 223.41,217.77 240.24,217.77 257.06,217.77 273.88,217.77 290.71,217.77 307.53,217.77 324.35,217.77 341.18,217.77 358.00,217.77 374.82,217.77 391.65,217.77 408.47,217.77 425.29,217.77 442.12,217.77 458.94,217.77 475.76,217.77 492.59,217.77 509.41,217.77 526.24,217.77 543.06,217.77 559.88,217.77 576.71,217.77 593.53,217.77 610.35,217.77 627.18,217.77 644.00,217.77 660.82,217.77 677.65,217.77 694.47,217.77 711.29,217.77 728.12,217.77 744.94,217.77 761.76,217.77 778.59,217.77 795.41,217.77 812.24,217.77 829.06,217.77 845.88,217.77 862.71,217.77 879.53,217.77 896.35,217.77 913.18,217.77 930.00,217.77" fill="none" stroke="#3a536f" stroke-width="1.5"/>
+<polyline points="72.00,350.25 88.82,350.25 105.65,350.25 122.47,350.25 139.29,350.25 156.12,350.25 172.94,350.25 189.76,350.25 206.59,350.25 223.41,350.25 240.24,350.25 257.06,350.25 273.88,350.25 290.71,350.25 307.53,350.25 324.35,350.25 341.18,350.25 358.00,350.25 374.82,350.25 391.65,350.25 408.47,350.25 425.29,350.25 442.12,350.25 458.94,350.25 475.76,350.25 492.59,350.25 509.41,350.25 526.24,350.25 543.06,350.25 559.88,350.25 576.71,350.25 593.53,350.25 610.35,350.25 627.18,350.25 644.00,350.25 660.82,350.25 677.65,350.25 694.47,350.25 711.29,350.25 728.12,350.25 744.94,350.25 761.76,350.25 778.59,350.25 795.41,350.25 812.24,350.25 829.06,350.25 845.88,350.25 862.71,350.25 879.53,350.25 896.35,350.25 913.18,350.25 930.00,350.25" fill="none" stroke="#b33a3a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<polyline points="72.00,210.16 88.82,185.02 105.65,230.01 122.47,122.83 139.29,185.91 156.12,174.00 172.94,166.49 189.76,149.30 206.59,182.81 223.41,194.28 240.24,134.30 257.06,245.89 273.88,176.20 290.71,229.57 307.53,262.65 324.35,267.06 341.18,242.80 358.00,243.24 374.82,190.32 391.65,338.51 408.47,310.73 425.29,212.80 442.12,308.08 458.94,263.52 475.76,301.91 492.59,359.24 509.41,188.56 526.24,217.21 543.06,277.20 559.88,260.00 576.71,208.84 593.53,204.43 610.35,339.83 627.18,331.01 644.00,161.64 660.82,207.52 677.65,203.10 694.47,142.24 711.29,212.36 728.12,121.94 744.94,144.45 761.76,91.08 778.59,99.01 795.41,74.76 812.24,181.05 829.06,201.78 845.88,130.33 862.71,181.05 879.53,198.26 896.35,200.89 913.18,204.88 930.00,197.82" fill="none" stroke="#145da0" stroke-width="2"/>
+<circle cx="72.00" cy="210.16" r="2.4" fill="#145da0"><title>Week 1: 98.048 Minutes</title></circle>
+<circle cx="88.82" cy="185.02" r="2.4" fill="#145da0"><title>Week 2: 99.405 Minutes</title></circle>
+<circle cx="105.65" cy="230.01" r="2.4" fill="#145da0"><title>Week 3: 96.976 Minutes</title></circle>
+<circle cx="122.47" cy="122.83" r="2.4" fill="#145da0"><title>Week 4: 102.762 Minutes</title></circle>
+<circle cx="139.29" cy="185.91" r="2.4" fill="#145da0"><title>Week 5: 99.357 Minutes</title></circle>
+<circle cx="156.12" cy="174.00" r="2.4" fill="#145da0"><title>Week 6: 100.000 Minutes</title></circle>
+<circle cx="172.94" cy="166.49" r="2.4" fill="#145da0"><title>Week 7: 100.405 Minutes</title></circle>
+<circle cx="189.76" cy="149.30" r="2.4" fill="#145da0"><title>Week 8: 101.333 Minutes</title></circle>
+<circle cx="206.59" cy="182.81" r="2.4" fill="#145da0"><title>Week 9: 99.524 Minutes</title></circle>
+<circle cx="223.41" cy="194.28" r="2.4" fill="#145da0"><title>Week 10: 98.905 Minutes</title></circle>
+<rect x="236.24" y="130.30" width="8" height="8" fill="#c43b32" stroke="#172033"><title>Week 11 signal: 102.143 Minutes</title></rect>
+<text x="240.24" y="126.30" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8c1d18">S</text>
+<circle cx="257.06" cy="245.89" r="2.4" fill="#145da0"><title>Week 12: 96.119 Minutes</title></circle>
+<circle cx="273.88" cy="176.20" r="2.4" fill="#145da0"><title>Week 13: 99.881 Minutes</title></circle>
+<circle cx="290.71" cy="229.57" r="2.4" fill="#145da0"><title>Week 14: 97.000 Minutes</title></circle>
+<circle cx="307.53" cy="262.65" r="2.4" fill="#145da0"><title>Week 15: 95.214 Minutes</title></circle>
+<circle cx="324.35" cy="267.06" r="2.4" fill="#145da0"><title>Week 16: 94.976 Minutes</title></circle>
+<circle cx="341.18" cy="242.80" r="2.4" fill="#145da0"><title>Week 17: 96.286 Minutes</title></circle>
+<circle cx="358.00" cy="243.24" r="2.4" fill="#145da0"><title>Week 18: 96.262 Minutes</title></circle>
+<circle cx="374.82" cy="190.32" r="2.4" fill="#145da0"><title>Week 19: 99.119 Minutes</title></circle>
+<circle cx="391.65" cy="338.51" r="2.4" fill="#145da0"><title>Week 20: 91.119 Minutes</title></circle>
+<circle cx="408.47" cy="310.73" r="2.4" fill="#145da0"><title>Week 21: 92.619 Minutes</title></circle>
+<circle cx="425.29" cy="212.80" r="2.4" fill="#145da0"><title>Week 22: 97.905 Minutes</title></circle>
+<circle cx="442.12" cy="308.08" r="2.4" fill="#145da0"><title>Week 23: 92.762 Minutes</title></circle>
+<circle cx="458.94" cy="263.52" r="2.4" fill="#145da0"><title>Week 24: 95.167 Minutes</title></circle>
+<circle cx="475.76" cy="301.91" r="2.4" fill="#145da0"><title>Week 25: 93.095 Minutes</title></circle>
+<rect x="488.59" y="355.24" width="8" height="8" fill="#c43b32" stroke="#172033"><title>Week 26 signal: 90.000 Minutes</title></rect>
+<text x="492.59" y="351.24" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8c1d18">S</text>
+<circle cx="509.41" cy="188.56" r="2.4" fill="#145da0"><title>Week 27: 99.214 Minutes</title></circle>
+<circle cx="526.24" cy="217.21" r="2.4" fill="#145da0"><title>Week 28: 97.667 Minutes</title></circle>
+<circle cx="543.06" cy="277.20" r="2.4" fill="#145da0"><title>Week 29: 94.429 Minutes</title></circle>
+<circle cx="559.88" cy="260.00" r="2.4" fill="#145da0"><title>Week 30: 95.357 Minutes</title></circle>
+<circle cx="576.71" cy="208.84" r="2.4" fill="#145da0"><title>Week 31: 98.119 Minutes</title></circle>
+<circle cx="593.53" cy="204.43" r="2.4" fill="#145da0"><title>Week 32: 98.357 Minutes</title></circle>
+<circle cx="610.35" cy="339.83" r="2.4" fill="#145da0"><title>Week 33: 91.048 Minutes</title></circle>
+<circle cx="627.18" cy="331.01" r="2.4" fill="#145da0"><title>Week 34: 91.524 Minutes</title></circle>
+<circle cx="644.00" cy="161.64" r="2.4" fill="#145da0"><title>Week 35: 100.667 Minutes</title></circle>
+<circle cx="660.82" cy="207.52" r="2.4" fill="#145da0"><title>Week 36: 98.190 Minutes</title></circle>
+<circle cx="677.65" cy="203.10" r="2.4" fill="#145da0"><title>Week 37: 98.429 Minutes</title></circle>
+<circle cx="694.47" cy="142.24" r="2.4" fill="#145da0"><title>Week 38: 101.714 Minutes</title></circle>
+<circle cx="711.29" cy="212.36" r="2.4" fill="#145da0"><title>Week 39: 97.929 Minutes</title></circle>
+<circle cx="728.12" cy="121.94" r="2.4" fill="#145da0"><title>Week 40: 102.810 Minutes</title></circle>
+<circle cx="744.94" cy="144.45" r="2.4" fill="#145da0"><title>Week 41: 101.595 Minutes</title></circle>
+<rect x="757.76" y="87.08" width="8" height="8" fill="#c43b32" stroke="#172033"><title>Week 42 signal: 104.476 Minutes</title></rect>
+<text x="761.76" y="83.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8c1d18">S</text>
+<circle cx="778.59" cy="99.01" r="2.4" fill="#145da0"><title>Week 43: 104.048 Minutes</title></circle>
+<rect x="791.41" y="70.76" width="8" height="8" fill="#c43b32" stroke="#172033"><title>Week 44 signal: 105.357 Minutes</title></rect>
+<text x="795.41" y="66.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8c1d18">S</text>
+<circle cx="812.24" cy="181.05" r="2.4" fill="#145da0"><title>Week 45: 99.619 Minutes</title></circle>
+<circle cx="829.06" cy="201.78" r="2.4" fill="#145da0"><title>Week 46: 98.500 Minutes</title></circle>
+<circle cx="845.88" cy="130.33" r="2.4" fill="#145da0"><title>Week 47: 102.357 Minutes</title></circle>
+<circle cx="862.71" cy="181.05" r="2.4" fill="#145da0"><title>Week 48: 99.619 Minutes</title></circle>
+<circle cx="879.53" cy="198.26" r="2.4" fill="#145da0"><title>Week 49: 98.690 Minutes</title></circle>
+<circle cx="896.35" cy="200.89" r="2.4" fill="#145da0"><title>Week 50: 98.548 Minutes</title></circle>
+<circle cx="913.18" cy="204.88" r="2.4" fill="#145da0"><title>Week 51: 98.333 Minutes</title></circle>
+<circle cx="930.00" cy="197.82" r="2.4" fill="#145da0"><title>Week 52: 98.714 Minutes</title></circle>
+<text x="501.00" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#172033">Week</text>
+<text x="15" y="220.00" transform="rotate(-90 15 220.00)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#172033">Minutes</text>
+<rect x="735" y="20" width="8" height="8" fill="#c43b32" stroke="#172033"/><text x="749" y="28" font-family="Arial, sans-serif" font-size="10" fill="#172033">S = predeclared signal</text>
+</svg>

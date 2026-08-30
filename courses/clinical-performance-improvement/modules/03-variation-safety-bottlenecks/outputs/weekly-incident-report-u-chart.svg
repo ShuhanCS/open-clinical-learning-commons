@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+<title id="title">Weekly incident-report exact u-chart</title>
+<desc id="desc">Weekly synthetic incident reports per 1,000 completed encounters with exact Poisson count limits. Red squares labelled S would mark predeclared signals.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="72" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">Weekly incident-report exact u-chart</text>
+<line x1="72" y1="382.00" x2="930" y2="382.00" stroke="#d7dde8"/>
+<text x="64" y="386.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">-0.7</text>
+<line x1="72" y1="299.50" x2="930" y2="299.50" stroke="#d7dde8"/>
+<text x="64" y="303.50" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">5.9</text>
+<line x1="72" y1="217.00" x2="930" y2="217.00" stroke="#d7dde8"/>
+<text x="64" y="221.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">12.5</text>
+<line x1="72" y1="134.50" x2="930" y2="134.50" stroke="#d7dde8"/>
+<text x="64" y="138.50" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">19.0</text>
+<line x1="72" y1="52.00" x2="930" y2="52.00" stroke="#d7dde8"/>
+<text x="64" y="56.00" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#465166">25.6</text>
+<text x="72.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">1</text>
+<text x="189.76" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">8</text>
+<text x="324.35" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">16</text>
+<text x="458.94" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">24</text>
+<text x="593.53" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">32</text>
+<text x="728.12" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">40</text>
+<text x="862.71" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">48</text>
+<text x="930.00" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#465166">52</text>
+<polyline points="72.00,101.75 88.82,96.70 105.65,97.72 122.47,107.70 139.29,103.00 156.12,96.02 172.94,110.55 189.76,110.24 206.59,99.06 223.41,97.72 240.24,99.06 257.06,92.08 273.88,100.01 290.71,93.56 307.53,88.71 324.35,85.24 341.18,92.82 358.00,102.44 374.82,90.47 391.65,89.13 408.47,97.34 425.29,87.94 442.12,92.71 458.94,94.66 475.76,90.33 492.59,74.76 509.41,88.71 526.24,90.59 543.06,89.13 559.88,82.89 576.71,92.58 593.53,90.82 610.35,79.57 627.18,82.97 644.00,90.73 660.82,85.46 677.65,91.92 694.47,86.79 711.29,94.66 728.12,102.44 744.94,83.68 761.76,102.10 778.59,92.08 795.41,104.49 812.24,101.41 829.06,101.75 845.88,91.88 862.71,90.11 879.53,97.89 896.35,92.23 913.18,104.83 930.00,104.83" fill="none" stroke="#b33a3a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<polyline points="72.00,249.17 88.82,249.17 105.65,249.17 122.47,249.17 139.29,249.17 156.12,249.17 172.94,249.17 189.76,249.17 206.59,249.17 223.41,249.17 240.24,249.17 257.06,249.17 273.88,249.17 290.71,249.17 307.53,249.17 324.35,249.17 341.18,249.17 358.00,249.17 374.82,249.17 391.65,249.17 408.47,249.17 425.29,249.17 442.12,249.17 458.94,249.17 475.76,249.17 492.59,249.17 509.41,249.17 526.24,249.17 543.06,249.17 559.88,249.17 576.71,249.17 593.53,249.17 610.35,249.17 627.18,249.17 644.00,249.17 660.82,249.17 677.65,249.17 694.47,249.17 711.29,249.17 728.12,249.17 744.94,249.17 761.76,249.17 778.59,249.17 795.41,249.17 812.24,249.17 829.06,249.17 845.88,249.17 862.71,249.17 879.53,249.17 896.35,249.17 913.18,249.17 930.00,249.17" fill="none" stroke="#3a536f" stroke-width="1.5"/>
+<polyline points="72.00,357.25 88.82,357.85 105.65,357.91 122.47,359.24 139.29,358.20 156.12,357.82 172.94,358.62 189.76,358.61 206.59,357.98 223.41,357.91 240.24,357.98 257.06,356.68 273.88,357.15 290.71,356.77 307.53,356.48 324.35,356.28 341.18,356.72 358.00,357.29 374.82,357.51 391.65,355.46 408.47,355.97 425.29,356.44 442.12,355.68 458.94,355.81 475.76,355.54 492.59,354.56 509.41,356.48 526.24,356.59 543.06,355.46 559.88,356.14 576.71,357.62 593.53,357.53 610.35,354.86 627.18,355.08 644.00,355.56 660.82,355.23 677.65,355.64 694.47,356.37 711.29,355.81 728.12,357.29 744.94,356.18 761.76,357.27 778.59,356.68 795.41,357.41 812.24,357.23 829.06,357.25 845.88,357.59 862.71,357.49 879.53,357.02 896.35,357.61 913.18,357.43 930.00,357.43" fill="none" stroke="#b33a3a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<polyline points="72.00,277.41 88.82,204.24 105.65,220.16 122.47,303.34 139.29,268.13 156.12,280.82 172.94,212.70 189.76,285.56 206.59,205.67 223.41,281.38 240.24,236.14 257.06,307.07 273.88,325.00 290.71,192.26 307.53,239.33 324.35,237.70 341.18,191.79 358.00,245.79 374.82,278.97 391.65,302.19 408.47,304.25 425.29,205.41 442.12,180.37 458.94,181.71 475.76,249.46 492.59,317.26 509.41,205.86 526.24,290.09 543.06,319.95 559.88,253.67 576.71,279.67 593.53,200.64 610.35,281.45 627.18,318.79 644.00,284.94 660.82,319.26 677.65,302.89 694.47,255.28 711.29,251.35 728.12,325.43 744.94,305.09 761.76,293.48 778.59,240.92 795.41,309.99 812.24,277.28 829.06,245.47 845.88,310.70 862.71,247.39 879.53,227.46 896.35,263.94 913.18,278.49 930.00,167.98" fill="none" stroke="#145da0" stroke-width="2"/>
+<circle cx="72.00" cy="277.41" r="2.4" fill="#145da0"><title>Week 1: 7.643 Reports per 1,000</title></circle>
+<circle cx="88.82" cy="204.24" r="2.4" fill="#145da0"><title>Week 2: 13.480 Reports per 1,000</title></circle>
+<circle cx="105.65" cy="220.16" r="2.4" fill="#145da0"><title>Week 3: 12.210 Reports per 1,000</title></circle>
+<circle cx="122.47" cy="303.34" r="2.4" fill="#145da0"><title>Week 4: 5.574 Reports per 1,000</title></circle>
+<circle cx="139.29" cy="268.13" r="2.4" fill="#145da0"><title>Week 5: 8.383 Reports per 1,000</title></circle>
+<circle cx="156.12" cy="280.82" r="2.4" fill="#145da0"><title>Week 6: 7.371 Reports per 1,000</title></circle>
+<circle cx="172.94" cy="212.70" r="2.4" fill="#145da0"><title>Week 7: 12.806 Reports per 1,000</title></circle>
+<circle cx="189.76" cy="285.56" r="2.4" fill="#145da0"><title>Week 8: 6.993 Reports per 1,000</title></circle>
+<circle cx="206.59" cy="205.67" r="2.4" fill="#145da0"><title>Week 9: 13.366 Reports per 1,000</title></circle>
+<circle cx="223.41" cy="281.38" r="2.4" fill="#145da0"><title>Week 10: 7.326 Reports per 1,000</title></circle>
+<circle cx="240.24" cy="236.14" r="2.4" fill="#145da0"><title>Week 11: 10.936 Reports per 1,000</title></circle>
+<circle cx="257.06" cy="307.07" r="2.4" fill="#145da0"><title>Week 12: 5.277 Reports per 1,000</title></circle>
+<circle cx="273.88" cy="325.00" r="2.4" fill="#145da0"><title>Week 13: 3.846 Reports per 1,000</title></circle>
+<circle cx="290.71" cy="192.26" r="2.4" fill="#145da0"><title>Week 14: 14.436 Reports per 1,000</title></circle>
+<circle cx="307.53" cy="239.33" r="2.4" fill="#145da0"><title>Week 15: 10.681 Reports per 1,000</title></circle>
+<circle cx="324.35" cy="237.70" r="2.4" fill="#145da0"><title>Week 16: 10.811 Reports per 1,000</title></circle>
+<circle cx="341.18" cy="191.79" r="2.4" fill="#145da0"><title>Week 17: 14.474 Reports per 1,000</title></circle>
+<circle cx="358.00" cy="245.79" r="2.4" fill="#145da0"><title>Week 18: 10.165 Reports per 1,000</title></circle>
+<circle cx="374.82" cy="278.97" r="2.4" fill="#145da0"><title>Week 19: 7.519 Reports per 1,000</title></circle>
+<circle cx="391.65" cy="302.19" r="2.4" fill="#145da0"><title>Week 20: 5.666 Reports per 1,000</title></circle>
+<circle cx="408.47" cy="304.25" r="2.4" fill="#145da0"><title>Week 21: 5.502 Reports per 1,000</title></circle>
+<circle cx="425.29" cy="205.41" r="2.4" fill="#145da0"><title>Week 22: 13.387 Reports per 1,000</title></circle>
+<circle cx="442.12" cy="180.37" r="2.4" fill="#145da0"><title>Week 23: 15.385 Reports per 1,000</title></circle>
+<circle cx="458.94" cy="181.71" r="2.4" fill="#145da0"><title>Week 24: 15.278 Reports per 1,000</title></circle>
+<circle cx="475.76" cy="249.46" r="2.4" fill="#145da0"><title>Week 25: 9.873 Reports per 1,000</title></circle>
+<circle cx="492.59" cy="317.26" r="2.4" fill="#145da0"><title>Week 26: 4.464 Reports per 1,000</title></circle>
+<circle cx="509.41" cy="205.86" r="2.4" fill="#145da0"><title>Week 27: 13.351 Reports per 1,000</title></circle>
+<circle cx="526.24" cy="290.09" r="2.4" fill="#145da0"><title>Week 28: 6.631 Reports per 1,000</title></circle>
+<circle cx="543.06" cy="319.95" r="2.4" fill="#145da0"><title>Week 29: 4.249 Reports per 1,000</title></circle>
+<circle cx="559.88" cy="253.67" r="2.4" fill="#145da0"><title>Week 30: 9.537 Reports per 1,000</title></circle>
+<circle cx="576.71" cy="279.67" r="2.4" fill="#145da0"><title>Week 31: 7.463 Reports per 1,000</title></circle>
+<circle cx="593.53" cy="200.64" r="2.4" fill="#145da0"><title>Week 32: 13.767 Reports per 1,000</title></circle>
+<circle cx="610.35" cy="281.45" r="2.4" fill="#145da0"><title>Week 33: 7.321 Reports per 1,000</title></circle>
+<circle cx="627.18" cy="318.79" r="2.4" fill="#145da0"><title>Week 34: 4.342 Reports per 1,000</title></circle>
+<circle cx="644.00" cy="284.94" r="2.4" fill="#145da0"><title>Week 35: 7.042 Reports per 1,000</title></circle>
+<circle cx="660.82" cy="319.26" r="2.4" fill="#145da0"><title>Week 36: 4.304 Reports per 1,000</title></circle>
+<circle cx="677.65" cy="302.89" r="2.4" fill="#145da0"><title>Week 37: 5.610 Reports per 1,000</title></circle>
+<circle cx="694.47" cy="255.28" r="2.4" fill="#145da0"><title>Week 38: 9.409 Reports per 1,000</title></circle>
+<circle cx="711.29" cy="251.35" r="2.4" fill="#145da0"><title>Week 39: 9.722 Reports per 1,000</title></circle>
+<rect x="724.12" y="321.43" width="8" height="8" fill="#c43b32" stroke="#172033"><title>Week 40 signal: 3.812 Reports per 1,000</title></rect>
+<text x="728.12" y="317.43" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#8c1d18">S</text>
+<circle cx="744.94" cy="305.09" r="2.4" fill="#145da0"><title>Week 41: 5.435 Reports per 1,000</title></circle>
+<circle cx="761.76" cy="293.48" r="2.4" fill="#145da0"><title>Week 42: 6.361 Reports per 1,000</title></circle>
+<circle cx="778.59" cy="240.92" r="2.4" fill="#145da0"><title>Week 43: 10.554 Reports per 1,000</title></circle>
+<circle cx="795.41" cy="309.99" r="2.4" fill="#145da0"><title>Week 44: 5.044 Reports per 1,000</title></circle>
+<circle cx="812.24" cy="277.28" r="2.4" fill="#145da0"><title>Week 45: 7.653 Reports per 1,000</title></circle>
+<circle cx="829.06" cy="245.47" r="2.4" fill="#145da0"><title>Week 46: 10.191 Reports per 1,000</title></circle>
+<circle cx="845.88" cy="310.70" r="2.4" fill="#145da0"><title>Week 47: 4.988 Reports per 1,000</title></circle>
+<circle cx="862.71" cy="247.39" r="2.4" fill="#145da0"><title>Week 48: 10.038 Reports per 1,000</title></circle>
+<circle cx="879.53" cy="227.46" r="2.4" fill="#145da0"><title>Week 49: 11.628 Reports per 1,000</title></circle>
+<circle cx="896.35" cy="263.94" r="2.4" fill="#145da0"><title>Week 50: 8.717 Reports per 1,000</title></circle>
+<circle cx="913.18" cy="278.49" r="2.4" fill="#145da0"><title>Week 51: 7.557 Reports per 1,000</title></circle>
+<circle cx="930.00" cy="167.98" r="2.4" fill="#145da0"><title>Week 52: 16.373 Reports per 1,000</title></circle>
+<text x="501.00" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#172033">Week</text>
+<text x="15" y="220.00" transform="rotate(-90 15 220.00)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#172033">Reports per 1,000</text>
+<rect x="735" y="20" width="8" height="8" fill="#c43b32" stroke="#172033"/><text x="749" y="28" font-family="Arial, sans-serif" font-size="10" fill="#172033">S = predeclared signal</text>
+</svg>

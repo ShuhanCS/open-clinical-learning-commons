@@ -1,0 +1,25 @@
+module_id: oclc-app3-03
+module_version: 0.1.0
+commons_release: 0.68.0
+service_id: CGH-ED-01
+service_status: fictional
+upstream:
+  module_id: oclc-app3-02
+  module_version: 0.1.0
+  commons_release: 0.67.0
+  manifest: upstream/module02-handoff-manifest.csv
+  files: 14
+accepted_evidence:
+  encounters: 43628
+  completed_encounters: 39975
+  weeks: 52
+  shifts: 1092
+  query_checks: 30
+analytic_contract:
+  baseline: weeks 1 through 24
+  evaluation: weeks 25 through 52
+  target: evening shifts in weeks 35 through 44
+  outputs: 13
+privacy: no real patient, clinician, workforce, or hospital data
+public_source_role: inherited concept context only; no public-to-synthetic row linkage
+claim_limit: bounded synthetic stage diagnosis only; no root-cause, staffing, clinical, causal, automated, or implementation authority

@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.67.0 through Module 02.
+- Current Commons release: 0.68.0 through Module 03.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -273,6 +273,7 @@ The build must preserve seeded defects in a raw layer, repair them through decla
 - Specification: `docs/curriculum/courses/APP-3/modules/03-variation-safety-bottlenecks-spec.md`.
 - Decision: whether the evidence supports one bounded process diagnosis and immediate escalation rule.
 - Submission: 20-point performance diagnostic and 40-point Week 3 release.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.68.0`; the separate Week 3 checkpoint remains pending.
 
 Learners map the service, locate rework and handoffs, distinguish common from special cause, choose a chart that matches the measure distribution and denominator, calculate centerlines and limits, apply predeclared signal rules, preserve low-count limits, and compare prespecified shifts or acuity segments.
 

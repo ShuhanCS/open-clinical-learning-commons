@@ -1,0 +1,15 @@
+relative_path,source_path,bytes,sha256,role
+upstream/build-report.json,outputs/build-report.json,4760,512029fd3703000e356643d2eff7622dda85f3679e28617f0d12d618221ad516,accepted APP-3 Module 02 handoff
+upstream/encounter-measures.csv.gz,outputs/encounter-measures.csv.gz,1618877,a996474197924b2a06dcc7e74989207f6fbe8d06d9a8c88ef6d14f5a2a470b7c,accepted APP-3 Module 02 handoff
+upstream/event-validation.md,reference/event-validation.md,969,4194f83808c4c956c4fb649b063929498efe233cd945fd55a7c544f40c93e42f,accepted APP-3 Module 02 handoff
+upstream/measure-specifications.csv,reference/measure-specifications.csv,7572,407bb7b22f89dfda32558942337d3ae4f9634a4fc4b7e6c420ef321a271dca2e,accepted APP-3 Module 02 handoff
+upstream/module02-operational-contract.json,operational-contract.json,1158,e9363e5388532d88dd79ed9c0335e05e53cbf22c8282c862d192e1d168d05305,accepted APP-3 Module 02 handoff
+upstream/module02-release.json,release.json,470,f4715966d9ad986172585552316d99235aeef2f273944d60b8c70618b4856efb,accepted APP-3 Module 02 handoff
+upstream/operational-source-manifest.csv,data/operational-source-manifest.csv,2553,e489afcc2126789d57f17e821c38e534eb3c154def6ca5ec818b7d46eb1f6ce4,accepted APP-3 Module 02 handoff
+upstream/progression-decision.md,reference/progression-decision.md,1940,2193f761b78df6e38f85ba5b563965db52d8f1bcf0d965e7b6ef56a8bd8aac15,accepted APP-3 Module 02 handoff
+upstream/query-checks.csv,outputs/query-checks.csv,1159,b4b053f33b9500404c21354fba9f831d4798fb88cea51882ee43ba6394a7d172,accepted APP-3 Module 02 handoff
+upstream/safety-diagnostics.csv,outputs/safety-diagnostics.csv,459,28323242cb60c434e1dc51dd461555203d03df7894c9e4a07becfb27df3f7822,accepted APP-3 Module 02 handoff
+upstream/safety-events.csv.gz,data/raw/safety-events.csv.gz,17143,9cb559e111907bc07219751051e31c4275f7a20455d06ef998f2eebc962f6aaf,accepted APP-3 Module 02 handoff
+upstream/shift-metrics.csv,outputs/shift-metrics.csv,153192,cd2ca9163acc7c79572b0014fd54f9726614c1cfd352a4efa11fd1bbedeacd57,accepted APP-3 Module 02 handoff
+upstream/subgroup-support.csv,outputs/subgroup-support.csv,447,1e3367307e25be194b05851d6959ff8a249aa6c173b17f65b4eb0d2b88e5e9e6,accepted APP-3 Module 02 handoff
+upstream/weekly-metrics.csv,outputs/weekly-metrics.csv,5395,61c8fd5ec4d47ce97c3d1d38297b865a06d2ae9f6f9ee916406bccaba139e00d,accepted APP-3 Module 02 handoff

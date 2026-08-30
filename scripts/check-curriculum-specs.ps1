@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.67.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.68.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2816,8 +2816,8 @@ if (
     $app3Content -match '(?im)[A-Z]:\\Users\\' -or
     $app3SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app3PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app3Content -notmatch 'Current Commons release: 0\.67\.0' -or
-    $app3PackageContent -notmatch 'Current Commons release: 0\.67\.0' -or
+    $app3Content -notmatch 'Current Commons release: 0\.68\.0' -or
+    $app3PackageContent -notmatch 'Current Commons release: 0\.68\.0' -or
     $app3Content -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '26,907' -or
@@ -2842,12 +2842,12 @@ if (
     $app3Content -notmatch 'Joe Joseph, MD, SFHM' -or
     $app3Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
     $app3Content -notmatch 'Module 01 pins all three complete public snapshots' -or
-    $app3PackageContent -notmatch 'Modules 01 and 02 complete' -or
+    $app3PackageContent -notmatch 'Modules 01 through 03 complete' -or
     $app3Content -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.67.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.68.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -3067,6 +3067,140 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 02 measure-builder self-check fai
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 02 workspace-builder self-check failed.' }
 & python (Join-Path $app3Module02Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 02 validator self-check failed.' }
+
+$app3Module03Root = Join-Path $repo 'courses\clinical-performance-improvement\modules\03-variation-safety-bottlenecks'
+$app3Module03Spec = Join-Path $repo 'docs\curriculum\courses\APP-3\modules\03-variation-safety-bottlenecks-spec.md'
+$app3Module03Files = @(
+    '.gitattributes',
+    'README.md',
+    'VERSION',
+    'assessment.md',
+    'build_diagnostic.py',
+    'build_workspace.py',
+    'data-spec.md',
+    'diagnostic-contract.json',
+    'freeze_upstream.py',
+    'instructor-notes.md',
+    'release.json',
+    'source-record.yml',
+    'validate_workspace.py',
+    'verify_control_charts.R',
+    'upstream\module02-handoff-manifest.csv',
+    'upstream\module02-release.json',
+    'upstream\module02-operational-contract.json',
+    'upstream\operational-source-manifest.csv',
+    'upstream\encounter-measures.csv.gz',
+    'upstream\weekly-metrics.csv',
+    'upstream\shift-metrics.csv',
+    'upstream\safety-events.csv.gz',
+    'upstream\safety-diagnostics.csv',
+    'upstream\subgroup-support.csv',
+    'outputs\variation-series.csv',
+    'outputs\control-limits.csv',
+    'outputs\signal-audit.csv',
+    'outputs\weekly-safety.csv',
+    'outputs\safety-surveillance.csv',
+    'outputs\process-stage-comparison.csv',
+    'outputs\bottleneck-reconciliation.csv',
+    'outputs\subgroup-window-support.csv',
+    'outputs\diagnostic-findings.json',
+    'outputs\weekly-arrival-to-clinician-xmr.svg',
+    'outputs\weekly-left-before-seen-p-chart.svg',
+    'outputs\weekly-incident-report-u-chart.svg',
+    'outputs\process-stage-comparison.svg',
+    'reference\process-map.csv',
+    'reference\chart-selection.csv',
+    'reference\signal-rules.csv',
+    'reference\performance-diagnostic.md',
+    'reference\safety-interpretation.md',
+    'reference\bottleneck-interpretation.md',
+    'reference\subgroup-support-interpretation.md',
+    'reference\escalation-rule.md',
+    'reference\week3-score.csv',
+    'reference\gate-results.csv',
+    'reference\ai-use.md',
+    'reference\progression-decision.md',
+    'reference\reproducibility-check.md',
+    'template\process-map.csv',
+    'template\chart-selection.csv',
+    'template\signal-rules.csv',
+    'template\performance-diagnostic.md',
+    'template\safety-interpretation.md',
+    'template\bottleneck-interpretation.md',
+    'template\subgroup-support-interpretation.md',
+    'template\escalation-rule.md',
+    'template\week3-score.csv',
+    'template\gate-results.csv',
+    'template\ai-use.md',
+    'template\progression-decision.md',
+    'template\reproducibility-check.md'
+)
+$app3Module03Missing = @($app3Module03Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $app3Module03Root $_))
+})
+if (-not (Test-Path -LiteralPath $app3Module03Spec) -or $app3Module03Missing.Count -gt 0) {
+    throw "APP-3 Module 03 is missing its specification or package files: $($app3Module03Missing -join ', ')."
+}
+$app3Module03Content = Get-Content -Raw -LiteralPath $app3Module03Spec
+$app3Module03Sections = [regex]::Matches($app3Module03Content, '(?m)^## \d+\.').Count
+$app3Module03Release = Get-Content -Raw -LiteralPath (Join-Path $app3Module03Root 'release.json') | ConvertFrom-Json
+$app3Module03Contract = Get-Content -Raw -LiteralPath (Join-Path $app3Module03Root 'diagnostic-contract.json') | ConvertFrom-Json
+$app3Module03Findings = Get-Content -Raw -LiteralPath (Join-Path $app3Module03Root 'outputs\diagnostic-findings.json') | ConvertFrom-Json
+$app3Module03Variation = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'outputs\variation-series.csv'))
+$app3Module03Signals = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'outputs\signal-audit.csv'))
+$app3Module03Safety = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'outputs\safety-surveillance.csv'))
+$app3Module03Stages = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'outputs\process-stage-comparison.csv'))
+$app3Module03Bottlenecks = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'outputs\bottleneck-reconciliation.csv'))
+$app3Module03Subgroups = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'outputs\subgroup-window-support.csv'))
+$app3Module03Gates = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'reference\gate-results.csv'))
+$app3Module03Score = @(Import-Csv -LiteralPath (Join-Path $app3Module03Root 'reference\week3-score.csv'))
+if (
+    $app3Module03Sections -ne 21 -or
+    $app3Module03Content -match '[—–]' -or
+    $app3Module03Content -notmatch '97\.636958' -or
+    $app3Module03Content -notmatch '75\.2796' -or
+    $app3Module03Content -notmatch 'continue with conditions' -or
+    $app3Module03Content -notmatch '259' -or
+    $app3Module03Content -notmatch '130' -or
+    $app3Module03Release.module_id -ne 'oclc-app3-03' -or
+    $app3Module03Release.module_version -ne '0.1.0' -or
+    $app3Module03Release.commons_release -ne '0.68.0' -or
+    $app3Module03Release.reference_score -ne 20 -or
+    $app3Module03Release.reference_gates_passed -ne 18 -or
+    $app3Module03Release.reference_progression -ne 'continue with conditions' -or
+    $app3Module03Contract.module.hours -ne 16.5 -or
+    $app3Module03Contract.upstream.accepted_encounters -ne 43628 -or
+    $app3Module03Contract.diagnostic.charts -ne 4 -or
+    $app3Module03Contract.diagnostic.signal_rules -ne 3 -or
+    $app3Module03Contract.diagnostic.signal_records -ne 9 -or
+    $app3Module03Contract.diagnostic.outputs -ne 13 -or
+    $app3Module03Contract.diagnostic.target_stage_median_minutes -ne 66.0 -or
+    $app3Module03Contract.assessment.week3_total_points -ne 40 -or
+    $app3Module03Findings.control_charts.signal_records -ne 9 -or
+    $app3Module03Findings.bounded_diagnosis.target_median_minutes -ne 66.0 -or
+    $app3Module03Findings.safety.known_true_events -ne 894 -or
+    $app3Module03Findings.subgroup.target_window_claim_status -ne 'not supported' -or
+    $app3Module03Variation.Count -ne 208 -or
+    $app3Module03Signals.Count -ne 9 -or
+    $app3Module03Safety.Count -ne 6 -or
+    $app3Module03Stages.Count -ne 20 -or
+    $app3Module03Bottlenecks.Count -ne 8 -or
+    $app3Module03Subgroups.Count -ne 6 -or
+    $app3Module03Gates.Count -ne 18 -or
+    @($app3Module03Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Module03Score.Count -ne 6 -or
+    [int]($app3Module03Score | Where-Object { $_.criterion_id -eq 'TOTAL' }).points_awarded -ne 20
+) {
+    throw 'APP-3 Module 03 specification, frozen handoff, diagnostic outputs, assessment, progression, or responsible-claim boundary does not match the 0.1.0 contract.'
+}
+& python (Join-Path $app3Module03Root 'freeze_upstream.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 03 upstream self-check failed.' }
+& python (Join-Path $app3Module03Root 'build_diagnostic.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 03 diagnostic self-check failed.' }
+& python (Join-Path $app3Module03Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 03 workspace-builder self-check failed.' }
+& python (Join-Path $app3Module03Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 03 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -4375,3 +4509,4 @@ Write-Output "APP-2 Module 07 passed: $app2Module07Sections contract sections an
 Write-Output "APP-2 final checkpoint passed: $app2Checkpoint03Sections contract sections and $($app2Checkpoint03Files.Count) required files."
 Write-Output "APP-3 course architecture passed: $app3Sections sections, $app3ModuleCount modules, $app3Hours hours, and $app3CheckpointCount checkpoints."
 Write-Output "APP-3 Module 02 passed: $app3Module02Sections contract sections and $($app3Module02Files.Count) required files."
+Write-Output "APP-3 Module 03 passed: $app3Module03Sections contract sections and $($app3Module03Files.Count) required files."

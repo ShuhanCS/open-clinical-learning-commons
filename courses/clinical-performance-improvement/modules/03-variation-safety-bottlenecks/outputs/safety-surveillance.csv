@@ -1,0 +1,7 @@
+event_class,completed_encounters,reviewed_candidates,known_true_events,trigger_true_positives,incident_true_positives,trigger_false_positives,trigger_sensitivity_percent,incident_capture_percent,trigger_specificity_percent,surveillance_limit,synthetic_flag
+overall,39975,1273,894,673,358,379,75.2796,40.0447,99.0302,synthetic detection performance; not prevalence,1
+error,39975,333,333,225,79,0,67.5676,23.7237,,synthetic detection performance; not prevalence,1
+near_miss,39975,254,254,177,74,0,69.685,29.1339,,synthetic detection performance; not prevalence,1
+adverse_event,39975,217,217,183,131,0,84.3318,60.3687,,synthetic detection performance; not prevalence,1
+harm,39975,90,90,88,74,0,97.7778,82.2222,,synthetic detection performance; not prevalence,1
+reviewed_non_event,39975,379,0,0,0,379,,,,reviewed non-event,1
