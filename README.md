@@ -6,8 +6,10 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.9.0`
-- Status: The public preview has an all-courses home page, a seven-module view for every course, and a routable page for all 77 roadmap modules. The ten-family clinical visualization atlas and Module 04 remain the first runnable learning release. Required human reviews are pending.
+- Current version: `0.10.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The approved master architecture now separates the two technical foundations, preserves the capstones, defines a domain-specific half-term rhythm for the seven applied courses, and keeps DA-730 as a standalone visualization course. Module-level rebuilding is in progress.
+
+The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
 ## Program course path
 
