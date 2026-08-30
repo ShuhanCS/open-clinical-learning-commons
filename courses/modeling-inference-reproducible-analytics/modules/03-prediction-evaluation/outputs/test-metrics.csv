@@ -1,0 +1,17 @@
+model_id,metric,point,lower95_stratified_bootstrap,upper95_stratified_bootstrap,rows,positives,bootstrap_replicates,interpretation_limit
+BASE,roc_auc,0.50000000,0.50000000,0.50000000,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+BASE,average_precision,0.05333333,0.05333333,0.05333333,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+BASE,brier,0.05388473,0.05388473,0.05388473,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+BASE,log_loss,0.22897744,0.22897744,0.22897744,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+BASE,sensitivity,1.00000000,1.00000000,1.00000000,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+BASE,specificity,0.00000000,0.00000000,0.00000000,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+BASE,ppv,0.05333333,0.05333333,0.05333333,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+BASE,npv,0.00000000,0.00000000,0.00000000,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,roc_auc,0.58802817,0.26760563,0.91549296,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,average_precision,0.14682471,0.05532198,0.58716356,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,brier,0.05097579,0.04638885,0.05459675,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,log_loss,0.21218264,0.19050467,0.22977890,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,sensitivity,0.50000000,0.00000000,1.00000000,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,specificity,0.67605634,0.56338028,0.77464789,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,ppv,0.08000000,0.00000000,0.16666667,75,4,2000,four positive test outcomes; interval is conditional teaching evidence
+ML01,npv,0.96000000,0.92307692,1.00000000,75,4,2000,four positive test outcomes; interval is conditional teaching evidence

@@ -1,0 +1,5 @@
+model_id,rows,positives,negatives,roc_auc,average_precision,brier,log_loss,eligible,reason
+BASE,75,7,68,0.50000000,0.09333333,0.08495615,0.31195460,yes,declared comparison
+LOG01,75,7,68,0.44957983,0.09196407,0.08615760,0.31945157,yes,declared comparison
+ML01,75,7,68,0.58613445,0.15806484,0.08468750,0.30994807,yes,declared comparison
+LEAK01,75,7,68,1.00000000,1.00000000,0.00000014,0.00015329,no,prohibited post-index and outcome-derived predictors

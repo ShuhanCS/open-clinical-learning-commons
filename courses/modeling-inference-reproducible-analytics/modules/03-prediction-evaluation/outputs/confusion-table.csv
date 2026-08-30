@@ -1,0 +1,5 @@
+cell,observed,predicted,n
+true_negative,0,0,48
+false_positive,0,1,23
+false_negative,1,0,2
+true_positive,1,1,2

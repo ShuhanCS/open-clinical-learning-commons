@@ -1,0 +1,23 @@
+check_id,check,observed,expected,status
+CHK01,train rows,224,224,pass
+CHK02,validation rows,75,75,pass
+CHK03,test rows,75,75,pass
+CHK04,train positives,25,25,pass
+CHK05,validation positives,7,7,pass
+CHK06,test positives,4,4,pass
+CHK07,validation comparison models,4,4,pass
+CHK08,selected model,ML01,ML01,pass
+CHK09,leaked model rejected,never eligible,never eligible,pass
+CHK10,threshold locked,0.08513264,0.08513264,pass
+CHK11,test prediction rows,75,75,pass
+CHK12,test confusion total,75,75,pass
+CHK13,test true negatives,48,48,pass
+CHK14,test false positives,23,23,pass
+CHK15,test false negatives,2,2,pass
+CHK16,test true positives,2,2,pass
+CHK17,calibration groups,5,5,pass
+CHK18,calibration rows,75,75,pass
+CHK19,transformed features,15,15,pass
+CHK20,subgroup rows,10,10,pass
+CHK21,test outcomes conserved,4,4,pass
+CHK22,bootstrap replicates,2000,2000,pass

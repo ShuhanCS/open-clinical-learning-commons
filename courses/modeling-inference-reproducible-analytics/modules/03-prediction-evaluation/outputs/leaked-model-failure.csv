@@ -1,0 +1,2 @@
+model_id,prohibited_fields,validation_roc_auc,validation_average_precision,validation_brier,failure,selection_eligibility,required_action
+LEAK01,next_30d_state|endpoint_90d,1.00000000,1.00000000,0.00000014,post-index and outcome-derived information violates Module 01 prediction time,never eligible,reject and retain only as a critique fixture

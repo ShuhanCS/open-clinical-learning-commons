@@ -1,0 +1,11 @@
+field,category,rows,positives,negatives,roc_auc,sensitivity,specificity,ppv,suppressed,reason
+gender,F,33,2,31,0.66129032,0.50000000,0.70967742,0.10000000,no,descriptive teaching estimate; no fairness ranking
+gender,M,42,2,40,0.55000000,0.50000000,0.65000000,0.06666667,no,descriptive teaching estimate; no fairness ranking
+race,asian,7,0,7,,,,,yes,fewer than 20 rows or fewer than 2 outcomes/nonoutcomes
+race,black,8,0,8,,,,,yes,fewer than 20 rows or fewer than 2 outcomes/nonoutcomes
+race,native,1,0,1,,,,,yes,fewer than 20 rows or fewer than 2 outcomes/nonoutcomes
+race,white,59,4,55,0.60454545,0.50000000,0.74545455,0.12500000,no,descriptive teaching estimate; no fairness ranking
+ethnicity,hispanic,7,0,7,,,,,yes,fewer than 20 rows or fewer than 2 outcomes/nonoutcomes
+ethnicity,nonhispanic,68,4,64,0.60937500,0.50000000,0.70312500,0.09523810,no,descriptive teaching estimate; no fairness ranking
+index_class,emergency,69,3,66,0.53535354,0.33333333,0.72727273,0.05263158,no,descriptive teaching estimate; no fairness ranking
+index_class,inpatient,6,1,5,,,,,yes,fewer than 20 rows or fewer than 2 outcomes/nonoutcomes

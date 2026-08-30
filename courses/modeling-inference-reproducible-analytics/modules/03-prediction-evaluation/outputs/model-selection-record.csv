@@ -1,0 +1,5 @@
+model_id,eligible,brier_not_worse_than_baseline,roc_auc_at_least_0_55,average_precision_not_worse_than_baseline,passes_rule,selection_status
+BASE,yes,not applicable,not applicable,not applicable,comparator,retained baseline
+LOG01,yes,no,no,no,no,not selected
+ML01,yes,yes,yes,yes,yes,selected
+LEAK01,no,not applicable,not applicable,not applicable,no,rejected before performance review

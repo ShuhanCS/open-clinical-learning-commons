@@ -1,0 +1,16 @@
+model_id,fold,fit_rows,holdout_rows,holdout_positives,baseline_probability,roc_auc,average_precision,brier,log_loss,partition_rule
+BASE,1,179,45,5,0.11173184,0.50000000,0.11111111,0.09876582,0.34883404,five-fold stratified resampling inside training only
+LOG01,1,179,45,5,0.11173184,0.56000000,0.31322055,0.10133425,0.36469404,five-fold stratified resampling inside training only
+ML01,1,179,45,5,0.11173184,0.58500000,0.31636769,0.09768332,0.34489021,five-fold stratified resampling inside training only
+BASE,2,179,45,5,0.11173184,0.50000000,0.11111111,0.09876582,0.34883404,five-fold stratified resampling inside training only
+LOG01,2,179,45,5,0.11173184,0.83500000,0.72941176,0.07741928,0.27116324,five-fold stratified resampling inside training only
+ML01,2,179,45,5,0.11173184,0.80500000,0.50259740,0.09160824,0.31700343,five-fold stratified resampling inside training only
+BASE,3,179,45,5,0.11173184,0.50000000,0.11111111,0.09876582,0.34883404,five-fold stratified resampling inside training only
+LOG01,3,179,45,5,0.11173184,0.71750000,0.52564103,0.07583830,0.27810161,five-fold stratified resampling inside training only
+ML01,3,179,45,5,0.11173184,0.88000000,0.58984127,0.08821026,0.30127565,five-fold stratified resampling inside training only
+BASE,4,179,45,5,0.11173184,0.50000000,0.11111111,0.09876582,0.34883404,five-fold stratified resampling inside training only
+LOG01,4,179,45,5,0.11173184,0.80250000,0.56559140,0.06832480,0.25515181,five-fold stratified resampling inside training only
+ML01,4,179,45,5,0.11173184,0.81500000,0.65213904,0.09153013,0.31689195,five-fold stratified resampling inside training only
+BASE,5,180,44,5,0.11111111,0.50000000,0.11363636,0.10072952,0.35408321,five-fold stratified resampling inside training only
+LOG01,5,180,44,5,0.11111111,0.50512821,0.31545631,0.08794629,0.33122789,five-fold stratified resampling inside training only
+ML01,5,180,44,5,0.11111111,0.62564103,0.42749824,0.09542899,0.33718236,five-fold stratified resampling inside training only

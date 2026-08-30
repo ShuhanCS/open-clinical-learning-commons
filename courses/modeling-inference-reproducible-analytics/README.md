@@ -12,9 +12,9 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - Continuing forecast case: the pinned 6,208-row CDC NHSN jurisdiction-week public release
 - Final deliverable: a reproducible model or agent-assisted analytics package with a model card
 - Course specification status: complete candidate
-- Module package status: Modules 01 and 02 are runnable release candidates
+- Module package status: Modules 01 through 03 are runnable release candidates
 - Course package version: 0.1.0
-- Commons release: 0.40.0
+- Commons release: 0.41.0
 
 ## Seven technical modules
 
@@ -32,10 +32,14 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - [Module 01 durable specification](../../docs/curriculum/courses/FND-2/modules/01-aims-reproducible-workspace-spec.md)
 - [Module 02: Regression models and interpretation](modules/02-regression-interpretation/README.md)
 - [Module 02 durable specification](../../docs/curriculum/courses/FND-2/modules/02-regression-interpretation-spec.md)
+- [Module 03: Prediction workflows and evaluation](modules/03-prediction-evaluation/README.md)
+- [Module 03 durable specification](../../docs/curriculum/courses/FND-2/modules/03-prediction-evaluation-spec.md)
 
 Module 01 preserves the accepted 374-row FND-1 table, assigns all 29 source fields and five derived fields a role, freezes the 224/75/75 temporal split with 25/7/4 positive outcomes, and registers the training-prevalence baseline before model fitting. Its standard-library builder and validator create a protected learner workspace and reject incomplete submissions.
 
 Module 02 fits a conditional linear case on 69 training rows within the 111-row recorded-next-encounter subset and bounded logistic cases on 224 training rows with 25 outcomes. It reports exact formulas, model matrices, classical and HC3 uncertainty, diagnostics, nonlinear and interaction exercises, sparse-cell checks, paired R reading, and a quantity-correct Module 03 handoff.
+
+Module 03 fits all preprocessing inside training, compares the constant baseline, `LOG01`, one bounded random forest, and a deliberately leaked critique model, and applies a frozen validation rule. It selects `ML01`, locks threshold 0.08513264 before test, and reports the untouched 75-row test evidence: 48 true negatives, 23 false positives, 2 false negatives, and 2 true positives. Four test outcomes, subgroup suppression, accessible exact tables, and the teaching-only boundary remain binding.
 
 ## Three cumulative checkpoints
 

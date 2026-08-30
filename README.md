@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.40.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification and its first two runnable modules.
+- Current version: `0.41.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has a complete source-normalized course specification and its first three runnable modules.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -40,6 +40,8 @@ The separate second technical foundation is specified in [FND-2: Modeling, Infer
 Its first runnable unit is [FND-2 Module 01: Analytic aims and a reproducible modeling workspace](courses/modeling-inference-reproducible-analytics/modules/01-aims-reproducible-workspace/README.md), governed by the durable [Module 01 specification](docs/curriculum/courses/FND-2/modules/01-aims-reproducible-workspace-spec.md). It freezes the exact 374-row source, classifies all 34 source and derived fields, creates the 224/75/75 temporal split, and registers the training-prevalence baseline before any candidate model is fit.
 
 The second runnable unit is [FND-2 Module 02: Regression models and interpretation](courses/modeling-inference-reproducible-analytics/modules/02-regression-interpretation/README.md), governed by the durable [Module 02 specification](docs/curriculum/courses/FND-2/modules/02-regression-interpretation-spec.md). It fits bounded training-only linear and logistic cases, preserves structural blanks, exposes residual, influence, sparsity, and extreme-probability conditions, and keeps coefficients separate from causal or predictive-performance claims.
+
+The third runnable unit is [FND-2 Module 03: Prediction workflows and evaluation](courses/modeling-inference-reproducible-analytics/modules/03-prediction-evaluation/README.md), governed by the durable [Module 03 specification](docs/curriculum/courses/FND-2/modules/03-prediction-evaluation-spec.md). It fits preprocessing inside training only, compares the constant baseline, accepted logistic candidate, bounded random forest, and a prohibited leaked model, locks the selected model and threshold on validation, and preserves one-time test evidence with four outcomes and exact confusion counts.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -218,7 +220,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 ## Build order
 
 1. Build FND-1 as its own straight-through technical foundations course.
-2. Build FND-2 Module 01 from the complete separate straight-through course specification.
+2. Assemble the FND-2 Week 3 checkpoint from accepted Modules 01 through 03.
 3. Complete the named DA-730 human reviews before alpha promotion.
 
 ## Licensing

@@ -1,0 +1,27 @@
+record_version: 1.0.0
+module: oclc-fnd2-03
+source_modules: oclc-fnd2-01|oclc-fnd2-02
+source_module_versions: 0.1.0|0.1.0
+modeling_cohort_rows: 374
+modeling_cohort_fields: 34
+modeling_cohort_bytes: 138503
+modeling_cohort_sha256: 6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332
+split_registry_bytes: 51910
+split_registry_sha256: 05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1
+baseline_bytes: 306
+baseline_sha256: 613651013e397beeadc84b17482026ca7cb4674abf61bf521699d79af0a3c9af
+feature_role_bytes: 3766
+feature_role_sha256: 599f29ca612cb5f23aed277c56937af78c488ba952c2926faa94166f33449c83
+formula_registry_bytes: 771
+formula_registry_sha256: fc69d6146eec729969b571b535c13027e9b875d34dd99637f0dc0d9b934239a6
+model_matrix_bytes: 1535
+model_matrix_sha256: 7a91e166796ae1030518da95e49f6a19ecc687d7cf5784f76718509c0abc9c38
+assumption_register_bytes: 2181
+assumption_register_sha256: 7c6322667a383458a34aea49b687d1a6716aaaf0f780ccf060f1c99d671956e3
+original_source: synthea-csv-apr2020
+synthetic: true
+contains_real_patients: false
+source_url: https://synthea.mitre.org/downloads
+teaching_use: leakage-safe prediction resampling validation selection threshold locking test evaluation calibration and subgroup restraint
+claim_boundary: no real clinical population performance fairness utility safety or deployment inference
+refresh_policy: no silent refresh; changed input role split model rule threshold rule or decision boundary requires review and semantic-version decision

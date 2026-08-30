@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd2-03",
+    "title": "Prediction workflows and evaluation",
+    "version": "0.1.0",
+    "commons_release": "0.41.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "week": 3,
+    "hours": 16.5,
+    "week_3_component_points": 15
+  },
+  "decision": {
+    "owner": "clinical prediction and model-risk reviewer",
+    "question": "Does the locked prediction pipeline beat its simple baseline and provide credible enough evidence for validity review without claiming deployment readiness?",
+    "allowed": ["continue to validity review", "revise", "stop"],
+    "reference": "continue to validity review with conditions",
+    "checkpoint_1_progression": "allowed with recorded conditions"
+  },
+  "upstream": {
+    "modules": ["oclc-fnd2-01", "oclc-fnd2-02"],
+    "versions": ["0.1.0", "0.1.0"],
+    "modeling_cohort_rows": 374,
+    "modeling_cohort_fields": 34,
+    "modeling_cohort_sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332",
+    "split_registry_sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1",
+    "baseline_sha256": "613651013e397beeadc84b17482026ca7cb4674abf61bf521699d79af0a3c9af",
+    "feature_role_sha256": "599f29ca612cb5f23aed277c56937af78c488ba952c2926faa94166f33449c83",
+    "formula_registry_sha256": "fc69d6146eec729969b571b535c13027e9b875d34dd99637f0dc0d9b934239a6",
+    "model_matrix_sha256": "7a91e166796ae1030518da95e49f6a19ecc687d7cf5784f76718509c0abc9c38",
+    "assumption_register_sha256": "7c6322667a383458a34aea49b687d1a6716aaaf0f780ccf060f1c99d671956e3"
+  },
+  "partitions": {
+    "train": 224,
+    "validation": 75,
+    "test": 75,
+    "training_outcomes": 25,
+    "validation_outcomes": 7,
+    "test_outcomes": 4
+  },
+  "selection": {
+    "baseline_probability": "0.111607142857",
+    "model_id": "ML01",
+    "rule": "eligible candidate has Brier no worse than baseline, ROC AUC at least 0.55, and average precision no worse than baseline",
+    "locked_threshold": "0.08513264",
+    "test_opened_after_lock": true,
+    "leaked_model": "rejected before performance review"
+  },
+  "validation": {
+    "rows": 75,
+    "outcomes": 7,
+    "BASE": {"roc_auc": "0.50000000", "average_precision": "0.09333333", "brier": "0.08495615", "log_loss": "0.31195460"},
+    "LOG01": {"roc_auc": "0.44957983", "average_precision": "0.09196407", "brier": "0.08615760", "log_loss": "0.31945157"},
+    "ML01": {"roc_auc": "0.58613445", "average_precision": "0.15806484", "brier": "0.08468750", "log_loss": "0.30994807"},
+    "LEAK01": {"roc_auc": "1.00000000", "average_precision": "1.00000000", "brier": "0.00000014", "status": "never eligible"}
+  },
+  "test": {
+    "rows": 75,
+    "outcomes": 4,
+    "ML01": {
+      "roc_auc": "0.58802817",
+      "roc_auc_lower95": "0.26760563",
+      "roc_auc_upper95": "0.91549296",
+      "average_precision": "0.14682471",
+      "brier": "0.05097579",
+      "log_loss": "0.21218264",
+      "sensitivity": "0.50000000",
+      "specificity": "0.67605634",
+      "ppv": "0.08000000",
+      "npv": "0.96000000"
+    }
+  },
+  "test_confusion": {
+    "true_negative": 48,
+    "false_positive": 23,
+    "false_negative": 2,
+    "true_positive": 2
+  },
+  "outputs": {
+    "resampling-results.csv": {"rows": 15, "fields": 11, "bytes": 1996, "sha256": "d4fa7767dc2c9ff5d393eb1835574642074ff3c7ad9bdeb5e9e5d837598caefa"},
+    "validation-predictions.csv": {"rows": 300, "fields": 8, "bytes": 25106, "sha256": "ae486033900b22367f1055244d03961c05f37c030ec8462d721e66350a9221e3"},
+    "validation-comparison.csv": {"rows": 4, "fields": 10, "bytes": 450, "sha256": "c5d1375989cbf1cca9cd5664c1dbffa2d139081e01faa9b37997ab055a3127b1"},
+    "model-selection-record.csv": {"rows": 4, "fields": 7, "bytes": 386, "sha256": "477a1527d42ade4f6c5259492ea7b28838dc20fbe757ac3539f33d7b4d77b4d0"},
+    "threshold-table.csv": {"rows": 71, "fields": 10, "bytes": 4938, "sha256": "0855e495d327e51ddde4428e09ecb0a567997b61a4135156ae3f3be1d7086d76"},
+    "threshold-decision.csv": {"rows": 1, "fields": 5, "bytes": 234, "sha256": "e953fac6d048bb095b83691492da764a72bd597e5bd7a3b6d2a4994f57ba5af8"},
+    "test-predictions.csv": {"rows": 75, "fields": 8, "bytes": 7994, "sha256": "531c00d310292aeeaea476d1c94e128f5c81c34c2fc60e014d2c157e152b7438"},
+    "test-metrics.csv": {"rows": 16, "fields": 9, "bytes": 2187, "sha256": "9d43a8085e835cbf368962acc37b0bed00bdfacf68e73ce87d0b359dee490bc9"},
+    "confusion-table.csv": {"rows": 4, "fields": 4, "bytes": 110, "sha256": "a899fc8ebaee87fd2990354f6310c6feb87f748e17545c5c39c5a413e630be87"},
+    "calibration-table.csv": {"rows": 5, "fields": 8, "bytes": 644, "sha256": "fce4d9b0a05085ab51cb5af1c9a2dcb209a9fb2d099b3245650543a09c461b5c"},
+    "subgroup-metrics.csv": {"rows": 10, "fields": 11, "bytes": 1122, "sha256": "7f95ec1f99a1f9f9bae6af566798a4f3aab9107681fe7e79c1ce27a821e07d24"},
+    "transformed-feature-names.csv": {"rows": 15, "fields": 4, "bytes": 859, "sha256": "da0ce00b3c2f8d36dbe4e3741c66991f46b97d205368e2508d6c44d741e36acf"},
+    "leaked-model-failure.csv": {"rows": 1, "fields": 8, "bytes": 344, "sha256": "facbda4fcd1e88e81798c7c6b484c1c4ad8f359b26200a6a768bf38a7b3d3c5e"},
+    "prediction-checks.csv": {"rows": 22, "fields": 5, "bytes": 862, "sha256": "5c741ed9c8e5b0d7490109abdb491bf279037dadedd398534dafbf0c9f7c079a"},
+    "calibration.svg": {"bytes": 1023, "sha256": "00b4b3d047d5cff97e1d9d78d69169d07d85227e209666eeaa85bdc319f38181"},
+    "threshold.svg": {"bytes": 1870, "sha256": "658858993937ac7af53efb51ada89bf7459c978d2d8480caee4809b09c6aa386"},
+    "build-report.json": {"bytes": 4561, "sha256": "72cb42773dc535cb67180f3b0a069b2cdd1c3cc0e01b4926f885b9cfe83d6959"}
+  },
+  "environment": {
+    "tested_platform": "Windows 11",
+    "python": "3.12.10",
+    "numpy": "2.0.2",
+    "pandas": "3.0.3",
+    "scikit_learn": "1.9.0",
+    "seed": 20260830,
+    "bootstrap_replicates": 2000
+  },
+  "assessment": {
+    "course_points": 15,
+    "minimum_passing_points": 12,
+    "noncompensable_gates": 20
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, prediction build, validation, and teaching package"}
+  ],
+  "validation_record": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "release_checks": 4601,
+    "starter_checks": 4549,
+    "prediction_checks": 22,
+    "existing_target_refusal": "pass",
+    "incomplete_submission_rejection": "pass"
+  },
+  "known_issues": [
+    "Named clinical prediction, model-risk, biostatistics, clinical-informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "The test split has only four positive outcomes, producing wide uncertainty and unstable calibration evidence.",
+    "The selected threshold yields 23 false positives and 2 false negatives in 75 test rows.",
+    "Subgroup evidence is descriptive and partly suppressed; it supports no group ranking or fairness conclusion.",
+    "All data are synthetic teaching records and support no real-clinical or deployment claim."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "module": "oclc-fnd2-03",
+  "module_version": "0.1.0",
+  "seed": 20260830,
+  "prediction_time": "end of index encounter",
+  "outcome": "acute_return_90d",
+  "horizon_days": 90,
+  "split": {"method": "frozen date ordered", "train": 224, "validation": 75, "test": 75},
+  "models": {
+    "BASE": {
+      "type": "constant probability",
+      "probability": "0.111607142857",
+      "source": "training outcome prevalence",
+      "eligible": "comparator only"
+    },
+    "LOG01": {
+      "type": "unpenalized logistic regression",
+      "features": ["age_centered_decade", "prior_365d_acute_count", "index_class_inpatient"],
+      "preprocessing": "standardize all three fields within each training fit",
+      "parameters": {"solver": "lbfgs", "C": "infinity", "max_iter": 10000},
+      "eligible": true
+    },
+    "ML01": {
+      "type": "random forest classifier",
+      "numeric_features": ["age_at_index", "prior_365d_encounter_count", "prior_365d_acute_count", "prior_365d_condition_count", "prior_365d_medication_count"],
+      "categorical_features": ["gender", "race", "ethnicity", "index_class"],
+      "preprocessing": "training-fit numeric standardization and dense one-hot encoding; unknown categories ignored",
+      "parameters": {"n_estimators": 300, "max_depth": 4, "min_samples_leaf": 20, "class_weight": null, "random_state": 20260830, "n_jobs": 1},
+      "eligible": true
+    },
+    "LEAK01": {
+      "type": "logistic critique fixture",
+      "features": ["next_30d_state", "endpoint_90d"],
+      "failure": "post-index and outcome-derived information",
+      "eligible": false
+    }
+  },
+  "training_resampling": {"method": "five-fold stratified", "shuffle": true, "random_state": 20260830, "fit_scope": "training partition only"},
+  "validation_metrics": ["roc_auc", "average_precision", "brier", "log_loss"],
+  "selection_rule": {
+    "eligible_candidate_must_meet_all": ["brier no worse than BASE", "roc_auc at least 0.55", "average_precision no worse than BASE"],
+    "selected_model": "ML01"
+  },
+  "threshold_rule": {
+    "partition": "validation",
+    "minimum_sensitivity": "5 of 7 validation outcomes",
+    "tie_break": "fewest false positives then highest threshold",
+    "locked_threshold": "0.08513264",
+    "locked_before_test": true
+  },
+  "test_rule": "evaluate the frozen selected pipeline and threshold once",
+  "bootstrap": {"method": "outcome-stratified percentile", "replicates": 2000, "random_state": 20260830, "confidence_level": 0.95},
+  "subgroup_suppression": "suppress metrics when rows are fewer than 20 or outcomes/nonoutcomes are fewer than 2",
+  "model_artifact": "deterministic refit from fingerprinted inputs, pinned environment, fixed contract, and fixed seed",
+  "use_boundary": "synthetic teaching evidence only; no clinical use or deployment"
+}

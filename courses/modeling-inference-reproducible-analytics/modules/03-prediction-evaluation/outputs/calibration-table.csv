@@ -1,0 +1,6 @@
+group,rows,positives,mean_probability,observed_proportion,minimum_probability,maximum_probability,limit
+1,15,0,0.07065743,0.00000000,0.06366790,0.07532566,15-row teaching group; not a stable calibration estimate
+2,15,2,0.07692731,0.13333333,0.07580973,0.07827295,15-row teaching group; not a stable calibration estimate
+3,15,0,0.08033173,0.00000000,0.07827295,0.08245048,15-row teaching group; not a stable calibration estimate
+4,15,1,0.09035687,0.06666667,0.08282691,0.10946162,15-row teaching group; not a stable calibration estimate
+5,15,1,0.14452712,0.06666667,0.11071530,0.19038825,15-row teaching group; not a stable calibration estimate

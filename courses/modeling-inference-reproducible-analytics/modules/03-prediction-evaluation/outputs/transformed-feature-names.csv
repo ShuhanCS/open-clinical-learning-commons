@@ -1,0 +1,16 @@
+position,transformed_feature,source_family,fit_partition
+1,numeric__age_at_index,numeric,train only
+2,numeric__prior_365d_encounter_count,numeric,train only
+3,numeric__prior_365d_acute_count,numeric,train only
+4,numeric__prior_365d_condition_count,numeric,train only
+5,numeric__prior_365d_medication_count,numeric,train only
+6,categorical__gender_F,categorical,train only
+7,categorical__gender_M,categorical,train only
+8,categorical__race_asian,categorical,train only
+9,categorical__race_black,categorical,train only
+10,categorical__race_native,categorical,train only
+11,categorical__race_white,categorical,train only
+12,categorical__ethnicity_hispanic,categorical,train only
+13,categorical__ethnicity_nonhispanic,categorical,train only
+14,categorical__index_class_emergency,categorical,train only
+15,categorical__index_class_inpatient,categorical,train only

@@ -1,0 +1,157 @@
+{
+  "status": "pass",
+  "version": "0.1.0",
+  "seed": 20260830,
+  "bootstrap_replicates": 2000,
+  "age_center_training_mean": "46.245535714286",
+  "baseline_probability": "0.111607142857",
+  "upstream": {
+    "modeling-cohort.csv": {
+      "bytes": 138503,
+      "sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332"
+    },
+    "split-registry.csv": {
+      "bytes": 51910,
+      "sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1"
+    },
+    "baseline-metrics.csv": {
+      "bytes": 306,
+      "sha256": "613651013e397beeadc84b17482026ca7cb4674abf61bf521699d79af0a3c9af"
+    },
+    "feature-role-contract.csv": {
+      "bytes": 3766,
+      "sha256": "599f29ca612cb5f23aed277c56937af78c488ba952c2926faa94166f33449c83"
+    },
+    "formula-registry.csv": {
+      "bytes": 771,
+      "sha256": "fc69d6146eec729969b571b535c13027e9b875d34dd99637f0dc0d9b934239a6"
+    },
+    "model-matrix-fields.csv": {
+      "bytes": 1535,
+      "sha256": "7a91e166796ae1030518da95e49f6a19ecc687d7cf5784f76718509c0abc9c38"
+    },
+    "assumption-register.csv": {
+      "bytes": 2181,
+      "sha256": "7c6322667a383458a34aea49b687d1a6716aaaf0f780ccf060f1c99d671956e3"
+    }
+  },
+  "partitions": {
+    "train": 224,
+    "validation": 75,
+    "test": 75,
+    "positive_outcomes": {
+      "train": 25,
+      "validation": 7,
+      "test": 4
+    }
+  },
+  "selection": {
+    "model_id": "ML01",
+    "locked_threshold": "0.08513264",
+    "test_opened_after_lock": true
+  },
+  "test_confusion": {
+    "true_negative": 48,
+    "false_positive": 23,
+    "false_negative": 2,
+    "true_positive": 2
+  },
+  "outputs": {
+    "resampling-results.csv": {
+      "rows": 15,
+      "fields": 11,
+      "bytes": 1996,
+      "sha256": "d4fa7767dc2c9ff5d393eb1835574642074ff3c7ad9bdeb5e9e5d837598caefa"
+    },
+    "validation-predictions.csv": {
+      "rows": 300,
+      "fields": 8,
+      "bytes": 25106,
+      "sha256": "ae486033900b22367f1055244d03961c05f37c030ec8462d721e66350a9221e3"
+    },
+    "validation-comparison.csv": {
+      "rows": 4,
+      "fields": 10,
+      "bytes": 450,
+      "sha256": "c5d1375989cbf1cca9cd5664c1dbffa2d139081e01faa9b37997ab055a3127b1"
+    },
+    "model-selection-record.csv": {
+      "rows": 4,
+      "fields": 7,
+      "bytes": 386,
+      "sha256": "477a1527d42ade4f6c5259492ea7b28838dc20fbe757ac3539f33d7b4d77b4d0"
+    },
+    "threshold-table.csv": {
+      "rows": 71,
+      "fields": 10,
+      "bytes": 4938,
+      "sha256": "0855e495d327e51ddde4428e09ecb0a567997b61a4135156ae3f3be1d7086d76"
+    },
+    "threshold-decision.csv": {
+      "rows": 1,
+      "fields": 5,
+      "bytes": 234,
+      "sha256": "e953fac6d048bb095b83691492da764a72bd597e5bd7a3b6d2a4994f57ba5af8"
+    },
+    "test-predictions.csv": {
+      "rows": 75,
+      "fields": 8,
+      "bytes": 7994,
+      "sha256": "531c00d310292aeeaea476d1c94e128f5c81c34c2fc60e014d2c157e152b7438"
+    },
+    "test-metrics.csv": {
+      "rows": 16,
+      "fields": 9,
+      "bytes": 2187,
+      "sha256": "9d43a8085e835cbf368962acc37b0bed00bdfacf68e73ce87d0b359dee490bc9"
+    },
+    "confusion-table.csv": {
+      "rows": 4,
+      "fields": 4,
+      "bytes": 110,
+      "sha256": "a899fc8ebaee87fd2990354f6310c6feb87f748e17545c5c39c5a413e630be87"
+    },
+    "calibration-table.csv": {
+      "rows": 5,
+      "fields": 8,
+      "bytes": 644,
+      "sha256": "fce4d9b0a05085ab51cb5af1c9a2dcb209a9fb2d099b3245650543a09c461b5c"
+    },
+    "subgroup-metrics.csv": {
+      "rows": 10,
+      "fields": 11,
+      "bytes": 1122,
+      "sha256": "7f95ec1f99a1f9f9bae6af566798a4f3aab9107681fe7e79c1ce27a821e07d24"
+    },
+    "transformed-feature-names.csv": {
+      "rows": 15,
+      "fields": 4,
+      "bytes": 859,
+      "sha256": "da0ce00b3c2f8d36dbe4e3741c66991f46b97d205368e2508d6c44d741e36acf"
+    },
+    "leaked-model-failure.csv": {
+      "rows": 1,
+      "fields": 8,
+      "bytes": 344,
+      "sha256": "facbda4fcd1e88e81798c7c6b484c1c4ad8f359b26200a6a768bf38a7b3d3c5e"
+    },
+    "prediction-checks.csv": {
+      "rows": 22,
+      "fields": 5,
+      "bytes": 862,
+      "sha256": "5c741ed9c8e5b0d7490109abdb491bf279037dadedd398534dafbf0c9f7c079a"
+    },
+    "calibration.svg": {
+      "bytes": 1023,
+      "sha256": "00b4b3d047d5cff97e1d9d78d69169d07d85227e209666eeaa85bdc319f38181"
+    },
+    "threshold.svg": {
+      "bytes": 1870,
+      "sha256": "658858993937ac7af53efb51ada89bf7459c978d2d8480caee4809b09c6aa386"
+    }
+  },
+  "decision": {
+    "reference_recommendation": "continue to validity review with conditions",
+    "model_use": "teaching use only"
+  }
+}

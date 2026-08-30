@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.40.0
+- Current release: 0.41.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Module 02, Regression models and interpretation
-- Next unit: FND-2 Module 03, Prediction workflows and evaluation
+- Last completed unit: FND-2 Module 03, Prediction workflows and evaluation
+- Next unit: FND-2 Checkpoint 1, modeling-readiness release
 
 ## Confirmed decisions
 
@@ -211,6 +211,16 @@
 - The release machine has no R runtime. The exact base-R script and eight-row numeric target are present, but named R execution and tolerance reconciliation remain a condition before alpha.
 - The reference disposition is `accept with conditions`: `LOG01` may enter Module 03, while selected-sample, diagnostic, sparse, extreme-probability, R, synthetic-source, and no-causation limits remain binding.
 - FND-2 Module 02 is a runnable release candidate at Commons 0.40.0.
+- FND-2 Module 03 version 0.1.0 verifies all seven exact Module 01 and Module 02 handoff artifacts before fitting. The split remains 224/75/75 with 25/7/4 outcomes and a training-prevalence baseline of 0.111607142857.
+- Five-fold stratified resampling is confined to the 224 training rows. All scaling, one-hot encoding, and model fitting occur inside the allowed training fit. The selected `ML01` pipeline exposes 15 transformed feature names.
+- Validation compares `BASE`, `LOG01`, `ML01`, and the deliberately prohibited `LEAK01` on the same 75 rows and four declared metrics. `ML01` is the only eligible candidate with Brier no worse than baseline, ROC AUC at least 0.55, and average precision no worse than baseline.
+- `LEAK01` uses post-index and outcome-derived fields and is rejected before performance review despite ROC AUC and average precision of 1.00000000.
+- The validation threshold rule requires at least 5 of 7 outcomes, then chooses the fewest false positives and highest threshold. The threshold is locked at 0.08513264 before the test partition is opened.
+- Untouched `ML01` test evidence on 75 rows and four outcomes is ROC AUC 0.58802817, average precision 0.14682471, Brier score 0.05097579, and log loss 0.21218264. The exact confusion counts are 48 true negatives, 23 false positives, 2 false negatives, and 2 true positives.
+- The release contains 14 exact CSV tables, two accessible SVG displays with structured alternatives, and a build report. Ten subgroup rows are count first; five sparse rows suppress metrics and no fairness ranking is allowed.
+- The builder refuses existing targets and reproduces outputs from a copied learner workspace. The validator passes 4601 reference checks and 4549 starter checks and rejects prompted or broken submissions. All 22 prediction invariants pass.
+- The reference recommendation is `continue to validity review with conditions`. The four-outcome test limit, wide uncertainty, exact confusion counts, subgroup suppression, synthetic source, and nondeployment boundary remain binding.
+- FND-2 Module 03 is a runnable release candidate at Commons 0.41.0.
 
 ## Pending confirmation
 
@@ -219,11 +229,11 @@
 
 ## Next resume instructions
 
-1. Read the FND-2 course specification, Module 01 and 02 specifications and releases, master architecture, and this ledger.
-2. Write the 21-section Module 03 specification for leakage-safe pipelines, resampling, validation comparison, threshold lock, one-time test evaluation, calibration, exact confusion counts, uncertainty, and subgroup suppression.
-3. Preserve the exact 224/75/75 split, 25/7/4 outcomes, training-prevalence baseline, `LOG01` transform contract, and Module 02 conditions.
-4. Build training-only preprocessing and resampling, then compare the baseline, `LOG01`, and one bounded machine-learning baseline on validation evidence.
-5. Add a deliberately leaked critique model that is never eligible for selection.
-6. Freeze the selection rule and threshold before the single test run; report exact test predictions, calibration, threshold, subgroup, and uncertainty evidence with four positives visible.
-7. Create the 15-point Module 03 package and cumulative 40-point Week 3 checkpoint handoff.
-8. Update the Commons version and this ledger, then commit and push Module 03 before building Checkpoint 1.
+1. Read the FND-2 course specification, Module 01 through 03 specifications and releases, master architecture, and this ledger.
+2. Write the durable Checkpoint 1 specification for the cumulative 40-point modeling-readiness decision.
+3. Assemble rather than recompute accepted Module 01 through 03 artifacts and preserve all source and output fingerprints.
+4. Preserve the 15-point Module 01, 10-point Module 02, and 15-point Module 03 shares exactly once.
+5. Require every upstream gate, an adequate learner defense, a named reviewer record, reproduction evidence, and one allowed cumulative disposition.
+6. Carry the exact `ML01` selection, threshold 0.08513264, four test outcomes, 48/23/2/2 confusion counts, subgroup suppression, synthetic-source boundary, and teaching-only use into the checkpoint.
+7. Permit Module 04 only after an accepted cumulative checkpoint disposition.
+8. Update the Commons version and this ledger, then commit and push Checkpoint 1 before building Module 04.

@@ -1,0 +1,2 @@
+model_id,locked_threshold,validation_minimum_sensitivity,selection_rule,locked_before_test
+ML01,0.08513264,0.71428571,among thresholds with at least 5 of 7 validation positives select fewest false positives then highest threshold,yes
