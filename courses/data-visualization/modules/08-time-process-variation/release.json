@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-08",
+    "title": "Time and process variation",
+    "version": "0.1.0",
+    "commons_release": "0.19.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "all_jurisdictions": {
+      "id": "oclc-nhsn-jurisdiction-hospital-capacity-2024-2026",
+      "version": "0.1.0",
+      "path": "data/nhsn_hospital_capacity_jurisdiction_2024_2026.csv",
+      "row_count": 6208,
+      "column_count": 14,
+      "jurisdiction_count": 67,
+      "sha256": "8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1"
+    },
+    "massachusetts": {
+      "id": "oclc-ma-hospital-capacity-time-2024-2026",
+      "version": "0.1.0",
+      "path": "data/ma_hospital_capacity_time_2024_2026.csv",
+      "row_count": 94,
+      "column_count": 21,
+      "sha256": "394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616"
+    },
+    "unit": "jurisdiction-week aggregate across reporting hospitals",
+    "public_aggregate_data": true,
+    "patient_level": false,
+    "synthetic": false
+  },
+  "source": {
+    "publisher": "Centers for Disease Control and Prevention",
+    "system": "National Healthcare Safety Network",
+    "dataset_id": "rhwp-grxi",
+    "landing_page": "https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/rhwp-grxi",
+    "metadata_api": "https://data.cdc.gov/api/views/rhwp-grxi",
+    "query_url": "https://data.cdc.gov/resource/rhwp-grxi.csv?%24select=weekendingdate%2Cjurisdiction%2Crespseason%2Cnuminptbeds%2Cnuminptbedsocc%2Cpctinptbedsocc%2Cnumicubeds%2Cnumicubedsocc%2Cpcticubedsocc%2Ctotalconfc19newadm%2Ctotalconfflunewadm%2Ctotalconfrsvnewadm%2Cpctinptbedsocchosprep%2Cpctinptbedsoccperchosprep&%24where=weekendingdate+between+%272024-11-09T00%3A00%3A00.000%27+and+%272026-08-22T00%3A00%3A00.000%27&%24order=weekendingdate%2Cjurisdiction&%24limit=10000",
+    "selected_start": "2024-11-09",
+    "selected_end": "2026-08-22",
+    "raw_query_sha256": "d261cbc441069a41ef1b14347af90dfd6c59e402d7854a5e86288a4f0e9d4dc6",
+    "source_record": "source-record.yml"
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    },
+    "cdc_data": {
+      "spdx": "LicenseRef-US-Government-Public-Data",
+      "url": "https://data.cdc.gov/"
+    }
+  },
+  "curriculum_source": {
+    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "author": "Ali Goff",
+    "date": "2026-08-15",
+    "path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/08-time-process-variation-spec.md"
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "course designer and content owner"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, data release, teaching implementation, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The validator passed 47 checks. Five lab figures, one exact table, one text alternative, and three critique figures rendered successfully."
+    },
+    "required_human_roles": [
+      {
+        "role": "hospital operations relevance",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "statistical process-control instruction",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "CDC source fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "visualization and accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "data_checks": "47 of 47 pass",
+    "lab_execution": "pass: five PNGs, one CSV, and one Markdown text alternative",
+    "critique_execution": "pass: three deliberately flawed PNGs",
+    "measured_results": {
+      "massachusetts_weeks": 94,
+      "date_gaps": 0,
+      "occupancy_minimum_pct": 77.96,
+      "occupancy_maximum_pct": 87.3,
+      "occupancy_mean_pct": 83.87,
+      "occupancy_median_pct": 84.12,
+      "respiratory_admission_maximum": 1996,
+      "reporting_coverage_minimum_pct": 67.05,
+      "source_season_unavailable_weeks": 61,
+      "source_season_reported_weeks": 33,
+      "exploratory_baseline_weeks": 26,
+      "exploratory_center_pct": 85.23,
+      "exploratory_lower_limit_pct": 80.72,
+      "exploratory_upper_limit_pct": 89.75
+    }
+  },
+  "known_issues": [
+    "Named clinical operations, statistical process-control, source, accessibility, visualization, and independent-instructor reviews are pending.",
+    "The public Massachusetts series is a jurisdiction aggregate across a changing set of reporting hospitals, not one hospital's stable internal process.",
+    "Exploratory individuals-chart limits are instructional and do not establish special cause.",
+    "Reporting coverage changes and is context rather than a correction weight.",
+    "The source respiratory-season field is unavailable for 61 teaching rows because the field was added later.",
+    "The all-jurisdiction source release preserves published count and reporting anomalies rather than silently correcting them.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

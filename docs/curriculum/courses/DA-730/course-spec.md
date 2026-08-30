@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.18.0
+- Specification version: 0.19.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -253,10 +253,12 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Concepts: line and run charts, indexing, baselines, seasonality, missing periods, reporting windows, smoothing, control charts, aspect ratio, and event annotations.
 - Primary case: emergency or hospital process measures across reporting periods.
 - Decision owner: hospital operations leader.
-- Core sources: https://data.cms.gov/provider-data/dataset/yv7e-xc69 and https://wonder.cdc.gov/datasets.html
+- Core source: https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/rhwp-grxi
 - Lab: build a time view with an honest scale, denominator notes, intervention annotation, and signal interpretation.
 - Critique: repair a dual-axis trend, a smoothed line that hides a short deterioration, and a control chart with unsupported limits.
-- Submission: `module-08/time-analysis.md`, `module-08/analysis.R`, `module-08/figure.png`, `module-08/source-record.yml`, `module-08/alt-text.md`, and `module-08/decision-note.md`.
+- Submission: `module-08/time-audit.md`, `module-08/analysis.R`, `module-08/run-chart.png`, `module-08/comparison-chart.png`, `module-08/process-chart.png`, `module-08/decision-table.csv`, `module-08/alt-text.md`, `module-08/decision-note.md`, and `module-08/ai-use.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/08-time-process-variation-spec.md`.
+- Runnable package: `courses/data-visualization/modules/08-time-process-variation/`.
 - Handoff: Module 09 compares multiple groups or panels without losing the time or uncertainty context.
 
 ## Module 09 brief: Comparison and small multiples
@@ -576,7 +578,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01 through 06 are current runnable candidates. Their human reviews remain pending.
+Modules 01 through 08 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 
@@ -610,6 +612,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Module 05 has a complete source-first specification and runnable teaching package.
 - [x] Module 06 has a complete source-first specification, runnable teaching package, and exact checkpoint handoff.
 - [x] Module 07 has a complete accessibility specification, source-preserving teaching table, runnable lab, critique set, assessment, instructor key, and release record.
+- [x] Module 08 has a complete time-and-process specification, pinned CDC NHSN releases, runnable lab, critique set, assessment, instructor key, and release record.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.

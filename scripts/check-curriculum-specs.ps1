@@ -240,6 +240,39 @@ if (
     throw 'DA-730 Module 07 release metadata does not match the 0.1.0, 65-row accessibility contract.'
 }
 
+$module08 = Test-ModuleContract `
+    -Label 'Module 08' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\08-time-process-variation-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\08-time-process-variation') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_nhsn_time_series.py',
+        'validate_nhsn_time_series.py',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\nhsn_hospital_capacity_jurisdiction_2024_2026.csv',
+        'data\ma_hospital_capacity_time_2024_2026.csv'
+    )
+if (
+    $module08.Release.module.version -ne '0.1.0' -or
+    $module08.Release.module.commons_release -ne '0.19.0' -or
+    $module08.Release.data.all_jurisdictions.row_count -ne 6208 -or
+    $module08.Release.data.all_jurisdictions.column_count -ne 14 -or
+    $module08.Release.data.all_jurisdictions.sha256 -ne '8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1' -or
+    $module08.Release.data.massachusetts.row_count -ne 94 -or
+    $module08.Release.data.massachusetts.column_count -ne 21 -or
+    $module08.Release.data.massachusetts.sha256 -ne '394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616' -or
+    $module08.Release.validation.measured_results.date_gaps -ne 0 -or
+    $module08.Release.validation.measured_results.reporting_coverage_minimum_pct -ne 67.05
+) {
+    throw 'DA-730 Module 08 release metadata does not match the 0.1.0 public-source time-series contract.'
+}
+
 $checkpoint01Root = Join-Path $repo 'courses\data-visualization\checkpoints\01-visualization-judgment-dossier'
 $checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\checkpoints\01-visualization-judgment-dossier-spec.md'
 $checkpoint01Files = @(
@@ -283,4 +316,5 @@ Write-Output "DA-730 $($module04.Label) passed: $($module04.Sections) contract s
 Write-Output "DA-730 $($module05.Label) passed: $($module05.Sections) contract sections and $($module05.FileCount) required files."
 Write-Output "DA-730 $($module06.Label) passed: $($module06.Sections) contract sections and $($module06.FileCount) required files."
 Write-Output "DA-730 $($module07.Label) passed: $($module07.Sections) contract sections and $($module07.FileCount) required files."
+Write-Output "DA-730 $($module08.Label) passed: $($module08.Sections) contract sections and $($module08.FileCount) required files."
 Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."

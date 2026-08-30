@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.18.0
+- Current release: 0.19.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 07, Color and accessible visual communication
-- Next unit: DA-730 Module 08, Time and process variation
+- Last completed unit: DA-730 Module 08, Time and process variation
+- Next unit: DA-730 Module 09, Comparison and small multiples
 
 ## Confirmed decisions
 
@@ -56,6 +56,12 @@
 - Module 07 teaching table SHA-256: `b58168d9002a3e489213b0fafde1eca76f5b1a426c71ea3d61551671d76a49c2`.
 - Module 07 passes 66 data checks. Its lab creates four figures, one 65-row exact table, and one short and long text alternative; its critique creates a red-green color-only chart and a low-contrast heatmap.
 - Five status cues use direct text, symbols, shapes, line types, and foreground colors. Every defined foreground exceeds 4.5:1 contrast on white, with a range of 5.54:1 to 18.88:1.
+- DA-730 Module 08 preserves 6,208 CDC NHSN jurisdiction-week rows across 67 jurisdictions for 2024-11-09 through 2026-08-22.
+- Module 08 all-jurisdiction SHA-256: `8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1`.
+- The Massachusetts teaching release contains 94 consecutive weeks and SHA-256 `394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616`.
+- Module 08 passes 47 data checks. Its lab creates five figures, one 94-row exact table, and one short and long text alternative; its critique creates an arbitrary dual-axis chart, a smoothed-only chart, and a chart with unsupported control limits.
+- The reference individuals chart declares the first 26 weeks as an exploratory baseline. Its center is 85.23 percent, lower limit is 80.72 percent, and upper limit is 89.75 percent. The module does not convert outside-limit points into formal special-cause claims because reporting coverage, seasonality, and aggregate mix weaken the process assumptions.
+- The source release preserves 120 jurisdiction-weeks with unavailable core metrics, six count-above-bed anomalies, and one coverage value above 100 percent instead of silently correcting them.
 
 ## Pending confirmation
 
@@ -64,8 +70,8 @@
 
 ## Next resume instructions
 
-1. Read the DA-730 Module 08 brief and the Module 07 accessibility handoff.
-2. Select and pin the multi-period public process source for the time case.
-3. Write `docs/curriculum/courses/DA-730/modules/08-time-process-variation-spec.md` using the 21-section contract.
-4. Build trend, seasonality, ordinary-variation, signal, and missing-period exercises with the Module 07 accessibility contract.
-5. Verify and release Module 08, then continue to Module 09.
+1. Read the DA-730 Module 09 brief and the Module 08 time-context handoff.
+2. Select and pin the public source for the multi-group comparison case.
+3. Write `docs/curriculum/courses/DA-730/modules/09-comparison-small-multiples-spec.md` using the 21-section contract.
+4. Build ordering, shared-scale, small-multiple, and inconsistent-baseline exercises with the standing accessibility contract.
+5. Verify and release Module 09, then continue to Module 10.

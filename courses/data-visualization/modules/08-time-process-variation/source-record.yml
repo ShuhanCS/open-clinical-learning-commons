@@ -1,0 +1,71 @@
+schema_version: "1.0.0"
+module_id: "oclc-da730-08"
+module_title: "Time and process variation"
+retrieved_at: "2026-08-29"
+
+clinical_source:
+  publisher: "Centers for Disease Control and Prevention"
+  system: "National Healthcare Safety Network"
+  dataset_id: "rhwp-grxi"
+  dataset_title: "Weekly Hospital Respiratory Data, HRD Metrics by Jurisdiction"
+  landing_page: "https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/rhwp-grxi"
+  metadata_api: "https://data.cdc.gov/api/views/rhwp-grxi"
+  query_url: "https://data.cdc.gov/resource/rhwp-grxi.csv?%24select=weekendingdate%2Cjurisdiction%2Crespseason%2Cnuminptbeds%2Cnuminptbedsocc%2Cpctinptbedsocc%2Cnumicubeds%2Cnumicubedsocc%2Cpcticubedsocc%2Ctotalconfc19newadm%2Ctotalconfflunewadm%2Ctotalconfrsvnewadm%2Cpctinptbedsocchosprep%2Cpctinptbedsoccperchosprep&%24where=weekendingdate+between+%272024-11-09T00%3A00%3A00.000%27+and+%272026-08-22T00%3A00%3A00.000%27&%24order=weekendingdate%2Cjurisdiction&%24limit=10000"
+  selected_period_start: "2024-11-09"
+  selected_period_end: "2026-08-22"
+  raw_rows: 6208
+  raw_bytes: 790364
+  raw_sha256: "d261cbc441069a41ef1b14347af90dfd6c59e402d7854a5e86288a4f0e9d4dc6"
+  access_level: "public"
+  unit: "jurisdiction-week aggregate across reporting hospitals"
+  patient_level: false
+  synthetic: false
+
+teaching_releases:
+  all_jurisdictions:
+    data_id: "oclc-nhsn-jurisdiction-hospital-capacity-2024-2026"
+    version: "0.1.0"
+    path: "data/nhsn_hospital_capacity_jurisdiction_2024_2026.csv"
+    rows: 6208
+    columns: 14
+    jurisdictions: 67
+    sha256: "8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1"
+  massachusetts:
+    data_id: "oclc-ma-hospital-capacity-time-2024-2026"
+    version: "0.1.0"
+    path: "data/ma_hospital_capacity_time_2024_2026.csv"
+    rows: 94
+    columns: 21
+    jurisdiction: "MA"
+    sha256: "394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616"
+  build_script: "build_nhsn_time_series.py"
+  validator: "validate_nhsn_time_series.py"
+  validation_result: "47 of 47 checks pass"
+  transformations:
+    - "Selected 14 named source fields for the pinned period and sorted by week and jurisdiction."
+    - "Normalized dates, integer fields, and two-decimal published percentages without changing source meaning."
+    - "Preserved jointly unavailable core metrics as blank values."
+    - "Selected Massachusetts and verified a complete 94-week sequence."
+    - "Added chronological, calendar, source-season availability, combined-admission, and reporting-gap fields."
+
+rights:
+  source_context: "United States government public health surveillance data"
+  source_terms_url: "https://data.cdc.gov/"
+  documentation_license: "CC-BY-4.0"
+  code_license: "MIT"
+
+known_source_behavior:
+  - "Reporting coverage and the mix of reporting hospitals change over time."
+  - "The source notes that errors may remain and that weekly values are not adjusted after initial publication."
+  - "The selected release begins in November 2024."
+  - "Respiratory-season fields were added to the source schema in January 2026."
+  - "The all-jurisdiction release includes 120 rows with all nine core numeric metrics unavailable."
+  - "The all-jurisdiction release preserves six rows whose published occupied counts exceed reported beds."
+  - "The all-jurisdiction release preserves one published reporting-coverage percentage above 100."
+
+known_limits:
+  - "The Massachusetts release is a jurisdiction aggregate, not one hospital's internal process."
+  - "Changing reporting coverage may change the aggregate even when underlying hospitals do not change."
+  - "Reporting coverage is descriptive context and is not used as a correction weight."
+  - "Exploratory process limits do not establish special cause when process and baseline assumptions are weak."
+  - "Respiratory admission counts are not population rates and do not prove the cause of occupancy changes."

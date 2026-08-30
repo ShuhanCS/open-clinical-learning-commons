@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.7.0`
+- Register version: `0.8.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -27,6 +27,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | CMS, Timely and Effective Care - Hospital | Emergency department and hospital process comparisons, time trends, benchmarking, and dashboards | Public aggregate measures. Do not infer patient-level distributions from hospital-level summaries. | https://data.cms.gov/provider-data/dataset/yv7e-xc69 |
 | CMS, Patient survey (HCAHPS) - Hospital | Patient-experience comparisons, small multiples, uncertainty, maps, and dashboards | Public hospital survey results. Keep completed-survey counts, response rates, reporting dates, and footnotes with the analysis. | https://data.cms.gov/provider-data/dataset/dgck-syfz |
 | CDC, PLACES county data 2024 release | Population-health outcomes, preventive services, health-related social needs, equity comparisons, and maps | Model-based small-area estimates. CDC cautions against using them to evaluate local interventions. | https://data.cdc.gov/d/fu4u-a9bh |
+| CDC NHSN, Weekly Hospital Respiratory Data by Jurisdiction | Weekly hospital capacity, occupancy, respiratory admissions, reporting coverage, time patterns, and cautious process review | Public jurisdiction aggregates across reporting hospitals. Reporting coverage and hospital mix change, so the data do not represent one hospital's stable internal process. | https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/rhwp-grxi |
 | U.S. Census Bureau, ACS 5-year data and Summary File | Population denominators, demographic context, insurance coverage, disability, income, and housing | Public estimates with margins of error. The current API requires a key; the table-based Summary File is public without one. Use the estimate and margin of error together. | https://www.census.gov/programs-surveys/acs/data/summary-file.html |
 | CDC WONDER | Mortality counts, crude and age-adjusted rates, confidence intervals, cause, place, population, and time | Public query system. Respect suppression and unreliable-rate flags. Death-certificate data describe recorded underlying causes, not every condition involved in care. | https://wonder.cdc.gov/datasets.html |
 | National Library of Medicine, ClinicalTrials.gov API | Trial portfolios, enrollment, status, geography, sponsors, conditions, interventions, and reported results | Public records supplied by study sponsors and investigators. Registration does not establish intervention effectiveness or study quality. | https://clinicaltrials.gov/data-api |
@@ -45,7 +46,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 05. Rates, denominators, and adjustment | CDC PLACES, ACS, and Census TIGERweb | Released national diabetes and adult-population extracts plus a 100-county North Carolina decision table and generalized boundary file. |
 | 06. Uncertainty, variation, and small numbers | CMS Unplanned Hospital Visits and Footnote Crosswalk | Released all-national heart failure readmission estimate rows plus the complete national summary, official footnotes, and a 65-hospital Massachusetts decision table. |
 | 07. Color and accessible visual communication | Reused Module 06 CMS Unplanned Hospital Visits release plus W3C and CDC accessibility guidance | Released 65-row source-preserving accessibility table with redundant cues, contrast calculations, grayscale output, exact table, and text alternatives. |
-| 08. Time and process variation | CMS timely care or CDC WONDER | Planned multi-period process measure or mortality rate with reporting dates. |
+| 08. Time and process variation | CDC NHSN weekly hospital respiratory data by jurisdiction | Released 6,208-row jurisdiction table and 94-week Massachusetts teaching sequence with capacity, occupancy, respiratory admissions, reporting coverage, and source-season availability. |
 | 09. Comparison and small multiples | CMS, CDC PLACES, or module-approved source | Planned repeated measure across hospitals, counties, or patient groups. |
 | 10. Maps, geography, and place | CDC PLACES, ACS, and HRSA AHRF | Planned county health measure, population denominator, geography, and workforce ratio. |
 | 11. Flow, networks, composition, and hierarchy | Synthea, ClinicalTrials.gov, or openFDA | Planned patient transitions, research relationships, or reporting hierarchy with explicit grain. |
@@ -168,3 +169,21 @@ The source score is risk standardized. The release labels its endpoints Lower Es
 - Validation: 66 of 66 checks pass
 
 The module defines five reusable status cues with direct text, symbols, shapes, line types, and colors. All defined foregrounds exceed 4.5:1 contrast against white. A calculated ratio does not certify the complete chart or delivery context, so learners also test grayscale, print, a smaller view, text alternatives, and the exact-value table.
+
+### DA-730 time-process-variation release
+
+- Module: DA-730 Module 08, Time and process variation
+- CDC source: National Healthcare Safety Network, Weekly Hospital Respiratory Data, HRD Metrics by Jurisdiction, dataset `rhwp-grxi`
+- Source page: https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/rhwp-grxi
+- Selected period: 2024-11-09 through 2026-08-22
+- Raw selected-query rows: 6,208 across 67 jurisdictions
+- Raw selected-query SHA-256: `d261cbc441069a41ef1b14347af90dfd6c59e402d7854a5e86288a4f0e9d4dc6`
+- All-jurisdiction release: `courses/data-visualization/modules/08-time-process-variation/data/nhsn_hospital_capacity_jurisdiction_2024_2026.csv`
+- All-jurisdiction SHA-256: `8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1`
+- Massachusetts teaching release: `courses/data-visualization/modules/08-time-process-variation/data/ma_hospital_capacity_time_2024_2026.csv`
+- Massachusetts rows: 94 consecutive weeks and 21 fields
+- Massachusetts SHA-256: `394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616`
+- Source record: `courses/data-visualization/modules/08-time-process-variation/source-record.yml`
+- Validation: 47 of 47 checks pass
+
+The all-jurisdiction release preserves 120 rows with unavailable core metrics, six published count-above-bed anomalies, and one published coverage value above 100 percent. The Massachusetts sequence has complete core metrics, but reporting coverage and the reporting hospital mix still change. Exploratory process limits identify dates for review and do not establish special cause.
