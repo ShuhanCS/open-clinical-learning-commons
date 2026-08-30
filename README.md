@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.24.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 12 are runnable release candidates. The Week 3 and Week 6 checkpoints both have exact folder contracts, reproducible assemblers, learner templates, validators, and instructor handoffs.
+- Current version: `0.25.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. All 13 concept-first DA-730 modules are runnable release candidates and retain the 112.5-hour course workload. The Week 3 and Week 6 checkpoints both have exact folder contracts, reproducible assemblers, learner templates, validators, and instructor handoffs.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -56,7 +56,7 @@ The first standalone course build is DA-730: Clinical Data Visualization and Dec
 
 The course teaches learners to choose, build, critique, and explain healthcare visualizations based on the decision, the data structure, the audience, and what the display leaves out. Its concept modules are independent of software and clinical domain. R and ggplot2 provide the first lab environment.
 
-Modules 01 through 12 are complete sequential rebuilds. Learners map real CMS HCAHPS variables to marks and channels, test how accurately they can read different encodings, select a chart, table, coordinated pair, or no display, audit whether a summary hides a consequential distribution, distinguish modeled counts from adjusted rates, decide how much confidence to place in a ranked estimate, make the result work in color, grayscale, print, text, and an exact table, distinguish a weekly pattern from smoothing or reporting change, compare many groups without changing scale, order, or reference meaning, decide whether geography adds useful information, define flows and composition without changing units or denominators, and compose the minimum dashboard needed for one decision. Module 12 preserves all 186 Massachusetts CMS rows for EDV, OP_18b, and OP_22, then builds a five-view public-reporting review dashboard with visible source lag and an ordered action path. All twelve require recorded human reviews before alpha release.
+Modules 01 through 13 are complete sequential rebuilds. Learners map real CMS HCAHPS variables to marks and channels, test how accurately they can read different encodings, select a chart, table, coordinated pair, or no display, audit whether a summary hides a consequential distribution, distinguish modeled counts from adjusted rates, decide how much confidence to place in a ranked estimate, make the result work in color, grayscale, print, text, and an exact table, distinguish a weekly pattern from smoothing or reporting change, compare many groups without changing scale, order, or reference meaning, decide whether geography adds useful information, define flows and composition without changing units or denominators, compose the minimum dashboard needed for one decision, and adapt one stable evidence chain for technical and executive audiences without changing its values or limits. All thirteen require recorded human reviews before alpha release.
 
 The public preview also includes a [chart atlas](courses/data-visualization/atlas.html#atlas) covering comparison, distribution, time, relationship, uncertainty, flow, network, composition, place, and dashboard views. Each family includes a healthcare example and matching R code. The complete runnable script is [chart_gallery.R](courses/data-visualization/chart_gallery.R).
 
@@ -122,6 +122,11 @@ The public preview also includes a [chart atlas](courses/data-visualization/atla
 - [Week 6 checkpoint specification](docs/curriculum/courses/DA-730/checkpoints/02-applied-visualization-portfolio-spec.md)
 - [Week 6 checkpoint instructor notes](courses/data-visualization/checkpoints/02-applied-visualization-portfolio/instructor-notes.md)
 - [Week 6 checkpoint release record](courses/data-visualization/checkpoints/02-applied-visualization-portfolio/release.json)
+- [Module 13: Audience, annotation, narrative, and capstone](courses/data-visualization/modules/13-audience-annotation-narrative-capstone/README.md)
+- [Module 13 specification](docs/curriculum/courses/DA-730/modules/13-audience-annotation-narrative-capstone-spec.md)
+- [Module 13 assessment](courses/data-visualization/modules/13-audience-annotation-narrative-capstone/assessment.md)
+- [Module 13 instructor notes](courses/data-visualization/modules/13-audience-annotation-narrative-capstone/instructor-notes.md)
+- [Module 13 release record](courses/data-visualization/modules/13-audience-annotation-narrative-capstone/release.json)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
@@ -180,9 +185,9 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build DA-730 Module 13, Audience, annotation, narrative, and capstone.
-2. Assemble and validate the final half-term checkpoint.
-3. Complete the named human reviews before promoting any module or checkpoint to alpha.
+1. Assemble and validate the DA-730 final half-term checkpoint.
+2. Complete the named human reviews before promoting any module or checkpoint to alpha.
+3. Begin the separate FND-1 and FND-2 technical foundation builds.
 
 ## Licensing
 

@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.12.0`
+- Register version: `0.13.0`
 - Retrieved or verified: 2026-08-30
 - Scope: public course development and assignments
 
@@ -52,7 +52,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 10. Maps, geography, and place | CDC PLACES, direct HRSA primary-care HPSAs, and Census generalized county boundaries | Released 100-county place-access table, 1,546-row HPSA source selection, and 7,121-point boundary release for a map-versus-non-map decision. |
 | 11. Flow, networks, composition, and hierarchy | Synthea; ClinicalTrials.gov as an optional extension | Released all 1,171 patient rows and all 53,346 encounter rows with selected fields from the pinned sample, plus a 374-person adult acute-transition cohort and 15-edge conservation table. |
 | 12. Dashboards and multi-view composition | CMS Timely and Effective Care - Hospital | Released all 186 Massachusetts EDV, OP_18b, and OP_22 rows from the pinned 2026-08-13 CMS release, plus a 186-row dashboard table and three-row measure dictionary. |
-| 13. Audience, annotation, narrative, and capstone | One approved source above | Versioned learner extract with full provenance record. |
+| 13. Audience, annotation, narrative, and capstone | Reused Module 12 CMS Timely and Effective Care release; learner-selected approved source for authored capstones | Released two-audience reference case that preserves the Module 12 values, definitions, reporting windows, trigger origins, and action boundary without duplicating the data. |
 
 ## Released source packages
 
@@ -270,3 +270,20 @@ The data are simulated and cannot estimate real care quality, utilization, acces
 - Validation: 179 of 179 checks pass
 
 The selected Anna Jaques Hospital public values are 23 percent for OP-22 and 188 minutes for OP_18b. The Massachusetts medians are descriptive peer references. The 10-percent and 240-minute review triggers are mock quality-improvement charter assumptions, not CMS thresholds. The reporting periods ended 590 and 317 days before the CMS release, so the dashboard supports definition validation and current local data review, not a current operational judgment.
+
+### DA-730 audience-annotation-narrative-capstone release
+
+- Module: DA-730 Module 13, Audience, annotation, narrative, and capstone
+- Upstream source: Module 12 CMS Timely and Effective Care public-reporting release
+- Dataset page: https://data.cms.gov/provider-data/dataset/yv7e-xc69
+- Complete pinned CSV: https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv
+- Reused teaching table: `courses/data-visualization/modules/12-dashboards-multi-view-composition/data/ma_ed_public_reporting_dashboard_2026.csv`
+- Reused teaching table: 186 rows and 31 columns, SHA-256 `fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd`
+- Reused measure dictionary: 3 rows and 18 columns, SHA-256 `2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412`
+- Reused source selection: 186 rows and 15 columns, SHA-256 `f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b`
+- Selected exact table: 3 rows for facility ID `220029`
+- Audience versions: emergency department quality director and hospital quality committee
+- Source record: `courses/data-visualization/modules/13-audience-annotation-narrative-capstone/source-record.yml`
+- Validation: 66 of 66 checks pass
+
+The reference title, annotation density, evidence order, and explanatory depth change by audience. The 23-percent OP-22 value, 188-minute OP-18b value, samples, units, reporting windows, release date, source lag, peer context, mock-trigger origin, supported action, and unsupported conclusions remain invariant. The module supports authorization of a definition and current-data review, not a current performance or intervention claim.

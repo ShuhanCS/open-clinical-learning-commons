@@ -1,0 +1,55 @@
+schema_version: "1.0.0"
+module: "DA-730 Module 13: Audience, annotation, narrative, and capstone"
+module_version: "0.1.0"
+commons_release: "0.25.0"
+retrieved_or_verified: "2026-08-30"
+publisher: "Centers for Medicare & Medicaid Services"
+dataset: "Timely and Effective Care - Hospital"
+dataset_id: "yv7e-xc69"
+landing_page: "https://data.cms.gov/provider-data/dataset/yv7e-xc69"
+complete_csv_url: "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv"
+data_dictionary_url: "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+measure_periods_url: "https://data.cms.gov/provider-data/topics/hospitals/measures-and-current-data-collection-periods"
+cms_release_date: "2026-08-13"
+complete_source:
+  rows: 138084
+  columns: 16
+  bytes: 34150899
+  sha256: "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516"
+upstream_releases:
+  source_selection:
+    path: "../12-dashboards-multi-view-composition/data/cms_ma_ed_dashboard_source_2026.csv"
+    rows: 186
+    columns: 15
+    sha256: "f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b"
+  teaching_table:
+    path: "../12-dashboards-multi-view-composition/data/ma_ed_public_reporting_dashboard_2026.csv"
+    rows: 186
+    columns: 31
+    sha256: "fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd"
+  measure_dictionary:
+    path: "../12-dashboards-multi-view-composition/data/ed_dashboard_measure_dictionary_2026.csv"
+    rows: 3
+    columns: 18
+    sha256: "2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412"
+filters:
+  - "Use the Module 12 Massachusetts EDV, OP_18b, and OP_22 teaching release."
+  - "Select facility ID 220029 for the exact decision-story table."
+transformations:
+  - "Preserve all 53 reported Massachusetts OP-22 numeric values for the technical peer view."
+  - "Preserve all three selected-facility rows in the exact table."
+  - "Adapt title, annotation density, evidence order, and explanatory depth for two audiences."
+  - "Keep values, units, dates, lag, peer context, trigger origin, finding, and action invariant."
+rights:
+  status: "Public U.S. government reporting data"
+  attribution_required: true
+  endorsement_prohibited: true
+licenses:
+  documentation: "CC-BY-4.0"
+  code: "MIT"
+known_limits:
+  - "The public aggregate values are historical and do not establish current operations."
+  - "The Massachusetts medians are descriptive references rather than benchmarks."
+  - "The 10-percent and 240-minute triggers are course assumptions rather than CMS thresholds."
+  - "The file does not support causal, subgroup, or intervention-effect claims."
+  - "The reference story does not authorize an operational or clinical change."

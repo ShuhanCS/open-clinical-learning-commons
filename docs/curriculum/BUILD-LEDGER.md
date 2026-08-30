@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.24.0
+- Current release: 0.25.0
 - Last updated: 2026-08-30
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Checkpoint 2, Week 6 applied visualization portfolio
-- Next unit: DA-730 Module 13, Audience, annotation, narrative, and capstone
+- Last completed unit: DA-730 Module 13, Audience, annotation, narrative, and capstone
+- Next unit: DA-730 final checkpoint, decision-story capstone
 
 ## Confirmed decisions
 
@@ -97,6 +97,13 @@
 - The validator self-check passes a valid fixture and rejects a missing dashboard. The full assembler test passes, the incomplete starter is rejected, and a nonempty target is protected from overwrite.
 - The checkpoint decision owner is a DA-730 clinical analytics review panel. The decision is whether to approve, condition, revise, or refer a feasible Module 13 capstone proposal.
 - The six cases remain separate populations. The checkpoint uses them as evidence of transferable readiness and does not combine them into one clinical claim.
+- DA-730 Module 13 reuses the pinned Module 12 CMS teaching table instead of duplicating or silently refreshing it.
+- Module 13 validates the 186-row teaching table, three-row measure dictionary, and 186-row source selection against their exact checksums and passes 66 invariant checks.
+- Its lab creates a technical quality-director story, an executive quality-committee story, a three-row exact table, one accessible alternative covering both figures, an audience-adaptation reference, and a decision brief.
+- Its critique creates three deliberately flawed stories covering overstated causality, hidden freshness, and annotation misdirection.
+- The stable reference finding is that the historical 23-percent public OP-22 signal warrants definition and current-data review. The 590-day source lag prevents a current performance or intervention conclusion.
+- The technical and executive versions preserve the same values, units, samples, reporting windows, peer references, mock-trigger origin, action owner, material limitation, and unsupported conclusions.
+- All 13 DA-730 modules now have 21-section specifications and runnable teaching packages. Named human reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -105,9 +112,9 @@
 
 ## Next resume instructions
 
-1. Read the DA-730 Module 13 brief, Checkpoint 2 capstone-proposal contract, and Module 12 handoff.
-2. Select one approved public or synthetic case that can be reshaped for two audiences without changing its values, definitions, uncertainty, or action boundary.
-3. Write the 21-section Module 13 specification before building the runnable package.
-4. Define exact primary figure, supporting figure, accessible table, text alternative, decision brief, source record, transformation record, reproducibility check, critique response, AI-use record, and oral defense files.
-5. Build and validate the final checkpoint for the official half-term end date.
-6. Release Module 13 and the final checkpoint before beginning the foundation-course builds.
+1. Read the final checkpoint contract in the course specification and the Module 13 final-checkpoint handoff.
+2. Define the exact final-capstone folder around the Module 13 submission without forcing learners to rename or reconstruct files.
+3. Create the final checkpoint specification, safe assembler or packager, learner templates, instructor notes, release record, and standard-library validator.
+4. Validate the primary figure, optional supporting-figure rule, exact table, source and transformation records, audience adaptation, accessibility, AI use, reproduction, critique response, and defense files.
+5. Tie the due date to the official last day of the half-term and record the review disposition.
+6. Release the final checkpoint, then begin separate FND-1 and FND-2 technical foundation builds.

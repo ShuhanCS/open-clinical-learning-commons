@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
-- Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.24.0
+- Status: course specification and all 13 module builds complete; final checkpoint build in progress
+- Specification version: 0.25.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -331,13 +331,16 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 
 - Prerequisites: Modules 01 through 12 and completed checkpoints 1 and 2.
 - Competency: Produce and defend a sourced, reproducible, accessible visualization package that communicates a finding and recommendation to a named healthcare audience.
-- Concepts: audience, finding-led titles, annotation, visual sequence, board-ready figures, patient-facing explanation, decision briefs, limitations, implementation questions, and oral defense.
-- Primary case: learner-selected source from the approved register.
-- Decision owner: named clinical, operational, research, patient, executive, or community audience.
-- Lab: revise one analysis for two audiences and document what changes and what must remain stable.
+- Concepts: audience authority, finding-led titles, claim ladders, annotation, primary and supporting views, visual sequence, executive and technical adaptation, decision briefs, transformation records, limitations, implementation questions, and oral defense.
+- Primary case: reuse the Module 12 historical CMS emergency department evidence chain for an emergency department quality director and hospital quality committee.
+- Decision owner: hospital quality committee authorizing the emergency department quality director to conduct a definition and current-data review.
+- Core source: https://data.cms.gov/provider-data/dataset/yv7e-xc69
+- Lab: produce technical and executive versions from one analysis, preserve exact invariants, and document what changes and what remains stable.
 - Critique: diagnose a story that overstates causality, hides uncertainty, or uses annotation to direct attention away from a material subgroup.
-- Submission: the final decision-story capstone package defined below.
+- Submission: `module-13/README.md`, `module-13/decision-brief.md`, `module-13/figure-primary.png`, `module-13/figure-supporting.png`, `module-13/accessible-table.csv`, `module-13/alt-text.md`, `module-13/analysis.R`, `module-13/source-record.yml`, `module-13/transformation-record.md`, `module-13/audience-adaptation-record.md`, `module-13/reproducibility-check.md`, `module-13/critique-response.md`, `module-13/ai-use.md`, `module-13/defense/slides.pdf`, and `module-13/defense/questions-and-responses.md`.
 - Course handoff: the learner's portfolio becomes evidence of visualization competence for later applied or capstone work.
+- Full specification: `docs/curriculum/courses/DA-730/modules/13-audience-annotation-narrative-capstone-spec.md`.
+- Runnable package: `courses/data-visualization/modules/13-audience-annotation-narrative-capstone/`.
 
 ## Required submission package
 
@@ -622,7 +625,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01 through 12 are current runnable candidates. Their human reviews remain pending.
+Modules 01 through 13 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 
@@ -661,6 +664,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Module 10 has a complete place specification, pinned public HPSA and boundary releases, runnable map-versus-non-map lab, critique set, assessment, instructor key, and release record.
 - [x] Module 11 has a complete structure specification, pinned Synthea patient and encounter releases, a one-person-per-index cohort, conserved flow, matrix, composition lab, critique set, assessment, instructor key, and release record.
 - [x] Module 12 has a complete dashboard specification, pinned CMS emergency-department reporting release, three source-preserving tables, a five-view public-reporting review dashboard, exact decision table, critique set, assessment, instructor key, and release record.
+- [x] Module 13 has a complete audience-and-narrative specification, two audience-specific figures from one invariant evidence chain, exact table, adaptation and decision references, critique set, capstone assessment, instructor key, and release record.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.
@@ -669,7 +673,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Alternative tools require editable source files and reproducibility.
 - [x] The public-data portfolio uses authoritative publishers and states important limits.
 - [x] Accessibility and AI accountability are graded requirements.
-- [ ] Each module has its full specification and runnable teaching package.
+- [x] Each module has its full specification and runnable teaching package.
 - [x] Checkpoint 1 assembly and validator run from a clean checkout.
 - [x] Checkpoint 2 assembly regenerates six figures, six exact tables, and six accessible alternatives from Modules 07 through 12; its validator self-check and overwrite guard pass.
 - [ ] Faculty, clinical, accessibility, and independent-instructor reviews are recorded.

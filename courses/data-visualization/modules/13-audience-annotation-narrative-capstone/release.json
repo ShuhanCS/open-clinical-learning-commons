@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-13",
+    "title": "Audience, annotation, narrative, and capstone",
+    "version": "0.1.0",
+    "commons_release": "0.25.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling",
+    "hours": 16.5,
+    "week": 7
+  },
+  "upstream": {
+    "module": "DA-730 Module 12",
+    "teaching": {
+      "path": "../12-dashboards-multi-view-composition/data/ma_ed_public_reporting_dashboard_2026.csv",
+      "row_count": 186,
+      "column_count": 31,
+      "sha256": "fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd"
+    },
+    "measure_dictionary": {
+      "path": "../12-dashboards-multi-view-composition/data/ed_dashboard_measure_dictionary_2026.csv",
+      "row_count": 3,
+      "column_count": 18,
+      "sha256": "2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412"
+    },
+    "source_selection": {
+      "path": "../12-dashboards-multi-view-composition/data/cms_ma_ed_dashboard_source_2026.csv",
+      "row_count": 186,
+      "column_count": 15,
+      "sha256": "f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b"
+    }
+  },
+  "source": {
+    "publisher": "Centers for Medicare & Medicaid Services",
+    "dataset_id": "yv7e-xc69",
+    "landing_page": "https://data.cms.gov/provider-data/dataset/yv7e-xc69",
+    "full_csv_url": "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv",
+    "cms_release_date": "2026-08-13",
+    "full_rows": 138084,
+    "full_columns": 16,
+    "full_sha256": "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516",
+    "source_record": "source-record.yml"
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {"ggplot2": "4.0.3"},
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {"spdx": "CC-BY-4.0", "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"},
+    "code": {"spdx": "MIT", "url": "https://opensource.org/license/mit"},
+    "cms_source": {"spdx": "LicenseRef-US-Government-Public-Domain", "url": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"}
+  },
+  "curriculum_source": {
+    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "author": "Ali Goff",
+    "date": "2026-08-15",
+    "path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/13-audience-annotation-narrative-capstone-spec.md"
+  },
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "The validator passed 66 checks. Two audience figures, one three-row exact table, three reference documents, and three critique figures rendered successfully and were visually inspected."
+    },
+    "required_human_roles": [
+      {"role": "DA-730 faculty", "reviewer": null, "status": "pending", "date": null},
+      {"role": "emergency department quality relevance", "reviewer": null, "status": "pending", "date": null},
+      {"role": "CMS source fidelity", "reviewer": null, "status": "pending", "date": null},
+      {"role": "executive communication", "reviewer": null, "status": "pending", "date": null},
+      {"role": "visualization and information design", "reviewer": null, "status": "pending", "date": null},
+      {"role": "accessibility", "reviewer": null, "status": "pending", "date": null},
+      {"role": "equity and action language", "reviewer": null, "status": "pending", "date": null},
+      {"role": "independent teachability", "reviewer": null, "status": "pending", "date": null}
+    ]
+  },
+  "validation": {
+    "data_checks": "66 of 66 pass",
+    "lab_execution": "pass: two PNGs, one three-row CSV, and three Markdown reference documents",
+    "critique_execution": "pass: three deliberately flawed PNGs",
+    "measured_results": {
+      "upstream_rows": 186,
+      "selected_rows": 3,
+      "audience_versions": 2,
+      "selected_facility_id": "220029",
+      "selected_op18b_minutes": 188,
+      "selected_op22_pct": 23,
+      "selected_op22_reported_peers": 53,
+      "selected_op22_peer_median_pct": 3,
+      "selected_op22_mock_trigger_pct": 10,
+      "selected_op22_source_lag_days": 590,
+      "stable_supported_action": "definition and current-data review"
+    }
+  },
+  "known_issues": [
+    "Named faculty, clinical, source, executive, design, accessibility, equity, and independent-instructor reviews are pending.",
+    "The reference uses historical public aggregate reporting and does not support real-time operations.",
+    "The runnable case covers two professional audiences and does not substitute for patient or public co-design.",
+    "The Massachusetts medians are descriptive and the triggers are course assumptions.",
+    "The source does not support subgroup, causal, current-performance, or intervention-effect claims.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}
