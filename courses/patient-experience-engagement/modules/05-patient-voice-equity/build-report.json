@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "status": "pass",
+  "seed": "oclc-app2-05-v1",
+  "upstream": {
+    "files": 5,
+    "bytes": 5297691,
+    "people": 1255,
+    "events": 28455
+  },
+  "synthetic_comments": {
+    "opportunities": 782,
+    "received": 420,
+    "themes": 8,
+    "ambiguous": 84,
+    "double_coded": 120,
+    "coder_agreements": 96,
+    "percent_agreement": "80.00000000",
+    "cohens_kappa": "0.77142857",
+    "assisted_benchmark_accuracy": "0.78333333",
+    "real_patient_text_rows": 0
+  },
+  "group_review": {
+    "dimensions": 4,
+    "measures": 4,
+    "support_rows": 13,
+    "estimate_rows": 52,
+    "supported_estimates": 35,
+    "contrast_rows": 36,
+    "supported_contrasts": 19
+  },
+  "generated_evidence": {
+    "files_excluding_report": 18,
+    "bytes_excluding_report": 363491,
+    "invariants_passed": 28,
+    "invariants_failed": 0
+  }
+}

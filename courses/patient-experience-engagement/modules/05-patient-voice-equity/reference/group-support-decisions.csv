@@ -1,0 +1,14 @@
+dimension,group,total_people,decision,reason
+other_language_at_home,no,1039,measure-specific review,reference group has enough records but each measure still applies positive and negative rules
+other_language_at_home,yes,215,measure-specific review,all four prespecified estimates pass teaching support
+other_language_at_home,missing or inapplicable,1,suppress all estimates,retain the missing source category without merging
+income_group,middle or high income,722,measure-specific review,fixed reference group
+income_group,lower income,533,measure-specific review,all four prespecified estimates pass teaching support
+insurance_coverage,any private insurance,543,measure-specific review,fixed reference group
+insurance_coverage,public insurance only,695,measure-specific review,all four prespecified estimates pass teaching support
+insurance_coverage,uninsured,17,suppress all estimates,total n is below 50 and several measures are sparse
+race_ethnicity,non-Hispanic White only,822,measure-specific review,fixed reference group
+race_ethnicity,Hispanic,180,measure-specific review,all four prespecified estimates pass teaching support
+race_ethnicity,non-Hispanic Black only,176,partial support,delayed-for-cost positives are below 10 while three other measures pass
+race_ethnicity,non-Hispanic Asian only,34,suppress all estimates,total n is below 50
+race_ethnicity,non-Hispanic other or multiple races,43,suppress all estimates,total n is below 50

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.59.0
+- Current release: 0.60.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Module 04, linked patient evidence
-- Next unit: APP-2 Module 05, patient voice, group differences, and equity
+- Last completed unit: APP-2 Module 05, patient voice, group differences, and equity
+- Next unit: APP-2 Module 06, partnered improvement and embedded machine learning
 
 ## Confirmed decisions
 
@@ -406,22 +406,29 @@
 - The Module 04 workspace has 52 immutable rows, 12 editable records, and 65 assembled files. Its 6,529-byte manifest SHA-256 is `bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8`.
 - Reference validation passes 249 checks at 25 of 25 points with all 20 gates. Learner validation passes 234 checks. Evidence and workspace two-build equality, copied validation, mutation rejection, failed-gate rejection, invalid-progression rejection, and existing-target rejection pass.
 - APP-2 Module 04 is a runnable release candidate at Commons 0.59.0 and permits Module 05 patient-voice and equity analysis with conditions. Clinical action, patient targeting, hospital ranking, causal claims, portal-preference claims, and machine learning remain prohibited.
+- APP-2 Module 05 version 0.1.0 accepts five exact Module 04 handoff files totaling 5,297,691 bytes and manifest SHA-256 `bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8`.
+- The deterministic synthetic layer has 782 comment opportunities, 420 received comments, eight themes, 84 ambiguous comments, 42 secondary-text-first records, and zero real patient text rows.
+- The 120-comment audit has 15 records per theme. Simulated training coders agree on 96 records, or 80.00000000 percent, with Cohen's kappa 0.77142857. The adjudicated phrase-rule audit is correct on 94 records, or 0.78333333, and all 420 suggested labels require human review.
+- The public review has four group dimensions, 13 groups, and four measures. Thirty-five of 52 estimates and 19 of 36 contrasts pass the fixed n, positive, negative, and PSU support rule. Seventeen estimates and 17 contrasts remain suppressed without merging source groups.
+- The Module 05 workspace has 33 immutable rows, 15 editable records, and 49 assembled files. Its 4,598-byte manifest SHA-256 is `6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa`.
+- Reference validation passes 217 checks at 20 of 20 points with all 22 gates. Learner validation passes 199 checks. Evidence and workspace two-build equality, copied validation, comment mutation rejection, failed-gate rejection, invalid-progression rejection, and existing-target rejection pass.
+- APP-2 Module 05 is a runnable release candidate at Commons 0.60.0 and permits Module 06 partnered improvement and embedded machine learning with conditions. Comment-text ML, proof-of-inequity claims, clinical action, patient targeting, group ranking, and causal claims remain prohibited.
 
 ## Pending confirmation
 
 - Confirm Joe Joseph's participation, schedule, session format, recording permission, and final biography wording before alpha.
 - Name and confirm the APP-2 patient/caregiver partner co-lead, compensation, decision rights, preparation, access needs, recording consent, and review terms.
-- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; and the Module 04 MEPS linkage, denominators, measures, claims, and handoff before alpha.
+- Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; the Module 04 MEPS linkage and denominators; and the Module 05 synthetic comments, qualitative coding, group support, equity language, and handoff before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 04 progression record, source record, and this ledger.
-2. Write the durable Module 05 patient-voice, group-differences, and equity specification before implementation.
-3. Preserve the exact target population, linkage, denominator, response-state, weight, data-class, limited-support, unavailable-measure, and claim contracts from Module 04.
-4. Build a governed synthetic comment corpus with no real patient text, a fixed generator, seed, known truth, data dictionary, codebook, and explicit synthetic labels.
-5. Keep comment themes qualitative. Do not turn comment frequency into prevalence or use assisted classification before a transparent human-coded benchmark.
-6. Define prespecified group comparisons, uncertainty, support, channel exclusion, and non-stigmatizing language before interpreting differences.
-7. Build the 20-point equity and patient-voice component with learner and reference packages, exact tests, source boundaries, assessment, instructor materials, AI record, release metadata, and a Module 06 handoff.
-8. Validate, advance semver, commit, and push before Module 06.
+1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 05 progression record, source record, and this ledger.
+2. Write the durable Module 06 partnered-improvement and embedded-machine-learning specification before implementation.
+3. Preserve the exact target, response, linkage, denominator, synthetic-comment, human-benchmark, group-support, suppression, and claim contracts from Modules 03 through 05.
+4. Use the first eight hours for patient-partner interpretation, disagreement, driver diagram, workflow, measures, burden, access alternatives, feedback, and revision rules.
+5. Use the second eight hours for the embedded ML extension. Compare one transparent response-adjustment benchmark with one bounded model under the same eligible fields, split, simulated selection mechanism, and recovery targets.
+6. Keep comment text out of model training. Do not let ML replace patient partnership, transparent weighting, human comment review, or the existing support rules.
+7. Build the required non-scored Module 06 gates and the cumulative 45-point Week 6 handoff, carrying the Module 04 score of 25 and Module 05 score of 20 exactly once.
+8. Validate, advance semver, commit, and push before Checkpoint 02.

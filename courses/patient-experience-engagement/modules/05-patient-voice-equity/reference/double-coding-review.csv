@@ -1,0 +1,10 @@
+scope,records,agreements,percent_agreement,cohens_kappa,decision
+overall_eight_theme,120,96,80.00000000,0.77142857,adjudicate 24 disagreements and retain both original codes
+communication_clarity,120,114,95.00000000,0.77142857,retain with close-alternative examples
+medication_help,120,114,95.00000000,0.77142857,retain medicine-specific inclusion rule
+warning_signs,120,114,95.00000000,0.77142857,retain urgent-help anchor language
+access_after_hours,120,114,95.00000000,0.77142857,clarify time-of-access versus digital channel
+cost_barrier,120,114,95.00000000,0.77142857,require explicit cost language
+digital_channel,120,114,95.00000000,0.77142857,do not infer portal preference
+respect_involvement,120,114,95.00000000,0.77142857,require inclusion or involvement language
+other_or_unclear,120,114,95.00000000,0.77142857,route unresolved records to adjudication

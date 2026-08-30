@@ -1,0 +1,421 @@
+comment_id,benchmark_sample,adjudicated_or_instructor_truth,assisted_theme,matched_rule,correct,human_review_required
+COMMENT-0001,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0002,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0003,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0004,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0005,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0006,no,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0007,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0008,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0009,yes,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0010,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0011,yes,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0012,yes,communication_clarity,communication_clarity,first matched phrase at character 69: instructions,yes,yes
+COMMENT-0013,no,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0014,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0015,yes,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0016,yes,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0017,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0018,yes,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0019,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0020,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0021,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0022,no,respect_involvement,access_after_hours,first matched phrase at character 36: evening,no,yes
+COMMENT-0023,yes,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0024,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0025,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0026,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0027,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0028,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0029,no,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0030,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0031,no,warning_signs,digital_channel,first matched phrase at character 4: digital,no,yes
+COMMENT-0032,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0033,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0034,no,other_or_unclear,respect_involvement,first matched phrase at character 99: choose,no,yes
+COMMENT-0035,yes,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0036,yes,medication_help,respect_involvement,first matched phrase at character 9: listened,no,yes
+COMMENT-0037,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0038,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0039,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0040,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0041,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0042,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0043,no,respect_involvement,medication_help,first matched phrase at character 51: medicine,no,yes
+COMMENT-0044,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0045,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0046,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0047,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0048,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0049,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0050,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0051,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0052,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0053,yes,digital_channel,cost_barrier,first matched phrase at character 4: cost,no,yes
+COMMENT-0054,yes,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0055,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0056,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0057,no,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0058,no,medication_help,warning_signs,first matched phrase at character 32: symptoms,no,yes
+COMMENT-0059,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0060,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0061,yes,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0062,yes,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0063,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0064,yes,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0065,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0066,yes,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0067,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0068,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0069,yes,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0070,no,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0071,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0072,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0073,no,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0074,yes,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0075,no,warning_signs,cost_barrier,first matched phrase at character 27: lower-cost,no,yes
+COMMENT-0076,no,warning_signs,cost_barrier,first matched phrase at character 4: cost,no,yes
+COMMENT-0077,yes,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0078,yes,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0079,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0080,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0081,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0082,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0083,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0084,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0085,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0086,yes,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0087,yes,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0088,yes,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0089,no,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0090,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0091,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0092,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0093,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0094,yes,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0095,yes,other_or_unclear,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0096,yes,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0097,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0098,no,access_after_hours,cost_barrier,first matched phrase at character 4: cost,no,yes
+COMMENT-0099,yes,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0100,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0101,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0102,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0103,no,respect_involvement,communication_clarity,first matched phrase at character 4: instructions,no,yes
+COMMENT-0104,no,warning_signs,medication_help,first matched phrase at character 99: medicine,no,yes
+COMMENT-0105,no,warning_signs,access_after_hours,first matched phrase at character 36: evening,no,yes
+COMMENT-0106,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0107,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0108,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0109,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0110,no,respect_involvement,digital_channel,first matched phrase at character 4: video,no,yes
+COMMENT-0111,yes,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0112,no,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0113,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0114,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0115,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0116,yes,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0117,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0118,yes,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0119,yes,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0120,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0121,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0122,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0123,no,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0124,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0125,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0126,yes,access_after_hours,digital_channel,first matched phrase at character 4: digital,no,yes
+COMMENT-0127,yes,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0128,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0129,no,warning_signs,communication_clarity,first matched phrase at character 4: instructions,no,yes
+COMMENT-0130,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0131,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0132,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0133,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0134,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0135,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0136,yes,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0137,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0138,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0139,no,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0140,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0141,no,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0142,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0143,yes,other_or_unclear,respect_involvement,first matched phrase at character 15: included,no,yes
+COMMENT-0144,yes,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0145,no,medication_help,cost_barrier,first matched phrase at character 27: lower-cost,no,yes
+COMMENT-0146,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0147,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0148,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0149,yes,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0150,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0151,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0152,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0153,no,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0154,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0155,no,respect_involvement,digital_channel,first matched phrase at character 4: digital,no,yes
+COMMENT-0156,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0157,yes,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0158,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0159,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0160,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0161,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0162,no,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0163,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0164,yes,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0165,yes,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0166,yes,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0167,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0168,yes,medication_help,medication_help,first matched phrase at character 50: medicine,yes,yes
+COMMENT-0169,no,other_or_unclear,access_after_hours,first matched phrase at character 90: evening,no,yes
+COMMENT-0170,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0171,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0172,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0173,no,digital_channel,digital_channel,first matched phrase at character 69: video,yes,yes
+COMMENT-0174,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0175,yes,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0176,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0177,no,communication_clarity,communication_clarity,first matched phrase at character 63: written plan,yes,yes
+COMMENT-0178,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0179,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0180,yes,respect_involvement,respect_involvement,first matched phrase at character 91: choose,yes,yes
+COMMENT-0181,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0182,no,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0183,yes,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0184,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0185,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0186,yes,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0187,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0188,yes,warning_signs,access_after_hours,first matched phrase at character 36: evening,no,yes
+COMMENT-0189,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0190,no,cost_barrier,respect_involvement,first matched phrase at character 15: included,no,yes
+COMMENT-0191,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0192,no,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0193,no,other_or_unclear,respect_involvement,first matched phrase at character 61: included,no,yes
+COMMENT-0194,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0195,yes,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0196,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0197,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0198,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0199,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0200,yes,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0201,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0202,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0203,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0204,yes,access_after_hours,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0205,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0206,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0207,yes,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0208,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0209,yes,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0210,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0211,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0212,yes,warning_signs,digital_channel,first matched phrase at character 102: online,no,yes
+COMMENT-0213,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0214,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0215,yes,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0216,yes,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0217,yes,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0218,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0219,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0220,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0221,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0222,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0223,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0224,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0225,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0226,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0227,yes,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0228,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0229,yes,communication_clarity,communication_clarity,first matched phrase at character 63: instructions,yes,yes
+COMMENT-0230,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0231,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0232,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0233,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0234,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0235,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0236,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0237,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0238,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0239,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0240,yes,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0241,yes,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0242,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0243,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0244,yes,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0245,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0246,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0247,yes,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0248,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0249,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0250,yes,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0251,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0252,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0253,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0254,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0255,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0256,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0257,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0258,yes,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0259,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0260,yes,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0261,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0262,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0263,yes,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0264,no,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0265,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0266,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0267,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0268,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0269,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0270,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0271,yes,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0272,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0273,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0274,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0275,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0276,yes,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0277,yes,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0278,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0279,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0280,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0281,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0282,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0283,yes,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0284,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0285,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0286,no,other_or_unclear,warning_signs,first matched phrase at character 78: symptoms,no,yes
+COMMENT-0287,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0288,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0289,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0290,no,respect_involvement,digital_channel,first matched phrase at character 4: digital,no,yes
+COMMENT-0291,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0292,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0293,no,warning_signs,warning_signs,first matched phrase at character 105: symptoms,yes,yes
+COMMENT-0294,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0295,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0296,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0297,no,warning_signs,cost_barrier,first matched phrase at character 4: cost,no,yes
+COMMENT-0298,no,warning_signs,digital_channel,first matched phrase at character 63: video,no,yes
+COMMENT-0299,yes,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0300,yes,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0301,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0302,no,respect_involvement,medication_help,first matched phrase at character 13: medicine,no,yes
+COMMENT-0303,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0304,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0305,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0306,yes,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0307,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0308,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0309,yes,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0310,yes,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0311,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0312,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0313,yes,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0314,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0315,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0316,yes,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0317,yes,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0318,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0319,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0320,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0321,yes,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0322,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0323,yes,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0324,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0325,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0326,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0327,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0328,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0329,no,digital_channel,access_after_hours,first matched phrase at character 30: after regular hours,no,yes
+COMMENT-0330,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0331,yes,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0332,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0333,yes,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0334,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0335,yes,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0336,yes,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0337,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0338,yes,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0339,yes,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0340,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0341,no,other_or_unclear,warning_signs,first matched phrase at character 32: symptoms,no,yes
+COMMENT-0342,yes,other_or_unclear,digital_channel,first matched phrase at character 97: online,no,yes
+COMMENT-0343,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0344,no,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0345,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0346,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0347,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0348,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0349,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0350,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0351,yes,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0352,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0353,yes,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0354,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0355,yes,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0356,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0357,yes,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0358,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0359,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0360,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0361,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0362,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0363,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0364,yes,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0365,no,other_or_unclear,access_after_hours,first matched phrase at character 95: after regular hours,no,yes
+COMMENT-0366,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0367,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0368,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0369,yes,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0370,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0371,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0372,yes,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0373,yes,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0374,yes,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0375,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0376,yes,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0377,no,medication_help,medication_help,first matched phrase at character 4: medicine,yes,yes
+COMMENT-0378,yes,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0379,yes,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0380,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0381,no,communication_clarity,communication_clarity,first matched phrase at character 19: explanation,yes,yes
+COMMENT-0382,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0383,yes,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0384,no,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0385,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0386,no,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0387,yes,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0388,no,medication_help,medication_help,first matched phrase at character 13: medicine,yes,yes
+COMMENT-0389,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0390,no,cost_barrier,access_after_hours,first matched phrase at character 30: after regular hours,no,yes
+COMMENT-0391,yes,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0392,no,other_or_unclear,other_or_unclear,no match,yes,yes
+COMMENT-0393,no,cost_barrier,cost_barrier,first matched phrase at character 4: cost,yes,yes
+COMMENT-0394,yes,digital_channel,warning_signs,first matched phrase at character 21: warning signs,no,yes
+COMMENT-0395,no,communication_clarity,respect_involvement,first matched phrase at character 15: included,no,yes
+COMMENT-0396,no,communication_clarity,communication_clarity,first matched phrase at character 4: instructions,yes,yes
+COMMENT-0397,no,medication_help,access_after_hours,first matched phrase at character 36: evening,no,yes
+COMMENT-0398,no,respect_involvement,respect_involvement,first matched phrase at character 9: listened,yes,yes
+COMMENT-0399,no,warning_signs,medication_help,first matched phrase at character 4: medicine,no,yes
+COMMENT-0400,no,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes
+COMMENT-0401,no,respect_involvement,respect_involvement,first matched phrase at character 15: included,yes,yes
+COMMENT-0402,no,digital_channel,digital_channel,first matched phrase at character 43: online,yes,yes
+COMMENT-0403,yes,cost_barrier,communication_clarity,first matched phrase at character 4: written plan,no,yes
+COMMENT-0404,no,access_after_hours,other_or_unclear,no match,no,yes
+COMMENT-0405,no,communication_clarity,digital_channel,first matched phrase at character 4: digital,no,yes
+COMMENT-0406,yes,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0407,no,access_after_hours,access_after_hours,first matched phrase at character 30: after regular hours,yes,yes
+COMMENT-0408,yes,medication_help,medication_help,first matched phrase at character 51: medicine,yes,yes
+COMMENT-0409,yes,digital_channel,digital_channel,first matched phrase at character 4: video,yes,yes
+COMMENT-0410,no,cost_barrier,medication_help,first matched phrase at character 40: medicine,no,yes
+COMMENT-0411,no,communication_clarity,cost_barrier,first matched phrase at character 4: cost,no,yes
+COMMENT-0412,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0413,no,communication_clarity,communication_clarity,first matched phrase at character 4: written plan,yes,yes
+COMMENT-0414,no,warning_signs,other_or_unclear,no match,no,yes
+COMMENT-0415,yes,warning_signs,warning_signs,first matched phrase at character 21: warning signs,yes,yes
+COMMENT-0416,no,cost_barrier,cost_barrier,first matched phrase at character 27: lower-cost,yes,yes
+COMMENT-0417,no,respect_involvement,respect_involvement,first matched phrase at character 45: choose,yes,yes
+COMMENT-0418,yes,digital_channel,digital_channel,first matched phrase at character 4: digital,yes,yes
+COMMENT-0419,no,warning_signs,warning_signs,first matched phrase at character 32: symptoms,yes,yes
+COMMENT-0420,yes,access_after_hours,access_after_hours,first matched phrase at character 36: evening,yes,yes

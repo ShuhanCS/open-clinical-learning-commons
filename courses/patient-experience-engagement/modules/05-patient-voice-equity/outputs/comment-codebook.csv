@@ -1,0 +1,9 @@
+theme,label,include,exclude,anchor_language,coding_rule
+communication_clarity,Communication clarity,clarity or consistency of the discharge explanation,"medicine timing, warning signs, or access as the main issue",instructions; explanation; written plan,one primary theme; optional secondary theme; adjudicate unclear records
+medication_help,Medication help,"understanding medicine names, changes, timing, or purpose",cost alone or general communication without medicine content,medicine; medication,one primary theme; optional secondary theme; adjudicate unclear records
+warning_signs,Warning signs,symptoms or changes that should lead to a call or urgent help,general follow-up access without a symptom cue,warning signs; symptoms; urgent,one primary theme; optional secondary theme; adjudicate unclear records
+access_after_hours,Access after hours,finding help outside regular hours,digital format or routine appointment scheduling alone,after regular hours; evening; weekend,one primary theme; optional secondary theme; adjudicate unclear records
+cost_barrier,Cost barrier,"cost, affordability, or a lower-cost option",insurance category without a stated cost concern,cost; lower-cost,one primary theme; optional secondary theme; adjudicate unclear records
+digital_channel,Digital channel,"video, online, device, or phone-versus-digital format",general telephone access without a digital format question,video; online; digital; device,one primary theme; optional secondary theme; adjudicate unclear records
+respect_involvement,Respect and involvement,"being heard, included, or involved in the plan",clarity alone without involvement,choose; listened; included,one primary theme; optional secondary theme; adjudicate unclear records
+other_or_unclear,Other or unclear,a comment without enough information for another theme,any comment with a clear primary theme,no qualifying phrase,one primary theme; optional secondary theme; adjudicate unclear records

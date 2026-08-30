@@ -1,0 +1,29 @@
+check_id,invariant,actual,expected,status
+I01,upstream file count,5,5,pass
+I02,upstream bytes,5297691,5297691,pass
+I03,accepted person rows,1255,1255,pass
+I04,accepted event rows,28455,28455,pass
+I05,synthetic respondent opportunities,782,782,pass
+I06,synthetic received comments,420,420,pass
+I07,unique comment IDs,420,420,pass
+I08,real patient text rows,0,0,pass
+I09,codebook themes,8,8,pass
+I10,theme allocation total,420,420,pass
+I11,ambiguous comment rows,84,84,pass
+I12,secondary-text-first rows,42,42,pass
+I13,double-coded rows,120,120,pass
+I14,double-coded rows per theme,15,15,pass
+I15,coder agreements,96,96,pass
+I16,adjudicated rows,120,120,pass
+I17,assisted benchmark rows,120,120,pass
+I18,assisted human-review-required rows,420,420,pass
+I19,comment examples,16,16,pass
+I20,group dimensions,4,4,pass
+I21,group measures,4,4,pass
+I22,group support rows,13,13,pass
+I23,group estimate rows,52,52,pass
+I24,group contrast rows,36,36,pass
+I25,portal preference denominator,0,0,pass
+I26,direct source identifier fields released,0,0,pass
+I27,external Python dependencies,0,0,pass
+I28,theme counts match fixed allocation,True,True,pass

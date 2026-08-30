@@ -1,0 +1,6 @@
+source_id,title,relative_path,bytes,sha256,role
+APP2-M04-RELEASE,APP-2 Module 04 release record,data/upstream/module04-release.json,5063,de31b805351946d644dccc5125deffdffdb993470fbdd74670278c2ca6e7e1d0,accepted release identity and permissions
+APP2-M04-PEOPLE,APP-2 Module 04 linked people,data/upstream/module04-linked-persons.csv,476048,3605f17995f4f3020572dd23ac008a17db9ca78980d15d6a2faadb1efd5e8f24,accepted public-derived person analysis table
+APP2-M04-EVENTS,APP-2 Module 04 linked events,data/upstream/module04-linked-events.csv,4808211,16cbb65d1dc0925f4257c73b574617803f05feacbebba134fec3396dd5788997,accepted public-derived event table
+APP2-M04-SOURCES,APP-2 Module 04 source inventory,data/upstream/module04-source-inventory.csv,6596,63060f9773f38c1ff2d72a51b2d6561725d6263685f7eda7f67a0cf5649988b7,identity of 25 official MEPS source files
+APP2-M04-DENOMINATORS,APP-2 Module 04 denominator registry,data/upstream/module04-denominator-registry.csv,1773,7263d5c2b4add3eef5493f9c499e711b70f2f31edf90ef649fa56d4a5f61d4de,accepted person event and unavailable denominators

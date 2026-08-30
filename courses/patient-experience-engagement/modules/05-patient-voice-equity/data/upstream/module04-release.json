@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app2-04",
+    "title": "Linked patient evidence",
+    "version": "0.1.0",
+    "commons_release": "0.59.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": 4,
+    "hours": 16.5,
+    "course_points": 25,
+    "checkpoint_destination": "Week 6 exactly once"
+  },
+  "source_suite": {
+    "publisher": "Agency for Healthcare Research and Quality",
+    "products": ["HC-256", "HC-254D", "HC-254E", "HC-254F", "HC-254G"],
+    "files": 25,
+    "bytes": 18206634,
+    "pdf_pages": 1101,
+    "person_rows": 19140,
+    "event_rows": 174231,
+    "full_event_rows_linked_to_person_source": 174231,
+    "event_weight_mismatches": 0
+  },
+  "upstream": {
+    "files": 3,
+    "bytes": 570340,
+    "checkpoint_id": "oclc-app2-cp01",
+    "checkpoint_candidate_manifest_sha256": "5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903",
+    "module03_manifest_sha256": "3d7787a975335518cf4a4f50b5561a323707e2acea6bd1724b1c92a565f64a30",
+    "permission": "permitted for linked analysis"
+  },
+  "target": {
+    "people": 1255,
+    "base_weighted_population": 18879474.284615,
+    "linked_events": 28455,
+    "synthetic_respondents": 782,
+    "synthetic_complete_linked_analysis_rows": 538
+  },
+  "linkage": {
+    "internal_person_key": "DUPERSID",
+    "released_direct_source_ids": false,
+    "event_rows": {
+      "inpatient": 1692,
+      "emergency": 1601,
+      "outpatient": 4651,
+      "office_based": 20511
+    },
+    "related_emergency_inpatient_pairs": 855,
+    "inpatient_2023_carry_in_starts": 12,
+    "setting_reconciliation_differences": 0
+  },
+  "measurement": {
+    "access_communication_measures": 10,
+    "denominator_registry_rows": 14,
+    "service_use_rows": 8,
+    "digital_service_rows": 7,
+    "linked_pattern_rows": 14,
+    "provider_language_valid_rows": 45,
+    "provider_language_support": "limited_support",
+    "usual_source_weighted_percent": 80.78856833,
+    "after_hours_difficult_weighted_percent": 52.44065366,
+    "delayed_for_cost_weighted_percent": 7.61893012,
+    "telehealth_event_weighted_percent": 7.37866394,
+    "portal_preference_denominator": 0
+  },
+  "generated_evidence": {
+    "files": 11,
+    "bytes": 5298996,
+    "invariants_passed": 25,
+    "invariants_failed": 0,
+    "external_python_dependencies": 0
+  },
+  "package": {
+    "immutable_manifest_rows": 52,
+    "editable_records": 12,
+    "assembled_files": 65,
+    "manifest_bytes": 6529,
+    "manifest_sha256": "bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8"
+  },
+  "assessment": {
+    "source_and_linkage_points": 5,
+    "reconciliation_and_denominator_points": 5,
+    "access_communication_digital_points": 5,
+    "service_use_and_linked_pattern_points": 5,
+    "reproduction_claims_and_defense_points": 5,
+    "total_points": 25,
+    "noncompensable_gates": 20,
+    "reference_score": "25.00 of 25.00"
+  },
+  "validation": {
+    "evidence_builder_self_check": "pass",
+    "committed_evidence_rebuild": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 249,
+    "starter_checks": 234,
+    "two_evidence_builds_match": "pass",
+    "two_workspace_assemblies_match": "pass",
+    "existing_target_rejection": "pass",
+    "event_mutation_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module05_permission": "permitted for patient-voice and equity analysis",
+    "clinical_action": "prohibited",
+    "hospital_ranking": "prohibited",
+    "patient_targeting": "prohibited",
+    "causal_claim": "prohibited",
+    "portal_preference_claim": "prohibited",
+    "machine_learning": "reserved for Module 06"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "source audit, linkage specification, evidence build, assessment package, validation, and release record"}
+  ],
+  "known_issues": [
+    "Named APP-2 faculty, patient or caregiver, survey-methods, health-services data, accessibility, equity, privacy, responsible-AI, clinical, and independent reproduction reviews remain pending before alpha.",
+    "The source suite has telehealth service-channel evidence but no portal-access or portal-preference measure.",
+    "The provider-language estimate has only 45 valid target records and remains limited support.",
+    "The synthetic Module 03 response layer cannot support a real patient-experience association.",
+    "The 25-point score cannot compensate for a failed linkage, denominator, design, data-class, protection, or claim gate.",
+    "No package authorizes clinical action, patient targeting, hospital ranking, causal inference, or machine learning."
+  ]
+}

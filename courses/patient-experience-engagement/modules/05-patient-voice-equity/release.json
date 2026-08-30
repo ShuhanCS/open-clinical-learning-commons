@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app2-05",
+    "title": "Patient voice, group differences, and equity",
+    "version": "0.1.0",
+    "commons_release": "0.60.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "week": 5,
+    "hours": 16.0,
+    "course_points": 20,
+    "checkpoint_destination": "Week 6 exactly once"
+  },
+  "upstream": {
+    "module": "oclc-app2-04",
+    "module_version": "0.1.0",
+    "module_manifest_sha256": "bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8",
+    "files": 5,
+    "bytes": 5297691,
+    "people": 1255,
+    "events": 28455,
+    "official_meps_files_referenced": 25,
+    "permission": "permitted for patient-voice and equity analysis"
+  },
+  "synthetic_comments": {
+    "seed": "oclc-app2-05-v1",
+    "opportunities": 782,
+    "received": 420,
+    "themes": 8,
+    "ambiguous": 84,
+    "secondary_text_first": 42,
+    "double_coded": 120,
+    "records_per_theme": 15,
+    "coder_agreements": 96,
+    "percent_agreement": 80.0,
+    "cohens_kappa": 0.77142857,
+    "real_patient_text_rows": 0
+  },
+  "assisted_classification": {
+    "method": "fixed phrase rule after adjudicated human benchmark",
+    "benchmark_rows": 120,
+    "correct": 94,
+    "accuracy": 0.78333333,
+    "macro_recall": 0.78333333,
+    "suggested_labels_requiring_human_review": 420,
+    "machine_learning": false
+  },
+  "group_review": {
+    "dimensions": 4,
+    "groups": 13,
+    "measures": 4,
+    "estimate_rows": 52,
+    "supported_estimates": 35,
+    "suppressed_estimates": 17,
+    "contrast_rows": 36,
+    "supported_contrasts": 19,
+    "suppressed_contrasts": 17,
+    "minimum_valid_n": 50,
+    "minimum_positive_n": 10,
+    "minimum_negative_n": 10,
+    "minimum_psus": 2,
+    "portal_preference_denominator": 0
+  },
+  "reference_findings": {
+    "lower_income_delayed_cost_difference_pp": 4.02137981,
+    "lower_income_delayed_cost_ci95_low_pp": 0.59188925,
+    "lower_income_delayed_cost_ci95_high_pp": 7.45087037,
+    "lower_income_telehealth_difference_pp": -6.88053616,
+    "lower_income_telehealth_ci95_low_pp": -12.44361714,
+    "lower_income_telehealth_ci95_high_pp": -1.31745518,
+    "claim_status": "descriptive exploratory teaching contrasts; not proof of inequity or cause"
+  },
+  "generated_evidence": {
+    "files": 19,
+    "bytes": 364354,
+    "invariants_passed": 28,
+    "invariants_failed": 0,
+    "external_python_dependencies": 0
+  },
+  "package": {
+    "immutable_manifest_rows": 33,
+    "editable_records": 15,
+    "assembled_files": 49,
+    "manifest_bytes": 4598,
+    "manifest_sha256": "6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa"
+  },
+  "assessment": {
+    "corpus_provenance_points": 4,
+    "human_coding_agreement_points": 4,
+    "assisted_classification_points": 4,
+    "group_comparison_points": 4,
+    "equity_memo_reproduction_defense_points": 4,
+    "total_points": 20,
+    "noncompensable_gates": 22,
+    "reference_score": "20.00 of 20.00"
+  },
+  "validation": {
+    "evidence_builder_self_check": "pass",
+    "committed_evidence_rebuild": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 217,
+    "starter_checks": 199,
+    "two_evidence_builds_match": "pass",
+    "two_workspace_assemblies_match": "pass",
+    "existing_target_rejection": "pass",
+    "comment_mutation_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module06_permission": "permitted for partnered improvement and embedded ML",
+    "comment_text_machine_learning": "prohibited",
+    "proof_of_inequity": "prohibited",
+    "clinical_action": "prohibited",
+    "patient_targeting": "prohibited",
+    "group_ranking": "prohibited",
+    "causal_claim": "prohibited"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, synthetic corpus, group evidence, assessment package, validation, and release record"}
+  ],
+  "known_issues": [
+    "Named APP-2 faculty, patient or caregiver, qualitative-methods, survey-methods, health-services data, equity, accessibility, language-access, privacy, responsible-AI, clinical, and independent reproduction reviews remain pending before alpha.",
+    "All comment text and coder records are synthetic curriculum evidence and cannot represent observed patient voice.",
+    "The source does not measure discrimination, trust, portal access, portal preference, or the mechanism behind a group difference.",
+    "Seventeen group estimates and seventeen contrasts remain suppressed under the fixed support rule.",
+    "The 20-point score cannot compensate for a failed source, synthetic-boundary, coding, support, protection, claim, or progression gate.",
+    "No package authorizes clinical action, patient targeting, group ranking, causal inference, comment-text machine learning, or implementation."
+  ]
+}

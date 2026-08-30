@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app2-05",
+    "version": "0.1.0",
+    "commons_release": "0.60.0",
+    "week": 5,
+    "hours": 16.0,
+    "course_points": 20
+  },
+  "upstream": {
+    "module04_version": "0.1.0",
+    "module04_manifest_sha256": "bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8",
+    "files": 5,
+    "bytes": 5297691,
+    "people": 1255,
+    "events": 28455,
+    "permission": "permitted for patient-voice and equity analysis"
+  },
+  "synthetic_comments": {
+    "seed": "oclc-app2-05-v1",
+    "opportunities": 782,
+    "received_comments": 420,
+    "double_coded_comments": 120,
+    "themes": 8,
+    "real_patient_text": false
+  },
+  "group_review": {
+    "dimensions": 4,
+    "measures": 4,
+    "minimum_valid_n": 50,
+    "minimum_positive_n": 10,
+    "minimum_negative_n": 10,
+    "minimum_psus": 2,
+    "survey_weight": "PERWT24F",
+    "design_fields": ["VARSTR", "VARPSU"]
+  },
+  "permissions": {
+    "comment_prevalence": "prohibited",
+    "proof_of_inequity": "prohibited",
+    "causal_claim": "prohibited",
+    "patient_targeting": "prohibited",
+    "clinical_action": "prohibited",
+    "machine_learning": "reserved for Module 06"
+  }
+}

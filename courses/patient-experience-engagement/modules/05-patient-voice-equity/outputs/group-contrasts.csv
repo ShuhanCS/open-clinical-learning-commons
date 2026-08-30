@@ -1,0 +1,37 @@
+dimension,group,reference_group,measure,group_n,reference_n,difference_pp,survey_se_pp,ci95_low_pp,ci95_high_pp,support_status,support_reason
+other_language_at_home,yes,no,delayed_for_cost,215,1036,0.65357318,2.49029831,-4.22741150,5.53455786,supported,descriptive exploratory contrast; not proof of inequity or cause
+other_language_at_home,yes,no,after_hours_difficult,117,590,10.03468521,6.23595761,-2.18779171,22.25716213,supported,descriptive exploratory contrast; not proof of inequity or cause
+other_language_at_home,yes,no,involved_usually_always,137,819,-1.90322414,5.13741019,-11.97254812,8.16609984,supported,descriptive exploratory contrast; not proof of inequity or cause
+other_language_at_home,yes,no,any_telehealth_event,215,1039,-4.87951649,3.27823553,-11.30485812,1.54582514,supported,descriptive exploratory contrast; not proof of inequity or cause
+other_language_at_home,missing or inapplicable,no,delayed_for_cost,1,1036,,,,,suppressed,group or reference estimate is unsupported
+other_language_at_home,missing or inapplicable,no,after_hours_difficult,1,590,,,,,suppressed,group or reference estimate is unsupported
+other_language_at_home,missing or inapplicable,no,involved_usually_always,1,819,,,,,suppressed,group or reference estimate is unsupported
+other_language_at_home,missing or inapplicable,no,any_telehealth_event,1,1039,,,,,suppressed,group or reference estimate is unsupported
+income_group,lower income,middle or high income,delayed_for_cost,531,721,4.02137981,1.74974008,0.59188925,7.45087037,supported,descriptive exploratory contrast; not proof of inequity or cause
+income_group,lower income,middle or high income,after_hours_difficult,304,404,-6.48467014,4.31043619,-14.93312507,1.96378479,supported,descriptive exploratory contrast; not proof of inequity or cause
+income_group,lower income,middle or high income,involved_usually_always,386,571,-6.73161296,3.56950027,-13.72783350,0.26460758,supported,descriptive exploratory contrast; not proof of inequity or cause
+income_group,lower income,middle or high income,any_telehealth_event,533,722,-6.88053616,2.83830662,-12.44361714,-1.31745518,supported,descriptive exploratory contrast; not proof of inequity or cause
+insurance_coverage,public insurance only,any private insurance,delayed_for_cost,692,543,0.27483976,1.51647419,-2.69744965,3.24712917,supported,descriptive exploratory contrast; not proof of inequity or cause
+insurance_coverage,public insurance only,any private insurance,after_hours_difficult,414,290,-8.27358545,4.45181822,-16.99914916,0.45197826,supported,descriptive exploratory contrast; not proof of inequity or cause
+insurance_coverage,public insurance only,any private insurance,involved_usually_always,537,415,-4.99429461,3.45099748,-11.75824967,1.76966045,supported,descriptive exploratory contrast; not proof of inequity or cause
+insurance_coverage,public insurance only,any private insurance,any_telehealth_event,695,543,-7.70931291,2.94539736,-13.48229173,-1.93633409,supported,descriptive exploratory contrast; not proof of inequity or cause
+insurance_coverage,uninsured,any private insurance,delayed_for_cost,17,543,,,,,suppressed,group or reference estimate is unsupported
+insurance_coverage,uninsured,any private insurance,after_hours_difficult,4,290,,,,,suppressed,group or reference estimate is unsupported
+insurance_coverage,uninsured,any private insurance,involved_usually_always,5,415,,,,,suppressed,group or reference estimate is unsupported
+insurance_coverage,uninsured,any private insurance,any_telehealth_event,17,543,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,Hispanic,non-Hispanic White only,delayed_for_cost,180,820,3.36882533,3.03435350,-2.57850752,9.31615818,supported,descriptive exploratory contrast; not proof of inequity or cause
+race_ethnicity,Hispanic,non-Hispanic White only,after_hours_difficult,93,462,5.94641043,6.83152779,-7.44338404,19.33620490,supported,descriptive exploratory contrast; not proof of inequity or cause
+race_ethnicity,Hispanic,non-Hispanic White only,involved_usually_always,110,658,-8.96030432,4.76657905,-18.30279926,0.38219062,supported,descriptive exploratory contrast; not proof of inequity or cause
+race_ethnicity,Hispanic,non-Hispanic White only,any_telehealth_event,180,822,-10.01065252,3.19887566,-16.28044882,-3.74085622,supported,descriptive exploratory contrast; not proof of inequity or cause
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,delayed_for_cost,175,820,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,after_hours_difficult,105,462,-8.03138555,7.30783541,-22.35474294,6.29197184,supported,descriptive exploratory contrast; not proof of inequity or cause
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,involved_usually_always,132,658,-7.24652118,4.97268921,-16.99299203,2.49994967,supported,descriptive exploratory contrast; not proof of inequity or cause
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,any_telehealth_event,176,822,-5.09737174,3.95434048,-12.84787909,2.65313561,supported,descriptive exploratory contrast; not proof of inequity or cause
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,delayed_for_cost,34,820,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,after_hours_difficult,19,462,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,involved_usually_always,24,658,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,any_telehealth_event,34,822,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,delayed_for_cost,43,820,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,after_hours_difficult,29,462,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,involved_usually_always,33,658,,,,,suppressed,group or reference estimate is unsupported
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,any_telehealth_event,43,822,,,,,suppressed,group or reference estimate is unsupported

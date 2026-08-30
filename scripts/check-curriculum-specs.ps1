@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.59.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.60.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1751,7 +1751,7 @@ if (
     $app2Content -match '(?im)[A-Z]:\\Users\\' -or
     $app2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app2Content -notmatch 'Current Commons release: 0\.59\.0' -or
+    $app2Content -notmatch 'Current Commons release: 0\.60\.0' -or
     $app2Content -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '25,906' -or
@@ -2196,6 +2196,135 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 04 evidence builder self-check fa
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 04 workspace builder self-check failed.' }
 & python (Join-Path $app2Module04Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 04 validator self-check failed.' }
+
+$app2Module05Root = Join-Path $repo 'courses\patient-experience-engagement\modules\05-patient-voice-equity'
+$app2Module05Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\modules\05-patient-voice-equity-spec.md'
+$app2Module05Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md', 'build-report.json',
+    'build_patient_voice.py', 'build_workspace.py', 'data-spec.md', 'instructor-notes.md',
+    'release.json', 'source-record.yml', 'validate_workspace.py', 'voice-equity-contract.json',
+    'data\upstream-inventory.csv', 'data\upstream\module04-release.json',
+    'data\upstream\module04-linked-persons.csv', 'data\upstream\module04-linked-events.csv',
+    'data\upstream\module04-source-inventory.csv', 'data\upstream\module04-denominator-registry.csv',
+    'data\synthetic\comment-opportunities.csv', 'data\synthetic\synthetic-comments.csv',
+    'data\synthetic\double-coding-sample.csv', 'instructor\comment-truth.csv',
+    'instructor\double-coded-comments.csv', 'instructor\assisted-comment-labels.csv',
+    'outputs\source-profile.csv', 'outputs\comment-codebook.csv', 'outputs\comment-flow.csv',
+    'outputs\agreement-summary.csv', 'outputs\assisted-classification-audit.csv',
+    'outputs\theme-summary.csv', 'outputs\comment-examples.csv', 'outputs\group-support.csv',
+    'outputs\group-estimates.csv', 'outputs\group-contrasts.csv',
+    'outputs\channel-exclusion-audit.csv', 'outputs\invariant-checks.csv'
+)
+foreach ($editable in @(
+    'comment-provenance.md', 'codebook-decisions.csv', 'double-coding-review.csv',
+    'agreement-interpretation.md', 'assisted-classification-review.md', 'group-analysis-plan.md',
+    'group-support-decisions.csv', 'group-difference-interpretation.md',
+    'channel-exclusion-review.md', 'equity-patient-voice-memo.md', 'responsible-claims.md',
+    'reproducibility-check.md', 'gate-results.csv', 'ai-use.md', 'progression-decision.md'
+)) {
+    $app2Module05Files += "template\$editable", "reference\$editable"
+}
+$app2Module05Missing = @()
+if (-not (Test-Path -LiteralPath $app2Module05Spec)) { $app2Module05Missing += 'specification' }
+foreach ($relative in $app2Module05Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Module05Root $relative))) {
+        $app2Module05Missing += $relative
+    }
+}
+if ($app2Module05Missing.Count -gt 0) {
+    throw "APP-2 Module 05 is missing its specification or package files: $($app2Module05Missing -join ', ')."
+}
+$app2Module05Content = Get-Content -Raw -LiteralPath $app2Module05Spec
+$app2Module05Sections = [regex]::Matches($app2Module05Content, '(?m)^## \d+\.').Count
+$app2Module05Release = Get-Content -Raw -LiteralPath (Join-Path $app2Module05Root 'release.json') | ConvertFrom-Json
+$app2Module05Upstream = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'data\upstream-inventory.csv'))
+$app2Module05Opportunities = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'data\synthetic\comment-opportunities.csv'))
+$app2Module05Comments = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'data\synthetic\synthetic-comments.csv'))
+$app2Module05CodingSample = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'data\synthetic\double-coding-sample.csv'))
+$app2Module05Truth = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'instructor\comment-truth.csv'))
+$app2Module05Agreement = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'outputs\agreement-summary.csv'))
+$app2Module05Assisted = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'outputs\assisted-classification-audit.csv'))
+$app2Module05Estimates = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'outputs\group-estimates.csv'))
+$app2Module05Contrasts = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'outputs\group-contrasts.csv'))
+$app2Module05Exclusion = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'outputs\channel-exclusion-audit.csv'))
+$app2Module05Invariants = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'outputs\invariant-checks.csv'))
+$app2Module05Gates = @(Import-Csv -LiteralPath (Join-Path $app2Module05Root 'reference\gate-results.csv'))
+if (
+    $app2Module05Sections -ne 21 -or
+    $app2Module05Content -match '[—–]' -or
+    $app2Module05Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Module05Content -notmatch '5,297,691' -or
+    $app2Module05Content -notmatch '4,598-byte' -or
+    $app2Module05Content -notmatch '6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa' -or
+    $app2Module05Content -notmatch '217 checks' -or
+    $app2Module05Content -notmatch '199 checks' -or
+    $app2Module05Release.module.id -ne 'oclc-app2-05' -or
+    $app2Module05Release.module.version -ne '0.1.0' -or
+    $app2Module05Release.module.commons_release -ne '0.60.0' -or
+    $app2Module05Release.module.course_points -ne 20 -or
+    $app2Module05Release.upstream.files -ne 5 -or
+    $app2Module05Release.upstream.bytes -ne 5297691 -or
+    $app2Module05Release.upstream.module_manifest_sha256 -ne 'bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8' -or
+    $app2Module05Release.synthetic_comments.opportunities -ne 782 -or
+    $app2Module05Release.synthetic_comments.received -ne 420 -or
+    $app2Module05Release.synthetic_comments.themes -ne 8 -or
+    $app2Module05Release.synthetic_comments.ambiguous -ne 84 -or
+    $app2Module05Release.synthetic_comments.double_coded -ne 120 -or
+    $app2Module05Release.synthetic_comments.coder_agreements -ne 96 -or
+    $app2Module05Release.synthetic_comments.cohens_kappa -ne 0.77142857 -or
+    $app2Module05Release.synthetic_comments.real_patient_text_rows -ne 0 -or
+    $app2Module05Release.assisted_classification.accuracy -ne 0.78333333 -or
+    $app2Module05Release.assisted_classification.suggested_labels_requiring_human_review -ne 420 -or
+    $app2Module05Release.group_review.estimate_rows -ne 52 -or
+    $app2Module05Release.group_review.supported_estimates -ne 35 -or
+    $app2Module05Release.group_review.contrast_rows -ne 36 -or
+    $app2Module05Release.group_review.supported_contrasts -ne 19 -or
+    $app2Module05Release.generated_evidence.files -ne 19 -or
+    $app2Module05Release.generated_evidence.bytes -ne 364354 -or
+    $app2Module05Release.generated_evidence.invariants_passed -ne 28 -or
+    $app2Module05Release.package.immutable_manifest_rows -ne 33 -or
+    $app2Module05Release.package.editable_records -ne 15 -or
+    $app2Module05Release.package.assembled_files -ne 49 -or
+    $app2Module05Release.package.manifest_bytes -ne 4598 -or
+    $app2Module05Release.package.manifest_sha256 -ne '6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa' -or
+    $app2Module05Release.validation.complete_reference_checks -ne 217 -or
+    $app2Module05Release.validation.starter_checks -ne 199 -or
+    $app2Module05Release.progression.reference -ne 'continue with conditions' -or
+    $app2Module05Release.progression.module06_permission -ne 'permitted for partnered improvement and embedded ML' -or
+    $app2Module05Release.progression.comment_text_machine_learning -ne 'prohibited' -or
+    $app2Module05Upstream.Count -ne 5 -or
+    ($app2Module05Upstream | Measure-Object -Property bytes -Sum).Sum -ne 5297691 -or
+    $app2Module05Opportunities.Count -ne 782 -or
+    @($app2Module05Opportunities | Where-Object { $_.comment_returned -eq 'yes' }).Count -ne 420 -or
+    $app2Module05Comments.Count -ne 420 -or
+    @($app2Module05Comments | Where-Object { $_.data_class -ne 'fully_synthetic_comment_linked_to_public_derived_meps' }).Count -ne 0 -or
+    $app2Module05CodingSample.Count -ne 120 -or
+    $app2Module05Truth.Count -ne 420 -or
+    @($app2Module05Truth | Where-Object { $_.ambiguous -eq 'yes' }).Count -ne 84 -or
+    $app2Module05Agreement.Count -ne 9 -or
+    @($app2Module05Agreement | Where-Object { $_.scope -eq 'overall_eight_theme' -and $_.agreements -eq '96' -and $_.cohens_kappa -eq '0.77142857' }).Count -ne 1 -or
+    $app2Module05Assisted.Count -ne 9 -or
+    @($app2Module05Assisted | Where-Object { $_.scope -eq 'overall' -and $_.accuracy -eq '0.78333333' }).Count -ne 1 -or
+    $app2Module05Estimates.Count -ne 52 -or
+    @($app2Module05Estimates | Where-Object { $_.support_status -eq 'supported' }).Count -ne 35 -or
+    $app2Module05Contrasts.Count -ne 36 -or
+    @($app2Module05Contrasts | Where-Object { $_.support_status -eq 'supported' }).Count -ne 19 -or
+    $app2Module05Exclusion.Count -ne 13 -or
+    $app2Module05Invariants.Count -ne 28 -or
+    @($app2Module05Invariants | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app2Module05Gates.Count -ne 22 -or
+    @($app2Module05Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0
+) {
+    throw 'APP-2 Module 05 release metadata, specification, handoff, synthetic comments, coding, group evidence, validation, manifest, or progression facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Module05Root 'build_patient_voice.py') --verify-committed
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 05 committed evidence reproduction failed.' }
+& python (Join-Path $app2Module05Root 'build_patient_voice.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 05 evidence builder self-check failed.' }
+& python (Join-Path $app2Module05Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 05 workspace builder self-check failed.' }
+& python (Join-Path $app2Module05Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Module 05 validator self-check failed.' }
 
 $app2Checkpoint01Root = Join-Path $repo 'courses\patient-experience-engagement\checkpoints\01-measurement-representation-readiness'
 $app2Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\checkpoints\01-measurement-representation-readiness-spec.md'
@@ -3553,4 +3682,5 @@ Write-Output "APP-2 Module 01 passed: $app2Module01Sections contract sections an
 Write-Output "APP-2 Module 02 passed: $app2Module02Sections contract sections and $($app2Module02Files.Count) required non-source files plus 28 verified source files."
 Write-Output "APP-2 Module 03 passed: $app2Module03Sections contract sections and $($app2Module03Files.Count) required files."
 Write-Output "APP-2 Module 04 passed: $app2Module04Sections contract sections and $($app2Module04Files.Count) required files."
+Write-Output "APP-2 Module 05 passed: $app2Module05Sections contract sections and $($app2Module05Files.Count) required files."
 Write-Output "APP-2 Checkpoint 01 passed: $app2Checkpoint01Sections contract sections and $($app2Checkpoint01Files.Count) required files."

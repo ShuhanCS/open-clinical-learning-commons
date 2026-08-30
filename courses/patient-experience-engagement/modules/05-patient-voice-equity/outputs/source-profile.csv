@@ -1,0 +1,15 @@
+metric,value,unit,evidence
+upstream_files,5,files,fingerprinted Module 04 handoff
+upstream_bytes,5297691,bytes,fingerprinted Module 04 handoff
+official_meps_source_files_referenced,25,files,accepted Module 04 source inventory
+accepted_people,1255,people,public-derived MEPS teaching table
+accepted_events,28455,events,public-derived MEPS teaching table
+synthetic_comment_opportunities,782,opportunities,deterministic procedural layer
+synthetic_comments_received,420,comments,fully synthetic English teaching text
+double_coded_comments,120,comments,simulated training coder records
+themes,8,themes,fixed codebook
+ambiguous_comments,84,comments,fixed synthetic truth
+public_group_dimensions,4,dimensions,prespecified contract
+public_group_measures,4,measures,prespecified contract
+portal_preference_denominator,0,people,accepted unavailable denominator
+external_python_dependencies,0,packages,Python standard library only

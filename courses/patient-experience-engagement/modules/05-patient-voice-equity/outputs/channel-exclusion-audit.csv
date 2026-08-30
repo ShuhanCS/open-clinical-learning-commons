@@ -1,0 +1,14 @@
+dimension,group,opportunities,comments_received,return_percent,data_class,claim_limit
+other_language_at_home,no,678,363,53.53982301,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+other_language_at_home,yes,103,56,54.36893204,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+other_language_at_home,missing or inapplicable,1,1,100.00000000,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+income_group,middle or high income,489,269,55.01022495,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+income_group,lower income,293,151,51.53583618,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+insurance_coverage,any private insurance,353,198,56.09065156,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+insurance_coverage,public insurance only,424,219,51.65094340,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+insurance_coverage,uninsured,5,3,60.00000000,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+race_ethnicity,non-Hispanic White only,540,291,53.88888889,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+race_ethnicity,Hispanic,92,51,55.43478261,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+race_ethnicity,non-Hispanic Black only,106,54,50.94339623,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+race_ethnicity,non-Hispanic Asian only,21,10,47.61904762,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity
+race_ethnicity,non-Hispanic other or multiple races,23,14,60.86956522,synthetic procedural opportunity linked to public-derived group field,designed coverage exercise; not observed access trust preference or inequity

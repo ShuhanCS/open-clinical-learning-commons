@@ -1,0 +1,421 @@
+comment_id,link_person_id,data_class,assigned_channel,language_support_offer,accessible_format_offer,comment_language,comment_text
+COMMENT-0001,LINK-0001,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0002,LINK-0002,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I have one more question about the next step.
+COMMENT-0003,LINK-0004,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0004,LINK-0010,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0005,LINK-0015,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0006,LINK-0017,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0007,LINK-0023,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0008,LINK-0026,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0009,LINK-0028,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0010,LINK-0030,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0011,LINK-0040,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0012,LINK-0041,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I am not sure which part of the process this comment belongs to. The instructions used clear words, but I still had one question about care at home."
+COMMENT-0013,LINK-0047,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0014,LINK-0049,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"It was hard to find help during the evening or weekend. The video visit worked, but I still needed a phone option."
+COMMENT-0015,LINK-0052,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0016,LINK-0054,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out. I needed more help understanding when to take each medicine.
+COMMENT-0017,LINK-0055,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I have one more question about the next step.
+COMMENT-0018,LINK-0063,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_offered,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0019,LINK-0072,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0020,LINK-0073,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0021,LINK-0074,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0022,LINK-0075,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend. I wanted more time to ask questions and help choose the plan.
+COMMENT-0023,LINK-0076,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0024,LINK-0079,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0025,LINK-0081,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0026,LINK-0086,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I have one more question about the next step.
+COMMENT-0027,LINK-0092,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0028,LINK-0096,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0029,LINK-0103,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0030,LINK-0106,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0031,LINK-0115,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The digital instructions were difficult to use on my device. The plan did not say when a change should lead me to call.
+COMMENT-0032,LINK-0117,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0033,LINK-0122,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0034,LINK-0123,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,Part of the visit was helpful and part was confusing. I wanted more time to ask questions and help choose the plan.
+COMMENT-0035,LINK-0124,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0036,LINK-0130,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step. I needed more help understanding when to take each medicine.
+COMMENT-0037,LINK-0137,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0038,LINK-0138,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0039,LINK-0139,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0040,LINK-0141,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0041,LINK-0144,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0042,LINK-0147,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0043,LINK-0149,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine. I did not feel included when the plan changed.
+COMMENT-0044,LINK-0150,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0045,LINK-0152,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0046,LINK-0153,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0047,LINK-0157,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0048,LINK-0159,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0049,LINK-0161,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0050,LINK-0163,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0051,LINK-0166,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0052,LINK-0167,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me. I needed more help understanding when to take each medicine.
+COMMENT-0053,LINK-0173,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,"The cost of the recommended follow-up made the plan harder to carry out. I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0054,LINK-0175,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0055,LINK-0176,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0056,LINK-0177,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I have one more question about the next step.
+COMMENT-0057,LINK-0179,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The digital instructions were difficult to use on my device. The medicine list was hard to follow after I got home.
+COMMENT-0058,LINK-0182,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention. The medicine list was hard to follow after I got home.
+COMMENT-0059,LINK-0185,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed. I needed more help understanding when to take each medicine.
+COMMENT-0060,LINK-0186,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0061,LINK-0187,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0062,LINK-0188,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,I did not know who to contact after regular hours. I wanted more time to ask questions and help choose the plan.
+COMMENT-0063,LINK-0192,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0064,LINK-0195,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0065,LINK-0196,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0066,LINK-0199,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0067,LINK-0200,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0068,LINK-0201,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0069,LINK-0205,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0070,LINK-0206,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0071,LINK-0209,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0072,LINK-0218,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0073,LINK-0220,fully_synthetic_comment_linked_to_public_derived_meps,web,not_offered,offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0074,LINK-0226,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0075,LINK-0232,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan did not include a lower-cost option. I was not sure which warning signs meant I should call for help.
+COMMENT-0076,LINK-0235,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out. I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0077,LINK-0236,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0078,LINK-0241,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0079,LINK-0243,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0080,LINK-0249,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I have one more question about the next step.
+COMMENT-0081,LINK-0250,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0082,LINK-0251,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0083,LINK-0252,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0084,LINK-0254,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0085,LINK-0256,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0086,LINK-0260,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0087,LINK-0263,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0088,LINK-0265,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0089,LINK-0272,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,"The digital instructions were difficult to use on my device. The instructions used clear words, but I still had one question about care at home."
+COMMENT-0090,LINK-0274,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0091,LINK-0277,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0092,LINK-0278,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home. The digital instructions were difficult to use on my device.
+COMMENT-0093,LINK-0281,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0094,LINK-0282,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0095,LINK-0283,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost. I am not sure which part of the process this comment belongs to.
+COMMENT-0096,LINK-0288,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0097,LINK-0289,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I have one more question about the next step.
+COMMENT-0098,LINK-0290,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out. The plan named a phone number but did not explain when it was available.
+COMMENT-0099,LINK-0292,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0100,LINK-0297,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0101,LINK-0298,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0102,LINK-0300,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0103,LINK-0301,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home. I wanted more time to ask questions and help choose the plan."
+COMMENT-0104,LINK-0304,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call. I had questions about what the visit or medicine would cost.
+COMMENT-0105,LINK-0306,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend. I was not sure which warning signs meant I should call for help.
+COMMENT-0106,LINK-0307,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0107,LINK-0312,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0108,LINK-0314,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0109,LINK-0317,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0110,LINK-0320,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,"The video visit worked, but I still needed a phone option. The team listened to my concern before explaining the next step."
+COMMENT-0111,LINK-0322,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0112,LINK-0324,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0113,LINK-0330,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0114,LINK-0335,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home. Part of the visit was helpful and part was confusing."
+COMMENT-0115,LINK-0338,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0116,LINK-0340,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0117,LINK-0343,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I have one more question about the next step.
+COMMENT-0118,LINK-0344,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0119,LINK-0345,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving. I needed more help understanding when to take each medicine.
+COMMENT-0120,LINK-0346,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0121,LINK-0348,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0122,LINK-0350,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0123,LINK-0353,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_offered,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0124,LINK-0354,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0125,LINK-0362,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0126,LINK-0369,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The digital instructions were difficult to use on my device. It was hard to find help during the evening or weekend.
+COMMENT-0127,LINK-0377,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0128,LINK-0379,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,The medicine list was hard to follow after I got home. I did not know who to contact after regular hours.
+COMMENT-0129,LINK-0390,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home. I was not sure which warning signs meant I should call for help."
+COMMENT-0130,LINK-0392,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0131,LINK-0397,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,offered,synthetic English,I wanted a shorter explanation of the plan before leaving. I needed more help understanding when to take each medicine.
+COMMENT-0132,LINK-0398,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0133,LINK-0399,fully_synthetic_comment_linked_to_public_derived_meps,web,not_offered,offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0134,LINK-0402,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0135,LINK-0411,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0136,LINK-0417,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0137,LINK-0423,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0138,LINK-0425,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,Part of the visit was helpful and part was confusing.
+COMMENT-0139,LINK-0426,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0140,LINK-0427,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0141,LINK-0429,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0142,LINK-0430,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0143,LINK-0437,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed. I have one more question about the next step.
+COMMENT-0144,LINK-0439,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0145,LINK-0444,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The plan did not include a lower-cost option. I knew which medicines changed, but not why."
+COMMENT-0146,LINK-0448,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0147,LINK-0452,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine. I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0148,LINK-0455,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0149,LINK-0457,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0150,LINK-0458,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost. I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0151,LINK-0460,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0152,LINK-0461,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I have one more question about the next step.
+COMMENT-0153,LINK-0472,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0154,LINK-0474,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_offered,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0155,LINK-0484,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The digital instructions were difficult to use on my device. I wanted more time to ask questions and help choose the plan.
+COMMENT-0156,LINK-0486,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0157,LINK-0487,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0158,LINK-0489,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0159,LINK-0491,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0160,LINK-0493,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0161,LINK-0497,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0162,LINK-0505,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0163,LINK-0511,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0164,LINK-0512,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0165,LINK-0514,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0166,LINK-0515,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0167,LINK-0517,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0168,LINK-0518,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I have one more question about the next step. The medicine list was hard to follow after I got home.
+COMMENT-0169,LINK-0519,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,Part of the visit was helpful and part was confusing. It was hard to find help during the evening or weekend.
+COMMENT-0170,LINK-0525,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0171,LINK-0528,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0172,LINK-0529,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home. The team listened to my concern before explaining the next step."
+COMMENT-0173,LINK-0539,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I am not sure which part of the process this comment belongs to. The video visit worked, but I still needed a phone option."
+COMMENT-0174,LINK-0542,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0175,LINK-0544,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out. I did not know who to contact after regular hours.
+COMMENT-0176,LINK-0553,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0177,LINK-0559,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call. The written plan and spoken explanation did not match for me.
+COMMENT-0178,LINK-0560,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me. I was not sure which warning signs meant I should call for help.
+COMMENT-0179,LINK-0561,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0180,LINK-0562,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I have one more question about the next step. I wanted more time to ask questions and help choose the plan.
+COMMENT-0181,LINK-0563,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0182,LINK-0564,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0183,LINK-0571,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0184,LINK-0578,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0185,LINK-0579,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0186,LINK-0580,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0187,LINK-0582,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0188,LINK-0584,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend. I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0189,LINK-0588,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0190,LINK-0589,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed. The plan did not include a lower-cost option.
+COMMENT-0191,LINK-0592,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0192,LINK-0595,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0193,LINK-0603,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I have one more question about the next step. I did not feel included when the plan changed.
+COMMENT-0194,LINK-0606,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0195,LINK-0607,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend. The digital instructions were difficult to use on my device.
+COMMENT-0196,LINK-0608,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0197,LINK-0612,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,Part of the visit was helpful and part was confusing.
+COMMENT-0198,LINK-0613,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0199,LINK-0616,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0200,LINK-0617,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0201,LINK-0618,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0202,LINK-0619,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I wanted a shorter explanation of the plan before leaving. The video visit worked, but I still needed a phone option."
+COMMENT-0203,LINK-0626,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0204,LINK-0628,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I had questions about what the visit or medicine would cost. The plan named a phone number but did not explain when it was available.
+COMMENT-0205,LINK-0629,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I knew which medicines changed, but not why. I had questions about what the visit or medicine would cost."
+COMMENT-0206,LINK-0631,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0207,LINK-0632,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0208,LINK-0634,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0209,LINK-0637,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0210,LINK-0638,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0211,LINK-0643,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0212,LINK-0647,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,"The plan did not say when a change should lead me to call. I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0213,LINK-0649,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0214,LINK-0653,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0215,LINK-0656,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me. It was hard to find help during the evening or weekend.
+COMMENT-0216,LINK-0659,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0217,LINK-0660,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0218,LINK-0663,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0219,LINK-0667,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0220,LINK-0672,fully_synthetic_comment_linked_to_public_derived_meps,web,not_offered,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0221,LINK-0675,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0222,LINK-0676,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0223,LINK-0677,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0224,LINK-0683,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend. The medicine list was hard to follow after I got home.
+COMMENT-0225,LINK-0686,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0226,LINK-0687,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0227,LINK-0689,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0228,LINK-0690,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0229,LINK-0692,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The plan did not say when a change should lead me to call. The instructions used clear words, but I still had one question about care at home."
+COMMENT-0230,LINK-0695,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0231,LINK-0696,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0232,LINK-0698,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0233,LINK-0699,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0234,LINK-0702,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0235,LINK-0704,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0236,LINK-0705,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0237,LINK-0706,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,Part of the visit was helpful and part was confusing.
+COMMENT-0238,LINK-0714,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0239,LINK-0717,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0240,LINK-0719,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0241,LINK-0721,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0242,LINK-0725,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0243,LINK-0735,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to. The plan named a phone number but did not explain when it was available.
+COMMENT-0244,LINK-0737,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0245,LINK-0740,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0246,LINK-0744,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0247,LINK-0745,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0248,LINK-0749,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home. The plan did not include a lower-cost option.
+COMMENT-0249,LINK-0756,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0250,LINK-0759,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0251,LINK-0760,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0252,LINK-0762,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0253,LINK-0764,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,Part of the visit was helpful and part was confusing.
+COMMENT-0254,LINK-0765,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The written plan and spoken explanation did not match for me. I have one more question about the next step.
+COMMENT-0255,LINK-0767,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0256,LINK-0768,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0257,LINK-0770,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0258,LINK-0779,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0259,LINK-0780,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I have one more question about the next step.
+COMMENT-0260,LINK-0782,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0261,LINK-0784,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0262,LINK-0785,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,Part of the visit was helpful and part was confusing. The plan named a phone number but did not explain when it was available.
+COMMENT-0263,LINK-0787,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0264,LINK-0790,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0265,LINK-0794,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,offered,synthetic English,Part of the visit was helpful and part was confusing.
+COMMENT-0266,LINK-0796,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_offered,offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0267,LINK-0797,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0268,LINK-0800,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me. The digital instructions were difficult to use on my device.
+COMMENT-0269,LINK-0802,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0270,LINK-0806,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0271,LINK-0809,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0272,LINK-0813,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0273,LINK-0818,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0274,LINK-0820,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0275,LINK-0821,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0276,LINK-0823,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me. Part of the visit was helpful and part was confusing.
+COMMENT-0277,LINK-0826,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0278,LINK-0828,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0279,LINK-0833,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0280,LINK-0843,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person. I was not sure which warning signs meant I should call for help."
+COMMENT-0281,LINK-0847,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0282,LINK-0856,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I have one more question about the next step.
+COMMENT-0283,LINK-0857,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0284,LINK-0859,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0285,LINK-0860,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0286,LINK-0862,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I have one more question about the next step. I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0287,LINK-0863,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0288,LINK-0867,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0289,LINK-0868,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person. I knew which medicines changed, but not why."
+COMMENT-0290,LINK-0870,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The digital instructions were difficult to use on my device. I did not feel included when the plan changed.
+COMMENT-0291,LINK-0871,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0292,LINK-0872,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0293,LINK-0874,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan named a phone number but did not explain when it was available. I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0294,LINK-0876,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0295,LINK-0886,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0296,LINK-0889,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,Part of the visit was helpful and part was confusing.
+COMMENT-0297,LINK-0892,fully_synthetic_comment_linked_to_public_derived_meps,web,not_offered,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out. I was not sure which warning signs meant I should call for help.
+COMMENT-0298,LINK-0894,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The plan did not say when a change should lead me to call. The video visit worked, but I still needed a phone option."
+COMMENT-0299,LINK-0900,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_offered,not_offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0300,LINK-0901,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0301,LINK-0907,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0302,LINK-0911,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I knew which medicines changed, but not why. I did not feel included when the plan changed."
+COMMENT-0303,LINK-0914,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0304,LINK-0915,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0305,LINK-0923,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0306,LINK-0924,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0307,LINK-0925,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The medicine list was hard to follow after I got home. I had questions about what the visit or medicine would cost.
+COMMENT-0308,LINK-0926,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0309,LINK-0932,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0310,LINK-0933,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0311,LINK-0935,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0312,LINK-0938,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I have one more question about the next step.
+COMMENT-0313,LINK-0939,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0314,LINK-0942,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0315,LINK-0946,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_offered,offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0316,LINK-0947,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0317,LINK-0950,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0318,LINK-0951,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0319,LINK-0953,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,I needed more help understanding when to take each medicine. I have one more question about the next step.
+COMMENT-0320,LINK-0955,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0321,LINK-0956,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0322,LINK-0964,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_offered,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0323,LINK-0970,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0324,LINK-0974,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0325,LINK-0978,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0326,LINK-0979,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0327,LINK-0980,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0328,LINK-0984,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0329,LINK-0989,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"I did not know who to contact after regular hours. I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0330,LINK-0990,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0331,LINK-0992,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0332,LINK-0999,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0333,LINK-1004,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"It was hard to find help during the evening or weekend. I knew which medicines changed, but not why."
+COMMENT-0334,LINK-1010,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0335,LINK-1014,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0336,LINK-1019,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0337,LINK-1029,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0338,LINK-1030,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0339,LINK-1039,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0340,LINK-1042,fully_synthetic_comment_linked_to_public_derived_meps,web,not_offered,offered,synthetic English,The plan did not include a lower-cost option. The medicine list was hard to follow after I got home.
+COMMENT-0341,LINK-1045,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention. Part of the visit was helpful and part was confusing.
+COMMENT-0342,LINK-1047,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,"Part of the visit was helpful and part was confusing. I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0343,LINK-1048,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0344,LINK-1049,fully_synthetic_comment_linked_to_public_derived_meps,phone,offered,not_offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0345,LINK-1050,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0346,LINK-1054,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0347,LINK-1055,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0348,LINK-1056,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0349,LINK-1058,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0350,LINK-1061,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0351,LINK-1069,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0352,LINK-1071,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0353,LINK-1075,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,Part of the visit was helpful and part was confusing.
+COMMENT-0354,LINK-1078,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0355,LINK-1084,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0356,LINK-1085,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0357,LINK-1086,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0358,LINK-1088,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0359,LINK-1089,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0360,LINK-1092,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0361,LINK-1093,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I have one more question about the next step.
+COMMENT-0362,LINK-1094,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0363,LINK-1097,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0364,LINK-1100,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0365,LINK-1101,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to. I did not know who to contact after regular hours.
+COMMENT-0366,LINK-1105,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0367,LINK-1108,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0368,LINK-1109,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0369,LINK-1117,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0370,LINK-1119,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0371,LINK-1121,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0372,LINK-1122,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0373,LINK-1126,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0374,LINK-1127,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0375,LINK-1129,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0376,LINK-1137,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0377,LINK-1139,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The medicine list was hard to follow after I got home.
+COMMENT-0378,LINK-1143,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0379,LINK-1144,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_offered,not_offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0380,LINK-1145,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0381,LINK-1146,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I wanted a shorter explanation of the plan before leaving.
+COMMENT-0382,LINK-1148,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0383,LINK-1149,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0384,LINK-1151,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0385,LINK-1152,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0386,LINK-1154,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0387,LINK-1155,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0388,LINK-1159,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,offered,synthetic English,"I knew which medicines changed, but not why."
+COMMENT-0389,LINK-1161,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0390,LINK-1162,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I did not know who to contact after regular hours. The plan did not include a lower-cost option.
+COMMENT-0391,LINK-1164,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0392,LINK-1170,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I am not sure which part of the process this comment belongs to.
+COMMENT-0393,LINK-1172,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The cost of the recommended follow-up made the plan harder to carry out.
+COMMENT-0394,LINK-1176,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help. The digital instructions were difficult to use on my device.
+COMMENT-0395,LINK-1178,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed. The written plan and spoken explanation did not match for me.
+COMMENT-0396,LINK-1183,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The instructions used clear words, but I still had one question about care at home."
+COMMENT-0397,LINK-1187,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,It was hard to find help during the evening or weekend. I needed more help understanding when to take each medicine.
+COMMENT-0398,LINK-1192,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The team listened to my concern before explaining the next step.
+COMMENT-0399,LINK-1193,fully_synthetic_comment_linked_to_public_derived_meps,web,offered,not_offered,synthetic English,The medicine list was hard to follow after I got home. I was not sure which warning signs meant I should call for help.
+COMMENT-0400,LINK-1195,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.
+COMMENT-0401,LINK-1199,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I did not feel included when the plan changed.
+COMMENT-0402,LINK-1201,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"I could not tell whether the follow-up was online, by phone, or in person."
+COMMENT-0403,LINK-1206,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,offered,synthetic English,The written plan and spoken explanation did not match for me. The plan did not include a lower-cost option.
+COMMENT-0404,LINK-1211,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_offered,not_offered,synthetic English,The plan named a phone number but did not explain when it was available.
+COMMENT-0405,LINK-1212,fully_synthetic_comment_linked_to_public_derived_meps,web,not_offered,not_offered,synthetic English,The digital instructions were difficult to use on my device. I wanted a shorter explanation of the plan before leaving.
+COMMENT-0406,LINK-1213,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0407,LINK-1214,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I did not know who to contact after regular hours.
+COMMENT-0408,LINK-1219,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I needed more help understanding when to take each medicine.
+COMMENT-0409,LINK-1220,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,"The video visit worked, but I still needed a phone option."
+COMMENT-0410,LINK-1221,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,I had questions about what the visit or medicine would cost.
+COMMENT-0411,LINK-1224,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,"The cost of the recommended follow-up made the plan harder to carry out. The instructions used clear words, but I still had one question about care at home."
+COMMENT-0412,LINK-1228,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0413,LINK-1229,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,The written plan and spoken explanation did not match for me.
+COMMENT-0414,LINK-1240,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,not_offered,synthetic English,The plan did not say when a change should lead me to call.
+COMMENT-0415,LINK-1241,fully_synthetic_comment_linked_to_public_derived_meps,phone,not_applicable,not_offered,synthetic English,I was not sure which warning signs meant I should call for help.
+COMMENT-0416,LINK-1243,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,The plan did not include a lower-cost option.
+COMMENT-0417,LINK-1248,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,I wanted more time to ask questions and help choose the plan.
+COMMENT-0418,LINK-1249,fully_synthetic_comment_linked_to_public_derived_meps,mail,offered,not_offered,synthetic English,The digital instructions were difficult to use on my device.
+COMMENT-0419,LINK-1251,fully_synthetic_comment_linked_to_public_derived_meps,web,not_applicable,offered,synthetic English,I wanted clearer guidance about symptoms that need urgent attention.
+COMMENT-0420,LINK-1255,fully_synthetic_comment_linked_to_public_derived_meps,mail,not_applicable,not_offered,synthetic English,It was hard to find help during the evening or weekend.

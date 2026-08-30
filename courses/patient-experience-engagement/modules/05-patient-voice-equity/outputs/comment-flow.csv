@@ -1,0 +1,10 @@
+dimension,value,opportunities,comments_received,return_percent,data_class,claim_limit
+overall,all opportunities,782,420,53.70843990,synthetic procedural counts,not a real response rate access estimate or channel preference
+assigned_channel,mail,301,160,53.15614618,synthetic procedural counts,not a real response rate access estimate or channel preference
+assigned_channel,web,277,162,58.48375451,synthetic procedural counts,not a real response rate access estimate or channel preference
+assigned_channel,phone,204,98,48.03921569,synthetic procedural counts,not a real response rate access estimate or channel preference
+language_support_offer,offered,65,41,63.07692308,synthetic procedural counts,not a real response rate access estimate or channel preference
+language_support_offer,not_offered,38,15,39.47368421,synthetic procedural counts,not a real response rate access estimate or channel preference
+language_support_offer,not_applicable,679,364,53.60824742,synthetic procedural counts,not a real response rate access estimate or channel preference
+accessible_format_offer,offered,185,104,56.21621622,synthetic procedural counts,not a real response rate access estimate or channel preference
+accessible_format_offer,not_offered,597,316,52.93132328,synthetic procedural counts,not a real response rate access estimate or channel preference

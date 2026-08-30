@@ -1,0 +1,121 @@
+comment_id,sample_theme_stratum,coder_a_theme,coder_b_theme,agreement,adjudicated_theme,adjudication_reason,record_class
+COMMENT-0009,cost_barrier,digital_channel,cost_barrier,no,cost_barrier,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0011,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0012,communication_clarity,medication_help,communication_clarity,no,communication_clarity,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0015,respect_involvement,other_or_unclear,respect_involvement,no,respect_involvement,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0016,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0018,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0023,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0026,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0035,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0036,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0041,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0049,other_or_unclear,communication_clarity,other_or_unclear,no,other_or_unclear,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0053,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0054,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0056,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0061,cost_barrier,digital_channel,digital_channel,yes,cost_barrier,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0062,access_after_hours,cost_barrier,access_after_hours,no,access_after_hours,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0064,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0066,medication_help,warning_signs,warning_signs,yes,medication_help,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0069,medication_help,warning_signs,medication_help,no,medication_help,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0074,respect_involvement,respect_involvement,communication_clarity,no,respect_involvement,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0077,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0078,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0080,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0086,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0087,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0088,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0094,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0095,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0096,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0099,respect_involvement,other_or_unclear,other_or_unclear,yes,respect_involvement,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0102,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0111,cost_barrier,cost_barrier,respect_involvement,no,cost_barrier,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0116,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0117,other_or_unclear,communication_clarity,communication_clarity,yes,other_or_unclear,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0118,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0119,communication_clarity,communication_clarity,warning_signs,no,communication_clarity,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0126,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0127,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0136,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0138,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0143,other_or_unclear,other_or_unclear,medication_help,no,other_or_unclear,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0144,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0149,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0157,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0164,digital_channel,digital_channel,other_or_unclear,no,digital_channel,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0165,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0166,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0168,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0175,cost_barrier,cost_barrier,respect_involvement,no,cost_barrier,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0180,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0183,access_after_hours,cost_barrier,cost_barrier,yes,access_after_hours,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0186,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0188,warning_signs,warning_signs,cost_barrier,no,warning_signs,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0195,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0200,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0204,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0207,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0209,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0212,warning_signs,access_after_hours,warning_signs,no,warning_signs,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0215,communication_clarity,communication_clarity,warning_signs,no,communication_clarity,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0216,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0217,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0227,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0229,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0237,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0240,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0241,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0243,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0244,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0247,digital_channel,respect_involvement,respect_involvement,yes,digital_channel,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0250,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0258,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0260,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0263,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0271,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0276,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0277,medication_help,medication_help,access_after_hours,no,medication_help,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0283,digital_channel,digital_channel,other_or_unclear,no,digital_channel,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0287,other_or_unclear,other_or_unclear,medication_help,no,other_or_unclear,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0299,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0300,warning_signs,access_after_hours,access_after_hours,yes,warning_signs,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0306,communication_clarity,medication_help,medication_help,yes,communication_clarity,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0309,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0310,digital_channel,respect_involvement,digital_channel,no,digital_channel,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0313,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0316,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0317,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0321,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0323,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0331,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0333,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0335,access_after_hours,access_after_hours,digital_channel,no,access_after_hours,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0336,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0338,medication_help,medication_help,access_after_hours,no,medication_help,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0339,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0342,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0351,warning_signs,warning_signs,cost_barrier,no,warning_signs,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0353,other_or_unclear,other_or_unclear,other_or_unclear,yes,other_or_unclear,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0355,communication_clarity,communication_clarity,communication_clarity,yes,communication_clarity,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0357,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0364,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0369,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0372,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0373,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0374,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0376,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0378,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0379,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0383,respect_involvement,respect_involvement,communication_clarity,no,respect_involvement,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review
+COMMENT-0387,access_after_hours,access_after_hours,access_after_hours,yes,access_after_hours,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0391,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0394,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0403,cost_barrier,cost_barrier,cost_barrier,yes,cost_barrier,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0406,respect_involvement,respect_involvement,respect_involvement,yes,respect_involvement,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0408,medication_help,medication_help,medication_help,yes,medication_help,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0409,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0415,warning_signs,warning_signs,warning_signs,yes,warning_signs,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0418,digital_channel,digital_channel,digital_channel,yes,digital_channel,both training coders agreed,simulated training coder record; not completed human alpha review
+COMMENT-0420,access_after_hours,access_after_hours,digital_channel,no,access_after_hours,reference adjudication restored the fixed synthetic truth,simulated training coder record; not completed human alpha review

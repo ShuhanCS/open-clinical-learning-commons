@@ -139,6 +139,27 @@ The public teaching tables omit `DUPERSID` and `EVNTIDX`, use module-scoped sequ
 
 Module 04 has valid service-channel evidence for telehealth but no portal-access or portal-preference field. Portal preference therefore has a denominator of zero and remains unavailable. The provider-language estimate has only 45 valid target records and remains limited support. The synthetic Week 3 response layer is retained only to demonstrate linkage and analysis procedure; no linked pattern is a real patient-experience association.
 
+## Accepted Module 05 teaching release
+
+Module 05 fingerprints five accepted Module 04 handoff files totaling 5,297,691 bytes. They preserve the 1,255-person target, 28,455 linked events, the 25-file official MEPS source inventory, accepted denominator registry, and Module 04 progression permission.
+
+The module adds a fully synthetic patient-voice layer:
+
+| Item | Accepted count |
+|---|---:|
+| Synthetic comment opportunities | 782 |
+| Synthetic received comments | 420 |
+| Fixed themes | 8 |
+| Ambiguous comments | 84 |
+| Double-coded audit comments | 120 |
+| Real patient text rows | 0 |
+
+The reference training coders agree on 96 of 120 records, or 80.00000000 percent. Cohen's kappa is 0.77142857. These coder records are simulated curriculum evidence, not completed human qualitative review. A fixed phrase rule reaches 0.78333333 accuracy on the adjudicated benchmark and requires human review for all 420 suggested labels.
+
+The public group review prespecifies other language at home, income group, insurance coverage, and race and ethnicity. It examines delayed care because of cost, difficult after-hours contact, involvement in decisions, and any linked telehealth event. The support rule requires at least 50 valid records, 10 positive records, 10 negative records, and two contributing PSUs. Thirty-five of 52 estimates and 19 of 36 contrasts pass. Unsupported rows remain visible with blank protected estimates.
+
+Comment counts describe only the synthetic received-comment set. Public group differences are descriptive and exploratory. Neither can establish patient prevalence, sentiment, lived experience, discrimination, inequity, cause, fairness, digital preference, or a group trait.
+
 ## Stable source decisions
 
 - APP-2 remains a distinct applied course.

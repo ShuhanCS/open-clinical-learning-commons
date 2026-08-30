@@ -1,0 +1,53 @@
+dimension,group,reference_group,measure,valid_n,positive_n,negative_n,contributing_psus,weighted_denominator,weighted_percent,survey_se_pp,ci95_low_percent,ci95_high_percent,support_status,support_reason
+other_language_at_home,no,no,delayed_for_cost,1036,79,957,249,15627061.926258,7.51476300,0.96363404,5.62604029,9.40348571,supported,reportable_teaching_support
+other_language_at_home,no,no,after_hours_difficult,590,298,292,221,8740597.955045,50.88250123,2.68988123,45.61033401,56.15466845,supported,reportable_teaching_support
+other_language_at_home,no,no,involved_usually_always,819,608,211,235,12135529.901452,75.12872556,1.96173518,71.28372460,78.97372651,supported,reportable_teaching_support
+other_language_at_home,no,no,any_telehealth_event,1039,231,808,250,15668020.701276,22.69822029,1.80098646,19.16828682,26.22815375,supported,reportable_teaching_support
+other_language_at_home,yes,no,delayed_for_cost,215,15,200,119,3194734.635005,8.16833618,2.20510679,3.84632687,12.49034550,supported,reportable_teaching_support
+other_language_at_home,yes,no,after_hours_difficult,117,67,50,82,1710125.691968,60.91718644,5.50534272,50.12671471,71.70765818,supported,reportable_teaching_support
+other_language_at_home,yes,no,involved_usually_always,137,95,42,94,2043372.095005,73.22550142,4.64297836,64.12526384,82.32573901,supported,reportable_teaching_support
+other_language_at_home,yes,no,any_telehealth_event,215,36,179,119,3194734.635005,17.81870380,3.10193208,11.73891692,23.89849069,supported,reportable_teaching_support
+other_language_at_home,missing or inapplicable,no,delayed_for_cost,1,0,1,1,,,,,,suppressed,valid n below 50; positive n below 10; negative n below 10; fewer than two contributing PSUs
+other_language_at_home,missing or inapplicable,no,after_hours_difficult,1,0,1,1,,,,,,suppressed,valid n below 50; positive n below 10; negative n below 10; fewer than two contributing PSUs
+other_language_at_home,missing or inapplicable,no,involved_usually_always,1,1,0,1,,,,,,suppressed,valid n below 50; positive n below 10; negative n below 10; fewer than two contributing PSUs
+other_language_at_home,missing or inapplicable,no,any_telehealth_event,1,1,0,1,,,,,,suppressed,valid n below 50; positive n below 10; negative n below 10; fewer than two contributing PSUs
+income_group,middle or high income,middle or high income,delayed_for_cost,721,39,682,236,12100895.883629,6.18067839,0.98177303,4.25640326,8.10495353,supported,reportable_teaching_support
+income_group,middle or high income,middle or high income,after_hours_difficult,404,205,199,198,6655351.383352,54.80227674,3.02579916,48.87171039,60.73284308,supported,reportable_teaching_support
+income_group,middle or high income,middle or high income,involved_usually_always,571,444,127,221,9316612.751066,77.19770312,2.24253864,72.80232738,81.59307886,supported,reportable_teaching_support
+income_group,middle or high income,middle or high income,any_telehealth_event,722,169,553,236,12112987.533925,24.40699143,2.22079346,20.05423624,28.75974663,supported,reportable_teaching_support
+income_group,lower income,middle or high income,delayed_for_cost,531,55,476,218,6737619.625968,10.20205820,1.48049620,7.30028565,13.10383075,supported,reportable_teaching_support
+income_group,lower income,middle or high income,after_hours_difficult,304,160,144,168,3812091.211995,48.31760660,3.36052905,41.73096967,54.90424354,supported,reportable_teaching_support
+income_group,lower income,middle or high income,involved_usually_always,386,260,126,193,4879008.193725,70.46609016,2.79348163,64.99086618,75.94131415,supported,reportable_teaching_support
+income_group,lower income,middle or high income,any_telehealth_event,533,99,434,219,6766486.750690,17.52645527,2.01297184,13.58103047,21.47188007,supported,reportable_teaching_support
+insurance_coverage,any private insurance,any private insurance,delayed_for_cost,543,40,503,223,9330014.739399,7.16409613,1.10178565,5.00459625,9.32359600,supported,reportable_teaching_support
+insurance_coverage,any private insurance,any private insurance,after_hours_difficult,290,153,137,164,5075964.524843,56.52212761,3.28637264,50.08083723,62.96341799,supported,reportable_teaching_support
+insurance_coverage,any private insurance,any private insurance,involved_usually_always,415,320,95,196,7007699.081573,77.46372046,2.47116027,72.62024633,82.30719460,supported,reportable_teaching_support
+insurance_coverage,any private insurance,any private insurance,any_telehealth_event,543,135,408,223,9330014.739399,26.11465663,2.58683068,21.04446850,31.18484476,supported,reportable_teaching_support
+insurance_coverage,public insurance only,any private insurance,delayed_for_cost,692,49,643,237,9227217.996566,7.43893589,1.13407066,5.21615740,9.66171438,supported,reportable_teaching_support
+insurance_coverage,public insurance only,any private insurance,after_hours_difficult,414,210,204,200,5328987.279969,48.24854216,3.16548333,42.04419484,54.45288948,supported,reportable_teaching_support
+insurance_coverage,public insurance only,any private insurance,involved_usually_always,537,380,157,220,7107072.027681,72.46942585,2.45866269,67.65044698,77.28840471,supported,reportable_teaching_support
+insurance_coverage,public insurance only,any private insurance,any_telehealth_event,695,133,562,238,9268176.771584,18.40534372,1.73870940,14.99747330,21.81321413,supported,reportable_teaching_support
+insurance_coverage,uninsured,any private insurance,delayed_for_cost,17,5,12,15,,,,,,suppressed,valid n below 50; positive n below 10
+insurance_coverage,uninsured,any private insurance,after_hours_difficult,4,2,2,4,,,,,,suppressed,valid n below 50; positive n below 10; negative n below 10
+insurance_coverage,uninsured,any private insurance,involved_usually_always,5,4,1,5,,,,,,suppressed,valid n below 50; positive n below 10; negative n below 10
+insurance_coverage,uninsured,any private insurance,any_telehealth_event,17,0,17,15,,,,,,suppressed,valid n below 50; positive n below 10
+race_ethnicity,non-Hispanic White only,non-Hispanic White only,delayed_for_cost,820,62,758,237,12738350.474768,7.50885213,1.09572137,5.36123824,9.65646602,supported,reportable_teaching_support
+race_ethnicity,non-Hispanic White only,non-Hispanic White only,after_hours_difficult,462,235,227,199,6895152.838273,51.17736560,2.86098668,45.56983171,56.78489950,supported,reportable_teaching_support
+race_ethnicity,non-Hispanic White only,non-Hispanic White only,involved_usually_always,658,511,147,219,9815729.143082,76.97386698,2.04254076,72.97048709,80.97724687,supported,reportable_teaching_support
+race_ethnicity,non-Hispanic White only,non-Hispanic White only,any_telehealth_event,822,191,631,237,12759738.333581,23.63371387,1.87993020,19.94905068,27.31837707,supported,reportable_teaching_support
+race_ethnicity,Hispanic,non-Hispanic White only,delayed_for_cost,180,17,163,96,2475928.009598,10.87767746,2.72684769,5.53305600,16.22229893,supported,reportable_teaching_support
+race_ethnicity,Hispanic,non-Hispanic White only,after_hours_difficult,93,52,41,60,1245807.941820,57.12377603,6.22827530,44.91635645,69.33119561,supported,reportable_teaching_support
+race_ethnicity,Hispanic,non-Hispanic White only,involved_usually_always,110,71,39,72,1517911.503031,68.01356266,4.35662915,59.47456952,76.55255580,supported,reportable_teaching_support
+race_ethnicity,Hispanic,non-Hispanic White only,any_telehealth_event,180,27,153,96,2475928.009598,13.62306135,2.76883934,8.19613625,19.04998646,supported,reportable_teaching_support
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,delayed_for_cost,175,6,169,101,,,,,,suppressed,positive n below 10
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,after_hours_difficult,105,46,59,76,1378511.707730,43.14598005,6.78707063,29.84332161,56.44863849,supported,reportable_teaching_support
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,involved_usually_always,132,81,51,86,1774961.255078,69.72734580,4.91504541,60.09385680,79.36083479,supported,reportable_teaching_support
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,any_telehealth_event,176,31,145,101,2296843.142234,18.53634213,3.66448088,11.35395961,25.71872466,supported,reportable_teaching_support
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,delayed_for_cost,34,4,30,28,,,,,,suppressed,valid n below 50; positive n below 10
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,after_hours_difficult,19,11,8,18,,,,,,suppressed,valid n below 50; negative n below 10
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,involved_usually_always,24,18,6,22,,,,,,suppressed,valid n below 50; negative n below 10
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,any_telehealth_event,34,8,26,28,,,,,,suppressed,valid n below 50; positive n below 10
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,delayed_for_cost,43,5,38,34,,,,,,suppressed,valid n below 50; positive n below 10
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,after_hours_difficult,29,21,8,26,,,,,,suppressed,valid n below 50; negative n below 10
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,involved_usually_always,33,23,10,29,,,,,,suppressed,valid n below 50
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,any_telehealth_event,43,11,32,34,,,,,,suppressed,valid n below 50

@@ -1,0 +1,15 @@
+denominator_id,grain,eligibility,unweighted_n,weighted_denominator,data_class,used_by
+D001,person,accepted adult inpatient target,1255,18879474.284615,public_derived,service-use estimates
+D002,person,valid HAVEUS42: has a usual source of care,1229,18530883.463143,public_meps,usual_source
+D003,person,valid PHNREG42: regular phone contact is very or somewhat difficult,972,14400682.955018,public_meps,regular_phone_difficult
+D004,person,valid OFFHOU42: usual source has evening or weekend hours,865,12926566.584439,public_meps,evening_weekend_hours
+D005,person,valid AFTHOU42: after-hours contact is very or somewhat difficult,708,10467442.595347,public_meps,after_hours_difficult
+D006,person,valid TREATM42: provider asks about other treatments,987,14641353.110975,public_meps,asked_other_treatments
+D007,person,valid DECIDE42: provider usually or always asks the person to help decide,957,14195620.944791,public_meps,involved_usually_always
+D008,person,valid EXPLOP42: provider explains options,983,14592186.853658,public_meps,options_explained
+D009,person,valid PRVSPK42: provider speaks the person's language,45,561057.118891,public_meps,provider_language_match
+D010,person,valid DLAYCA42: medical care was delayed because of cost,1252,18838515.509597,public_meps,delayed_for_cost
+D011,person,valid AFRDCA42: person could not afford medical care,1251,18813706.365268,public_meps,unable_to_afford
+D020,event,linked outpatient and office-based events,25162,378973343.794724,public_derived,telehealth event distribution
+D021,person,synthetic respondent with Q21 home and both Q22 and Q23 answered,538,13504159.896883,public_meps_plus_synthetic_response,linked teaching patterns
+D022,person,portal preference or portal access measure,0,,not_available,explicit evidence gap

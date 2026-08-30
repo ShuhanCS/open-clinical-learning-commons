@@ -1,0 +1,36 @@
+schema_version: 1.0.0
+module_id: oclc-app2-05
+module_version: 0.1.0
+commons_release: 0.60.0
+verified_on: 2026-08-30
+upstream:
+  module_id: oclc-app2-04
+  module_version: 0.1.0
+  manifest_sha256: bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8
+  files: 5
+  bytes: 5297691
+  people: 1255
+  events: 28455
+official_source_landings:
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-256
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254D
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254E
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254F
+  - https://meps.ahrq.gov/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-254G
+synthetic_comment_release:
+  seed: oclc-app2-05-v1
+  opportunities: 782
+  comments: 420
+  themes: 8
+  ambiguous_comments: 84
+  double_coded_comments: 120
+  real_patient_text_rows: 0
+data_classes:
+  public_derived: accepted MEPS person and event teaching tables
+  synthetic: comment opportunity, channel, support offer, return process, comment text, coder records
+  unavailable: portal access and portal preference
+claim_limits:
+  - no comment prevalence, sentiment, saturation, or real patient-voice claim
+  - no proof of inequity, cause, fairness, preference, or group trait
+  - no clinical action, patient targeting, group ranking, or implementation
+  - machine learning remains reserved for Module 06

@@ -1,0 +1,17 @@
+theme,comment_id,assigned_channel,secondary_theme,synthetic_example_text,example_status
+communication_clarity,COMMENT-0012,web,other_or_unclear,"I am not sure which part of the process this comment belongs to. The instructions used clear words, but I still had one question about care at home.",generated teaching text; never present as patient testimony
+communication_clarity,COMMENT-0375,web,,"The instructions used clear words, but I still had one question about care at home.",generated teaching text; never present as patient testimony
+medication_help,COMMENT-0205,mail,cost_barrier,"I knew which medicines changed, but not why. I had questions about what the visit or medicine would cost.",generated teaching text; never present as patient testimony
+medication_help,COMMENT-0036,mail,respect_involvement,The team listened to my concern before explaining the next step. I needed more help understanding when to take each medicine.,generated teaching text; never present as patient testimony
+warning_signs,COMMENT-0227,mail,,The plan did not say when a change should lead me to call.,generated teaching text; never present as patient testimony
+warning_signs,COMMENT-0054,phone,,I wanted clearer guidance about symptoms that need urgent attention.,generated teaching text; never present as patient testimony
+access_after_hours,COMMENT-0140,mail,,It was hard to find help during the evening or weekend.,generated teaching text; never present as patient testimony
+access_after_hours,COMMENT-0179,web,,I did not know who to contact after regular hours.,generated teaching text; never present as patient testimony
+cost_barrier,COMMENT-0256,phone,,I had questions about what the visit or medicine would cost.,generated teaching text; never present as patient testimony
+cost_barrier,COMMENT-0250,mail,,The cost of the recommended follow-up made the plan harder to carry out.,generated teaching text; never present as patient testimony
+digital_channel,COMMENT-0087,mail,,"I could not tell whether the follow-up was online, by phone, or in person.",generated teaching text; never present as patient testimony
+digital_channel,COMMENT-0070,phone,,The digital instructions were difficult to use on my device.,generated teaching text; never present as patient testimony
+respect_involvement,COMMENT-0051,phone,,I did not feel included when the plan changed.,generated teaching text; never present as patient testimony
+respect_involvement,COMMENT-0325,phone,,I wanted more time to ask questions and help choose the plan.,generated teaching text; never present as patient testimony
+other_or_unclear,COMMENT-0365,phone,access_after_hours,I am not sure which part of the process this comment belongs to. I did not know who to contact after regular hours.,generated teaching text; never present as patient testimony
+other_or_unclear,COMMENT-0017,web,,I have one more question about the next step.,generated teaching text; never present as patient testimony

@@ -1,0 +1,14 @@
+dimension,group,reference_group,total_people,contributing_psus,group_status,claim_limit
+other_language_at_home,no,no,1039,250,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+other_language_at_home,yes,no,215,119,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+other_language_at_home,missing or inapplicable,no,1,1,small_group_retained,source category is not a biological explanation risk score or proof of inequity
+income_group,middle or high income,middle or high income,722,236,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+income_group,lower income,middle or high income,533,219,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+insurance_coverage,any private insurance,any private insurance,543,223,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+insurance_coverage,public insurance only,any private insurance,695,238,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+insurance_coverage,uninsured,any private insurance,17,15,small_group_retained,source category is not a biological explanation risk score or proof of inequity
+race_ethnicity,non-Hispanic White only,non-Hispanic White only,822,237,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+race_ethnicity,Hispanic,non-Hispanic White only,180,96,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+race_ethnicity,non-Hispanic Black only,non-Hispanic White only,176,101,eligible_for_measure_specific_review,source category is not a biological explanation risk score or proof of inequity
+race_ethnicity,non-Hispanic Asian only,non-Hispanic White only,34,28,small_group_retained,source category is not a biological explanation risk score or proof of inequity
+race_ethnicity,non-Hispanic other or multiple races,non-Hispanic White only,43,34,small_group_retained,source category is not a biological explanation risk score or proof of inequity

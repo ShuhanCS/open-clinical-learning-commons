@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.59.0 through runnable Module 04 and Checkpoint 01.
+- Current Commons release: 0.60.0 through runnable Module 05 and Checkpoint 01.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -260,10 +260,17 @@ The evidence package separates 14 denominator decisions, 10 access and communica
 
 - Module ID: `oclc-app2-05`.
 - Hours: 16.0.
+- Package path: `courses/patient-experience-engagement/modules/05-patient-voice-equity/`.
+- Specification: `docs/curriculum/courses/APP-2/modules/05-patient-voice-equity-spec.md`.
+- Status: runnable release candidate at Commons 0.60.0.
 - Decision: which patient-voice and subgroup findings are supportable enough to inform co-design.
 - Submission: 20-point equity and patient-voice memo component.
 
 Learners apply a transparent codebook to synthetic comments, check agreement, use bounded assisted classification only after human coding, preserve example context, state why comment frequency is not prevalence, compare prespecified groups with uncertainty, audit channel exclusion, and revise stigmatizing language.
+
+The released corpus contains 782 synthetic comment opportunities, 420 fully synthetic received comments, eight themes, 84 ambiguous comments, and a 120-comment double-coding benchmark. The simulated training coders agree on 96 records, or 80.00000000 percent, with Cohen's kappa 0.77142857. A fixed phrase rule reaches 0.78333333 benchmark accuracy and requires human review for every suggested label. The comments are generated training text, not patient testimony or prevalence evidence.
+
+The public MEPS review prespecifies four dimensions, 13 source groups, and four measures. Thirty-five of 52 estimates and 19 of 36 contrasts meet the fixed teaching support rule. Unsupported rows keep their source categories and counts but leave protected estimates blank. A supported contrast may retain an equity question; it does not prove inequity, cause, fairness, preference, or a group trait.
 
 ## 14. Module 06 brief: Partnered improvement and embedded machine learning
 
@@ -418,7 +425,7 @@ Build Modules 01 through 07 in order. Build each checkpoint after its upstream m
 - Name and confirm the patient/caregiver partner co-lead, compensation, authority, access, preparation, and review terms.
 - Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions before alpha.
 - Complete named review of the accepted 25-file MEPS HC-256 and HC-254D through HC-254G release, linkage rules, denominator decisions, and Module 05 handoff before alpha.
-- Build and review the synthetic comment corpus before Module 05; no real comments may be copied into it.
+- Complete named patient, qualitative-methods, equity, accessibility, and language-access review of the accepted synthetic corpus, codebook, group interpretation, and Module 06 handoff before alpha.
 - Define and test the known response-selection generator before Module 06.
 - Confirm R survey and psychometric execution in one supported teaching environment.
 - Assign the official course section and half-term dates before publishing due dates.

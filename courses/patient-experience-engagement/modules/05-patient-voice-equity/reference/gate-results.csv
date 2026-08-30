@@ -1,0 +1,23 @@
+gate_id,gate,status,evidence,required_action
+G01,Module 04 permits patient-voice and equity analysis,pass,release and manifest fingerprints verified,restore accepted handoff
+G02,all five upstream files match,pass,5 files and 5297691 bytes verified,restore pinned files
+G03,no direct MEPS person or event identifiers are released,pass,DUPERSID and EVNTIDX absent,stop and remove direct identifiers
+G04,all comment text is synthetic and labeled,pass,420 comments and zero real-text rows,remove unverified or real text
+G05,comment opportunity and received denominators are separate,pass,782 opportunities and 420 returns,restore flow contract
+G06,codebook has eight fixed themes,pass,8 themes with include exclude and ambiguity rules,restore codebook
+G07,double-coding sample is stratified,pass,120 rows with 15 per theme,restore sample
+G08,original coder labels are retained,pass,coder A coder B and adjudication all present,restore disagreement record
+G09,agreement arithmetic is exact,pass,96 agreements 80 percent and kappa 0.77142857,recalculate agreement
+G10,assisted coding follows the human benchmark,pass,120 adjudicated records precede the phrase rule,complete human benchmark first
+G11,assisted coding remains transparent and bounded,pass,accuracy 0.78333333 and all labels require review,remove autonomous use
+G12,comment theme counts are not prevalence,pass,420-comment denominator and claim limit retained,revise claim
+G13,groups measures and references are prespecified,pass,4 dimensions 4 measures and fixed references,restore plan
+G14,survey design fields are used,pass,PERWT24F VARSTR and VARPSU retained,recalculate with design
+G15,support and suppression rules are enforced,pass,35 supported estimates and 17 suppressed estimates,restore blank protected estimates
+G16,groups are not merged to evade suppression,pass,all 13 source groups remain visible,restore source categories
+G17,contrasts use joint design variance,pass,36 contrasts with 19 supported,recalculate contrasts
+G18,portal preference remains unavailable,pass,zero denominator retained,remove portal-preference claim
+G19,channel counts remain synthetic procedural evidence,pass,all flow and exclusion rows carry claim limits,revise interpretation
+G20,equity language separates difference question and mechanism,pass,memo retains unknown mechanism and patient-partner question,revise memo
+G21,AI use and human ownership are accountable,pass,complete AI record and human owner retained,complete accountability record
+G22,progression keeps clinical targeting causal and comment-ML limits,pass,Module 06 permission is bounded,revise progression

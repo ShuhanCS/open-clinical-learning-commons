@@ -1,0 +1,9 @@
+theme,decision,ambiguity_rule,reason
+communication_clarity,retain,secondary code allowed when a specific medicine warning access cost digital or involvement issue also appears,keeps general explanation separate from a specific problem
+medication_help,retain,prefer this code when medicine names changes timing or purpose are primary,avoids hiding actionable medicine questions inside general clarity
+warning_signs,retain,prefer this code for symptom or urgent-help cues,keeps escalation guidance distinct from routine access
+access_after_hours,retain,do not use for digital format alone,separates time-of-access questions from channel format
+cost_barrier,retain,requires explicit cost affordability or lower-cost language,does not infer affordability from insurance category
+digital_channel,retain,requires video online device or digital-format language,does not imply portal access or preference
+respect_involvement,retain,requires being heard included or involved,does not infer respect from a positive tone
+other_or_unclear,retain,send unclear comments to adjudication rather than forcing a theme,preserves uncertainty and codebook revision needs

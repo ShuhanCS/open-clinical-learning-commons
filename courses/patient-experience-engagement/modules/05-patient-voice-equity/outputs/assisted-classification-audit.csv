@@ -1,0 +1,10 @@
+scope,benchmark_n,truth_n,predicted_n,true_positive,recall,precision,accuracy,human_review_rule
+overall,120,120,120,94,0.78333333,,0.78333333,macro recall and accuracy are diagnostics; human review is required and autonomous coding is prohibited
+communication_clarity,120,15,16,15,1.00000000,0.93750000,,every suggested label requires human acceptance change or rejection
+medication_help,120,15,20,14,0.93333333,0.70000000,,every suggested label requires human acceptance change or rejection
+warning_signs,120,15,10,9,0.60000000,0.90000000,,every suggested label requires human acceptance change or rejection
+access_after_hours,120,15,7,6,0.40000000,0.85714286,,every suggested label requires human acceptance change or rejection
+cost_barrier,120,15,11,10,0.66666667,0.90909091,,every suggested label requires human acceptance change or rejection
+digital_channel,120,15,16,13,0.86666667,0.81250000,,every suggested label requires human acceptance change or rejection
+respect_involvement,120,15,17,15,1.00000000,0.88235294,,every suggested label requires human acceptance change or rejection
+other_or_unclear,120,15,23,12,0.80000000,0.52173913,,every suggested label requires human acceptance change or rejection

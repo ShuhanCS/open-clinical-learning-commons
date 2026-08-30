@@ -1,0 +1,10 @@
+scope,records,agreements,percent_agreement,cohens_kappa,interpretation
+overall_eight_theme,120,96,80.00000000,0.77142857,agreement describes the simulated training exercise; it does not validate the codebook
+communication_clarity,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
+medication_help,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
+warning_signs,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
+access_after_hours,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
+cost_barrier,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
+digital_channel,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
+respect_involvement,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
+other_or_unclear,120,114,95.00000000,0.77142857,binary theme-versus-other diagnostic for codebook review
