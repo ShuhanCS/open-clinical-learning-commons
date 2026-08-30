@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.10.0
+- Current release: 0.11.0
 - Last updated: 2026-08-29
-- Active phase: master architecture
-- Last completed unit: curriculum delivery and module specification contract
-- Next unit: DA-730 standalone course specification
+- Active phase: DA-730 module specification and build
+- Last completed unit: DA-730 standalone course specification
+- Next unit: DA-730 Module 01, Encoding and the grammar of graphics
 
 ## Confirmed decisions
 
@@ -33,8 +33,9 @@
 
 ## Next resume instructions
 
-1. Read the master architecture and `courses/data-visualization/syllabus-redesign.md`.
-2. Read the complete DA-730 source record in `docs/source/ali-goff-da-730-course-redesign.md`.
-3. Write `docs/curriculum/courses/DA-730/course-spec.md` using the course specification contract.
-4. Reconcile the old Tableau assessments with the concept-first 13-module map.
-5. Lock exact checkpoints, workload, datasets, and module build order before implementing the next learner asset.
+1. Read the master architecture and `docs/curriculum/courses/DA-730/course-spec.md`.
+2. Read the Module 01 brief and the source discussion of encoding and the grammar of graphics.
+3. Write `docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md` using the module specification contract.
+4. Select and register the exact CMS HCAHPS release and fields used by the worked case.
+5. Build the learner lesson, tiered R lab, critique set, assessment, instructor notes, data checks, and release record.
+6. Verify the package from a clean module directory before moving to Module 02.
