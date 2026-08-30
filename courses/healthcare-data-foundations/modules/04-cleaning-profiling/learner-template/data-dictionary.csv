@@ -1,0 +1,30 @@
+position,field_name,timing,data_type,nullable,allowed_values_or_rule,description
+1,patient_id,key,text,no,unique synthetic patient ID,Synthetic patient key.
+2,birth_date,source,date,no,YYYY-MM-DD,Synthetic birth date.
+3,death_date,source,date,yes,YYYY-MM-DD or blank,Synthetic death date when recorded.
+4,age_at_index,index,integer,no,18 or older,Completed age at index start.
+5,gender,source,text,no,Synthea source value,Gender value from the source.
+6,race,source,text,no,Synthea source value,Race value from the source.
+7,ethnicity,source,text,no,Synthea source value,Ethnicity value from the source.
+8,index_encounter_id,key,text,no,unique encounter ID,Selected index encounter key.
+9,index_start,index,timestamp,no,UTC ISO timestamp,Index encounter start and baseline time zero.
+10,index_stop,index,timestamp,no,UTC ISO timestamp,Index encounter stop and follow-up origin.
+11,index_class,index,text,no,emergency or inpatient,Selected encounter class.
+12,index_code,index,text,no,source code,Selected encounter source code.
+13,index_description,index,text,yes,source text,Selected encounter description.
+14,index_reason_code,index,text,yes,source code or blank,Optional source reason code.
+15,index_reason_description,index,text,yes,source text or blank,Optional source reason description.
+16,prior_365d_encounter_count,pre-index,integer,no,zero or greater,All encounter rows in the 365-day lookback.
+17,prior_365d_acute_count,pre-index,integer,no,zero or greater,Emergency or inpatient rows in the lookback.
+18,prior_365d_condition_count,pre-index,integer,no,zero or greater,Condition rows starting in the lookback.
+19,prior_365d_medication_count,pre-index,integer,no,zero or greater,Medication rows starting in the lookback.
+20,next_30d_state,post-index,text,no,declared four-state vocabulary,First recorded encounter group or explicit absence.
+21,next_30d_encounter_id,post-index,text,yes,source encounter ID or blank,First different encounter within 30 days.
+22,next_30d_start,post-index,timestamp,yes,UTC ISO timestamp or blank,Start of the first next encounter.
+23,next_30d_days_after_index_stop,post-index,real,yes,greater than zero and at most 30,Elapsed days from index stop to next encounter.
+24,acute_return_90d,post-index,integer,no,0 or 1,Any emergency or inpatient encounter within 90 days.
+25,death_90d,post-index,integer,no,0 or 1,Synthetic death within 90 days.
+26,endpoint_90d,post-index,text,no,Death or Acute return or No acute return recorded,Mutually exclusive endpoint with death precedence.
+27,followup_90d_complete,metadata,integer,no,0 or 1,Whether source encounter coverage reaches index stop plus 90 days.
+28,source_release,metadata,text,no,synthea-csv-apr2020,Pinned source-release label.
+29,cohort_definition_version,metadata,text,no,0.1.0,Cohort-definition semantic version.

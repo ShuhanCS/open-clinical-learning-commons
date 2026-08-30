@@ -1,0 +1,29 @@
+issue_id,category,table_scope,field_name,observed_count,expected_count,affected_denominator,severity,blocking,detection_status,interpretation
+D01,uniqueness,defective,patient_id,5,5,379,blocking,yes,pass,Grain determines whether repetition is a defect.
+D02,completeness,defective,index_encounter_id,3,3,379,blocking,yes,pass,Required keys cannot be imputed or left blank.
+D03,validity,defective,age_at_index,3,3,379,blocking,yes,pass,A derived value must remain consistent with inclusion rules.
+D04,validity,defective,age_at_index,2,2,379,blocking,yes,pass,Validity bounds differ from review thresholds.
+D05,conformance,defective,index_start,3,3,379,blocking,yes,pass,A string can be nonblank but nonconforming.
+D06,temporal consistency,defective,index_stop,3,3,379,blocking,yes,pass,Cross-field order matters after type checks pass.
+D07,vocabulary validity,defective,index_class,2,2,379,blocking,yes,pass,Unknown codes differ from case drift.
+D08,coding drift,defective,index_class,3,3,379,material,no,pass,Standardization must be explicit and reversible.
+D09,validity,defective,prior_365d_encounter_count,3,3,379,blocking,yes,pass,Counts have domain constraints.
+D10,cross-field consistency,defective,prior_365d_acute_count,3,3,379,blocking,yes,pass,Valid single fields can conflict together.
+D11,completeness,defective,gender,4,4,379,material,yes,pass,Required and optional missingness need different responses.
+D12,vocabulary validity,defective,gender,3,3,379,material,yes,pass,"Vocabulary checks are release-specific, not universal identity rules."
+D13,cross-field consistency,defective,next_30d_state,3,3,379,blocking,yes,pass,Missingness must agree with the state label.
+D14,cross-field consistency,defective,next_30d_state,3,3,379,blocking,yes,pass,A label alone is not a complete event record.
+D15,temporal validity,defective,next_30d_days_after_index_stop,2,2,379,blocking,yes,pass,Open-left boundaries require greater than zero.
+D16,temporal validity,defective,next_30d_days_after_index_stop,2,2,379,blocking,yes,pass,Closed-right boundaries still need an upper limit.
+D17,vocabulary validity,defective,acute_return_90d,3,3,379,blocking,yes,pass,Numeric-looking flags still need vocabulary checks.
+D18,endpoint consistency,defective,endpoint_90d,2,2,379,blocking,yes,pass,"Precedence is a cross-field rule, not a label preference."
+D19,provenance conformance,defective,source_release,2,2,379,blocking,yes,pass,"Version fields are analytic data, not decoration."
+D20,version conformance,defective,cohort_definition_version,2,2,379,blocking,yes,pass,Downstream work must pin the definition it uses.
+N01,structural optionality,accepted,death_date,343,343,374,condition,no,pass,High missingness can be correct for an optional event.
+N02,structural optionality,accepted,index_reason_code,226,226,374,condition,no,pass,"Optional paired fields need consistency, not imputation."
+N03,structural consistency,accepted,next_30d_state,263,263,374,condition,no,pass,Explicit absence differs from no care.
+N04,extreme review,accepted,age_at_index,5,5,374,review,no,pass,Extreme is not automatically invalid.
+N05,extreme review,accepted,prior_365d_encounter_count,2,2,374,review,no,pass,High utilization is not automatically a duplicate.
+N06,extreme review,accepted,prior_365d_medication_count,1,1,374,review,no,pass,Row counts are not necessarily unique therapies.
+N07,small-cell caution,accepted,race,6,6,374,condition,no,pass,Rare categories are not data errors.
+N08,small-cell caution,accepted,next_30d_state|endpoint_90d,12,12,374,condition,no,pass,A teaching threshold is not a universal suppression law.

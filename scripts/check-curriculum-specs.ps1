@@ -264,6 +264,68 @@ if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 03 builder self-check failed.' }
 & python (Join-Path $fnd1Module03Root 'validate_cohort.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 03 validator self-check failed.' }
 
+$fnd1Module04Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\04-cleaning-profiling'
+$fnd1Module04Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\04-cleaning-profiling-spec.md'
+$fnd1Module04Files = @(
+    '.gitattributes', '.gitignore', 'README.md', 'VERSION', 'ai-use.md', 'assessment.md',
+    'build_defect_release.py', 'data-dictionary.csv', 'data-spec.md', 'instructor-notes.md',
+    'profile_quality.py', 'release.json', 'reproducibility-check.md', 'stop-fix-proceed.md',
+    'transformation-record.md', 'validate_defect_release.py', 'data\accepted-analytic-table.csv',
+    'data\defective-analytic-table.csv', 'data\defect-manifest.csv', 'data\quality-rules.csv',
+    'data\fnd1-quality-defects.sqlite', 'data\build-report.json', 'notebooks\04-data-quality.ipynb',
+    'outputs\quality-profile.csv', 'outputs\missingness-profile.csv',
+    'outputs\quality-rule-results.csv', 'outputs\quality-risk-log.csv',
+    'outputs\resolution-log.csv', 'outputs\resolved-analytic-table.csv',
+    'outputs\profile-report.json', 'learner-template\.gitattributes',
+    'learner-template\README.md', 'learner-template\VERSION', 'learner-template\ai-use.md',
+    'learner-template\data-dictionary.csv', 'learner-template\data-spec.md',
+    'learner-template\reproducibility-check.md', 'learner-template\stop-fix-proceed.md',
+    'learner-template\transformation-record.md', 'learner-template\notebooks\04-data-quality.ipynb'
+)
+$fnd1Module04Missing = @($fnd1Module04Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Module04Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Module04Spec) -or $fnd1Module04Missing.Count -gt 0) {
+    throw "FND-1 Module 04 is missing its specification or package files: $($fnd1Module04Missing -join ', ')."
+}
+$fnd1Module04Content = Get-Content -Raw -LiteralPath $fnd1Module04Spec
+$fnd1Module04Sections = [regex]::Matches($fnd1Module04Content, '(?m)^## \d+\.').Count
+$fnd1Module04Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Module04Root 'release.json') | ConvertFrom-Json
+$fnd1Module04Rules = Import-Csv -LiteralPath (Join-Path $fnd1Module04Root 'outputs\quality-rule-results.csv')
+$fnd1Module04Resolved = Join-Path $fnd1Module04Root 'outputs\resolved-analytic-table.csv'
+$fnd1Module04Defective = Join-Path $fnd1Module04Root 'data\defective-analytic-table.csv'
+$fnd1Module04Database = Join-Path $fnd1Module04Root 'data\fnd1-quality-defects.sqlite'
+if (
+    $fnd1Module04Sections -ne 21 -or
+    $fnd1Module04Content -match '[—–]' -or
+    $fnd1Module04Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd1Module04Release.module.version -ne '0.1.0' -or
+    $fnd1Module04Release.module.commons_release -ne '0.32.0' -or
+    $fnd1Module04Release.module.hours -ne 16.5 -or
+    $fnd1Module04Release.defect_release.rows -ne 379 -or
+    $fnd1Module04Release.defect_release.seeded_cases -ne 56 -or
+    $fnd1Module04Release.defect_release.manifest_changes -ne 68 -or
+    $fnd1Module04Release.defect_release.total_rules -ne 28 -or
+    $fnd1Module04Release.package.release_validation_checks -ne 344 -or
+    $fnd1Module04Release.package.complete_submission_checks -ne 340 -or
+    $fnd1Module04Rules.Count -ne 28 -or
+    @($fnd1Module04Rules | Where-Object { $_.detection_status -ne 'pass' }).Count -ne 0 -or
+    (Get-Item -LiteralPath $fnd1Module04Defective).Length -ne 123211 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $fnd1Module04Defective).Hash.ToLowerInvariant() -ne '7800c1d24093b93ce40634afe652e574a1ed2775eba8a742c0bd00bf3596a02d' -or
+    (Get-Item -LiteralPath $fnd1Module04Database).Length -ne 385024 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $fnd1Module04Database).Hash.ToLowerInvariant() -ne '3b9cbf4ba7920f85a8af524902f2e7d35b3e837e5dd6b94deb4f20a156644275' -or
+    (Get-Item -LiteralPath $fnd1Module04Resolved).Length -ne 121787 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $fnd1Module04Resolved).Hash.ToLowerInvariant() -ne '3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a'
+) {
+    throw "FND-1 Module 04 release metadata, specification, rule evidence, or fingerprints do not match the 0.1.0 contract."
+}
+& python (Join-Path $fnd1Module04Root 'build_defect_release.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 04 builder self-check failed.' }
+& python (Join-Path $fnd1Module04Root 'profile_quality.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 04 profiler self-check failed.' }
+& python (Join-Path $fnd1Module04Root 'validate_defect_release.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 04 validator self-check failed.' }
+
 $fnd1Checkpoint01Root = Join-Path $repo 'courses\healthcare-data-foundations\checkpoints\01-validated-cohort-release'
 $fnd1Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\checkpoints\01-validated-cohort-release-spec.md'
 $fnd1Checkpoint01Files = @(
@@ -978,4 +1040,5 @@ Write-Output "FND-1 specification passed: $fnd1ModuleCount modules, $fnd1Hours h
 Write-Output "FND-1 Module 01 passed: $fnd1Module01Sections contract sections and $($fnd1Module01Files.Count) required files."
 Write-Output "FND-1 Module 02 passed: $fnd1Module02Sections contract sections and $($fnd1Module02Files.Count) required files."
 Write-Output "FND-1 Module 03 passed: $fnd1Module03Sections contract sections and $($fnd1Module03Files.Count) required files."
+Write-Output "FND-1 Module 04 passed: $fnd1Module04Sections contract sections and $($fnd1Module04Files.Count) required files."
 Write-Output "FND-1 Checkpoint 1 passed: $fnd1Checkpoint01Sections contract sections and $($fnd1Checkpoint01Files.Count) required files."

@@ -2,7 +2,7 @@
   "use strict";
 
   const curriculum = {
-  "version": "0.31.0",
+  "version": "0.32.0",
   "courseCount": 11,
   "moduleCount": 77,
   "courses": [
@@ -61,7 +61,12 @@
           "outcome": "Clean and profile a dataset and decide whether to stop, fix, or proceed.",
           "topics": "Tidy data, types, missingness, outliers, coding changes, data-quality dimensions, small-cell caution.",
           "submission": "Data-quality notebook, quality-risk log, stop/fix/proceed recommendation.",
-          "hours": 16.5
+          "hours": 16.5,
+          "resource": {
+            "title": "Runnable data-quality package",
+            "description": "Profile a deterministic 379-row defect layer, reconcile 28 rules, and release the restored 374-person table.",
+            "url": "courses/healthcare-data-foundations/modules/04-cleaning-profiling/README.md"
+          }
         },
         {
           "week": 5,

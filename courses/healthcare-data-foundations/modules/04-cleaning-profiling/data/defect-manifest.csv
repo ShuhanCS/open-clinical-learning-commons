@@ -1,0 +1,69 @@
+change_id,case_id,issue_id,patient_id,field_name,operation,original_value,defect_value
+D01-001-01,D01-001,D01,0288abb6-633c-40c3-ba0c-66c7d957727e,*row*,append_exact_duplicate,one accepted row,two identical rows
+D01-002-01,D01-002,D01,0447625b-b860-483c-9f30-17ed375b1493,*row*,append_exact_duplicate,one accepted row,two identical rows
+D01-003-01,D01-003,D01,04a29a39-c12f-480b-9521-f2d20559089f,*row*,append_exact_duplicate,one accepted row,two identical rows
+D01-004-01,D01-004,D01,04a849f4-1aaf-4112-a62f-d44df4325773,*row*,append_exact_duplicate,one accepted row,two identical rows
+D01-005-01,D01-005,D01,04db6603-0017-4cc6-a46d-6df577b0a10d,*row*,append_exact_duplicate,one accepted row,two identical rows
+D02-001-01,D02-001,D02,0522e580-6775-49f5-b471-b39624280402,index_encounter_id,replace,082584a1-4b40-466d-b16f-c63fbd838ad7,
+D02-002-01,D02-002,D02,058590f8-c0f3-40c1-ac80-246437499d5d,index_encounter_id,replace,73ef4342-a237-44ab-a172-a9423d8fba49,
+D02-003-01,D02-003,D02,072f2f15-605e-4c83-b0a6-0274a0474b91,index_encounter_id,replace,52e44d5a-0a51-4382-8136-ebe2a1480637,
+D03-001-01,D03-001,D03,0982ef39-7ff9-4c24-8239-e9fc0667e8ca,age_at_index,replace,18,17
+D03-002-01,D03-002,D03,09867b02-24b8-4896-b38b-86782dd64ef1,age_at_index,replace,58,17
+D03-003-01,D03-003,D03,0ace3e15-8aa4-41c5-8b90-2408285ebcfe,age_at_index,replace,32,17
+D04-001-01,D04-001,D04,0b48619e-1602-488c-a23b-3d4937153dff,age_at_index,replace,31,145
+D04-002-01,D04-002,D04,0ba90366-87ad-4f9d-9bcd-c11e63eb6f27,age_at_index,replace,62,145
+D05-001-01,D05-001,D05,0c1606c8-637e-4ed3-baf4-67390d8f3956,index_start,replace,2016-10-29T03:32:02Z,not-a-timestamp
+D05-002-01,D05-002,D05,0c5aa52a-3b1d-4289-af16-29f7a2d07fec,index_start,replace,2016-11-13T14:28:07Z,not-a-timestamp
+D05-003-01,D05-003,D05,0e003777-2825-44c6-b090-c6df626f7f4a,index_start,replace,2018-07-22T10:44:44Z,not-a-timestamp
+D06-001-01,D06-001,D06,0e1ad739-81d1-4170-841d-414ddc97c93a,index_stop,replace,2019-03-28T16:24:44Z,2019-03-27T15:24:44Z
+D06-002-01,D06-002,D06,0edbb001-5914-42b6-9194-0a3c753b5c25,index_stop,replace,2015-01-23T22:56:16Z,2015-01-22T21:26:16Z
+D06-003-01,D06-003,D06,0f5646bc-a156-4ec0-9252-5b592e3d3184,index_stop,replace,2016-03-29T11:11:47Z,2016-03-27T11:11:47Z
+D07-001-01,D07-001,D07,10134dbf-72d1-4381-b8f3-9530cca6622a,index_class,replace,emergency,telehealth
+D07-002-01,D07-002,D07,10339b10-3cd1-4ac3-ac13-ec26728cb592,index_class,replace,emergency,telehealth
+D08-001-01,D08-001,D08,108cff4f-f9f1-4817-81a1-110697e354de,index_class,replace,emergency,Emergency
+D08-002-01,D08-002,D08,10a4a009-2d24-4512-8506-f8d8c36255d5,index_class,replace,emergency,Emergency
+D08-003-01,D08-003,D08,10ab86b6-a248-4dcf-bebb-3ba143c0ea29,index_class,replace,emergency,Emergency
+D09-001-01,D09-001,D09,10c64243-1b39-4f8d-8add-6c767a2f2e50,prior_365d_encounter_count,replace,0,-1
+D09-002-01,D09-002,D09,11e1992a-28b9-4ee8-bb7f-1c3a7041b57d,prior_365d_encounter_count,replace,2,-1
+D09-003-01,D09-003,D09,13a3a783-ecc5-4ec5-b3dc-168b15cebb88,prior_365d_encounter_count,replace,17,-1
+D10-001-01,D10-001,D10,13db4bb8-d1dc-4158-a820-d2d1b7084fc4,prior_365d_acute_count,replace,0,3
+D10-002-01,D10-002,D10,144edc8e-936e-42d7-8e7d-f3578cf80cc2,prior_365d_acute_count,replace,0,2
+D10-003-01,D10-003,D10,1474f954-3781-4de1-9d5d-27a2b8688419,prior_365d_acute_count,replace,0,6
+D11-001-01,D11-001,D11,16ff017b-226f-4df9-9ea0-74a68b064dc2,gender,replace,M,
+D11-002-01,D11-002,D11,1821a44e-ba5e-4250-aae9-23ec9c0c26f1,gender,replace,F,
+D11-003-01,D11-003,D11,18794a7c-c7fa-47d6-8387-9fc133c4e1e3,gender,replace,F,
+D11-004-01,D11-004,D11,1930a1b6-6533-4509-ab9f-df36f00fb8ec,gender,replace,M,
+D12-001-01,D12-001,D12,1968aa31-5fce-461a-9486-6e385a7b75e7,gender,replace,F,U
+D12-002-01,D12-002,D12,19dea027-3a86-4f26-8b69-bbe969cb67cf,gender,replace,F,U
+D12-003-01,D12-003,D12,1a7e8f38-95df-4c27-8897-21ed04c3b98b,gender,replace,M,U
+D13-001-01,D13-001,D13,1ab6d5c8-edbe-4c71-8f7a-2af7010af2ab,next_30d_encounter_id,replace,,seeded-next-1ab6d5c8
+D13-001-02,D13-001,D13,1ab6d5c8-edbe-4c71-8f7a-2af7010af2ab,next_30d_start,replace,,2016-12-17T15:10:42Z
+D13-001-03,D13-001,D13,1ab6d5c8-edbe-4c71-8f7a-2af7010af2ab,next_30d_days_after_index_stop,replace,,1.0
+D13-002-01,D13-002,D13,1bacaab1-708b-42fe-8f12-fbe97a725440,next_30d_encounter_id,replace,,seeded-next-1bacaab1
+D13-002-02,D13-002,D13,1bacaab1-708b-42fe-8f12-fbe97a725440,next_30d_start,replace,,2016-11-21T21:02:50Z
+D13-002-03,D13-002,D13,1bacaab1-708b-42fe-8f12-fbe97a725440,next_30d_days_after_index_stop,replace,,1.0
+D13-003-01,D13-003,D13,1c0cea09-f0db-4ef0-a551-d67645ee4538,next_30d_encounter_id,replace,,seeded-next-1c0cea09
+D13-003-02,D13-003,D13,1c0cea09-f0db-4ef0-a551-d67645ee4538,next_30d_start,replace,,2015-06-26T19:46:22Z
+D13-003-03,D13-003,D13,1c0cea09-f0db-4ef0-a551-d67645ee4538,next_30d_days_after_index_stop,replace,,1.0
+D14-001-01,D14-001,D14,1be72444-925b-4a44-ac45-608a4ba2e8d5,next_30d_encounter_id,replace,e76670a0-7d84-4fbd-9f5d-e9c2ce620ac2,
+D14-001-02,D14-001,D14,1be72444-925b-4a44-ac45-608a4ba2e8d5,next_30d_start,replace,2017-12-21T21:14:08Z,
+D14-001-03,D14-001,D14,1be72444-925b-4a44-ac45-608a4ba2e8d5,next_30d_days_after_index_stop,replace,8.958333,
+D14-002-01,D14-002,D14,21a5c5d3-a090-450d-91c1-a9bf3f2902d1,next_30d_encounter_id,replace,084b5f9e-4e18-4686-b58d-a2e9c2fbe59c,
+D14-002-02,D14-002,D14,21a5c5d3-a090-450d-91c1-a9bf3f2902d1,next_30d_start,replace,2015-12-08T03:59:33Z,
+D14-002-03,D14-002,D14,21a5c5d3-a090-450d-91c1-a9bf3f2902d1,next_30d_days_after_index_stop,replace,18.958333,
+D14-003-01,D14-003,D14,2335bebd-0843-4322-9585-8ab90f49def3,next_30d_encounter_id,replace,24bce2f3-326f-4798-8591-0282c01d5966,
+D14-003-02,D14-003,D14,2335bebd-0843-4322-9585-8ab90f49def3,next_30d_start,replace,2015-04-13T23:10:53Z,
+D14-003-03,D14-003,D14,2335bebd-0843-4322-9585-8ab90f49def3,next_30d_days_after_index_stop,replace,1.958333,
+D15-001-01,D15-001,D15,23365743-e8f2-4aba-8242-15463f81f81b,next_30d_days_after_index_stop,replace,29.917361,-1
+D15-002-01,D15-002,D15,25f2b770-8821-48f0-a7fe-460dfe3b15b8,next_30d_days_after_index_stop,replace,3.0,-1
+D16-001-01,D16-001,D16,275e4aea-c071-42d9-8ab1-a462ef4732e0,next_30d_days_after_index_stop,replace,27.958333,31
+D16-002-01,D16-002,D16,278c5ad9-1e68-45f5-b274-0bdbb60569be,next_30d_days_after_index_stop,replace,29.9125,31
+D17-001-01,D17-001,D17,1c2d500e-c583-40f8-83a8-c987d21346b7,acute_return_90d,replace,0,2
+D17-002-01,D17-002,D17,1d97baad-7587-436e-ab04-8f7642432c71,acute_return_90d,replace,0,2
+D17-003-01,D17-003,D17,1e52e4fe-13c7-41ad-8b3e-5933fdd553c4,acute_return_90d,replace,0,2
+D18-001-01,D18-001,D18,46d3a308-7383-47ff-802c-c97bfd727720,endpoint_90d,replace,Death,Acute return
+D18-002-01,D18-002,D18,63ca741d-130f-4748-b15f-f75075630a73,endpoint_90d,replace,Death,Acute return
+D19-001-01,D19-001,D19,21ce6dc0-8668-4221-a5bc-6d6a1afe4c52,source_release,replace,synthea-csv-apr2020,synthea-csv-apr2021
+D19-002-01,D19-002,D19,24aa19bf-9bda-4147-8ed3-8b8a56bd00fb,source_release,replace,synthea-csv-apr2020,synthea-csv-apr2021
+D20-001-01,D20-001,D20,28f36cfa-7696-4f73-ac4f-427e802199d9,cohort_definition_version,replace,0.1.0,0.0.9
+D20-002-01,D20-002,D20,28fef93f-53af-40f8-aff0-007f61a53b27,cohort_definition_version,replace,0.1.0,0.0.9

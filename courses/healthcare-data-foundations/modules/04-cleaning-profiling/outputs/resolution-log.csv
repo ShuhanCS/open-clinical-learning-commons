@@ -1,0 +1,29 @@
+issue_id,disposition,action,rows_affected,owner,verification,status
+D01,correct,Remove only manifest-appended duplicates and verify one row per patient.,5,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D02,correct,Restore the accepted index key.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D03,correct,Restore the accepted age.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D04,correct,Restore the accepted age.,2,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D05,correct,Restore the accepted timestamp.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D06,correct,Restore the accepted stop timestamp.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D07,correct,Restore the accepted class.,2,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D08,correct,Restore canonical lowercase and document drift.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D09,correct,Restore the accepted nonnegative count.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D10,correct,Restore the accepted count pair.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D11,correct,Restore the accepted value.,4,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D12,correct,Restore the accepted value and preserve source meaning.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D13,correct,Restore all three blank companion fields.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D14,correct,Restore all accepted companion fields.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D15,correct,Restore the accepted elapsed value.,2,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D16,correct,Restore the accepted elapsed value.,2,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D17,correct,Restore the accepted flag.,3,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D18,correct,Restore the accepted endpoint.,2,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D19,correct,Restore the accepted source label.,2,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+D20,correct,Restore the accepted cohort version.,2,learner data analyst,Resolved table matches accepted release byte for byte.,resolved
+N01,retain with condition,Retain missing values and state the denominator.,343,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition
+N02,retain with condition,Retain paired missingness and document availability.,226,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition
+N03,retain with condition,Retain explicit state and blank companions.,263,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition
+N04,retain with condition,Review against source and retain unless disproven.,5,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition
+N05,retain with condition,Review source history and retain with robust summaries.,2,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition
+N06,retain with condition,Review source rows and retain with a condition.,1,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition
+N07,retain with condition,Retain internally and apply audience-specific display caution.,6,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition
+N08,retain with condition,Retain exact internal counts and limit claims and display.,12,Module 05 clinical analytics reviewer,Accepted source value remains unchanged and condition remains visible.,retained condition

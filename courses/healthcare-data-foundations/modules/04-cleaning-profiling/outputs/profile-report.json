@@ -1,0 +1,44 @@
+{
+  "status": "pass",
+  "version": "0.1.0",
+  "profiles": {
+    "quality_rows": 29,
+    "missingness_rows": 29
+  },
+  "rules": {
+    "rows": 28,
+    "passing": 28
+  },
+  "logs": {
+    "risk_rows": 28,
+    "resolution_rows": 28
+  },
+  "resolved": {
+    "rows": 374,
+    "fields": 29,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a"
+  },
+  "outputs": {
+    "quality-profile.csv": {
+      "bytes": 2257,
+      "sha256": "0cefe9d28feedc9a7f53b4bae45e84f5a2c06f5f94f743b21faf26a9083266fc"
+    },
+    "missingness-profile.csv": {
+      "bytes": 4362,
+      "sha256": "46e9c4dd268db223fac3cd0f01e65e050a3d44f6a28e0babcfb7bd5b552b5ba5"
+    },
+    "quality-rule-results.csv": {
+      "bytes": 3607,
+      "sha256": "c301cd46d6058329d72cc2b71649f5bb1ccf9fbff43f6c97e8b2fc008f791c06"
+    },
+    "quality-risk-log.csv": {
+      "bytes": 7860,
+      "sha256": "3788abf4f8abd0bd9a294380d6eca73815fa209816a57dfcc00df40a93225057"
+    },
+    "resolution-log.csv": {
+      "bytes": 4468,
+      "sha256": "48d4c7259840c16f5667eb23191885787bd056680e0bae7bba4b16120a271c51"
+    }
+  }
+}

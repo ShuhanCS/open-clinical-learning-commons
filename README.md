@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.31.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 Modules 01 through 03 and the cumulative Week 3 checkpoint are runnable release candidates, covering the reproducible workspace, the complete 16-table Synthea relational source build, a tested 374-person adult acute-care cohort, and its 40-point technical release decision.
+- Current version: `0.32.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 Modules 01 through 04 and the cumulative Week 3 checkpoint are runnable release candidates, covering the reproducible workspace, the complete 16-table Synthea relational source build, a tested 374-person adult acute-care cohort, its 40-point technical release decision, and a deterministic data-quality release.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -22,6 +22,8 @@ The next unit is [FND-1 Module 02: Databases and retrieving healthcare data](cou
 The third unit is [FND-1 Module 03: Cohorts and analytic tables](courses/healthcare-data-foundations/modules/03-cohorts-analytic-tables/README.md), governed by the durable [Module 03 specification](docs/curriculum/courses/FND-1/modules/03-cohorts-analytic-tables-spec.md). Its four read-only SQL files produce 1,048 eligible event rows, one deterministic index for each of 374 synthetic adults, a 29-field analytic table, and a conserved four-step cohort flow.
 
 The cumulative [FND-1 Week 3 checkpoint](courses/healthcare-data-foundations/checkpoints/01-validated-cohort-release/README.md) joins the 15-point setup component and 25-point SQL cohort component into one portable release. Its durable [checkpoint specification](docs/curriculum/courses/FND-1/checkpoints/01-validated-cohort-release-spec.md) defines the exact 40-point assessment, 19 gates, learner defense, and Module 04 progression decision.
+
+The fourth unit is [FND-1 Module 04: Cleaning and profiling](courses/healthcare-data-foundations/modules/04-cleaning-profiling/README.md), governed by the durable [Module 04 specification](docs/curriculum/courses/FND-1/modules/04-cleaning-profiling-spec.md). It preserves the accepted table, adds a transparent 20-family defect layer, reconciles 28 quality rules, and hands Module 05 the exact restored table with retained conditions.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

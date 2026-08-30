@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.31.0
+- Current release: 0.32.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Week 3 checkpoint, validated cohort and analytic-table release
-- Next unit: FND-1 Module 04, Cleaning and profiling
+- Last completed unit: FND-1 Module 04, Cleaning and profiling
+- Next unit: FND-1 Module 05, Descriptive results
 
 ## Confirmed decisions
 
@@ -143,6 +143,12 @@
 - Learner-mode assembly from three accepted workspaces passes a 295-check starter audit. Complete reference validation passes 341 checks and invokes the 614-check Module 03 submission validator through the checkpoint subset.
 - The checkpoint requires at least 32 of 40 points, 19 noncompensable gates, an adequate defense, and `accept` or `accept with conditions` before Module 04 begins.
 - Checkpoint 1 is a runnable release candidate. Faculty, clinical analyst, SQL, informatics, reproducibility, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Module 04 preserves the accepted 374-row, 29-field analytic table and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a` as an immutable upstream input.
+- Its separate deterministic defect layer contains 379 rows, 374 distinct people, five exact duplicates, 20 seeded defect families, 56 issue cases, and 68 manifest changes. The defective CSV SHA-256 is `7800c1d24093b93ce40634afe652e574a1ed2775eba8a742c0bd00bf3596a02d`.
+- The module independently detects all 20 seeded rules and eight accepted natural-characteristic rules. It profiles all 29 fields and retains optional missingness, five ages at least 100, two prior-encounter counts above 100, one prior-medication count above 100, six rows in small race categories, and 12 urgent-state or death-endpoint rows as review conditions.
+- The reference initial decision is `fix`; after deterministic restoration it is `proceed with conditions`. The resolved table matches the accepted file byte for byte.
+- Builder, profiler, and validator self-checks pass. A clean build reproduces 13 generated artifacts byte for byte; the notebook executes four code cells in a fresh exact-version environment; validation passes 344 release checks and 340 complete-submission checks.
+- Module 04 is a runnable release candidate. Faculty, notebook, clinical-informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -151,9 +157,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course, Modules 01 through 03, and Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
-2. Treat the accepted Checkpoint 1 analytic table, cohort definition, source records, SQL, and fingerprints as immutable upstream inputs.
-3. Write the 21-section Module 04 specification for a separately versioned deterministic defect layer, quality profile, risk log, and stop/fix/proceed decision.
-4. Lock the seeded defects, natural source issues, expected counts, severity rules, missingness handling, small-cell boundary, and correction-versus-exclusion rules before writing the notebook or builder.
-5. Build the defect release, profiler, notebook, machine-readable outputs, learner assessment, instructor key, validator, and decision records.
-6. Update the Commons version and this ledger, then commit and push Module 04 before beginning Module 05.
+1. Read the FND-1 course, Modules 01 through 04, Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
+2. Treat Module 04 `outputs/resolved-analytic-table.csv` and its N01 through N08 retained conditions as immutable Module 05 inputs.
+3. Write the 21-section Module 05 specification around exact descriptive evidence, denominator ownership, and interpretation limits.
+4. Lock every requested variable profile, cross-tab, rate, stratified table, denominator definition, missing-value rule, and synthetic-data claim boundary before building outputs.
+5. Build the descriptive notebook, machine-readable tables, denominator registry, interpretation memo, learner assessment, instructor key, validator, and decision records.
+6. Update the Commons version and this ledger, then commit and push Module 05 before beginning Module 06.

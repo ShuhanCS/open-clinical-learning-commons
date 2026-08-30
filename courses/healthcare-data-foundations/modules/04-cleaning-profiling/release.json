@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd1-04",
+    "title": "Cleaning and profiling",
+    "version": "0.1.0",
+    "commons_release": "0.32.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "week": 4,
+    "hours": 16.5
+  },
+  "decision": {
+    "owner": "data-quality lead",
+    "question": "Should this analytic table stop, be fixed, proceed, or proceed with conditions?",
+    "allowed": ["stop", "fix", "proceed", "proceed with conditions"],
+    "reference_initial": "fix",
+    "reference_final": "proceed with conditions"
+  },
+  "upstream": {
+    "module": "oclc-fnd1-03",
+    "checkpoint": "oclc-fnd1-checkpoint-01",
+    "rows": 374,
+    "fields": 29,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a",
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "defect_release": {
+    "version": "0.1.0",
+    "rows": 379,
+    "fields": 29,
+    "distinct_patients": 374,
+    "exact_duplicates": 5,
+    "seeded_defect_families": 20,
+    "seeded_cases": 56,
+    "manifest_changes": 68,
+    "natural_rules": 8,
+    "total_rules": 28
+  },
+  "data": {
+    "accepted-analytic-table.csv": {"rows": 374, "bytes": 121787, "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a"},
+    "defective-analytic-table.csv": {"rows": 379, "bytes": 123211, "sha256": "7800c1d24093b93ce40634afe652e574a1ed2775eba8a742c0bd00bf3596a02d"},
+    "defect-manifest.csv": {"rows": 68, "bytes": 7230, "sha256": "72abd0330db86df49476512740a6d47222426d40b7e2a5f94b0cedafea38aa46"},
+    "quality-rules.csv": {"rows": 28, "bytes": 8785, "sha256": "aa2f6b58e93ec156c3f99e2159817c8c6cb8cf8f60d650dfae5e2d01a3175e0d"},
+    "fnd1-quality-defects.sqlite": {"bytes": 385024, "sha256": "3b9cbf4ba7920f85a8af524902f2e7d35b3e837e5dd6b94deb4f20a156644275"}
+  },
+  "outputs": {
+    "quality-profile.csv": {"rows": 29, "bytes": 2257, "sha256": "0cefe9d28feedc9a7f53b4bae45e84f5a2c06f5f94f743b21faf26a9083266fc"},
+    "missingness-profile.csv": {"rows": 29, "bytes": 4362, "sha256": "46e9c4dd268db223fac3cd0f01e65e050a3d44f6a28e0babcfb7bd5b552b5ba5"},
+    "quality-rule-results.csv": {"rows": 28, "bytes": 3607, "sha256": "c301cd46d6058329d72cc2b71649f5bb1ccf9fbff43f6c97e8b2fc008f791c06"},
+    "quality-risk-log.csv": {"rows": 28, "bytes": 7860, "sha256": "3788abf4f8abd0bd9a294380d6eca73815fa209816a57dfcc00df40a93225057"},
+    "resolution-log.csv": {"rows": 28, "bytes": 4468, "sha256": "48d4c7259840c16f5667eb23191885787bd056680e0bae7bba4b16120a271c51"},
+    "resolved-analytic-table.csv": {"rows": 374, "bytes": 121787, "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a"}
+  },
+  "accepted_conditions": {
+    "missing_death_date": 343,
+    "missing_reason_pair": 226,
+    "no_next_event_companions": 263,
+    "age_at_least_100": 5,
+    "prior_encounters_above_100": 2,
+    "prior_medications_above_100": 1,
+    "rows_in_race_categories_below_10": 6,
+    "urgent_state_or_death_endpoint_rows": 12
+  },
+  "environment": {
+    "tested_platform": "Windows",
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "notebook": {"jupyterlab": "4.6.3", "nbclient": "0.10.2", "pandas": "3.0.5"}
+  },
+  "package": {
+    "learner_template_files": 10,
+    "reference_outputs": 6,
+    "release_validation_checks": 344,
+    "complete_submission_checks": 340
+  },
+  "assessment": {
+    "points": 100,
+    "minimum_passing_points": 80,
+    "noncompensable_gates": 16
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, teaching data, notebook, and validation"}
+  ],
+  "review": {
+    "technical_validation": {"status": "complete", "date": "2026-08-30", "evidence": "Deterministic defect build and profiling reproduced all accepted, defective, rule, log, and resolved facts."},
+    "required_human_roles": [
+      {"role": "FND-1 faculty owner", "reviewer": null, "status": "pending"},
+      {"role": "Python and notebook teachability", "reviewer": null, "status": "pending"},
+      {"role": "clinical informatics and data quality", "reviewer": null, "status": "pending"},
+      {"role": "accessibility", "reviewer": null, "status": "pending"},
+      {"role": "privacy and data governance", "reviewer": null, "status": "pending"},
+      {"role": "responsible AI", "reviewer": null, "status": "pending"},
+      {"role": "independent reproduction and teachability", "reviewer": null, "status": "pending"}
+    ]
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "profiler_self_check": "pass",
+    "validator_self_check": "pass",
+    "all_rule_counts": "pass",
+    "notebook_clean_execution": "pass",
+    "byte_for_byte_reproduction": "pass",
+    "resolved_equals_accepted": "pass",
+    "nonempty_target_refusal": "pass",
+    "incomplete_package_rejection": "pass"
+  },
+  "known_issues": [
+    "Named faculty, notebook, clinical-informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "Windows reproduction is complete; named macOS and Linux reproduction remains pending.",
+    "The source is synthetic and older and cannot support real population or clinical estimates.",
+    "The small-cell threshold is a teaching caution and not a universal disclosure policy."
+  ]
+}

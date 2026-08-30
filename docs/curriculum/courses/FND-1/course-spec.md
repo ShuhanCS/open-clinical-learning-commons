@@ -1,8 +1,8 @@
 # FND-1: Healthcare Data Foundations
 
-- Status: course specification complete; module specifications and runnable packages not yet built
+- Status: course specification complete; Modules 01 through 04 and Checkpoint 1 are runnable release candidates
 - Course specification version: 0.1.0
-- Commons release: 0.27.0
+- Commons release: 0.32.0
 - Credits: 3
 - Delivery: asynchronous online half-term with scheduled technical clinics and review
 - Planning model: seven instructional weeks mapped to official half-term dates
@@ -480,7 +480,7 @@ The learner must answer:
 - Checkpoint role: the 15-percent setup component is frozen for inclusion in Checkpoint 1.
 - Out of scope: database modeling, cohort logic, data cleaning, statistical modeling, Docker administration, and production deployment.
 
-Planned module package:
+Released module package:
 
 ```text
 module-01/
@@ -497,11 +497,11 @@ module-01/
   ai-use.md
 ```
 
-Full future specification:
+Full specification:
 
 `docs/curriculum/courses/FND-1/modules/01-reproducible-workspace-spec.md`
 
-Runnable future package:
+Runnable package:
 
 `courses/healthcare-data-foundations/modules/01-reproducible-workspace/`
 
@@ -523,7 +523,7 @@ Handoff: Module 02 uses the accepted workspace to build the relational teaching 
 - Submission: data model diagram, accessible schema description, data dictionary, schema notes, first SQL extracts, FHIR/JSON reading note, source record, and validation output.
 - Out of scope: production database administration, query optimization at enterprise scale, HL7 interface implementation, FHIR server configuration, and cohort selection.
 
-Planned module package:
+Released module package:
 
 ```text
 module-02/
@@ -549,11 +549,11 @@ module-02/
   release.json
 ```
 
-Full future specification:
+Full specification:
 
 `docs/curriculum/courses/FND-1/modules/02-databases-retrieval-spec.md`
 
-Runnable future package:
+Runnable package:
 
 `courses/healthcare-data-foundations/modules/02-databases-retrieval/`
 
@@ -575,7 +575,7 @@ Handoff: Module 03 treats the validated database, schema, and dictionary as immu
 - Checkpoint role: completes the cumulative Week 3 checkpoint.
 - Out of scope: data cleaning beyond blocking source defects, descriptive inference, regression, prediction, causal adjustment, and intervention decisions.
 
-Planned module package:
+Released module package:
 
 ```text
 module-03/
@@ -601,11 +601,11 @@ module-03/
   release.json
 ```
 
-Full future specification:
+Full specification:
 
 `docs/curriculum/courses/FND-1/modules/03-cohorts-analytic-tables-spec.md`
 
-Runnable future package:
+Runnable package:
 
 `courses/healthcare-data-foundations/modules/03-cohorts-analytic-tables/`
 
@@ -626,7 +626,7 @@ Handoff: the Week 3 checkpoint freezes the cohort definition and analytic-table 
 - Submission: data-quality notebook, machine-readable profile, quality-risk log, stop/fix/proceed recommendation, transformation record, reproduction check, and AI-use record.
 - Out of scope: statistical imputation models, causal missing-data assumptions, production master-data management, and deleting inconvenient observations without a documented rule.
 
-Planned module package:
+Released module package:
 
 ```text
 module-04/
@@ -652,11 +652,11 @@ module-04/
   release.json
 ```
 
-Full future specification:
+Full specification:
 
 `docs/curriculum/courses/FND-1/modules/04-cleaning-profiling-spec.md`
 
-Runnable future package:
+Runnable package:
 
 `courses/healthcare-data-foundations/modules/04-cleaning-profiling/`
 
@@ -1569,11 +1569,11 @@ Each module adds its own source, data, code, output, and release checks.
 - [x] Accessibility is a pass gate for diagrams, notebooks, tables, charts, and final handoff.
 - [x] No real patient or restricted data enter the public course.
 - [x] The module specification and package paths are defined.
-- [ ] Module 01 has a complete specification and runnable package.
-- [ ] Module 02 has a complete specification and runnable package.
-- [ ] Module 03 has a complete specification and runnable package.
-- [ ] Checkpoint 1 has a runnable assembler, templates, validator, and instructor notes.
-- [ ] Module 04 has a complete specification and runnable package.
+- [x] Module 01 has a complete specification and runnable package.
+- [x] Module 02 has a complete specification and runnable package.
+- [x] Module 03 has a complete specification and runnable package.
+- [x] Checkpoint 1 has a runnable assembler, templates, validator, and instructor notes.
+- [x] Module 04 has a complete specification and runnable package.
 - [ ] Module 05 has a complete specification and runnable package.
 - [ ] Module 06 has a complete specification and runnable package.
 - [ ] Checkpoint 2 has a runnable assembler, templates, validator, and instructor notes.
@@ -1589,7 +1589,7 @@ These decisions do not block Module 01 specification and build:
 1. Lock the exact Python, pandas, Jupyter, and SQLite versions during Module 01.
 2. Lock the exact Synthea table and field subset after inspecting the pinned archive in Module 02.
 3. Confirm whether the pinned Synthea archive contains sufficient claims fields or whether the CMS Synthetic Medicare Claims extension is needed for the default path.
-4. Lock the deterministic defect manifest and severity rules in Module 04.
+4. The deterministic defect manifest and severity rules are locked in Module 04 version 0.1.0.
 5. Lock the reference cohort's exact index-period dates and counts only after Module 03 runs against the pinned database.
 6. Name the faculty, data engineering, clinical informatics, accessibility, privacy, AI, and independent-instructor reviewers.
 7. Confirm whether the first live cohort permits an approved SQL platform alternative while retaining SQLite as the reproducible default.
