@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint": {
+    "id": "oclc-fnd2-cp1",
+    "version": "0.1.0",
+    "commons_release": "0.42.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "due": "end of instructional Week 3",
+    "cumulative_hours": 48.0,
+    "course_points": "40.00",
+    "minimum_points": "32.00",
+    "required_tag": "fnd2-checkpoint1-v0.1.0"
+  },
+  "modules": [
+    {"id": "oclc-fnd2-01", "version": "0.1.0", "commons_release": "0.39.0", "artifact_count": 17, "points": "15.00"},
+    {"id": "oclc-fnd2-02", "version": "0.1.0", "commons_release": "0.40.0", "artifact_count": 27, "points": "10.00"},
+    {"id": "oclc-fnd2-03", "version": "0.1.0", "commons_release": "0.41.0", "artifact_count": 28, "points_including_handoff": "15.00"}
+  ],
+  "package": {
+    "upstream_artifacts": 72,
+    "checkpoint_control_artifacts": 6,
+    "manifest_rows": 78,
+    "editable_records": 10,
+    "assembled_files": 89
+  },
+  "fixed_evidence": {
+    "modeling_cohort_sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332",
+    "split_registry_sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1",
+    "formula_registry_sha256": "fc69d6146eec729969b571b535c13027e9b875d34dd99637f0dc0d9b934239a6",
+    "test_predictions_sha256": "531c00d310292aeeaea476d1c94e128f5c81c34c2fc60e014d2c157e152b7438",
+    "split_rows": [224, 75, 75],
+    "positive_outcomes": [25, 7, 4],
+    "baseline_probability": "0.111607142857",
+    "selected_model": "ML01",
+    "locked_threshold": "0.08513264",
+    "test_confusion": {"true_negative": 48, "false_positive": 23, "false_negative": 2, "true_positive": 2}
+  },
+  "assessment": {
+    "criterion_ids": ["A01", "A02", "A03", "A04", "R01", "R02", "P01", "P02", "P03", "H01"],
+    "available_points": ["4.00", "4.00", "3.00", "4.00", "4.50", "5.50", "4.50", "4.50", "3.50", "2.50"],
+    "required_gates": 23,
+    "defense_questions": 12
+  },
+  "decision": {
+    "owner": "clinical prediction and model-risk reviewer with biostatistical support",
+    "allowed": ["accept", "accept with conditions", "revise", "refer"],
+    "progression_allowed": ["accept", "accept with conditions"],
+    "reference": "accept with conditions"
+  },
+  "boundary": "synthetic teaching evidence only; no real clinical performance, causal, fairness, safety, or deployment claim"
+}

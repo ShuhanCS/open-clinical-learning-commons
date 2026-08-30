@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-fnd2-cp1",
+    "title": "Modeling-readiness and prediction-evaluation release",
+    "version": "0.1.0",
+    "commons_release": "0.42.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "due": "end of instructional Week 3",
+    "cumulative_hours": 48.0,
+    "course_points": 40,
+    "required_tag": "fnd2-checkpoint1-v0.1.0"
+  },
+  "components": [
+    {"module": "oclc-fnd2-01", "version": "0.1.0", "commons_release": "0.39.0", "artifacts": 17, "course_points": 15},
+    {"module": "oclc-fnd2-02", "version": "0.1.0", "commons_release": "0.40.0", "artifacts": 27, "course_points": 10},
+    {"module": "oclc-fnd2-03", "version": "0.1.0", "commons_release": "0.41.0", "artifacts": 28, "course_points_including_handoff": 15}
+  ],
+  "decision": {
+    "owner": "clinical prediction and model-risk reviewer with biostatistical support",
+    "question": "May the locked modeling cohort, split, regression evidence, prediction pipeline, evaluation, and use boundary enter validity review?",
+    "allowed": ["accept", "accept with conditions", "revise", "refer"],
+    "progression_allowed": ["accept", "accept with conditions"],
+    "reference": "accept with conditions",
+    "module_04": "permitted with recorded conditions"
+  },
+  "fixed_evidence": {
+    "modeling_rows": 374,
+    "modeling_fields": 34,
+    "modeling_cohort_sha256": "6556ed149e69589253ab58572b2f08535899ae12c3e84dc7bafc7da2ebe6f332",
+    "split_registry_sha256": "05ea7ed9f37b20ba9cba4bb2a36d4c95af96cd2f8e5cc82a5bc8eb74c91474c1",
+    "split_rows": {"train": 224, "validation": 75, "test": 75},
+    "positive_outcomes": {"train": 25, "validation": 7, "test": 4},
+    "baseline_probability": "0.111607142857",
+    "linear_available_rows": 111,
+    "linear_training_rows": 69,
+    "structural_blanks": 263,
+    "formula_registry_sha256": "fc69d6146eec729969b571b535c13027e9b875d34dd99637f0dc0d9b934239a6",
+    "prior_acute_odds_ratio": "2.20423495",
+    "selected_model": "ML01",
+    "locked_threshold": "0.08513264",
+    "test_predictions_sha256": "531c00d310292aeeaea476d1c94e128f5c81c34c2fc60e014d2c157e152b7438",
+    "test_roc_auc": "0.58802817",
+    "test_confusion": {"true_negative": 48, "false_positive": 23, "false_negative": 2, "true_positive": 2},
+    "subgroup_rows": 10,
+    "suppressed_subgroup_rows": 5
+  },
+  "package": {
+    "module_artifacts": 72,
+    "checkpoint_control_artifacts": 6,
+    "immutable_manifest_rows": 78,
+    "editable_cumulative_records": 10,
+    "assembled_files": 89,
+    "manifest_bytes": 11241,
+    "manifest_sha256": "b3760f43e5852ba90150000a4c807bc3aadfedcc688b40c4f16017dc253ca836",
+    "external_assembler_dependencies": 0
+  },
+  "assessment": {
+    "course_points": 40,
+    "minimum_passing_points": 32,
+    "criteria": 10,
+    "noncompensable_gates": 23,
+    "defense_questions": 12,
+    "reference_points": 40,
+    "reference_defense": "adequate"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_assembly": "pass",
+    "learner_mode_assembly": "pass",
+    "complete_reference_checks": 500,
+    "starter_checks": 465,
+    "existing_target_rejection": "pass",
+    "incomplete_checkpoint_rejection": "pass",
+    "missing_immutable_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "two_build_manifest_match": "pass"
+  },
+  "rubric_correction": {
+    "issue": "The normalized source rows summed to 39.00 while displaying a 40.00 total.",
+    "change": "H01 corrected from 1.50 to 2.50.",
+    "reason": "Preserves the declared Module 01, Module 02, and Module 03 plus handoff shares of 15, 10, and 15 points."
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, assembly, reference records, and validation"}
+  ],
+  "known_issues": [
+    "Named faculty, clinical prediction, model-risk, biostatistics, clinical-informatics, clinician, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "A live learner defense remains required; the included defense is a reference answer key.",
+    "Module 02 paired R execution and reconciliation remain pending in a named R environment.",
+    "All model data are synthetic and support no real clinical performance claim.",
+    "The test partition has four outcomes and the locked threshold yields 23 false positives and 2 false negatives.",
+    "Calibration and subgroup evidence are sparse and support no stability or fairness conclusion.",
+    "No external, prospective, safety, workflow, monitoring, or deployment validation has occurred."
+  ]
+}

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.41.0
+- Current release: 0.42.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Module 03, Prediction workflows and evaluation
-- Next unit: FND-2 Checkpoint 1, modeling-readiness release
+- Last completed unit: FND-2 Checkpoint 1, modeling-readiness and prediction-evaluation release
+- Next unit: FND-2 Module 04, Adjustment, missing data, and longitudinal structure
 
 ## Confirmed decisions
 
@@ -221,6 +221,14 @@
 - The builder refuses existing targets and reproduces outputs from a copied learner workspace. The validator passes 4601 reference checks and 4549 starter checks and rejects prompted or broken submissions. All 22 prediction invariants pass.
 - The reference recommendation is `continue to validity review with conditions`. The four-outcome test limit, wide uncertainty, exact confusion counts, subgroup suppression, synthetic source, and nondeployment boundary remain binding.
 - FND-2 Module 03 is a runnable release candidate at Commons 0.41.0.
+- FND-2 Checkpoint 1 version 0.1.0 assembles accepted Modules 01 through 03 without recomputing analytic evidence. It copies 17 Module 01, 27 Module 02, and 28 Module 03 artifacts plus six checkpoint controls.
+- The source rubric listed H01 as 1.50 and a 40.00 total even though the rows summed to 39.00. H01 is corrected to 2.50, preserving the declared 15-point Module 01, 10-point Module 02, and 15-point Module 03 plus handoff shares.
+- The assembled checkpoint has 89 files: 78 immutable manifest members, ten cumulative scoring and review records, and the generated manifest. The 11,241-byte manifest SHA-256 is `b3760f43e5852ba90150000a4c807bc3aadfedcc688b40c4f16017dc253ca836`.
+- The cumulative validator preserves the 374-row modeling cohort, 224/75/75 split, 25/7/4 outcomes, baseline 0.111607142857, 69-row conditional linear fit, 263 structural blanks, odds-ratio boundary, `ML01` selection, threshold 0.08513264, and 48/23/2/2 test confusion counts.
+- The exact 40-point score contains ten criteria. Passing requires at least 32 points, all 23 gates, an adequate 12-question defense, complete cumulative records, and `accept` or `accept with conditions` before Module 04.
+- Reference validation passes 500 checks and learner starter validation passes 465. Existing targets, prompted completions, missing immutable evidence, out-of-range scores, and failed gates are rejected. Two reference builds produce identical manifests.
+- The reference disposition is `accept with conditions`. Module 04 is permitted for curriculum construction while synthetic-data, four-outcome, false-positive, false-negative, subgroup, R-execution, human-review, and no-deployment conditions remain binding.
+- FND-2 Checkpoint 1 is a runnable release candidate at Commons 0.42.0.
 
 ## Pending confirmation
 
@@ -229,11 +237,11 @@
 
 ## Next resume instructions
 
-1. Read the FND-2 course specification, Module 01 through 03 specifications and releases, master architecture, and this ledger.
-2. Write the durable Checkpoint 1 specification for the cumulative 40-point modeling-readiness decision.
-3. Assemble rather than recompute accepted Module 01 through 03 artifacts and preserve all source and output fingerprints.
-4. Preserve the 15-point Module 01, 10-point Module 02, and 15-point Module 03 shares exactly once.
-5. Require every upstream gate, an adequate learner defense, a named reviewer record, reproduction evidence, and one allowed cumulative disposition.
-6. Carry the exact `ML01` selection, threshold 0.08513264, four test outcomes, 48/23/2/2 confusion counts, subgroup suppression, synthetic-source boundary, and teaching-only use into the checkpoint.
-7. Permit Module 04 only after an accepted cumulative checkpoint disposition.
-8. Update the Commons version and this ledger, then commit and push Checkpoint 1 before building Module 04.
+1. Read the accepted FND-2 Checkpoint 1 specification, package, progression decision, Modules 01 through 03 releases, course specification, master architecture, and this ledger.
+2. Write the 21-section Module 04 specification for adjustment, missing data, selection, repeated measures, and time-to-event structure.
+3. Treat accepted Checkpoint 1 version 0.1.0 as immutable input and preserve its manifest and conditions.
+4. Build three bounded teaching cases: selection in the 111-row timing subset, a public or synthetic confounded treatment comparison, and a public or synthetic repeated-measures and survival fixture.
+5. Distinguish predictive feature choice from causal adjustment, and teach DAG roles, overlap, balance, missingness assumptions, sensitivity, clustering, mixed-model reading, censoring, Kaplan-Meier, and Cox recognition at the course-specified mastery levels.
+6. Produce the exact 15-point Week 6 Module 04 release with accessible DAG and structured alternative, validity-threat register, missingness evidence, adjustment evidence, repeated and survival readings, specialist-referral triggers, and Module 05 handoff.
+7. Keep all real clinical and causal claims outside the supported boundary.
+8. Update the Commons version and this ledger, then commit and push Module 04 before building Module 05.

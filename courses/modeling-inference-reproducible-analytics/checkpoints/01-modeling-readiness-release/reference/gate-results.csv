@@ -1,0 +1,24 @@
+gate_id,gate,status,evidence,reviewer_note
+G01,Accepted FND-1 source version analytic-table fingerprint and conditions,pass,modules/01-aims-reproducible-workspace/source-record.yml,Synthetic source and accepted fingerprint preserved
+G02,One-row-per-person 374-row grain,pass,modules/01-aims-reproducible-workspace/outputs/modeling-cohort.csv,Exact row and patient counts preserved
+G03,Prediction time at index stop,pass,modules/01-aims-reproducible-workspace/aim-and-method-plan.md,Prediction time explicit
+G04,Every source field assigned a role,pass,modules/01-aims-reproducible-workspace/feature-role-contract.csv,All 34 fields classified
+G05,Post-index and outcome leakage blocked,pass,modules/01-aims-reproducible-workspace/feature-role-contract.csv,Prohibited roles preserved
+G06,Exact 224 75 and 75 split rows,pass,modules/01-aims-reproducible-workspace/outputs/split-registry.csv,Temporal split preserved
+G07,Exact 25 7 and 4 positive outcomes,pass,modules/01-aims-reproducible-workspace/outputs/build-report.json,Outcome reconciliation preserved
+G08,Test isolated from preprocessing fitting selection and threshold choice,pass,modules/03-prediction-evaluation/model-contract.json,Test opened after locks
+G09,Training-prevalence baseline retained,pass,modules/01-aims-reproducible-workspace/outputs/baseline-metrics.csv,Constant comparator retained
+G10,Regression formulas and categorical references declared,pass,modules/02-regression-interpretation/formula-registry.csv,References and transforms declared
+G11,Structural blanks not changed to zero,pass,modules/02-regression-interpretation/outputs/linear-subset-registry.csv,All 263 structural blanks preserved upstream
+G12,Odds risks and probabilities distinguished,pass,modules/02-regression-interpretation/regression-interpretation.md,Quantities named correctly
+G13,No causal effect claim from associational regression,pass,modules/02-regression-interpretation/regression-interpretation.md,Associational boundary explicit
+G14,Preprocessing and model represented as one reproducible pipeline,pass,modules/03-prediction-evaluation/model-contract.json,Training-fit pipeline frozen
+G15,Validation comparison and selection rule recorded before test,pass,modules/03-prediction-evaluation/outputs/model-selection-record.csv,ML01 selected on validation
+G16,Calibration discrimination threshold confusion prevalence and counts reported,pass,modules/03-prediction-evaluation/prediction-evaluation-report.md,Exact quantities and limits present
+G17,Subgroup sample and outcome counts reported before metrics,pass,modules/03-prediction-evaluation/outputs/subgroup-metrics.csv,Count-first suppression contract applied
+G18,Leaked critique model rejected,pass,modules/03-prediction-evaluation/outputs/leaked-model-failure.csv,Rejected before performance review
+G19,Four-positive test result visible in every decision summary,pass,cumulative-interpretation.md,Four outcomes and exact counts visible
+G20,Source transformation reproduction accessibility and AI records complete,pass,reproduction-record.md|accessibility-review.md|ai-use.md,Cumulative records complete
+G21,No restricted data or real clinical performance claim,pass,cumulative-interpretation.md,Synthetic teaching-only boundary explicit
+G22,Adequate defense,pass,technical-defense.md,Twelve reference answers complete
+G23,Explicit Module 04 progression,pass,progression-decision.md,Permitted with conditions

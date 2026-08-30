@@ -1,0 +1,24 @@
+gate_id,gate,status,evidence,reviewer_note
+G01,Accepted FND-1 source version analytic-table fingerprint and conditions,REPLACE,REPLACE,REPLACE
+G02,One-row-per-person 374-row grain,REPLACE,REPLACE,REPLACE
+G03,Prediction time at index stop,REPLACE,REPLACE,REPLACE
+G04,Every source field assigned a role,REPLACE,REPLACE,REPLACE
+G05,Post-index and outcome leakage blocked,REPLACE,REPLACE,REPLACE
+G06,Exact 224 75 and 75 split rows,REPLACE,REPLACE,REPLACE
+G07,Exact 25 7 and 4 positive outcomes,REPLACE,REPLACE,REPLACE
+G08,Test isolated from preprocessing fitting selection and threshold choice,REPLACE,REPLACE,REPLACE
+G09,Training-prevalence baseline retained,REPLACE,REPLACE,REPLACE
+G10,Regression formulas and categorical references declared,REPLACE,REPLACE,REPLACE
+G11,Structural blanks not changed to zero,REPLACE,REPLACE,REPLACE
+G12,Odds risks and probabilities distinguished,REPLACE,REPLACE,REPLACE
+G13,No causal effect claim from associational regression,REPLACE,REPLACE,REPLACE
+G14,Preprocessing and model represented as one reproducible pipeline,REPLACE,REPLACE,REPLACE
+G15,Validation comparison and selection rule recorded before test,REPLACE,REPLACE,REPLACE
+G16,Calibration discrimination threshold confusion prevalence and counts reported,REPLACE,REPLACE,REPLACE
+G17,Subgroup sample and outcome counts reported before metrics,REPLACE,REPLACE,REPLACE
+G18,Leaked critique model rejected,REPLACE,REPLACE,REPLACE
+G19,Four-positive test result visible in every decision summary,REPLACE,REPLACE,REPLACE
+G20,Source transformation reproduction accessibility and AI records complete,REPLACE,REPLACE,REPLACE
+G21,No restricted data or real clinical performance claim,REPLACE,REPLACE,REPLACE
+G22,Adequate defense,REPLACE,REPLACE,REPLACE
+G23,Explicit Module 04 progression,REPLACE,REPLACE,REPLACE

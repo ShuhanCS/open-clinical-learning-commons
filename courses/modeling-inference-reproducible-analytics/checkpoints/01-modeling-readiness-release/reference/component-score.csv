@@ -1,0 +1,11 @@
+criterion_id,component,course_points_available,points_earned,status,evidence
+A01,Module 01,4.00,4.00,pass,modules/01-aims-reproducible-workspace/aim-and-method-plan.md
+A02,Module 01,4.00,4.00,pass,modules/01-aims-reproducible-workspace/feature-role-contract.csv
+A03,Module 01,3.00,3.00,pass,modules/01-aims-reproducible-workspace/outputs/build-report.json
+A04,Module 01,4.00,4.00,pass,modules/01-aims-reproducible-workspace/reproducibility-check.md
+R01,Module 02,4.50,4.50,pass,modules/02-regression-interpretation/formula-registry.csv
+R02,Module 02,5.50,5.50,pass with conditions,modules/02-regression-interpretation/outputs/assumption-register.csv
+P01,Module 03,4.50,4.50,pass,modules/03-prediction-evaluation/outputs/model-selection-record.csv
+P02,Module 03,4.50,4.50,pass with conditions,modules/03-prediction-evaluation/outputs/confusion-table.csv
+P03,Module 03,3.50,3.50,pass with conditions,modules/03-prediction-evaluation/outputs/subgroup-metrics.csv
+H01,Checkpoint 1,2.50,2.50,pass with conditions,technical-defense.md|progression-decision.md

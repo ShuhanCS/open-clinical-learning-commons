@@ -12,9 +12,9 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - Continuing forecast case: the pinned 6,208-row CDC NHSN jurisdiction-week public release
 - Final deliverable: a reproducible model or agent-assisted analytics package with a model card
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 03 are runnable release candidates
+- Module package status: Modules 01 through 03 and Checkpoint 1 are runnable release candidates
 - Course package version: 0.1.0
-- Commons release: 0.41.0
+- Commons release: 0.42.0
 
 ## Seven technical modules
 
@@ -40,6 +40,13 @@ Module 01 preserves the accepted 374-row FND-1 table, assigns all 29 source fiel
 Module 02 fits a conditional linear case on 69 training rows within the 111-row recorded-next-encounter subset and bounded logistic cases on 224 training rows with 25 outcomes. It reports exact formulas, model matrices, classical and HC3 uncertainty, diagnostics, nonlinear and interaction exercises, sparse-cell checks, paired R reading, and a quantity-correct Module 03 handoff.
 
 Module 03 fits all preprocessing inside training, compares the constant baseline, `LOG01`, one bounded random forest, and a deliberately leaked critique model, and applies a frozen validation rule. It selects `ML01`, locks threshold 0.08513264 before test, and reports the untouched 75-row test evidence: 48 true negatives, 23 false positives, 2 false negatives, and 2 true positives. Four test outcomes, subgroup suppression, accessible exact tables, and the teaching-only boundary remain binding.
+
+## Runnable checkpoint
+
+- [Checkpoint 1: Modeling-readiness and prediction-evaluation release](checkpoints/01-modeling-readiness-release/README.md)
+- [Checkpoint 1 durable specification](../../docs/curriculum/courses/FND-2/checkpoints/01-modeling-readiness-release-spec.md)
+
+Checkpoint 1 assembles rather than recomputes Modules 01 through 03. It freezes 72 module artifacts and six controls in a 78-row manifest, preserves the corrected 40-point 15/10/15 map, enforces 23 gates and a 12-question defense, and carries the four-outcome test evidence and teaching-only boundary into Module 04.
 
 ## Three cumulative checkpoints
 

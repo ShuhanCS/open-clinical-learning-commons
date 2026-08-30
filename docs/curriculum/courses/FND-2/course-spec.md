@@ -1185,7 +1185,7 @@ The cumulative release must contain:
 | P01 | Leakage-safe pipeline, resampling, validation comparison, and model lock | 4.50 |
 | P02 | Untouched test discrimination, calibration, threshold, and confusion evidence | 4.50 |
 | P03 | Subgroup counts, uncertainty, failure analysis, access, and use boundary | 3.50 |
-| H01 | Cumulative handoff, defense, reviewer evidence, and progression decision | 1.50 |
+| H01 | Cumulative handoff, defense, reviewer evidence, and progression decision | 2.50 |
 | Total |  | 40.00 |
 
 ### Noncompensable gates
