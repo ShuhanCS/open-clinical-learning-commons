@@ -4,8 +4,8 @@
 
 - Module ID: `oclc-app1-01`.
 - Title: Framing a care-pathway decision.
-- Version: 0.1.0.
-- Commons release target: 0.49.0.
+- Version: 0.2.0.
+- Commons release target: 0.49.1.
 - Course: APP-1, Data for Clinical Care.
 - Instructional week: 1.
 - Learner work: 15.5 hours.
@@ -192,7 +192,7 @@ The module does not imply that its synthetic improvement question is an FDA-regu
 | real patient records | no |
 | teaching purpose | source feasibility, phenotype, longitudinal timing, exposure, outcome, and clinical-record logic |
 
-The module release carries the complete 16-row source-table inventory and an eleven-row feasibility profile. The full source remains downloadable and fingerprinted rather than duplicated in every learner package.
+The module release carries the complete 16-row source-table inventory and a twelve-row feasibility profile. The full source remains downloadable and fingerprinted rather than duplicated in every learner package.
 
 ### Rights
 
@@ -268,26 +268,27 @@ Learners identify six defects:
 
 The class repairs it to:
 
-> Among synthetic adults who remain alive and without an acute return through day 30 after their first qualifying acute-care discharge, how do time to the first acute return from day 31 through day 365 and supporting pathway measures differ between those with and without scheduled follow-up in the first 30 days, and is the evidence sufficient to design a bounded prospective improvement test?
+> Among synthetic adults with no recorded index death, early post-discharge death, or acute return through day 30 after their first qualifying acute-care discharge, how do time to the first acute return from day 31 through day 365 and supporting pathway measures differ between those with and without scheduled follow-up in the first 30 days, and is the evidence sufficient to design a bounded prospective improvement test?
 
 ### Walkthrough calculations
 
 The instructor reads the registered facts in order:
 
 1. 518 adults enter the initial index cohort.
-2. Eight die before or at day 30.
-3. Twenty-five have an acute return before or at day 30.
-4. The conditions are nonoverlapping in this release, leaving 485 landmark-eligible people.
-5. Of those, 129 have scheduled follow-up within 30 days.
-6. Eighty-seven have an acute return from day 31 through day 365.
-7. Twenty-five later outcomes occur in the follow-up group and 62 in the comparator.
-8. The 485 people span 64 index organizations.
+2. Nine have a recorded death date on or before the index discharge date.
+3. Eight die after discharge and through day 30.
+4. Twenty-five have an acute return before or at day 30.
+5. The conditions are nonoverlapping in this release, leaving 476 landmark-eligible people.
+6. Of those, 129 have scheduled follow-up within 30 days.
+7. Eighty-seven have an acute return from day 31 through day 365.
+8. Twenty-five later outcomes occur in the follow-up group and 62 in the comparator.
+9. The 476 people span 64 index organizations.
 
 The walkthrough stops before calculating a crude effect. The point is to decide whether the question, timing, outcomes, and later method plan are coherent.
 
 ### Correct reference interpretation
 
-The pathway is feasible for longitudinal and survival instruction. It is not ready for raw organization ranking. Follow-up exposure is observed after discharge, so the day-30 landmark prevents classifying later follow-up as if known at discharge. Early deaths and returns describe a clinically important group but are outside the landmark comparison and remain visible in the cohort flow. Later Modules must address confounding, support, censoring, and synthetic-source limits.
+The pathway is feasible for longitudinal and survival instruction. It is not ready for raw organization ranking. Follow-up exposure is observed after discharge, so the day-30 landmark prevents classifying later follow-up as if known at discharge. Index deaths, early post-discharge deaths, and returns describe clinically important groups but are outside the landmark comparison and remain visible in the cohort flow. Later Modules must address confounding, support, censoring, and synthetic-source limits.
 
 ## 11. Guided practice
 
@@ -328,7 +329,7 @@ Required independent decisions:
 6. map at least six pathway states;
 7. set distinct evidence standards for continuing analysis, prospective testing, and implementation;
 8. name at least six stakeholder roles and one affected-person role;
-9. interpret all eleven feasibility rows;
+9. interpret all twelve feasibility rows;
 10. record at least three feasible improvement options;
 11. state at least six prohibited claims or uses;
 12. record stop and referral triggers;
@@ -486,8 +487,8 @@ At least one material agent-assisted claim, or an explicit no-material-use state
 - Next action: decide whether to build the cohort and design a bounded prospective improvement test.
 - Initial population: 518 synthetic adults at their first qualifying emergency or inpatient encounter from 2010-01-01 through 2019-03-31.
 - Origin: qualifying encounter discharge stop.
-- Early branches: 8 deaths and 25 acute returns before or at day 30.
-- Landmark population: 485 alive and without an acute return through day 30.
+- Early branches: 9 index deaths, 8 early post-discharge deaths, and 25 acute returns before or at day 30.
+- Landmark population: 476 people with no index death, early post-discharge death, or acute return through day 30.
 - Exposure: at least one ambulatory, outpatient, or wellness encounter after discharge and through day 30.
 - Comparator: no such scheduled encounter in that window.
 - Primary outcome: first emergency or inpatient return after day 30 and through day 365.
@@ -500,7 +501,7 @@ At least one material agent-assisted claim, or an explicit no-material-use state
 
 1. Module 02 must reproduce full-source counts.
 2. Module 02 must create and register the six-site teaching extension.
-3. Early death and acute return remain visible in the cohort flow.
+3. Index death, early post-discharge death, and acute return remain visible in the cohort flow.
 4. Follow-up exposure is assigned only at the day-30 landmark.
 5. Later models adjust only baseline or otherwise valid fields.
 6. Patient-important, access, and balancing measures remain explicit gaps until source or synthetic-extension support is defined.
@@ -521,8 +522,8 @@ The release must provide:
 - exact source archive, course document, table, row, and byte identities;
 - 16 ordered source-table rows totaling 471,836 rows and 82,293,440 bytes;
 - exact encounter, patient, organization, medication, procedure, and observation table facts;
-- eleven ordered source-feasibility rows;
-- exact 518/8/25/485/129/87/25/62/64 pathway facts;
+- twelve ordered source-feasibility rows;
+- exact 518/9/8/25/476/129/87/25/62/64 pathway facts;
 - a controlled `not ready` raw-site comparison result;
 - a portable standard-library source profiler;
 - a profiler self-check using a synthetic miniature SQLite fixture;
@@ -539,10 +540,10 @@ The release must provide:
 
 The frozen reference release has:
 
-- 131 complete-reference checks;
+- 132 complete-reference checks;
 - 95 learner-starter checks;
 - 1,063 manifest bytes; and
-- manifest SHA-256 `d89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a`.
+- manifest SHA-256 `4f57b0bbf3e510967c5e42691eee990ce523974b7f6ea877f15f46903aa8c147`.
 
 Two independently assembled reference packages produce the same manifest. The profiler, builder, validator, existing-target refusal, changed-source rejection, missing-pathway-state rejection, invalid-score rejection, and invalid-progression rejection all pass.
 
@@ -550,8 +551,8 @@ Two independently assembled reference packages produce the same manifest. The pr
 
 ### Release decision
 
-- Module version: 0.1.0.
-- Commons release target: 0.49.0.
+- Module version: 0.2.0.
+- Commons release target: 0.49.1.
 - Reference progression: `continue with conditions`.
 - Module 02 permission: `permitted for curriculum construction`.
 - Clinical use: prohibited.

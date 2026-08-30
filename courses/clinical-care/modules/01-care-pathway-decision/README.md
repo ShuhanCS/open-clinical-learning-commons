@@ -2,7 +2,7 @@
 
 This module turns a broad post-acute follow-up idea into a complete clinical decision contract before any new cohort or model is built.
 
-The reference case uses the full pinned 16-table, 471,836-row Synthea release to decide whether a 30-day scheduled follow-up pathway is measurable. The fixed feasibility profile has 518 initial synthetic adults, 8 early deaths, 25 early acute returns, 485 day-30 landmark-eligible people, 129 with scheduled follow-up, and 87 later acute returns. Sixty-four sparse source organizations make raw site ranking inappropriate.
+The reference case uses the full pinned 16-table, 471,836-row Synthea release to decide whether a 30-day scheduled follow-up pathway is measurable. The fixed feasibility profile has 518 initial synthetic adults, 9 index deaths, 8 early post-discharge deaths, 25 early acute returns, 476 day-30 landmark-eligible people, 129 with scheduled follow-up, and 87 later acute returns. Sixty-four sparse source organizations make raw site ranking inappropriate.
 
 No real patient data are used. The package supports technical education and prospective-test design only.
 
@@ -30,7 +30,7 @@ First build the full pinned database with the accepted FND-1 Module 02 builder. 
 python profile_source.py <synthea-sqlite-path> --output <new-output.csv>
 ```
 
-The profiler reads the database and writes only the aggregate eleven-row feasibility record. It never changes the database.
+The profiler reads the database and writes only the aggregate twelve-row feasibility record. It never changes the database.
 
 ## Durable specification
 

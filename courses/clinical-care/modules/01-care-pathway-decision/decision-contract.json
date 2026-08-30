@@ -3,8 +3,8 @@
   "module": {
     "id": "oclc-app1-01",
     "title": "Framing a care-pathway decision",
-    "version": "0.1.0",
-    "commons_release": "0.49.0",
+    "version": "0.2.0",
+    "commons_release": "0.49.1",
     "course": "APP-1: Data for Clinical Care",
     "week": 1,
     "hours": 15.5
@@ -41,9 +41,10 @@
   },
   "fixed_evidence": {
     "initial_index_cohort": 518,
+    "index_deaths": 9,
     "early_deaths": 8,
     "early_acute_returns": 25,
-    "landmark_eligible": 485,
+    "landmark_eligible": 476,
     "scheduled_followup": 129,
     "later_acute_returns": 87,
     "exposed_later_acute_returns": 25,

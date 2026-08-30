@@ -9,8 +9,8 @@
 
 | Condition ID | Condition | Owner | Due point | Evidence required | Escalation trigger | Status |
 |---|---|---|---|---|---|---|
-| C01 | Reproduce all full-source counts | Module 02 data owner | before phenotype acceptance | complete source build and exact F01 through F11 comparison | any fingerprint or count differs | open |
-| C02 | Keep early death and acute return visible | clinical phenotype reviewer | Module 02 cohort flow | initial and landmark flow with conserved counts | early event is deleted or coded as no event | open |
+| C01 | Reproduce all full-source counts | Module 02 data owner | before phenotype acceptance | complete source build and exact F01 through F12 comparison | any fingerprint or count differs | open |
+| C02 | Keep index death early death and acute return visible | clinical phenotype reviewer | Module 02 cohort flow | initial and landmark flow with conserved counts | death or early event is deleted or coded as no event | open |
 | C03 | Assign follow-up only at day-30 landmark | biostatistical methods reviewer | before survival analysis | exposure timing test and landmark contract | exposure is treated as known at discharge | open |
 | C04 | Build and register deterministic six-site extension | Module 02 synthetic-data owner | before site comparison | generator seed dictionary known-truth record and validation | raw 64-organization ranking is attempted | open |
 | C05 | Preserve patient-important access and balancing gaps | patient and improvement reviewers | before Week 6 | outcome additions source status and measurement plan | encounter occurrence is treated as patient benefit | open |

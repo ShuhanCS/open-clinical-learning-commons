@@ -1,18 +1,19 @@
 # Source feasibility interpretation
 
-## F01 through F11
+## F01 through F12
 
 - F01 source synthetic people: REPLACE
 - F02 initial adult index cohort: REPLACE
-- F03 early deaths: REPLACE
-- F04 early acute returns: REPLACE
-- F05 day-30 landmark eligible: REPLACE
-- F06 scheduled follow-up: REPLACE
-- F07 later acute returns: REPLACE
-- F08 exposed later acute returns: REPLACE
-- F09 unexposed later acute returns: REPLACE
-- F10 distinct index organizations: REPLACE
-- F11 raw site comparison readiness: REPLACE
+- F03 index deaths: REPLACE
+- F04 early post-discharge deaths: REPLACE
+- F05 early acute returns: REPLACE
+- F06 day-30 landmark eligible: REPLACE
+- F07 scheduled follow-up: REPLACE
+- F08 later acute returns: REPLACE
+- F09 exposed later acute returns: REPLACE
+- F10 unexposed later acute returns: REPLACE
+- F11 distinct index organizations: REPLACE
+- F12 raw site comparison readiness: REPLACE
 
 ## Feasibility conclusion
 

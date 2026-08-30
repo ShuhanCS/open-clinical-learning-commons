@@ -9,7 +9,7 @@ APP-1 is the first domain-specific applied course. Learners use a continuing syn
 - Core tools: SQL and Python
 - Final deliverable: clinical care improvement brief with reproducible evidence and a defense
 - Course package version: 0.1.0
-- Commons release: 0.49.0
+- Commons release: 0.49.1
 - Current package status: Module 01 is a runnable release candidate
 
 ## Seven applied modules
@@ -29,7 +29,7 @@ Module 06 contains eight hours of cumulative application and equity work plus an
 - [Module 01: Framing a care-pathway decision](modules/01-care-pathway-decision/README.md)
 - [Module 01 durable specification](../../docs/curriculum/courses/APP-1/modules/01-care-pathway-decision-spec.md)
 
-Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 8 early deaths and 25 early acute returns, and defines a 485-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
+Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns, and defines a 476-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
 
 The 19-file learner workspace contains nine frozen source and contract records, nine editable decision records, and one deterministic release manifest. The standard-library profiler, builder, and validator reproduce exact evidence and reject changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records.
 

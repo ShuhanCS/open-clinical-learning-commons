@@ -1,6 +1,6 @@
 # Curriculum build ledger
 
-- Current release: 0.49.0
+- Current release: 0.49.1
 - Last updated: 2026-08-30
 - Active phase: applied-course build
 - Last completed unit: APP-1 Module 01, framing a care-pathway decision
@@ -281,14 +281,15 @@
 - Complete reference validation passes 947 checks and learner-starter validation passes 901. Existing targets, incomplete records, changed candidate bytes, overscoring, failed gates, early tags, and inconsistent decisions are rejected.
 - The reference package disposition is `accept with conditions`; the separate model-use recommendation is `teaching use only`. The annotated tag `fnd2-governed-candidate-v0.1.0` remains proposed and uncreated pending named human acceptance of the exact reviewed commit.
 - All seven FND-2 modules and all three cumulative checkpoints are runnable release candidates. FND-2 technical construction is complete at Commons 0.48.0.
-- APP-1 Module 01 version 0.1.0 profiles the complete pinned 16-table, 471,836-row, 82,293,440-byte Synthea April 2020 release containing 1,171 synthetic people.
+- APP-1 Module 01 version 0.2.0 profiles the complete pinned 16-table, 471,836-row, 82,293,440-byte Synthea April 2020 release containing 1,171 synthetic people.
 - The reference decision asks whether a hospital medicine care-improvement council should design and prospectively evaluate a pathway that increases scheduled follow-up within 30 days after an adult's first qualifying acute-care discharge.
-- The full-source cohort has 518 initial synthetic adults, 8 early deaths, 25 early acute returns, 485 day-30 landmark-eligible people, 129 people with scheduled follow-up, and 87 later acute returns. The later outcomes divide into 25 exposed and 62 unexposed events.
+- The full-source cohort has 518 initial synthetic adults, 9 index deaths, 8 early post-discharge deaths, 25 early acute returns, 476 day-30 landmark-eligible people, 129 people with scheduled follow-up, and 87 later acute returns. The later outcomes divide into 25 exposed and 62 unexposed events.
+- Module 02 source-timing audit found that Synthea death is date-granular while encounter discharge is timestamped. Nine people with death dates on or before index discharge had entered the prior 485-person landmark. Version 0.2.0 makes that branch explicit and corrects the landmark denominator to 476 before survival work.
 - Sixty-four distinct index organizations are too sparse for raw site ranking. The controlled readiness result is `not ready`, and Module 02 owns the exact deterministic six-site teaching extension.
-- The package assembles 9 immutable records, 9 editable records, and one release manifest into 19 files. The manifest is 1,063 bytes with SHA-256 `d89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a`.
-- The standard-library profiler, builder, and validator self-checks pass. Complete reference validation passes 131 checks and learner-starter validation passes 95 checks. Existing targets, changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records are rejected.
+- The package assembles 9 immutable records, 9 editable records, and one release manifest into 19 files. The corrected manifest is 1,063 bytes with SHA-256 `4f57b0bbf3e510967c5e42691eee990ce523974b7f6ea877f15f46903aa8c147`.
+- The standard-library profiler, builder, and validator self-checks pass. Complete reference validation passes 132 checks and learner-starter validation passes 95 checks. Existing targets, changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records are rejected.
 - The reference progression is `continue with conditions`; Module 02 is permitted for curriculum construction. Clinical use and real-patient, causal, efficacy, fairness, prevalence, and site-ranking claims remain prohibited.
-- APP-1 Module 01 is a runnable release candidate at Commons 0.49.0.
+- APP-1 Module 01 is a runnable release candidate at Commons 0.49.1.
 
 ## Pending confirmation
 
@@ -299,7 +300,7 @@
 
 1. Read the APP-1 course specification, Module 01 specification and release, source record, two foundation handoffs, and this ledger.
 2. Write the durable APP-1 Module 02 specification before broad implementation.
-3. Reproduce the full-source 518/8/25/485 cohort flow and the 129/87/25/62 exposure and outcome facts from the accepted Synthea database.
+3. Reproduce the full-source 518/9/8/25/476 cohort flow and the 129/87/25/62 exposure and outcome facts from the accepted Synthea database.
 4. Define the longitudinal phenotype, index encounter, lookback, day-30 landmark, time at risk, follow-up, censoring, early-event branches, and survival-analysis handoff exactly.
 5. Create and register the deterministic six-site synthetic teaching extension with a fixed seed, known truths, transformation record, checks, and a clear boundary from source observations.
 6. Keep source and extension columns distinguishable and preserve the source archive, table inventory, feasibility profile, and Module 01 manifest fingerprints.

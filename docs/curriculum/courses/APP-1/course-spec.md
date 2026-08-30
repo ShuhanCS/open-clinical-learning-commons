@@ -13,7 +13,7 @@
 - R role: read, run, and interpret published survival and risk-adjustment code; writing R from scratch is not graded.
 - Final deliverable: clinical care improvement brief with complete reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Initial Commons release target: 0.49.0 for Module 01.
+- Current Commons release: 0.49.1 for corrected Module 01.
 - Specification status: construction candidate.
 
 APP-1 is the first applied course. Learners follow a clinical cohort over time, compare care and outcomes while accounting for baseline differences, and recommend a feasible care-pathway improvement. The course takes longitudinal cohorts, censoring, survival analysis, risk adjustment, and clinical variation from foundation recognition to working skill.
@@ -191,7 +191,7 @@ The initial feasibility rule uses:
 - first emergency or inpatient encounter for an adult from 2010-01-01 through 2019-03-31;
 - discharge stop as the initial pathway origin;
 - scheduled ambulatory, outpatient, or wellness follow-up within 30 elapsed days;
-- exclusion from the landmark analysis after death or an acute return in the first 30 days;
+- exclusion from the landmark analysis after a recorded index death, early post-discharge death, or acute return in the first 30 days;
 - day 30 after discharge as landmark time zero; and
 - first emergency or inpatient return from day 31 through day 365 as the primary time-to-event outcome.
 
@@ -200,9 +200,10 @@ The complete source produces:
 | Feasibility item | Count |
 |---|---:|
 | initial adult index cohort | 518 |
-| death before or at day 30 | 8 |
+| recorded death on or before index discharge | 9 |
+| early post-discharge death through day 30 | 8 |
 | acute return before or at day 30 | 25 |
-| day-30 landmark eligible | 485 |
+| day-30 landmark eligible | 476 |
 | scheduled follow-up within 30 days | 129 |
 | acute return from day 31 through day 365 | 87 |
 | outcomes among follow-up exposed | 25 |

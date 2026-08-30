@@ -9,14 +9,14 @@
 - Exposure: `at least one ambulatory, outpatient, or wellness encounter after discharge and through day 30`
 - Comparator: `no scheduled encounter in the exposure window`
 - Exposure window: `open after discharge and closed at day 30`
-- Landmark: `day 30 after discharge among people alive and without an early acute return`
-- Landmark exclusions: `death or emergency/inpatient return after discharge and through day 30`
+- Landmark: `day 30 after discharge among people with no index death, early post-discharge death, or early acute return`
+- Landmark exclusions: `recorded death date on or before index discharge, death after discharge through day 30, or emergency/inpatient return after discharge through day 30`
 - Primary outcome: `time from day-30 landmark to first emergency or inpatient return`
 - Outcome window: `open after day 30 and closed at day 365 after discharge`
 - Analysis aim: `describe and compare time-to-event evidence to judge feasibility for a prospective improvement test`
 - Evidence standard: `validated cohort, defensible landmark, sufficient support, transparent adjustment, uncertainty, patient and access review, and no unsupported causal claim`
 - Feasibility conclusion: `longitudinal and survival teaching case is feasible with conditions`
-- Raw site comparison: `not ready because 485 landmark-eligible people span 64 sparse source organizations`
+- Raw site comparison: `not ready because 476 landmark-eligible people span 64 sparse source organizations`
 - Patient-important evidence gap: `the source does not directly capture follow-up burden, experience, trust, or whether the appointment met patient needs`
 - Claim boundary: `synthetic observational evidence supports method instruction and prospective-test design only, not efficacy, causation, or real performance; it does not authorize implementation`
 - Stop or referral trigger: `changed source identity, wrong time zero, early-event deletion, restricted data, inadequate support, inaccessible evidence, or proposed clinical action`

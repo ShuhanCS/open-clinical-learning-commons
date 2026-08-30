@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.49.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.49.1'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -933,7 +933,7 @@ if (
     $app1Content -notmatch '35 points' -or
     $app1Content -notmatch 'eight-hour machine-learning extension' -or
     $app1Content -notmatch 'Joe Joseph, MD' -or
-    $app1PackageContent -notmatch 'Commons release: 0\.49\.0' -or
+    $app1PackageContent -notmatch 'Commons release: 0\.49\.1' -or
     $app1PackageContent -notmatch 'Module 01 is a runnable release candidate'
 ) {
     throw 'APP-1 is missing its source, version, workload, checkpoint, machine-learning, leadership, or plain-ASCII contract.'
@@ -969,10 +969,10 @@ if (
     $app1Module01Sections -ne 21 -or
     $app1Module01Content -match '[—–]' -or
     $app1Module01Content -match '(?im)[A-Z]:\\Users\\' -or
-    $app1Module01Content -notmatch 'Commons release target: 0\.49\.0' -or
-    $app1Module01Content -notmatch '131 complete-reference checks' -or
+    $app1Module01Content -notmatch 'Commons release target: 0\.49\.1' -or
+    $app1Module01Content -notmatch '132 complete-reference checks' -or
     $app1Module01Content -notmatch '95 learner-starter checks' -or
-    $app1Module01Content -notmatch 'd89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a'
+    $app1Module01Content -notmatch '4f57b0bbf3e510967c5e42691eee990ce523974b7f6ea877f15f46903aa8c147'
 ) {
     throw 'APP-1 Module 01 must define 21 plain-ASCII sections with the exact release, validation, and manifest contract.'
 }
@@ -983,16 +983,17 @@ $app1Inventory = @(Import-Csv -LiteralPath $app1InventoryPath)
 $app1Feasibility = @(Import-Csv -LiteralPath $app1FeasibilityPath)
 if (
     $app1Module01Release.module.id -ne 'oclc-app1-01' -or
-    $app1Module01Release.module.version -ne '0.1.0' -or
-    $app1Module01Release.module.commons_release -ne '0.49.0' -or
+    $app1Module01Release.module.version -ne '0.2.0' -or
+    $app1Module01Release.module.commons_release -ne '0.49.1' -or
     $app1Module01Release.module.hours -ne 15.5 -or
     $app1Module01Release.source.tables -ne 16 -or
     $app1Module01Release.source.rows -ne 471836 -or
     $app1Module01Release.source.uncompressed_bytes -ne 82293440 -or
     $app1Module01Release.fixed_evidence.initial_index_cohort -ne 518 -or
+    $app1Module01Release.fixed_evidence.index_deaths -ne 9 -or
     $app1Module01Release.fixed_evidence.early_deaths -ne 8 -or
     $app1Module01Release.fixed_evidence.early_acute_returns -ne 25 -or
-    $app1Module01Release.fixed_evidence.landmark_eligible -ne 485 -or
+    $app1Module01Release.fixed_evidence.landmark_eligible -ne 476 -or
     $app1Module01Release.fixed_evidence.scheduled_followup -ne 129 -or
     $app1Module01Release.fixed_evidence.later_acute_returns -ne 87 -or
     $app1Module01Release.fixed_evidence.exposed_later_acute_returns -ne 25 -or
@@ -1003,21 +1004,21 @@ if (
     $app1Module01Release.package.editable_records -ne 9 -or
     $app1Module01Release.package.assembled_files -ne 19 -or
     $app1Module01Release.package.manifest_bytes -ne 1063 -or
-    $app1Module01Release.package.manifest_sha256 -ne 'd89d411701a2e72ab108b725dea467f807b45de91e3c7d7d1395f3416e53460a' -or
-    $app1Module01Release.validation.complete_reference_checks -ne 131 -or
+    $app1Module01Release.package.manifest_sha256 -ne '4f57b0bbf3e510967c5e42691eee990ce523974b7f6ea877f15f46903aa8c147' -or
+    $app1Module01Release.validation.complete_reference_checks -ne 132 -or
     $app1Module01Release.validation.starter_checks -ne 95 -or
     $app1Module01Release.progression.reference -ne 'continue with conditions' -or
     $app1Module01Release.progression.module02_permission -ne 'permitted for curriculum construction' -or
     $app1Inventory.Count -ne 16 -or
     (($app1Inventory | Measure-Object -Property source_rows -Sum).Sum) -ne 471836 -or
     (($app1Inventory | Measure-Object -Property source_bytes -Sum).Sum) -ne 82293440 -or
-    $app1Feasibility.Count -ne 11 -or
+    $app1Feasibility.Count -ne 12 -or
     (Get-Item -LiteralPath $app1InventoryPath).Length -ne 1842 -or
     (Get-FileHash -Algorithm SHA256 -LiteralPath $app1InventoryPath).Hash.ToLowerInvariant() -ne '15efc286e19c1c6640775770be8993fadc684656262e852c599356751ab922bd' -or
-    (Get-Item -LiteralPath $app1FeasibilityPath).Length -ne 1498 -or
-    (Get-FileHash -Algorithm SHA256 -LiteralPath $app1FeasibilityPath).Hash.ToLowerInvariant() -ne 'e01bccc43cde605c47ecb6883839570d9c8d53d1b2a5e05ab17b0c795af44863'
+    (Get-Item -LiteralPath $app1FeasibilityPath).Length -ne 1658 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $app1FeasibilityPath).Hash.ToLowerInvariant() -ne '8b04bb0f1bc258d8eefae2e04a934f7408baed02a62574c281f8f8513bda5a65'
 ) {
-    throw 'APP-1 Module 01 release metadata or frozen source evidence does not match the 0.1.0 care-pathway decision contract.'
+    throw 'APP-1 Module 01 release metadata or frozen source evidence does not match the 0.2.0 care-pathway decision contract.'
 }
 & python (Join-Path $app1Module01Root 'profile_source.py') --self-check
 if ($LASTEXITCODE -ne 0) {

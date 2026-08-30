@@ -9,9 +9,10 @@ Do not calculate or reward a crude follow-up effect in Module 01. The exposure i
 ## Reference counts
 
 - Initial adult index cohort: 518.
-- Early death: 8.
+- Index death: 9.
+- Early post-discharge death: 8.
 - Early acute return: 25.
-- Day-30 landmark eligible: 485.
+- Day-30 landmark eligible: 476.
 - Scheduled follow-up: 129.
 - Later acute return: 87.
 - Later outcomes by exposure: 25/62.

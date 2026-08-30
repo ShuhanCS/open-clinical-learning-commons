@@ -15,7 +15,7 @@ Passing requires at least 16 points and all 12 gates:
 
 1. exact source course and Synthea fingerprints;
 2. exact 16-table source inventory and totals;
-3. exact 518/8/25/485 cohort flow;
+3. exact 518/9/8/25/476 cohort flow;
 4. exact 129/87/25/62 exposure and outcome facts;
 5. 64 source organizations and `not ready` raw site comparison;
 6. discharge, exposure window, landmark, and outcome window are distinct;

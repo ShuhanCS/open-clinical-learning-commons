@@ -1,7 +1,7 @@
 schema_version: 1.0.0
 source_id: app1-synthea-care-pathway-feasibility
 title: APP-1 complete-source care-pathway feasibility release
-version: 0.1.0
+version: 0.2.0
 verified: 2026-08-30
 publisher: The MITRE Corporation / Synthea
 source_type: public synthetic longitudinal EHR-style CSV release
@@ -30,3 +30,8 @@ prohibited_interpretation:
   - real facility ranking
   - implementation permission
 change_policy: A changed source byte or pathway rule requires a new source profile, module version decision, and renewed review.
+correction:
+  date: 2026-08-30
+  reason: Synthea death is date-granular while encounter discharge is timestamped
+  rule: a death date on or before the index discharge date is an index death and cannot enter the day-30 landmark
+  effect: nine index deaths are now visible and the landmark denominator changes from 485 to 476

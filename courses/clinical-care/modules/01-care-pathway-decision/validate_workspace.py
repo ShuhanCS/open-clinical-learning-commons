@@ -31,9 +31,9 @@ EXPECTED_TABLES = (
     "payer_transitions", "payers", "procedures", "providers", "supplies",
 )
 EXPECTED_FEASIBILITY = {
-    "F01": "1171", "F02": "518", "F03": "8", "F04": "25", "F05": "485",
-    "F06": "129", "F07": "87", "F08": "25", "F09": "62", "F10": "64",
-    "F11": "not ready",
+    "F01": "1171", "F02": "518", "F03": "9", "F04": "8", "F05": "25",
+    "F06": "476", "F07": "129", "F08": "87", "F09": "25", "F10": "62",
+    "F11": "64", "F12": "not ready",
 }
 ALLOWED_PROGRESSION = {"continue", "continue with conditions", "revise", "refer"}
 
@@ -73,10 +73,10 @@ def validate(root: Path, starter: bool = False) -> dict[str, object]:
     require(root.is_dir(), "Workspace directory exists")
     actual_files = {path.relative_to(root).as_posix() for path in root.rglob("*") if path.is_file()}
     require(actual_files == expected_files and len(actual_files) == 19, "Workspace has exactly 19 expected files")
-    require((root / "VERSION").read_text(encoding="utf-8").strip() == "0.1.0", "Module version is 0.1.0")
+    require((root / "VERSION").read_text(encoding="utf-8").strip() == "0.2.0", "Module version is 0.2.0")
 
     contract = json.loads((root / "decision-contract.json").read_text(encoding="utf-8"))
-    require(contract["module"]["id"] == "oclc-app1-01" and contract["module"]["commons_release"] == "0.49.0", "Module identity matches")
+    require(contract["module"]["id"] == "oclc-app1-01" and contract["module"]["commons_release"] == "0.49.1", "Module identity matches")
     require(contract["module"]["hours"] == 15.5 and contract["package"] == {"immutable_manifest_rows": 9, "editable_records": 9, "assembled_files": 19}, "Workload and package contract match")
     require(contract["assessment"] == {"readiness_points": 20, "minimum_points": 16, "criteria": 5, "noncompensable_gates": 12, "course_points_awarded_here": 0}, "Readiness assessment contract matches")
 
@@ -105,12 +105,12 @@ def validate(root: Path, starter: bool = False) -> dict[str, object]:
 
     feasibility_header, feasibility = read_csv(root / "data/source-feasibility.csv")
     require(feasibility_header == ["metric_id", "metric", "value", "unit", "rule", "decision_use"], "Feasibility header matches")
-    require([row["metric_id"] for row in feasibility] == [f"F{index:02d}" for index in range(1, 12)], "Feasibility has eleven ordered facts")
+    require([row["metric_id"] for row in feasibility] == [f"F{index:02d}" for index in range(1, 13)], "Feasibility has twelve ordered facts")
     values = {row["metric_id"]: row["value"] for row in feasibility}
     require(values == EXPECTED_FEASIBILITY, "Feasibility values match the pinned full source")
-    require(int(values["F02"]) - int(values["F03"]) - int(values["F04"]) == int(values["F05"]), "Initial and landmark cohort counts reconcile")
-    require(int(values["F08"]) + int(values["F09"]) == int(values["F07"]), "Later outcome counts reconcile")
-    require(values["F10"] == "64" and values["F11"] == "not ready", "Raw site comparison remains not ready")
+    require(int(values["F02"]) - int(values["F03"]) - int(values["F04"]) - int(values["F05"]) == int(values["F06"]), "Initial and landmark cohort counts reconcile")
+    require(int(values["F09"]) + int(values["F10"]) == int(values["F08"]), "Later outcome counts reconcile")
+    require(values["F11"] == "64" and values["F12"] == "not ready", "Raw site comparison remains not ready")
 
     for relative in RECORD_FILES:
         text = (root / relative).read_text(encoding="utf-8")
@@ -150,9 +150,9 @@ def validate(root: Path, starter: bool = False) -> dict[str, object]:
             require(phrase in lower, f"Decision charter includes: {phrase}")
 
     interpretation = (root / "source-feasibility-interpretation.md").read_text(encoding="utf-8").lower()
-    require(all(f"f{index:02d}" in interpretation for index in range(1, 12)), "Feasibility interpretation covers F01 through F11")
+    require(all(f"f{index:02d}" in interpretation for index in range(1, 13)), "Feasibility interpretation covers F01 through F12")
     if not starter:
-        for phrase in ("518", "eight", "twenty-five", "485", "129", "87", "64", "immortal-time", "do not estimate"):
+        for phrase in ("518", "nine", "eight", "twenty-five", "476", "129", "87", "64", "immortal-time", "do not estimate"):
             require(phrase in interpretation, f"Feasibility interpretation includes: {phrase}")
 
     ai_use = (root / "ai-use.md").read_text(encoding="utf-8")
@@ -202,7 +202,7 @@ def self_check() -> None:
         broken_source = base / "broken-source"
         shutil.copytree(reference, broken_source)
         path = broken_source / "data/source-feasibility.csv"
-        path.write_text(path.read_text(encoding="utf-8").replace("F05,day-30 landmark eligible,485", "F05,day-30 landmark eligible,486"), encoding="utf-8", newline="\n")
+        path.write_text(path.read_text(encoding="utf-8").replace("F06,day-30 landmark eligible,476", "F06,day-30 landmark eligible,477"), encoding="utf-8", newline="\n")
         cases.append((broken_source, "Manifest SHA-256 matches"))
         missing_path = base / "missing-path"
         shutil.copytree(reference, missing_path)

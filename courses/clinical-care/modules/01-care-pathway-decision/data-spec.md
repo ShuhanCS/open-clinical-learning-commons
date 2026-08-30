@@ -17,12 +17,13 @@ The module uses the complete pinned Synthea April 2020 CSV release already accep
 
 1. Select each synthetic adult's first emergency or inpatient encounter starting on or after 2010-01-01 and before 2019-04-01.
 2. Use encounter stop as discharge origin.
-3. Count death or an emergency/inpatient return after discharge and through day 30 as an early branch.
-4. At day 30, include people alive and without an early acute return.
-5. Classify scheduled follow-up when an ambulatory, outpatient, or wellness encounter occurs after discharge and through day 30.
-6. Follow landmark-eligible people for the first emergency or inpatient return after day 30 and through day 365.
+3. Keep a recorded death date on or before discharge as an index-death branch.
+4. Count death after the discharge date or an emergency/inpatient return after discharge and through day 30 as an early branch.
+5. At day 30, include people with no index death, early death, or early acute return.
+6. Classify scheduled follow-up when an ambulatory, outpatient, or wellness encounter occurs after discharge and through day 30.
+7. Follow landmark-eligible people for the first emergency or inpatient return after day 30 and through day 365.
 
-The fixed profile is 518 initial people, 8 early deaths, 25 early acute returns, 485 landmark-eligible people, 129 with scheduled follow-up, and 87 later acute returns. Later outcomes split 25/62 between exposed and unexposed groups. The landmark population spans 64 index organizations.
+The fixed profile is 518 initial people, 9 index deaths, 8 early post-discharge deaths, 25 early acute returns, 476 landmark-eligible people, 129 with scheduled follow-up, and 87 later acute returns. Later outcomes split 25/62 between exposed and unexposed groups. The landmark population spans 64 index organizations.
 
 ## Module boundary
 

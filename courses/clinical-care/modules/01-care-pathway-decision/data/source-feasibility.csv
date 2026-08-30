@@ -1,12 +1,13 @@
 metric_id,metric,value,unit,rule,decision_use
 F01,source synthetic people,1171,people,all rows in patients,confirms full source population
 F02,initial adult index cohort,518,people,first emergency or inpatient encounter age 18 or older from 2010-01-01 through 2019-03-31,defines pathway entry
-F03,early deaths,8,people,death after discharge and through day 30,remains visible and is excluded from landmark
-F04,early acute returns,25,people,emergency or inpatient return after discharge and through day 30,remains visible and is excluded from landmark
-F05,day-30 landmark eligible,485,people,alive and without an early acute return through day 30,defines comparison risk set
-F06,scheduled follow-up,129,people,ambulatory outpatient or wellness encounter after discharge and through day 30,defines exposure at landmark
-F07,later acute returns,87,events,first emergency or inpatient return after day 30 and through day 365,primary time-to-event outcome count
-F08,exposed later acute returns,25,events,later acute return among scheduled follow-up group,requires later adjusted comparison
-F09,unexposed later acute returns,62,events,later acute return among no-scheduled-follow-up group,requires later adjusted comparison
-F10,distinct index organizations,64,organizations,organizations among landmark-eligible people,too sparse for raw organization ranking
-F11,raw site comparison readiness,not ready,status,64 sparse source organizations,requires deterministic six-site teaching extension in Module 02
+F03,index deaths,9,people,recorded death date on or before index discharge date,remains visible and is excluded from landmark
+F04,early post-discharge deaths,8,people,death date after discharge date and through day 30,remains visible and is excluded from landmark
+F05,early acute returns,25,people,emergency or inpatient return after discharge and through day 30,remains visible and is excluded from landmark
+F06,day-30 landmark eligible,476,people,no index death early death or early acute return through day 30,defines comparison risk set
+F07,scheduled follow-up,129,people,ambulatory outpatient or wellness encounter after discharge and through day 30,defines exposure at landmark
+F08,later acute returns,87,events,first emergency or inpatient return after day 30 and through day 365,primary time-to-event outcome count
+F09,exposed later acute returns,25,events,later acute return among scheduled follow-up group,requires later adjusted comparison
+F10,unexposed later acute returns,62,events,later acute return among no-scheduled-follow-up group,requires later adjusted comparison
+F11,distinct index organizations,64,organizations,organizations among landmark-eligible people,too sparse for raw organization ranking
+F12,raw site comparison readiness,not ready,status,64 sparse source organizations,requires deterministic six-site teaching extension in Module 02
