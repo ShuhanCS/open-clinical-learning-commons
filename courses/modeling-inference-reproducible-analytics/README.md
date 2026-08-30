@@ -12,9 +12,9 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - Continuing forecast case: the pinned 6,208-row CDC NHSN jurisdiction-week public release
 - Final deliverable: a reproducible model or agent-assisted analytics package with a model card
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 06 and Checkpoint 1 are runnable release candidates
+- Module package status: Modules 01 through 06 and Checkpoints 1 and 2 are runnable release candidates
 - Course package version: 0.1.0
-- Commons release: 0.45.0
+- Commons release: 0.46.0
 
 ## Seven technical modules
 
@@ -57,8 +57,12 @@ Module 06 preserves 13 accepted artifacts from Modules 03 through 05 and checks 
 
 - [Checkpoint 1: Modeling-readiness and prediction-evaluation release](checkpoints/01-modeling-readiness-release/README.md)
 - [Checkpoint 1 durable specification](../../docs/curriculum/courses/FND-2/checkpoints/01-modeling-readiness-release-spec.md)
+- [Checkpoint 2: Validity, forecast, testing, and agent-accountability release](checkpoints/02-validity-forecast-testing-release/README.md)
+- [Checkpoint 2 durable specification](../../docs/curriculum/courses/FND-2/checkpoints/02-validity-forecast-testing-release-spec.md)
 
 Checkpoint 1 assembles rather than recomputes Modules 01 through 03. It freezes 72 module artifacts and six controls in a 78-row manifest, preserves the corrected 40-point 15/10/15 map, enforces 23 gates and a 12-question defense, and carries the four-outcome test evidence and teaching-only boundary into Module 04.
+
+Checkpoint 2 preserves the accepted Week 3 identity, adds complete validity, public CDC forecast, and agent-accountability evidence, and carries both public data files in full. It freezes 111 upstream artifacts and six controls in a 117-row manifest, preserves the 15-point Module 04 and 10-point Module 05 map, enforces 25 gates and a 12-question defense, and makes human sign-off scope plus Module 07 permission explicit.
 
 ## Three cumulative checkpoints
 

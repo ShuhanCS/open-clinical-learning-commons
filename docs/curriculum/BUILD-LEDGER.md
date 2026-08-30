@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.45.0
+- Current release: 0.46.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Module 06, Agent-assisted modeling and testing
-- Next unit: FND-2 Checkpoint 2, validity, forecast, and test release
+- Last completed unit: FND-2 Checkpoint 2, validity, forecast, testing, and agent-accountability release
+- Next unit: FND-2 Module 07, model cards, governance, and defense
 
 ## Confirmed decisions
 
@@ -255,6 +255,15 @@
 - The builder passes copied-workspace reproduction and existing-target refusal. The validator passes 519 release checks and 490 starter checks and rejects prompted or broken submissions.
 - The reference disposition is `accept Week 6 gate and continue to Checkpoint 2 with conditions`. Actual learner and reviewer signatures remain required, and no clinical or deployment permission expands.
 - FND-2 Module 06 is a runnable release candidate at Commons 0.45.0.
+- FND-2 Checkpoint 2 version 0.1.0 preserves the accepted Checkpoint 1 identity, 35 Module 04 artifacts, 35 Module 05 artifacts, 28 Module 06 artifacts, and both complete public CDC data files.
+- The package contains 111 upstream artifacts plus six checkpoint controls in a 117-row immutable manifest. With 12 editable decision records and the generated manifest, the assembled release has 130 files.
+- The full 6,208-row CDC NHSN release and 94-row Massachusetts series are included under `public-data/` with SHA-256 values `8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1` and `394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616`.
+- The 25-point assessment preserves 15 Module 04 points and 10 Module 05 points. Module 06 remains a required gate and adds no points.
+- Twenty-five noncompensable gates cover prior identity, causal boundaries, DAG access, adjustment, missingness, dependence, censoring, public-source identity, temporal validation, coverage, use limits, tests, failures, agent accountability, prohibited data, defense, sign-off, and progression.
+- The reference validator passes 735 complete checks and 689 learner-starter checks. It rejects incomplete records, missing immutable evidence, invalid scoring, failed gates, and inconsistent progression.
+- The deterministic manifest is 17,699 bytes with SHA-256 `16733c55e8a9930f4903006c81e5fb1acb9e75386507f1aa46867daac89f6ccc`.
+- The reference disposition is `accept with conditions` for curriculum construction. Module 07 is permitted, while named program review, paired R execution, live learner defense, and live learner/reviewer sign-off remain required before alpha.
+- FND-2 Checkpoint 2 is a runnable release candidate at Commons 0.46.0.
 
 ## Pending confirmation
 
@@ -263,11 +272,11 @@
 
 ## Next resume instructions
 
-1. Read the accepted Module 04, 05, and 06 specifications, releases, progression decisions, assessments, course specification, master architecture, and this ledger.
-2. Write the 17-section FND-2 Checkpoint 2 specification.
-3. Assemble accepted Module 04 validity evidence, Module 05 forecasting evidence, and Module 06 test and accountability evidence without recomputation.
-4. Preserve the exact 15-point Module 04 and 10-point Module 05 score map plus every Module 06 gate.
-5. Add cumulative interpretation, technical defense, reviewer, reproduction, accessibility, AI-use, human-sign-off, and Module 07 progression records.
-6. Validate immutable manifests, score, gates, signatures, conditions, and a clean copied package.
-7. Keep model-use, clinical, operational, staffing, capacity, causal, and deployment boundaries unchanged.
-8. Update the Commons version and this ledger, then commit and push Checkpoint 2 before building Module 07.
+1. Read the accepted Checkpoint 2 specification, contract, release, progression decision, conditions register, course specification, master architecture, and this ledger.
+2. Write the durable FND-2 Module 07 specification for model cards, governance, monitoring, stop rules, reproducibility audit, and technical defense.
+3. Consume Checkpoint 2 without changing any of its 117 immutable manifest members.
+4. Preserve the exact Week 3 and Week 6 identities, source fingerprints, causal limits, weak forecast evidence, test failures, agent adjudications, and human-accountability scope.
+5. Build the learner, instructor, data, assessment, governance, monitoring, accessibility, AI-use, and progression package.
+6. Validate deterministic outputs, model-card claims, monitoring and stop rules, reviewer ownership, and final-checkpoint readiness.
+7. Keep model-use, clinical, operational, staffing, capacity, causal, fairness, safety, and deployment boundaries unchanged unless new evidence and named review explicitly support a narrower change.
+8. Advance semver, update this ledger, commit, and push Module 07 before building the final checkpoint.

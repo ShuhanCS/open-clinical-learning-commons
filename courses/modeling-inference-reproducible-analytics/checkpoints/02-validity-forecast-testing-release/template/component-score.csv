@@ -1,0 +1,9 @@
+criterion_id,component,course_points_available,points_earned,status,evidence
+V01,Validity aims and causal structure,4.00,,,
+V02,Confounding selection and adjustment,3.00,,,
+V03,Missing longitudinal and survival evidence,5.00,,,
+F01,Forecast contract source and benchmarks,4.00,,,
+F02,Forecast evaluation and use boundary,4.00,,,
+T01,Accepted contract tests,2.00,,,
+AI01,Agent accountability and failure testing,2.00,,,
+H01,Cumulative defense and progression,1.00,,,

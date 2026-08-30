@@ -97,7 +97,7 @@ if (
     $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
-    $fnd2PackageContent -notmatch 'Commons release: 0\.45\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.46\.0' -or
     $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch '21,850' -or
@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.45.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.46.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -675,6 +675,83 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $fnd2Checkpoint01Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'FND-2 Checkpoint 1 validator self-check failed.'
+}
+
+$fnd2Checkpoint02Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\checkpoints\02-validity-forecast-testing-release'
+$fnd2Checkpoint02Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\checkpoints\02-validity-forecast-testing-release-spec.md'
+$fnd2Checkpoint02Files = @(
+    '.gitattributes', '.gitignore', 'README.md', 'VERSION', 'checkpoint-contract.json',
+    'assessment.md', 'instructor-notes.md', 'assemble_checkpoint.py',
+    'validate_checkpoint.py', 'release.json', 'template\README.md',
+    'template\cumulative-interpretation.md', 'template\technical-defense.md',
+    'template\component-score.csv', 'template\gate-results.csv',
+    'template\conditions-register.csv', 'template\reviewer-record.md',
+    'template\reproduction-record.md', 'template\accessibility-review.md',
+    'template\ai-use.md', 'template\human-sign-off.md',
+    'template\progression-decision.md', 'reference\README.md',
+    'reference\cumulative-interpretation.md', 'reference\technical-defense.md',
+    'reference\component-score.csv', 'reference\gate-results.csv',
+    'reference\conditions-register.csv', 'reference\reviewer-record.md',
+    'reference\reproduction-record.md', 'reference\accessibility-review.md',
+    'reference\ai-use.md', 'reference\human-sign-off.md',
+    'reference\progression-decision.md'
+)
+$fnd2Checkpoint02Missing = @($fnd2Checkpoint02Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd2Checkpoint02Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd2Checkpoint02Spec) -or $fnd2Checkpoint02Missing.Count -gt 0) {
+    throw "FND-2 Checkpoint 2 is missing its specification or package files: $($fnd2Checkpoint02Missing -join ', ')."
+}
+$fnd2Checkpoint02Content = Get-Content -Raw -LiteralPath $fnd2Checkpoint02Spec
+$fnd2Checkpoint02Sections = [regex]::Matches($fnd2Checkpoint02Content, '(?m)^## \d+\.').Count
+if (
+    $fnd2Checkpoint02Sections -ne 17 -or
+    $fnd2Checkpoint02Content -match '[—–]' -or
+    $fnd2Checkpoint02Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Checkpoint02Content -notmatch '0\.46\.0' -or
+    $fnd2Checkpoint02Content -notmatch '117 immutable manifest members' -or
+    $fnd2Checkpoint02Content -notmatch '16733c55e8a9930f4903006c81e5fb1acb9e75386507f1aa46867daac89f6ccc' -or
+    $fnd2Checkpoint02Content -notmatch 'Complete reference checks: 735' -or
+    $fnd2Checkpoint02Content -notmatch 'Learner starter checks: 689' -or
+    $fnd2Checkpoint02Content -notmatch 'Twenty-five-gate contract' -or
+    $fnd2Checkpoint02Content -notmatch 'Human sign-off'
+) {
+    throw 'FND-2 Checkpoint 2 must define 17 plain-ASCII sections with the exact manifest, 25-point, 25-gate, sign-off, validation, and progression contract.'
+}
+$fnd2Checkpoint02Release = Get-Content -Raw -LiteralPath (Join-Path $fnd2Checkpoint02Root 'release.json') | ConvertFrom-Json
+if (
+    $fnd2Checkpoint02Release.checkpoint.id -ne 'oclc-fnd2-cp2' -or
+    $fnd2Checkpoint02Release.checkpoint.version -ne '0.1.0' -or
+    $fnd2Checkpoint02Release.checkpoint.commons_release -ne '0.46.0' -or
+    $fnd2Checkpoint02Release.checkpoint.cumulative_hours -ne 96.5 -or
+    $fnd2Checkpoint02Release.checkpoint.course_points -ne 25 -or
+    $fnd2Checkpoint02Release.package.upstream_artifacts -ne 111 -or
+    $fnd2Checkpoint02Release.package.immutable_manifest_rows -ne 117 -or
+    $fnd2Checkpoint02Release.package.assembled_files -ne 130 -or
+    $fnd2Checkpoint02Release.package.manifest_sha256 -ne '16733c55e8a9930f4903006c81e5fb1acb9e75386507f1aa46867daac89f6ccc' -or
+    $fnd2Checkpoint02Release.fixed_evidence.test_confusion.true_negative -ne 48 -or
+    $fnd2Checkpoint02Release.fixed_evidence.test_confusion.false_positive -ne 23 -or
+    $fnd2Checkpoint02Release.fixed_evidence.test_confusion.false_negative -ne 2 -or
+    $fnd2Checkpoint02Release.fixed_evidence.test_confusion.true_positive -ne 2 -or
+    $fnd2Checkpoint02Release.fixed_evidence.cdc_all.rows -ne 6208 -or
+    $fnd2Checkpoint02Release.fixed_evidence.massachusetts.rows -ne 94 -or
+    $fnd2Checkpoint02Release.fixed_evidence.forecast.candidate_mae -ne '14.99587157' -or
+    $fnd2Checkpoint02Release.fixed_evidence.tests.accepted_tests -ne 18 -or
+    $fnd2Checkpoint02Release.fixed_evidence.tests.seeded_failures -ne 10 -or
+    $fnd2Checkpoint02Release.assessment.noncompensable_gates -ne 25 -or
+    $fnd2Checkpoint02Release.assessment.defense_questions -ne 12 -or
+    $fnd2Checkpoint02Release.validation.complete_reference_checks -ne 735 -or
+    $fnd2Checkpoint02Release.validation.starter_checks -ne 689
+) {
+    throw 'FND-2 Checkpoint 2 release metadata does not match the 0.1.0 cumulative Week 6 contract.'
+}
+& python (Join-Path $fnd2Checkpoint02Root 'assemble_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Checkpoint 2 assembler self-check failed.'
+}
+& python (Join-Path $fnd2Checkpoint02Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Checkpoint 2 validator self-check failed.'
 }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
@@ -1957,3 +2034,4 @@ Write-Output "FND-2 Module 04 passed: $fnd2Module04Sections contract sections an
 Write-Output "FND-2 Module 05 passed: $fnd2Module05Sections contract sections and $($fnd2Module05Files.Count) required files."
 Write-Output "FND-2 Module 06 passed: $fnd2Module06Sections contract sections and $($fnd2Module06Files.Count) required files."
 Write-Output "FND-2 Checkpoint 1 passed: $fnd2Checkpoint01Sections contract sections and $($fnd2Checkpoint01Files.Count) required files."
+Write-Output "FND-2 Checkpoint 2 passed: $fnd2Checkpoint02Sections contract sections and $($fnd2Checkpoint02Files.Count) required files."

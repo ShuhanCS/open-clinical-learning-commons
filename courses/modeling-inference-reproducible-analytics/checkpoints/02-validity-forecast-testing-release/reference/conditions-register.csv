@@ -1,0 +1,8 @@
+condition_id,source,status,condition,evidence,owner,next_check,return_trigger
+C01,Checkpoint 1,open,Preserve split threshold test counts and limited calibration,prior-checkpoint release and progression,FND-2 faculty owner,Module 07 intake,changed immutable identity or expanded prediction claim
+C02,Module 04,open,Preserve synthetic selection missingness dependence censoring and causal limits,Module 04 threat register and progression,Biostatistical validity reviewer,Module 07 governance review,changed graph target assumption or effect claim
+C03,Module 04,open,Complete paired R execution in a named managed environment,Module 04 reproducibility check,FND-2 faculty owner,before alpha,unreconciled material R difference
+C04,Module 05,open,Preserve source fingerprints coverage weak fold intervals and no-operations limit,Module 05 release failure analysis and progression,Forecasting reviewer,Module 07 governance review,changed source fold forecast or operational claim
+C05,Module 06,open,Preserve 18 tests ten intended failures trace adjudication and independent checks,Module 06 release and progression,Responsible-AI reviewer,Module 07 governance review,changed test result or unverified agent claim
+C06,Checkpoint 2,open,Complete named panel review live defense and live learner/reviewer sign-off,reviewer record defense and human sign-off,FND-2 faculty owner,before alpha,missing accountable approval
+C07,Checkpoint 2,open,Keep public aggregate and synthetic teaching-only boundary,cumulative interpretation and AI-use record,Commons sponsor,every downstream release,clinical staffing capacity fairness safety or deployment claim

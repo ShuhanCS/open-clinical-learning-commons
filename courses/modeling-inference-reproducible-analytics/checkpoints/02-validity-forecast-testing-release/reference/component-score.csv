@@ -1,0 +1,9 @@
+criterion_id,component,course_points_available,points_earned,status,evidence
+V01,Validity aims and causal structure,4.00,4.00,pass,Module 04 aim map causal screen DAG nodes edges and narrative
+V02,Confounding selection and adjustment,3.00,3.00,pass,Module 04 overlap balance adjustment and selection outputs
+V03,Missing longitudinal and survival evidence,5.00,5.00,pass,Module 04 missingness sensitivity repeated mixed survival and referral records
+F01,Forecast contract source and benchmarks,4.00,4.00,pass,Module 05 source contract target folds and benchmark registry
+F02,Forecast evaluation and use boundary,4.00,4.00,pass,Module 05 predictions errors residuals coverage display and limits
+T01,Accepted contract tests,2.00,2.00,pass,Module 06 accepted tests and summary
+AI01,Agent accountability and failure testing,2.00,2.00,pass,Module 06 ten failures trace adjudication independent checks and sign-off
+H01,Cumulative defense and progression,1.00,1.00,pass,Checkpoint memo defense conditions accessibility sign-off and progression

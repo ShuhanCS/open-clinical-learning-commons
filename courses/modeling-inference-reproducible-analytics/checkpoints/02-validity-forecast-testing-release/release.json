@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-fnd2-cp2",
+    "title": "Validity, forecast, testing, and agent-accountability release",
+    "version": "0.1.0",
+    "commons_release": "0.46.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "due": "end of instructional Week 6",
+    "cumulative_hours": 96.5,
+    "course_points": 25,
+    "required_tag": "fnd2-checkpoint2-v0.1.0"
+  },
+  "components": [
+    {"id": "oclc-fnd2-cp1", "version": "0.1.0", "role": "accepted identity and conditions", "release_sha256": "03c147d2e75cd446a43b9d56e49495df69af90d42d2b14ad4d860aea9d67239f"},
+    {"id": "oclc-fnd2-04", "version": "0.1.0", "commons_release": "0.43.0", "course_points": 15, "release_sha256": "ffcf57c30d77be5c2271488a4d2dd08cc44d430cc590025e918c0ec8f1c4e12e"},
+    {"id": "oclc-fnd2-05", "version": "0.1.0", "commons_release": "0.44.0", "course_points": 10, "release_sha256": "d81bcc3ac2ac2971cb1a03467673d86a905a125f7aed859f2e7669e9c7003f6d"},
+    {"id": "oclc-fnd2-06", "version": "0.1.0", "commons_release": "0.45.0", "course_points": 0, "role": "required gate", "release_sha256": "bfc137523817e57b9eab6baf5729222f5a8021df203c36ba1162f4f7757e824e"}
+  ],
+  "decision": {
+    "owner": "biostatistical validity and responsible-modeling panel",
+    "question": "May the accepted prediction, validity, and forecast evidence enter final governance packaging with threats, failure tests, AI trace, source identity, use limits, and human ownership intact?",
+    "allowed": ["accept", "accept with conditions", "revise", "refer"],
+    "progression_allowed": ["accept", "accept with conditions"],
+    "reference": "accept with conditions",
+    "module_07": "permitted for curriculum construction with recorded conditions"
+  },
+  "fixed_evidence": {
+    "modeling_rows": 374,
+    "split_rows": {"train": 224, "validation": 75, "test": 75},
+    "positive_outcomes": {"train": 25, "validation": 7, "test": 4},
+    "selected_model": "ML01",
+    "locked_threshold": "0.08513264",
+    "test_confusion": {"true_negative": 48, "false_positive": 23, "false_negative": 2, "true_positive": 2},
+    "selection_case": {"cohort_rows": 374, "timing_rows": 111, "structural_blanks": 263},
+    "treatment_case": {"rows": 600, "missing_severity": 91, "known_ate": "-6.00000000"},
+    "repeated_case": {"rows": 2400, "people": 600, "icc": "0.83598751"},
+    "survival_case": {"rows": 600, "events": 449, "censored": 151, "treatment_hazard_ratio": "0.67945425"},
+    "cdc_all": {"rows": 6208, "fields": 14, "jurisdictions": 67, "sha256": "8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1"},
+    "massachusetts": {"rows": 94, "fields": 21, "sha256": "394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616"},
+    "forecast": {"folds": 5, "horizon_weeks": 4, "predictions": 60, "common_targets": 20, "candidate": "HOLT_DAMPED", "candidate_mae": "14.99587157", "last_mae": "28.20000000", "seasonal_naive_mae": "93.15000000"},
+    "tests": {"accepted_artifacts": 13, "accepted_tests": 18, "seeded_failures": 10, "independent_verifications": 3, "agent_claims": 4, "summary_gates": 7}
+  },
+  "package": {
+    "upstream_artifacts": 111,
+    "checkpoint_control_artifacts": 6,
+    "immutable_manifest_rows": 117,
+    "editable_cumulative_records": 12,
+    "assembled_files": 130,
+    "manifest_bytes": 17699,
+    "manifest_sha256": "16733c55e8a9930f4903006c81e5fb1acb9e75386507f1aa46867daac89f6ccc",
+    "external_assembler_dependencies": 0
+  },
+  "assessment": {
+    "course_points": 25,
+    "minimum_passing_points": 20,
+    "criteria": 8,
+    "noncompensable_gates": 25,
+    "defense_questions": 12,
+    "reference_points": 25,
+    "reference_defense": "adequate"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_assembly": "pass",
+    "learner_mode_assembly": "pass",
+    "complete_reference_checks": 735,
+    "starter_checks": 689,
+    "existing_target_rejection": "pass",
+    "incomplete_checkpoint_rejection": "pass",
+    "missing_immutable_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "inconsistent_progression_rejection": "pass",
+    "two_build_manifest_match": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and reference construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, assembly, reference records, and validation"}
+  ],
+  "known_issues": [
+    "Named program reviewers, a live learner defense, and live learner/reviewer sign-off remain pending before alpha.",
+    "Module 04 fixtures are synthetic and support no clinical treatment or transport claim.",
+    "The 111-row timing analysis is selected and does not represent all 374 rows.",
+    "Paired R execution remains pending in a named managed environment.",
+    "The CDC series is a changing-reporting jurisdiction aggregate, not a stable hospital process.",
+    "The candidate loses one fold to last-value, and supplied intervals are illustrative rather than calibrated.",
+    "Contract tests establish declared invariants, not clinical safety, fairness, utility, or deployment readiness."
+  ]
+}

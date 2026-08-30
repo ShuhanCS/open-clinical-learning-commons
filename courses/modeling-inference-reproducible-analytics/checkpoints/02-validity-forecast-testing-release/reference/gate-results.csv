@@ -1,0 +1,26 @@
+gate_id,gate,status,evidence,reviewer_note
+G01,Checkpoint 1 input and split unchanged,pass,prior-checkpoint release cohort split and Module 06 tests,374 and 224/75/75 retained
+G02,Prediction and causal aims distinct,pass,Module 04 aim map and causal screen,distinct decisions and targets
+G03,Accessible DAG equivalents match visual DAG,pass,Module 04 dag svg nodes edges mmd and narrative,visual and structured forms agree
+G04,Variable roles and adjustment purpose explicit,pass,Module 04 dag nodes edges and narrative,roles follow declared estimand
+G05,Collider mediator post-outcome and selection handled by purpose,pass,Module 04 causal screen and threat register,not added as automatic predictors or adjusters
+G06,Overlap and balance examined,pass,Module 04 overlap and balance tables,measured balance does not prove exchangeability
+G07,Missingness assumptions explicit,pass,Module 04 missingness mechanisms and memo,teaching assumptions remain unverifiable
+G08,Structural blanks not coded as zero,pass,Module 04 selection profile and memo,263 blanks preserved
+G09,Sensitivity analyses preserve target and population,pass,Module 04 adjustment estimates and memo,comparable rows identify target exceptions
+G10,Clustered repeated and censored outcomes handled or referred,pass,Module 04 longitudinal survival readings and referrals,dependence and censoring visible
+G11,Exact CDC and Massachusetts fingerprints preserved,pass,public-data files and Module 05 release,both SHA-256 values match
+G12,All 94 weeks ordered and unique,pass,public-data Massachusetts file and Module 05 checks,weekly indexes 1 through 94
+G13,Forecast fits exclude future rows,pass,Module 05 folds predictions checks and Module 06 tests,zero future rows in every fit
+G14,Naive baselines retained,pass,Module 05 benchmark registry and metrics,LAST and SNAIVE52 remain visible
+G15,Errors use same folds targets and units,pass,Module 05 predictions fold horizon and aggregate metrics,20 common targets per model
+G16,Reporting coverage visible,pass,Module 05 coverage context and memo,coverage is context not a weight
+G17,Prohibited clinical operational and deployment claims absent,pass,cumulative interpretation and module use boundaries,teaching-only boundary retained
+G18,All accepted tests pass,pass,Module 06 accepted contract tests,18 of 18 pass
+G19,Ten failures reject for intended reasons,pass,Module 06 seeded failure results,10 of 10 expected codes match
+G20,Agent critique adjudicated against independent evidence,pass,Module 06 critique adjudication and independent verification,four claims resolved with evidence
+G21,Assistance and data class disclosed,pass,Module 06 trace and checkpoint AI-use record,public aggregate and synthetic classes only
+G22,Human sign-off complete for this decision,pass,checkpoint human-sign-off record,Commons sponsor owns construction disposition only
+G23,No restricted identifiable confidential secret or credential data,pass,source records data-class rules and human sign-off,public aggregate and synthetic evidence only
+G24,Technical defense adequate,pass,checkpoint technical defense,12 reference answers cite evidence
+G25,Module 07 progression explicit and consistent,pass,checkpoint progression decision,accept with conditions permits Module 07
