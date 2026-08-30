@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_id": "oclc-app2-cp02",
+  "version": "0.1.0",
+  "commons_release": "0.62.0",
+  "course": "APP-2: Data for Patient Experience and Engagement",
+  "due_point": "end of instructional Week 6",
+  "course_points": 45,
+  "accepted_week3": {
+    "checkpoint_id": "oclc-app2-cp01",
+    "version": "0.1.0",
+    "commons_release": "0.58.0",
+    "candidate_files": 135,
+    "candidate_manifest_sha256": "5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903",
+    "score_treatment": "record identity; do not rescore",
+    "progression": "continue with conditions"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app2-04", "version": "0.1.0", "commons_release": "0.59.0", "assembled_files": 65, "manifest_bytes": 6529, "manifest_sha256": "bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8", "points": 25},
+    {"id": "oclc-app2-05", "version": "0.1.0", "commons_release": "0.60.0", "assembled_files": 49, "manifest_bytes": 4598, "manifest_sha256": "6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa", "points": 20},
+    {"id": "oclc-app2-06", "version": "0.1.0", "commons_release": "0.61.0", "assembled_files": 46, "manifest_bytes": 4361, "manifest_sha256": "0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938", "points": 0}
+  ],
+  "accepted_component_files": 160,
+  "score_map": {"oclc-app2-04": 25, "oclc-app2-05": 20, "oclc-app2-06": 0},
+  "required_gates": {
+    "module04_linkage": 20,
+    "module05_patient_voice_equity": 22,
+    "module06_partnership_improvement_ml": 24,
+    "checkpoint_integrity": 20
+  },
+  "decision": "is the linked patient-experience case strong enough for clinician and patient leadership review",
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "continue_permission": "permitted for curriculum construction",
+    "next_module": "oclc-app2-07"
+  },
+  "boundaries": {
+    "patient_partner_record": "simulated reference only; named actual partner required before alpha",
+    "comment_text_machine_learning": "prohibited",
+    "patient_targeting": "prohibited",
+    "group_ranking": "prohibited",
+    "official_hcahps_reporting": "prohibited",
+    "fielding": "prohibited",
+    "clinical_action": "prohibited",
+    "implementation": "prohibited",
+    "model_deployment": "prohibited"
+  }
+}

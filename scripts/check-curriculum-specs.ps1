@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.61.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.62.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1751,7 +1751,7 @@ if (
     $app2Content -match '(?im)[A-Z]:\\Users\\' -or
     $app2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app2Content -notmatch 'Current Commons release: 0\.61\.0' -or
+    $app2Content -notmatch 'Current Commons release: 0\.62\.0' -or
     $app2Content -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '3feff30f5128587a482a3f4ca42979a46059bbe98e3febc98f4556c4cfafc009' -or
     $app2SourceContent -notmatch '25,906' -or
@@ -2389,7 +2389,7 @@ if (
     $app2Module06Content -match '(?im)[A-Z]:\\Users\\' -or
     $app2Module06Content -notmatch '283,224 bytes' -or
     $app2Module06Content -notmatch '4,361 bytes' -or
-    $app2Module06Content -notmatch 'b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2' -or
+    $app2Module06Content -notmatch '0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938' -or
     $app2Module06Content -notmatch '155 checks' -or
     $app2Module06Content -notmatch '242 checks' -or
     $app2Module06Content -notmatch '220 checks' -or
@@ -2434,7 +2434,7 @@ if (
     $app2Module06Release.package.editable_records -ne 17 -or
     $app2Module06Release.package.assembled_files -ne 46 -or
     $app2Module06Release.package.manifest_bytes -ne 4361 -or
-    $app2Module06Release.package.manifest_sha256 -ne 'b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2' -or
+    $app2Module06Release.package.manifest_sha256 -ne '0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938' -or
     $app2Module06Release.assessment.week6_points -ne 45 -or
     $app2Module06Release.assessment.noncompensable_gates -ne 24 -or
     $app2Module06Release.progression.reference -ne 'continue with conditions' -or
@@ -2537,6 +2537,76 @@ if (
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 01 builder self-check failed.' }
 & python (Join-Path $app2Checkpoint01Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 01 validator self-check failed.' }
+
+$app2Checkpoint02Spec = Join-Path $repo 'docs\curriculum\courses\APP-2\checkpoints\02-linked-evidence-patient-voice-release-spec.md'
+$app2Checkpoint02Root = Join-Path $repo 'courses\patient-experience-engagement\checkpoints\02-linked-evidence-patient-voice-release'
+$app2Checkpoint02Files = @(
+    '.gitattributes', 'VERSION', 'assessment.md', 'build_checkpoint.py',
+    'checkpoint-contract.json', 'instructor-notes.md', 'release.json', 'validate_checkpoint.py',
+    'template\README.md', 'template\evidence-index.csv',
+    'template\linked-evidence-patient-voice-review.md', 'template\reproducibility-check.md',
+    'template\ai-use.md', 'template\progression-decision.md',
+    'reference\README.md', 'reference\evidence-index.csv',
+    'reference\linked-evidence-patient-voice-review.md', 'reference\reproducibility-check.md',
+    'reference\ai-use.md', 'reference\progression-decision.md'
+)
+$app2Checkpoint02Missing = @()
+if (-not (Test-Path -LiteralPath $app2Checkpoint02Spec)) { $app2Checkpoint02Missing += 'specification' }
+foreach ($relative in $app2Checkpoint02Files) {
+    if (-not (Test-Path -LiteralPath (Join-Path $app2Checkpoint02Root $relative))) {
+        $app2Checkpoint02Missing += $relative
+    }
+}
+if ($app2Checkpoint02Missing.Count -gt 0) {
+    throw "APP-2 Checkpoint 02 is missing its specification or package files: $($app2Checkpoint02Missing -join ', ')."
+}
+$app2Checkpoint02Content = Get-Content -Raw -LiteralPath $app2Checkpoint02Spec
+$app2Checkpoint02Sections = [regex]::Matches($app2Checkpoint02Content, '(?m)^## \d+\.').Count
+$app2Checkpoint02Release = Get-Content -Raw -LiteralPath (Join-Path $app2Checkpoint02Root 'release.json') | ConvertFrom-Json
+if (
+    $app2Checkpoint02Sections -ne 17 -or
+    $app2Checkpoint02Content -match '[—–]' -or
+    $app2Checkpoint02Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app2Checkpoint02Content -notmatch '27,594-byte' -or
+    $app2Checkpoint02Content -notmatch '67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1' -or
+    $app2Checkpoint02Content -notmatch '826 complete-reference checks' -or
+    $app2Checkpoint02Content -notmatch '797 learner checks' -or
+    $app2Checkpoint02Release.checkpoint.id -ne 'oclc-app2-cp02' -or
+    $app2Checkpoint02Release.checkpoint.version -ne '0.1.0' -or
+    $app2Checkpoint02Release.checkpoint.commons_release -ne '0.62.0' -or
+    $app2Checkpoint02Release.checkpoint.course_points -ne 45 -or
+    $app2Checkpoint02Release.accepted_week3.candidate_manifest_sha256 -ne '5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903' -or
+    $app2Checkpoint02Release.accepted_modules.Count -ne 3 -or
+    ($app2Checkpoint02Release.accepted_modules | Measure-Object -Property assembled_files -Sum).Sum -ne 160 -or
+    ($app2Checkpoint02Release.accepted_modules | Measure-Object -Property points -Sum).Sum -ne 45 -or
+    $app2Checkpoint02Release.accepted_modules[2].manifest_sha256 -ne '0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938' -or
+    $app2Checkpoint02Release.score.total -ne 45 -or
+    $app2Checkpoint02Release.score.double_counted_components -ne 0 -or
+    $app2Checkpoint02Release.reference_evidence.target_people -ne 1255 -or
+    $app2Checkpoint02Release.reference_evidence.linked_events -ne 28455 -or
+    $app2Checkpoint02Release.reference_evidence.synthetic_comments -ne 420 -or
+    $app2Checkpoint02Release.reference_evidence.actual_patient_or_caregiver_statements -ne 0 -or
+    $app2Checkpoint02Release.reference_evidence.improvement_measures -ne 14 -or
+    $app2Checkpoint02Release.reference_evidence.ml_changes_response_adjustment_decision -ne 'no' -or
+    $app2Checkpoint02Release.package.candidate_files -ne 160 -or
+    $app2Checkpoint02Release.package.checkpoint_editable_records -ne 6 -or
+    $app2Checkpoint02Release.package.assembled_files -ne 174 -or
+    $app2Checkpoint02Release.package.candidate_manifest_bytes -ne 27594 -or
+    $app2Checkpoint02Release.package.candidate_manifest_sha256 -ne '67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1' -or
+    $app2Checkpoint02Release.validation.reference_checks -ne 826 -or
+    $app2Checkpoint02Release.validation.learner_checks -ne 797 -or
+    $app2Checkpoint02Release.progression.reference -ne 'continue with conditions' -or
+    $app2Checkpoint02Release.progression.module07_permission -ne 'permitted for curriculum construction' -or
+    $app2Checkpoint02Release.progression.patient_partner_status -notmatch 'simulated reference only' -or
+    $app2Checkpoint02Release.progression.clinical_action -ne 'prohibited' -or
+    $app2Checkpoint02Release.progression.model_deployment -ne 'prohibited'
+) {
+    throw 'APP-2 Checkpoint 02 release metadata, specification, accepted identities, score, gates, validation, manifest, or progression facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app2Checkpoint02Root 'build_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 02 builder self-check failed.' }
+& python (Join-Path $app2Checkpoint02Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-2 Checkpoint 02 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -3840,3 +3910,4 @@ Write-Output "APP-2 Module 04 passed: $app2Module04Sections contract sections an
 Write-Output "APP-2 Module 05 passed: $app2Module05Sections contract sections and $($app2Module05Files.Count) required files."
 Write-Output "APP-2 Module 06 passed: $app2Module06Sections contract sections and $($app2Module06Files.Count) required files."
 Write-Output "APP-2 Checkpoint 01 passed: $app2Checkpoint01Sections contract sections and $($app2Checkpoint01Files.Count) required files."
+Write-Output "APP-2 Checkpoint 02 passed: $app2Checkpoint02Sections contract sections and $($app2Checkpoint02Files.Count) required files."

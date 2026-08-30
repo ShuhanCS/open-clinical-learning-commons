@@ -1,0 +1,5 @@
+evidence_id,source_id,source_version,commons_release,candidate_directory,assembled_files,workspace_manifest_sha256,course_points,score_treatment,gate_treatment,progression
+E01,oclc-app2-cp01,0.1.0,0.58.0,,135,5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903,0,identity only; Week 3 score already counted,open conditions retained,continue with conditions
+E02,oclc-app2-04,0.1.0,0.59.0,candidate/module-04,65,bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8,25,count exactly once at Week 6,20 of 20 linkage gates required,continue with conditions
+E03,oclc-app2-05,0.1.0,0.60.0,candidate/module-05,49,6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa,20,count exactly once at Week 6,22 of 22 patient-voice and equity gates required,continue with conditions
+E04,oclc-app2-06,0.1.0,0.61.0,candidate/module-06,46,0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938,0,gate only; no added points,24 of 24 partnership improvement and ML gates required,continue with conditions

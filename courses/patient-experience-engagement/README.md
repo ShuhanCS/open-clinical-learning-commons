@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.61.0.
-- Current build: Modules 01 through 06 and the cumulative Week 3 checkpoint runnable; Module 07 and the later checkpoints specified at course level but not yet built.
+- Current Commons release: 0.62.0.
+- Current build: Modules 01 through 06 plus the cumulative Week 3 and Week 6 checkpoints runnable; Module 07 and the final checkpoint specified at course level but not yet built.
 
 APP-2 teaches patient-reported measurement, survey representation, response bias, linked patient evidence, patient voice, patient partnership, and accountable improvement.
 
@@ -45,6 +45,8 @@ The course uses the complete public CMS HCAHPS hospital file as its first source
 [Module 05](modules/05-patient-voice-equity/README.md) uses a governed 420-comment synthetic corpus, a transparent coding and agreement exercise, bounded assisted classification, and design-aware public MEPS group comparisons to teach patient voice and equity reasoning without prevalence, causal, targeting, or proof-of-inequity claims. Its durable contract is [the Module 05 specification](../../docs/curriculum/courses/APP-2/modules/05-patient-voice-equity-spec.md).
 
 [Module 06](modules/06-partnered-improvement-embedded-ml/README.md) turns the accepted evidence into a patient-partnered improvement proposal and compares the exact transparent response cells with one bounded random forest on 377 held-out records. The model does not meet the prespecified threshold for changing the adjustment decision. Its reference partnership record is a labelled simulation, and a named patient or caregiver partner remains required before alpha. Its durable contract is [the Module 06 specification](../../docs/curriculum/courses/APP-2/modules/06-partnered-improvement-embedded-ml-spec.md).
+
+[Checkpoint 02](checkpoints/02-linked-evidence-patient-voice-release/reference/README.md) freezes all 160 accepted Module 04 through Module 06 files, counts 25 and 20 points once, and carries the complete linked-evidence, patient-voice, equity, partnership, improvement, and model decision into Module 07. Its durable contract is [the Week 6 checkpoint specification](../../docs/curriculum/courses/APP-2/checkpoints/02-linked-evidence-patient-voice-release-spec.md).
 
 The full course contract is [the APP-2 course specification](../../docs/curriculum/courses/APP-2/course-spec.md). Source normalization is recorded in [the APP-2 source record](../../docs/source/app-2-patient-experience-engagement-source-record.md).
 

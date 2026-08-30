@@ -377,7 +377,7 @@ Generated reference evidence:
 
 The package includes a sorted SHA-256 manifest of immutable controls. Learner work files contain direct prompts. Reference work files contain complete simulated teaching answers, exact evidence citations, and an explicit condition for actual patient-partner review.
 
-At first release, the 17 generated evidence files total 283,224 bytes. Reference and learner assemblies each contain 46 files. Their 28-row immutable manifest is 4,361 bytes with SHA-256 `b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2`.
+At first release, the 17 generated evidence files total 283,224 bytes. Reference and learner assemblies each contain 46 files. Their 28-row immutable manifest is 4,361 bytes with SHA-256 `0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938`.
 
 ## 20. Week 6 checkpoint and noncompensable gates
 

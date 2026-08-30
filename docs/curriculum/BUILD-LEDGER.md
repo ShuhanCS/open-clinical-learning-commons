@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.61.0
+- Current release: 0.62.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Module 06, partnered improvement and embedded machine learning
-- Next unit: APP-2 Checkpoint 02, linked evidence and patient voice
+- Last completed unit: APP-2 Checkpoint 02, linked evidence and patient voice release
+- Next unit: APP-2 Module 07, clinician and patient leadership, accountability, and defense
 
 ## Confirmed decisions
 
@@ -418,10 +418,15 @@
 - The response comparison uses the same three eligible fields for a 13-cell transparent benchmark and one bounded random forest. The fixed split has 878 training rows with 547 respondents and 377 evaluation rows with 235 respondents.
 - The transparent and ML Brier scores are 0.22962545 and 0.23135127. Their AUC values are 0.54335192 and 0.53869891. Both methods pass weight-stability rules.
 - Transparent and ML teaching-composite absolute bias is 2.48289986 and 2.39922466 percentage points. The 0.08367520-point improvement is below the prespecified 0.50 threshold, so ML does not change the response-adjustment decision.
-- Seventeen deterministic outputs total 283,224 bytes. The 28-row immutable manifest is 4,361 bytes with SHA-256 `b1ccdbf8fa528f8d486680629f1e6a224f94c658d19eba8d632e325a39b97ab2`.
+- Seventeen deterministic outputs total 283,224 bytes. The 28-row immutable manifest is 4,361 bytes with SHA-256 `0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938`.
 - Source reference validation passes 155 checks, assembled reference validation passes 242 checks, and learner validation passes 220 checks. Evidence and workspace two-build equality, copied validation, changed-response rejection, changed-output rejection, failed-gate rejection, invalid-progression rejection, and existing-target rejection pass.
-- APP-2 Module 06 is a runnable release candidate at Commons 0.61.0. It carries 25 Module 04 points and 20 Module 05 points exactly once into the future Week 6 checkpoint, adds zero points, and requires all 24 gates.
-- Checkpoint 02 construction may begin with conditions. Comment-text ML, fabricated patient voice, patient targeting, group ranking, official HCAHPS reporting, fielding, clinical action, implementation, and model deployment remain prohibited.
+- APP-2 Module 06 is a runnable release candidate at Commons 0.61.0. It carries 25 Module 04 points and 20 Module 05 points exactly once into the Week 6 checkpoint, adds zero points, and requires all 24 gates.
+- APP-2 Checkpoint 02 version 0.1.0 freezes 65 Module 04 files, 49 Module 05 files, and 46 Module 06 files without recomputing accepted evidence.
+- The checkpoint has 160 accepted candidate files and 174 assembled files. Its 27,594-byte candidate manifest SHA-256 is `67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1`.
+- The Week 6 score is 45.00 of 45.00: 25 Module 04 points and 20 Module 05 points counted once. Module 06 adds zero points but contributes 24 required gates. All 20 checkpoint integrity gates pass.
+- Reference validation passes 826 checks and learner validation passes 797 checks. Two-build equality, copied validation, existing-target refusal, candidate mutation, duplicate-score, failed-gate, and invalid-progression routes pass.
+- The checkpoint repaired the recorded Module 06 immutable-manifest identity after the prior line-ending cleanup. The accepted 28-row, 4,361-byte manifest SHA-256 is `0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938`; no analytic evidence changed.
+- APP-2 Checkpoint 02 is a runnable release candidate at Commons 0.62.0 and permits Module 07 curriculum construction with conditions. Comment-text ML, fabricated patient voice, patient targeting, group ranking, official HCAHPS reporting, fielding, clinical action, implementation, and model deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -433,11 +438,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, accepted Week 3 checkpoint, Module 06 release and progression records, source record, and this ledger.
-2. Write the durable Checkpoint 02 linked-evidence and patient-voice specification before implementation.
-3. Freeze the exact accepted Module 04, Module 05, and Module 06 packages without recomputing or changing their evidence.
-4. Carry the Module 04 score of 25 and Module 05 score of 20 exactly once. Module 06 adds zero points.
-5. Require all 24 Module 06 partnership, improvement, model, protection, and progression gates in addition to the scored components.
-6. Retain the simulated-partnership label and the named actual patient or caregiver partner condition before alpha.
-7. Permit Module 07 construction only when the complete 45-point package, all gates, conditions, and prohibited uses remain consistent.
-8. Validate, advance semver, commit, and push before Module 07.
+1. Read the APP-2 course specification, accepted Checkpoint 02 package and progression record, Module 07 brief, source record, and this ledger.
+2. Write the durable Module 07 clinician and patient leadership specification before implementation.
+3. Freeze the exact accepted Week 3 and Week 6 checkpoint identities without changing their evidence or scores.
+4. Design the 16-hour clinician and patient leadership block around recommendation, patient-facing communication, accountability, monitoring, stop rules, and defense.
+5. Keep Joe Joseph, MD, SFHM, as the designated clinician under the dated-identity boundary, with participation details pending direct confirmation.
+6. Require a named patient or caregiver co-lead, compensation, authority, access, preparation, disagreement, and review terms before alpha.
+7. Preserve the transparent adjustment, model non-adoption decision, universal-offer proposal, open reviewer conditions, and every prohibited use.
+8. Validate, advance semver, commit, and push before the final checkpoint.

@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app2-cp02",
+    "title": "Linked evidence and patient voice release",
+    "version": "0.1.0",
+    "commons_release": "0.62.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "due_point": "end of instructional Week 6",
+    "course_points": 45
+  },
+  "accepted_week3": {
+    "checkpoint_id": "oclc-app2-cp01",
+    "version": "0.1.0",
+    "commons_release": "0.58.0",
+    "candidate_files": 135,
+    "candidate_manifest_sha256": "5734df858d79721f3efd6766df6299f56d0df49c0aee8b8728b22c284255c903",
+    "score_treatment": "identity only; Week 3 points are not repeated"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app2-04", "version": "0.1.0", "commons_release": "0.59.0", "assembled_files": 65, "manifest_sha256": "bc0592acd18b8524be907fd42483e85af4180e0b6f6de35d40e82ea3eae46aa8", "points": 25, "gates": 20},
+    {"id": "oclc-app2-05", "version": "0.1.0", "commons_release": "0.60.0", "assembled_files": 49, "manifest_sha256": "6f3d93a1a08458cb39fa8d321a67f10dad1ee45b2a8a2742a969ab969f35c8fa", "points": 20, "gates": 22},
+    {"id": "oclc-app2-06", "version": "0.1.0", "commons_release": "0.61.0", "assembled_files": 46, "manifest_sha256": "0cb7f2d0ffc6d5ae8cbcd0cf206a61f143dcd603b5b34eb312972d2ecc2f0938", "points": 0, "gates": 24}
+  ],
+  "score": {
+    "module04": 25,
+    "module05": 20,
+    "module06": 0,
+    "total": 45,
+    "double_counted_components": 0
+  },
+  "reference_evidence": {
+    "target_people": 1255,
+    "linked_events": 28455,
+    "synthetic_comments": 420,
+    "double_coded_comments": 120,
+    "supported_group_estimates": 35,
+    "supported_group_contrasts": 19,
+    "partner_requirements": 12,
+    "actual_patient_or_caregiver_statements": 0,
+    "improvement_measures": 14,
+    "ml_changes_response_adjustment_decision": "no",
+    "teaching_adjustment": "retain transparent benchmark"
+  },
+  "reference_decision": {
+    "score": "45.00 of 45.00",
+    "module04_gates": "20 of 20 pass",
+    "module05_gates": "22 of 22 pass",
+    "module06_gates": "24 of 24 pass for curriculum construction",
+    "checkpoint_gates": "20 of 20 pass",
+    "progression": "continue with conditions",
+    "module07_permission": "permitted for curriculum construction",
+    "patient_partner_status": "simulated reference only; named actual partner required before alpha",
+    "clinical_action": "prohibited",
+    "model_deployment": "prohibited"
+  },
+  "package": {
+    "candidate_files": 160,
+    "checkpoint_editable_records": 6,
+    "assembled_files": 174,
+    "candidate_manifest_bytes": 27594,
+    "candidate_manifest_sha256": "67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1",
+    "external_python_dependencies": 0
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_checks": 826,
+    "learner_checks": 797,
+    "copied_validator_check": "pass",
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "candidate_mutation_rejection": "pass",
+    "duplicate_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module07_permission": "permitted for curriculum construction",
+    "patient_partner_status": "simulated reference only; named actual partner required before alpha",
+    "comment_text_machine_learning": "prohibited",
+    "patient_targeting": "prohibited",
+    "group_ranking": "prohibited",
+    "official_hcahps_reporting": "prohibited",
+    "fielding": "prohibited",
+    "clinical_action": "prohibited",
+    "implementation": "prohibited",
+    "model_deployment": "prohibited"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, cumulative assembly, exact score and gate contract, validation, and release record"}
+  ],
+  "known_issues": [
+    "Named APP-2 faculty, patient or caregiver, measurement, survey, health-services data, qualitative, equity, accessibility, language-access, privacy, responsible-AI, clinical, governance, model, and independent reproduction reviews remain pending before alpha.",
+    "The Module 06 partnership record is a labelled simulation and contains no actual patient or caregiver statement.",
+    "Public-derived linked and group evidence is descriptive; synthetic response and comment evidence cannot establish real experience, prevalence, equity, cause, feasibility, or benefit.",
+    "The 45-point score cannot compensate for a failed evidence, partnership, support, accessibility, protection, integrity, or progression gate.",
+    "No package authorizes patient contact, fielding, official HCAHPS reporting, patient targeting, group ranking, clinical action, implementation, or model deployment."
+  ]
+}

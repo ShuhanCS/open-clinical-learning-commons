@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.61.0 through runnable Module 06 and Checkpoint 01.
+- Current Commons release: 0.62.0 through runnable Module 06 and Checkpoint 02.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -320,10 +320,14 @@ Required evidence includes the Module 01 charter, instrument and rights record, 
 
 - Timing: end of instructional Week 6.
 - Course points: 45.
-- Future path: `courses/patient-experience-engagement/checkpoints/02-linked-evidence-patient-voice-release/`.
+- Package path: `courses/patient-experience-engagement/checkpoints/02-linked-evidence-patient-voice-release/`.
+- Specification: `docs/curriculum/courses/APP-2/checkpoints/02-linked-evidence-patient-voice-release-spec.md`.
+- Status: runnable release candidate at Commons 0.62.0.
 - Decision: is the case strong enough for clinician and patient leadership review?
 
 Required evidence includes accepted Week 3 identity, MEPS source and linkage records, aligned denominators, access, communication, engagement, service-use, response, missingness, weighting, group and uncertainty evidence, synthetic-comment provenance, human codebook and agreement, qualitative limits, equity and exclusion review, patient-partner interpretations, improvement design, transparent-versus-ML comparison, 45-point score, gates, and Module 07 progression.
+
+The released checkpoint freezes 65 Module 04 files, 49 Module 05 files, and 46 Module 06 files. Its 160-row candidate manifest is 27,594 bytes with SHA-256 `67248e989888cdabeb050c970e85d091ece68018047ef6f0bec7ba26441cfed1`. It counts Module 04 at 25 points and Module 05 at 20 points exactly once, adds no Module 06 points, and requires all 20 checkpoint integrity gates.
 
 ### Final checkpoint: Patient-experience and engagement package
 

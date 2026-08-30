@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.61.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 is complete with seven modules and three checkpoints. APP-2 has six runnable modules and its cumulative Week 3 checkpoint.
+- Current version: `0.62.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 is complete with seven modules and three checkpoints. APP-2 has six runnable modules plus its cumulative Week 3 and Week 6 checkpoints.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -94,6 +94,8 @@ The fourth runnable unit is [APP-2 Module 04: Linked patient evidence](courses/p
 The fifth runnable unit is [APP-2 Module 05: Patient voice, group differences, and equity](courses/patient-experience-engagement/modules/05-patient-voice-equity/README.md), governed by the durable [Module 05 specification](docs/curriculum/courses/APP-2/modules/05-patient-voice-equity-spec.md). It pairs the accepted MEPS-derived evidence with 420 fully synthetic comments, a 120-comment double-coding benchmark, a transparent assisted-coding audit, and prespecified survey-weighted group comparisons with unsupported results suppressed.
 
 The sixth runnable unit is [APP-2 Module 06: Partnered improvement and embedded machine learning](courses/patient-experience-engagement/modules/06-partnered-improvement-embedded-ml/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/APP-2/modules/06-partnered-improvement-embedded-ml-spec.md). It supplies a labelled patient-partnership simulation, a complete accessible improvement proposal, and a held-out comparison between the exact transparent response cells and one bounded random forest. The model improves teaching-composite bias by only 0.08367520 percentage points and does not change the response-adjustment decision.
+
+The cumulative [APP-2 Week 6 checkpoint](courses/patient-experience-engagement/checkpoints/02-linked-evidence-patient-voice-release/reference/README.md) freezes 160 accepted files from Modules 04 through 06, counts the 25-point and 20-point components once, and requires all linkage, patient-voice, equity, partnership, improvement, model, and integrity gates before Module 07. Its durable [checkpoint specification](docs/curriculum/courses/APP-2/checkpoints/02-linked-evidence-patient-voice-release-spec.md) defines the complete 174-file release and progression contract.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
