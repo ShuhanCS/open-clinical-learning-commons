@@ -1,0 +1,16 @@
+erDiagram
+    PATIENTS ||--o{ ENCOUNTERS : has
+    ORGANIZATIONS ||--o{ PROVIDERS : employs
+    ORGANIZATIONS ||--o{ ENCOUNTERS : hosts
+    PROVIDERS ||--o{ ENCOUNTERS : records
+    PAYERS ||--o{ ENCOUNTERS : covers
+    PATIENTS ||--o{ OBSERVATIONS : has
+    ENCOUNTERS o|--o{ OBSERVATIONS : contextualizes
+    PATIENTS ||--o{ CONDITIONS : has
+    ENCOUNTERS ||--o{ CONDITIONS : records
+    PATIENTS ||--o{ PROCEDURES : has
+    ENCOUNTERS ||--o{ PROCEDURES : records
+    PATIENTS ||--o{ MEDICATIONS : has
+    ENCOUNTERS ||--o{ MEDICATIONS : records
+
+%% [REPLACE: add the remaining source-table relationships and confirm optional versus required encounter references.]

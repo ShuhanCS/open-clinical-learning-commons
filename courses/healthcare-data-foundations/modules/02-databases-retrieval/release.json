@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd1-02",
+    "title": "Databases and retrieving healthcare data",
+    "version": "0.1.0",
+    "commons_release": "0.29.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "week": 2,
+    "hours": 16.0
+  },
+  "decision": {
+    "owner": "clinical data architect",
+    "question": "Does the relational release preserve source meaning well enough for cohort work?",
+    "dispositions": ["accept", "accept with conditions", "revise", "refer"]
+  },
+  "source": {
+    "id": "synthea-sample-data-csv-apr2020",
+    "publisher": "The MITRE Corporation / Synthea",
+    "url": "https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip",
+    "bytes": 8982431,
+    "sha256": "4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a",
+    "uncompressed_bytes": 82293440,
+    "tables": 16,
+    "rows": 471836,
+    "source_columns": 168,
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "database": {
+    "engine": "SQLite",
+    "user_version": 1,
+    "tested_sqlite": "3.49.1",
+    "tested_bytes": 141234176,
+    "tested_sha256": "1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a",
+    "data_dictionary_rows": 177,
+    "foreign_key_failures": 0,
+    "integrity_check": "ok",
+    "minimized_views": 3
+  },
+  "measured_results": {
+    "patients": 1171,
+    "encounters": 53346,
+    "observations": 299697,
+    "numeric_observations": 278488,
+    "text_observations": 21209,
+    "observations_without_encounter_reference": 30363,
+    "empty_supplies_rows": 0,
+    "encounter_classes": {
+      "ambulatory": 18936,
+      "emergency": 2090,
+      "inpatient": 1838,
+      "outpatient": 9003,
+      "urgentcare": 2373,
+      "wellness": 19106
+    }
+  },
+  "fhir_examples": {
+    "standard": "FHIR R4",
+    "patient_id": "00185faa-2760-4218-9bf5-db301acf8274",
+    "encounter_id": "6b5bfe89-1c58-42e8-87c4-847b542d5f0b",
+    "observation_id": "synthea-observation-191026",
+    "references_resolve": true,
+    "conformance_claim": false
+  },
+  "reference_extracts": {
+    "table-inventory": 16,
+    "encounter-class-counts": 6,
+    "observation-linkage": 3,
+    "selected-patient-timeline": 25,
+    "numeric-observation-sample": 25
+  },
+  "environment": {
+    "tested_platform": "Windows",
+    "python": "3.12.10",
+    "sqlite": "3.49.1"
+  },
+  "licenses": {
+    "documentation": {"spdx": "CC-BY-4.0", "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"},
+    "source_and_generator": {"spdx": "Apache-2.0", "url": "https://github.com/synthetichealth/synthea/blob/master/LICENSE"},
+    "commons_code": {"spdx": "MIT", "url": "https://opensource.org/license/mit"}
+  },
+  "assessment": {
+    "points": 100,
+    "minimum_passing_points": 80,
+    "noncompensable_gates": [
+      "source fingerprint",
+      "database integrity",
+      "zero foreign-key failures",
+      "exact retrieval",
+      "accessible schema",
+      "FHIR references",
+      "privacy and minimization",
+      "AI disclosure",
+      "accept or accept with conditions disposition"
+    ]
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, relational build, teaching assets, and validation"}
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "The complete pinned archive built in 6.7 seconds. All 471,836 rows loaded; 96 database checks and 126 submission checks passed; five reference extracts matched."
+    },
+    "required_human_roles": [
+      {"role": "FND-1 faculty owner", "reviewer": null, "status": "pending", "date": null},
+      {"role": "SQL and data engineering", "reviewer": null, "status": "pending", "date": null},
+      {"role": "clinical informatics and healthcare-data meaning", "reviewer": null, "status": "pending", "date": null},
+      {"role": "FHIR R4 reading path", "reviewer": null, "status": "pending", "date": null},
+      {"role": "source rights and provenance", "reviewer": null, "status": "pending", "date": null},
+      {"role": "accessibility", "reviewer": null, "status": "pending", "date": null},
+      {"role": "privacy and data governance", "reviewer": null, "status": "pending", "date": null},
+      {"role": "responsible AI", "reviewer": null, "status": "pending", "date": null},
+      {"role": "independent reproduction and teachability", "reviewer": null, "status": "pending", "date": null}
+    ]
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "query_runner_self_check": "pass",
+    "validator_self_check": "pass",
+    "full_archive_build": "pass",
+    "database_checks": 96,
+    "complete_submission_checks": 126,
+    "reference_extracts": "pass",
+    "source_archive_revalidation": "pass",
+    "nonempty_target_refusal": "pass",
+    "nonempty_output_refusal": "pass",
+    "broken_fhir_reference_rejection": "pass",
+    "incomplete_submission_rejection": "pass"
+  },
+  "known_issues": [
+    "Named faculty, data-engineering, clinical-informatics, FHIR, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "The reference database was built on Windows with SQLite 3.49.1; logical validation is portable, but named macOS and Linux reproduction remains pending.",
+    "The 141 MB generated SQLite file is not stored in Git and must be rebuilt from the pinned archive.",
+    "FHIR JSON files are teaching mappings and do not claim full resource or server conformance.",
+    "The archive is synthetic and older; it cannot support real population or clinical estimates."
+  ]
+}

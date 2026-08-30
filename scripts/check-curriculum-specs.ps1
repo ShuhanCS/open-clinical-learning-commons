@@ -148,6 +148,56 @@ if ($LASTEXITCODE -ne 0) {
     throw 'FND-1 Module 01 validator self-check failed.'
 }
 
+$fnd1Module02Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\02-databases-retrieval'
+$fnd1Module02Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\02-databases-retrieval-spec.md'
+$fnd1Module02Files = @(
+    'README.md', 'assessment.md', 'build_database.py', 'data-spec.md', 'instructor-notes.md',
+    'reference-first-extracts.sql', 'release.json', 'run_queries.py', 'schema.sql',
+    'source-manifest.csv', 'source-record.yml', 'validate_database.py',
+    'template\.gitattributes', 'template\.gitignore', 'template\README.md', 'template\VERSION',
+    'template\ai-use.md', 'template\data-model.mmd', 'template\fhir-json-reading.md',
+    'template\schema-description.md', 'template\source-record.yml',
+    'template\validation-notes.md', 'template\sql\01-first-extracts.sql'
+)
+$fnd1Module02Missing = @($fnd1Module02Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Module02Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Module02Spec) -or $fnd1Module02Missing.Count -gt 0) {
+    throw "FND-1 Module 02 is missing its specification or package files: $($fnd1Module02Missing -join ', ')."
+}
+$fnd1Module02Content = Get-Content -Raw -LiteralPath $fnd1Module02Spec
+$fnd1Module02Sections = [regex]::Matches($fnd1Module02Content, '(?m)^## \d+\.').Count
+if ($fnd1Module02Sections -ne 21 -or $fnd1Module02Content -match '[—–]' -or $fnd1Module02Content -match '(?im)[A-Z]:\\Users\\') {
+    throw "FND-1 Module 02 must define 21 plain-ASCII contract sections without local absolute paths; found $fnd1Module02Sections sections."
+}
+$fnd1Module02Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Module02Root 'release.json') | ConvertFrom-Json
+$fnd1Module02Manifest = Import-Csv -LiteralPath (Join-Path $fnd1Module02Root 'source-manifest.csv')
+if (
+    $fnd1Module02Release.module.version -ne '0.1.0' -or
+    $fnd1Module02Release.module.commons_release -ne '0.29.0' -or
+    $fnd1Module02Release.module.hours -ne 16 -or
+    $fnd1Module02Release.source.bytes -ne 8982431 -or
+    $fnd1Module02Release.source.sha256 -ne '4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a' -or
+    $fnd1Module02Release.source.tables -ne 16 -or
+    $fnd1Module02Release.source.rows -ne 471836 -or
+    $fnd1Module02Release.database.data_dictionary_rows -ne 177 -or
+    $fnd1Module02Release.database.foreign_key_failures -ne 0 -or
+    $fnd1Module02Release.database.integrity_check -ne 'ok' -or
+    $fnd1Module02Release.validation.database_checks -ne 96 -or
+    $fnd1Module02Release.validation.complete_submission_checks -ne 126 -or
+    $fnd1Module02Manifest.Count -ne 16 -or
+    ($fnd1Module02Manifest | Measure-Object -Property source_rows -Sum).Sum -ne 471836 -or
+    ($fnd1Module02Manifest | Measure-Object -Property source_columns -Sum).Sum -ne 168
+) {
+    throw 'FND-1 Module 02 release metadata or source manifest does not match the 0.1.0 contract.'
+}
+& python (Join-Path $fnd1Module02Root 'build_database.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 02 builder self-check failed.' }
+& python (Join-Path $fnd1Module02Root 'run_queries.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 02 query-runner self-check failed.' }
+& python (Join-Path $fnd1Module02Root 'validate_database.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 02 validator self-check failed.' }
+
 function Test-ModuleContract {
     param(
         [Parameter(Mandatory)] [string] $Label,
@@ -785,3 +835,4 @@ Write-Output "DA-730 Checkpoint 2 passed: 17 contract sections and $($checkpoint
 Write-Output "DA-730 Checkpoint 3 passed: 17 contract sections and $($checkpoint03Files.Count) package files."
 Write-Output "FND-1 specification passed: $fnd1ModuleCount modules, $fnd1Hours hours, $fnd1CheckpointCount checkpoints."
 Write-Output "FND-1 Module 01 passed: $fnd1Module01Sections contract sections and $($fnd1Module01Files.Count) required files."
+Write-Output "FND-1 Module 02 passed: $fnd1Module02Sections contract sections and $($fnd1Module02Files.Count) required files."

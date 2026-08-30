@@ -1,0 +1,32 @@
+schema_version: 1.0.0
+record_id: oclc-fnd1-02-synthea-relational-apr2020
+title: Synthea April 2020 complete CSV relational teaching release
+verified_at: 2026-08-30
+source:
+  publisher: The MITRE Corporation / Synthea
+  landing_page: https://synthea.mitre.org/downloads
+  archive_url: https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip
+  data_dictionary: https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary
+  project_page: https://synthetichealth.github.io/synthea/
+  repository: https://github.com/synthetichealth/synthea
+  license_url: https://github.com/synthetichealth/synthea/blob/master/LICENSE
+  archive_label: April 2020 CSV sample
+  archive_bytes: 8982431
+  archive_sha256: 4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a
+release:
+  source_tables: 16
+  source_rows: 471836
+  source_columns: 168
+  database_dictionary_rows: 177
+  database_user_version: 1
+  tested_database_bytes: 141234176
+  tested_database_sha256: 1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a
+rights:
+  source_license: Apache-2.0
+  redistribution: allowed with attribution
+  privacy: Synthetic records, not real patients.
+interpretation_limits:
+  - The archive is an older synthetic sample and is not a current population snapshot.
+  - Synthetic values cannot estimate real prevalence, utilization, quality, access, cost, or outcomes.
+  - The teaching FHIR resources are transparent mappings, not a certified server export or conformance claim.
+  - Module 02 validates relational readiness; Module 03 owns cohort and analytic-table definitions.

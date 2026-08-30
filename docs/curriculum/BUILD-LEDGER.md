@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.28.0
+- Current release: 0.29.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Module 01, Setting up a reproducible workspace
-- Next unit: FND-1 Module 02, Databases and retrieving healthcare data
+- Last completed unit: FND-1 Module 02, Databases and retrieving healthcare data
+- Next unit: FND-1 Module 03, Cohorts and analytic tables
 
 ## Confirmed decisions
 
@@ -121,6 +121,15 @@
 - A fresh Python environment installed JupyterLab 4.6.3, nbclient 0.10.2, and pandas 3.0.5. Python 3.12.10 with SQLite 3.49.1, the executed notebook, and the supplied R 4.6.1 script returned the exact three-row and total-15 reference result.
 - The clean reference submission preserved `main`, four commits, a non-fast-forward merge, an annotated `fnd1-setup-v0.1.0` tag at `HEAD`, and a clean working tree.
 - Module 01 is a runnable release candidate. Faculty, data engineering, Python/notebook, R, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Module 02 validates the pinned 8,982,431-byte Synthea April 2020 CSV archive and exact SHA-256 `4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a`.
+- The archive contains 16 CSV tables, 82,293,440 uncompressed bytes, 168 source fields, and 471,836 rows. The relational release preserves every source row and field.
+- The tested SQLite build contains 177 dictionary fields, including 9 transparent source-row surrogates, and is 141,234,176 bytes. It is rebuilt rather than stored in Git.
+- Module 02 preserves 30,363 observations with missing encounter references as `NULL`, the zero-row supplies table, all six encounter classes, and zero orphan nonblank relationships.
+- SQLite reports zero foreign-key failures and integrity `ok`. Three minimized views expose 27 fields for first retrieval without defaulting to identity-like or cost fields.
+- Linked teaching FHIR R4 Patient, Encounter, and Observation examples resolve to one another. They are transparent CSV-derived mappings, not a conformance claim.
+- Five reference extracts return 16, 6, 3, 25, and 25 rows. The standard-library runner accepts only named read-only SQL and protects nonempty output directories.
+- The canonical validator passes 96 database checks and 126 complete-submission checks. Builder, query-runner, validator, source revalidation, invalid-FHIR, incomplete-record, target-overwrite, and output-overwrite checks pass.
+- Module 02 is a runnable release candidate. Faculty, data engineering, clinical informatics, FHIR, rights, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -129,9 +138,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course specification, Module 01 specification and release record, source record, master architecture, and this ledger.
-2. Inspect the pinned Synthea April 2020 CSV archive and lock the included source files, sizes, rows, columns, and checksums.
-3. Write the 21-section Module 02 specification without moving cohort selection or analytic-table construction out of Module 03.
-4. Build the deterministic SQLite database, data dictionary, accessible schema description, FHIR/JSON reading examples, first SQL extracts, and validation output.
-5. Add the learner assessment, instructor key, validator, release record, and clean-target test.
-6. Update the Commons version and this ledger, then commit and push Module 02 before moving to Module 03.
+1. Read the FND-1 course specification, Module 01 and 02 specifications and release records, source record, master architecture, and this ledger.
+2. Treat the accepted Module 02 database schema, source manifest, table counts, optionality, and fingerprints as immutable upstream inputs.
+3. Write the 21-section Module 03 specification for the adult acute-care cohort and one-row-per-person analytic table.
+4. Lock the index period, adult rule, index event, lookback, follow-up, inclusion/exclusion order, attrition counts, table grain, denominators, and query tests.
+5. Build tested SQL, cohort flow, analytic-table specification, learner assessment, instructor key, validator, and Checkpoint 1 component records.
+6. Update the Commons version and this ledger, then commit and push Module 03 before assembling the Week 3 checkpoint.

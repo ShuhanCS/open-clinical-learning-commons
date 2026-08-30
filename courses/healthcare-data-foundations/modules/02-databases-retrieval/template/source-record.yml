@@ -1,0 +1,16 @@
+schema_version: 1.0.0
+source_id: synthea-sample-data-csv-apr2020
+publisher: The MITRE Corporation / Synthea
+landing_page: https://synthea.mitre.org/downloads
+archive_url: https://synthetichealth.github.io/synthea-sample-data/downloads/synthea_sample_data_csv_apr2020.zip
+data_dictionary: https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary
+repository: https://github.com/synthetichealth/synthea
+license_url: https://github.com/synthetichealth/synthea/blob/master/LICENSE
+archive_bytes: 8982431
+archive_sha256: 4194b18c11eaedcf0d5d5dd448d8ac9661f14381e2ef9f109215dc42266cd38a
+synthetic: true
+contains_real_patients: false
+learner_retrieved_at: "[REPLACE: UTC timestamp]"
+learner_archive_sha256: "[REPLACE: observed SHA-256]"
+build_report: build-report.json
+interpretation: Synthetic software-generated records; not population or clinical estimates.
