@@ -1,0 +1,21 @@
+fold_id,week_index,week_end,hospitals_reporting_occupancy,hospitals_reporting_occupancy_pct,reporting_gap_pct,actual_admissions,candidate_absolute_error,use
+F01,75,2026-04-11,82,91.11,8.89,182.00000000,6.59274225,context only; never a correction weight or invented denominator
+F01,76,2026-04-18,82,91.11,8.89,162.00000000,2.26693605,context only; never a correction weight or invented denominator
+F01,77,2026-04-25,86,95.56,4.44,129.00000000,18.19370890,context only; never a correction weight or invented denominator
+F01,78,2026-05-02,85,94.44,5.56,119.00000000,18.16222487,context only; never a correction weight or invented denominator
+F02,79,2026-05-09,87,96.67,3.33,99.00000000,8.91970723,context only; never a correction weight or invented denominator
+F02,80,2026-05-16,86,95.56,4.44,65.00000000,34.05547308,context only; never a correction weight or invented denominator
+F02,81,2026-05-23,86,95.56,4.44,33.00000000,58.96408576,context only; never a correction weight or invented denominator
+F02,82,2026-05-30,85,94.44,5.56,40.00000000,46.29097591,context only; never a correction weight or invented denominator
+F03,83,2026-06-06,86,95.56,4.44,34.00000000,0.79940387,context only; never a correction weight or invented denominator
+F03,84,2026-06-13,86,95.56,4.44,15.00000000,12.76107333,context only; never a correction weight or invented denominator
+F03,85,2026-06-20,86,95.56,4.44,18.00000000,5.40945509,context only; never a correction weight or invented denominator
+F03,86,2026-06-27,87,96.67,3.33,13.00000000,6.92816049,context only; never a correction weight or invented denominator
+F04,87,2026-07-04,87,96.67,3.33,14.00000000,4.13100956,context only; never a correction weight or invented denominator
+F04,88,2026-07-11,82,91.11,8.89,14.00000000,6.63581723,context only; never a correction weight or invented denominator
+F04,89,2026-07-18,86,95.56,4.44,13.00000000,7.63966337,context only; never a correction weight or invented denominator
+F04,90,2026-07-25,84,93.33,6.67,15.00000000,11.24274027,context only; never a correction weight or invented denominator
+F05,91,2026-08-01,85,94.44,5.56,22.00000000,6.74661308,context only; never a correction weight or invented denominator
+F05,92,2026-08-08,85,94.44,5.56,21.00000000,5.54390351,context only; never a correction weight or invented denominator
+F05,93,2026-08-15,82,91.11,8.89,37.00000000,21.38173585,context only; never a correction weight or invented denominator
+F05,94,2026-08-22,77,85.56,14.44,33.00000000,17.25200173,context only; never a correction weight or invented denominator

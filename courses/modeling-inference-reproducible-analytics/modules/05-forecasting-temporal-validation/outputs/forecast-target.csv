@@ -1,0 +1,2 @@
+contract_id,unit,target,source_unit,horizon_weeks,refresh_cadence,first_source_week,last_source_week,decision,prohibited_use
+FC01,Massachusetts jurisdiction-week aggregate across reporting hospitals,total_respiratory_new_admissions,new admissions reported in the week,4,weekly teaching refresh after source verification,2024-11-09,2026-08-22,compare introductory forecasting methods under time-ordered backtesting,"single-hospital staffing, capacity, care, or deployment decision"

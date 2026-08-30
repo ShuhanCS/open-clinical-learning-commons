@@ -1,0 +1,171 @@
+{
+  "status": "pass",
+  "version": "0.1.0",
+  "upstream": {
+    "nhsn-hospital-capacity-jurisdiction-2024-2026.csv": {
+      "bytes": 428203,
+      "sha256": "8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1"
+    },
+    "ma-hospital-capacity-time-2024-2026.csv": {
+      "bytes": 11170,
+      "sha256": "394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616"
+    },
+    "module-04-release.json": {
+      "bytes": 7013,
+      "sha256": "ffcf57c30d77be5c2271488a4d2dd08cc44d430cc590025e918c0ec8f1c4e12e"
+    },
+    "module-04-progression.md": {
+      "bytes": 1157,
+      "sha256": "fdfce797f69c80e71ff26a7fa6c3499c2c3c25069174560ae1441253ef1fb646"
+    },
+    "module-04-threat-register.csv": {
+      "bytes": 1887,
+      "sha256": "ce1257bf019959f24b01706744612a28999ebe4524c7567ff860983f9f3190c3"
+    }
+  },
+  "series": {
+    "rows": 94,
+    "start": "2024-11-09",
+    "end": "2026-08-22",
+    "target": "total_respiratory_new_admissions"
+  },
+  "backtest": {
+    "folds": 5,
+    "horizon_weeks": 4,
+    "test_predictions_per_model": 20,
+    "test_week_indexes": "75-94"
+  },
+  "models": {
+    "HOLT_DAMPED": {
+      "mae": "14.99587157",
+      "rmse": "21.07855007",
+      "bias_actual_minus_prediction": "-5.97261489",
+      "mape_pct": "46.93627714"
+    },
+    "LAST": {
+      "mae": "28.20000000",
+      "rmse": "39.44363066",
+      "bias_actual_minus_prediction": "-22.50000000",
+      "mape_pct": "71.00841979"
+    },
+    "SNAIVE52": {
+      "mae": "93.15000000",
+      "rmse": "96.43002644",
+      "bias_actual_minus_prediction": "-93.15000000",
+      "mape_pct": "352.83355181"
+    }
+  },
+  "outputs": {
+    "forecast-target.csv": {
+      "rows": 1,
+      "fields": 10,
+      "bytes": 481,
+      "sha256": "8f233fe115a1fabc623387ef5aa252a8b939d0e502116f8e03331021af8111da"
+    },
+    "temporal-folds.csv": {
+      "rows": 5,
+      "fields": 12,
+      "bytes": 489,
+      "sha256": "9ac64675bf9d2765c93d52351f4801644082cc329f1928313c2c2f94cc8a5aa6"
+    },
+    "benchmark-registry.csv": {
+      "rows": 4,
+      "fields": 5,
+      "bytes": 530,
+      "sha256": "0789a55bea4fcee82073efe578f550b5db001f2d55441a9e575a1ffd3b86ae4c"
+    },
+    "forecast-predictions.csv": {
+      "rows": 60,
+      "fields": 15,
+      "bytes": 7728,
+      "sha256": "dfc91a5e38e2255437dc17a5227cccdb14d4970eb79e14b0260ab203aec8de7a"
+    },
+    "holt-parameters.csv": {
+      "rows": 5,
+      "fields": 9,
+      "bytes": 693,
+      "sha256": "c2c17a87e287102beb5cfca2aaee0f4516b0c1865781e8d303211a1a7c1647cc"
+    },
+    "forecast-interval-reading.csv": {
+      "rows": 20,
+      "fields": 10,
+      "bytes": 3396,
+      "sha256": "dc8c75382eeb9046374ea88537129d3acc9771af9aa3bd4d4cabe9868652cf1c"
+    },
+    "aggregate-metrics.csv": {
+      "rows": 3,
+      "fields": 9,
+      "bytes": 459,
+      "sha256": "68e0147ad1dbd627c0274f31ee4ce0035a2a1c1c55ac0c89277d996983891973"
+    },
+    "fold-metrics.csv": {
+      "rows": 15,
+      "fields": 10,
+      "bytes": 1923,
+      "sha256": "a061d0704773df6354d7e6ee06c0a79961c47f28004f970d10ff198ec7f73f95"
+    },
+    "horizon-metrics.csv": {
+      "rows": 12,
+      "fields": 10,
+      "bytes": 1552,
+      "sha256": "84ae5d30a6d8d05452df1273b412499bfc2fa3bf25c06b1fa02f2d63201dab9f"
+    },
+    "failure-analysis.csv": {
+      "rows": 3,
+      "fields": 9,
+      "bytes": 657,
+      "sha256": "2dc5cd53bd57fb8c123596f7e20381fd85bcee385500594597367b7566f45412"
+    },
+    "reporting-coverage-context.csv": {
+      "rows": 20,
+      "fields": 9,
+      "bytes": 2551,
+      "sha256": "76a4370cd3badea23a5a0f610bd1231cefbd0a59616ecbabe1b028bd2df4630b"
+    },
+    "decomposition-reading.csv": {
+      "rows": 90,
+      "fields": 6,
+      "bytes": 12659,
+      "sha256": "40c17f4e5a36ba69dd4566e7b8e444a39b1f1be8cd6283155fe37f9aaef26a7d"
+    },
+    "stationarity-reading.csv": {
+      "rows": 2,
+      "fields": 8,
+      "bytes": 323,
+      "sha256": "11098cff1e919b470f8a5df98e88b71412c3d68a4957edbb17b2a5666dc82467"
+    },
+    "arima-parameters.csv": {
+      "rows": 4,
+      "fields": 5,
+      "bytes": 418,
+      "sha256": "ce2dadebfbba33fe551d4a3184d01dd38ca63f492bd7fad726a3ae14e6623db5"
+    },
+    "arima-forecast-reading.csv": {
+      "rows": 4,
+      "fields": 10,
+      "bytes": 729,
+      "sha256": "9394efd607448a8623dd9e917130f5232280818e07566943c253171933009766"
+    },
+    "residual-diagnostics.csv": {
+      "rows": 2,
+      "fields": 6,
+      "bytes": 298,
+      "sha256": "1901300ca39d66efb2017f7984453a40dab57cdabbccdae3163950b4882dcb2d"
+    },
+    "forecast-checks.csv": {
+      "rows": 20,
+      "fields": 5,
+      "bytes": 1020,
+      "sha256": "0dedb2292edfc55cc58f20d01e9b0d0e3f11761aa536f9a6d534f3609155516d"
+    },
+    "forecast.svg": {
+      "bytes": 3007,
+      "sha256": "10fb417f4450099127afc1ab829c1b7aa6a577facaae2b48c0b1ca6aff2a5458"
+    }
+  },
+  "decision": {
+    "reference": "continue to Module 06 with conditions",
+    "candidate": "HOLT_DAMPED",
+    "use": "public-data forecasting teaching only"
+  }
+}

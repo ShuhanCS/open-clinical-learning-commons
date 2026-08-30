@@ -1,0 +1,6 @@
+fold_id,train_start_index,train_end_index,train_rows,train_end_week,test_start_index,test_end_index,test_rows,test_start_week,test_end_week,overlap_with_other_test_folds,future_rows_in_fit
+F01,1,74,74,2026-04-04,75,78,4,2026-04-11,2026-05-02,none,0
+F02,1,78,78,2026-05-02,79,82,4,2026-05-09,2026-05-30,none,0
+F03,1,82,82,2026-05-30,83,86,4,2026-06-06,2026-06-27,none,0
+F04,1,86,86,2026-06-27,87,90,4,2026-07-04,2026-07-25,none,0
+F05,1,90,90,2026-07-25,91,94,4,2026-08-01,2026-08-22,none,0

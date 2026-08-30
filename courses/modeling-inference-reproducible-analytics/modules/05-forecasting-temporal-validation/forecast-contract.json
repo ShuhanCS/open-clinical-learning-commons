@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "module": "oclc-fnd2-05",
+  "module_version": "0.1.0",
+  "unit": "Massachusetts jurisdiction-week aggregate across reporting hospitals",
+  "target": "total_respiratory_new_admissions",
+  "source_unit": "reported new admissions in the week",
+  "horizon_weeks": 4,
+  "fold_origins": [74, 78, 82, 86, 90],
+  "test_week_indexes": [75, 94],
+  "eligible_models": ["LAST", "SNAIVE52", "HOLT_DAMPED"],
+  "recognition_only_models": ["ARIMA111"],
+  "primary_metrics": ["MAE", "RMSE", "bias_actual_minus_prediction"],
+  "secondary_metric": "MAPE with low-denominator warning",
+  "candidate_rule": "HOLT_DAMPED must have aggregate MAE and RMSE below both eligible benchmarks on identical folds, with all timing gates passed and failures retained",
+  "refresh": "weekly teaching refresh only after source verification and versioning",
+  "permitted_decision": "continue exact pipeline to Module 06 testing, revise, refer, or stop",
+  "prohibited_use": "single-hospital staffing, capacity, care, causal, or deployment decision"
+}

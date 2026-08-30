@@ -1,0 +1,5 @@
+model_id,parameter,estimate,std_error,role
+ARIMA111,x1,-2.59088536,25.14620848,recognition only; not eligible in candidate comparison
+ARIMA111,ar.L1,0.25509776,0.16794149,recognition only; not eligible in candidate comparison
+ARIMA111,ma.L1,0.14226558,0.18116923,recognition only; not eligible in candidate comparison
+ARIMA111,sigma2,21205.81131714,1837.35847801,recognition only; not eligible in candidate comparison

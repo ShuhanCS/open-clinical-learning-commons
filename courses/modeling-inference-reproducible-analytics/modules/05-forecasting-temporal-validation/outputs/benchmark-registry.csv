@@ -1,0 +1,5 @@
+model_id,role,eligible,rule,information
+LAST,minimum benchmark,yes,repeat the last observed training value,training rows only
+SNAIVE52,seasonal benchmark,yes,use the target from 52 weeks before each forecasted week,training rows only; every target has lag-52 history
+HOLT_DAMPED,guided candidate,yes,"optimized additive level and damped trend, refit inside each fold",training rows only
+ARIMA111,recognition example,no,"ARIMA(1,1,1) with drift fit once at final origin",read parameters and residual checks; not candidate-selected

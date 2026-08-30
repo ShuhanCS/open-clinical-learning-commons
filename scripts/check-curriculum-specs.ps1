@@ -97,7 +97,7 @@ if (
     $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
-    $fnd2PackageContent -notmatch 'Commons release: 0\.43\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.44\.0' -or
     $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch '21,850' -or
@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.43.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.44.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -445,6 +445,88 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $fnd2Module04Root 'validate_validity_evidence.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'FND-2 Module 04 validator self-check failed.'
+}
+
+$fnd2Module05Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\modules\05-forecasting-temporal-validation'
+$fnd2Module05Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\modules\05-forecasting-temporal-validation-spec.md'
+$fnd2Module05Files = @(
+    '.gitattributes', '.gitignore', 'README.md', 'VERSION', 'requirements.txt',
+    'build_forecast_evidence.py', 'validate_forecast_evidence.py', 'data-spec.md',
+    'source-record.yml', 'forecast-contract.json', 'assessment.md',
+    'instructor-notes.md', 'forecasting-temporal-validation-memo.md',
+    'benchmark-defense.md', 'arima-reading.md', 'forecast-text-alternative.md',
+    'failure-and-referral.md', 'reproducibility-check.md', 'accessibility-review.md',
+    'ai-use.md', 'progression-decision.md', 'release.json',
+    'learner-template\.gitattributes', 'learner-template\.gitignore',
+    'learner-template\README.md', 'learner-template\VERSION',
+    'learner-template\forecasting-temporal-validation-memo.md',
+    'learner-template\benchmark-defense.md', 'learner-template\arima-reading.md',
+    'learner-template\forecast-text-alternative.md',
+    'learner-template\failure-and-referral.md',
+    'learner-template\reproducibility-check.md',
+    'learner-template\accessibility-review.md', 'learner-template\ai-use.md',
+    'learner-template\progression-decision.md', 'outputs\forecast-target.csv',
+    'outputs\temporal-folds.csv', 'outputs\benchmark-registry.csv',
+    'outputs\forecast-predictions.csv', 'outputs\holt-parameters.csv',
+    'outputs\forecast-interval-reading.csv', 'outputs\aggregate-metrics.csv',
+    'outputs\fold-metrics.csv', 'outputs\horizon-metrics.csv',
+    'outputs\failure-analysis.csv', 'outputs\reporting-coverage-context.csv',
+    'outputs\decomposition-reading.csv', 'outputs\stationarity-reading.csv',
+    'outputs\arima-parameters.csv', 'outputs\arima-forecast-reading.csv',
+    'outputs\residual-diagnostics.csv', 'outputs\forecast-checks.csv',
+    'outputs\forecast.svg', 'outputs\build-report.json'
+)
+$fnd2Module05Missing = @($fnd2Module05Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd2Module05Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd2Module05Spec) -or $fnd2Module05Missing.Count -gt 0) {
+    throw "FND-2 Module 05 is missing its specification or package files: $($fnd2Module05Missing -join ', ')."
+}
+$fnd2Module05Content = Get-Content -Raw -LiteralPath $fnd2Module05Spec
+$fnd2Module05Sections = [regex]::Matches($fnd2Module05Content, '(?m)^## \d+\.').Count
+if (
+    $fnd2Module05Sections -ne 21 -or
+    $fnd2Module05Content -match '[—–]' -or
+    $fnd2Module05Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Module05Content -notmatch 'Commons release target: 0\.44\.0' -or
+    $fnd2Module05Content -notmatch '2,666 release validator checks' -or
+    $fnd2Module05Content -notmatch '2,604 starter validator checks' -or
+    $fnd2Module05Content -notmatch '14\.99587157' -or
+    $fnd2Module05Content -notmatch '93\.15000000' -or
+    $fnd2Module05Content -notmatch 'dfc91a5e38e2255437dc17a5227cccdb14d4970eb79e14b0260ab203aec8de7a'
+) {
+    throw 'FND-2 Module 05 must define 21 plain-ASCII sections with the exact source, temporal-fold, forecast, failure, and validation contract.'
+}
+$fnd2Module05Release = Get-Content -Raw -LiteralPath (Join-Path $fnd2Module05Root 'release.json') | ConvertFrom-Json
+if (
+    $fnd2Module05Release.module.id -ne 'oclc-fnd2-05' -or
+    $fnd2Module05Release.module.version -ne '0.1.0' -or
+    $fnd2Module05Release.module.commons_release -ne '0.44.0' -or
+    $fnd2Module05Release.module.hours -ne 16.0 -or
+    $fnd2Module05Release.source.all_rows -ne 6208 -or
+    $fnd2Module05Release.source.massachusetts_rows -ne 94 -or
+    $fnd2Module05Release.source.all_sha256 -ne '8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1' -or
+    $fnd2Module05Release.source.massachusetts_sha256 -ne '394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616' -or
+    $fnd2Module05Release.backtest.folds -ne 5 -or
+    $fnd2Module05Release.backtest.horizon_weeks -ne 4 -or
+    $fnd2Module05Release.backtest.targets_per_model -ne 20 -or
+    $fnd2Module05Release.reference_results.candidate_mae -ne '14.99587157' -or
+    $fnd2Module05Release.reference_results.last_mae -ne '28.20000000' -or
+    $fnd2Module05Release.reference_results.seasonal_naive_mae -ne '93.15000000' -or
+    $fnd2Module05Release.outputs.'forecast-predictions.csv'.sha256 -ne 'dfc91a5e38e2255437dc17a5227cccdb14d4970eb79e14b0260ab203aec8de7a' -or
+    $fnd2Module05Release.outputs.'forecast.svg'.sha256 -ne '10fb417f4450099127afc1ab829c1b7aa6a577facaae2b48c0b1ca6aff2a5458' -or
+    $fnd2Module05Release.validation_record.release_checks -ne 2666 -or
+    $fnd2Module05Release.validation_record.starter_checks -ne 2604
+) {
+    throw 'FND-2 Module 05 release metadata does not match the 0.1.0 forecasting-evidence contract.'
+}
+& python (Join-Path $fnd2Module05Root 'build_forecast_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 05 builder self-check failed.'
+}
+& python (Join-Path $fnd2Module05Root 'validate_forecast_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 Module 05 validator self-check failed.'
 }
 
 $fnd2Checkpoint01Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\checkpoints\01-modeling-readiness-release'
@@ -1796,4 +1878,5 @@ Write-Output "FND-2 Module 01 passed: $fnd2Module01Sections contract sections an
 Write-Output "FND-2 Module 02 passed: $fnd2Module02Sections contract sections and $($fnd2Module02Files.Count) required files."
 Write-Output "FND-2 Module 03 passed: $fnd2Module03Sections contract sections and $($fnd2Module03Files.Count) required files."
 Write-Output "FND-2 Module 04 passed: $fnd2Module04Sections contract sections and $($fnd2Module04Files.Count) required files."
+Write-Output "FND-2 Module 05 passed: $fnd2Module05Sections contract sections and $($fnd2Module05Files.Count) required files."
 Write-Output "FND-2 Checkpoint 1 passed: $fnd2Checkpoint01Sections contract sections and $($fnd2Checkpoint01Files.Count) required files."

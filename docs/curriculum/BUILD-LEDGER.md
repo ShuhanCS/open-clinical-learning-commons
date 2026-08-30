@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.43.0
+- Current release: 0.44.0
 - Last updated: 2026-08-30
 - Active phase: FND-2 module build
-- Last completed unit: FND-2 Module 04, Validity, adjustment, and longitudinal structure
-- Next unit: FND-2 Module 05, Forecasting and temporal validation
+- Last completed unit: FND-2 Module 05, Forecasting and temporal validation
+- Next unit: FND-2 Module 06, Agent-assisted modeling and testing
 
 ## Confirmed decisions
 
@@ -238,6 +238,15 @@
 - The builder passes exact copied-workspace reproduction and existing-target refusal. The validator passes 36,575 release checks and 36,512 starter checks and rejects prompted or broken submissions. All 16 validity invariants pass.
 - The reference disposition is `continue with conditions`. Module 05 may begin with its distinct public CDC time series; no causal, clinical, transport, or deployment permission carries forward.
 - FND-2 Module 04 is a runnable release candidate at Commons 0.43.0.
+- FND-2 Module 05 version 0.1.0 reuses the exact 6,208-row CDC NHSN public release and 94-week Massachusetts series without changing source values.
+- Five non-overlapping expanding-window folds end at weeks 74, 78, 82, 86, and 90. Each predicts four later weeks, covering source weeks 75 through 94 with zero future rows in fit.
+- The eligible routes are last-value, 52-week seasonal-naive, and damped Holt. ARIMA(1,1,1) remains a final-origin recognition example and cannot enter model selection.
+- Damped Holt has aggregate MAE 14.99587157 and RMSE 21.07855007 admissions, versus 28.20000000 and 39.44363066 for last-value and 93.15000000 and 96.43002644 for seasonal naive.
+- The candidate loses F04 to last-value and nearly ties it in F05. Its worst miss is 58.96408576 admissions. MAPE remains secondary because the test actuals fall as low as 13.
+- The package retains 60 exact eligible-model predictions, fold and horizon errors, very wide uncalibrated interval readings, a training-only decomposition, ADF readings, ARIMA parameters, residual diagnostics, and 20 reporting-context rows.
+- The builder passes copied-workspace reproduction and existing-target refusal. The validator passes 2,666 release checks and 2,604 starter checks and rejects prompted or broken submissions. All 20 forecast invariants pass.
+- The reference disposition is `continue to Module 06 with conditions`. The pipeline is for public-data teaching and exact testing only, not a single-hospital, staffing, capacity, care, causal, or deployment decision.
+- FND-2 Module 05 is a runnable release candidate at Commons 0.44.0.
 
 ## Pending confirmation
 
@@ -246,11 +255,11 @@
 
 ## Next resume instructions
 
-1. Read the accepted FND-2 Module 04 specification, package, progression decision, Checkpoint 1 release, course specification, master architecture, and this ledger.
-2. Write the 21-section Module 05 specification for forecasting and temporal validation.
-3. Treat Module 04 version 0.1.0 and its progression conditions as immutable input.
-4. Reuse the fingerprinted 6,208-row public CDC NHSN jurisdiction-week source and exact 94-week Massachusetts teaching series without changing source observations.
-5. Teach time-index integrity, naive and seasonal baselines, rolling-origin validation, forecast horizons, error measures, intervals, drift, and monitoring at the course-specified mastery levels.
-6. Produce the exact Week 6 Module 05 evidence, learner package, assessment, validator, accessibility route, responsible-agent record, and Module 06 handoff.
-7. Keep all surveillance, operational, clinical, and deployment claims inside the supported public-data boundary.
-8. Update the Commons version and this ledger, then commit and push Module 05 before building Module 06.
+1. Read the accepted FND-2 Module 05 specification, package, progression decision, Module 04 validity release, Module 03 prediction release, course specification, master architecture, and this ledger.
+2. Write the 21-section Module 06 specification for agent-assisted modeling and testing.
+3. Treat accepted prediction and forecast outputs, source fingerprints, conditions, and expected failures as immutable inputs.
+4. Build deterministic tests for data contracts, leakage, folds, metrics, claims, failures, and stop behavior without silently repairing evidence.
+5. Teach agent task decomposition, test generation, adversarial fixtures, review logs, human verification, and failure recovery at the course-specified mastery levels.
+6. Produce the Week 6 checkpoint component, learner package, validator, accessibility route, responsible-agent record, and Module 07 handoff.
+7. Keep tools from owning model-use, clinical, governance, or progression decisions.
+8. Update the Commons version and this ledger, then commit and push Module 06 before building Checkpoint 2.

@@ -1,0 +1,41 @@
+schema_version: 1.0.0
+module: oclc-fnd2-05
+module_version: 0.1.0
+commons_release: 0.44.0
+repository: https://github.com/ShuhanCS/open-clinical-learning-commons
+source:
+  publisher: Centers for Disease Control and Prevention
+  system: National Healthcare Safety Network
+  dataset_id: rhwp-grxi
+  title: Weekly Hospital Respiratory Data, HRD Metrics by Jurisdiction
+  landing_page: https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/rhwp-grxi
+  metadata_api: https://data.cdc.gov/api/views/rhwp-grxi
+  selected_start: 2024-11-09
+  selected_end: 2026-08-22
+  retrieved_at: 2026-08-29
+  access: public aggregate surveillance data
+releases:
+  all_jurisdictions:
+    rows: 6208
+    fields: 14
+    jurisdictions: 67
+    sha256: 8a492c3d2d3dae07c42e89ef35ed714d23acab32596f42037dcf8dd0284531d1
+  massachusetts:
+    rows: 94
+    fields: 21
+    sha256: 394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616
+rights:
+  source_context: United States government public health surveillance data
+  source_terms: https://data.cdc.gov/
+  documentation: CC-BY-4.0
+  code: MIT
+privacy:
+  patient_level: false
+  single_hospital: false
+  direct_identifiers: false
+  unit: Massachusetts jurisdiction-week aggregate across reporting hospitals
+upstream_handoff:
+  module_04_release_sha256: ffcf57c30d77be5c2271488a4d2dd08cc44d430cc590025e918c0ec8f1c4e12e
+  module_04_progression_sha256: fdfce797f69c80e71ff26a7fa6c3499c2c3c25069174560ae1441253ef1fb646
+  module_04_threat_register_sha256: ce1257bf019959f24b01706744612a28999ebe4524c7567ff860983f9f3190c3
+prohibited_use: single-hospital staffing, capacity, clinical care, or deployed forecasting

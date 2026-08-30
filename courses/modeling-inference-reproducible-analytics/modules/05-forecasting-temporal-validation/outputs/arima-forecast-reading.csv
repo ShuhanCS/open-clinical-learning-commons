@@ -1,0 +1,5 @@
+model_id,origin_index,horizon_week,target_index,target_week,prediction,lower95_model_reading,upper95_model_reading,actual,boundary
+ARIMA111,90,1,91,2026-08-01,14.15958493,-271.25458944,299.57375931,22.00000000,provided ARIMA-family reading; not selected or approved for operations
+ARIMA111,90,2,92,2026-08-08,12.01524062,-478.41770124,502.44818248,21.00000000,provided ARIMA-family reading; not selected or approved for operations
+ARIMA111,90,3,93,2026-08-15,9.53826688,-641.23205450,660.30858826,37.00000000,provided ARIMA-family reading; not selected or approved for operations
+ARIMA111,90,4,94,2026-08-22,6.97644012,-775.86967195,789.82255219,33.00000000,provided ARIMA-family reading; not selected or approved for operations

@@ -1,0 +1,4 @@
+model_id,predictions,mae,rmse,bias_actual_minus_prediction,mape_pct,minimum_actual,maximum_actual,unit
+HOLT_DAMPED,20,14.99587157,21.07855007,-5.97261489,46.93627714,13.00000000,182.00000000,reported new admissions per week
+LAST,20,28.20000000,39.44363066,-22.50000000,71.00841979,13.00000000,182.00000000,reported new admissions per week
+SNAIVE52,20,93.15000000,96.43002644,-93.15000000,352.83355181,13.00000000,182.00000000,reported new admissions per week

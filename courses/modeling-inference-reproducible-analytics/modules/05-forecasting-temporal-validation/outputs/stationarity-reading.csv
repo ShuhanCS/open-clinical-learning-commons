@@ -1,0 +1,3 @@
+series,rows,adf_statistic,p_value,used_lag,nobs,critical_5pct,reading
+level,90,-2.46060654,0.12535568,7,82,-2.89748987,provided stationarity diagnostic; not a mechanical model-selection rule
+first difference,89,-3.59240055,0.00590799,8,80,-2.89840852,provided stationarity diagnostic; not a mechanical model-selection rule

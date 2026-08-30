@@ -1,0 +1,3 @@
+model_id,diagnostic,lag,statistic,p_value,reading
+ARIMA111,Ljung-Box,4,4.37742669,0.35732989,residual autocorrelation check for recognition; p-value is not proof of adequacy
+ARIMA111,Ljung-Box,8,9.20666853,0.32516289,residual autocorrelation check for recognition; p-value is not proof of adequacy
