@@ -1,0 +1,10 @@
+criterion_id,criterion,course_points,score,evidence,status
+Q01,"Source version, grain, fingerprints, and rule coverage",3.75,3.75,"analytic table; quality rules; manifest",pass
+Q02,"Risk classification, defect detection, and resolution evidence",5.00,5.00,"risk log; D01-D20 results; resolution log",pass
+Q03,"Final quality decision, retained conditions, and handoff limits",5.00,5.00,"quality-decision.md; N01-N08; review disposition",pass
+D01,"Profiles, cross-tabs, missingness, and supported extremes",3.00,3.00,"variable profile; cross-tabs; missingness profile",pass
+D02,"Rates, denominators, intervals, strata, and interpretation",3.25,3.25,"rates; denominator registry; strata; memo",pass
+A01,"Exact figure mapping, labels, units, exports, and registry",2.00,2.00,"F01-F03 tables; PNG; SVG; figure registry",pass
+A02,"Equivalent access, grayscale, resize, zoom, and reading order",2.00,2.00,"alternatives; accessibility synthesis",pass
+A03,"Time meaning, uncertainty, synthetic scope, and false-cause limits",1.00,1.00,"F02 interval; F03 selected-cohort limit; claim record",pass
+

@@ -1,0 +1,24 @@
+record_version: 1.0.0
+checkpoint: oclc-fnd1-cp2
+module_04_id: REPLACE
+module_04_version: REPLACE
+module_04_release_sha256: REPLACE
+module_05_id: REPLACE
+module_05_version: REPLACE
+module_05_release_sha256: REPLACE
+module_06_id: REPLACE
+module_06_version: REPLACE
+module_06_release_sha256: REPLACE
+analytic_rows: REPLACE
+analytic_fields: REPLACE
+analytic_bytes: REPLACE
+analytic_sha256: REPLACE
+source_release: REPLACE
+cohort_definition_version: REPLACE
+source_url: REPLACE
+source_dictionary_url: REPLACE
+synthetic: true
+contains_real_patients: false
+rights_boundary: REPLACE
+claim_boundary: REPLACE
+

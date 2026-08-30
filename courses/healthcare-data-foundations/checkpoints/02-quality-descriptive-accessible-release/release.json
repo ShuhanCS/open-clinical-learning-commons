@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-fnd1-cp2",
+    "title": "Quality, descriptive, and accessible evidence release",
+    "version": "0.1.0",
+    "commons_release": "0.35.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "due": "end of instructional Week 6",
+    "course_weight_percent": 25,
+    "cumulative_hours": 96.5,
+    "required_tag": "fnd1-checkpoint2-v0.1.0"
+  },
+  "components": [
+    {"module": "oclc-fnd1-04", "version": "0.1.0", "checkpoint_share_percent": 55, "course_points": 13.75, "role": "quality, risk, resolution, and final data decision"},
+    {"module": "oclc-fnd1-05", "version": "0.1.0", "checkpoint_share_percent": 25, "course_points": 6.25, "role": "descriptive evidence, denominators, and interpretation"},
+    {"module": "oclc-fnd1-06", "version": "0.1.0", "checkpoint_share_percent": 20, "course_points": 5.0, "role": "accessible figures, alternatives, and time claim limits"}
+  ],
+  "decision": {
+    "owners": ["data-quality lead", "clinical analytics reviewer", "course instructor acting as release maintainer"],
+    "question": "May the restored analytic table, exact descriptive evidence, and accessible views enter final handoff packaging without changing grain, denominators, uncertainty, conditions, or claim limits?",
+    "dispositions": ["accept", "accept with conditions", "revise", "refer"],
+    "progression_dispositions": ["accept", "accept with conditions"],
+    "reference": "accept with conditions"
+  },
+  "analytic_table": {
+    "rows": 374,
+    "fields": 29,
+    "unique_patients": 374,
+    "unique_index_encounters": 374,
+    "bytes": 121787,
+    "sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a",
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "quality": {
+    "defect_rows": 379,
+    "defect_families": 20,
+    "issue_cases": 56,
+    "manifest_changes": 68,
+    "rule_results": 28,
+    "resolved_issue_range": "D01-D20",
+    "retained_condition_range": "N01-N08",
+    "reference_final_decision": "proceed with conditions"
+  },
+  "descriptive": {
+    "variable_profiles": 17,
+    "cross_tab_cells": 12,
+    "rates": 6,
+    "rate_numerators": [111, 92, 4, 15, 36, 8],
+    "rate_denominator": 374,
+    "unadjusted_strata": 2,
+    "denominator_records": 27,
+    "passing_checks": 18
+  },
+  "figures": {
+    "registry_rows": 3,
+    "registry_fields": 25,
+    "exact_tables": 3,
+    "png_files": 3,
+    "svg_files": 3,
+    "structured_alternatives": 3,
+    "png_pixels": "2100x1200",
+    "dpi": 300,
+    "quarter_rows": 20,
+    "quarter_total": 374,
+    "emergency_total": 314,
+    "inpatient_total": 60
+  },
+  "package": {
+    "assembled_files": 50,
+    "immutable_artifacts": 35,
+    "module_04_artifacts": 11,
+    "module_05_artifacts": 9,
+    "module_06_artifacts": 15,
+    "artifact_contract_bytes": 5993,
+    "artifact_contract_sha256": "ec031d23a50628b07ce15091c90a76f03241e3f4c4a17927211b74b854754a6b",
+    "manifest_bytes": 8812,
+    "manifest_sha256": "d7bb0e561309f4b61353f4485fe1d647d8a15c47e064f93acd816a77e512489d",
+    "summary_bytes": 543,
+    "summary_sha256": "f755013e6a5ceff237d8799b3d47319c0ccfbbbd74077ec0fa804e783876416d",
+    "external_python_dependencies": 0
+  },
+  "assessment": {
+    "course_points": 25,
+    "minimum_passing_points": 20,
+    "quality_points": 13.75,
+    "descriptive_points": 6.25,
+    "access_points": 5.0,
+    "required_gates": 23
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_assembly": "pass",
+    "learner_mode_assembly": "pass",
+    "starter_checks": 363,
+    "complete_reference_checks": 389,
+    "existing_target_rejection": "pass",
+    "incomplete_checkpoint_rejection": "pass",
+    "missing_artifact_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, assembly, teaching records, and validation"}
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "Reference and learner assembly create 50 files and 35 immutable artifacts. Starter validation passes 363 checks and complete reference validation passes 389 checks."
+    },
+    "required_human_roles": [
+      {"role": "FND-1 faculty owner", "reviewer": null, "status": "pending"},
+      {"role": "data-quality lead", "reviewer": null, "status": "pending"},
+      {"role": "clinical analytics and descriptive methods", "reviewer": null, "status": "pending"},
+      {"role": "clinical informatics and time meaning", "reviewer": null, "status": "pending"},
+      {"role": "accessibility", "reviewer": null, "status": "pending"},
+      {"role": "Python and notebook reproducibility", "reviewer": null, "status": "pending"},
+      {"role": "privacy and data governance", "reviewer": null, "status": "pending"},
+      {"role": "responsible AI", "reviewer": null, "status": "pending"},
+      {"role": "independent reproduction and teachability", "reviewer": null, "status": "pending"}
+    ]
+  },
+  "known_issues": [
+    "Named faculty, data-quality, clinical, technical, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending.",
+    "Windows reproduction is complete; named macOS and Linux reproduction remains pending.",
+    "The source is synthetic and older and cannot support real clinical, operational, or population estimates."
+  ]
+}

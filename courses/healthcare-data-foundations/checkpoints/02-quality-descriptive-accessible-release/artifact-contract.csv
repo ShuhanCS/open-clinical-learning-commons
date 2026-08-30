@@ -1,0 +1,36 @@
+artifact_id,source_module,source_path,target_path,row_count,byte_count,sha256,role
+CP2-A01,M04,outputs/resolved-analytic-table.csv,data/analytic-table.csv,374,121787,3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a,accepted restored analytic table
+CP2-A02,M04,data-dictionary.csv,data/data-dictionary.csv,29,2810,15ff242649d3284132803570375362501645c321ad8f35fc55611500306f054c,field and state contract
+CP2-A03,M04,notebooks/04-data-quality.ipynb,notebooks/data-quality.ipynb,,5087,66a34b143a4ba474e13bc6661b7527ebf65edd81ba6d5cb96ee67c7695d01f49,executed quality notebook
+CP2-A04,M04,data/defect-manifest.csv,quality/defect-manifest.csv,68,7230,72abd0330db86df49476512740a6d47222426d40b7e2a5f94b0cedafea38aa46,seeded defect change manifest
+CP2-A05,M04,outputs/quality-profile.csv,quality/quality-profile.csv,29,2257,0cefe9d28feedc9a7f53b4bae45e84f5a2c06f5f94f743b21faf26a9083266fc,field quality profile
+CP2-A06,M04,outputs/missingness-profile.csv,quality/missingness-profile.csv,29,4362,46e9c4dd268db223fac3cd0f01e65e050a3d44f6a28e0babcfb7bd5b552b5ba5,accepted and defective missingness
+CP2-A07,M04,outputs/quality-rule-results.csv,quality/quality-rule-results.csv,28,3607,c301cd46d6058329d72cc2b71649f5bb1ccf9fbff43f6c97e8b2fc008f791c06,rule detection evidence
+CP2-A08,M04,outputs/quality-risk-log.csv,quality/quality-risk-log.csv,28,7860,3788abf4f8abd0bd9a294380d6eca73815fa209816a57dfcc00df40a93225057,risk and response record
+CP2-A09,M04,outputs/resolution-log.csv,quality/resolution-log.csv,28,4468,48d4c7259840c16f5667eb23191885787bd056680e0bae7bba4b16120a271c51,defect resolution evidence
+CP2-A10,M04,stop-fix-proceed.md,evidence/module-04-stop-fix-proceed.md,,1481,8808ca115e24dd56ca1bae1a83238fd13a07dd2ec07c770c1b98a8b985502295,upstream quality decision
+CP2-A11,M04,release.json,module-releases/module-04-release.json,,5474,347d8f56ca6e096f4a47e73616d2eb14c2f6e8c68aa3a65108459044af050d91,Module 04 release contract
+CP2-A12,M05,notebooks/05-descriptive-results.ipynb,notebooks/descriptive-results.ipynb,,4168,48abe752f7078e8676ede83b74ecc26a9f7062e39b80f74df209ff8efe26da02,executed descriptive notebook
+CP2-A13,M05,outputs/variable-profile.csv,evidence-tables/variable-profile.csv,17,3116,9d9bd1f8db71ebfdf3b775de13eb4450e30db9d52f8c71b2be0bf66918341f73,registered variable profiles
+CP2-A14,M05,outputs/cross-tabs.csv,evidence-tables/cross-tabs.csv,12,2304,97628ab9fd557e8fb87203e98db4082c4d754c1d8966fdc8fc5b574167808f6f,complete cross-tabs
+CP2-A15,M05,outputs/rates.csv,evidence-tables/rates.csv,6,1893,2398b283e449d6f876a3a3ea123e7905c637ba222f56c6aa03882cfc158942f3,registered rates and intervals
+CP2-A16,M05,outputs/stratified-table.csv,evidence-tables/stratified-table.csv,2,762,a98abab5616039d8ded9e1c26845fb102b1dff33b6f5491dae38d42cde54a62b,unadjusted strata
+CP2-A17,M05,outputs/denominator-registry.csv,evidence-tables/denominator-registry.csv,27,10094,e13bd0e1cf0716b912476fd81c7e4dd8bc827b2df468421aa2efc33f1f234be6,denominator and claim registry
+CP2-A18,M05,outputs/descriptive-checks.csv,evidence-tables/descriptive-checks.csv,18,732,9fb7970cda77bf1be25639265a762eab97a227106824b9f913f208000d99a1fa,descriptive invariants
+CP2-A19,M05,interpretation-memo.md,evidence/module-05-interpretation-memo.md,,1974,14c1cdf4e3bcc81405f4e8f441fa079f68dad56ec555765e7249a5be7e632aaf,upstream interpretation
+CP2-A20,M05,release.json,module-releases/module-05-release.json,,3861,734f19bee9f1866e80c8f0f6b8efde926d93c97ad51baecd6cee0c8ad4174d85,Module 05 release contract
+CP2-A21,M06,tables/quality-missingness.csv,tables/quality-missingness.csv,8,1672,52e6960cda5d4981a647683ea202e47a1a1ad5afde0e91fb8900adf0b0521134,F01 exact table
+CP2-A22,M06,tables/descriptive-rates.csv,tables/descriptive-rates.csv,6,1893,2398b283e449d6f876a3a3ea123e7905c637ba222f56c6aa03882cfc158942f3,F02 exact table
+CP2-A23,M06,tables/quarterly-index-counts.csv,tables/quarterly-index-counts.csv,20,3631,0f5e2f8d9b163ad4b68a8f73505fdd4b34f44936eec4fb0c88c3853f58d86fb6,F03 exact table
+CP2-A24,M06,figures/quality-missingness.png,figures/quality-missingness.png,,169864,dd91d7c84fe73f1a29e4c8301b6be18e329bc03a8652927f620ff130fb6f51b6,F01 300-DPI raster
+CP2-A25,M06,figures/quality-missingness.svg,figures/quality-missingness.svg,,71065,71346d9b200f00021323539961c4440f6a6fb212459b58e9ae7959a1e4b8d30f,F01 vector
+CP2-A26,M06,figures/descriptive-rates.png,figures/descriptive-rates.png,,132463,11b5edc3781248a22e2359355778be638ffde0977a899c0f8b215665416d3038,F02 300-DPI raster
+CP2-A27,M06,figures/descriptive-rates.svg,figures/descriptive-rates.svg,,68139,480ca1cf69a6591127bf8ad8c064bce52dde49a783aeb4dc9b524c1c9ee04c99,F02 vector
+CP2-A28,M06,figures/quarterly-index-counts.png,figures/quarterly-index-counts.png,,188721,9befa6d9604ed26abdaf28b07afc335cc7ad5eaa3c368b9bf2d7401dffa546e7,F03 300-DPI raster
+CP2-A29,M06,figures/quarterly-index-counts.svg,figures/quarterly-index-counts.svg,,76002,2ee876e3b141a7a0ffa6f6558ac05b3127fd5c11eb22143835b5692ffdc4700c,F03 vector
+CP2-A30,M06,alt-text/quality-missingness.md,alt-text/quality-missingness.md,,1020,04ebe8ce093df334888dc71864cb6563e31474ffac5a158a3fcdb07db7530943,F01 structured alternative
+CP2-A31,M06,alt-text/descriptive-rates.md,alt-text/descriptive-rates.md,,1001,e71b03951ed7fe8b43036dba4118d007913119330f6997970847077964dcda86,F02 structured alternative
+CP2-A32,M06,alt-text/quarterly-index-counts.md,alt-text/quarterly-index-counts.md,,934,b1e2ef4134760308f3bd72b6711aa41319456715d939bcd9505302502dfae0a7,F03 structured alternative
+CP2-A33,M06,figure-registry.csv,figure-registry.csv,3,3191,5cdd846d9318d6dc8c2f3da41a6be6ce172b7c91d6465dc085e9f3790732d62b,figure source and access registry
+CP2-A34,M06,accessibility-check.md,evidence/module-06-accessibility-check.md,,1361,bfc2c8ea78d1e33d979450918eebce09849941785337666a36c5f21ef764e584,upstream accessibility review
+CP2-A35,M06,release.json,module-releases/module-06-release.json,,4752,738479d19b3839c97eea60bdfb88f06d278040febf2cad024f085db2f7063e50,Module 06 release contract

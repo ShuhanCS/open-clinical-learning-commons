@@ -1,0 +1,10 @@
+criterion_id,criterion,course_points,score,evidence,status
+Q01,"Source version, grain, fingerprints, and rule coverage",3.75,,REPLACE,REPLACE
+Q02,"Risk classification, defect detection, and resolution evidence",5.00,,REPLACE,REPLACE
+Q03,"Final quality decision, retained conditions, and handoff limits",5.00,,REPLACE,REPLACE
+D01,"Profiles, cross-tabs, missingness, and supported extremes",3.00,,REPLACE,REPLACE
+D02,"Rates, denominators, intervals, strata, and interpretation",3.25,,REPLACE,REPLACE
+A01,"Exact figure mapping, labels, units, exports, and registry",2.00,,REPLACE,REPLACE
+A02,"Equivalent access, grayscale, resize, zoom, and reading order",2.00,,REPLACE,REPLACE
+A03,"Time meaning, uncertainty, synthetic scope, and false-cause limits",1.00,,REPLACE,REPLACE
+

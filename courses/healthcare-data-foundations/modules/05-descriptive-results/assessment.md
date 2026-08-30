@@ -28,4 +28,4 @@ Explain:
 | Memo, reproduction, accessibility, and AI accountability | 15 |
 | Total | 100 |
 
-Passing requires at least 80 points and all noncompensable gates in the durable specification. Module 05 contributes 25 course percentage points to the cumulative Week 6 checkpoint.
+Passing requires at least 80 points and all noncompensable gates in the durable specification. Module 05 owns 25 percent of the Week 6 checkpoint score; the cumulative checkpoint remains one 25-point course component.

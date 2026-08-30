@@ -29,4 +29,4 @@ Explain:
 | Reproduction, provenance, and AI accountability | 15 |
 | Total | 100 |
 
-Passing requires at least 80 points and all noncompensable gates in the durable specification. Module 06 contributes 20 course percentage points to the cumulative Week 6 checkpoint.
+Passing requires at least 80 points and all noncompensable gates in the durable specification. Module 06 owns 20 percent of the Week 6 checkpoint score and adds no separate course weight.

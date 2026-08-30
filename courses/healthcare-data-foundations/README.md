@@ -11,9 +11,9 @@ FND-1 teaches learners to build, check, describe, and hand off healthcare data a
 - Continuing case: a synthetic longitudinal acute-care data system built from Synthea and documented public-source contrasts
 - Final deliverable: a reproducible healthcare data toolkit
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 06 are runnable release candidates; Module 07 is not yet built
+- Module package status: Modules 01 through 06 and Checkpoints 1 and 2 are runnable release candidates; Module 07 is not yet built
 - Course package version: 0.1.0
-- Commons release: 0.34.0
+- Commons release: 0.35.0
 
 ## Seven technical modules
 
@@ -57,6 +57,12 @@ Runnable Week 3 checkpoint:
 - [Validated cohort and analytic-table release](checkpoints/01-validated-cohort-release/README.md)
 - [Durable Checkpoint 1 specification](../../docs/curriculum/courses/FND-1/checkpoints/01-validated-cohort-release-spec.md)
 - [Checkpoint 1 release record](checkpoints/01-validated-cohort-release/release.json)
+
+Runnable Week 6 checkpoint:
+
+- [Quality, descriptive, and accessible evidence release](checkpoints/02-quality-descriptive-accessible-release/README.md)
+- [Durable Checkpoint 2 specification](../../docs/curriculum/courses/FND-1/checkpoints/02-quality-descriptive-accessible-release-spec.md)
+- [Checkpoint 2 release record](checkpoints/02-quality-descriptive-accessible-release/release.json)
 
 The 7.5-week phrase is a planning model. Published dates use the official MGH Institute half-term calendar:
 

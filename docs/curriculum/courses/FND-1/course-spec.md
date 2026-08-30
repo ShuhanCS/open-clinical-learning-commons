@@ -1,8 +1,8 @@
 # FND-1: Healthcare Data Foundations
 
-- Status: course specification complete; Modules 01 through 06 and Checkpoint 1 are runnable release candidates
+- Status: course specification complete; Modules 01 through 06 and Checkpoints 1 and 2 are runnable release candidates
 - Course specification version: 0.1.0
-- Commons release: 0.34.0
+- Commons release: 0.35.0
 - Credits: 3
 - Delivery: asynchronous online half-term with scheduled technical clinics and review
 - Planning model: seven instructional weeks mapped to official half-term dates
@@ -925,37 +925,60 @@ Runnable checkpoint package:
 
 ```text
 checkpoint-2/
+  .gitattributes
+  VERSION
   README.md
+  artifact-contract.csv
+  release-manifest.csv
+  checkpoint-summary.csv
   data/
     analytic-table.csv
     data-dictionary.csv
   notebooks/
     data-quality.ipynb
     descriptive-results.ipynb
-    accessible-inspection.ipynb
   quality/
+    defect-manifest.csv
     quality-profile.csv
     missingness-profile.csv
+    quality-rule-results.csv
     quality-risk-log.csv
-    defect-resolution.csv
+    resolution-log.csv
   evidence-tables/
     variable-profile.csv
     cross-tabs.csv
     rates.csv
     stratified-table.csv
     denominator-registry.csv
-    time-display.csv
+    descriptive-checks.csv
+  tables/
+    quality-missingness.csv
+    descriptive-rates.csv
+    quarterly-index-counts.csv
   figures/
-    quality-display.png
-    descriptive-display.png
-    time-display.png
+    quality-missingness.png
+    quality-missingness.svg
+    descriptive-rates.png
+    descriptive-rates.svg
+    quarterly-index-counts.png
+    quarterly-index-counts.svg
   alt-text/
-    quality-display.md
-    descriptive-display.md
-    time-display.md
-  stop-fix-proceed.md
+    quality-missingness.md
+    descriptive-rates.md
+    quarterly-index-counts.md
+  evidence/
+    module-04-stop-fix-proceed.md
+    module-05-interpretation-memo.md
+    module-06-accessibility-check.md
+  module-releases/
+    module-04-release.json
+    module-05-release.json
+    module-06-release.json
+  figure-registry.csv
+  component-score.csv
+  quality-decision.md
   interpretation-memo.md
-  accessibility-report.md
+  accessibility-synthesis.md
   source-record.yml
   transformation-record.md
   reproducibility-check.md
@@ -995,11 +1018,11 @@ Return without scoring when:
 - notebooks depend on local absolute paths; or
 - the learner cannot explain a cleaning or summary decision.
 
-Future full checkpoint specification:
+Full checkpoint specification:
 
 `docs/curriculum/courses/FND-1/checkpoints/02-quality-descriptive-accessible-release-spec.md`
 
-Future runnable package:
+Runnable checkpoint package:
 
 `courses/healthcare-data-foundations/checkpoints/02-quality-descriptive-accessible-release/`
 
@@ -1587,44 +1610,42 @@ Each module adds its own source, data, code, output, and release checks.
 - [x] Module 04 has a complete specification and runnable package.
 - [x] Module 05 has a complete specification and runnable package.
 - [x] Module 06 has a complete specification and runnable package.
-- [ ] Checkpoint 2 has a runnable assembler, templates, validator, and instructor notes.
+- [x] Checkpoint 2 has a runnable assembler, templates, validator, and instructor notes.
 - [ ] Module 07 has a complete specification and runnable package.
 - [ ] The final checkpoint has a runnable assembler, templates, validator, and instructor notes.
 - [ ] Named human reviews are recorded.
 - [ ] The course has reached beta after a taught pilot.
 
-## Unresolved implementation decisions
+## Remaining implementation decisions
 
-These decisions do not block Module 01 specification and build:
+These decisions do not block Module 07 specification and build:
 
-1. Lock the exact Python, pandas, Jupyter, and SQLite versions during Module 01.
-2. Lock the exact Synthea table and field subset after inspecting the pinned archive in Module 02.
-3. Confirm whether the pinned Synthea archive contains sufficient claims fields or whether the CMS Synthetic Medicare Claims extension is needed for the default path.
-4. The deterministic defect manifest and severity rules are locked in Module 04 version 0.1.0.
-5. Lock the reference cohort's exact index-period dates and counts only after Module 03 runs against the pinned database.
-6. Name the faculty, data engineering, clinical informatics, accessibility, privacy, AI, and independent-instructor reviewers.
-7. Confirm whether the first live cohort permits an approved SQL platform alternative while retaining SQLite as the reproducible default.
+1. Confirm whether the CMS Synthetic Medicare Claims extension is needed in a later course; the FND-1 default path remains the pinned Synthea release.
+2. Name the faculty, data engineering, clinical informatics, accessibility, privacy, AI, and independent-instructor reviewers.
+3. Confirm whether the first live cohort permits an approved SQL platform alternative while retaining SQLite as the reproducible default.
 
 ## Context-safe continuation
 
-After this specification release, resume at Module 01.
+Checkpoint 2 version 0.1.0 is complete. Resume at Module 07 and preserve the 35-artifact Week 6 contract without recalculation, retyping, redrawing, suppression, or claim broadening.
 
 Read:
 
 - this course specification;
+- `docs/curriculum/courses/FND-1/checkpoints/02-quality-descriptive-accessible-release-spec.md`;
+- `courses/healthcare-data-foundations/checkpoints/02-quality-descriptive-accessible-release/release.json`;
 - `docs/source/fnd-1-healthcare-data-foundations-source-record.md`;
 - `docs/specs/2026-08-29-curriculum-master-architecture-spec.md`; and
 - `docs/curriculum/BUILD-LEDGER.md`.
 
 Then:
 
-1. write the 21-section Module 01 specification;
-2. create the minimal cross-platform starter workspace;
-3. build one Python and one SQLite smoke test;
-4. create the version, environment, reproduction, and AI-use learner templates;
-5. create the assessment and instructor answer key;
-6. create a standard-library validator with a self-check;
-7. run the workspace from a clean target;
-8. update versions, checker, source status, and ledger;
-9. commit and push Module 01; and
-10. proceed to Module 02 without merging FND-2 content into FND-1.
+1. write the 21-section Module 07 specification;
+2. treat the complete Checkpoint 2 package as immutable input;
+3. build the reproducible handoff, provenance, release-note, and data-brief artifacts;
+4. build independent reproduction and material AI-audit exercises;
+5. create learner records, assessment, instructor key, and validator;
+6. preserve exact quality, denominator, accessibility, and claim conditions;
+7. reproduce Module 07 from a clean target;
+8. update versions, checker, course status, and ledger;
+9. commit and push Module 07; and
+10. proceed to the final checkpoint without merging FND-2 content into FND-1.

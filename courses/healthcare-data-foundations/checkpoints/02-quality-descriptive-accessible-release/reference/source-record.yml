@@ -1,0 +1,24 @@
+record_version: 1.0.0
+checkpoint: oclc-fnd1-cp2
+module_04_id: oclc-fnd1-04
+module_04_version: 0.1.0
+module_04_release_sha256: 347d8f56ca6e096f4a47e73616d2eb14c2f6e8c68aa3a65108459044af050d91
+module_05_id: oclc-fnd1-05
+module_05_version: 0.1.0
+module_05_release_sha256: 734f19bee9f1866e80c8f0f6b8efde926d93c97ad51baecd6cee0c8ad4174d85
+module_06_id: oclc-fnd1-06
+module_06_version: 0.1.0
+module_06_release_sha256: 738479d19b3839c97eea60bdfb88f06d278040febf2cad024f085db2f7063e50
+analytic_rows: 374
+analytic_fields: 29
+analytic_bytes: 121787
+analytic_sha256: 3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a
+source_release: synthea-csv-apr2020
+cohort_definition_version: 0.1.0
+source_url: https://synthea.mitre.org/downloads
+source_dictionary_url: https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary
+synthetic: true
+contains_real_patients: false
+rights_boundary: public synthetic teaching data only; no workplace or patient data
+claim_boundary: no real clinical, operational, population, trend, forecast, process-control, or causal inference
+

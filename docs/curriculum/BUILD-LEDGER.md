@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.34.0
+- Current release: 0.35.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Module 06, Accessible charts and time-indexed data
-- Next unit: FND-1 Checkpoint 2, Quality, descriptive, and accessible evidence release
+- Last completed unit: FND-1 Checkpoint 2, Quality, descriptive, and accessible evidence release
+- Next unit: FND-1 Module 07, Reproducible handoff and AI audit
 
 ## Confirmed decisions
 
@@ -164,6 +164,13 @@
 - The renderer protects an existing target. The validator passes 616 release checks and 615 complete-submission checks and rejects the incomplete learner template.
 - The reference decision is `accept with conditions`: the Week 6 checkpoint must preserve exact-table links, equivalent text, N01 through N08, descriptive interval meaning, selected-cohort time wording, and synthetic-data scope.
 - Module 06 is a runnable release candidate. Faculty, clinical-analytics, accessibility, data-visualization, clinical-informatics, Python, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Checkpoint 2 preserves one 25-point Week 6 component: 13.75 quality points, 6.25 descriptive points, and 5 access points. These are checkpoint shares rather than added module weights.
+- Its immutable contract copies 35 accepted artifacts: 11 from Module 04, 9 from Module 05, and 15 from Module 06. Reference and learner assembly each create 50 files and refuse an existing target.
+- The artifact contract is 5,993 bytes with SHA-256 `ec031d23a50628b07ce15091c90a76f03241e3f4c4a17927211b74b854754a6b`. The 8,812-byte release manifest SHA-256 is `d7bb0e561309f4b61353f4485fe1d647d8a15c47e064f93acd816a77e512489d`.
+- The checkpoint preserves the accepted 374-row, 29-field table, all D01 through D20 resolutions, N01 through N08 conditions, 17 profiles, 12 cross-tab cells, six rates, two strata, 27 denominator records, 18 passing checks, and all F01 through F03 access routes.
+- Starter validation passes 363 checks and complete reference validation passes 389. The self-check rejects unfinished cumulative records and a missing immutable artifact.
+- A score of at least 20 of 25, every gate, an adequate defense, and `accept` or `accept with conditions` permit Module 07. The reference disposition is `accept with conditions`.
+- Checkpoint 2 is a runnable release candidate. Named faculty, quality, clinical, accessibility, reproducibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -172,9 +179,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course, Modules 01 through 06, Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
-2. Treat the Module 04 quality release, Module 05 descriptive release, and Module 06 exact tables, figures, alternatives, registry, and accessibility record as immutable Checkpoint 2 inputs.
-3. Write the cumulative Week 6 Checkpoint 2 specification around the source 25-percent assessment weight and the Module 04, 05, and 06 handoffs.
-4. Lock the exact component score, required artifact manifest, review defense, N01 through N08 conditions, and stop/fix/proceed recommendation before assembling the checkpoint.
-5. Build the safe assembler, learner and review templates, instructor reference, validator, assessment, release record, and Module 07 progression decision.
-6. Update the Commons version and this ledger, then commit and push Checkpoint 2 before building Module 07.
+1. Read the FND-1 course, Module 07 brief, Checkpoint 2 specification and release record, source record, master architecture, and this ledger.
+2. Treat the complete Checkpoint 2 package as Module 07's immutable input: 35 artifacts, three module releases, cumulative decisions, and the exact manifest.
+3. Specify Module 07 around reproducible handoff, provenance, release notes, independent reproduction, AI audit, and the final toolkit readiness decision.
+4. Preserve D01 through D20 resolution, N01 through N08 conditions, exact descriptive meaning, equivalent access, and synthetic claim limits without recalculation, retyping, or redrawing.
+5. Lock Module 07's exact 16-hour scope, assessment role inside the final 35-point checkpoint, data handoff, learner defense, and final-checkpoint outputs before implementation.
+6. Build, validate, version, commit, and push Module 07 before assembling the final checkpoint.
