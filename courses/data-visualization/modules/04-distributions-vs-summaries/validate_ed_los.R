@@ -1,6 +1,9 @@
 args <- commandArgs(trailingOnly = TRUE)
 input_path <- if (length(args) >= 1) args[[1]] else file.path("data", "ed_los_2026.csv")
 variant <- if (length(args) >= 2) args[[2]] else "real"
+default_calibrations <- c(file.path("data", "cms_ed_op18b_2026.csv"), "cms_ed_op18b_2026.csv")
+available_calibration <- default_calibrations[file.exists(default_calibrations)][1]
+calibration_path <- if (length(args) >= 3) args[[3]] else if (!is.na(available_calibration)) available_calibration else default_calibrations[[1]]
 
 allowed_variants <- c("real", "null", "trivial")
 if (!variant %in% allowed_variants) {
@@ -8,6 +11,9 @@ if (!variant %in% allowed_variants) {
 }
 if (!file.exists(input_path)) {
   stop(sprintf("Data file not found: %s", input_path), call. = FALSE)
+}
+if (!file.exists(calibration_path)) {
+  stop(sprintf("CMS calibration file not found: %s", calibration_path), call. = FALSE)
 }
 
 data <- utils::read.csv(input_path, stringsAsFactors = FALSE)
@@ -32,12 +38,80 @@ record_check <- function(name, passed, result) {
   checks[nrow(checks) + 1, ] <<- list(name, isTRUE(passed), as.character(result))
 }
 
+calibration <- utils::read.csv(calibration_path, stringsAsFactors = FALSE, na.strings = "")
+expected_calibration_columns <- c(
+  "facility_id",
+  "facility_name",
+  "city",
+  "state",
+  "measure_id",
+  "measure_name",
+  "score_min",
+  "value_status",
+  "sample",
+  "footnote",
+  "period_start",
+  "period_end",
+  "cms_release_date",
+  "source_url"
+)
+record_check(
+  "calibration columns",
+  identical(names(calibration), expected_calibration_columns),
+  paste(names(calibration), collapse = ", ")
+)
+if (!checks$passed[[1]]) {
+  print(checks, row.names = FALSE)
+  stop("Calibration validation failed: unexpected columns.", call. = FALSE)
+}
+record_check("calibration rows", nrow(calibration) == 4658L, nrow(calibration))
+record_check(
+  "calibration measure",
+  all(calibration$measure_id == "OP_18b"),
+  paste(unique(calibration$measure_id), collapse = ", ")
+)
+record_check(
+  "calibration statuses",
+  sum(calibration$value_status == "reported") == 4081L &&
+    sum(calibration$value_status == "not_available") == 577L,
+  paste(names(table(calibration$value_status)), as.integer(table(calibration$value_status)), collapse = "; ")
+)
+record_check(
+  "calibration numeric contract",
+  sum(is.finite(calibration$score_min)) == 4081L &&
+    stats::median(calibration$score_min, na.rm = TRUE) == 148 &&
+    range(calibration$score_min, na.rm = TRUE)[[1]] == 42 &&
+    range(calibration$score_min, na.rm = TRUE)[[2]] == 413,
+  sprintf(
+    "reported=%d median=%.0f range=%.0f to %.0f",
+    sum(is.finite(calibration$score_min)),
+    stats::median(calibration$score_min, na.rm = TRUE),
+    min(calibration$score_min, na.rm = TRUE),
+    max(calibration$score_min, na.rm = TRUE)
+  )
+)
+record_check(
+  "calibration release",
+  all(calibration$cms_release_date == "2026-08-13"),
+  paste(unique(calibration$cms_release_date), collapse = ", ")
+)
+record_check(
+  "calibration period",
+  all(calibration$period_start == "2024-10-01") && all(calibration$period_end == "2025-09-30"),
+  paste(unique(paste(calibration$period_start, calibration$period_end)), collapse = ", ")
+)
+record_check(
+  "calibration source URL",
+  all(calibration$source_url == "https://data.cms.gov/provider-data/dataset/yv7e-xc69"),
+  paste(unique(calibration$source_url), collapse = ", ")
+)
+
 record_check(
   "columns",
   identical(names(data), expected_columns),
   paste(names(data), collapse = ", ")
 )
-if (!checks$passed[[1]]) {
+if (!checks$passed[[9]]) {
   print(checks, row.names = FALSE)
   stop("Structural validation failed: unexpected columns.", call. = FALSE)
 }

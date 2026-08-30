@@ -1,6 +1,6 @@
 # Instructor notes: Distributions versus summaries
 
-Module version: `0.3.1`
+Module version: `0.4.0`
 
 These notes support a class taught without Ali Goff's original course document. The data are synthetic teaching data. They do not describe a real hospital, patient population, or intervention effect.
 
@@ -23,13 +23,17 @@ Define boarding when it first appears. In this case, a boarded patient has been 
 
 ## Source status
 
-The file is deterministic and synthetic. It was designed to meet teaching conditions and was not fitted to a hospital dataset. Show learners the release record and the [course source register](../../data-source-register.md). Before a teaching release, either calibrate selected parameters to a named public aggregate source or rebuild the case from an identified Synthea release. Do not present these values as a benchmark for emergency-department performance.
+The 4,658-row calibration extract preserves every national CMS OP_18b hospital row from the Timely and Effective Care release dated 2026-08-13. Its 4,081 reported hospital medians have a median of 148 minutes; 577 results are unavailable. The generator uses 148 minutes only to anchor the center of the discharged pathway.
+
+Every encounter is still synthetic. Monthly change, disposition, boarding, tail shape, acuity, age, and dates were designed for instruction and were not fitted to patient records. Show learners [source-record.yml](source-record.yml) and the [course source register](../../data-source-register.md). Do not present the synthetic values as a hospital benchmark or claim that CMS reported the patient-level distribution.
 
 ## Prepare the module
 
 From this module folder, run:
 
 ```powershell
+Rscript build_cms_ed_calibration.R data/cms_ed_op18b_2026.csv
+Rscript generate_ed_los.R real 730 data/ed_los_2026.csv
 Rscript validate_ed_los.R data/ed_los_2026.csv real
 Rscript lab.R data/ed_los_2026.csv
 Rscript critique_charts.R data/ed_los_2026.csv
@@ -49,22 +53,22 @@ The released dataset contains 8,392 encounters: 6,462 discharged and 1,930 admit
 
 | Measure | January | December | Change |
 |---|---:|---:|---:|
-| Mean length of stay | 205.6 min | 200.2 min | -2.6% |
-| Median length of stay | 185.5 min | 116.5 min | -37.2% |
-| 90th percentile | 294.0 min | 536.8 min | +82.6% |
+| Mean length of stay | 217.9 min | 212.5 min | -2.5% |
+| Median length of stay | 200.0 min | 134.0 min | -33.0% |
+| 90th percentile | 306.1 min | 536.8 min | +75.4% |
 | Share over 8 hours | 2.4% | 10.5% | +8.0 percentage points |
 
 Other checks:
 
-- overall mean is 202.9 minutes;
-- overall mean divided by median is 1.335;
+- overall mean is 215.2 minutes;
+- overall mean divided by median is 1.273;
 - boarded admitted median is 782 minutes;
 - non-boarded admitted median is 252 minutes;
 - admitted mean rises from 310.3 to 508.8 minutes;
-- discharged mean falls from 174.3 to 108.4 minutes;
+- discharged mean falls from 190.3 to 124.4 minutes;
 - boarding rises from about 10% to 46% of admitted encounters;
 - ESI 1 contains 66 encounters;
-- the unweighted average of the two disposition means is 275.2 minutes, 72.2 minutes above the pooled mean.
+- the unweighted average of the two disposition means is 283.1 minutes, 67.9 minutes above the pooled mean.
 
 ## Session plans
 
@@ -88,7 +92,7 @@ Teach the lossy-summary idea and four hiding mechanisms. Run the first four Tier
 
 ## Tier 1 answer key
 
-1. **Monthly mean:** The department-wide mean changes from 205.6 to 200.2 minutes. A chief operating officer could read this as modest improvement or stability and miss the admitted patients waiting longest.
+1. **Monthly mean:** The department-wide mean changes from 217.9 to 212.5 minutes. A chief operating officer could read this as modest improvement or stability and miss the admitted patients waiting longest.
 2. **Pooled histogram:** The distribution is strongly right-skewed. The boarded process is hard to see because discharged encounters outnumber admitted encounters by more than three to one.
 3. **Density by disposition:** Admitted encounters show a second mode near the boarded median of 782 minutes. Discharged encounters have a shorter, single dominant process. The split turns a statistical shape into a hospital-flow question.
 4. **Four monthly measures:** The mean is nearly flat and the median improves sharply. The 90th percentile and share over eight hours worsen sharply. Fast-track gains reach many discharged patients, while admitted patients increasingly remain in the emergency department waiting for beds.
@@ -101,7 +105,7 @@ Teach the lossy-summary idea and four hiding mechanisms. Run the first four Tier
 3. **Split by boarding:** Non-boarded admitted encounters have a median of 252 minutes. Boarded admitted encounters have a median of 782 minutes. The second mode is a care-process signal, not bad data to delete.
 4. **Log scale:** It makes a long right tail easier to see without using most of the canvas, but equal visual distances no longer represent equal numbers of minutes. Labels should help a nontechnical reader interpret the scale.
 5. **Empirical cumulative distribution:** At 480 minutes, read `1 - F(480)` as the share over eight hours. That share rises from about 2.4% in January to 10.5% in December.
-6. **95th percentile:** It rises from about 334.2 to 791.9 minutes, a larger change than the 90th percentile. Choosing a percentile after viewing the result invites selective reporting; choose the service threshold from the decision first.
+6. **95th percentile:** It rises from about 352.0 to 791.9 minutes, a larger change than the 90th percentile. Choosing a percentile after viewing the result invites selective reporting; choose the service threshold from the decision first.
 
 ## Critique answer key
 
@@ -115,7 +119,7 @@ The 180-to-210-minute axis enlarges a small decline in the mean. Starting the ax
 
 ### C3. Average of averages
 
-The chart reports 275.2 minutes as the overall mean by giving the admitted and discharged means equal weight. The correct pooled mean is 202.9 minutes because the groups contain 1,930 and 6,462 encounters. Weight the group means by their counts or calculate the pooled mean from all rows. Better still, retain separate groups when the operational distinction matters.
+The chart reports 283.1 minutes as the overall mean by giving the admitted and discharged means equal weight. The correct pooled mean is 215.2 minutes because the groups contain 1,930 and 6,462 encounters. Weight the group means by their counts or calculate the pooled mean from all rows. Better still, retain separate groups when the operational distinction matters.
 
 For all three critiques, require learners to name who could be affected. Examples include boarded patients whose waits disappear in a pooled mean, staff whose capacity needs are understated, and leaders who allocate resources to the wrong process.
 
@@ -135,7 +139,7 @@ Any three well-explained omissions can earn full credit: sample size, spread, sk
 
 ### A4
 
-For seed 730, the trivial variant has a two-sided Wilcoxon p-value of about 0.026, but the median changes by only 9 minutes, the 90th percentile by 5.5%, and the over-eight-hour share by 0.0 percentage points. A simple time trend or an effect summary with these values can earn full credit. The supported decision is to avoid claiming an operationally important change and continue routine monitoring.
+For seed 730, the trivial variant has a two-sided Wilcoxon p-value of about 0.018, but the median changes by only 10 minutes, the 90th percentile by 5.7%, and the over-eight-hour share by 0.0 percentage points. A simple time trend or an effect summary with these values can earn full credit. The supported decision is to avoid claiming an operationally important change and continue routine monitoring.
 
 ### A5
 
@@ -147,7 +151,7 @@ Clinic North has the better median but a much worse upper tail. The empirical cu
 
 ### A7
 
-For seed 730, the null variant changes by -0.4% in mean, 0.0% in median, -0.3% in the 90th percentile, and -0.1 percentage points in the over-eight-hour share. Report that the expected deterioration is not present in this dataset. Recommend continued monitoring or a pre-specified follow-up analysis, not a search for a favorable subgroup.
+For seed 730, the null variant changes by -0.4% in mean, -0.3% in median, -0.2% in the 90th percentile, and -0.1 percentage points in the over-eight-hour share. Report that the expected deterioration is not present in this dataset. Recommend continued monitoring or a pre-specified follow-up analysis, not a search for a favorable subgroup.
 
 ### A8
 
@@ -161,13 +165,14 @@ Use the rubric below. Multiple displays can be correct. A simple summary can ear
 
 | Criterion | Full-credit evidence | Points |
 |---|---|---:|
-| Diagnose | Correctly identifies the consequential tail, hidden process, opposing trends, or honest absence of an effect. | 25 |
-| Select | Uses a statistic and display matched to the stated decision. | 20 |
-| Justify | Compares the choice with a reasonable alternative and names the information gained or lost. | 15 |
-| Decide | Makes a supported operational recommendation and states what should change. | 30 |
-| Reproduce and communicate | Script runs, labels include units, scale is honest, groups are readable without color alone, and alt text states the finding. | 10 |
+| Distribution audit | Correctly identifies the consequential tail, hidden process, opposing trends, or honest absence of an effect. | 25 |
+| Reproducible analysis | Uses relative paths, checks fields, prints exact summaries, and writes both figures. | 20 |
+| Display and statistical fit | Uses a statistic and display matched to the decision and compares a reasonable alternative. | 20 |
+| Decision note | Makes a supported operational recommendation and states the patient or process consequence and claim boundary. | 15 |
+| Source and provenance | Separates the CMS hospital-level anchor from synthetic encounter assumptions and records transformations and checksums. | 10 |
+| Accessibility and alternatives | Uses honest scales, units, non-color cues, readable labels, and complete alt text. | 10 |
 
-Passing requires 70 points overall and at least 18 decision points. If the recommendation is absent or unsupported, the work cannot pass through visual polish alone.
+Passing requires 75 points and all mandatory conditions in `assessment.md`. If the recommendation is absent or unsupported, or the source boundary is wrong, the work cannot pass through visual polish alone.
 
 ## Worked Tier 3 answer
 
@@ -175,7 +180,7 @@ Passing requires 70 points overall and at least 18 decision points. If the recom
 
 **Alt text:** Four monthly lines show a nearly flat mean and a falling median alongside a sharply rising 90th percentile and share of encounters over eight hours. The upper-tail deterioration accelerates late in 2026.
 
-**Board note:** Typical emergency department length of stay improved during 2026, but the longest waits worsened: the median fell from 185.5 to 116.5 minutes while the 90th percentile rose from 294.0 to 536.8 minutes. Continue the fast-track pathway, but do not label performance an overall success until a boarding response and tail-sensitive dashboard are in place.
+**Board note:** Typical emergency department length of stay improved during 2026, but the longest waits worsened: the median fell from 200.0 to 134.0 minutes while the 90th percentile rose from 306.1 to 536.8 minutes. In this synthetic case, continue the fast-track pathway, but do not label performance an overall success until a boarding response and tail-sensitive dashboard are in place.
 
 **Justification:** A single mean chart suggests stability and hides the operationally important tail. The four-panel chart keeps the familiar mean and median while adding the 90th percentile and threshold share that show why a separate boarding decision is needed.
 

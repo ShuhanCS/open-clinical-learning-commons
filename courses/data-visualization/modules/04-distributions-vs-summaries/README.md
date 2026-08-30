@@ -3,13 +3,14 @@
 - Thread: visualization
 - Level: healthcare essential
 - Status: runnable release candidate; required human reviews pending
-- Module version: `0.3.1`
+- Module version: `0.4.0`
 - Slot cost: one teaching slot
 - Concept core: about 22 minutes
 - Lab: 60 to 90 minutes, depending on scaffold level
 - First lab environment: R and ggplot2
 - Source: [Ali Goff's DA-730 redesign](../../../../docs/source/ali-goff-da-730-course-redesign.md#module-04-distributions-versus-summaries)
-- Build specification: [implementation and release contract](../../../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
+- Current specification: [21-section module contract](../../../../docs/curriculum/courses/DA-730/modules/04-distributions-summaries-spec.md)
+- Original build specification: [implementation record](../../../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 
 ## Why this module exists
 
@@ -30,6 +31,7 @@ Rscript critique_charts.R data/ed_los_2026.csv
 To reproduce the committed data first, run:
 
 ```powershell
+Rscript build_cms_ed_calibration.R data/cms_ed_op18b_2026.csv
 Rscript generate_ed_los.R real 730 data/ed_los_2026.csv
 ```
 
@@ -143,28 +145,30 @@ The box plot receives special attention because learners may treat it as the uni
 
 The module does not teach learners to show every distribution. A summary may be enough when the data are roughly symmetric and unimodal, sample size is large and stable, the decision depends on the center, and the audience cannot use a more detailed display.
 
-### Readings from the source design
+### Required readings
 
-- Weissgerber TL, Milic NM, Winham SJ, Garovic VD. Beyond bar and line graphs: time for a new data presentation paradigm. *PLOS Biology*. 2015;13(4):e1002128.
-- Streit M, Gehlenborg N. Bar charts and box plots. *Nature Methods*. 2014;11(2):117.
-- Optional: Rousselet GA, Pernet CR, Wilcox RR. Beyond differences in means. *European Journal of Neuroscience*. 2017;46(2):1738-1748.
+- Weissgerber TL, Milic NM, Winham SJ, Garovic VD. Beyond bar and line graphs: time for a new data presentation paradigm. *PLOS Biology*. 2015;13(4):e1002128. https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128
+- Streit M, Gehlenborg N. Bar charts and box plots. *Nature Methods*. 2014;11(2):117. https://doi.org/10.1038/nmeth.2807
+- NIST/SEMATECH e-Handbook of Statistical Methods, Histogram. https://www.itl.nist.gov/div898/handbook/eda/section3/histogra.htm
+- CMS, Timely and Effective Care - Hospital. https://data.cms.gov/provider-data/dataset/yv7e-xc69
+- Optional: Rousselet GA, Pernet CR, Wilcox RR. Beyond differences in means. *European Journal of Neuroscience*. 2017;46(2):1738-1748. Open-access manuscript: https://eprints.gla.ac.uk/141172/ DOI: https://doi.org/10.1111/ejn.13610
 
-Reading links and license checks must be added before the teaching release.
+Use the linked publisher or government record. Distinguish an article's result from a universal rule and the CMS hospital median from a patient-level distribution.
 
 ## 4. Healthcare case
 
 ### Emergency department length of stay
 
-An emergency department launches a fast-track pathway in January 2026. Twelve months later, the median length of stay has fallen from 164 to 102 minutes. Leadership calls the change a success and asks for a chart to support expansion.
+An emergency department launches a synthetic fast-track pathway in January 2026. Twelve months later, the median length of stay has fallen from 200 to 134 minutes. Leadership calls the change a success and asks for a chart to support expansion.
 
-The source design specifies this pattern:
+The recalibrated reference release measures:
 
 | Metric | January 2026 | December 2026 | Change |
 |---|---:|---:|---:|
-| Mean length of stay | 192 minutes | 201 minutes | +4.5% |
-| Median length of stay | 164 minutes | 102 minutes | -37.3% |
-| 90th percentile | 297 minutes | 606 minutes | +104.1% |
-| Share over eight hours | 2.7% | 11.2% | 4.1 times higher |
+| Mean length of stay | 217.9 minutes | 212.5 minutes | -2.5% |
+| Median length of stay | 200.0 minutes | 134.0 minutes | -33.0% |
+| 90th percentile | 306.1 minutes | 536.8 minutes | +75.4% |
+| Share over eight hours | 2.4% | 10.5% | +8.0 percentage points |
 
 The fast-track pathway works for discharged patients. At the same time, inpatient boarding grows from 10% to 46% of admitted patients. Discharged encounters make up most of the dataset, so the median reports the improvement. The upper tail reports the deterioration among boarded patients.
 
@@ -202,18 +206,20 @@ The source values guided the teaching design. The committed variant `real`, seed
 
 - 8,392 synthetic encounters in calendar year 2026;
 - generator seed `730`;
-- mean divided by median of `1.335`;
+- mean divided by median of `1.273`;
 - 6,462 discharged and 1,930 admitted encounters, a ratio of `3.35:1`;
 - admitted modes near 252 and 782 minutes, with the second mode weak when data are pooled;
-- January-to-December mean change of `-2.6%` and 90th-percentile change of `+82.6%`;
+- January-to-December mean change of `-2.5%` and 90th-percentile change of `+75.4%`;
 - 66 encounters in the rarest acuity group;
-- 72.2-minute difference between the unweighted average of group means and the pooled mean.
+- 67.9-minute difference between the unweighted average of group means and the pooled mean.
 
 All defined teaching thresholds pass. Exact measured results and the CSV checksum are recorded in [release.json](release.json).
 
 ### Source status
 
-The released file is a deterministic synthetic teaching dataset. It is generated from this module's pedagogical contract rather than sampled from a hospital or fitted to patient records. Before a teaching release, the module must satisfy the [course source-first rule](../../data-source-register.md) by either calibrating selected parameters to a named public aggregate source or rebuilding the case from an identified Synthea release. Any assumptions used to create patient-level distributions must remain explicit.
+The public calibration file contains every national CMS OP_18b hospital row from the 2026-08-13 Timely and Effective Care release: 4,658 rows, including 4,081 reported values and 577 unavailable results. The reported hospital median is 148 minutes. The generator uses that value only as the center of the discharged pathway.
+
+The 8,392 encounter rows remain deterministic synthetic teaching data. The monthly improvement, admission process, boarding process, tails, acuity, age, and dates are not CMS estimates and were not fitted to patient records. See [source-record.yml](source-record.yml) for URLs, rights, transformations, checksums, and limits.
 
 ### Columns
 
@@ -278,7 +284,7 @@ Mean length of stay by acuity level hides sample size and the distribution of pa
 
 ### C2. Truncated axis
 
-A monthly mean chart uses a vertical axis from 180 to 210 minutes. It exaggerates a small mean change while continuing to hide the upper-tail deterioration. Repairing the axis alone does not repair the analytic choice.
+A monthly mean chart uses a vertical axis from 212 to 219 minutes. It exaggerates a small mean change while continuing to hide the upper-tail deterioration. Repairing the axis alone does not repair the analytic choice.
 
 ### C3. Average of averages
 
@@ -359,6 +365,7 @@ Below 35 minutes, the lesson becomes a demonstration rather than a practiced com
 - [x] Nine-part module content record.
 - [x] Deterministic R generator.
 - [x] Generated CSV and data dictionary.
+- [x] Pinned public CMS calibration extract, build script, and source record.
 - [x] Automated data-contract checks.
 - [x] Tier 1 and Tier 2 R scripts.
 - [x] Critique chart generation code.

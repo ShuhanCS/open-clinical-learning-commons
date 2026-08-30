@@ -1,17 +1,18 @@
 {
   "schema_version": "1.0.0",
   "status": "runnable-release-candidate",
-  "release_date": "2026-08-26",
+  "release_date": "2026-08-29",
   "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
   "module": {
-    "id": "oclc-datavis-04",
+    "id": "oclc-da730-04",
     "title": "Distributions versus summaries",
-    "version": "0.3.1",
-    "course": "DA-730: Analyzing, Visualizing, and Storytelling with Data"
+    "version": "0.4.0",
+    "commons_release": "0.15.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
   },
   "data": {
     "id": "oclc-ed-los-2026",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "path": "data/ed_los_2026.csv",
     "synthetic": true,
     "variant": "real",
@@ -26,7 +27,26 @@
       "boarded",
       "los_min"
     ],
-    "sha256": "14d5a8e12084b739a0f95331334b6103ed88a9c4eb628ae4c0c9c52fdd38f0d9"
+    "sha256": "27c1c0feed8beb4ab0ac6dc77eaa3d1ed95c07b89f52f4881c25954ba43fbc55"
+  },
+  "calibration": {
+    "id": "cms-timely-effective-care-op18b-2026-08-13",
+    "version": "0.1.0",
+    "path": "data/cms_ed_op18b_2026.csv",
+    "dataset_id": "yv7e-xc69",
+    "measure_id": "OP_18b",
+    "cms_release": "2026-08-13",
+    "coverage": "2024-10-01 through 2025-09-30",
+    "row_count": 4658,
+    "reported_rows": 4081,
+    "not_available_rows": 577,
+    "reported_median_minutes": 148,
+    "reported_range_minutes": [42, 413],
+    "sha256": "c9603109d4ea251b8096a655c27ad42cd6313bdb1309999bee3eb37ce79ec67d",
+    "original_full_csv_bytes": 34150899,
+    "original_full_csv_sha256": "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516",
+    "landing_page": "https://data.cms.gov/provider-data/dataset/yv7e-xc69",
+    "pinned_full_csv_url": "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv"
   },
   "environment": {
     "r": "R version 4.6.1 (2026-06-24 ucrt)",
@@ -44,18 +64,22 @@
       "spdx": "CC-BY-4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
     },
+    "cms_source_data": {
+      "spdx": "LicenseRef-US-Government-Public-Domain",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+    },
     "code": {
       "spdx": "MIT",
       "url": "https://opensource.org/license/mit"
     }
   },
   "source": {
-    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
-    "author": "Ali Goff",
-    "source_date": "2026-08-15",
-    "markdown_path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
-    "course_redesign_path": "../../syllabus-redesign.md",
-    "note": "The synthetic data encode teaching requirements from the source design. They were not fitted to or derived from patient records."
+    "curriculum_title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "curriculum_author": "Ali Goff",
+    "curriculum_date": "2026-08-15",
+    "curriculum_path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "source_record": "source-record.yml",
+    "note": "The public CMS OP_18b hospital median anchors only the discharged center. Every encounter, pathway shape, trend, disposition, and boarding mechanism remains synthetic teaching data."
   },
   "contributors": [
     {
@@ -64,22 +88,22 @@
     },
     {
       "name": "Shuhan He",
-      "role": "Commons sponsor and release direction"
+      "role": "Commons sponsor and curriculum direction"
     },
     {
       "name": "OpenAI Codex",
-      "role": "implementation support for code, checks, and documentation"
+      "role": "module reconciliation, public-source calibration, specification, and technical checks"
     }
   ],
   "review": {
     "technical_validation": {
       "status": "complete",
-      "date": "2026-08-26",
-      "evidence": "The real-variant validator passed 18 of 18 checks. The learner lab executed successfully with the repository layout and with lab.R and the CSV downloaded side by side, matching the beginner RStudio instructions."
+      "date": "2026-08-29",
+      "evidence": "The real variant passed 26 of 26 checks. Null and trivial variants each passed 23 of 23 checks. Four lab figures, a monthly table, and three critique figures rendered successfully."
     },
     "required_human_roles": [
       {
-        "role": "faculty and source fidelity",
+        "role": "visualization faculty and source fidelity",
         "reviewer": null,
         "status": "pending",
         "date": null
@@ -105,22 +129,22 @@
     ]
   },
   "validation": {
-    "structural_checks": "pass",
-    "clean_clone": "pass on remote branch codex/datavis-module",
-    "real_variant_checks": "18 of 18 pass",
-    "null_variant_checks": "15 of 15 pass",
-    "trivial_variant_checks": "15 of 15 pass",
-    "determinism": "same variant and seed produce byte-identical CSV files",
-    "different_seed": "seed 731 produces a different file that preserves the real variant contract",
+    "real_variant_checks": "26 of 26 pass",
+    "null_variant_checks": "23 of 23 pass",
+    "trivial_variant_checks": "23 of 23 pass",
+    "determinism": "Same calibration, variant, and seed produce byte-identical encounter files.",
+    "calibration_build": "4,658 OP_18b rows, including 4,081 reported and 577 unavailable values.",
+    "lab_execution": "pass: four PNGs and one monthly metrics CSV",
+    "critique_execution": "pass: three intentionally flawed PNGs",
     "measured_results": {
-      "overall_mean_divided_by_median": 1.335,
+      "overall_mean_divided_by_median": 1.273,
       "disposition_count_ratio": 3.348,
       "boarded_minus_nonboarded_admitted_median_min": 530.0,
       "january_to_december_boarding_change_percentage_points": 36.3,
-      "january_to_december_mean_change_percent": -2.6,
-      "january_to_december_p90_change_percent": 82.6,
+      "january_to_december_mean_change_percent": -2.5,
+      "january_to_december_p90_change_percent": 75.4,
       "smallest_esi_group_n": 66,
-      "unweighted_group_mean_gap_min": 72.2
+      "unweighted_group_mean_gap_min": 67.9
     },
     "hidden_process_visual_preview": {
       "status": "observed-in-build-preview",
@@ -129,9 +153,11 @@
     }
   },
   "known_issues": [
-    "The dataset is designed for instruction and is not evidence about any hospital, patient population, or intervention.",
-    "Acuity and age group are assigned independently of length of stay, so they should not be used for clinical inference.",
-    "The model omits staffing, occupancy, seasonality, transfers, censoring, and other real emergency department processes.",
-    "Technical execution has been tested on Windows; human faculty, clinical, accessibility, and independent-instructor reviews are pending."
+    "Human visualization, emergency department, accessibility, and independent-instructor reviews are pending.",
+    "CMS OP_18b is a hospital-level median and does not provide a patient-level distribution.",
+    "Only the discharged median center is calibrated to the public source; all other encounter and pathway behavior is synthetic.",
+    "Acuity and age group are assigned independently of length of stay and must not be used for clinical inference.",
+    "The model omits staffing, occupancy, seasonality, transfers, censoring, return visits, and other real emergency department processes.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
   ]
 }

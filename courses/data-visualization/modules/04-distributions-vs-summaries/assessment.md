@@ -1,6 +1,22 @@
 # Assessment: Distributions versus summaries
 
-Module version: `0.3.1`
+Module version: `0.4.0`
+
+## Exact submission package
+
+```text
+module-04/
+  distribution-audit.md
+  analysis.R
+  figures/
+    distribution.png
+    monthly-metrics.png
+  source-record.yml
+  alt-text.md
+  decision-note.md
+```
+
+`distribution-audit.md` contains A1 through A8 plus the statistic, display, subgroup, tail, and failure reasoning used for A9. `analysis.R` must read the assigned file through a relative path, check required fields, reproduce both figures, and print the declared metrics. The copied source record adds the assigned variant, seed, analysis date, row counts, transformations, outputs, and checksums.
 
 ## Directions
 
@@ -92,15 +108,26 @@ The chief operating officer has five minutes at the board meeting. Submit:
 
 Your chart must name the measure and unit, use an honest scale, label relevant groups, and avoid relying on color alone.
 
-## A9 grading rubric
+## Module grading rubric
 
-| Criterion | Points |
-|---|---:|
-| Diagnoses the hidden or absent distributional pattern | 25 |
-| Selects an appropriate statistic and display | 20 |
-| Justifies the choice against a reasonable alternative | 15 |
-| Connects the evidence to a defensible healthcare decision | 30 |
-| Produces reproducible, readable, and accessible work | 10 |
+| Criterion | Points | Full-credit evidence |
+|---|---:|---|
+| Distribution audit | 25 | A1 through A8 and A9 reasoning identify the center, shape, tail, groups, hidden or absent process, and decision consequence. |
+| Reproducible analysis | 20 | Relative paths, field checks, declared variant and seed, exact summaries, and both required figures. |
+| Display and statistical fit | 20 | Statistic and display match the decision, reveal consequential structure, and are justified against an alternative. |
+| Decision note and claim boundary | 15 | Named owner, supported action, patient or process consequence, and explicit limit. |
+| Source and provenance | 10 | CMS calibration, synthetic assumptions, transformations, outputs, rights, and checksums are accurate. |
+| Accessibility and alternatives | 10 | Honest scales, units, non-color cues, readable labels, and complete alt text. |
 | **Total** | **100** |
 
-A passing submission needs at least 70 points and at least 18 of the 30 decision points.
+A passing submission earns at least 75 points and meets all five conditions:
+
+1. the analysis runs and writes both required figures;
+2. the learner states whether the pattern is real, null, or trivial without assuming deterioration;
+3. the selected statistic and display expose or honestly dismiss the decision-relevant structure;
+4. the source record separates the public hospital-level anchor from synthetic encounter assumptions; and
+5. the decision note does not claim a real hospital effect, patient harm, or causal intervention result.
+
+## AI policy
+
+AI may help debug code, compare display candidates, or edit prose. It may not invent observations, source values, patient-level provenance, or an operational effect. The learner records tool, purpose, adopted change, and verification in the decision note.

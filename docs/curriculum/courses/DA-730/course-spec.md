@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.14.0
+- Specification version: 0.15.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -192,10 +192,12 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Concepts: skew, multimodality, unequal group sizes, consequential tails, aggregation, mean, median, quantiles, box plots, violin plots, histograms, densities, and ECDFs.
 - Primary case: synthetic emergency-department length of stay after a fast-track pathway.
 - Decision owner: emergency-department operations leader.
-- Core source: `courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv`.
+- Core sources: https://data.cms.gov/provider-data/dataset/yv7e-xc69 and `courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv`.
 - Lab: run the existing tiered R lesson and produce the four required views.
 - Critique: repair a bar of means, a box plot that hides the second mode, and an average-of-averages comparison.
-- Submission: the package already defined by `docs/specs/2026-08-15-ali-goff-module-04-build-spec.md`.
+- Submission: `module-04/distribution-audit.md`, `module-04/analysis.R`, `module-04/figures/`, `module-04/source-record.yml`, `module-04/alt-text.md`, and `module-04/decision-note.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/04-distributions-summaries-spec.md`.
+- Runnable package: `courses/data-visualization/modules/04-distributions-vs-summaries/`.
 - Handoff: Module 05 asks whether the rates and denominators behind subgroup comparisons are stable and comparable.
 
 ## Module 05 brief: Rates, denominators, and adjustment

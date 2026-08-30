@@ -1,0 +1,66 @@
+schema_version: "1.0.0"
+module_id: "oclc-da730-04"
+module_title: "Distributions versus summaries"
+retrieved: "2026-08-29"
+public_calibration:
+  source_id: "cms-timely-effective-care-op18b-2026-08-13"
+  publisher: "Centers for Medicare & Medicaid Services"
+  title: "Timely and Effective Care - Hospital"
+  dataset_identifier: "yv7e-xc69"
+  measure_id: "OP_18b"
+  measure_name: "Average (median) time patients spent in the emergency department before leaving from the visit, excluding patients transferred to another facility or psychiatric care/mental health patients. A lower number of minutes is better"
+  landing_page: "https://data.cms.gov/provider-data/dataset/yv7e-xc69"
+  metadata_url: "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/yv7e-xc69"
+  pinned_full_csv_url: "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv"
+  data_dictionary_url: "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+  issued: "2023-07-05"
+  modified: "2026-07-22"
+  released: "2026-08-13"
+  coverage_start: "2024-10-01"
+  coverage_end: "2025-09-30"
+  public_access_level: "public"
+  rights: "U.S. government public-reporting data are in the public domain; attribution is appreciated and reuse must not imply federal endorsement."
+  original_filename: "Timely_and_Effective_Care-Hospital.csv"
+  original_rows: 138084
+  original_columns: 16
+  original_size_bytes: 34150899
+  original_sha256: "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516"
+  extract_path: "data/cms_ed_op18b_2026.csv"
+  extract_rows: 4658
+  extract_columns: 14
+  reported_rows: 4081
+  not_available_rows: 577
+  reported_median_minutes: 148
+  reported_range_minutes: "42 to 413"
+  extract_sha256: "c9603109d4ea251b8096a655c27ad42cd6313bdb1309999bee3eb37ce79ec67d"
+  build_script: "build_cms_ed_calibration.R"
+  transformations:
+    - "Selected every national OP_18b hospital row, including unavailable values and footnotes."
+    - "Selected identity, measure, score, sample, footnote, period, release, and source fields."
+    - "Converted reported scores to numeric minutes and unavailable scores to blank numeric cells."
+    - "Converted dates to ISO format and sorted by state and facility_id."
+synthetic_teaching_release:
+  data_id: "oclc-ed-los-2026"
+  version: "0.2.0"
+  path: "data/ed_los_2026.csv"
+  rows: 8392
+  columns: 7
+  sha256: "27c1c0feed8beb4ab0ac6dc77eaa3d1ed95c07b89f52f4881c25954ba43fbc55"
+  generator: "generate_ed_los.R"
+  variant: "real"
+  seed: 730
+  calibration:
+    field: "discharged pathway median center"
+    value_minutes: 148
+    derivation: "Median of 4,081 reported CMS OP_18b hospital scores."
+  synthetic_assumptions:
+    - "The real variant moves the discharged pathway from 179 minutes in January to 117 minutes in December around the 148-minute public anchor."
+    - "Admission counts, boarding prevalence, non-boarded and boarded medians, pathway spreads, age groups, acuity, dates, and patient-level distributions are instructional assumptions."
+    - "The opposing monthly trends are designed to create a summary-versus-distribution teaching problem."
+teaching_use: "Use a public hospital-level median to anchor the time scale, then use explicitly synthetic encounters to teach why a valid center can hide tails, modes, subgroups, and opposing care processes."
+limits:
+  - "CMS OP_18b is a hospital-level reported median, not a patient-level distribution or national patient median."
+  - "The synthetic encounters are not sampled from, fitted to, or representative of a hospital or patient population."
+  - "Only the discharged center is calibrated to the public release. Tails, trends, boarding, admissions, acuity, and age are not CMS estimates."
+  - "The case does not establish intervention effects, patient harm, staffing need, capacity need, or a performance benchmark."
+  - "Unavailable CMS values and footnotes remain in the calibration extract and must not be silently imputed."

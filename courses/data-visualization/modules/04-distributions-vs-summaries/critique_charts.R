@@ -72,7 +72,7 @@ monthly_mean <- stats::aggregate(los_min ~ month, data, mean)
 plot_truncated <- ggplot2::ggplot(monthly_mean, ggplot2::aes(x = month, y = los_min)) +
   ggplot2::geom_line(color = "#b45309", linewidth = 1) +
   ggplot2::geom_point(color = "#b45309", size = 2.5) +
-  ggplot2::coord_cartesian(ylim = c(180, 210)) +
+  ggplot2::coord_cartesian(ylim = c(212, 219)) +
   ggplot2::scale_x_date(date_breaks = "2 months", date_labels = "%b") +
   ggplot2::labs(
     title = "Monthly mean emergency department length of stay",

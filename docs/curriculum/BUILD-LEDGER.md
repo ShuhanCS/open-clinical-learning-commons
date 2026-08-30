@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.14.0
+- Current release: 0.15.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 03, Chart selection in practice
-- Next unit: Reconcile and complete DA-730 Module 04, Distributions versus summaries
+- Last completed unit: DA-730 Module 04, Distributions versus summaries
+- Next unit: DA-730 Module 05, Rates, denominators, and adjustment
 
 ## Confirmed decisions
 
@@ -34,6 +34,10 @@
 - DA-730 Module 03 reuses the Module 01 HCAHPS extract and adds a 10-case chart-selection table covering comparison, lookup, relationship, distribution, time, composition, flow, geography, monitoring, and evidence verification.
 - Module 03 case SHA-256: `0f295bd9bf94e9f5800e4fdaebea303d8cc0b28ccd3afcb01603d8e1c0a2eff8`.
 - Module 03 build, 13-check validator, two HCAHPS charts, one exact-value table, two selection matrices, one flawed-dashboard critique, assessment, instructor key, and release record are complete as a runnable release candidate.
+- DA-730 Module 04 preserves every national CMS OP_18b row from the 2026-08-13 Timely and Effective Care release: 4,658 hospital rows, including 4,081 reported and 577 unavailable values. The reported hospital median is 148 minutes.
+- Module 04 CMS extract SHA-256: `c9603109d4ea251b8096a655c27ad42cd6313bdb1309999bee3eb37ce79ec67d`.
+- Module 04 synthetic encounter release 0.2.0 contains 8,392 rows and SHA-256 `27c1c0feed8beb4ab0ac6dc77eaa3d1ed95c07b89f52f4881c25954ba43fbc55`.
+- Module 04 real, null, and trivial variants pass 26, 23, and 23 checks. The lab creates four figures and a monthly table; the critique creates three intentionally flawed figures.
 
 ## Pending confirmation
 
@@ -42,9 +46,9 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, DA-730 course specification, Module 03 handoff, and the existing Module 04 build specification.
-2. Audit the Module 04 synthetic emergency-department package against the current 21-section module contract.
-3. Resolve the documented provenance gap by recording an approved public calibration source or a clearly bounded synthetic-source decision.
-4. Preserve the existing tiered lesson where it satisfies the course contract and add only missing learner, instructor, accessibility, assessment, and release evidence.
-5. Run the full Module 04 package and inspect every generated figure.
-6. Release Module 04 before starting Module 05.
+1. Read the master architecture, DA-730 course specification, and Module 04 handoff.
+2. Write `docs/curriculum/courses/DA-730/modules/05-rates-denominators-adjustment-spec.md` using the 21-section contract.
+3. Build a source-first county package from CDC PLACES and Census ACS with denominator, estimate, uncertainty, suppression, period, and geography fields.
+4. Create count, crude-rate, denominator-aware, and deliberately flawed map or comparison views.
+5. Add the learner lesson, tiered lab, critique set, exact assessment, instructor key, accessibility checks, and release record.
+6. Verify and release Module 05 before Module 06.

@@ -1,12 +1,12 @@
 # Ali Goff DataVis Module 04: build specification
 
-- Status: runnable release candidate; required human reviews pending
+- Status: historical build record; current contract is `docs/curriculum/courses/DA-730/modules/04-distributions-summaries-spec.md`
 - Date: 2026-08-15
 - Course: DA-730, Analyzing, Visualizing, and Storytelling with Data
 - Course designer and content owner: Ali Goff
 - Commons sponsor: Shuhan He
 - Module: Distributions versus summaries
-- Module version: `0.2.0`
+- Historical module version: `0.2.0`; current module version: `0.4.0`
 - Primary source: [Ali Goff's DA-730 redesign](../source/ali-goff-da-730-course-redesign.md#module-04-distributions-versus-summaries)
 - Content record: [Module 04](../../courses/data-visualization/modules/04-distributions-vs-summaries/README.md)
 

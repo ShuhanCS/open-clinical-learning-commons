@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.4.0`
+- Register version: `0.5.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -41,7 +41,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 01. Encoding and the grammar of graphics | CMS HCAHPS | Released extract: all 65 Massachusetts `H_RECMND_DY` rows from the CMS 2026-08-13 release, including 9 unavailable results and footnotes. |
 | 02. Perception and visual accuracy | CMS HCAHPS | Released 10-trial task table using the Module 01 HCAHPS extract, with two trials each for dot, bar, table, pie, and bubble displays. |
 | 03. Chart selection in practice | CMS hospitals | Released 10-case decision table plus two HCAHPS charts and one exact-value table using the Module 01 extract. |
-| 04. Distributions versus summaries | Current synthetic teaching release; public calibration pending | Encounter-level emergency-department length of stay with known aggregate and subgroup patterns. |
+| 04. Distributions versus summaries | CMS Timely and Effective Care plus calibrated synthetic encounters | Released all-national OP_18b hospital extract and a source-bounded synthetic encounter distribution. |
 | 05. Rates, denominators, and adjustment | CDC PLACES plus ACS | Planned county estimate, population context, denominator, margin of error, and adjustment fields. |
 | 06. Uncertainty, variation, and small numbers | ClinicalTrials.gov or CMS | Planned estimates with sample size and uncertainty, including null and small-number cases. |
 | 07. Color and accessible visual communication | CMS or another released module dataset | Planned clinical quality display variants for screen, print, grayscale, and text alternatives. |
@@ -90,13 +90,19 @@ Public access does not automatically permit every reuse. Keep the source terms w
 - Runnable outputs: two HCAHPS charts, one exact lookup table, two matrices, and one intentionally flawed dashboard
 - Case SHA-256: `0f295bd9bf94e9f5800e4fdaebea303d8cc0b28ccd3afcb01603d8e1c0a2eff8`
 
-## Module 04 provenance gap
+### DA-730 distributions-versus-summaries release
 
-The current emergency-department dataset is deterministic and fully synthetic. Its generator is based on the teaching requirements in the course design, not a patient dataset or a public hospital extract. It is appropriate for a prototype, but it does not yet satisfy the new source-first standard by itself.
+- Module: DA-730 Module 04, Distributions versus summaries
+- Public source: CMS Timely and Effective Care - Hospital, `OP_18b`, release 2026-08-13
+- Source page: https://data.cms.gov/provider-data/dataset/yv7e-xc69
+- Original CMS file: 138,084 rows, 34,150,899 bytes, SHA-256 `1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516`
+- CMS extract: `courses/data-visualization/modules/04-distributions-vs-summaries/data/cms_ed_op18b_2026.csv`
+- CMS rows: all 4,658 national OP_18b hospital rows, including 4,081 reported and 577 unavailable values
+- CMS extract SHA-256: `c9603109d4ea251b8096a655c27ad42cd6313bdb1309999bee3eb37ce79ec67d`
+- Synthetic release: `courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv`
+- Synthetic rows: 8,392 encounters; data version 0.2.0; variant `real`; seed 730
+- Synthetic SHA-256: `27c1c0feed8beb4ab0ac6dc77eaa3d1ed95c07b89f52f4881c25954ba43fbc55`
+- Source record: `courses/data-visualization/modules/04-distributions-vs-summaries/source-record.yml`
+- Validation: real 26 of 26, null 23 of 23, and trivial 23 of 23 checks pass
 
-Before a teaching release, record one of these resolutions:
-
-- calibrate selected length-of-stay parameters to a named public aggregate source such as CMS Timely and Effective Care, while clearly labeling the assumptions added to create a patient-level distribution; or
-- replace the encounter source with an identified Synthea release and publish every transformation used to create the teaching pattern.
-
-The source cannot be used to claim that a real hospital, fast-track program, or boarding intervention produced the synthetic result.
+The median of 4,081 reported CMS hospital values is 148 minutes. It anchors only the discharged pathway center. CMS does not provide the generated patient-level distribution, monthly trend, disposition mix, boarding process, tail, acuity, age, or intervention effect. Those remain explicit instructional assumptions and cannot support a real-hospital claim.

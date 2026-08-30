@@ -82,11 +82,12 @@ Vendor-specific menu recall is not a standalone course outcome. A learner may us
 - [Module 03 specification](../../docs/curriculum/courses/DA-730/modules/03-chart-selection-spec.md)
 - [Module 03 release record](modules/03-chart-selection/release.json)
 - [Module 04: Distributions versus summaries](modules/04-distributions-vs-summaries/README.md)
-- [Module 04 build specification](../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
+- [Module 04 specification](../../docs/curriculum/courses/DA-730/modules/04-distributions-summaries-spec.md)
+- [Module 04 original build record](../../docs/specs/2026-08-15-ali-goff-module-04-build-spec.md)
 - [Syllabus redesign](syllabus-redesign.md)
 - [Course redesign plan](../../docs/plans/2026-08-26-clinical-data-visualization-course-redesign-plan.md)
 
-Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 03 uses the same source to choose among comparison, lookup, relationship, and no-display responses through a 10-case matrix. Module 04 contains the equivalent teaching package around a synthetic emergency-department dataset. All four remain candidates until their required human reviews are recorded.
+Module 01 contains a pinned public CMS HCAHPS extract and an encoding lab. Module 02 reuses that release for a scored graphical-perception exercise. Module 03 uses the same source to choose among comparison, lookup, relationship, and no-display responses through a 10-case matrix. Module 04 uses every national CMS OP_18b hospital row to anchor an explicitly synthetic emergency-department distribution exercise. All four remain candidates until their required human reviews are recorded.
 
 ## Source record
 
