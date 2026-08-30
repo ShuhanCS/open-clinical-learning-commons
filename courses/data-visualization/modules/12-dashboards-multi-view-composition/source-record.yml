@@ -1,0 +1,90 @@
+schema_version: "1.0.0"
+record_id: "oclc-da730-12-cms-ma-ed-dashboard-2026"
+title: "Massachusetts emergency department public-reporting dashboard teaching release"
+retrieved_at: "2026-08-30"
+source:
+  publisher: "Centers for Medicare & Medicaid Services"
+  dataset_id: "yv7e-xc69"
+  dataset_title: "Timely and Effective Care - Hospital"
+  landing_page: "https://data.cms.gov/provider-data/dataset/yv7e-xc69"
+  metadata_url: "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/yv7e-xc69"
+  full_csv_url: "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv"
+  data_dictionary_url: "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"
+  measures_and_periods_url: "https://data.cms.gov/provider-data/topics/hospitals/measures-and-current-data-collection-periods"
+  cms_release_date: "2026-08-13"
+  full_rows: 138084
+  full_columns: 16
+  full_bytes: 34150899
+  full_sha256: "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516"
+rights:
+  public_access_level: "public"
+  status: "U.S. government public reporting data"
+  redistribution: "allowed with attribution; reuse must not imply federal endorsement"
+  privacy: "Hospital-level aggregate public reporting, not patient-level data"
+  minimization: "Street address, ZIP code, and telephone number were omitted because the dashboard decision does not need them."
+selection:
+  geography: "State equals MA"
+  measure_ids: ["EDV", "OP_18b", "OP_22"]
+  facilities: 62
+  selected_rows: 186
+  retained_fields: 15
+  source_path: "data/cms_ma_ed_dashboard_source_2026.csv"
+  source_sha256: "f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b"
+teaching_release:
+  path: "data/ma_ed_public_reporting_dashboard_2026.csv"
+  rows: 186
+  columns: 31
+  sha256: "fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd"
+  selected_facility_id: "220029"
+  selected_facility_name: "ANNA JAQUES HOSPITAL"
+  selected_facility_volume: "low"
+measure_dictionary:
+  path: "data/ed_dashboard_measure_dictionary_2026.csv"
+  rows: 3
+  columns: 18
+  sha256: "2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412"
+measures:
+  EDV:
+    name: "Emergency department volume"
+    unit: "CMS volume category"
+    selected_value: "low"
+    period: "2024-01-01 through 2024-12-31"
+    source_lag_days_at_release: 590
+  OP_18b:
+    name: "Median ED time before departure for the included discharged pathway"
+    unit: "minutes"
+    selected_value: 188
+    selected_sample: 422
+    ma_reported_hospitals: 54
+    ma_median: 211.5
+    ma_range: "113 to 336"
+    period: "2024-10-01 through 2025-09-30"
+    source_lag_days_at_release: 317
+  OP_22:
+    name: "Patients leaving before being seen"
+    unit: "percent"
+    selected_value: 23
+    selected_sample: 19211
+    ma_reported_hospitals: 53
+    ma_median: 3
+    ma_range: "0 to 23"
+    period: "2024-01-01 through 2024-12-31"
+    source_lag_days_at_release: 590
+scenario_contract:
+  owner: "Emergency department quality director"
+  decision: "Whether to open a local definition and current-data review"
+  op18b_trigger: ">= 240 minutes"
+  op22_trigger: ">= 10 percent"
+  trigger_origin: "Mock QI charter for teaching; not a CMS benchmark"
+  supported_action: "Validate definitions and source completeness, pull current local data, then review operations only if the current local signal persists."
+  unsupported_action: "Do not use the public release alone to rate current operations, infer cause, or claim an intervention effect."
+guidance:
+  ahrq_dashboard_page: "https://www.ahrq.gov/evidencenow/tools/dashboard-best-practice.html"
+  ahrq_display_page: "https://www.ahrq.gov/talkingquality/translate/display/index.html"
+  reuse_note: "The module links to and paraphrases public guidance. It does not redistribute the third-party copyrighted dashboard PDF linked by AHRQ."
+interpretation_limits:
+  - "The dashboard is a public-reporting review, not a real-time operations dashboard."
+  - "The measures use different reporting windows and units."
+  - "The Massachusetts median is a descriptive peer reference, not a benchmark or statistical comparison."
+  - "Scenario triggers are teaching assumptions, not CMS thresholds."
+  - "A public value can trigger local validation but cannot establish current performance, cause, or intervention effect."

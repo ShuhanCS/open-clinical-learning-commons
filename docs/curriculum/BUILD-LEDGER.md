@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.22.0
+- Current release: 0.23.0
 - Last updated: 2026-08-30
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 11, Flow, networks, composition, and hierarchy
-- Next unit: DA-730 Module 12, Dashboards and multi-view composition
+- Last completed unit: DA-730 Module 12, Dashboards and multi-view composition
+- Next unit: DA-730 Checkpoint 2, Week 6 applied visualization portfolio
 
 ## Confirmed decisions
 
@@ -82,6 +82,14 @@
 - Module 11 passes 64 data checks. Its lab creates a conserved alluvial flow, explicit-denominator matrix, endpoint composition, seven-row exact table, and text alternative; its critique creates three deliberately flawed structural displays.
 - The reference screen selects `Inpatient -> No encounter recorded`: 38 synthetic patients and a 15.8 percent 90-day acute-return percentage versus 9.6 percent in the full cohort. This is a definition-audit screen, not a quality threshold.
 - Synthetic names, addresses, SSNs, driver identifiers, passports, provider, organization, payer, and cost fields were not redistributed because the teaching decision does not need them.
+- DA-730 Module 12 validates the complete 138,084-row CMS Timely and Effective Care hospital release before preserving every Massachusetts EDV, OP_18b, and OP_22 row.
+- Module 12 source-selection SHA-256: `f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b`.
+- Its teaching table contains 186 hospital-measure rows across 62 facilities and has SHA-256 `fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd`.
+- Its three-row measure dictionary has SHA-256 `2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412`.
+- Module 12 passes 179 data checks. Its lab creates one five-view dashboard, one three-row exact decision table, and one text alternative; its critique creates three deliberately flawed dashboards.
+- The reference case selects Anna Jaques Hospital for a definition and current-data review because its public OP-22 value is 23 percent, the highest observed value among 53 reporting Massachusetts hospitals and above the mock 10-percent trigger.
+- The public OP-22 period ended 590 days before release. The dashboard therefore recommends definition validation and current local data, not a current operational judgment or intervention.
+- The Massachusetts medians are descriptive references. The 10-percent and 240-minute values are mock quality-improvement charter assumptions, not CMS thresholds.
 
 ## Pending confirmation
 
@@ -90,9 +98,9 @@
 
 ## Next resume instructions
 
-1. Read the DA-730 Module 12 brief and the Module 11 dashboard handoff.
-2. Select and pin one small CMS hospital monitoring source with explicit measure definitions, reporting periods, footnotes, and refresh dates.
-3. Name one clinical operations or quality audience and one exception-driven monitoring decision before choosing views.
-4. Write `docs/curriculum/courses/DA-730/modules/12-dashboards-multi-view-composition-spec.md` using the 21-section contract.
-5. Keep the dashboard to three to five coordinated views and define the action linked to every threshold.
-6. Verify and release Module 12, then assemble the week-6 checkpoint.
+1. Read the Checkpoint 1 package contract and the Module 12 Checkpoint 2 handoff.
+2. Define one coherent Week 6 portfolio using selected evidence from Modules 07 through 12, not six disconnected assignments.
+3. Require the Module 12 dashboard, exact table, measure dictionary, view-purpose audit, source records, accessibility evidence, one critique repair, decision brief, and AI-use record.
+4. Create the exact learner folder, assembly path, templates, rubric, instructor notes, release record, and standard-library validator.
+5. Test the assembler and validator from a clean temporary folder.
+6. Release Checkpoint 2 before starting Module 13.

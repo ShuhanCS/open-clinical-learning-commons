@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.22.0
+- Specification version: 0.23.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -310,16 +310,22 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 ## Module 12 brief: Dashboards and multi-view composition
 
 - Prerequisites: Modules 01 through 11.
-- Competency: Assemble the minimum set of coordinated views needed for a named audience to monitor one care process and act on an exception.
-- Concepts: audience tasks, KPI selection, overview and detail, coordinated scales, layout, hierarchy, annotation, sparklines, tables, filters, refresh cadence, thresholds, and dashboard failure modes.
-- Primary case: small hospital monitoring dashboard using CMS measures.
-- Decision owner: clinical operations or quality leader.
-- Core source: https://data.cms.gov/provider-data/topics/hospitals
+- Competency: Assemble the minimum set of coordinated views needed for a named audience to notice an exception, understand its limits, and take the next defensible action.
+- Concepts: audience tasks, decision ownership, KPI selection, view-purpose audits, overview and detail, coordinated scales, layout, hierarchy, annotation, tables, filters, refresh cadence, stale states, threshold ownership, and dashboard failure modes.
+- Primary case: historical public-reporting review of EDV, OP_18b, and OP_22 for one low-volume Massachusetts hospital.
+- Decision owner: emergency department quality director.
+- Decision: decide whether a public CMS signal is sufficient to open a local definition and current-data review.
+- Core source: https://data.cms.gov/provider-data/dataset/yv7e-xc69
+- Complete pinned CSV: https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv
+- CMS data dictionary: https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf
 - Supporting guidance: https://www.ahrq.gov/evidencenow/tools/dashboard-best-practice.html and https://www.ahrq.gov/talkingquality/translate/display/index.html
-- Lab: build a three-to-five-view monitoring display, remove any view without a decision purpose, and define the action linked to each threshold.
-- Critique: repair a wall of KPIs, inconsistent time windows, and decorative widgets without decision use.
-- Submission: `module-12/dashboard-brief.md`, `module-12/analysis.R`, `module-12/dashboard.png`, `module-12/measure-dictionary.csv`, `module-12/source-record.yml`, `module-12/alt-text.md`, and `module-12/decision-note.md`.
+- Lab: build a five-view public-reporting review dashboard with one alert, freshness, separate OP-22 and OP_18b peer views, and an ordered action path. Remove any view without a decision purpose.
+- Critique: repair a wall of KPIs, hidden time windows and mixed units, and decorative widgets without decision use.
+- Submission: `module-12/dashboard-brief.md`, `module-12/analysis.R`, `module-12/dashboard.png`, `module-12/dashboard-decision-table.csv`, `module-12/measure-dictionary.csv`, `module-12/source-record.yml`, `module-12/alt-text.md`, `module-12/decision-note.md`, and `module-12/ai-use.md`.
 - Checkpoint contribution: closes the week-6 applied visualization portfolio.
+- Full specification: `docs/curriculum/courses/DA-730/modules/12-dashboards-multi-view-composition-spec.md`.
+- Runnable package: `courses/data-visualization/modules/12-dashboards-multi-view-composition/`.
+- Handoff: Checkpoint 2 packages Modules 07 through 12 before Module 13 adapts one stable analysis for two audiences.
 
 ## Module 13 brief: Audience, annotation, narrative, and capstone
 
@@ -585,7 +591,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01 through 11 are current runnable candidates. Their human reviews remain pending.
+Modules 01 through 12 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 
@@ -623,6 +629,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Module 09 has a complete comparison specification, pinned five-measure CDC PLACES releases, runnable lab, critique set, assessment, instructor key, and release record.
 - [x] Module 10 has a complete place specification, pinned public HPSA and boundary releases, runnable map-versus-non-map lab, critique set, assessment, instructor key, and release record.
 - [x] Module 11 has a complete structure specification, pinned Synthea patient and encounter releases, a one-person-per-index cohort, conserved flow, matrix, composition lab, critique set, assessment, instructor key, and release record.
+- [x] Module 12 has a complete dashboard specification, pinned CMS emergency-department reporting release, three source-preserving tables, a five-view public-reporting review dashboard, exact decision table, critique set, assessment, instructor key, and release record.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.

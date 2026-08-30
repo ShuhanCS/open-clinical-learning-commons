@@ -386,6 +386,51 @@ if (
     throw 'DA-730 Module 11 release metadata does not match the 0.1.0 synthetic transition contract.'
 }
 
+$module12 = Test-ModuleContract `
+    -Label 'Module 12' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\12-dashboards-multi-view-composition-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\12-dashboards-multi-view-composition') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_ed_dashboard_case.py',
+        'validate_ed_dashboard_case.py',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\cms_ma_ed_dashboard_source_2026.csv',
+        'data\ma_ed_public_reporting_dashboard_2026.csv',
+        'data\ed_dashboard_measure_dictionary_2026.csv'
+    )
+if (
+    $module12.Release.module.version -ne '0.1.0' -or
+    $module12.Release.module.commons_release -ne '0.23.0' -or
+    $module12.Release.source.full_rows -ne 138084 -or
+    $module12.Release.source.full_columns -ne 16 -or
+    $module12.Release.source.full_sha256 -ne '1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516' -or
+    $module12.Release.data.source_selection.row_count -ne 186 -or
+    $module12.Release.data.source_selection.column_count -ne 15 -or
+    $module12.Release.data.source_selection.facility_count -ne 62 -or
+    $module12.Release.data.source_selection.sha256 -ne 'f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b' -or
+    $module12.Release.data.teaching.row_count -ne 186 -or
+    $module12.Release.data.teaching.column_count -ne 31 -or
+    $module12.Release.data.teaching.facility_count -ne 62 -or
+    $module12.Release.data.teaching.sha256 -ne 'fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd' -or
+    $module12.Release.data.measure_dictionary.row_count -ne 3 -or
+    $module12.Release.data.measure_dictionary.column_count -ne 18 -or
+    $module12.Release.data.measure_dictionary.sha256 -ne '2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412' -or
+    $module12.Release.validation.measured_results.selected_op22_pct -ne 23 -or
+    $module12.Release.validation.measured_results.selected_op18b_minutes -ne 188 -or
+    $module12.Release.validation.measured_results.op22_source_lag_days_at_release -ne 590 -or
+    $module12.Release.validation.measured_results.dashboard_views -ne 5 -or
+    $module12.Release.validation.data_checks -ne '179 of 179 pass'
+) {
+    throw 'DA-730 Module 12 release metadata does not match the 0.1.0 public-reporting dashboard contract.'
+}
+
 $checkpoint01Root = Join-Path $repo 'courses\data-visualization\checkpoints\01-visualization-judgment-dossier'
 $checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\checkpoints\01-visualization-judgment-dossier-spec.md'
 $checkpoint01Files = @(
@@ -433,4 +478,5 @@ Write-Output "DA-730 $($module08.Label) passed: $($module08.Sections) contract s
 Write-Output "DA-730 $($module09.Label) passed: $($module09.Sections) contract sections and $($module09.FileCount) required files."
 Write-Output "DA-730 $($module10.Label) passed: $($module10.Sections) contract sections and $($module10.FileCount) required files."
 Write-Output "DA-730 $($module11.Label) passed: $($module11.Sections) contract sections and $($module11.FileCount) required files."
+Write-Output "DA-730 $($module12.Label) passed: $($module12.Sections) contract sections and $($module12.FileCount) required files."
 Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."

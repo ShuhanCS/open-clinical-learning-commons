@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.11.0`
+- Register version: `0.12.0`
 - Retrieved or verified: 2026-08-30
 - Scope: public course development and assignments
 
@@ -51,7 +51,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 09. Comparison and small multiples | CDC PLACES county data 2024 release | Released five-measure national county table and a 100-county North Carolina comparison table with paired crude and age-adjusted estimates, uncertainty, national references, and transparent profile order. |
 | 10. Maps, geography, and place | CDC PLACES, direct HRSA primary-care HPSAs, and Census generalized county boundaries | Released 100-county place-access table, 1,546-row HPSA source selection, and 7,121-point boundary release for a map-versus-non-map decision. |
 | 11. Flow, networks, composition, and hierarchy | Synthea; ClinicalTrials.gov as an optional extension | Released all 1,171 patient rows and all 53,346 encounter rows with selected fields from the pinned sample, plus a 374-person adult acute-transition cohort and 15-edge conservation table. |
-| 12. Dashboards and multi-view composition | CMS hospitals | Planned small hospital monitoring set for one named audience and decision. |
+| 12. Dashboards and multi-view composition | CMS Timely and Effective Care - Hospital | Released all 186 Massachusetts EDV, OP_18b, and OP_22 rows from the pinned 2026-08-13 CMS release, plus a 186-row dashboard table and three-row measure dictionary. |
 | 13. Audience, annotation, narrative, and capstone | One approved source above | Versioned learner extract with full provenance record. |
 
 ## Released source packages
@@ -249,3 +249,24 @@ The 2024-2025 AHRF archives were inspected but are not redistributed. The includ
 - Validation: 64 of 64 checks pass
 
 The data are simulated and cannot estimate real care quality, utilization, access, or mortality. `No encounter recorded` means no qualifying encounter appears in the selected extract and interval. The reference path screen selects a definition-audit target; it is not a validated clinical threshold.
+
+### DA-730 dashboards-multi-view-composition release
+
+- Module: DA-730 Module 12, Dashboards and multi-view composition
+- Source: CMS Timely and Effective Care - Hospital, dataset `yv7e-xc69`
+- CMS release: 2026-08-13
+- Dataset page: https://data.cms.gov/provider-data/dataset/yv7e-xc69
+- Complete pinned CSV: https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv
+- Hospital data dictionary: https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf
+- Current measure periods: https://data.cms.gov/provider-data/topics/hospitals/measures-and-current-data-collection-periods
+- Complete source: 138,084 rows, 16 columns, 34,150,899 bytes, SHA-256 `1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516`
+- Source selection: `courses/data-visualization/modules/12-dashboards-multi-view-composition/data/cms_ma_ed_dashboard_source_2026.csv`
+- Source selection: 186 rows and 15 columns across 62 Massachusetts facilities, SHA-256 `f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b`
+- Teaching table: `courses/data-visualization/modules/12-dashboards-multi-view-composition/data/ma_ed_public_reporting_dashboard_2026.csv`
+- Teaching table: 186 rows and 31 columns, SHA-256 `fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd`
+- Measure dictionary: `courses/data-visualization/modules/12-dashboards-multi-view-composition/data/ed_dashboard_measure_dictionary_2026.csv`
+- Measure dictionary: 3 rows and 18 columns, SHA-256 `2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412`
+- Source record: `courses/data-visualization/modules/12-dashboards-multi-view-composition/source-record.yml`
+- Validation: 179 of 179 checks pass
+
+The selected Anna Jaques Hospital public values are 23 percent for OP-22 and 188 minutes for OP_18b. The Massachusetts medians are descriptive peer references. The 10-percent and 240-minute review triggers are mock quality-improvement charter assumptions, not CMS thresholds. The reporting periods ended 590 and 317 days before the CMS release, so the dashboard supports definition validation and current local data review, not a current operational judgment.

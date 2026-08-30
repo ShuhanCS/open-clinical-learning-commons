@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-12",
+    "title": "Dashboards and multi-view composition",
+    "version": "0.1.0",
+    "commons_release": "0.23.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "source_selection": {
+      "path": "data/cms_ma_ed_dashboard_source_2026.csv",
+      "row_count": 186,
+      "column_count": 15,
+      "facility_count": 62,
+      "sha256": "f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b"
+    },
+    "teaching": {
+      "path": "data/ma_ed_public_reporting_dashboard_2026.csv",
+      "row_count": 186,
+      "column_count": 31,
+      "facility_count": 62,
+      "sha256": "fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd"
+    },
+    "measure_dictionary": {
+      "path": "data/ed_dashboard_measure_dictionary_2026.csv",
+      "row_count": 3,
+      "column_count": 18,
+      "sha256": "2db834a350c0fee342efb30fc4b028053e325b3b357cc1031a11f7c9e9b29412"
+    },
+    "public_aggregate_data": true,
+    "patient_level": false,
+    "synthetic": false
+  },
+  "source": {
+    "publisher": "Centers for Medicare & Medicaid Services",
+    "dataset_id": "yv7e-xc69",
+    "landing_page": "https://data.cms.gov/provider-data/dataset/yv7e-xc69",
+    "full_csv_url": "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv",
+    "cms_release_date": "2026-08-13",
+    "full_rows": 138084,
+    "full_columns": 16,
+    "full_bytes": 34150899,
+    "full_sha256": "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516",
+    "source_record": "source-record.yml"
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {"ggplot2": "4.0.3"},
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {"spdx": "CC-BY-4.0", "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"},
+    "code": {"spdx": "MIT", "url": "https://opensource.org/license/mit"},
+    "cms_source": {"spdx": "LicenseRef-US-Government-Public-Domain", "url": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/hospital/HOSPITAL_Data_Dictionary.pdf"}
+  },
+  "curriculum_source": {
+    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "author": "Ali Goff",
+    "date": "2026-08-15",
+    "path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/12-dashboards-multi-view-composition-spec.md"
+  },
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "The validator passed 179 checks. The five-view dashboard, three-row exact decision table, text alternative, and three critique figures rendered successfully and were visually inspected."
+    },
+    "required_human_roles": [
+      {"role": "emergency department quality relevance", "reviewer": null, "status": "pending", "date": null},
+      {"role": "CMS measure and source fidelity", "reviewer": null, "status": "pending", "date": null},
+      {"role": "dashboard and information design", "reviewer": null, "status": "pending", "date": null},
+      {"role": "equity and action language", "reviewer": null, "status": "pending", "date": null},
+      {"role": "accessibility", "reviewer": null, "status": "pending", "date": null},
+      {"role": "independent teachability", "reviewer": null, "status": "pending", "date": null}
+    ]
+  },
+  "validation": {
+    "data_checks": "179 of 179 pass",
+    "lab_execution": "pass: one five-view PNG, one three-row CSV, and one Markdown text alternative",
+    "critique_execution": "pass: three deliberately flawed PNGs",
+    "measured_results": {
+      "facilities": 62,
+      "selected_measures": 3,
+      "source_rows": 186,
+      "op18b_reported": 54,
+      "op18b_ma_median_minutes": 211.5,
+      "op22_reported": 53,
+      "op22_ma_median_pct": 3,
+      "selected_facility_id": "220029",
+      "selected_facility_volume": "low",
+      "selected_op18b_minutes": 188,
+      "selected_op18b_sample": 422,
+      "selected_op18b_trigger_crossed": false,
+      "selected_op22_pct": 23,
+      "selected_op22_sample": 19211,
+      "selected_op22_unfavorable_rank": 1,
+      "selected_op22_trigger_crossed": true,
+      "op18b_source_lag_days_at_release": 317,
+      "op22_source_lag_days_at_release": 590,
+      "dashboard_views": 5
+    }
+  },
+  "known_issues": [
+    "Named clinical, source, design, equity, accessibility, and independent-instructor reviews are pending.",
+    "The dashboard uses public aggregate reporting and is not a real-time operations dashboard.",
+    "The measures have different units and reporting windows.",
+    "The Massachusetts medians are descriptive references, not benchmarks or statistical tests.",
+    "The 240-minute and 10-percent triggers are mock QI charter assumptions, not CMS thresholds.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}
