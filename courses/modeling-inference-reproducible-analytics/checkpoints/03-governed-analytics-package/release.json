@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-fnd2-cp3",
+    "title": "Governed analytics package and model-use decision",
+    "version": "0.1.0",
+    "commons_release": "0.48.0",
+    "course": "FND-2: Modeling, Inference, and Reproducible Analytics",
+    "due_rule": "official last day of assigned half-term",
+    "cumulative_hours": 112.5,
+    "course_points": 35
+  },
+  "accepted_input": {
+    "module_id": "oclc-fnd2-07",
+    "module_version": "0.1.0",
+    "source_commit": "31c69e9152d797f49e5d8968eb1dd5ea53090568",
+    "candidate_files": 168,
+    "module_manifest_rows": 143,
+    "module_manifest_sha256": "ab2537e278ea549b8152434df0a21438394d28caa6031b03e9a570a27db07c1b",
+    "checkpoint1_release_sha256": "03c147d2e75cd446a43b9d56e49495df69af90d42d2b14ad4d860aea9d67239f",
+    "checkpoint2_release_sha256": "b58316081496f42d473b823fac88ed8e6c981e47afb11d0c4856c9f39627d761",
+    "module07_release_sha256": "a2fccdcd096a066337f1de856cb9610f6b389db15c90dff1627af1cbf30ac96e"
+  },
+  "package": {
+    "candidate_manifest_rows": 168,
+    "candidate_manifest_bytes": 27695,
+    "candidate_manifest_sha256": "4fd5b52c94aa038a10faf07372847c5229a394fca0776f8e13f4fc42166dd641",
+    "final_review_files": 14,
+    "review_records": 10,
+    "assembled_files": 182,
+    "external_assembler_dependencies": 0
+  },
+  "assessment": {
+    "course_points": 35,
+    "minimum_passing_points": 28,
+    "criteria": 6,
+    "noncompensable_gates": 27,
+    "defense_questions": 15,
+    "reviewer_roles": 9,
+    "reference_points": 35,
+    "reference_defense": "adequate"
+  },
+  "decision": {
+    "owner": "clinical analytics model-risk lead",
+    "reference_package": "accept with conditions",
+    "reference_model_use": "teaching use only",
+    "tag": "fnd2-governed-candidate-v0.1.0",
+    "tag_target": "31c69e9152d797f49e5d8968eb1dd5ea53090568",
+    "tag_status": "proposed - not created",
+    "human_scope": "curriculum construction only"
+  },
+  "fixed_evidence": {
+    "modeling_rows": 374,
+    "split": "224/75/75",
+    "outcomes": "25/7/4",
+    "selected_model": "ML01",
+    "locked_threshold": "0.08513264",
+    "test_roc_auc": "0.58802817",
+    "test_roc_auc_interval": ["0.26760563", "0.91549296"],
+    "test_brier": "0.05097579",
+    "test_confusion": "48/23/2/2",
+    "subgroup_rows": 10,
+    "suppressed_subgroup_rows": 5,
+    "forecast_rows": 94,
+    "forecast_candidate_mae": "14.99587157",
+    "accepted_tests": 18,
+    "seeded_failures": 10,
+    "monitoring_signals": 10
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 947,
+    "starter_checks": 901,
+    "two_build_manifest_match": "pass",
+    "existing_target_rejection": "pass",
+    "incomplete_record_rejection": "pass",
+    "changed_evidence_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "failed_gate_rejection": "pass",
+    "early_tag_rejection": "pass",
+    "inconsistent_decision_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, package assembly, review records, and validation"}
+  ],
+  "known_issues": [
+    "Named program reviewers, a live learner defense, actual learner and reviewer acknowledgment, and independent human reproduction remain pending before alpha.",
+    "The test set has four outcomes, wide uncertainty, and five suppressed subgroup rows.",
+    "Paired R reconciliation remains a retained upstream condition.",
+    "The CDC forecast is a changing-reporting jurisdiction aggregate and loses one fold to last-value.",
+    "The annotated tag is proposed but cannot be created until named human acceptance of the exact reviewed commit."
+  ]
+}

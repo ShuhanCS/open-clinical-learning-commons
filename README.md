@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.47.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has all seven technical modules and all three cumulative checkpoints as runnable release candidates. FND-2 has all seven runnable technical modules and its cumulative Week 3 and Week 6 checkpoints.
+- Current version: `0.48.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -54,6 +54,8 @@ The sixth runnable unit is [FND-2 Module 06: Agent-assisted modeling and testing
 The cumulative [FND-2 Week 6 checkpoint](courses/modeling-inference-reproducible-analytics/checkpoints/02-validity-forecast-testing-release/README.md) freezes 111 accepted upstream artifacts and six checkpoint controls into a 117-row immutable manifest. Its durable [checkpoint specification](docs/curriculum/courses/FND-2/checkpoints/02-validity-forecast-testing-release-spec.md) defines the 25-point validity and forecast map, 25 noncompensable gates, 12-question defense, explicit human-accountability scope, and Module 07 progression decision.
 
 The seventh runnable unit is [FND-2 Module 07: Model cards, governance, and defense](courses/modeling-inference-reproducible-analytics/modules/07-model-cards-governance-defense/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/FND-2/modules/07-model-cards-governance-defense-spec.md). It freezes 143 immutable files in a 168-file final candidate, adds ten owned monitoring signals and full lifecycle controls, and records `accept with conditions` separately from `teaching use only`.
+
+The [FND-2 final checkpoint](courses/modeling-inference-reproducible-analytics/checkpoints/03-governed-analytics-package/README.md) freezes all 168 candidate files in a 168-row manifest and adds the final score, 27 gates, 15-question defense, release identities, reviewer and reproduction records, audit, conditions, package disposition, and separate model-use recommendation. Its durable [checkpoint specification](docs/curriculum/courses/FND-2/checkpoints/03-governed-analytics-package-spec.md) defines the exact 35-point course decision and 182-file release contract.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -231,9 +233,9 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build FND-1 as its own straight-through technical foundations course.
-2. Build FND-2 Checkpoint 2 from the accepted validity, forecasting, and test handoffs.
-3. Complete the named DA-730 human reviews before alpha promotion.
+1. Build APP-1 as the first domain-specific applied course, revisiting foundations through clinical-care decisions.
+2. Continue APP-2 through APP-7 one distinct course at a time.
+3. Complete named human reviews before alpha promotion.
 
 ## Licensing
 

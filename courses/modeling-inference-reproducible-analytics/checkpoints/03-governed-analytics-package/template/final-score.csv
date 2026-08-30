@@ -1,0 +1,7 @@
+criterion_id,criterion,course_points_available,points_earned,status,evidence
+M01,"Aim, target, prediction time, model design, and baseline",5.00,REPLACE,REPLACE,REPLACE
+R01,"Reproducible pipeline, environment, manifest, tests, and exact refit",6.00,REPLACE,REPLACE,REPLACE
+E01,"Evaluation, calibration, thresholds, subgroup evidence, and failure analysis",7.00,REPLACE,REPLACE,REPLACE
+V01,"Validity, uncertainty, data limits, forecast limits, and claim boundary",5.00,REPLACE,REPLACE,REPLACE
+G01,"Model card, monitoring, drift, retraining, rollback, stop, retirement, and use decision",6.00,REPLACE,REPLACE,REPLACE
+H01,"Responsible-agent evidence, accessible handoff, defense, reviewers, and disposition",6.00,REPLACE,REPLACE,REPLACE

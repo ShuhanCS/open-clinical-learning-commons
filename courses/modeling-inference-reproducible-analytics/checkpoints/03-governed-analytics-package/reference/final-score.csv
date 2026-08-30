@@ -1,0 +1,7 @@
+criterion_id,criterion,course_points_available,points_earned,status,evidence
+M01,"Aim, target, prediction time, model design, and baseline",5.00,5.00,pass,evidence/checkpoint2/prior-checkpoint/modules/01-aims-reproducible-workspace/outputs/modeling-cohort.csv and split-registry.csv plus governance-contract.json
+R01,"Reproducible pipeline, environment, manifest, tests, and exact refit",6.00,6.00,pass,evidence/checkpoint2/modules/06-agent-assisted-modeling-testing/outputs/test-summary.csv and environment-and-commands.md and release-manifest.csv
+E01,"Evaluation, calibration, thresholds, subgroup evidence, and failure analysis",7.00,7.00,pass,evidence/checkpoint2/prior-checkpoint/modules/03-prediction-evaluation/outputs plus performance-appendix.csv and subgroup-equity-review.md
+V01,"Validity, uncertainty, data limits, forecast limits, and claim boundary",5.00,5.00,pass,evidence/checkpoint2/modules/04-validity-adjustment-longitudinal and modules/05-forecasting-temporal-validation
+G01,"Model card, monitoring, drift, retraining, rollback, stop, retirement, and use decision",6.00,6.00,pass,model-card.md monitoring-plan.csv drift-retraining-versioning.md rollback-stop-retirement.md and model-use-recommendation.md
+H01,"Responsible-agent evidence, accessible handoff, defense, reviewers, and disposition",6.00,6.00,pass with conditions,evidence/checkpoint2/modules/06-agent-assisted-modeling-testing plus accessibility-review.md handoff-brief.md technical-defense.md and final-review records

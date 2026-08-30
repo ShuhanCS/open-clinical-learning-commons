@@ -97,7 +97,7 @@ if (
     $fnd2SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2PackageContent -match '(?im)[A-Z]:\\Users\\' -or
     $fnd2Content -notmatch 'Commons release: 0\.38\.0' -or
-    $fnd2PackageContent -notmatch 'Commons release: 0\.47\.0' -or
+    $fnd2PackageContent -notmatch 'Commons release: 0\.48\.0' -or
     $fnd2Content -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch 'eef6fbb36cb27917f8b48b61e705895a5cb5eaad64bd0f0d38bf153525528c03' -or
     $fnd2SourceContent -notmatch '21,850' -or
@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.47.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.48.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -817,6 +817,77 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $fnd2Checkpoint02Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'FND-2 Checkpoint 2 validator self-check failed.'
+}
+
+$fnd2Checkpoint03Root = Join-Path $repo 'courses\modeling-inference-reproducible-analytics\checkpoints\03-governed-analytics-package'
+$fnd2Checkpoint03Spec = Join-Path $repo 'docs\curriculum\courses\FND-2\checkpoints\03-governed-analytics-package-spec.md'
+$fnd2Checkpoint03Files = @(
+    'README.md', 'VERSION', 'final-contract.json', 'assessment.md',
+    'instructor-guide.md', 'assemble_final.py', 'validate_final.py', 'release.json',
+    'template\submission-record.md', 'template\final-score.csv',
+    'template\gate-results.csv', 'template\final-defense.md',
+    'template\reviewer-record.md', 'template\final-reproduction.md',
+    'template\conditions-register.csv', 'template\final-audit.md',
+    'template\final-decision.md', 'template\release-acceptance.md',
+    'reference\submission-record.md', 'reference\final-score.csv',
+    'reference\gate-results.csv', 'reference\final-defense.md',
+    'reference\reviewer-record.md', 'reference\final-reproduction.md',
+    'reference\conditions-register.csv', 'reference\final-audit.md',
+    'reference\final-decision.md', 'reference\release-acceptance.md'
+)
+$fnd2Checkpoint03Missing = @($fnd2Checkpoint03Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd2Checkpoint03Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd2Checkpoint03Spec) -or $fnd2Checkpoint03Missing.Count -gt 0) {
+    throw "FND-2 final checkpoint is missing its specification or package files: $($fnd2Checkpoint03Missing -join ', ')."
+}
+$fnd2Checkpoint03Content = Get-Content -Raw -LiteralPath $fnd2Checkpoint03Spec
+$fnd2Checkpoint03Sections = [regex]::Matches($fnd2Checkpoint03Content, '(?m)^## \d+\.').Count
+if (
+    $fnd2Checkpoint03Sections -ne 17 -or
+    $fnd2Checkpoint03Content -match '[—–]' -or
+    $fnd2Checkpoint03Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd2Checkpoint03Content -notmatch '0\.48\.0' -or
+    $fnd2Checkpoint03Content -notmatch 'exactly 182 files' -or
+    $fnd2Checkpoint03Content -notmatch '4fd5b52c94aa038a10faf07372847c5229a394fca0776f8e13f4fc42166dd641' -or
+    $fnd2Checkpoint03Content -notmatch 'Complete reference validation passes 947 checks' -or
+    $fnd2Checkpoint03Content -notmatch 'Learner-starter validation passes 901 checks' -or
+    $fnd2Checkpoint03Content -notmatch 'Twenty-seven noncompensable gates' -or
+    $fnd2Checkpoint03Content -notmatch 'teaching use only'
+) {
+    throw 'FND-2 final checkpoint must define 17 plain-ASCII sections with the exact freeze, 35-point, 27-gate, validation, tag, and separate use-decision contract.'
+}
+$fnd2Checkpoint03Release = Get-Content -Raw -LiteralPath (Join-Path $fnd2Checkpoint03Root 'release.json') | ConvertFrom-Json
+if (
+    $fnd2Checkpoint03Release.checkpoint.id -ne 'oclc-fnd2-cp3' -or
+    $fnd2Checkpoint03Release.checkpoint.version -ne '0.1.0' -or
+    $fnd2Checkpoint03Release.checkpoint.commons_release -ne '0.48.0' -or
+    $fnd2Checkpoint03Release.checkpoint.cumulative_hours -ne 112.5 -or
+    $fnd2Checkpoint03Release.checkpoint.course_points -ne 35 -or
+    $fnd2Checkpoint03Release.accepted_input.candidate_files -ne 168 -or
+    $fnd2Checkpoint03Release.accepted_input.module_manifest_rows -ne 143 -or
+    $fnd2Checkpoint03Release.accepted_input.module_manifest_sha256 -ne 'ab2537e278ea549b8152434df0a21438394d28caa6031b03e9a570a27db07c1b' -or
+    $fnd2Checkpoint03Release.package.candidate_manifest_rows -ne 168 -or
+    $fnd2Checkpoint03Release.package.candidate_manifest_bytes -ne 27695 -or
+    $fnd2Checkpoint03Release.package.candidate_manifest_sha256 -ne '4fd5b52c94aa038a10faf07372847c5229a394fca0776f8e13f4fc42166dd641' -or
+    $fnd2Checkpoint03Release.package.assembled_files -ne 182 -or
+    $fnd2Checkpoint03Release.assessment.noncompensable_gates -ne 27 -or
+    $fnd2Checkpoint03Release.assessment.defense_questions -ne 15 -or
+    $fnd2Checkpoint03Release.decision.reference_package -ne 'accept with conditions' -or
+    $fnd2Checkpoint03Release.decision.reference_model_use -ne 'teaching use only' -or
+    $fnd2Checkpoint03Release.decision.tag_status -ne 'proposed - not created' -or
+    $fnd2Checkpoint03Release.validation.complete_reference_checks -ne 947 -or
+    $fnd2Checkpoint03Release.validation.starter_checks -ne 901
+) {
+    throw 'FND-2 final checkpoint release metadata does not match the 0.1.0 governed final-package contract.'
+}
+& python (Join-Path $fnd2Checkpoint03Root 'assemble_final.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 final checkpoint assembler self-check failed.'
+}
+& python (Join-Path $fnd2Checkpoint03Root 'validate_final.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-2 final checkpoint validator self-check failed.'
 }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
@@ -2101,3 +2172,4 @@ Write-Output "FND-2 Module 06 passed: $fnd2Module06Sections contract sections an
 Write-Output "FND-2 Module 07 passed: $fnd2Module07Sections contract sections and $($fnd2Module07Files.Count) required files."
 Write-Output "FND-2 Checkpoint 1 passed: $fnd2Checkpoint01Sections contract sections and $($fnd2Checkpoint01Files.Count) required files."
 Write-Output "FND-2 Checkpoint 2 passed: $fnd2Checkpoint02Sections contract sections and $($fnd2Checkpoint02Files.Count) required files."
+Write-Output "FND-2 final checkpoint passed: $fnd2Checkpoint03Sections contract sections and $($fnd2Checkpoint03Files.Count) required files."

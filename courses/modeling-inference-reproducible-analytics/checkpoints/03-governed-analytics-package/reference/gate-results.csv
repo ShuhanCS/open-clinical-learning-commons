@@ -1,0 +1,28 @@
+gate_id,gate,status,evidence,reviewer,condition_id
+G01,Accepted Checkpoint 1 Checkpoint 2 and Module 07 versions are exact,pass,final-review/submission-record.md and final-review/module07-release.json,automated release-identity check,NONE
+G02,Final candidate manifest and protected assembly are exact,pass,final-review/candidate-manifest.csv and assembly report,automated package check,NONE
+G03,Repository commit semantic version release notes and proposed tag are exact,pass with condition,CHANGELOG.md release-notes.md and final-review/final-decision.md,release reviewer,C06
+G04,Synthetic and public source fingerprints and rights are exact,pass,evidence provenance and final-review/final-audit.md,data-governance review,NONE
+G05,Cohort prediction time split feature roles and outcome counts are exact,pass,evidence/checkpoint2/prior-checkpoint and model-card.md,clinical informatics review,NONE
+G06,No leakage or test contamination is present,pass,model contract transformed feature names and accepted tests,model-evaluation review,NONE
+G07,Baseline and candidate use identical evaluation rows,pass,performance appendix and prediction-evaluation evidence,model-evaluation review,NONE
+G08,Discrimination calibration threshold confusion prevalence uncertainty and subgroup evidence are exact,pass,performance-appendix.csv and subgroup-equity-review.md,model-evaluation review,NONE
+G09,Four-positive test limitation is visible,pass,model-card.md handoff-brief.md and final-review/final-defense.md,model-risk review,NONE
+G10,Validity DAG missingness longitudinal and referral conditions are exact,pass,evidence/checkpoint2/modules/04-validity-adjustment-longitudinal,biostatistical review,NONE
+G11,Forecast source folds benchmarks errors and coverage conditions are exact,pass,evidence/checkpoint2/modules/05-forecasting-temporal-validation,forecasting review,NONE
+G12,All accepted tests pass and seeded failures reject,pass,evidence/checkpoint2/modules/06-agent-assisted-modeling-testing/outputs,software evidence review,NONE
+G13,Agent trace independent audit and human sign-off are complete,pass with condition,evidence/checkpoint2/modules/06-agent-assisted-modeling-testing and ai-use.md,responsible-AI review,C04
+G14,Model card matches registered evidence,pass,model-card.md and performance-appendix.csv,model-risk review,NONE
+G15,Intended and prohibited use are explicit,pass,model-card.md and model-use-recommendation.md,clinical informatics review,NONE
+G16,Subgroup review includes counts missingness uncertainty and unsupported comparisons,pass,subgroup-equity-review.md and provenance subgroup metrics,equity evidence review,NONE
+G17,Monitoring signals include denominators windows owners triggers and actions,pass,monitoring-plan.csv,model-risk review,NONE
+G18,Retraining requires new data comparison review and semantic-version decision,pass,drift-retraining-versioning.md,release reviewer,NONE
+G19,Rollback stop and retirement identify safe fallback and notification,pass,rollback-stop-retirement.md,model-risk review,NONE
+G20,Displays and DAGs have exact accessible alternatives,pass with condition,accessibility-review.md DAG narrative and exact CSV routes,accessibility review,C03
+G21,No prohibited file data class path secret key credential or hidden dependency is present,pass,final-review/final-audit.md and reproducibility-audit.md,data-governance review,NONE
+G22,Clean reproduction and exact output comparison pass,pass with condition,final-review/final-reproduction.md,independent reproduction,C02
+G23,Reviewer roles and condition ownership are complete,pass with condition,final-review/reviewer-record.md and conditions-register.csv,decision owner,C01
+G24,Technical defense is adequate,pass with condition,final-review/final-defense.md,FND-2 faculty owner,C05
+G25,Package disposition is recorded,pass,final-review/final-decision.md,decision owner,NONE
+G26,Model-use recommendation is separate and recorded,pass,final-review/final-decision.md and model-use-recommendation.md,model-risk lead,NONE
+G27,No deployment efficacy causal fairness stable-process or real-population claim is made,pass,model card handoff audit and final decision,clinical and methods review,NONE

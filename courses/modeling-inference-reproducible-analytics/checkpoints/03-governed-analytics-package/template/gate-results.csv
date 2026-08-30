@@ -1,0 +1,28 @@
+gate_id,gate,status,evidence,reviewer,condition_id
+G01,Accepted Checkpoint 1 Checkpoint 2 and Module 07 versions are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G02,Final candidate manifest and protected assembly are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G03,Repository commit semantic version release notes and proposed tag are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G04,Synthetic and public source fingerprints and rights are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G05,Cohort prediction time split feature roles and outcome counts are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G06,No leakage or test contamination is present,REPLACE,REPLACE,REPLACE,REPLACE
+G07,Baseline and candidate use identical evaluation rows,REPLACE,REPLACE,REPLACE,REPLACE
+G08,Discrimination calibration threshold confusion prevalence uncertainty and subgroup evidence are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G09,Four-positive test limitation is visible,REPLACE,REPLACE,REPLACE,REPLACE
+G10,Validity DAG missingness longitudinal and referral conditions are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G11,Forecast source folds benchmarks errors and coverage conditions are exact,REPLACE,REPLACE,REPLACE,REPLACE
+G12,All accepted tests pass and seeded failures reject,REPLACE,REPLACE,REPLACE,REPLACE
+G13,Agent trace independent audit and human sign-off are complete,REPLACE,REPLACE,REPLACE,REPLACE
+G14,Model card matches registered evidence,REPLACE,REPLACE,REPLACE,REPLACE
+G15,Intended and prohibited use are explicit,REPLACE,REPLACE,REPLACE,REPLACE
+G16,Subgroup review includes counts missingness uncertainty and unsupported comparisons,REPLACE,REPLACE,REPLACE,REPLACE
+G17,Monitoring signals include denominators windows owners triggers and actions,REPLACE,REPLACE,REPLACE,REPLACE
+G18,Retraining requires new data comparison review and semantic-version decision,REPLACE,REPLACE,REPLACE,REPLACE
+G19,Rollback stop and retirement identify safe fallback and notification,REPLACE,REPLACE,REPLACE,REPLACE
+G20,Displays and DAGs have exact accessible alternatives,REPLACE,REPLACE,REPLACE,REPLACE
+G21,No prohibited file data class path secret key credential or hidden dependency is present,REPLACE,REPLACE,REPLACE,REPLACE
+G22,Clean reproduction and exact output comparison pass,REPLACE,REPLACE,REPLACE,REPLACE
+G23,Reviewer roles and condition ownership are complete,REPLACE,REPLACE,REPLACE,REPLACE
+G24,Technical defense is adequate,REPLACE,REPLACE,REPLACE,REPLACE
+G25,Package disposition is recorded,REPLACE,REPLACE,REPLACE,REPLACE
+G26,Model-use recommendation is separate and recorded,REPLACE,REPLACE,REPLACE,REPLACE
+G27,No deployment efficacy causal fairness stable-process or real-population claim is made,REPLACE,REPLACE,REPLACE,REPLACE

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.47.0
+- Current release: 0.48.0
 - Last updated: 2026-08-30
-- Active phase: FND-2 module build
-- Last completed unit: FND-2 Module 07, model cards, governance, and defense
-- Next unit: FND-2 Final Checkpoint 3, governed analytics package and model-use decision
+- Active phase: applied-course build
+- Last completed unit: FND-2 Final Checkpoint 3, governed analytics package and model-use decision
+- Next unit: APP-1 Module 01, clinical-care question, cohort, and decision contract
 
 ## Confirmed decisions
 
@@ -272,6 +272,12 @@
 - The candidate manifest is 27,316 bytes with SHA-256 `ab2537e278ea549b8152434df0a21438394d28caa6031b03e9a570a27db07c1b`.
 - The reference package disposition is `accept with conditions`; its separate model-use recommendation is `teaching use only`. The final checkpoint is permitted for curriculum construction.
 - FND-2 Module 07 is a runnable release candidate at Commons 0.47.0.
+- FND-2 Final Checkpoint 3 version 0.1.0 freezes the complete 168-file Module 07 candidate without refitting or changing accepted evidence.
+- Its deterministic 168-row candidate manifest is 27,695 bytes with SHA-256 `4fd5b52c94aa038a10faf07372847c5229a394fca0776f8e13f4fc42166dd641`. Exact Checkpoint 2 and Module 07 release records bring the final package to 182 files.
+- The final assessment preserves the 35-point source component across six criteria. Passing requires at least 28 points, all 27 noncompensable gates, an adequate 15-question defense, an accepting package disposition, and a separate allowed model-use recommendation.
+- Complete reference validation passes 947 checks and learner-starter validation passes 901. Existing targets, incomplete records, changed candidate bytes, overscoring, failed gates, early tags, and inconsistent decisions are rejected.
+- The reference package disposition is `accept with conditions`; the separate model-use recommendation is `teaching use only`. The annotated tag `fnd2-governed-candidate-v0.1.0` remains proposed and uncreated pending named human acceptance of the exact reviewed commit.
+- All seven FND-2 modules and all three cumulative checkpoints are runnable release candidates. FND-2 technical construction is complete at Commons 0.48.0.
 
 ## Pending confirmation
 
@@ -280,11 +286,11 @@
 
 ## Next resume instructions
 
-1. Read the accepted Module 07 specification, contract, release, candidate progression, Checkpoint 1 and 2 releases, course specification, master architecture, and this ledger.
-2. Write the 17-section FND-2 Final Checkpoint 3 specification.
-3. Freeze the exact Module 07 candidate and both cumulative checkpoint identities without refitting, tuning, or rewriting evidence.
-4. Implement the final 35-point map, 27 gates, 15-question defense, named-review contract, package disposition, and separate model-use recommendation.
-5. Verify repository, exact commit, semantic version, release notes, proposed annotated tag, source rights, model evidence, governance, monitoring, accessibility, AI audit, human sign-off, and clean reproduction.
-6. Define the annotated tag target only after an allowed final disposition identifies the exact reviewed commit.
-7. Keep the reference recommendation `teaching use only` and preserve all clinical, operational, causal, fairness, safety, stable-process, and deployment prohibitions.
-8. Advance semver, update this ledger, commit, push, and only then evaluate whether the tag may be created.
+1. Read the APP-1 course brief and ownership map in the master architecture, the source records, the two completed foundation handoffs, and this ledger.
+2. Write the durable APP-1 Module 01 specification before broad implementation.
+3. Make the clinical-care decision, target population, cohort, time zero, follow-up, outcome, and evidence boundary explicit.
+4. Revisit FND-1 data foundations through a domain-specific longitudinal clinical-care cohort rather than repeating the foundation course.
+5. Register and carry the open or synthetic clinical source in full with rights, fingerprints, transformation records, and teaching checks.
+6. Define the Week 3, Week 6, and official-end-date deliverables before building later modules.
+7. Preserve the applied-course structure: three weeks of applied statistics and math, three weeks of applications and exercises with embedded half-week machine learning, then clinician-led leadership.
+8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 02.

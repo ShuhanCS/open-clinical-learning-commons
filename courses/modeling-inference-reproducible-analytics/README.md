@@ -12,9 +12,9 @@ FND-2 teaches learners to turn checked healthcare data into analytic evidence an
 - Continuing forecast case: the pinned 6,208-row CDC NHSN jurisdiction-week public release
 - Final deliverable: a reproducible model or agent-assisted analytics package with a model card
 - Course specification status: complete candidate
-- Module package status: Modules 01 through 07 and Checkpoints 1 and 2 are runnable release candidates
+- Module package status: Modules 01 through 07 and all three checkpoints are runnable release candidates
 - Course package version: 0.1.0
-- Commons release: 0.47.0
+- Commons release: 0.48.0
 
 ## Seven technical modules
 
@@ -63,10 +63,14 @@ Module 07 nests the complete accepted Checkpoint 2 package, adds seven source an
 - [Checkpoint 1 durable specification](../../docs/curriculum/courses/FND-2/checkpoints/01-modeling-readiness-release-spec.md)
 - [Checkpoint 2: Validity, forecast, testing, and agent-accountability release](checkpoints/02-validity-forecast-testing-release/README.md)
 - [Checkpoint 2 durable specification](../../docs/curriculum/courses/FND-2/checkpoints/02-validity-forecast-testing-release-spec.md)
+- [Final checkpoint: Governed analytics package and model-use decision](checkpoints/03-governed-analytics-package/README.md)
+- [Final checkpoint durable specification](../../docs/curriculum/courses/FND-2/checkpoints/03-governed-analytics-package-spec.md)
 
 Checkpoint 1 assembles rather than recomputes Modules 01 through 03. It freezes 72 module artifacts and six controls in a 78-row manifest, preserves the corrected 40-point 15/10/15 map, enforces 23 gates and a 12-question defense, and carries the four-outcome test evidence and teaching-only boundary into Module 04.
 
 Checkpoint 2 preserves the accepted Week 3 identity, adds complete validity, public CDC forecast, and agent-accountability evidence, and carries both public data files in full. It freezes 111 upstream artifacts and six controls in a 117-row manifest, preserves the 15-point Module 04 and 10-point Module 05 map, enforces 25 gates and a 12-question defense, and makes human sign-off scope plus Module 07 permission explicit.
+
+The final checkpoint freezes the complete 168-file Module 07 candidate without refitting. Its 168-row candidate manifest, exact release identities, 35-point score, 27 gates, 15-question defense, reviewer and reproduction records, audit, conditions, and separate package and model-use decisions create a 182-file final package. The reference passes with conditions while model use remains teaching only, and the proposed tag remains uncreated pending named human acceptance.
 
 ## Three cumulative checkpoints
 
@@ -85,7 +89,7 @@ The final decision owner is a clinical analytics model-risk lead. The review sep
 1. Is the analytics package technically correct, reproducible, accessible, and honestly documented?
 2. What use, if any, may the fitted model support?
 
-A package may pass while the model-use recommendation remains `do not deploy`. That is the expected reference outcome for a small synthetic cohort with only four acute-return outcomes in its held-out test period.
+A package may pass while the model-use recommendation remains `teaching use only`. That is the expected reference outcome for a small synthetic cohort with only four acute-return outcomes in its held-out test period.
 
 ## Data plan
 
@@ -115,4 +119,4 @@ https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data
 
 ## Build order
 
-Build Modules 01 through 07 one at a time. Each unit receives a durable specification, versioned data or accepted upstream input, runnable work, learner assessment, instructor notes, validator, review fields, semantic-version decision, commit, and push before the next unit begins.
+All seven modules and three cumulative checkpoints are runnable release candidates. Named program review, live learner defense, independent human reproduction, and final tag authorization remain before alpha.
