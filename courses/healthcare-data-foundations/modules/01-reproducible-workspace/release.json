@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd1-01",
+    "title": "Setting up a reproducible workspace",
+    "version": "0.1.0",
+    "commons_release": "0.28.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "week": 1,
+    "hours": 15.5,
+    "checkpoint_component_weight_percent": 15
+  },
+  "decision": {
+    "owner": "course instructor acting as repository maintainer",
+    "question": "Is the workspace ready to receive synthetic healthcare source data and graded SQL/Python work?",
+    "dispositions": [
+      "accept",
+      "accept with conditions",
+      "revise",
+      "refer"
+    ]
+  },
+  "data": {
+    "id": "fnd1-workspace-smoke-test",
+    "version": "0.1.0",
+    "path": "template/data/workspace_smoke_test.csv",
+    "synthetic": true,
+    "contains_patient_records": false,
+    "supports_clinical_claims": false,
+    "bytes": 134,
+    "row_count": 3,
+    "column_count": 3,
+    "sha256": "330da80c517c912fccd9bca3963aded84898dbb51e8b7271aa3bc53b0439c3ab"
+  },
+  "environment": {
+    "tested_platform": "Windows",
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "git": "2.54.0.windows.1",
+    "r": "4.6.1",
+    "packages": {
+      "jupyterlab": "4.6.3",
+      "nbclient": "0.10.2",
+      "pandas": "3.0.5"
+    }
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "data": {
+      "spdx": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "package": {
+    "builder": "build_workspace.py",
+    "validator": "validate_workspace.py",
+    "template": "template",
+    "specification": "docs/curriculum/courses/FND-1/modules/01-reproducible-workspace-spec.md",
+    "starter_validation_checks": 15,
+    "submission_validation_checks": 26,
+    "required_learner_tag": "fnd1-setup-v0.1.0"
+  },
+  "assessment": {
+    "points": 100,
+    "minimum_passing_points": 80,
+    "noncompensable_gates": [
+      "Python and SQLite",
+      "pandas notebook",
+      "supplied R read-run-interpret",
+      "clean reproduction",
+      "Git state and annotated tag",
+      "privacy and credentials",
+      "AI disclosure",
+      "accept or accept with conditions disposition"
+    ]
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, teaching package, validation, and release checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "A fresh Python environment installed the exact pins; Python/SQLite, notebook, and supplied R checks ran; the 26-check submission validator passed; overwrite and incomplete-submission guards passed."
+    },
+    "required_human_roles": [
+      {
+        "role": "FND-1 faculty owner",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "SQL and data engineering",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "Python and notebook teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "R read-run-interpret path",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "privacy and data governance",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "responsible AI",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent reproduction and teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "clean_target_build": "pass",
+    "fresh_environment_install": "pass",
+    "python_sqlite_execution": "pass",
+    "notebook_execution": "pass",
+    "r_execution": "pass",
+    "submission_validation": "26 checks pass",
+    "nonempty_target_refusal": "pass",
+    "incomplete_submission_rejection": "pass",
+    "measured_results": {
+      "row_count": 3,
+      "event_count_total": 15,
+      "event_count_minimum": 3,
+      "event_count_maximum": 7,
+      "notebook_code_cells": 3,
+      "required_git_commits_minimum": 3,
+      "required_merge_commits_minimum": 1
+    }
+  },
+  "known_issues": [
+    "Named faculty, technical, accessibility, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "The clean reference environment was tested on Windows; named macOS and Linux reproduction remains pending.",
+    "A local R installation may require an institution-managed alternative for some learners.",
+    "The path scan catches common user-home paths but does not replace human secret and privacy review.",
+    "The exact package pins remain frozen until a tested versioned update is released."
+  ]
+}

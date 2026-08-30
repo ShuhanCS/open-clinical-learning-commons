@@ -1,0 +1,7 @@
+* text=auto
+*.csv text eol=lf
+*.ipynb text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.R text eol=lf
+*.sql text eol=lf

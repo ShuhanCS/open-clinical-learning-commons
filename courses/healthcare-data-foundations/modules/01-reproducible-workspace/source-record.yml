@@ -1,0 +1,32 @@
+schema_version: 1.0.0
+source_id: fnd1-workspace-smoke-test
+title: FND-1 workspace smoke-test table
+version: 0.1.0
+created: 2026-08-30
+publisher: Open Clinical Learning Commons
+repository: https://github.com/ShuhanCS/open-clinical-learning-commons
+source_type: deterministic synthetic software-test data
+synthetic: true
+contains_patient_records: false
+supports_clinical_claims: false
+file:
+  path: template/data/workspace_smoke_test.csv
+  bytes: 134
+  rows_excluding_header: 3
+  columns: 3
+  sha256: 330da80c517c912fccd9bca3963aded84898dbb51e8b7271aa3bc53b0439c3ab
+rights:
+  spdx: CC0-1.0
+  url: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
+teaching_purpose:
+  - verify that Python can read a deterministic CSV
+  - verify that SQLite can create, load, and query a table
+  - verify that pandas can inspect the same table in a notebook
+  - verify that a supplied base-R script returns the same row count and total
+prohibited_interpretation:
+  - patient description
+  - clinical performance
+  - utilization estimate
+  - health outcome
+  - evidence for a clinical, operational, financial, or policy decision
+change_policy: A changed byte requires a new data version, fingerprint, expected-result contract, and module release decision.

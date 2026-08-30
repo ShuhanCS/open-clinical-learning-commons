@@ -65,6 +65,89 @@ if (
     throw 'FND-1 is missing its source fingerprint, assessment weights, ownership boundary, or plain-ASCII punctuation contract.'
 }
 
+$fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
+$fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
+$fnd1Module01Files = @(
+    'README.md',
+    'assessment.md',
+    'build_workspace.py',
+    'data-spec.md',
+    'instructor-notes.md',
+    'release.json',
+    'source-record.yml',
+    'validate_workspace.py',
+    'template\.gitattributes',
+    'template\.gitignore',
+    'template\README.md',
+    'template\VERSION',
+    'template\requirements.txt',
+    'template\ai-use.md',
+    'template\environment-note.md',
+    'template\reproducibility-check.md',
+    'template\version-policy.md',
+    'template\analysis\r-smoke-test.R',
+    'template\data\workspace_smoke_test.csv',
+    'template\notebooks\01-smoke-test.ipynb',
+    'template\outputs\.gitkeep',
+    'template\sql\00-smoke-test.sql',
+    'template\src\smoke_test.py'
+)
+$fnd1Module01Missing = @($fnd1Module01Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Module01Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Module01Spec) -or $fnd1Module01Missing.Count -gt 0) {
+    throw "FND-1 Module 01 is missing its specification or package files: $($fnd1Module01Missing -join ', ')."
+}
+
+$fnd1Module01Content = Get-Content -Raw -LiteralPath $fnd1Module01Spec
+$fnd1Module01Sections = [regex]::Matches($fnd1Module01Content, '(?m)^## \d+\.').Count
+if ($fnd1Module01Sections -ne 21) {
+    throw "FND-1 Module 01 must define 21 contract sections; found $fnd1Module01Sections."
+}
+if ($fnd1Module01Content -match '[—–]' -or $fnd1Module01Content -match '(?im)[A-Z]:\\Users\\') {
+    throw 'FND-1 Module 01 contains a Unicode dash or learner-facing local absolute path.'
+}
+
+$fnd1Module01Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Module01Root 'release.json') | ConvertFrom-Json
+$fnd1Module01Data = Join-Path $fnd1Module01Root 'template\data\workspace_smoke_test.csv'
+$fnd1Module01Notebook = Get-Content -Raw -LiteralPath (Join-Path $fnd1Module01Root 'template\notebooks\01-smoke-test.ipynb') | ConvertFrom-Json
+if (
+    $fnd1Module01Release.module.version -ne '0.1.0' -or
+    $fnd1Module01Release.module.commons_release -ne '0.28.0' -or
+    $fnd1Module01Release.module.hours -ne 15.5 -or
+    $fnd1Module01Release.module.checkpoint_component_weight_percent -ne 15 -or
+    $fnd1Module01Release.data.bytes -ne 134 -or
+    $fnd1Module01Release.data.row_count -ne 3 -or
+    $fnd1Module01Release.data.column_count -ne 3 -or
+    $fnd1Module01Release.data.sha256 -ne '330da80c517c912fccd9bca3963aded84898dbb51e8b7271aa3bc53b0439c3ab' -or
+    (Get-Item -LiteralPath $fnd1Module01Data).Length -ne 134 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $fnd1Module01Data).Hash.ToLowerInvariant() -ne '330da80c517c912fccd9bca3963aded84898dbb51e8b7271aa3bc53b0439c3ab' -or
+    @($fnd1Module01Notebook.cells | Where-Object { $_.cell_type -eq 'code' }).Count -ne 3 -or
+    @($fnd1Module01Notebook.cells | Where-Object { -not $_.id }).Count -ne 0 -or
+    $fnd1Module01Release.package.starter_validation_checks -ne 15 -or
+    $fnd1Module01Release.package.submission_validation_checks -ne 26 -or
+    $fnd1Module01Release.validation.builder_self_check -ne 'pass' -or
+    $fnd1Module01Release.validation.validator_self_check -ne 'pass' -or
+    $fnd1Module01Release.validation.clean_target_build -ne 'pass' -or
+    $fnd1Module01Release.validation.fresh_environment_install -ne 'pass' -or
+    $fnd1Module01Release.validation.python_sqlite_execution -ne 'pass' -or
+    $fnd1Module01Release.validation.notebook_execution -ne 'pass' -or
+    $fnd1Module01Release.validation.r_execution -ne 'pass' -or
+    $fnd1Module01Release.validation.nonempty_target_refusal -ne 'pass' -or
+    $fnd1Module01Release.validation.incomplete_submission_rejection -ne 'pass'
+) {
+    throw 'FND-1 Module 01 release metadata, source, notebook, or validation facts do not match the 0.1.0 contract.'
+}
+
+& python (Join-Path $fnd1Module01Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-1 Module 01 builder self-check failed.'
+}
+& python (Join-Path $fnd1Module01Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'FND-1 Module 01 validator self-check failed.'
+}
+
 function Test-ModuleContract {
     param(
         [Parameter(Mandatory)] [string] $Label,
@@ -701,3 +784,4 @@ Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint
 Write-Output "DA-730 Checkpoint 2 passed: 17 contract sections and $($checkpoint02Files.Count) package files."
 Write-Output "DA-730 Checkpoint 3 passed: 17 contract sections and $($checkpoint03Files.Count) package files."
 Write-Output "FND-1 specification passed: $fnd1ModuleCount modules, $fnd1Hours hours, $fnd1CheckpointCount checkpoints."
+Write-Output "FND-1 Module 01 passed: $fnd1Module01Sections contract sections and $($fnd1Module01Files.Count) required files."

@@ -6,14 +6,16 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.27.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 now has a source-verified, 112.5-hour course contract; its runnable modules are the active build.
+- Current version: `0.28.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 has a source-verified, 112.5-hour course contract, and Module 01 is now a runnable environment, Git, versioning, reproduction, and AI-accountability release candidate.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
 The first full course specification is [DA-730: Clinical data visualization and decision storytelling](docs/curriculum/courses/DA-730/course-spec.md).
 
 The separate straight-through technical foundation is specified in [FND-1: Healthcare Data Foundations](docs/curriculum/courses/FND-1/course-spec.md), with its source fingerprint and normalization record in [the FND-1 source record](docs/source/fnd-1-healthcare-data-foundations-source-record.md).
+
+Its first runnable unit is [FND-1 Module 01: Setting up a reproducible workspace](courses/healthcare-data-foundations/modules/01-reproducible-workspace/README.md), governed by the durable [Module 01 specification](docs/curriculum/courses/FND-1/modules/01-reproducible-workspace-spec.md).
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

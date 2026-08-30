@@ -1,0 +1,4 @@
+record_id,source_label,event_count
+demo-001,synthetic-workspace-a,3
+demo-002,synthetic-workspace-b,5
+demo-003,synthetic-workspace-c,7

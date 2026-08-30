@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.27.0
+- Current release: 0.28.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 course specification
-- Next unit: FND-1 Module 01, Setting up a reproducible workspace
+- Last completed unit: FND-1 Module 01, Setting up a reproducible workspace
+- Next unit: FND-1 Module 02, Databases and retrieving healthcare data
 
 ## Confirmed decisions
 
@@ -114,6 +114,13 @@
 - The validator self-check passes a complete fixture and rejects a missing supporting figure. Full assembly and analysis rerun pass, the incomplete starter is rejected for the intended reasons, and a nonempty target is protected from overwrite.
 - Final release requires a score of at least 80, passed clinical, accessibility, reproducibility, and oral-defense gates, and an `approve` or `approve with conditions` disposition.
 - DA-730 now has all 13 module packages and all three cumulative checkpoint packages as runnable release candidates. Faculty and human review still gate alpha promotion.
+- FND-1 Module 01 uses a deterministic three-row, three-column synthetic software-test table with SHA-256 `330da80c517c912fccd9bca3963aded84898dbb51e8b7271aa3bc53b0439c3ab`.
+- The Module 01 source contains no patient records and supports no clinical claim. The Synthea healthcare source system begins in Module 02.
+- The Module 01 workspace builder copies a portable template to a new target and refuses an existing target.
+- The standard-library validator passes a 15-check starter and a 26-check complete submission, then rejects a fixture missing the AI-use record.
+- A fresh Python environment installed JupyterLab 4.6.3, nbclient 0.10.2, and pandas 3.0.5. Python 3.12.10 with SQLite 3.49.1, the executed notebook, and the supplied R 4.6.1 script returned the exact three-row and total-15 reference result.
+- The clean reference submission preserved `main`, four commits, a non-fast-forward merge, an annotated `fnd1-setup-v0.1.0` tag at `HEAD`, and a clean working tree.
+- Module 01 is a runnable release candidate. Faculty, data engineering, Python/notebook, R, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -122,9 +129,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course specification, source record, master architecture, and this ledger.
-2. Write the 21-section Module 01 specification.
-3. Build the smallest cross-platform starter workspace with Python and SQLite smoke tests, environment and version records, reproduction instructions, and an AI-use record.
-4. Add the learner assessment, instructor key, standard-library validator, release record, and clean-target test.
-5. Update the Commons version and this ledger, then commit and push Module 01 before moving to Module 02.
-6. Keep FND-1 separate from FND-2 throughout the build.
+1. Read the FND-1 course specification, Module 01 specification and release record, source record, master architecture, and this ledger.
+2. Inspect the pinned Synthea April 2020 CSV archive and lock the included source files, sizes, rows, columns, and checksums.
+3. Write the 21-section Module 02 specification without moving cohort selection or analytic-table construction out of Module 03.
+4. Build the deterministic SQLite database, data dictionary, accessible schema description, FHIR/JSON reading examples, first SQL extracts, and validation output.
+5. Add the learner assessment, instructor key, validator, release record, and clean-target test.
+6. Update the Commons version and this ledger, then commit and push Module 02 before moving to Module 03.
