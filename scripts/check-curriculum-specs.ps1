@@ -150,8 +150,39 @@ if (
     throw 'DA-730 Module 04 release metadata does not match the 0.4.0, 8,392-encounter, 4,658-calibration-row contract.'
 }
 
+$module05 = Test-ModuleContract `
+    -Label 'Module 05' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\05-rates-denominators-adjustment-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\05-rates-denominators-adjustment') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_county_rates.py',
+        'validate_county_rates.py',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\places_diabetes_county_2024.csv',
+        'data\acs_adult_population_county_2024.csv',
+        'data\nc_county_boundaries_2024.csv',
+        'data\nc_diabetes_rates_2024.csv'
+    )
+if (
+    $module05.Release.module.version -ne '0.1.0' -or
+    $module05.Release.data.row_count -ne 100 -or
+    $module05.Release.sources.cdc_places.row_count -ne 6290 -or
+    $module05.Release.sources.census_acs.row_count -ne 3222 -or
+    $module05.Release.sources.census_tigerweb.county_features -ne 100
+) {
+    throw 'DA-730 Module 05 release metadata does not match the 0.1.0 public-source county contract.'
+}
+
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
 Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
 Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."
 Write-Output "DA-730 $($module03.Label) passed: $($module03.Sections) contract sections and $($module03.FileCount) required files."
 Write-Output "DA-730 $($module04.Label) passed: $($module04.Sections) contract sections and $($module04.FileCount) required files."
+Write-Output "DA-730 $($module05.Label) passed: $($module05.Sections) contract sections and $($module05.FileCount) required files."

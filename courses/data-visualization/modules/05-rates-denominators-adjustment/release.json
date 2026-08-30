@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-29",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-05",
+    "title": "Rates, denominators, and adjustment",
+    "version": "0.1.0",
+    "commons_release": "0.16.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "id": "oclc-nc-diabetes-rates-2024",
+    "version": "0.1.0",
+    "path": "data/nc_diabetes_rates_2024.csv",
+    "row_count": 100,
+    "column_count": 27,
+    "sha256": "1528b204830966dff88e00f57fc4f77b8dcf5db135daa122e8aff3679fdf32c7",
+    "unit": "North Carolina county",
+    "public_aggregate_data": true,
+    "synthetic": false,
+    "derived_modeled_count": true,
+    "count_status": "modeled estimate, not observed cases"
+  },
+  "sources": {
+    "cdc_places": {
+      "dataset_id": "fu4u-a9bh",
+      "measure_id": "DIABETES",
+      "release_label": "2024 release",
+      "measure_year": "2022",
+      "path": "data/places_diabetes_county_2024.csv",
+      "row_count": 6290,
+      "county_rows": 6288,
+      "county_geographies": 3144,
+      "sha256": "764b46c63508a5a6a2510ee2766866ab91abdeeaf7d633f50ae70a3aff561de6",
+      "landing_page": "https://data.cdc.gov/d/fu4u-a9bh"
+    },
+    "census_acs": {
+      "product": "2024 ACS 5-year Detailed Tables",
+      "table_id": "B01001",
+      "period": "2020-2024",
+      "path": "data/acs_adult_population_county_2024.csv",
+      "row_count": 3222,
+      "sha256": "1efa6d51591bf2941c22d09a6e8a86f70f6405f753bf59b60a0a6e99d45b24a2",
+      "source_file": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b01001.dat"
+    },
+    "census_tigerweb": {
+      "service": "Generalized ACS 2024 State and County",
+      "layer": "Counties 5M",
+      "vintage": "2024-01-01",
+      "path": "data/nc_county_boundaries_2024.csv",
+      "row_count": 7121,
+      "county_features": 100,
+      "polygon_parts": 104,
+      "sha256": "6eb085f49b400d4ecf6f88646f51dd01fdd4154533262e66ade02b1d1d8f666f",
+      "service_page": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer"
+    }
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    },
+    "cdc_places": {
+      "spdx": "LicenseRef-US-Government-Public-Domain",
+      "url": "https://data.cdc.gov/api/views/fu4u-a9bh"
+    },
+    "census_data": {
+      "spdx": "LicenseRef-US-Government-Public-Domain",
+      "url": "https://www.census.gov/programs-surveys/acs/data/summary-file.html"
+    }
+  },
+  "source": {
+    "curriculum_title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "curriculum_author": "Ali Goff",
+    "curriculum_date": "2026-08-15",
+    "curriculum_path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "source_record": "source-record.yml",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/05-rates-denominators-adjustment-spec.md"
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "course designer and content owner"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, public-source build, implementation, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-29",
+      "evidence": "The data validator passed 32 checks. Four lab figures, one decision table, and two critique figures rendered successfully."
+    },
+    "required_human_roles": [
+      {
+        "role": "visualization and source fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "population-health content",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "data_checks": "32 of 32 pass",
+    "source_build": "6,290 CDC rows, 3,222 ACS county rows, 100 TIGERweb county features, and a 100-county joined teaching table",
+    "lab_execution": "pass: four PNGs and one decision CSV",
+    "critique_execution": "pass: two intentionally flawed PNGs",
+    "measured_results": {
+      "low_denominator_counties": 9,
+      "largest_count_adjusted_rank_shift": 93,
+      "largest_crude_adjusted_rank_shift": 57,
+      "top_12_count_adjusted_overlap": 0,
+      "top_12_crude_adjusted_overlap": 9,
+      "modeled_count_min": 428,
+      "modeled_count_max": 93326,
+      "crude_prevalence_min_pct": 8.5,
+      "crude_prevalence_max_pct": 20.0,
+      "age_adjusted_prevalence_min_pct": 8.0,
+      "age_adjusted_prevalence_max_pct": 15.6
+    },
+    "comparison_shortlist": [
+      "Robeson",
+      "Hertford",
+      "Bertie",
+      "Scotland",
+      "Halifax",
+      "Warren",
+      "Edgecombe",
+      "Anson",
+      "Northampton",
+      "Greene",
+      "Washington",
+      "Wilson"
+    ]
+  },
+  "known_issues": [
+    "Human visualization, population-health, accessibility, and independent-instructor reviews are pending.",
+    "PLACES estimates are model-based and are not direct county measurements or observed diagnoses.",
+    "The PLACES release label, measure year, and population year differ and must remain visible.",
+    "The ACS context uses 2020-2024 survey estimates and does not replace the PLACES Census 2022 adult population.",
+    "Derived ACS margins of error for sums are approximations from published component margins.",
+    "The 10,000-adult warning is a teaching rule, not a CDC suppression rule.",
+    "Generalized county boundaries are not suitable for address, parcel, routing, or operational boundary decisions.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

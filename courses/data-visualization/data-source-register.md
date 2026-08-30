@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.5.0`
+- Register version: `0.6.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -27,7 +27,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | CMS, Timely and Effective Care - Hospital | Emergency department and hospital process comparisons, time trends, benchmarking, and dashboards | Public aggregate measures. Do not infer patient-level distributions from hospital-level summaries. | https://data.cms.gov/provider-data/dataset/yv7e-xc69 |
 | CMS, Patient survey (HCAHPS) - Hospital | Patient-experience comparisons, small multiples, uncertainty, maps, and dashboards | Public hospital survey results. Keep completed-survey counts, response rates, reporting dates, and footnotes with the analysis. | https://data.cms.gov/provider-data/dataset/dgck-syfz |
 | CDC, PLACES county data 2024 release | Population-health outcomes, preventive services, health-related social needs, equity comparisons, and maps | Model-based small-area estimates. CDC cautions against using them to evaluate local interventions. | https://data.cdc.gov/d/fu4u-a9bh |
-| U.S. Census Bureau, ACS 5-year API | Population denominators, demographic context, insurance coverage, disability, income, and housing | Public estimates with margins of error. The current API requires a key. Use the estimate and margin of error together. | https://www.census.gov/data/developers/data-sets/acs-5year.html |
+| U.S. Census Bureau, ACS 5-year data and Summary File | Population denominators, demographic context, insurance coverage, disability, income, and housing | Public estimates with margins of error. The current API requires a key; the table-based Summary File is public without one. Use the estimate and margin of error together. | https://www.census.gov/programs-surveys/acs/data/summary-file.html |
 | CDC WONDER | Mortality counts, crude and age-adjusted rates, confidence intervals, cause, place, population, and time | Public query system. Respect suppression and unreliable-rate flags. Death-certificate data describe recorded underlying causes, not every condition involved in care. | https://wonder.cdc.gov/datasets.html |
 | National Library of Medicine, ClinicalTrials.gov API | Trial portfolios, enrollment, status, geography, sponsors, conditions, interventions, and reported results | Public records supplied by study sponsors and investigators. Registration does not establish intervention effectiveness or study quality. | https://clinicaltrials.gov/data-api |
 | Synthea | Longitudinal synthetic patients, encounters, diagnoses, procedures, medications, and observations | Open synthetic records with no real patients. Suitable for patient journeys, Sankey diagrams, cohort funnels, and networks. Clinical realism depends on the generator modules and version. | https://synthetichealth.github.io/synthea/ |
@@ -42,7 +42,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 02. Perception and visual accuracy | CMS HCAHPS | Released 10-trial task table using the Module 01 HCAHPS extract, with two trials each for dot, bar, table, pie, and bubble displays. |
 | 03. Chart selection in practice | CMS hospitals | Released 10-case decision table plus two HCAHPS charts and one exact-value table using the Module 01 extract. |
 | 04. Distributions versus summaries | CMS Timely and Effective Care plus calibrated synthetic encounters | Released all-national OP_18b hospital extract and a source-bounded synthetic encounter distribution. |
-| 05. Rates, denominators, and adjustment | CDC PLACES plus ACS | Planned county estimate, population context, denominator, margin of error, and adjustment fields. |
+| 05. Rates, denominators, and adjustment | CDC PLACES, ACS, and Census TIGERweb | Released national diabetes and adult-population extracts plus a 100-county North Carolina decision table and generalized boundary file. |
 | 06. Uncertainty, variation, and small numbers | ClinicalTrials.gov or CMS | Planned estimates with sample size and uncertainty, including null and small-number cases. |
 | 07. Color and accessible visual communication | CMS or another released module dataset | Planned clinical quality display variants for screen, print, grayscale, and text alternatives. |
 | 08. Time and process variation | CMS timely care or CDC WONDER | Planned multi-period process measure or mortality rate with reporting dates. |
@@ -106,3 +106,26 @@ Public access does not automatically permit every reuse. Keep the source terms w
 - Validation: real 26 of 26, null 23 of 23, and trivial 23 of 23 checks pass
 
 The median of 4,081 reported CMS hospital values is 148 minutes. It anchors only the discharged pathway center. CMS does not provide the generated patient-level distribution, monthly trend, disposition mix, boarding process, tail, acuity, age, or intervention effect. Those remain explicit instructional assumptions and cannot support a real-hospital claim.
+
+### DA-730 rates-denominators-adjustment release
+
+- Module: DA-730 Module 05, Rates, denominators, and adjustment
+- CDC source: PLACES county data 2024 release, dataset `fu4u-a9bh`, measure `DIABETES`, measure year 2022
+- CDC source page: https://data.cdc.gov/d/fu4u-a9bh
+- CDC extract: `courses/data-visualization/modules/05-rates-denominators-adjustment/data/places_diabetes_county_2024.csv`
+- CDC rows: 6,290, including both crude and age-adjusted prevalence for all 3,144 counties and the two source national-summary rows
+- CDC extract SHA-256: `764b46c63508a5a6a2510ee2766866ab91abdeeaf7d633f50ae70a3aff561de6`
+- ACS source: 2020-2024 ACS 5-year Detailed Table B01001, Sex by Age
+- ACS source file: https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b01001.dat
+- ACS extract: `courses/data-visualization/modules/05-rates-denominators-adjustment/data/acs_adult_population_county_2024.csv`
+- ACS rows: all 3,222 county geographies with derived adult and age-65-plus population context and margin status
+- ACS extract SHA-256: `1efa6d51591bf2941c22d09a6e8a86f70f6405f753bf59b60a0a6e99d45b24a2`
+- Boundary source: Census Generalized ACS 2024 State and County service, Counties 5M
+- Boundary service: https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer
+- Boundary extract: 7,121 ordered coordinate rows across 100 North Carolina counties and 104 polygon parts
+- Teaching table: `courses/data-visualization/modules/05-rates-denominators-adjustment/data/nc_diabetes_rates_2024.csv`
+- Teaching table SHA-256: `1528b204830966dff88e00f57fc4f77b8dcf5db135daa122e8aff3679fdf32c7`
+- Source record: `courses/data-visualization/modules/05-rates-denominators-adjustment/source-record.yml`
+- Validation: 32 of 32 checks pass
+
+The modeled adult count is rounded crude prevalence multiplied by the matching PLACES adult population. It is not an observed case count. The ACS population is separate context and is not substituted into that calculation. The 10,000-adult warning is a declared teaching rule, not a CDC suppression rule.

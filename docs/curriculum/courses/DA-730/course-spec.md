@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.15.0
+- Specification version: 0.16.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -205,12 +205,14 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Prerequisites: Modules 01 through 04 and basic proportions.
 - Competency: Distinguish counts from rates, select the correct denominator, and explain when crude comparisons mislead.
 - Concepts: numerator, denominator, prevalence, incidence, crude and adjusted rates, standardization, survey denominators, suppression, instability, and the ecological fallacy.
-- Primary case: county-level health measure from CDC PLACES joined to Census ACS population context.
+- Primary case: North Carolina adult diabetes-prevention partnership using every national CDC PLACES county `DIABETES` row, Census ACS adult-population context, and generalized county boundaries.
 - Decision owner: population-health program director.
-- Core sources: https://data.cdc.gov/d/fu4u-a9bh and https://www.census.gov/data/developers/data-sets/acs-5year.html
-- Lab: compare raw counts, crude percentages, and a denominator-aware display for the same counties.
+- Core sources: https://data.cdc.gov/d/fu4u-a9bh, https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b01001.dat, and https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer
+- Lab: compare modeled counts, crude prevalence, age-adjusted prevalence with denominators and intervals, and the resulting county rank changes.
 - Critique: repair a raw-count choropleth and a rate chart that omits the denominator and uncertainty.
 - Submission: `module-05/rate-audit.md`, `module-05/analysis.R`, `module-05/figure.png`, `module-05/source-record.yml`, `module-05/alt-text.md`, and `module-05/decision-note.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/05-rates-denominators-adjustment-spec.md`.
+- Runnable package: `courses/data-visualization/modules/05-rates-denominators-adjustment/`.
 - Handoff: Module 06 adds uncertainty and small-number stability to the comparison.
 
 ## Module 06 brief: Uncertainty, variation, and small numbers
@@ -558,7 +560,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01, 02, 03, and 04 are current runnable candidates. Their human reviews remain pending.
+Modules 01 through 05 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 
@@ -568,7 +570,7 @@ Build one numbered module at a time:
 2. Module 02: Perception and visual accuracy.
 3. Module 03: Chart selection in practice.
 4. Reconcile and complete the existing Module 04 candidate.
-5. Module 05: Rates, denominators, and adjustment.
+5. Complete the released Module 05 candidate: Rates, denominators, and adjustment.
 6. Module 06: Uncertainty, variation, and small numbers.
 7. Assemble and test checkpoint 1.
 8. Module 07: Color and accessible visual communication.
@@ -589,6 +591,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 
 - [x] The course has 13 numbered modules across seven instructional weeks.
 - [x] Module 04 remains Distributions versus summaries and retains its current runnable package.
+- [x] Module 05 has a complete source-first specification and runnable teaching package.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.15.0
+- Current release: 0.16.0
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 04, Distributions versus summaries
-- Next unit: DA-730 Module 05, Rates, denominators, and adjustment
+- Last completed unit: DA-730 Module 05, Rates, denominators, and adjustment
+- Next unit: DA-730 Module 06, Uncertainty, variation, and small numbers
 
 ## Confirmed decisions
 
@@ -38,6 +38,12 @@
 - Module 04 CMS extract SHA-256: `c9603109d4ea251b8096a655c27ad42cd6313bdb1309999bee3eb37ce79ec67d`.
 - Module 04 synthetic encounter release 0.2.0 contains 8,392 rows and SHA-256 `27c1c0feed8beb4ab0ac6dc77eaa3d1ed95c07b89f52f4881c25954ba43fbc55`.
 - Module 04 real, null, and trivial variants pass 26, 23, and 23 checks. The lab creates four figures and a monthly table; the critique creates three intentionally flawed figures.
+- DA-730 Module 05 preserves 6,290 CDC PLACES `DIABETES` rows, including crude and age-adjusted prevalence for all 3,144 counties and the source national summary.
+- Module 05 CDC extract SHA-256: `764b46c63508a5a6a2510ee2766866ab91abdeeaf7d633f50ae70a3aff561de6`.
+- Module 05 also preserves all 3,222 ACS county rows derived from B01001 and 100 generalized North Carolina Census county features.
+- Module 05 teaching table contains 100 North Carolina counties and SHA-256 `1528b204830966dff88e00f57fc4f77b8dcf5db135daa122e8aff3679fdf32c7`.
+- Module 05 passes 32 data checks. Its lab creates four figures and a decision table; its critique creates two deliberately flawed figures.
+- In the pinned release, the top 12 modeled-count and top 12 age-adjusted-prevalence lists have zero counties in common. The largest count-to-adjusted rank change is 93 places.
 
 ## Pending confirmation
 
@@ -46,9 +52,9 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, DA-730 course specification, and Module 04 handoff.
-2. Write `docs/curriculum/courses/DA-730/modules/05-rates-denominators-adjustment-spec.md` using the 21-section contract.
-3. Build a source-first county package from CDC PLACES and Census ACS with denominator, estimate, uncertainty, suppression, period, and geography fields.
-4. Create count, crude-rate, denominator-aware, and deliberately flawed map or comparison views.
+1. Read the master architecture, DA-730 course specification, and Module 05 handoff.
+2. Write `docs/curriculum/courses/DA-730/modules/06-uncertainty-variation-small-numbers-spec.md` using the 21-section contract.
+3. Choose the exact public hospital or trial estimate source and preserve sample size, estimate, interval, suppression, period, and adjustment fields.
+4. Create interval, rank, small-number, and deliberately misleading league-table views.
 5. Add the learner lesson, tiered lab, critique set, exact assessment, instructor key, accessibility checks, and release record.
-6. Verify and release Module 05 before Module 06.
+6. Verify and release Module 06, then assemble the week-3 checkpoint from Modules 01 through 06.
