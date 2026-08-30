@@ -1,0 +1,7 @@
+landmark_exposure,disposition,people,minimum_observed_days,median_observed_days,maximum_observed_days
+1,event,25,9.92222222,160.00000000,327.95833333
+1,competing_death,0,,,
+1,administrative_end,104,335.00000000,335.00000000,335.00000000
+0,event,62,1.00000000,180.43750000,334.95833333
+0,competing_death,0,,,
+0,administrative_end,285,335.00000000,335.00000000,335.00000000

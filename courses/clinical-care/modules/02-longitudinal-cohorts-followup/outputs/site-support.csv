@@ -1,0 +1,7 @@
+teaching_site_id,people,exposed,unexposed,later_events,exposed_events,unexposed_events,low_risk,medium_risk,high_risk,mean_age,prior_acute_total,followup_percent,raw_event_percent,known_direct_site_effect
+SITE-A,76,19,57,21,6,15,39,22,15,36.56578947,8,25.00000000,27.63157895,0
+SITE-B,75,19,56,10,3,7,35,22,18,38.16000000,5,25.33333333,13.33333333,0
+SITE-C,68,19,49,10,3,7,21,26,21,43.36764706,0,27.94117647,14.70588235,0
+SITE-D,88,21,67,13,5,8,26,32,30,43.98863636,0,23.86363636,14.77272727,0
+SITE-E,87,20,67,18,4,14,25,36,26,42.51724138,18,22.98850575,20.68965517,0
+SITE-F,82,31,51,15,4,11,13,21,48,52.12195122,7,37.80487805,18.29268293,0

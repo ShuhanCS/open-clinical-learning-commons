@@ -1,0 +1,1 @@
+-- REPLACE with one read-only WITH query that emits the registered conservation and timing checks.

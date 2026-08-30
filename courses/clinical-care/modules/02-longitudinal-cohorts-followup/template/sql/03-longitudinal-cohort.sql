@@ -1,0 +1,1 @@
+-- REPLACE with one read-only WITH query that creates branch exposure landmark event and censoring fields.

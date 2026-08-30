@@ -1,0 +1,1 @@
+-- REPLACE with one read-only WITH query that returns the exact deterministic 518-person index cohort.

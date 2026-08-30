@@ -1,0 +1,104 @@
+{
+  "checks": {
+    "administrative censored": 389,
+    "branch overlaps": 0,
+    "competing death censored": 0,
+    "early acute returns": 25,
+    "early deaths": 8,
+    "exposed later acute returns": 25,
+    "index deaths": 9,
+    "index emergency": 451,
+    "index inpatient": 67,
+    "initial cohort": 518,
+    "invalid early acute time": 0,
+    "invalid followup time": 0,
+    "invalid index order": 0,
+    "invalid later acute time": 0,
+    "landmark conservation": 518,
+    "landmark eligible": 476,
+    "later acute returns": 87,
+    "later deaths recognized": 3,
+    "no scheduled followup": 347,
+    "outcome conservation": 476,
+    "scheduled followup": 129,
+    "source encounters": 53346,
+    "source organizations": 64,
+    "source people": 1171,
+    "unexposed later acute returns": 62,
+    "unique initial patients": 518
+  },
+  "commons_release": "0.50.0",
+  "environment": {
+    "external_python_dependencies": 0,
+    "python": "3.12.10",
+    "sqlite": "3.49.1"
+  },
+  "extension": {
+    "id": "app1-six-site-v1",
+    "seed": "app1-six-site-v1",
+    "version": "0.1.0"
+  },
+  "module": "oclc-app1-02",
+  "module_version": "0.1.0",
+  "outputs": {
+    "analysis-cohort.csv": {
+      "bytes": 200699,
+      "fields": 49,
+      "rows": 476,
+      "sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5"
+    },
+    "censoring-summary.csv": {
+      "bytes": 372,
+      "fields": 6,
+      "rows": 6,
+      "sha256": "46dba77dca430105431b40a1dccb478de0043496193d55ffbc42205435910f95"
+    },
+    "cohort-flow.csv": {
+      "bytes": 446,
+      "fields": 6,
+      "rows": 5,
+      "sha256": "bb9c0828260a5e613a56c97b8fc701d5a9043e72cc2b205cd9df3bddc0635aed"
+    },
+    "event-audit.csv": {
+      "bytes": 210154,
+      "fields": 11,
+      "rows": 1018,
+      "sha256": "8491e4c02d33771a904bcc095982cccd6265c3d301c10fc79ac259ceede6fe9c"
+    },
+    "index-cohort.csv": {
+      "bytes": 101751,
+      "fields": 15,
+      "rows": 518,
+      "sha256": "f6f4311cfb617c55c31bb97afac38d328d161bd8e7ec17bb558735abeadf0107"
+    },
+    "longitudinal-cohort.csv": {
+      "bytes": 166746,
+      "fields": 40,
+      "rows": 518,
+      "sha256": "ff684f8dce203c73a4f83e4ee781fe5eff15c0bc3c89652ded9acae906c2f1db"
+    },
+    "query-checks.csv": {
+      "bytes": 640,
+      "fields": 2,
+      "rows": 26,
+      "sha256": "aecd10a6e122dcc34990fac08069cb3cf2339d61ed3eb0cce02beb899861988f"
+    },
+    "site-assignment.csv": {
+      "bytes": 64967,
+      "fields": 10,
+      "rows": 476,
+      "sha256": "8cfbd4137e5f9ab8688a2fc88082f283443a913cba1167510e397f09e138964b"
+    },
+    "site-support.csv": {
+      "bytes": 641,
+      "fields": 15,
+      "rows": 6,
+      "sha256": "b76f1ad7f77752e96060ade82d023695afa40d3a24128d2cd191ed0e53cf9088"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source_database": {
+    "bytes": 141234176,
+    "sha256": "1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a"
+  }
+}

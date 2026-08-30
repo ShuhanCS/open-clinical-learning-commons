@@ -1,0 +1,1 @@
+-- REPLACE with one read-only WITH query that retains index follow-up acute-return and death events.

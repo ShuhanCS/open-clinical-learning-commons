@@ -1,0 +1,88 @@
+field_id,file,field,data_type,grain,field_class,source_or_derivation,timing_availability,missing_meaning,allowed_use,prohibited_interpretation
+D001,multiple outputs,patient_id,text,person,source,patients.id,source record,never missing,reproducible join,real identity
+D002,index and longitudinal,index_encounter_id,text,person,source,encounters.id,index selection,never missing,index audit,real encounter identity
+D003,index and longitudinal,index_start,timestamp,person,source,encounters.start,index selection,never missing,index timing,clinical event adjudication
+D004,index and longitudinal,index_stop,timestamp,person,source,encounters.stop,index selection,never missing,discharge origin,verified real discharge
+D005,index and longitudinal,index_encounter_class,text,person,source,encounters.encounterclass,index selection,never missing,phenotype and baseline case mix,clinical severity
+D006,index and longitudinal,source_organization_id,text,person,source,encounters.organization,index selection,never missing,source provenance,facility rank
+D007,index and longitudinal,age_at_index,integer,person,derived,birthdate and index start,index selection,never missing,eligibility and baseline case mix,real age distribution
+D008,index and longitudinal,gender,text,person,source,patients.gender,source record,source value,baseline description,biology or complete identity
+D009,index and longitudinal,race,text,person,source,patients.race,source record,source value,measurement and case mix review,real disparity or fairness claim
+D010,index and longitudinal,ethnicity,text,person,source,patients.ethnicity,source record,source value,measurement and case mix review,real disparity or fairness claim
+D011,index and longitudinal,prior_365d_encounter_count,integer,person,derived,encounters before index,known at index,zero means none recorded,baseline utilization,complete real utilization
+D012,index and longitudinal,prior_365d_acute_count,integer,person,derived,acute encounters before index,known at index,zero means none recorded,baseline risk and extension score,causal risk factor
+D013,index and longitudinal,prior_365d_condition_count,integer,person,derived,conditions before index,known at index,zero means none recorded,baseline risk and extension score,complete comorbidity burden
+D014,index-cohort.csv,index_condition_count,integer,person,derived,conditions linked to index,index selection,zero means none linked,index evidence audit,clinical phenotype truth
+D015,index-cohort.csv,index_procedure_count,integer,person,derived,procedures linked to index,index selection,zero means none linked,index evidence audit,complete treatment history
+D016,longitudinal and analysis,index_death_flag,integer,person,derived,death date on or before discharge,date rule at index,zero means branch absent,cohort flow and safety,precise death time
+D017,longitudinal and analysis,index_death_date,date,person,source,patients.deathdate,date-granular source,blank means no index death,date audit,adjudicated mortality
+D018,longitudinal and analysis,early_death_flag,integer,person,derived,death after discharge through day 30,known by landmark,zero means branch absent,cohort flow and safety,causal outcome
+D019,longitudinal and analysis,early_death_date,date,person,source,patients.deathdate,date-granular source,blank means no early death,date audit,precise death time
+D020,longitudinal and analysis,early_acute_return_flag,integer,person,derived,first acute encounter in days 0 to 30,known by landmark,zero means branch absent,cohort flow and safety,treatment effect
+D021,longitudinal and analysis,first_early_acute_id,text,person,source,encounters.id,known by landmark,blank means no early acute return,event trace,real patient event
+D022,longitudinal and analysis,first_early_acute_start,timestamp,person,source,encounters.start,known by landmark,blank means no early acute return,event trace,clinical adjudication
+D023,longitudinal and analysis,first_early_acute_days,number,person,derived,acute start minus discharge,known by landmark,blank means no early acute return,timing audit,exact biological time
+D024,longitudinal and analysis,scheduled_followup_flag,integer,person,derived,scheduled encounter in days 0 to 30,known by landmark,zero means none recorded,pathway exposure window,access or benefit
+D025,longitudinal and analysis,first_followup_id,text,person,source,encounters.id,known by landmark,blank means no scheduled followup,event trace,completed appointment
+D026,longitudinal and analysis,first_followup_start,timestamp,person,source,encounters.start,known by landmark,blank means no scheduled followup,event trace,care quality
+D027,longitudinal and analysis,first_followup_days,number,person,derived,followup start minus discharge,known by landmark,blank means no scheduled followup,timing audit,patient burden
+D028,longitudinal and analysis,landmark_eligible_flag,integer,person,derived,index and early branch rules,day 30,zero means outside risk set,risk-set construction,clinical eligibility
+D029,longitudinal and analysis,landmark_exclusion_reason,text,person,derived,ordered branch rule,day 30,blank means eligible,flow audit,mutually causal diagnosis
+D030,longitudinal and analysis,landmark_datetime,timestamp,person,derived,index stop plus 30 days,day 30,blank means not eligible,survival origin,observed source event
+D031,longitudinal and analysis,landmark_exposure,integer,person,derived,scheduled followup assigned at landmark,day 30,blank means outside risk set,exposure comparison,known-at-discharge exposure
+D032,longitudinal and analysis,later_acute_return_flag,integer,person,derived,first acute return after day 30 through day 365,follow-up,zero means no observed event,primary event indicator,real event risk
+D033,longitudinal and analysis,first_later_acute_id,text,person,source,encounters.id,follow-up,blank means no event,event trace,real patient event
+D034,longitudinal and analysis,first_later_acute_start,timestamp,person,source,encounters.start,follow-up,blank means no event,event trace,adjudicated readmission
+D035,longitudinal and analysis,first_later_acute_days_from_discharge,number,person,derived,later event start minus discharge,follow-up,blank means no event,event timing,causal effect
+D036,longitudinal and analysis,later_death_flag,integer,person,derived,death after day 30 through day 365,follow-up,zero means none recorded,competing-event recognition,complete mortality
+D037,longitudinal and analysis,later_death_date,date,person,source,patients.deathdate,date-granular source,blank means no later death,date audit,precise death time
+D038,longitudinal and analysis,later_death_before_event_flag,integer,person,derived,death precedes first later acute return,follow-up,zero means not first,competing-event boundary,noninformative censoring
+D039,longitudinal and analysis,event_indicator,integer,person,derived,later acute return before censoring,follow-up,zero means censored,Module 03 event status,treatment effect
+D040,longitudinal and analysis,observed_time_days,number,person,derived,event or censor time minus landmark,follow-up,blank means outside risk set,time-to-event analysis,uncensored follow-up guarantee
+D041,longitudinal and analysis,censor_reason,text,person,derived,event competing death or administrative end,follow-up,blank means outside risk set,censoring audit,no-event conclusion
+D042,longitudinal and analysis,administrative_end_datetime,timestamp,person,derived,index stop plus 365 days,index selection,never missing,administrative boundary,source event
+D043,event-audit.csv,event_role,text,event,derived,window and source-table classification,event occurrence,never missing,event audit,clinical adjudication
+D044,event-audit.csv,event_id,text,event,derived,source ID or death prefix,event occurrence,never missing,event trace,real identity
+D045,event-audit.csv,event_start,text,event,source,encounter timestamp or death date,event occurrence,never missing,event ordering,uniform timing precision
+D046,event-audit.csv,event_stop,text,event,source,encounter stop,event occurrence,blank for death event,event audit,verified discharge
+D047,event-audit.csv,encounterclass,text,event,source,encounters.encounterclass,event occurrence,blank for death event,role audit,clinical severity
+D048,event-audit.csv,days_from_discharge,number,event,derived,event start minus discharge,event occurrence,date events use date difference,window audit,precise death interval
+D049,event-audit.csv,timing_precision,text,event,derived,timestamp or date classification,event occurrence,never missing,timing interpretation,uniform precision
+D050,event-audit.csv,source_table,text,event,derived,encounters or patients,event occurrence,never missing,source trace,source quality certification
+D051,event-audit.csv,selected_for_analysis,integer,event,derived,first event per role,event occurrence,never missing,first-event audit,causal selection
+D052,event-audit.csv,selection_rule,text,event,derived,index or first-role ordering,event occurrence,never missing,reproducibility,clinical prioritization
+D053,site-assignment and analysis,baseline_risk_score,integer,person,synthetic_extension,fixed baseline formula,known at index,never missing,case-mix instruction,validated clinical risk score
+D054,site-assignment and analysis,baseline_risk_rank,integer,person,synthetic_extension,score rank with SHA-256 tie break,known at index,never missing,tier construction,clinical priority rank
+D055,site-assignment and analysis,baseline_risk_tier,text,person,synthetic_extension,ranked thirds,known at index,never missing,support instruction,real risk category
+D056,site-assignment and analysis,assignment_hash_prefix,text,person,synthetic_extension,first 64 SHA-256 bits,extension construction,never missing,reproduction,identifier security
+D057,site-assignment and analysis,assignment_uniform,number,person,synthetic_extension,hash fraction,extension construction,never missing,reproduction,random clinical assignment
+D058,site-assignment and analysis,teaching_site_id,text,person,synthetic_extension,fixed probability draw by tier,extension construction,never missing,site-method instruction,real facility identity or rank
+D059,site-assignment and analysis,extension_seed,text,person,synthetic_extension,fixed app1-six-site-v1 seed,extension construction,never missing,reproduction,secret randomness
+D060,site-assignment and analysis,extension_version,text,person,synthetic_extension,extension contract version,extension construction,never missing,provenance,source version
+D061,site-assignment and analysis,field_class,text,person,synthetic_extension,literal synthetic_extension,extension construction,never missing,field separation,source observation
+D062,cohort-flow.csv,step,integer,flow step,derived,fixed ordered flow,build time,never missing,flow ordering,patient sequence
+D063,cohort-flow.csv,state,text,flow step,derived,phenotype branch,build time,never missing,flow explanation,clinical state adjudication
+D064,cohort-flow.csv,starting,integer,flow step,derived,prior remaining count,build time,never missing,denominator conservation,real population count
+D065,cohort-flow.csv,branched_or_excluded,integer,flow step,derived,branch count,build time,never missing,flow conservation,unimportant exclusion
+D066,cohort-flow.csv,remaining,integer,flow step,derived,starting minus branch count,build time,never missing,flow conservation,real eligible population
+D067,cohort-flow.csv,rule,text,flow step,derived,declared phenotype rule,build time,never missing,interpretation,clinical guideline
+D068,censoring-summary.csv,disposition,text,summary row,derived,event competing death or administrative end,follow-up,never missing,censoring summary,no-event claim
+D069,censoring-summary.csv,people,integer,summary row,derived,count in row,build time,zero is explicit,denominator review,real population count
+D070,censoring-summary.csv,minimum_observed_days,number,summary row,derived,minimum person time,build time,blank when people is zero,follow-up summary,individual prediction
+D071,censoring-summary.csv,median_observed_days,number,summary row,derived,median person time,build time,blank when people is zero,follow-up summary,individual prediction
+D072,censoring-summary.csv,maximum_observed_days,number,summary row,derived,maximum person time,build time,blank when people is zero,follow-up summary,complete follow-up proof
+D073,site-support.csv,exposed,integer,site summary,derived,landmark exposure count,build time,never missing,support review,treatment reach
+D074,site-support.csv,unexposed,integer,site summary,derived,no-exposure count,build time,never missing,support review,access failure
+D075,site-support.csv,later_events,integer,site summary,derived,event count,build time,never missing,support review,site quality
+D076,site-support.csv,exposed_events,integer,site summary,derived,event count among exposed,build time,never missing,support review,treatment effect
+D077,site-support.csv,unexposed_events,integer,site summary,derived,event count among unexposed,build time,never missing,support review,treatment effect
+D078,site-support.csv,low_risk,integer,site summary,synthetic_extension,low-tier count,build time,never missing,case-mix support,real risk mix
+D079,site-support.csv,medium_risk,integer,site summary,synthetic_extension,medium-tier count,build time,never missing,case-mix support,real risk mix
+D080,site-support.csv,high_risk,integer,site summary,synthetic_extension,high-tier count,build time,never missing,case-mix support,real risk mix
+D081,site-support.csv,mean_age,number,site summary,derived,mean source age,build time,blank only for empty site,case-mix support,site performance
+D082,site-support.csv,prior_acute_total,integer,site summary,derived,sum of prior acute count,build time,never missing,case-mix support,site quality
+D083,site-support.csv,followup_percent,number,site summary,derived,100 times exposed divided by people,build time,blank only for empty site,descriptive support,causal effect or access quality
+D084,site-support.csv,raw_event_percent,number,site summary,derived,100 times events divided by people,build time,blank only for empty site,descriptive support,adjusted site performance
+D085,site-support.csv,known_direct_site_effect,integer,site summary,synthetic_extension,literal zero by construction,extension contract,never missing,known-truth instruction,estimated clinical effect
+D086,query-checks.csv,check_name,text,check row,derived,registered invariant,build time,never missing,validation,clinical outcome
+D087,query-checks.csv,observed_value,integer,check row,derived,SQL aggregate,build time,never missing,validation,real population estimate

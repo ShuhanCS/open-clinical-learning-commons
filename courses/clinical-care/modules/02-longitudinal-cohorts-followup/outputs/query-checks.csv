@@ -1,0 +1,27 @@
+check_name,observed_value
+administrative censored,389
+branch overlaps,0
+competing death censored,0
+early acute returns,25
+early deaths,8
+exposed later acute returns,25
+index deaths,9
+index emergency,451
+index inpatient,67
+initial cohort,518
+invalid early acute time,0
+invalid followup time,0
+invalid index order,0
+invalid later acute time,0
+landmark conservation,518
+landmark eligible,476
+later acute returns,87
+later deaths recognized,3
+no scheduled followup,347
+outcome conservation,476
+scheduled followup,129
+source encounters,53346
+source organizations,64
+source people,1171
+unexposed later acute returns,62
+unique initial patients,518

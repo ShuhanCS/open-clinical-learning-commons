@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.49.1
+- Current release: 0.50.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-1 Module 01, framing a care-pathway decision
-- Next unit: APP-1 Module 02, longitudinal cohorts and follow-up
+- Last completed unit: APP-1 Module 02, longitudinal cohorts and follow-up
+- Next unit: APP-1 Module 03, survival and time-to-event outcomes
 
 ## Confirmed decisions
 
@@ -290,6 +290,16 @@
 - The standard-library profiler, builder, and validator self-checks pass. Complete reference validation passes 132 checks and learner-starter validation passes 95 checks. Existing targets, changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records are rejected.
 - The reference progression is `continue with conditions`; Module 02 is permitted for curriculum construction. Clinical use and real-patient, causal, efficacy, fairness, prevalence, and site-ranking claims remain prohibited.
 - APP-1 Module 01 is a runnable release candidate at Commons 0.49.1.
+- APP-1 Module 02 version 0.1.0 verifies the exact corrected Module 01 manifest and the accepted 141,234,176-byte Synthea SQLite database with SHA-256 `1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a`.
+- Four read-only SQL files produce 518 index rows, 1,018 event-audit rows, 518 longitudinal rows, and 26 exact source, timing, branch, exposure, outcome, and conservation checks.
+- The initial cohort has 451 emergency and 67 inpatient indexes. Nine index deaths, eight early post-discharge deaths, and 25 early acute returns remain visible and nonoverlapping, leaving the corrected 476-person day-30 risk set.
+- The landmark cohort has 129 exposed and 347 unexposed people. It contains 87 later events divided into 25 exposed and 62 unexposed outcomes, plus 389 administrative-end censors and no competing death before a first event. Three later deaths remain visible after event.
+- The event audit retains 518 index encounters, 9 index deaths, 8 early deaths, 212 scheduled follow-up records, 27 early acute-return records, 241 later acute-return records, and 3 later deaths.
+- The `app1-six-site-v1` extension assigns all 476 eligible people to six neutral sites with fixed SHA-256 draws and overlapping low, medium, and high baseline-risk tiers. Site sizes range from 68 to 88 and later events from 10 to 21. No source exposure, outcome, date, or event time changes; the known direct site effect is zero.
+- Ten output files total 749,342 bytes. The 87-row dictionary covers every released CSV field. The eight-row immutable workspace manifest is 1,217 bytes with SHA-256 `9d78f888753b39797ad421d2576eef377ba0bc01fcca02d9ef3c9da388057c10`.
+- The standard-library cohort builder, workspace builder, and validator self-checks pass. Complete reference validation passes 1,140 checks, learner-starter validation passes 82 checks, and full database reproduction passes 1,150 checks. The copied learner validator enforces the same manifest contract while ignoring generated Python cache files.
+- The 20-point reference passes all 16 gates and continues with conditions. Module 03 is permitted for curriculum construction; clinical use remains prohibited.
+- APP-1 Module 02 is a runnable release candidate at Commons 0.50.0.
 
 ## Pending confirmation
 
@@ -298,11 +308,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-1 course specification, Module 01 specification and release, source record, two foundation handoffs, and this ledger.
-2. Write the durable APP-1 Module 02 specification before broad implementation.
-3. Reproduce the full-source 518/9/8/25/476 cohort flow and the 129/87/25/62 exposure and outcome facts from the accepted Synthea database.
-4. Define the longitudinal phenotype, index encounter, lookback, day-30 landmark, time at risk, follow-up, censoring, early-event branches, and survival-analysis handoff exactly.
-5. Create and register the deterministic six-site synthetic teaching extension with a fixed seed, known truths, transformation record, checks, and a clear boundary from source observations.
-6. Keep source and extension columns distinguishable and preserve the source archive, table inventory, feasibility profile, and Module 01 manifest fingerprints.
-7. Build the learner package, complete reference, instructor materials, assessment, runnable checks, and progression decision into Module 03.
-8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 03.
+1. Read the APP-1 course specification, corrected Module 01 release, Module 02 specification and release, foundation handoffs, and this ledger.
+2. Write the durable APP-1 Module 03 specification before broad implementation.
+3. Freeze the exact 476-row Module 02 analysis cohort, 1,018-row event audit, extension contract, source database identity, and Module 02 workspace manifest.
+4. Build Kaplan-Meier evidence by scheduled-follow-up group with count-first risk tables, exact event and censoring totals, and an accessible structured alternative.
+5. Add a log-rank comparison, guided Cox model, proportional-hazards checks, uncertainty, and paired R read-run-interpret evidence without changing the risk set.
+6. Explain the three later deaths, the absence of a death-before-event censor in this release, and why cause-specific censoring does not prove noninformative censoring.
+7. Build the 20-point cumulative Week 3 checkpoint around the accepted phenotype-and-cohort component while treating survival evidence as a required progression gate.
+8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 04.

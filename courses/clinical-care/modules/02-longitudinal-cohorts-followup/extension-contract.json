@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "extension_id": "app1-six-site-v1",
+  "version": "0.1.0",
+  "seed": "app1-six-site-v1",
+  "risk_rank_tie_break_seed": "app1-risk-rank-v1",
+  "population": "day-30 landmark-eligible synthetic people",
+  "risk_score": "age_at_index + 12 * prior_365d_acute_count + 3 * prior_365d_condition_count + 8 * index_inpatient_flag",
+  "risk_tiers": "ranked low, medium, and high thirds with SHA-256 tie-break",
+  "sites": ["SITE-A", "SITE-B", "SITE-C", "SITE-D", "SITE-E", "SITE-F"],
+  "probabilities": {
+    "low": ["0.25", "0.20", "0.18", "0.15", "0.12", "0.10"],
+    "medium": ["0.12", "0.15", "0.18", "0.20", "0.18", "0.17"],
+    "high": ["0.08", "0.10", "0.14", "0.18", "0.22", "0.28"]
+  },
+  "hash_rule": "SHA-256 of seed, a vertical bar, and synthetic patient ID; first 64 bits interpreted as a uniform fraction",
+  "field_class": "synthetic_extension",
+  "preserved_source_fields": [
+    "scheduled_followup_flag",
+    "later_acute_return_flag",
+    "event_indicator",
+    "observed_time_days"
+  ],
+  "known_direct_site_effect": "zero - no source exposure, outcome, date, or event time is changed",
+  "allowed_use": "case-mix, support, risk-adjustment, and site-comparison method instruction",
+  "prohibited_use": "real facility identity, rank, quality, equity, efficacy, treatment effect, or implementation claim"
+}

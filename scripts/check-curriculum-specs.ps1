@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.49.1'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.50.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -933,8 +933,8 @@ if (
     $app1Content -notmatch '35 points' -or
     $app1Content -notmatch 'eight-hour machine-learning extension' -or
     $app1Content -notmatch 'Joe Joseph, MD' -or
-    $app1PackageContent -notmatch 'Commons release: 0\.49\.1' -or
-    $app1PackageContent -notmatch 'Module 01 is a runnable release candidate'
+    $app1PackageContent -notmatch 'Commons release: 0\.50\.0' -or
+    $app1PackageContent -notmatch 'Modules 01 and 02 are runnable release candidates'
 ) {
     throw 'APP-1 is missing its source, version, workload, checkpoint, machine-learning, leadership, or plain-ASCII contract.'
 }
@@ -1031,6 +1031,108 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $app1Module01Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'APP-1 Module 01 validator self-check failed.'
+}
+
+$app1Module02Root = Join-Path $repo 'courses\clinical-care\modules\02-longitudinal-cohorts-followup'
+$app1Module02Spec = Join-Path $repo 'docs\curriculum\courses\APP-1\modules\02-longitudinal-cohorts-followup-spec.md'
+$app1Module02Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'extension-contract.json', 'source-record.yml',
+    'data-dictionary.csv', 'phenotype-spec.md', 'transformation-record.md', 'validation-notes.md',
+    'reproducibility-check.md', 'ai-use.md', 'progression-decision.md', 'assessment.md',
+    'instructor-notes.md', 'build_longitudinal.py', 'build_workspace.py',
+    'validate_longitudinal.py', 'release.json',
+    'sql\01-index-cohort.sql', 'sql\02-event-audit.sql',
+    'sql\03-longitudinal-cohort.sql', 'sql\04-validation.sql',
+    'outputs\analysis-cohort.csv', 'outputs\build-report.json',
+    'outputs\censoring-summary.csv', 'outputs\cohort-flow.csv',
+    'outputs\event-audit.csv', 'outputs\index-cohort.csv',
+    'outputs\longitudinal-cohort.csv', 'outputs\query-checks.csv',
+    'outputs\site-assignment.csv', 'outputs\site-support.csv',
+    'template\README.md', 'template\phenotype-spec.md',
+    'template\transformation-record.md', 'template\validation-notes.md',
+    'template\reproducibility-check.md', 'template\ai-use.md',
+    'template\progression-decision.md',
+    'template\sql\01-index-cohort.sql', 'template\sql\02-event-audit.sql',
+    'template\sql\03-longitudinal-cohort.sql', 'template\sql\04-validation.sql'
+)
+$app1Module02Missing = @($app1Module02Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $app1Module02Root $_))
+})
+if (-not (Test-Path -LiteralPath $app1Module02Spec) -or $app1Module02Missing.Count -gt 0) {
+    throw "APP-1 Module 02 is missing its specification or package files: $($app1Module02Missing -join ', ')."
+}
+$app1Module02Content = Get-Content -Raw -LiteralPath $app1Module02Spec
+$app1Module02Sections = [regex]::Matches($app1Module02Content, '(?m)^## \d+\.').Count
+if (
+    $app1Module02Sections -ne 21 -or
+    $app1Module02Content -match '[—–]' -or
+    $app1Module02Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app1Module02Content -notmatch 'Commons release target: 0\.50\.0' -or
+    $app1Module02Content -notmatch '1,140 complete reference checks' -or
+    $app1Module02Content -notmatch '82 learner-starter checks' -or
+    $app1Module02Content -notmatch '1,150 checks when the complete source database is reproduced' -or
+    $app1Module02Content -notmatch '9d78f888753b39797ad421d2576eef377ba0bc01fcca02d9ef3c9da388057c10'
+) {
+    throw 'APP-1 Module 02 must define 21 plain-ASCII sections with the exact release, validation, and manifest contract.'
+}
+$app1Module02Release = Get-Content -Raw -LiteralPath (Join-Path $app1Module02Root 'release.json') | ConvertFrom-Json
+$app1Module02Outputs = @{
+    'analysis-cohort.csv' = @(476, 49, 200699, '558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5')
+    'build-report.json' = @($null, $null, 2926, '8829cb8c99e175abc4d9212ff0d3a1ccf6b1b73318ad28e5a5b9c8dd65ceb02f')
+    'censoring-summary.csv' = @(6, 6, 372, '46dba77dca430105431b40a1dccb478de0043496193d55ffbc42205435910f95')
+    'cohort-flow.csv' = @(5, 6, 446, 'bb9c0828260a5e613a56c97b8fc701d5a9043e72cc2b205cd9df3bddc0635aed')
+    'event-audit.csv' = @(1018, 11, 210154, '8491e4c02d33771a904bcc095982cccd6265c3d301c10fc79ac259ceede6fe9c')
+    'index-cohort.csv' = @(518, 15, 101751, 'f6f4311cfb617c55c31bb97afac38d328d161bd8e7ec17bb558735abeadf0107')
+    'longitudinal-cohort.csv' = @(518, 40, 166746, 'ff684f8dce203c73a4f83e4ee781fe5eff15c0bc3c89652ded9acae906c2f1db')
+    'query-checks.csv' = @(26, 2, 640, 'aecd10a6e122dcc34990fac08069cb3cf2339d61ed3eb0cce02beb899861988f')
+    'site-assignment.csv' = @(476, 10, 64967, '8cfbd4137e5f9ab8688a2fc88082f283443a913cba1167510e397f09e138964b')
+    'site-support.csv' = @(6, 15, 641, 'b76f1ad7f77752e96060ade82d023695afa40d3a24128d2cd191ed0e53cf9088')
+}
+$app1Module02OutputFailures = @($app1Module02Outputs.GetEnumerator() | Where-Object {
+    $path = Join-Path $app1Module02Root "outputs\$($_.Key)"
+    $released = $app1Module02Release.outputs.PSObject.Properties[$_.Key].Value
+    ($null -ne $_.Value[0] -and $released.rows -ne $_.Value[0]) -or
+    ($null -ne $_.Value[1] -and $released.fields -ne $_.Value[1]) -or
+    $released.bytes -ne $_.Value[2] -or
+    $released.sha256 -ne $_.Value[3] -or
+    (Get-Item -LiteralPath $path).Length -ne $_.Value[2] -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath $path).Hash.ToLowerInvariant() -ne $_.Value[3]
+})
+if (
+    $app1Module02Release.module.id -ne 'oclc-app1-02' -or
+    $app1Module02Release.module.version -ne '0.1.0' -or
+    $app1Module02Release.module.commons_release -ne '0.50.0' -or
+    $app1Module02Release.module.hours -ne 16 -or
+    $app1Module02Release.upstream.module_version -ne '0.2.0' -or
+    $app1Module02Release.upstream.manifest_sha256 -ne '4f57b0bbf3e510967c5e42691eee990ce523974b7f6ea877f15f46903aa8c147' -or
+    $app1Module02Release.cohort.initial_people -ne 518 -or
+    $app1Module02Release.cohort.landmark_eligible -ne 476 -or
+    $app1Module02Release.cohort.later_acute_returns -ne 87 -or
+    $app1Module02Release.event_audit.rows -ne 1018 -or
+    $app1Module02Release.extension.sites -ne 6 -or
+    $app1Module02Release.package.manifest_sha256 -ne '9d78f888753b39797ad421d2576eef377ba0bc01fcca02d9ef3c9da388057c10' -or
+    $app1Module02Release.package.data_dictionary_rows -ne 87 -or
+    $app1Module02Release.validation.complete_reference_checks -ne 1140 -or
+    $app1Module02Release.validation.starter_checks -ne 82 -or
+    $app1Module02Release.validation.full_database_reproduction_checks -ne 1150 -or
+    $app1Module02Release.validation.copied_workspace_validator_manifest_check -ne 'pass' -or
+    $app1Module02Release.progression.reference -ne 'continue with conditions' -or
+    $app1Module02Release.progression.module03_permission -ne 'permitted for curriculum construction' -or
+    $app1Module02OutputFailures.Count -gt 0
+) {
+    throw "APP-1 Module 02 release metadata or frozen outputs do not match the longitudinal-cohort contract: $($app1Module02OutputFailures.Key -join ', ')."
+}
+& python (Join-Path $app1Module02Root 'build_longitudinal.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'APP-1 Module 02 cohort builder self-check failed.'
+}
+& python (Join-Path $app1Module02Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'APP-1 Module 02 workspace builder self-check failed.'
+}
+& python (Join-Path $app1Module02Root 'validate_longitudinal.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'APP-1 Module 02 validator self-check failed.'
 }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
@@ -2318,3 +2420,4 @@ Write-Output "FND-2 Checkpoint 2 passed: $fnd2Checkpoint02Sections contract sect
 Write-Output "FND-2 final checkpoint passed: $fnd2Checkpoint03Sections contract sections and $($fnd2Checkpoint03Files.Count) required files."
 Write-Output "APP-1 specification passed: $app1ModuleCount modules, $app1Hours hours, and $app1CheckpointCount checkpoints."
 Write-Output "APP-1 Module 01 passed: $app1Module01Sections contract sections and $($app1Module01Files.Count) required files."
+Write-Output "APP-1 Module 02 passed: $app1Module02Sections contract sections and $($app1Module02Files.Count) required files."

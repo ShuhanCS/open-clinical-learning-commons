@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app1-02",
+    "title": "Longitudinal cohorts and follow-up",
+    "version": "0.1.0",
+    "commons_release": "0.50.0",
+    "course": "APP-1: Data for Clinical Care",
+    "week": 2,
+    "hours": 16.0,
+    "course_points": 20
+  },
+  "upstream": {
+    "module_id": "oclc-app1-01",
+    "module_version": "0.2.0",
+    "commons_release": "0.49.1",
+    "manifest_bytes": 1063,
+    "manifest_sha256": "4f57b0bbf3e510967c5e42691eee990ce523974b7f6ea877f15f46903aa8c147",
+    "source_database_bytes": 141234176,
+    "source_database_sha256": "1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a"
+  },
+  "cohort": {
+    "initial_people": 518,
+    "index_emergency": 451,
+    "index_inpatient": 67,
+    "index_deaths": 9,
+    "early_post_discharge_deaths": 8,
+    "early_acute_returns": 25,
+    "branch_overlaps": 0,
+    "landmark_eligible": 476,
+    "scheduled_followup": 129,
+    "no_scheduled_followup": 347,
+    "later_acute_returns": 87,
+    "exposed_later_acute_returns": 25,
+    "unexposed_later_acute_returns": 62,
+    "administrative_censored": 389,
+    "competing_death_censored": 0,
+    "later_deaths_recognized": 3,
+    "minimum_observed_days": "1.00000000",
+    "maximum_observed_days": "335.00000000"
+  },
+  "event_audit": {
+    "rows": 1018,
+    "selected_events": 800,
+    "index_encounter_rows": 518,
+    "index_death_rows": 9,
+    "early_death_rows": 8,
+    "scheduled_followup_rows": 212,
+    "early_acute_return_rows": 27,
+    "later_acute_return_rows": 241,
+    "later_death_rows": 3
+  },
+  "extension": {
+    "id": "app1-six-site-v1",
+    "version": "0.1.0",
+    "seed": "app1-six-site-v1",
+    "people": 476,
+    "sites": 6,
+    "risk_tiers": 3,
+    "source_exposure_or_outcome_changed": false,
+    "known_direct_site_effect": 0,
+    "site_support": {
+      "SITE-A": {"people": 76, "exposed": 19, "events": 21, "low": 39, "medium": 22, "high": 15},
+      "SITE-B": {"people": 75, "exposed": 19, "events": 10, "low": 35, "medium": 22, "high": 18},
+      "SITE-C": {"people": 68, "exposed": 19, "events": 10, "low": 21, "medium": 26, "high": 21},
+      "SITE-D": {"people": 88, "exposed": 21, "events": 13, "low": 26, "medium": 32, "high": 30},
+      "SITE-E": {"people": 87, "exposed": 20, "events": 18, "low": 25, "medium": 36, "high": 26},
+      "SITE-F": {"people": 82, "exposed": 31, "events": 15, "low": 13, "medium": 21, "high": 48}
+    }
+  },
+  "outputs": {
+    "analysis-cohort.csv": {"rows": 476, "fields": 49, "bytes": 200699, "sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5"},
+    "build-report.json": {"bytes": 2926, "sha256": "8829cb8c99e175abc4d9212ff0d3a1ccf6b1b73318ad28e5a5b9c8dd65ceb02f"},
+    "censoring-summary.csv": {"rows": 6, "fields": 6, "bytes": 372, "sha256": "46dba77dca430105431b40a1dccb478de0043496193d55ffbc42205435910f95"},
+    "cohort-flow.csv": {"rows": 5, "fields": 6, "bytes": 446, "sha256": "bb9c0828260a5e613a56c97b8fc701d5a9043e72cc2b205cd9df3bddc0635aed"},
+    "event-audit.csv": {"rows": 1018, "fields": 11, "bytes": 210154, "sha256": "8491e4c02d33771a904bcc095982cccd6265c3d301c10fc79ac259ceede6fe9c"},
+    "index-cohort.csv": {"rows": 518, "fields": 15, "bytes": 101751, "sha256": "f6f4311cfb617c55c31bb97afac38d328d161bd8e7ec17bb558735abeadf0107"},
+    "longitudinal-cohort.csv": {"rows": 518, "fields": 40, "bytes": 166746, "sha256": "ff684f8dce203c73a4f83e4ee781fe5eff15c0bc3c89652ded9acae906c2f1db"},
+    "query-checks.csv": {"rows": 26, "fields": 2, "bytes": 640, "sha256": "aecd10a6e122dcc34990fac08069cb3cf2339d61ed3eb0cce02beb899861988f"},
+    "site-assignment.csv": {"rows": 476, "fields": 10, "bytes": 64967, "sha256": "8cfbd4137e5f9ab8688a2fc88082f283443a913cba1167510e397f09e138964b"},
+    "site-support.csv": {"rows": 6, "fields": 15, "bytes": 641, "sha256": "b76f1ad7f77752e96060ade82d023695afa40d3a24128d2cd191ed0e53cf9088"}
+  },
+  "package": {
+    "immutable_manifest_rows": 8,
+    "editable_work_files": 11,
+    "starter_files": 20,
+    "reference_files": 30,
+    "output_files": 10,
+    "output_bytes": 749342,
+    "manifest_bytes": 1217,
+    "manifest_sha256": "9d78f888753b39797ad421d2576eef377ba0bc01fcca02d9ef3c9da388057c10",
+    "data_dictionary_rows": 87,
+    "sql_files": 4,
+    "external_python_dependencies": 0
+  },
+  "assessment": {
+    "course_points": 20,
+    "minimum_points": 16,
+    "criteria": 5,
+    "noncompensable_gates": 16,
+    "reference_points": 20
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module03_permission": "permitted for curriculum construction",
+    "clinical_use": "prohibited"
+  },
+  "validation": {
+    "cohort_builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 1140,
+    "starter_checks": 82,
+    "full_database_reproduction_checks": 1150,
+    "copied_workspace_validator_manifest_check": "pass",
+    "two_build_output_match": "pass",
+    "two_workspace_manifest_match": "pass",
+    "existing_target_rejection": "pass",
+    "incomplete_starter_rejection": "pass",
+    "changed_output_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, SQL, cohort and extension builders, teaching records, and validation"}
+  ],
+  "known_issues": [
+    "Named clinical, methods, synthetic-data, patient or community, accessibility, governance, responsible-AI, and independent reproduction reviews remain pending before alpha.",
+    "Synthea death is date-granular and not clinically adjudicated.",
+    "Scheduled encounter occurrence does not prove access, completion, quality, need, or benefit.",
+    "Three later deaths occur after the first later acute return; no competing death precedes an event in this release.",
+    "The six teaching sites are synthetic labels with no injected direct effect and are not real facilities.",
+    "The source is synthetic and dated April 2020 and cannot support real-population, causal, efficacy, fairness, site-ranking, or implementation claims."
+  ]
+}

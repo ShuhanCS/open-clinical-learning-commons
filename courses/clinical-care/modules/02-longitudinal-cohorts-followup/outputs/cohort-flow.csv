@@ -1,0 +1,6 @@
+step,state,starting,branched_or_excluded,remaining,rule
+1,initial adult index cohort,518,0,518,first qualifying adult acute encounter
+2,index death,518,9,509,death date on or before discharge date
+3,early post-discharge death,509,8,501,death date after discharge through day 30
+4,early acute return,501,25,476,first acute return after discharge through day 30
+5,day-30 landmark risk set,476,0,476,no index death early death or early acute return

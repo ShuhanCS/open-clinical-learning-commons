@@ -9,8 +9,8 @@ APP-1 is the first domain-specific applied course. Learners use a continuing syn
 - Core tools: SQL and Python
 - Final deliverable: clinical care improvement brief with reproducible evidence and a defense
 - Course package version: 0.1.0
-- Commons release: 0.49.1
-- Current package status: Module 01 is a runnable release candidate
+- Commons release: 0.50.0
+- Current package status: Modules 01 and 02 are runnable release candidates
 
 ## Seven applied modules
 
@@ -28,10 +28,14 @@ Module 06 contains eight hours of cumulative application and equity work plus an
 
 - [Module 01: Framing a care-pathway decision](modules/01-care-pathway-decision/README.md)
 - [Module 01 durable specification](../../docs/curriculum/courses/APP-1/modules/01-care-pathway-decision-spec.md)
+- [Module 02: Longitudinal cohorts and follow-up](modules/02-longitudinal-cohorts-followup/README.md)
+- [Module 02 durable specification](../../docs/curriculum/courses/APP-1/modules/02-longitudinal-cohorts-followup-spec.md)
 
 Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns, and defines a 476-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
 
 The 19-file learner workspace contains nine frozen source and contract records, nine editable decision records, and one deterministic release manifest. The standard-library profiler, builder, and validator reproduce exact evidence and reject changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records.
+
+Module 02 preserves all 518 initial people and makes 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns explicit before defining the corrected 476-person landmark risk set. Its 1,018-row event audit supports a 476-row survival-ready analysis cohort with 129 exposed people, 87 later events, and 389 administrative censors. A deterministic six-site extension adds overlapping case mix without changing source exposure or outcomes.
 
 ## Three cumulative checkpoints
 
@@ -60,4 +64,4 @@ No real patient records are used. Synthetic frequencies do not estimate real pre
 
 ## Build order
 
-Module 01 is complete. Module 02 next owns the exact longitudinal cohort and deterministic six-site teaching extension.
+Modules 01 and 02 are complete. Module 03 next owns survival and time-to-event analysis plus the cumulative Week 3 release.
