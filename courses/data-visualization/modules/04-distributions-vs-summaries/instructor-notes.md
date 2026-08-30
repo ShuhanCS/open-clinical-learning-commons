@@ -1,6 +1,6 @@
 # Instructor notes: Distributions versus summaries
 
-Module version: `0.2.0`
+Module version: `0.3.1`
 
 These notes support a class taught without Ali Goff's original course document. The data are synthetic teaching data. They do not describe a real hospital, patient population, or intervention effect.
 
@@ -9,6 +9,21 @@ These notes support a class taught without Ali Goff's original course document. 
 Learners should leave able to test whether a summary preserves the part of a distribution needed for a decision. They should not leave with a rule that the median is always better than the mean or that every chart must show every observation.
 
 The central case contains two changes at once. Discharged encounters become faster, while admitted encounters worsen as boarding becomes more common. The pooled mean barely moves because the two changes oppose one another.
+
+## Healthcare translation
+
+Keep four healthcare elements visible throughout the session:
+
+- **Patient groups:** most encounters end in discharge, while a smaller admitted group contains the longest stays.
+- **Care processes:** the synthetic fast-track pathway shortens many discharged visits; boarding lengthens admitted visits while patients wait for inpatient beds.
+- **Decision owners:** emergency-department leadership can protect fast-track gains, while hospital operations and bed-management teams investigate inpatient flow.
+- **Decision boundary:** the charts show a synthetic operational signal. They do not prove that an intervention caused better or worse clinical outcomes.
+
+Define boarding when it first appears. In this case, a boarded patient has been admitted but remains in the emergency department while waiting for an inpatient bed. Avoid teaching the long tail as a collection of statistical outliers. It represents a different hospital care process that needs a separate operational response.
+
+## Source status
+
+The file is deterministic and synthetic. It was designed to meet teaching conditions and was not fitted to a hospital dataset. Show learners the release record and the [course source register](../../data-source-register.md). Before a teaching release, either calibrate selected parameters to a named public aggregate source or rebuild the case from an identified Synthea release. Do not present these values as a benchmark for emergency-department performance.
 
 ## Prepare the module
 
@@ -57,11 +72,11 @@ Other checks:
 
 | Segment | Time |
 |---|---:|
-| Lossy summaries and first prediction | 20 min |
-| Tier 1 run and observe | 20 min |
-| Tier 2 modify and compare | 25 min |
-| Tier 3 author or critique | 15 min |
-| Decision debrief | 10 min |
+| Emergency-department brief and first chart choice | 20 min |
+| Read the department-wide views | 20 min |
+| Split discharged, admitted, and boarded care processes | 25 min |
+| Build or critique the leadership display | 15 min |
+| Patient-flow and bed-capacity debrief | 10 min |
 
 ### 60 minutes
 
@@ -73,11 +88,11 @@ Teach the lossy-summary idea and four hiding mechanisms. Run the first four Tier
 
 ## Tier 1 answer key
 
-1. **Monthly mean:** The mean changes from 205.6 to 200.2 minutes. On its own, it suggests modest improvement or stability.
-2. **Pooled histogram:** The distribution is strongly right-skewed. The second process is weak in the pooled view because discharged encounters outnumber admitted encounters by more than three to one.
-3. **Density by disposition:** Admitted encounters show a second mode near the boarded median of 782 minutes. Discharged encounters have a shorter, single dominant process.
-4. **Four monthly measures:** The mean is nearly flat and the median improves sharply. The 90th percentile and share over eight hours worsen sharply. The typical discharged experience improves while the longest waits become more common.
-5. **Decision consequence:** The first view could support declaring the intervention a broad success. The fourth supports continuing the fast-track work while adding a separate boarding response and tail-sensitive monitoring.
+1. **Monthly mean:** The department-wide mean changes from 205.6 to 200.2 minutes. A chief operating officer could read this as modest improvement or stability and miss the admitted patients waiting longest.
+2. **Pooled histogram:** The distribution is strongly right-skewed. The boarded process is hard to see because discharged encounters outnumber admitted encounters by more than three to one.
+3. **Density by disposition:** Admitted encounters show a second mode near the boarded median of 782 minutes. Discharged encounters have a shorter, single dominant process. The split turns a statistical shape into a hospital-flow question.
+4. **Four monthly measures:** The mean is nearly flat and the median improves sharply. The 90th percentile and share over eight hours worsen sharply. Fast-track gains reach many discharged patients, while admitted patients increasingly remain in the emergency department waiting for beds.
+5. **Decision consequence:** The first view could support declaring the department broadly improved. The fourth supports protecting fast-track gains while asking patient-flow, inpatient-capacity, and bed-management teams to address boarding and monitor the tail.
 
 ## Tier 2 guidance
 
@@ -108,7 +123,7 @@ For all three critiques, require learners to name who could be affected. Example
 
 ### A1
 
-An unchanged system can retain the same distribution, group mix, and time pattern. A changed system can have one group improve while another worsens, or can keep its mean while variance and tail risk grow. A distribution view and stratified time trend distinguish these cases.
+An unchanged emergency department can retain the same length-of-stay distribution, admitted and discharged mix, and monthly pattern. A changed department can have discharged encounters improve while admitted encounters worsen, or can keep its mean while boarding and long waits grow. A distribution view plus time trends split by disposition and boarding distinguish these cases.
 
 ### A2
 
@@ -116,7 +131,7 @@ Multiple modes. A standard box plot shows a median, quartiles, and possible outl
 
 ### A3
 
-Any three well-explained omissions can earn full credit: sample size, spread, skew, multiple modes, unusual values, subgroup mix, or threshold exceedance. The operational explanation is required.
+Any three well-explained omissions can earn full credit: sample size, spread, skew, multiple modes, unusual values, admitted and discharged mix, or the share beyond a service threshold. The learner must explain how the omission could misdirect emergency-department staffing, fast-track expansion, boarding response, or bed-capacity work.
 
 ### A4
 
@@ -168,12 +183,12 @@ Suggested score: 95/100. Diagnose 25, select 19, justify 14, decide 28, reproduc
 
 ## Common misconceptions
 
-- Skew does not automatically make the median correct. Capacity and cost questions may require the mean.
+- Skew does not automatically make the median correct. Total emergency-department workload, staffing hours, and capacity questions may require the mean.
 - Showing the full distribution is not always the clearest choice.
 - A box plot can hide multiple modes.
 - Standard deviation and standard error answer different questions.
 - The second mode is not a set of bad records to delete. It represents patients experiencing a different care process.
-- Statistical detection does not establish operational importance.
+- Statistical detection does not establish clinical or operational importance, and this synthetic case does not establish patient harm or intervention causality.
 
 ## When to reveal `boarded`
 

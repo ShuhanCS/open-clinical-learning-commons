@@ -1,0 +1,2937 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#1f49b6">
+  <meta name="description" content="A clinical data visualization atlas with healthcare examples, runnable R code, and a guided synthetic-data lesson.">
+  <title>Clinical data visualization atlas | Open Clinical Learning Commons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #f5f7fb;
+      --surface: #ffffff;
+      --surface-subtle: #f8faff;
+      --text: #172033;
+      --text-muted: #5d687b;
+      --border: #dce3ee;
+      --border-strong: #c8d2e1;
+      --primary: #1f49b6;
+      --primary-hover: #173b94;
+      --primary-soft: #e9efff;
+      --data-tail: #d4543f;
+      --data-tail-soft: #fbece8;
+      --success: #147a5a;
+      --success-soft: #e6f4ef;
+      --error: #9f241b;
+      --error-soft: #fbe9e7;
+      --focus: #7a4a00;
+      --shadow-sm: 0 1px 2px rgba(23, 32, 51, 0.06);
+      --shadow-md: 0 10px 30px rgba(23, 32, 51, 0.08);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --header-height: 64px;
+      --sidebar-width: 248px;
+      --content-max: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 24px);
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--canvas);
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    a {
+      color: var(--primary);
+      text-underline-offset: 3px;
+    }
+
+    .content-link:visited {
+      color: #62479b;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      color: white;
+      background: var(--text);
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .data-error {
+      display: none;
+      margin: 0;
+      padding: 12px 24px;
+      color: var(--error);
+      background: var(--error-soft);
+      text-align: center;
+    }
+
+    html[data-checks="failed"] .data-error {
+      display: block;
+    }
+
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 30;
+      height: var(--header-height);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(var(--content-max), calc(100% - 48px));
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 44px;
+      min-height: 44px;
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      color: white;
+      background: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      letter-spacing: -0.06em;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .free-badge,
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid #bcd6c9;
+      border-radius: 999px;
+      color: var(--success);
+      background: var(--success-soft);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .topbar-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .topbar-link:hover {
+      color: var(--primary);
+    }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+      gap: 40px;
+      width: min(var(--content-max), calc(100% - 48px));
+      margin: 0 auto;
+      padding-top: calc(var(--header-height) + 32px);
+    }
+
+    .module-sidebar {
+      position: sticky;
+      top: calc(var(--header-height) + 24px);
+      align-self: start;
+      max-height: calc(100vh - var(--header-height) - 48px);
+      padding: 8px 0 24px;
+    }
+
+    .course-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .sidebar-label {
+      margin: 20px 0 6px;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .module-sidebar h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .progress-summary {
+      margin: 24px 0;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .progress-copy {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .progress-track {
+      height: 6px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e8edf5;
+    }
+
+    .progress-bar {
+      display: block;
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--primary);
+      transition: width 240ms ease-out;
+    }
+
+    .lesson-nav {
+      display: grid;
+      gap: 4px;
+    }
+
+    .lesson-nav a {
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      min-height: 48px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .lesson-nav a:hover,
+    .lesson-nav a.active {
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .nav-index {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      background: var(--surface);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+    }
+
+    .lesson-nav a.complete .nav-index {
+      border-color: var(--success);
+      color: white;
+      background: var(--success);
+    }
+
+    .step-status {
+      color: var(--success);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .dataset-note {
+      margin-top: 24px;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .dataset-note strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .workspace {
+      min-width: 0;
+      padding-bottom: 72px;
+    }
+
+    .module-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+      gap: 32px;
+      padding: 48px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .breadcrumb {
+      margin: 0 0 14px;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      color: var(--text);
+      line-height: 1.18;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin-bottom: 16px;
+      font-size: clamp(36px, 5vw, 52px);
+      letter-spacing: -0.045em;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      font-size: clamp(26px, 3vw, 34px);
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+      margin: 0 0 24px;
+      color: var(--text-muted);
+      font-size: 17px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .meta-chip {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-muted);
+      background: var(--surface-subtle);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-sm);
+      color: white;
+      background: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+      transition: background 150ms ease-out, transform 150ms ease-out;
+    }
+
+    .primary-button:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .objective-panel {
+      align-self: stretch;
+      padding: 24px;
+      border-radius: var(--radius-md);
+      background: var(--primary-soft);
+    }
+
+    .objective-panel p {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .objective-panel strong {
+      display: block;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .lesson-section {
+      padding-top: 64px;
+    }
+
+    .section-heading {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .step-number {
+      display: grid;
+      flex: 0 0 auto;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: var(--primary);
+      background: var(--primary-soft);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .section-heading p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--text-muted);
+    }
+
+    .activity-panel {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .activity-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 52px;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-subtle);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .activity-body {
+      padding: 32px;
+    }
+
+    .brief-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .reported-metric {
+      padding: 24px;
+      border: 1px solid #c9d7f5;
+      border-radius: var(--radius-md);
+      background: var(--primary-soft);
+    }
+
+    .reported-metric span {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .reported-metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .case-question blockquote {
+      margin: 0 0 22px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .question-label {
+      margin: 0 0 10px;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .choice-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chart-choice-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .choice-button,
+    .metric-button,
+    .decision-button {
+      min-height: 44px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      cursor: pointer;
+      transition: border-color 150ms ease-out, background 150ms ease-out, color 150ms ease-out, transform 150ms ease-out;
+    }
+
+    .choice-button {
+      padding: 9px 14px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .chart-choice-button {
+      padding: 14px;
+      text-align: left;
+    }
+
+    .chart-choice-button small,
+    .chart-choice-button span {
+      display: block;
+    }
+
+    .chart-choice-button small {
+      margin-bottom: 5px;
+      color: var(--text-muted);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .choice-button:hover,
+    .choice-button[aria-pressed="true"] {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .first-response {
+      min-height: 24px;
+      margin: 14px 0 0;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .metric-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .chart-reading-tip {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--primary);
+      background: var(--surface-subtle);
+    }
+
+    .chart-reading-tip strong {
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .chart-reading-tip p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .metric-button {
+      padding: 14px;
+      text-align: left;
+    }
+
+    .metric-button small,
+    .metric-button span {
+      display: block;
+    }
+
+    .metric-button small {
+      margin-bottom: 6px;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .metric-button span {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .metric-button:hover,
+    .metric-button[aria-pressed="true"] {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .metric-button[aria-pressed="true"] small {
+      color: var(--primary);
+    }
+
+    .chart-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .chart-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 12px;
+    }
+
+    .chart-head p {
+      max-width: 440px;
+      margin: 2px 0 0;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .metric-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .chart-grid {
+      stroke: #e5eaf2;
+      stroke-width: 1;
+    }
+
+    .chart-axis-label {
+      fill: var(--text-muted);
+      font-family: "Manrope", sans-serif;
+      font-size: 12px;
+    }
+
+    .chart-line {
+      fill: none;
+      stroke: var(--primary);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 4;
+    }
+
+    .chart-point {
+      fill: var(--surface);
+      stroke: var(--primary);
+      stroke-width: 3;
+    }
+
+    .chart-point.end {
+      fill: var(--data-tail);
+      stroke: var(--data-tail);
+    }
+
+    .chart-value {
+      fill: var(--text);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .finding-strip {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-soft);
+    }
+
+    .finding-strip strong {
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .finding-strip p {
+      margin: 0;
+      color: #354563;
+      font-size: 13px;
+    }
+
+    .distribution-block {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .distribution-heading {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+      gap: 32px;
+      margin-bottom: 18px;
+    }
+
+    .distribution-heading p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .histogram-legend {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .legend-key {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-swatch {
+      width: 14px;
+      height: 8px;
+      border-radius: 2px;
+      background: #b9ccf3;
+    }
+
+    .legend-swatch.december {
+      background: var(--data-tail);
+    }
+
+    .histogram {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      min-height: 240px;
+      border-bottom: 1px solid var(--border-strong);
+      background: repeating-linear-gradient(to top, transparent 0, transparent 58px, #edf1f6 59px);
+    }
+
+    .histogram-bin {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      align-items: end;
+      min-height: 220px;
+    }
+
+    .histogram-bar {
+      min-height: 2px;
+      border-radius: 4px 4px 0 0;
+      background: #b9ccf3;
+      transition: height 320ms ease-out;
+    }
+
+    .histogram-bar.december {
+      background: var(--data-tail);
+    }
+
+    .histogram-labels {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      padding-top: 8px;
+      color: var(--text-muted);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .data-details {
+      margin-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .data-details summary {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .data-table-wrap {
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .data-table caption {
+      padding: 0 0 8px;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .message-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .message-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-subtle);
+    }
+
+    .message-card.answer {
+      border-color: #c9d7f5;
+      background: var(--primary-soft);
+    }
+
+    .message-card small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .message-card h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .message-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .care-process-panel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-subtle);
+    }
+
+    .care-process-heading {
+      grid-column: 1 / -1;
+    }
+
+    .care-process-heading h3,
+    .care-process-heading p,
+    .care-process-card p {
+      margin: 0;
+    }
+
+    .care-process-heading p {
+      margin-top: 5px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .care-process-card {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+    }
+
+    .care-process-card small,
+    .care-process-card strong {
+      display: block;
+    }
+
+    .care-process-card small {
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .care-process-card strong {
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 19px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .care-process-card p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .care-process-action {
+      grid-column: 1 / -1;
+      padding: 14px 16px;
+      border-left: 3px solid var(--data-tail);
+      background: #fff8ed;
+      color: #4d3a1f;
+      font-size: 13px;
+    }
+
+    .decision-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+      gap: 24px;
+    }
+
+    .decision-options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .decision-button {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      padding: 14px;
+      text-align: left;
+    }
+
+    .decision-button:hover,
+    .decision-button[aria-pressed="true"] {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      transform: translateY(-1px);
+    }
+
+    .decision-button.correct {
+      border-color: var(--success);
+      background: var(--success-soft);
+    }
+
+    .decision-button.incorrect {
+      border-color: var(--error);
+      color: var(--error);
+      background: var(--error-soft);
+    }
+
+    .decision-letter {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+    }
+
+    .decision-feedback {
+      min-height: 100%;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-subtle);
+    }
+
+    .decision-feedback p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .svg-definitions {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .atlas-shell {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .atlas-index {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .atlas-family-card {
+      min-width: 0;
+      min-height: 166px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      text-align: left;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
+    }
+
+    .atlas-family-card:hover,
+    .atlas-family-card[aria-pressed="true"] {
+      border-color: var(--primary);
+      box-shadow: 0 9px 22px rgba(31, 73, 182, 0.11);
+      transform: translateY(-2px);
+    }
+
+    .atlas-family-card[aria-pressed="true"] {
+      background: var(--primary-soft);
+    }
+
+    .atlas-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .atlas-family-number,
+    .atlas-family-card small,
+    .atlas-kicker,
+    .atlas-guidance small,
+    .atlas-code-head span {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .atlas-family-number {
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    .atlas-family-card strong,
+    .atlas-family-card small {
+      display: block;
+    }
+
+    .atlas-family-card strong {
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
+    .atlas-family-card small {
+      min-height: 31px;
+      margin-top: 3px;
+      color: var(--text-muted);
+      font-size: 9px;
+      line-height: 1.45;
+    }
+
+    .atlas-thumb {
+      display: block;
+      width: 100%;
+      height: 74px;
+      border: 1px solid #e5eaf2;
+      border-radius: 7px;
+      background: #fbfcff;
+    }
+
+    .atlas-detail {
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-md);
+    }
+
+    .atlas-detail-copy {
+      padding: 28px 28px 22px;
+    }
+
+    .atlas-kicker {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .atlas-detail h3 {
+      margin-bottom: 8px;
+      font-size: 28px;
+    }
+
+    .atlas-summary {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .atlas-question {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--primary);
+      background: var(--surface-subtle);
+    }
+
+    .atlas-question span {
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .atlas-question p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .atlas-chart-frame {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: #fbfcff;
+    }
+
+    .atlas-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .atlas-chart-caption {
+      margin: 10px 0 0;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .atlas-guidance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .atlas-guidance {
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .atlas-guidance.caution {
+      border-color: #efd0c8;
+      background: #fff8f5;
+    }
+
+    .atlas-guidance small {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--primary);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .atlas-guidance.caution small {
+      color: var(--data-tail);
+    }
+
+    .atlas-guidance p,
+    .atlas-variants {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .atlas-variants {
+      margin-top: 14px;
+    }
+
+    .atlas-variants strong {
+      color: var(--text);
+    }
+
+    .atlas-code {
+      background: #0e1c31;
+    }
+
+    .atlas-code-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      border-bottom: 1px solid #2a4163;
+      color: #dce8fb;
+    }
+
+    .atlas-code-head span {
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .copy-code {
+      min-height: 36px;
+      padding: 6px 10px;
+      border: 1px solid #607797;
+      border-radius: 6px;
+      color: white;
+      background: transparent;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .copy-code:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .atlas-code pre {
+      overflow-x: auto;
+      margin: 0;
+      padding: 20px;
+      color: #e7eefc;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      line-height: 1.65;
+      white-space: pre;
+    }
+
+    .atlas-download {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 16px;
+      padding: 18px 20px;
+      border: 1px solid #bfd0f4;
+      border-radius: var(--radius-md);
+      background: var(--primary-soft);
+    }
+
+    .atlas-download p {
+      margin: 0;
+      color: #354563;
+      font-size: 13px;
+    }
+
+    .atlas-download .primary-button {
+      flex: 0 0 auto;
+    }
+
+    .viz-grid {
+      stroke: #dce3ee;
+      stroke-width: 1;
+    }
+
+    .viz-axis {
+      stroke: #a9b8ce;
+      stroke-width: 1.2;
+    }
+
+    .viz-primary {
+      fill: var(--primary);
+      stroke: var(--primary);
+    }
+
+    .viz-cyan {
+      fill: #0d8fa6;
+      stroke: #0d8fa6;
+    }
+
+    .viz-tail {
+      fill: var(--data-tail);
+      stroke: var(--data-tail);
+    }
+
+    .viz-success {
+      fill: var(--success);
+      stroke: var(--success);
+    }
+
+    .viz-amber {
+      fill: #d97706;
+      stroke: #d97706;
+    }
+
+    .viz-soft {
+      fill: #dce7ff;
+      stroke: #a8bfea;
+    }
+
+    .viz-surface {
+      fill: white;
+      stroke: #a9b8ce;
+      stroke-width: 1.2;
+    }
+
+    .viz-line {
+      fill: none;
+      stroke: var(--primary);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 4;
+    }
+
+    .viz-trend {
+      fill: none;
+      stroke: var(--data-tail);
+      stroke-dasharray: 5 4;
+      stroke-width: 2;
+    }
+
+    .viz-flow {
+      fill: none;
+      stroke-linecap: butt;
+      opacity: 0.55;
+    }
+
+    .viz-edge {
+      fill: none;
+      stroke: #a9b8ce;
+      stroke-width: 3;
+    }
+
+    .viz-label,
+    .viz-value {
+      fill: var(--text-muted);
+      font-family: "Manrope", sans-serif;
+      font-size: 10px;
+    }
+
+    .viz-value {
+      fill: var(--text);
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 500;
+    }
+
+    .rebuild-brief-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .rebuild-brief {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .rebuild-brief.why {
+      border-color: #c9d7f5;
+      background: var(--primary-soft);
+    }
+
+    .rebuild-brief small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .rebuild-brief h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .rebuild-brief p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .r-guide {
+      overflow: hidden;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .r-guide-header {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px 24px;
+      background: #152b4b;
+      color: white;
+    }
+
+    .r-guide-header h3,
+    .r-guide-header p {
+      margin: 0;
+    }
+
+    .r-guide-header h3 {
+      color: white;
+    }
+
+    .r-guide-header p {
+      max-width: 470px;
+      color: #d7e2f4;
+      font-size: 13px;
+    }
+
+    .r-guide-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .r-guide-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 12px;
+      border: 1px solid #5f7698;
+      border-radius: var(--radius-sm);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .r-guide-links a:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .r-steps {
+      padding: 0 24px;
+    }
+
+    .r-step {
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr);
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .r-step:last-child {
+      border-bottom: 0;
+    }
+
+    .r-step-number {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .r-step h4,
+    .r-step p {
+      margin: 0;
+    }
+
+    .r-step h4 {
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .r-step p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .r-step-downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .r-step-downloads a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 12px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .r-step-downloads a:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .inline-code,
+    .r-command {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .inline-code {
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #e8eef8;
+      color: #203b69;
+      font-size: 0.92em;
+    }
+
+    .r-command {
+      overflow-x: auto;
+      margin: 12px 0 0;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: #0e1c31;
+      color: #dce8fb;
+      font-size: 12px;
+      line-height: 1.7;
+      white-space: pre;
+    }
+
+    .teaching-key {
+      margin-bottom: 18px;
+      border: 1px solid #b7d9cf;
+      border-radius: var(--radius-md);
+      background: #f2faf7;
+    }
+
+    .teaching-key summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 64px;
+      padding: 14px 20px;
+      color: #0b624d;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .teaching-key summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .teaching-key summary::after {
+      content: "+";
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .teaching-key[open] summary::after {
+      content: "−";
+    }
+
+    .teaching-key-body {
+      padding: 0 20px 20px;
+    }
+
+    .key-intro {
+      margin: 0 0 16px;
+      color: #3f5f57;
+      font-size: 13px;
+    }
+
+    .key-chart-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .key-chart-card {
+      padding: 14px;
+      border: 1px solid #c9e1da;
+      border-radius: var(--radius-sm);
+      background: white;
+    }
+
+    .key-chart-card small,
+    .key-chart-card strong {
+      display: block;
+    }
+
+    .key-chart-card small {
+      min-height: 30px;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .key-chart-card strong {
+      margin: 4px 0 8px;
+      color: #0b624d;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+    }
+
+    .key-mini-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .key-baseline {
+      stroke: #d7e8e3;
+      stroke-width: 1;
+    }
+
+    .key-line {
+      fill: none;
+      stroke: #0d67ff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+    }
+
+    .key-point {
+      fill: #d97706;
+      stroke: white;
+      stroke-width: 2;
+    }
+
+    .key-answer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .key-answer {
+      padding: 16px;
+      border-left: 3px solid #0b8a6c;
+      background: white;
+    }
+
+    .key-answer h4,
+    .key-answer p {
+      margin: 0;
+    }
+
+    .key-answer h4 {
+      margin-bottom: 6px;
+      color: #0b624d;
+      font-size: 13px;
+    }
+
+    .key-answer p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .key-source {
+      margin: 14px 0 0;
+      font-size: 12px;
+    }
+
+    .key-source a {
+      color: #0b624d;
+      font-weight: 700;
+    }
+
+    .resource-list {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .resource-link {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      min-height: 72px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .resource-link:last-child {
+      border-bottom: 0;
+    }
+
+    .resource-link:hover {
+      color: var(--primary);
+      background: var(--surface-subtle);
+    }
+
+    .resource-link small,
+    .resource-link strong {
+      display: block;
+    }
+
+    .resource-link small {
+      margin-bottom: 3px;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .resource-link strong {
+      font-size: 14px;
+    }
+
+    .resource-arrow {
+      color: var(--text-muted);
+      font-size: 18px;
+    }
+
+    .materials-note {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 16px;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .materials-note p {
+      margin: 0;
+    }
+
+    .materials-note a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    .site-footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    @media (max-width: 920px) {
+      :root {
+        --header-height: 60px;
+      }
+
+      .topbar-inner,
+      .app-shell {
+        width: min(100% - 32px, var(--content-max));
+      }
+
+      .app-shell {
+        display: block;
+        padding-top: calc(var(--header-height) + 16px);
+      }
+
+      .module-sidebar {
+        top: var(--header-height);
+        z-index: 20;
+        max-height: none;
+        margin: 0 -16px 24px;
+        padding: 8px 16px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(245, 247, 251, 0.96);
+        backdrop-filter: blur(12px);
+      }
+
+      .course-link,
+      .sidebar-label,
+      .module-sidebar h2,
+      .progress-summary,
+      .dataset-note {
+        display: none;
+      }
+
+      .lesson-nav {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .lesson-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .lesson-nav a {
+        flex: 0 0 auto;
+        grid-template-columns: 24px auto;
+        min-height: 44px;
+        white-space: nowrap;
+      }
+
+      .nav-index {
+        width: 24px;
+        height: 24px;
+      }
+
+      .step-status {
+        display: none;
+      }
+
+      .module-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .atlas-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .atlas-index {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar-inner,
+      .app-shell {
+        width: min(100% - 24px, var(--content-max));
+      }
+
+      .brand-name,
+      .topbar-link {
+        display: none;
+      }
+
+      .app-shell {
+        padding-top: calc(var(--header-height) + 12px);
+      }
+
+      .module-sidebar {
+        margin: 0 -12px 18px;
+        padding-inline: 12px;
+      }
+
+      .module-hero {
+        gap: 20px;
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .lesson-section {
+        padding-top: 48px;
+      }
+
+      .activity-body {
+        padding: 18px;
+      }
+
+      .brief-layout,
+      .distribution-heading,
+      .decision-layout,
+      .chart-choice-row,
+      .message-comparison,
+      .care-process-panel,
+      .atlas-guidance-grid,
+      .rebuild-brief-grid,
+      .key-answer-grid,
+      .materials-note {
+        grid-template-columns: 1fr;
+      }
+
+      .atlas-index {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        scroll-snap-type: x proximity;
+      }
+
+      .atlas-family-card {
+        flex: 0 0 168px;
+        min-height: 154px;
+        scroll-snap-align: start;
+      }
+
+      .atlas-detail-copy {
+        padding: 20px 18px 18px;
+      }
+
+      .atlas-detail h3 {
+        font-size: 24px;
+      }
+
+      .atlas-detail {
+        scroll-margin-top: calc(var(--header-height) + 72px);
+      }
+
+      .atlas-question {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .atlas-chart-frame {
+        padding: 10px;
+      }
+
+      .atlas-code pre {
+        padding: 16px;
+      }
+
+      .atlas-download {
+        display: block;
+      }
+
+      .atlas-download .primary-button {
+        width: 100%;
+        margin-top: 14px;
+      }
+
+      .care-process-heading,
+      .care-process-action {
+        grid-column: 1;
+      }
+
+      .metric-tabs {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .r-guide-header {
+        display: block;
+      }
+
+      .r-guide-links {
+        margin-top: 14px;
+      }
+
+      .r-steps {
+        padding-inline: 18px;
+      }
+
+      .key-chart-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .chart-card {
+        padding: 14px;
+      }
+
+      .chart-head {
+        display: block;
+      }
+
+      .chart-head p {
+        margin-top: 4px;
+      }
+
+      .finding-strip {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .histogram {
+        gap: 4px;
+        min-height: 190px;
+      }
+
+      .histogram-bin {
+        gap: 2px;
+        min-height: 170px;
+      }
+
+      .histogram-labels {
+        gap: 4px;
+        font-size: 10px;
+      }
+
+      .site-footer {
+        margin-top: 48px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to lesson</a>
+  <p class="data-error" role="alert">The teaching data did not pass the page checks. Use the downloadable module while this preview is repaired.</p>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#overview" aria-label="Open Clinical Learning Commons">
+        <span class="brand-mark" aria-hidden="true">CL</span>
+        <span class="brand-name">Open Clinical Learning Commons</span>
+      </a>
+      <div class="topbar-actions">
+        <span class="free-badge">Free educational tool</span>
+        <a class="topbar-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">View source</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="module-sidebar" aria-label="Module progress">
+      <a class="course-link" href="courses/data-visualization/README.md">← Data visualization course</a>
+      <p class="sidebar-label">Chart atlas + Module 04</p>
+      <h2>Choose, read, and rebuild a chart</h2>
+
+      <div class="progress-summary">
+        <div class="progress-copy"><span>Module progress</span><span id="progress-text">0%</span></div>
+        <div class="progress-track" aria-hidden="true"><span class="progress-bar" id="progress-bar"></span></div>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Lesson steps">
+        <a class="active" href="#atlas"><span class="nav-index">A</span><span>Explore chart types</span><span class="step-status"></span></a>
+        <a href="#brief" data-nav-step="1"><span class="nav-index">1</span><span>Choose a chart</span><span class="step-status"></span></a>
+        <a href="#evidence" data-nav-step="2"><span class="nav-index">2</span><span>Read the evidence</span><span class="step-status"></span></a>
+        <a href="#decision" data-nav-step="3"><span class="nav-index">3</span><span>Write the message</span><span class="step-status"></span></a>
+        <a href="#materials"><span class="nav-index">4</span><span>Rebuild it in R</span><span class="step-status"></span></a>
+      </nav>
+
+      <p class="dataset-note"><strong>8,392 synthetic visits</strong>No patient records are used in this lesson.</p>
+    </aside>
+
+    <main class="workspace" id="main">
+      <svg class="svg-definitions" aria-hidden="true" focusable="false">
+        <symbol id="viz-comparison" viewBox="0 0 320 180">
+          <line class="viz-grid" x1="66" y1="35" x2="278" y2="35"></line><line class="viz-grid" x1="66" y1="70" x2="278" y2="70"></line><line class="viz-grid" x1="66" y1="105" x2="278" y2="105"></line><line class="viz-grid" x1="66" y1="140" x2="278" y2="140"></line>
+          <text class="viz-label" x="12" y="39">North</text><text class="viz-label" x="12" y="74">Central</text><text class="viz-label" x="12" y="109">South</text><text class="viz-label" x="12" y="144">West</text>
+          <line class="viz-soft" x1="66" y1="35" x2="245" y2="35" stroke-width="5"></line><line class="viz-soft" x1="66" y1="70" x2="221" y2="70" stroke-width="5"></line><line class="viz-soft" x1="66" y1="105" x2="196" y2="105" stroke-width="5"></line><line class="viz-soft" x1="66" y1="140" x2="178" y2="140" stroke-width="5"></line>
+          <circle class="viz-primary" cx="245" cy="35" r="7"></circle><circle class="viz-primary" cx="221" cy="70" r="7"></circle><circle class="viz-primary" cx="196" cy="105" r="7"></circle><circle class="viz-primary" cx="178" cy="140" r="7"></circle>
+          <text class="viz-value" x="257" y="39">78%</text><text class="viz-value" x="233" y="74">71%</text><text class="viz-value" x="208" y="109">64%</text><text class="viz-value" x="190" y="144">59%</text>
+        </symbol>
+        <symbol id="viz-distribution" viewBox="0 0 320 180">
+          <line class="viz-axis" x1="34" y1="150" x2="294" y2="150"></line>
+          <rect class="viz-soft" x="46" y="128" width="26" height="22" rx="2"></rect><rect class="viz-primary" x="76" y="78" width="26" height="72" rx="2"></rect><rect class="viz-primary" x="106" y="38" width="26" height="112" rx="2"></rect><rect class="viz-primary" x="136" y="58" width="26" height="92" rx="2"></rect><rect class="viz-primary" x="166" y="94" width="26" height="56" rx="2"></rect><rect class="viz-cyan" x="196" y="116" width="26" height="34" rx="2"></rect><rect class="viz-tail" x="226" y="129" width="26" height="21" rx="2"></rect><rect class="viz-tail" x="256" y="138" width="26" height="12" rx="2"></rect>
+          <line class="viz-tail" x1="150" y1="26" x2="150" y2="154" stroke-width="2"></line><text class="viz-value" x="157" y="31">median</text>
+          <text class="viz-label" x="38" y="169">Shorter visits</text><text class="viz-label" x="232" y="169">Long tail</text>
+        </symbol>
+        <symbol id="viz-time" viewBox="0 0 320 180">
+          <line class="viz-grid" x1="38" y1="43" x2="292" y2="43"></line><line class="viz-grid" x1="38" y1="91" x2="292" y2="91"></line><line class="viz-grid" x1="38" y1="139" x2="292" y2="139"></line>
+          <polyline class="viz-line" points="42,130 64,123 86,116 108,119 130,104 152,96 174,82 196,78 218,87 240,68 262,54 286,42"></polyline>
+          <circle class="viz-primary" cx="42" cy="130" r="5"></circle><circle class="viz-primary" cx="108" cy="119" r="4"></circle><circle class="viz-primary" cx="196" cy="78" r="4"></circle><circle class="viz-tail" cx="286" cy="42" r="6"></circle>
+          <text class="viz-value" x="39" y="151">61%</text><text class="viz-value" x="263" y="28">82%</text><text class="viz-label" x="39" y="169">Jan</text><text class="viz-label" x="269" y="169">Dec</text>
+        </symbol>
+        <symbol id="viz-relationship" viewBox="0 0 320 180">
+          <line class="viz-axis" x1="36" y1="150" x2="294" y2="150"></line><line class="viz-axis" x1="36" y1="25" x2="36" y2="150"></line>
+          <line class="viz-trend" x1="53" y1="135" x2="282" y2="43"></line>
+          <circle class="viz-cyan" cx="58" cy="130" r="5"></circle><circle class="viz-cyan" cx="78" cy="119" r="6"></circle><circle class="viz-cyan" cx="99" cy="128" r="4"></circle><circle class="viz-cyan" cx="115" cy="104" r="5"></circle><circle class="viz-cyan" cx="139" cy="111" r="6"></circle><circle class="viz-cyan" cx="157" cy="86" r="5"></circle><circle class="viz-cyan" cx="179" cy="92" r="4"></circle><circle class="viz-cyan" cx="201" cy="67" r="6"></circle><circle class="viz-cyan" cx="222" cy="76" r="5"></circle><circle class="viz-cyan" cx="242" cy="48" r="6"></circle><circle class="viz-cyan" cx="266" cy="56" r="4"></circle><circle class="viz-cyan" cx="279" cy="36" r="5"></circle>
+          <text class="viz-label" x="104" y="170">Travel time to clinic</text><text class="viz-label" transform="translate(14 126) rotate(-90)">Missed visits</text>
+        </symbol>
+        <symbol id="viz-uncertainty" viewBox="0 0 320 180">
+          <line class="viz-grid" x1="162" y1="22" x2="162" y2="158" stroke-dasharray="4 4"></line>
+          <text class="viz-label" x="14" y="43">Ward A</text><text class="viz-label" x="14" y="78">Ward B</text><text class="viz-label" x="14" y="113">Ward C</text><text class="viz-label" x="14" y="148">Ward D</text>
+          <line class="viz-primary" x1="73" y1="39" x2="158" y2="39" stroke-width="3"></line><line class="viz-primary" x1="116" y1="74" x2="178" y2="74" stroke-width="3"></line><line class="viz-primary" x1="137" y1="109" x2="238" y2="109" stroke-width="3"></line><line class="viz-primary" x1="157" y1="144" x2="281" y2="144" stroke-width="3"></line>
+          <circle class="viz-tail" cx="108" cy="39" r="7"></circle><circle class="viz-tail" cx="145" cy="74" r="7"></circle><circle class="viz-tail" cx="187" cy="109" r="7"></circle><circle class="viz-tail" cx="223" cy="144" r="7"></circle>
+          <text class="viz-value" x="151" y="174">no difference</text>
+        </symbol>
+        <symbol id="viz-flow" viewBox="0 0 320 180">
+          <path class="viz-flow viz-primary" d="M40 48 C93 48 91 45 144 45" stroke-width="38"></path><path class="viz-flow viz-amber" d="M40 85 C93 85 91 90 144 90" stroke-width="22"></path><path class="viz-flow viz-tail" d="M40 122 C93 122 91 134 144 134" stroke-width="34"></path>
+          <path class="viz-flow viz-primary" d="M160 45 C213 45 211 54 270 54" stroke-width="35"></path><path class="viz-flow viz-amber" d="M160 90 C213 90 211 92 270 92" stroke-width="22"></path><path class="viz-flow viz-tail" d="M160 134 C213 134 211 127 270 127" stroke-width="42"></path>
+          <rect class="viz-surface" x="24" y="27" width="16" height="117" rx="3"></rect><rect class="viz-surface" x="144" y="23" width="16" height="133" rx="3"></rect><rect class="viz-surface" x="270" y="29" width="16" height="120" rx="3"></rect>
+          <text class="viz-label" x="12" y="169">Arrival</text><text class="viz-label" x="127" y="169">Decision</text><text class="viz-label" x="257" y="169">Outcome</text>
+        </symbol>
+        <symbol id="viz-network" viewBox="0 0 320 180">
+          <line class="viz-edge" x1="57" y1="91" x2="151" y2="48"></line><line class="viz-edge" x1="57" y1="91" x2="151" y2="135"></line><line class="viz-edge" x1="151" y1="48" x2="257" y2="48"></line><line class="viz-edge" x1="151" y1="48" x2="257" y2="133"></line><line class="viz-edge" x1="151" y1="135" x2="257" y2="133"></line>
+          <circle class="viz-primary" cx="57" cy="91" r="22"></circle><circle class="viz-cyan" cx="151" cy="48" r="17"></circle><circle class="viz-amber" cx="151" cy="135" r="15"></circle><circle class="viz-success" cx="257" cy="48" r="14"></circle><circle class="viz-tail" cx="257" cy="133" r="13"></circle>
+          <text class="viz-value" x="31" y="126">Primary care</text><text class="viz-value" x="125" y="24">Cardiology</text><text class="viz-value" x="132" y="166">Imaging</text><text class="viz-value" x="235" y="24">Pharmacy</text><text class="viz-value" x="225" y="164">Home health</text>
+        </symbol>
+        <symbol id="viz-composition" viewBox="0 0 320 180">
+          <rect class="viz-primary" x="50" y="28" width="48" height="38"></rect><rect class="viz-tail" x="50" y="66" width="48" height="42"></rect><rect class="viz-success" x="50" y="108" width="48" height="34"></rect><rect class="viz-amber" x="50" y="142" width="48" height="12"></rect>
+          <rect class="viz-primary" x="110" y="28" width="48" height="35"></rect><rect class="viz-tail" x="110" y="63" width="48" height="40"></rect><rect class="viz-success" x="110" y="103" width="48" height="34"></rect><rect class="viz-amber" x="110" y="137" width="48" height="17"></rect>
+          <rect class="viz-primary" x="170" y="28" width="48" height="32"></rect><rect class="viz-tail" x="170" y="60" width="48" height="37"></rect><rect class="viz-success" x="170" y="97" width="48" height="34"></rect><rect class="viz-amber" x="170" y="131" width="48" height="23"></rect>
+          <rect class="viz-primary" x="230" y="28" width="48" height="29"></rect><rect class="viz-tail" x="230" y="57" width="48" height="34"></rect><rect class="viz-success" x="230" y="91" width="48" height="32"></rect><rect class="viz-amber" x="230" y="123" width="48" height="31"></rect>
+          <text class="viz-label" x="64" y="171">Q1</text><text class="viz-label" x="124" y="171">Q2</text><text class="viz-label" x="184" y="171">Q3</text><text class="viz-label" x="244" y="171">Q4</text>
+        </symbol>
+        <symbol id="viz-place" viewBox="0 0 320 180">
+          <path d="M34 32 L128 19 L190 42 L286 27 L294 145 L220 157 L146 139 L49 157 Z" fill="#eef3f8" stroke="#a9b8ce" stroke-width="1.2"></path><path d="M52 124 C92 100 112 96 146 75 C184 52 218 90 274 55" fill="none" stroke="white" stroke-width="12"></path><path d="M88 31 C108 64 127 94 148 143" fill="none" stroke="white" stroke-width="8"></path>
+          <circle class="viz-primary" cx="105" cy="57" r="12"></circle><circle class="viz-cyan" cx="159" cy="83" r="19"></circle><circle class="viz-tail" cx="198" cy="130" r="15"></circle><circle class="viz-soft" cx="248" cy="62" r="10"></circle><circle class="viz-amber" cx="83" cy="128" r="13"></circle>
+          <text class="viz-value" x="140" y="57">Central</text><text class="viz-value" x="180" y="161">South</text><text class="viz-label" x="33" y="174">Size = patients · color = access gap</text>
+        </symbol>
+        <symbol id="viz-dashboard" viewBox="0 0 320 180">
+          <rect class="viz-surface" x="24" y="20" width="84" height="42" rx="5"></rect><rect class="viz-surface" x="118" y="20" width="84" height="42" rx="5"></rect><rect class="viz-surface" x="212" y="20" width="84" height="42" rx="5"></rect>
+          <text class="viz-label" x="35" y="37">Median wait</text><text class="viz-value" x="35" y="53">28 min</text><text class="viz-label" x="129" y="37">Over target</text><text class="viz-value" x="129" y="53">14%</text><text class="viz-label" x="223" y="37">Seen today</text><text class="viz-value" x="223" y="53">186</text>
+          <g transform="translate(24 78)"><rect fill="#e8f1fb" x="0" y="0" width="40" height="24"></rect><rect fill="#bdd7ee" x="43" y="0" width="40" height="24"></rect><rect fill="#8fb9d9" x="86" y="0" width="40" height="24"></rect><rect fill="#5e97bf" x="129" y="0" width="40" height="24"></rect><rect fill="#2f6f9f" x="172" y="0" width="40" height="24"></rect><rect fill="#16496f" x="215" y="0" width="40" height="24"></rect><rect fill="#e8f1fb" x="0" y="28" width="40" height="24"></rect><rect fill="#e8f1fb" x="43" y="28" width="40" height="24"></rect><rect fill="#8fb9d9" x="86" y="28" width="40" height="24"></rect><rect fill="#5e97bf" x="129" y="28" width="40" height="24"></rect><rect fill="#2f6f9f" x="172" y="28" width="40" height="24"></rect><rect fill="#16496f" x="215" y="28" width="40" height="24"></rect><rect fill="#bdd7ee" x="0" y="56" width="40" height="24"></rect><rect fill="#8fb9d9" x="43" y="56" width="40" height="24"></rect><rect fill="#5e97bf" x="86" y="56" width="40" height="24"></rect><rect fill="#2f6f9f" x="129" y="56" width="40" height="24"></rect><rect fill="#16496f" x="172" y="56" width="40" height="24"></rect><rect fill="#0f3654" x="215" y="56" width="40" height="24"></rect></g>
+          <text class="viz-label" x="24" y="174">Morning</text><text class="viz-label" x="252" y="174">Evening</text>
+        </symbol>
+      </svg>
+
+      <section class="module-hero" id="overview">
+        <div>
+          <p class="breadcrumb">Clinical data visualization / Interactive chart atlas</p>
+          <h1>Choose the chart that fits the clinical question</h1>
+          <p class="hero-copy">See ten visualization families in action, learn what each one reveals, and inspect the R code that makes it. Then use a synthetic emergency-department case to practice the choice.</p>
+          <div class="hero-meta" aria-label="Module details">
+            <span class="meta-chip">10 chart families</span>
+            <span class="meta-chip">Runnable R examples</span>
+            <span class="meta-chip">Guided healthcare case</span>
+            <span class="meta-chip">Synthetic data</span>
+          </div>
+          <a class="primary-button" href="#atlas">Explore the chart atlas</a>
+        </div>
+        <aside class="objective-panel">
+          <p>Learning objective</p>
+          <strong>Match a healthcare question to the right visualization, read what the chart shows and hides, and rebuild the example in R.</strong>
+        </aside>
+      </section>
+
+      <section class="lesson-section" id="atlas">
+        <div class="section-heading">
+          <span class="step-number">A</span>
+          <div><h2>Explore the chart atlas</h2><p>Start with the question, not the software. Choose a family to see a clinical example, common variants, a misuse warning, and the matching R code.</p></div>
+        </div>
+
+        <div class="atlas-shell">
+          <div class="atlas-index" role="group" aria-label="Choose a visualization family">
+            <button class="atlas-family-card" type="button" data-family="comparison" aria-pressed="true"><span class="atlas-card-top"><span class="atlas-family-number">01</span><span class="status-badge">Compare</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-comparison"></use></svg><strong>Comparison</strong><small>Bars · dots · dumbbells</small></button>
+            <button class="atlas-family-card" type="button" data-family="distribution" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">02</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-distribution"></use></svg><strong>Distribution</strong><small>Histogram · box · violin</small></button>
+            <button class="atlas-family-card" type="button" data-family="time" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">03</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-time"></use></svg><strong>Change over time</strong><small>Line · run · control chart</small></button>
+            <button class="atlas-family-card" type="button" data-family="relationship" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">04</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-relationship"></use></svg><strong>Relationship</strong><small>Scatter · bubble · hexbin</small></button>
+            <button class="atlas-family-card" type="button" data-family="uncertainty" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">05</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-uncertainty"></use></svg><strong>Uncertainty</strong><small>Intervals · forest · funnel</small></button>
+            <button class="atlas-family-card" type="button" data-family="flow" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">06</span><span class="status-badge">Sankey</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-flow"></use></svg><strong>Patient flow</strong><small>Sankey · alluvial · funnel</small></button>
+            <button class="atlas-family-card" type="button" data-family="network" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">07</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-network"></use></svg><strong>Network</strong><small>Node-link · matrix · chord</small></button>
+            <button class="atlas-family-card" type="button" data-family="composition" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">08</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-composition"></use></svg><strong>Composition</strong><small>Stacked bar · treemap · sunburst</small></button>
+            <button class="atlas-family-card" type="button" data-family="place" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">09</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-place"></use></svg><strong>Place and access</strong><small>Choropleth · symbol · bivariate map</small></button>
+            <button class="atlas-family-card" type="button" data-family="dashboard" aria-pressed="false"><span class="atlas-card-top"><span class="atlas-family-number">10</span></span><svg class="atlas-thumb" viewBox="0 0 320 180" aria-hidden="true"><use href="#viz-dashboard"></use></svg><strong>Dashboard</strong><small>KPI · heatmap · table</small></button>
+          </div>
+
+          <article class="atlas-detail">
+            <div class="atlas-detail-copy">
+              <p class="atlas-kicker" id="atlas-kicker" aria-live="polite">Comparison / Dot plot</p>
+              <h3 id="atlas-title">Compare units on one measure</h3>
+              <p class="atlas-summary" id="atlas-summary">Position on a shared scale makes close differences and rank easy to see.</p>
+              <div class="atlas-question"><span>Healthcare question</span><p id="atlas-question">Which unit has the highest 72-hour follow-up rate?</p></div>
+              <figure class="atlas-chart-frame">
+                <svg class="atlas-chart" id="atlas-chart" viewBox="0 0 320 180" role="img" aria-label="Dot plot. North has a 78 percent follow-up rate, Central 71 percent, South 64 percent, and West 59 percent."><use id="atlas-chart-use" href="#viz-comparison"></use></svg>
+                <figcaption class="atlas-chart-caption" id="atlas-caption">North leads at 78%, while West has the lowest follow-up rate at 59%.</figcaption>
+              </figure>
+              <div class="atlas-guidance-grid">
+                <div class="atlas-guidance"><small>Use it when</small><p id="atlas-use">You need a clean comparison across hospitals, units, groups, or periods.</p></div>
+                <div class="atlas-guidance caution"><small>Watch for</small><p id="atlas-caution">Do not use area or angle when the decision depends on small differences.</p></div>
+              </div>
+              <p class="atlas-variants"><strong>Related charts:</strong> <span id="atlas-variants">bar, lollipop, dumbbell, slopegraph</span></p>
+            </div>
+            <div class="atlas-code">
+              <div class="atlas-code-head"><span>R / ggplot2</span><button class="copy-code" id="copy-atlas-code" type="button">Copy code</button></div>
+              <pre><code id="atlas-r-code"></code></pre>
+            </div>
+          </article>
+        </div>
+
+        <div class="atlas-download"><p>One script creates all ten examples as PNG files from small synthetic datasets. It uses ggplot2 for the common charts and ggalluvial for the Sankey-style patient-flow chart.</p><a class="primary-button" href="courses/data-visualization/chart_gallery.R" download>Download all R examples</a></div>
+      </section>
+
+      <section class="lesson-section" id="brief">
+        <div class="section-heading">
+          <span class="step-number">01</span>
+          <div><h2>Choose a first chart</h2><p>Leadership has one result and a proposal. Decide which visualization you would request before seeing the full analysis.</p></div>
+        </div>
+
+        <div class="activity-panel">
+          <div class="activity-toolbar"><span>Emergency department case</span><span>Step 1 of 3</span></div>
+          <div class="activity-body brief-layout">
+            <div class="reported-metric"><span>Reported result</span><strong>Median stay fell from 186 to 117 minutes.</strong></div>
+            <div class="case-question">
+              <blockquote>“The new pathway is working. We should expand fast track across the department.”</blockquote>
+              <p class="question-label">Which chart would help you test this claim?</p>
+              <div class="choice-row chart-choice-row" role="group" aria-label="Choose a first visualization">
+                <button class="choice-button chart-choice-button first-choice" type="button" data-choice="median" aria-pressed="false"><small>Option A</small><span>Monthly median line chart</span></button>
+                <button class="choice-button chart-choice-button first-choice" type="button" data-choice="distribution" aria-pressed="false"><small>Option B</small><span>January and December distributions</span></button>
+              </div>
+              <p class="first-response" id="first-response" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-section" id="evidence">
+        <div class="section-heading">
+          <span class="step-number">02</span>
+          <div><h2>Read the evidence</h2><p>Each measure answers a different question. Change the measure, read the chart, and notice which patient experiences remain visible.</p></div>
+        </div>
+
+        <div class="activity-panel">
+          <div class="activity-toolbar"><span>Length of stay measures</span><span>Step 2 of 3</span></div>
+          <div class="activity-body">
+            <div class="metric-tabs" role="group" aria-label="Choose a length of stay measure">
+              <button class="metric-button" id="metric-median" type="button" aria-pressed="true" data-metric="median"><small>Typical visit</small><span>Median</span></button>
+              <button class="metric-button" id="metric-mean" type="button" aria-pressed="false" data-metric="mean"><small>Total burden</small><span>Mean</span></button>
+              <button class="metric-button" id="metric-p90" type="button" aria-pressed="false" data-metric="p90"><small>Longer visits</small><span>90th percentile</span></button>
+              <button class="metric-button" id="metric-long" type="button" aria-pressed="false" data-metric="longWait"><small>Very long visits</small><span>Over 8 hours</span></button>
+            </div>
+
+            <div class="chart-reading-tip"><strong>Read the chart</strong><p>Check the axes first. Compare January with December, then ask which patient experiences the selected measure leaves out.</p></div>
+
+            <div class="chart-card" aria-live="polite">
+              <div class="chart-head"><h3 id="chart-title">Median length of stay</h3><p id="chart-description">A typical visit became much shorter across 2026.</p></div>
+              <svg class="metric-chart" id="metric-chart" viewBox="0 0 760 330" role="img" aria-labelledby="chart-title chart-description"></svg>
+              <div class="finding-strip"><strong id="metric-change">37% lower</strong><p id="metric-finding">The median describes the middle visit rather than the longest waits.</p></div>
+              <details class="data-details"><summary>View exact monthly values</summary><div class="data-table-wrap"><table class="data-table" id="metric-table"><caption id="metric-table-caption">Monthly median length of stay</caption><thead><tr><th>Month</th><th>Value</th></tr></thead><tbody></tbody></table></div></details>
+            </div>
+
+            <div class="distribution-block">
+              <div class="distribution-heading"><h3>January compared with December</h3><p>The middle moved toward shorter visits, while the group beyond eight hours grew. The median captures the first change and misses the second.</p></div>
+              <div class="chart-card">
+                <div class="histogram-legend" aria-hidden="true"><span class="legend-key"><span class="legend-swatch"></span>January</span><span class="legend-key"><span class="legend-swatch december"></span>December</span></div>
+                <div role="img" aria-label="Distribution comparison. December has more visits under two hours and more visits longer than eight hours."><div class="histogram" id="histogram"></div><div class="histogram-labels" id="histogram-labels"></div></div>
+                <details class="data-details"><summary>View exact distribution values</summary><div class="data-table-wrap"><table class="data-table"><caption>Share of visits by length of stay range</caption><thead><tr><th>Range</th><th>January</th><th>December</th></tr></thead><tbody id="histogram-table"></tbody></table></div></details>
+              </div>
+              <div class="message-comparison" aria-label="Compare chart messages">
+                <article class="message-card"><small>What one measure says</small><h4>Median stay fell 37%</h4><p>True, but limited to the middle visit. It does not describe the longest waits.</p></article>
+                <article class="message-card answer"><small>What the fuller view says</small><h4>Typical visits improved while long waits worsened</h4><p>Pair the median with a high percentile or the share of visits over eight hours.</p></article>
+              </div>
+              <div class="care-process-panel" aria-label="Clinical interpretation by care pathway">
+                <div class="care-process-heading"><h3>Which care process changed?</h3><p>Split the same data by disposition and boarding status before deciding what to change.</p></div>
+                <article class="care-process-card" data-care-metric="discharged"><small>Discharged visits</small><strong>174 to 108 min</strong><p>Shorter stays are consistent with the intended fast-track improvement.</p></article>
+                <article class="care-process-card" data-care-metric="admitted"><small>Admitted visits</small><strong>310 to 509 min</strong><p>Patients who needed a hospital bed spent much longer in the emergency department.</p></article>
+                <article class="care-process-card" data-care-metric="boarding"><small>Boarding among admissions</small><strong>10% to 46%</strong><p>A growing share waited in the emergency department after the admission decision.</p></article>
+                <div class="care-process-action"><strong>Decision:</strong> protect the fast-track gains for discharged patients, while patient-flow and bed-management leaders investigate inpatient capacity and boarding. This teaching dataset does not establish cause or patient harm.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-section" id="decision">
+        <div class="section-heading">
+          <span class="step-number">03</span>
+          <div><h2>Write the message</h2><p>A chart title should state the finding the reader needs, not merely name the measure.</p></div>
+        </div>
+
+        <div class="activity-panel">
+          <div class="activity-toolbar"><span>Chart title exercise</span><span>Step 3 of 3</span></div>
+          <div class="activity-body decision-layout">
+            <div class="decision-options" role="group" aria-label="Choose the strongest chart title">
+              <button class="decision-button" type="button" data-answer="neutral" aria-pressed="false"><span class="decision-letter">A</span><span>Emergency department length of stay, 2026</span></button>
+              <button class="decision-button" type="button" data-answer="median" aria-pressed="false"><span class="decision-letter">B</span><span>Median stay fell 37% in 2026</span></button>
+              <button class="decision-button" type="button" data-answer="balanced" aria-pressed="false"><span class="decision-letter">C</span><span>Typical visits shortened while the longest waits worsened</span></button>
+            </div>
+            <aside class="decision-feedback" id="decision-feedback" aria-live="polite"><h3>Choose a chart title</h3><p>The strongest title states the main finding without hiding the patients who waited longest.</p></aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-section" id="materials">
+        <div class="section-heading">
+          <span class="step-number">04</span>
+          <div><h2>Rebuild it in R</h2><p>Know what you are making and why before you run the code. Then use the Teaching Key to check your result.</p></div>
+        </div>
+
+        <div class="rebuild-brief-grid">
+          <article class="rebuild-brief"><small>What you are making</small><h3>A four-panel view of emergency department flow</h3><p>Plot the monthly mean, median, 90th percentile, and share of visits over eight hours. The lab also creates three earlier charts that help you discover why all four measures are needed.</p></article>
+          <article class="rebuild-brief why"><small>Why this visualization</small><h3>One average hides two care pathways</h3><p>The mean looks stable because shorter discharged visits offset longer admitted visits. The four-panel view keeps the improvement visible while exposing the boarding problem in the upper tail.</p></article>
+        </div>
+
+        <div class="r-guide">
+          <div class="r-guide-header">
+            <div><h3>Run the lab in RStudio</h3><p>R performs the analysis. RStudio is the desktop app where you open the script, run it, and inspect the charts.</p></div>
+            <div class="r-guide-links"><a href="https://cloud.r-project.org/">Install R</a><a href="https://posit.co/download/rstudio-desktop/">Install RStudio</a></div>
+          </div>
+          <div class="r-steps">
+            <div class="r-step"><span class="r-step-number">1</span><div><h4>Download the two lab files</h4><p>Save both files in the same folder.</p><div class="r-step-downloads"><a href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download>Download lab.R</a><a href="courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv" download>Download ed_los_2026.csv</a></div></div></div>
+            <div class="r-step"><span class="r-step-number">2</span><div><h4>Open the script and point RStudio to the folder</h4><p>Open <span class="inline-code">lab.R</span>. Choose <strong>Session &gt; Set Working Directory &gt; To Source File Location</strong>.</p></div></div>
+            <div class="r-step"><span class="r-step-number">3</span><div><h4>Install ggplot2 once, then run the script</h4><p>Paste these lines into the Console. You only need the first line the first time you use this computer.</p><pre class="r-command"><code>install.packages("ggplot2")
+source("lab.R")</code></pre></div></div>
+            <div class="r-step"><span class="r-step-number">4</span><div><h4>Open the finished chart</h4><p>R creates four PNG charts and a table in <span class="inline-code">outputs/lab/</span>. Your final reference chart is <span class="inline-code">04-monthly-metrics.png</span>.</p></div></div>
+          </div>
+        </div>
+
+        <details class="teaching-key" id="teaching-key" open>
+          <summary>Teaching Key: what a correct answer looks like</summary>
+          <div class="teaching-key-body">
+            <p class="key-intro">These four trends belong together. The first two describe the center of the distribution. The last two show the patients who waited longest.</p>
+            <div class="key-chart-grid">
+              <article class="key-chart-card"><small>Mean</small><strong>206 to 200 min</strong><svg class="key-mini-chart" data-key-metric="mean" viewBox="0 0 180 72" role="img" aria-label="Mean length of stay is nearly flat across the year."></svg></article>
+              <article class="key-chart-card"><small>Median</small><strong>186 to 117 min</strong><svg class="key-mini-chart" data-key-metric="median" viewBox="0 0 180 72" role="img" aria-label="Median length of stay falls across the year."></svg></article>
+              <article class="key-chart-card"><small>90th percentile</small><strong>294 to 537 min</strong><svg class="key-mini-chart" data-key-metric="p90" viewBox="0 0 180 72" role="img" aria-label="The 90th percentile rises sharply late in the year."></svg></article>
+              <article class="key-chart-card"><small>Over 8 hours</small><strong>2.4% to 10.5%</strong><svg class="key-mini-chart" data-key-metric="longWait" viewBox="0 0 180 72" role="img" aria-label="The share of visits over eight hours rises across the year."></svg></article>
+            </div>
+            <div class="key-answer-grid">
+              <div class="key-answer"><h4>Model chart title</h4><p>Typical emergency department visits improve while the longest stays worsen.</p></div>
+              <div class="key-answer"><h4>Model clinical decision</h4><p>Continue the fast-track work for discharged patients. Ask patient-flow and bed-management teams to investigate boarding and monitor the upper tail.</p></div>
+              <div class="key-answer"><h4>Why this earns credit</h4><p>The chart preserves the familiar mean and median, adds measures of long waits, uses honest scales, names the unit, and connects the pattern to a healthcare decision.</p></div>
+              <div class="key-answer"><h4>What not to claim</h4><p>This synthetic dataset does not prove that fast track caused the improvement, that boarding caused harm, or that any real hospital had these results.</p></div>
+            </div>
+            <p class="key-source">Full scoring guidance: <a href="courses/data-visualization/modules/04-distributions-vs-summaries/instructor-notes.md#worked-tier-3-answer">worked answer and instructor rubric</a>.</p>
+          </div>
+        </details>
+
+        <div class="resource-list">
+          <a class="resource-link content-link" href="courses/data-visualization/chart_gallery.R" download><span><small>R / 10 chart families</small><strong>Build the complete visualization atlas</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
+          <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv" download><span><small>CSV / 8,392 rows</small><strong>Synthetic emergency department dataset</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
+          <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/lab.R" download><span><small>Optional R and ggplot2</small><strong>Rebuild the charts in R</strong></span><span class="resource-arrow" aria-hidden="true">↓</span></a>
+          <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/assessment.md"><span><small>Learner tasks</small><strong>Assessment and rubric</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+          <a class="resource-link content-link" href="courses/data-visualization/modules/04-distributions-vs-summaries/instructor-notes.md"><span><small>Teaching guide</small><strong>Instructor notes and answer key</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+          <a class="resource-link content-link" href="courses/data-visualization/data-source-register.md"><span><small>Data provenance</small><strong>Course source register</strong></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="materials-note"><p>The dataset is deterministic synthetic teaching data generated from the module specification. It contains no patient records and is not evidence about any hospital or intervention.</p><p>The source register records the current provenance gap and the public healthcare sources required before a teaching release. Validation checks and reuse terms are available on <a class="content-link" href="https://github.com/ShuhanCS/open-clinical-learning-commons">GitHub</a>.</p></div>
+      </section>
+
+      <footer class="site-footer">Open Clinical Learning Commons / Chart atlas preview 0.7.0 / Synthetic data only</footer>
+    </main>
+  </div>
+
+  <script>
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const metrics = {
+      median: { title: "Median length of stay", description: "The middle visit became much shorter across 2026.", values: [185.5, 180, 174, 167.5, 161.5, 155, 149, 142, 136, 130, 123, 116.5], unit: " min", change: "37% lower", finding: "The median is dominated by the more common discharged pathway. It does not show what happened to admitted patients waiting for beds." },
+      mean: { title: "Mean length of stay", description: "The average changed very little across the same period.", values: [205.6, 204.9, 205, 204.2, 203.6, 202.8, 203, 202.3, 201.6, 201.7, 200.1, 200.2], unit: " min", change: "2.6% lower", finding: "The mean blends two opposing care pathways: shorter discharged visits and much longer admitted visits." },
+      p90: { title: "90th percentile length of stay", description: "The time within which 90% of visits finished rose sharply.", values: [294, 293.1, 294, 294.1, 295.1, 297.2, 301.4, 308.4, 314.6, 335.4, 360.2, 536.8], unit: " min", change: "83% higher", finding: "The longest waits became much worse, directing attention to admitted patients and inpatient boarding." },
+      longWait: { title: "Visits longer than eight hours", description: "The share beyond an operational threshold grew each month.", values: [2.4, 3, 3.9, 4.4, 5.1, 5.9, 6.7, 7.4, 8.2, 9, 9.6, 10.5], unit: "%", change: "4.4 times higher", finding: "By December, more than one in ten visits crossed an eight-hour threshold that patient-flow leaders can monitor." }
+    };
+    const distribution = {
+      bins: ["0 to 2h", "2 to 4h", "4 to 6h", "6 to 8h", "8 to 12h", "12h+"],
+      january: [99, 421, 153, 10, 7, 10],
+      december: [363, 204, 55, 3, 26, 47]
+    };
+    const atlasFamilies = {
+      comparison: {
+        kicker: "Comparison / Dot plot",
+        title: "Compare units on one measure",
+        summary: "Position on a shared scale makes close differences and rank easy to see.",
+        question: "Which unit has the highest 72-hour follow-up rate?",
+        caption: "North leads at 78%, while West has the lowest follow-up rate at 59%.",
+        alt: "Dot plot. North has a 78 percent follow-up rate, Central 71 percent, South 64 percent, and West 59 percent.",
+        use: "You need a clean comparison across hospitals, units, groups, or periods.",
+        caution: "Do not use area or angle when the decision depends on small differences.",
+        variants: "bar, lollipop, dumbbell, slopegraph",
+        r: `library(ggplot2)
+
+comparison <- data.frame(
+  unit = c("North", "Central", "South", "West"),
+  rate = c(78, 71, 64, 59)
+)
+
+ggplot(comparison, aes(rate, reorder(unit, rate))) +
+  geom_segment(aes(x = 0, xend = rate,
+                   yend = reorder(unit, rate)),
+               color = "#dce3ee", linewidth = 1.2) +
+  geom_point(size = 4, color = "#1f49b6") +
+  labs(x = "Follow-up within 72 hours (%)", y = NULL)`
+      },
+      distribution: {
+        kicker: "Distribution / Histogram",
+        title: "See the full spread of patient experience",
+        summary: "A distribution shows the center, variation, clusters, and long tail that one average can hide.",
+        question: "Did typical emergency-department visits improve while very long stays became more common?",
+        caption: "Most visits finish in a few hours, but a smaller group remains much longer.",
+        alt: "Histogram of length of stay. Most visits cluster between one and four hours, with a long tail extending beyond eight hours.",
+        use: "You need to understand variation, skew, unusual values, or more than one patient pathway.",
+        caution: "Bin width changes the story. Show the scale and test whether the pattern survives a reasonable bin choice.",
+        variants: "density, box plot, violin, ridgeline",
+        r: `library(ggplot2)
+
+los <- c(42, 55, 67, 73, 81, 92, 108, 119, 132,
+         148, 165, 184, 215, 267, 342, 493, 618)
+
+ggplot(data.frame(minutes = los), aes(minutes)) +
+  geom_histogram(binwidth = 60, boundary = 0,
+                 fill = "#1f49b6", color = "white") +
+  labs(x = "Length of stay (minutes)", y = "Visits")`
+      },
+      time: {
+        kicker: "Change over time / Line chart",
+        title: "Track direction, timing, and persistence",
+        summary: "Ordered time points reveal trends, sudden shifts, cycles, and reversals.",
+        question: "Did 72-hour follow-up improve steadily, or did one unusual month create the result?",
+        caption: "The rate rises from 61% in January to 82% in December, with a small dip in September.",
+        alt: "Line chart. Monthly follow-up rises from 61 percent in January to 82 percent in December, with a small September dip.",
+        use: "The order and timing of observations matter to the clinical or operational decision.",
+        caution: "Do not connect categories that have no time order. Add a control chart when ordinary process variation matters.",
+        variants: "run chart, control chart, slopegraph, calendar heatmap",
+        r: `library(ggplot2)
+
+monthly <- data.frame(
+  month = factor(month.abb, levels = month.abb),
+  rate = c(61, 63, 65, 64, 68, 70, 73, 74, 72, 76, 79, 82)
+)
+
+ggplot(monthly, aes(month, rate, group = 1)) +
+  geom_line(linewidth = 1.2, color = "#1f49b6") +
+  geom_point(size = 2.8, color = "#1f49b6") +
+  labs(x = NULL, y = "Follow-up within 72 hours (%)")`
+      },
+      relationship: {
+        kicker: "Relationship / Scatter plot",
+        title: "Look for association between two measures",
+        summary: "Every point remains visible, so form, spread, clusters, and unusual observations can be inspected.",
+        question: "Are longer travel times associated with more missed clinic visits?",
+        caption: "Missed visits tend to rise with travel time, but the points do not prove that travel caused the difference.",
+        alt: "Scatter plot. Clinics with longer travel times generally have more missed visits, with variation around the upward trend.",
+        use: "You want to examine the form and strength of an association between two quantitative variables.",
+        caution: "Association is not causation. Look for confounding, nonlinearity, subgroups, and overplotting.",
+        variants: "bubble plot, hexbin, regression view, connected scatter",
+        r: `library(ggplot2)
+
+access <- data.frame(
+  travel = c(8, 14, 19, 25, 32, 39, 47, 56, 64),
+  missed = c(5, 7, 6, 12, 14, 17, 18, 25, 29)
+)
+
+ggplot(access, aes(travel, missed)) +
+  geom_point(size = 3, color = "#0d8fa6") +
+  geom_smooth(method = "lm", color = "#1f49b6") +
+  labs(x = "Travel time (minutes)",
+       y = "Missed visits per 100 appointments")`
+      },
+      uncertainty: {
+        kicker: "Uncertainty / Forest plot",
+        title: "Show the estimate and how precise it is",
+        summary: "Intervals keep a reader from treating every difference as equally certain.",
+        question: "Which ward estimates are clearly different from the reference rate?",
+        caption: "Ward A has the lowest estimate. Several intervals cross the reference value of 1.0.",
+        alt: "Forest plot with four ward estimates and confidence intervals. Ward A is below the reference; the other intervals touch or cross it.",
+        use: "A decision depends on an estimate, comparison, or model result with sampling uncertainty.",
+        caution: "An interval is not a probability that the true value lies inside it. State the interval definition and reference.",
+        variants: "confidence interval plot, caterpillar plot, funnel plot",
+        r: `library(ggplot2)
+
+effects <- data.frame(
+  ward = c("A", "B", "C", "D"),
+  estimate = c(.82, .93, 1.08, 1.19),
+  low = c(.68, .84, .88, .97),
+  high = c(.99, 1.03, 1.31, 1.46)
+)
+
+ggplot(effects, aes(estimate, reorder(ward, estimate))) +
+  geom_vline(xintercept = 1, linetype = "dashed") +
+  geom_errorbar(aes(xmin = low, xmax = high),
+                orientation = "y", width = 0) +
+  geom_point(size = 3, color = "#d4543f") +
+  labs(x = "Rate ratio with 95% CI", y = "Ward")`
+      },
+      flow: {
+        kicker: "Patient flow / Sankey diagram",
+        title: "Follow a cohort through a care pathway",
+        summary: "Ribbon width shows how people or events split, continue, and reach different outcomes.",
+        question: "Where do walk-in and ambulance arrivals go after the emergency-department decision?",
+        caption: "Walk-in visits mostly end in discharge. Ambulance arrivals contribute a larger share of admissions.",
+        alt: "Sankey-style diagram connecting arrival mode to emergency-department decision and outcome. The widest walk-in flow ends at home; the widest ambulance flow ends on a ward.",
+        use: "You have counts that move between a small number of defined stages or states.",
+        caution: "Too many nodes become unreadable. Define each transition and do not imply time or cause unless the data contain it.",
+        variants: "alluvial, cohort funnel, state-transition diagram",
+        r: `library(ggplot2)
+library(ggalluvial)
+
+journeys <- data.frame(
+  arrival = c("Walk-in", "Walk-in", "Ambulance", "Ambulance"),
+  decision = c("Discharge", "Admit", "Discharge", "Admit"),
+  outcome = c("Home", "Ward", "Home", "Ward"),
+  visits = c(390, 115, 80, 215)
+)
+
+ggplot(journeys,
+       aes(axis1 = arrival, axis2 = decision,
+           axis3 = outcome, y = visits)) +
+  geom_alluvium(aes(fill = decision), width = .12) +
+  geom_stratum(width = .12, fill = "white", color = "#172033") +
+  geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+  scale_x_discrete(limits = c("Arrival", "Decision", "Outcome"))`
+      },
+      network: {
+        kicker: "Network / Node-link diagram",
+        title: "See who or what is connected",
+        summary: "Nodes represent entities and links represent a clearly defined relationship.",
+        question: "Which services receive referrals from primary care, and which services connect the network?",
+        caption: "Primary care is the largest hub. Cardiology links primary care with pharmacy and home health.",
+        alt: "Node-link diagram. Primary care connects to cardiology and imaging; cardiology connects to pharmacy and home health.",
+        use: "Connections, hubs, clusters, or paths are the subject of the question.",
+        caution: "Dense networks turn into hairballs. Define every edge and use a matrix when exact comparison matters.",
+        variants: "adjacency matrix, chord diagram, arc diagram",
+        r: `library(ggplot2)
+
+nodes <- data.frame(
+  name = c("Primary", "Cardiology", "Imaging", "Pharmacy"),
+  x = c(0, 1, 1, 2), y = c(.5, .9, .1, .9)
+)
+edges <- data.frame(
+  x = c(0, 0, 1), y = c(.5, .5, .9),
+  xend = c(1, 1, 2), yend = c(.9, .1, .9)
+)
+
+ggplot() +
+  geom_segment(data = edges,
+               aes(x, y, xend = xend, yend = yend),
+               color = "#a9b8ce", linewidth = 1.2) +
+  geom_point(data = nodes, aes(x, y), size = 8, color = "#1f49b6") +
+  geom_text(data = nodes, aes(x, y, label = name), nudge_y = -.14) +
+  coord_equal() + theme_void()`
+      },
+      composition: {
+        kicker: "Composition / 100% stacked bar",
+        title: "Show how parts contribute to a whole",
+        summary: "A common baseline supports comparison of the first segment while the full bar preserves the whole.",
+        question: "How did the share of virtual, outpatient, inpatient, and emergency visits change by quarter?",
+        caption: "Virtual care grows across the year while the other services occupy a smaller share of the total.",
+        alt: "Four 100 percent stacked bars. The virtual-care segment grows from 9 percent in the first quarter to 22 percent in the fourth.",
+        use: "The parts are mutually exclusive and add to a meaningful total.",
+        caution: "Middle segments lack a common baseline. Use small multiples or direct values when every part must be compared precisely.",
+        variants: "stacked bar, treemap, sunburst, waterfall",
+        r: `library(ggplot2)
+
+mix <- data.frame(
+  quarter = rep(c("Q1", "Q2", "Q3", "Q4"), each = 4),
+  service = rep(c("Emergency", "Inpatient", "Outpatient", "Virtual"), 4),
+  visits = c(26, 30, 35, 9, 24, 29, 35, 12,
+             23, 27, 34, 16, 21, 25, 32, 22)
+)
+
+ggplot(mix, aes(quarter, visits, fill = service)) +
+  geom_col(position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  labs(x = NULL, y = "Share of visits")`
+      },
+      place: {
+        kicker: "Place and access / Proportional-symbol map",
+        title: "Put access and need in geographic context",
+        summary: "Location, symbol size, and color can show where a service gap and affected population overlap.",
+        question: "Where are the largest patient populations and the longest access gaps?",
+        caption: "South clinic has the largest access gap. Central serves the largest patient population.",
+        alt: "Schematic proportional-symbol map. Central has the largest circle for patient volume; South has the strongest warning color for access gap.",
+        use: "Location is part of the decision, such as outreach, travel, service placement, or regional variation.",
+        caution: "Maps can make large areas look important. Show denominators and avoid causal or stigmatizing claims about communities.",
+        variants: "choropleth, proportional symbol, bivariate map, cartogram",
+        r: `library(ggplot2)
+
+clinics <- data.frame(
+  clinic = c("North", "Central", "East", "South", "West"),
+  x = c(3.2, 2.4, 3.8, 2.7, 1.2),
+  y = c(4.1, 2.8, 2.2, 1.0, 2.0),
+  patients = c(820, 1290, 610, 430, 710),
+  access_gap = c(12, 27, 18, 35, 22)
+)
+
+ggplot(clinics, aes(x, y)) +
+  geom_point(aes(size = patients, color = access_gap), alpha = .9) +
+  geom_text(aes(label = clinic), nudge_y = -.25) +
+  scale_color_gradient(low = "#1f49b6", high = "#d97706") +
+  coord_equal() + theme_void()`
+      },
+      dashboard: {
+        kicker: "Dashboard / Heatmap",
+        title: "Monitor a defined care process",
+        summary: "A small set of coordinated views supports repeated decisions without compressing every question into one score.",
+        question: "At which days and times do check-in waits most often exceed the target?",
+        caption: "Waits are shortest in the morning and highest late in the day, especially Tuesday through Thursday.",
+        alt: "Dashboard with three key measures and a weekday-by-hour heatmap. Darker afternoon cells show longer check-in waits.",
+        use: "The same audience monitors the same process and needs to spot exceptions or act on a threshold.",
+        caution: "Every measure needs an owner, definition, update time, and action. More tiles do not make a better dashboard.",
+        variants: "KPI card, sparkline, heatmap, accessible table",
+        r: `library(ggplot2)
+
+waits <- expand.grid(
+  day = c("Mon", "Tue", "Wed", "Thu", "Fri"),
+  hour = c(8, 10, 12, 14, 16, 18)
+)
+waits$minutes <- with(waits,
+  18 + 7 * (hour >= 12) + 9 * (hour >= 16) +
+  5 * (day %in% c("Tue", "Wed", "Thu")))
+waits$day <- factor(waits$day,
+                    levels = rev(c("Mon", "Tue", "Wed", "Thu", "Fri")))
+waits$hour <- factor(sprintf("%02d", waits$hour),
+                     levels = c("08", "10", "12", "14", "16", "18"))
+
+ggplot(waits, aes(hour, day, fill = minutes)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = minutes, color = minutes <= 25),
+            show.legend = FALSE) +
+  scale_color_manual(values = c("FALSE" = "#172033",
+                                "TRUE" = "white")) +
+  scale_fill_viridis_c(option = "C") +
+  labs(x = "Hour", y = NULL, fill = "Wait (min)")`
+      }
+    };
+    const completedSteps = new Set();
+    let activeMetric = "median";
+    let resizeTimer;
+
+    function verifyTeachingData() {
+      const checks = [
+        Object.values(metrics).every(metric => metric.values.length === months.length),
+        distribution.january.reduce((sum, value) => sum + value, 0) === 700,
+        distribution.december.reduce((sum, value) => sum + value, 0) === 698,
+        Math.round((metrics.median.values.at(-1) / metrics.median.values[0] - 1) * 100) === -37,
+        Math.round((metrics.p90.values.at(-1) / metrics.p90.values[0] - 1) * 100) === 83,
+        Math.round((metrics.longWait.values.at(-1) / metrics.longWait.values[0]) * 10) / 10 === 4.4,
+        Object.keys(atlasFamilies).length === 10,
+        Object.keys(atlasFamilies).every(familyName => document.querySelector(`#viz-${familyName}`)),
+        Object.values(atlasFamilies).every(family => family.r.includes("ggplot")),
+        document.querySelectorAll(".atlas-family-card").length === 10,
+        document.querySelectorAll("[data-care-metric]").length === 3,
+        document.querySelectorAll("[data-key-metric]").length === 4,
+        document.querySelectorAll(".first-choice").length === 2,
+        document.querySelectorAll(".decision-button").length === 3,
+        Object.hasOwn(feedback, "balanced")
+      ];
+      document.documentElement.dataset.checks = checks.every(Boolean) ? "passed" : "failed";
+      console.assert(checks.every(Boolean), "The embedded teaching data failed its checks.");
+    }
+
+    function svgElement(name, attributes = {}) {
+      const node = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attributes).forEach(([key, value]) => node.setAttribute(key, value));
+      return node;
+    }
+
+    function formatValue(value, unit) {
+      return `${Number.isInteger(value) ? value : value.toFixed(1)}${unit}`;
+    }
+
+    function renderAtlasFamily(familyName) {
+      const family = atlasFamilies[familyName];
+      document.querySelectorAll(".atlas-family-card").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.family === familyName));
+      });
+      document.querySelector("#atlas-kicker").textContent = family.kicker;
+      document.querySelector("#atlas-title").textContent = family.title;
+      document.querySelector("#atlas-summary").textContent = family.summary;
+      document.querySelector("#atlas-question").textContent = family.question;
+      document.querySelector("#atlas-caption").textContent = family.caption;
+      document.querySelector("#atlas-use").textContent = family.use;
+      document.querySelector("#atlas-caution").textContent = family.caution;
+      document.querySelector("#atlas-variants").textContent = family.variants;
+      document.querySelector("#atlas-r-code").textContent = family.r;
+      document.querySelector("#atlas-chart-use").setAttribute("href", `#viz-${familyName}`);
+      document.querySelector("#atlas-chart").setAttribute("aria-label", family.alt);
+      const copyButton = document.querySelector("#copy-atlas-code");
+      copyButton.textContent = "Copy code";
+    }
+
+    function renderMetric(metricName) {
+      activeMetric = metricName;
+      const metric = metrics[metricName];
+      const svg = document.querySelector("#metric-chart");
+      const width = 760;
+      const height = 330;
+      const padding = { top: 36, right: 38, bottom: 46, left: 62 };
+      const plotWidth = width - padding.left - padding.right;
+      const plotHeight = height - padding.top - padding.bottom;
+      const rawMin = Math.min(...metric.values);
+      const rawMax = Math.max(...metric.values);
+      const spread = rawMax - rawMin || rawMax * 0.1;
+      const min = Math.max(0, rawMin - spread * 0.18);
+      const max = rawMax + spread * 0.18;
+      const x = index => padding.left + (index / (months.length - 1)) * plotWidth;
+      const y = value => padding.top + ((max - value) / (max - min)) * plotHeight;
+      svg.replaceChildren();
+
+      for (let index = 0; index <= 4; index += 1) {
+        const fraction = index / 4;
+        const yPosition = padding.top + fraction * plotHeight;
+        const value = max - fraction * (max - min);
+        svg.append(svgElement("line", { x1: padding.left, y1: yPosition, x2: width - padding.right, y2: yPosition, class: "chart-grid" }));
+        const label = svgElement("text", { x: padding.left - 10, y: yPosition + 4, "text-anchor": "end", class: "chart-axis-label" });
+        label.textContent = metric.unit === "%" ? `${value.toFixed(0)}%` : value.toFixed(0);
+        svg.append(label);
+      }
+
+      months.forEach((month, index) => {
+        if (window.innerWidth <= 540 && index % 2 === 1 && index !== months.length - 1) return;
+        const label = svgElement("text", { x: x(index), y: height - 14, "text-anchor": "middle", class: "chart-axis-label" });
+        label.textContent = month;
+        svg.append(label);
+      });
+
+      svg.append(svgElement("polyline", { points: metric.values.map((value, index) => `${x(index)},${y(value)}`).join(" "), class: "chart-line" }));
+      metric.values.forEach((value, index) => svg.append(svgElement("circle", { cx: x(index), cy: y(value), r: index === metric.values.length - 1 ? 6 : 4, class: `chart-point${index === metric.values.length - 1 ? " end" : ""}` })));
+
+      [0, metric.values.length - 1].forEach(index => {
+        const label = svgElement("text", { x: x(index), y: y(metric.values[index]) - 14, "text-anchor": index === 0 ? "start" : "end", class: "chart-value" });
+        label.textContent = formatValue(metric.values[index], metric.unit);
+        svg.append(label);
+      });
+
+      document.querySelector("#chart-title").textContent = metric.title;
+      document.querySelector("#chart-description").textContent = metric.description;
+      document.querySelector("#metric-change").textContent = metric.change;
+      document.querySelector("#metric-finding").textContent = metric.finding;
+      document.querySelector("#metric-table-caption").textContent = `Monthly ${metric.title.toLowerCase()}`;
+      const tableBody = document.querySelector("#metric-table tbody");
+      tableBody.replaceChildren(...months.map((month, index) => {
+        const row = document.createElement("tr");
+        const monthCell = document.createElement("th");
+        const valueCell = document.createElement("td");
+        monthCell.textContent = month;
+        valueCell.textContent = formatValue(metric.values[index], metric.unit);
+        row.append(monthCell, valueCell);
+        return row;
+      }));
+      document.querySelectorAll(".metric-button").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.metric === metricName)));
+    }
+
+    function renderHistogram() {
+      const histogram = document.querySelector("#histogram");
+      const labels = document.querySelector("#histogram-labels");
+      const table = document.querySelector("#histogram-table");
+      const januaryTotal = distribution.january.reduce((sum, value) => sum + value, 0);
+      const decemberTotal = distribution.december.reduce((sum, value) => sum + value, 0);
+      const percentages = [...distribution.january.map(value => value / januaryTotal), ...distribution.december.map(value => value / decemberTotal)];
+      const maxPercentage = Math.max(...percentages);
+
+      distribution.bins.forEach((label, index) => {
+        const januaryPercent = distribution.january[index] / januaryTotal;
+        const decemberPercent = distribution.december[index] / decemberTotal;
+        const bin = document.createElement("div");
+        const january = document.createElement("div");
+        const december = document.createElement("div");
+        bin.className = "histogram-bin";
+        january.className = "histogram-bar";
+        december.className = "histogram-bar december";
+        january.style.height = `${Math.max(1, januaryPercent / maxPercentage * 100)}%`;
+        december.style.height = `${Math.max(1, decemberPercent / maxPercentage * 100)}%`;
+        january.title = `January, ${label}: ${(januaryPercent * 100).toFixed(1)}%`;
+        december.title = `December, ${label}: ${(decemberPercent * 100).toFixed(1)}%`;
+        bin.append(january, december);
+        histogram.append(bin);
+
+        const binLabel = document.createElement("span");
+        binLabel.textContent = label;
+        labels.append(binLabel);
+
+        const row = document.createElement("tr");
+        [label, `${(januaryPercent * 100).toFixed(1)}%`, `${(decemberPercent * 100).toFixed(1)}%`].forEach((value, cellIndex) => {
+          const cell = document.createElement(cellIndex === 0 ? "th" : "td");
+          cell.textContent = value;
+          row.append(cell);
+        });
+        table.append(row);
+      });
+    }
+
+    function renderTeachingKey() {
+      document.querySelectorAll("[data-key-metric]").forEach(svg => {
+        const values = metrics[svg.dataset.keyMetric].values;
+        const width = 180;
+        const height = 72;
+        const padding = 7;
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        const spread = max - min || 1;
+        const x = index => padding + index / (values.length - 1) * (width - padding * 2);
+        const y = value => padding + (max - value) / spread * (height - padding * 2);
+        svg.append(svgElement("line", { x1: padding, y1: height - padding, x2: width - padding, y2: height - padding, class: "key-baseline" }));
+        svg.append(svgElement("polyline", { points: values.map((value, index) => `${x(index)},${y(value)}`).join(" "), class: "key-line" }));
+        svg.append(svgElement("circle", { cx: x(values.length - 1), cy: y(values.at(-1)), r: 5, class: "key-point" }));
+      });
+    }
+
+    function completeStep(step) {
+      completedSteps.add(step);
+      const progress = Math.round(completedSteps.size / 3 * 100);
+      document.querySelector("#progress-text").textContent = `${progress}%`;
+      document.querySelector("#progress-bar").style.width = `${progress}%`;
+      const navItem = document.querySelector(`[data-nav-step="${step}"]`);
+      navItem.classList.add("complete");
+      navItem.querySelector(".step-status").textContent = "Done";
+    }
+
+    document.querySelectorAll(".metric-button").forEach(button => button.addEventListener("click", () => {
+      renderMetric(button.dataset.metric);
+      completeStep(2);
+    }));
+
+    document.querySelectorAll(".atlas-family-card").forEach(button => button.addEventListener("click", () => {
+      renderAtlasFamily(button.dataset.family);
+      if (window.innerWidth <= 680) {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        document.querySelector(".atlas-detail").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      }
+    }));
+
+    document.querySelector("#copy-atlas-code").addEventListener("click", async event => {
+      try {
+        await navigator.clipboard.writeText(document.querySelector("#atlas-r-code").textContent);
+        event.currentTarget.textContent = "Copied";
+      } catch {
+        event.currentTarget.textContent = "Select code to copy";
+      }
+    });
+
+    document.querySelectorAll(".first-choice").forEach(button => button.addEventListener("click", () => {
+      document.querySelectorAll(".first-choice").forEach(choice => choice.setAttribute("aria-pressed", "false"));
+      button.setAttribute("aria-pressed", "true");
+      document.querySelector("#first-response").textContent = button.dataset.choice === "distribution"
+        ? "Good choice. A distribution shows how visits are spread and whether the longest waits changed."
+        : "The line chart confirms that the typical visit improved. You still need a distribution or tail measure to see what happened to longer waits.";
+      completeStep(1);
+    }));
+
+    const feedback = {
+      neutral: { title: "Accurate but unhelpful", body: "This title names the topic but makes the reader discover the finding alone." },
+      median: { title: "True but incomplete", body: "The title mainly reflects discharged visits and hides the admitted patients whose waits became much longer." },
+      balanced: { title: "Decision-ready title", body: "This title preserves both findings. Emergency department leaders can protect fast-track gains while patient-flow and bed-management teams investigate boarding and inpatient capacity." }
+    };
+
+    document.querySelectorAll(".decision-button").forEach(button => button.addEventListener("click", () => {
+      const answer = button.dataset.answer;
+      document.querySelectorAll(".decision-button").forEach(option => {
+        option.classList.remove("correct", "incorrect");
+        option.setAttribute("aria-pressed", "false");
+      });
+      button.classList.add(answer === "balanced" ? "correct" : "incorrect");
+      button.setAttribute("aria-pressed", "true");
+      document.querySelector("#decision-feedback h3").textContent = feedback[answer].title;
+      document.querySelector("#decision-feedback p").textContent = feedback[answer].body;
+      completeStep(3);
+    }));
+
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => renderMetric(activeMetric), 120);
+    });
+
+    renderAtlasFamily("comparison");
+    verifyTeachingData();
+    renderMetric("median");
+    renderHistogram();
+    renderTeachingKey();
+  </script>
+</body>
+</html>

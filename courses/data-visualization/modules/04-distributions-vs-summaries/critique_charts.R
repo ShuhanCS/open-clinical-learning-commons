@@ -127,7 +127,7 @@ cat(sprintf(
 ))
 cat(paste0(
   "For each display, ask:\n",
-  "1. What does it conceal?\n",
-  "2. Who could be affected by a decision based on it?\n",
-  "3. What analysis or display should replace it?\n"
+  "1. Which patient group or emergency-department care process does it conceal?\n",
+  "2. Which clinician, patient-flow leader, or hospital executive could make the wrong decision from it?\n",
+  "3. What analysis or display would support a safer staffing, fast-track, boarding, or bed-capacity decision?\n"
 ))

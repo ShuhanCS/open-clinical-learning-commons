@@ -1,5 +1,7 @@
 args <- commandArgs(trailingOnly = TRUE)
-input_path <- if (length(args) >= 1) args[[1]] else file.path("data", "ed_los_2026.csv")
+default_inputs <- c(file.path("data", "ed_los_2026.csv"), "ed_los_2026.csv")
+available_default <- default_inputs[file.exists(default_inputs)][1]
+input_path <- if (length(args) >= 1) args[[1]] else if (!is.na(available_default)) available_default else default_inputs[[1]]
 output_dir <- if (length(args) >= 2) args[[2]] else file.path("outputs", "lab")
 
 if (!requireNamespace("ggplot2", quietly = TRUE)) {
@@ -76,8 +78,8 @@ plot_histogram <- ggplot2::ggplot(data, ggplot2::aes(x = los_min)) +
   ggplot2::geom_histogram(binwidth = 30, fill = "#0d9488", color = "white") +
   ggplot2::coord_cartesian(xlim = c(0, stats::quantile(data$los_min, 0.995))) +
   ggplot2::labs(
-    title = "Length-of-stay distribution",
-    subtitle = "The view is limited at the 99.5th percentile; no rows were removed.",
+    title = "Distribution of emergency-department length of stay",
+    subtitle = "Each row is a synthetic encounter. The view ends at the 99.5th percentile; no rows were removed.",
     x = "Length of stay (minutes)",
     y = "Synthetic encounters"
   ) +
@@ -91,8 +93,8 @@ plot_density <- ggplot2::ggplot(
   ggplot2::coord_cartesian(xlim = c(0, stats::quantile(data$los_min, 0.995))) +
   ggplot2::scale_color_manual(values = c(admitted = "#d97706", discharged = "#1f49b6")) +
   ggplot2::labs(
-    title = "Length-of-stay density by disposition",
-    subtitle = "Line type repeats the color distinction.",
+    title = "Admitted and discharged patients follow different length-of-stay patterns",
+    subtitle = "Disposition identifies the care pathway. Line type repeats the color distinction.",
     x = "Length of stay (minutes)",
     y = "Density",
     color = "Disposition",
@@ -118,7 +120,7 @@ plot_metrics <- ggplot2::ggplot(metric_data, ggplot2::aes(x = month, y = value))
   ggplot2::facet_wrap(~measure, scales = "free_y", ncol = 2) +
   ggplot2::scale_x_date(date_breaks = "3 months", date_labels = "%b") +
   ggplot2::labs(
-    title = "Four views of emergency department performance",
+    title = "Typical emergency-department visits improve while the longest stays worsen",
     x = "Arrival month in 2026",
     y = NULL
   ) +
@@ -145,9 +147,9 @@ cat("Created the Tier 1 lab outputs in:", normalizePath(output_dir, winslash = "
 print(monthly, row.names = FALSE, digits = 1)
 cat(paste0(
   "\nDiscuss:\n",
-  "1. What does the monthly mean imply?\n",
-  "2. What does the pooled histogram add?\n",
-  "3. Which group creates the second process in the density chart?\n",
-  "4. Which monthly measures improve, and which worsen?\n",
-  "5. In Tier 2, split the trends by disposition and boarding status before recommending action.\n"
+  "1. If the chief operating officer saw only the monthly mean, what would they conclude about emergency-department flow?\n",
+  "2. Which patient experiences become visible in the pooled histogram, and which care processes remain hard to identify?\n",
+  "3. How do admitted and discharged encounters differ, and which group creates the second process?\n",
+  "4. Which measures describe the typical visit, the longest waits, and the share crossing an eight-hour service threshold?\n",
+  "5. Split the trends by disposition and boarding status. What should fast-track, patient-flow, and bed-management leaders do differently?\n"
 ))
