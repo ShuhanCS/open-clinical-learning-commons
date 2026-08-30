@@ -1,0 +1,106 @@
+schema_version: "1.0.0"
+module_id: "oclc-da730-10"
+module_title: "Maps, geography, and place"
+retrieved_at: "2026-08-29"
+
+places_source:
+  publisher: "Centers for Disease Control and Prevention"
+  program: "PLACES: Local Data for Better Health"
+  dataset_id: "fu4u-a9bh"
+  landing_page: "https://data.cdc.gov/d/fu4u-a9bh"
+  methodology_url: "https://www.cdc.gov/places/methodology/index.html"
+  upstream_release: "../09-comparison-small-multiples/data/nc_county_health_profiles_2024.csv"
+  upstream_rows: 500
+  upstream_sha256: "33b7cfc1c2459f1bde29cee7c05141aa116da2e6f79faf82646961e5162a75a9"
+  selected_measure_id: "GHLTH"
+  selected_measure_year: "2022"
+  selected_rows: 100
+
+hpsa_source:
+  publisher: "Health Resources and Services Administration"
+  program: "Health Professional Shortage Areas"
+  discipline: "Primary Care"
+  download_url: "https://data.hrsa.gov/DataDownload/DD_Files/BCD_HPSA_FCT_DET_PC.csv"
+  metadata_url: "https://data.hrsa.gov/DataDownload/DD_Files/HPSA_DATAMART_METADATA.XLSX"
+  usage_page: "https://data.hrsa.gov/data/download?data=HPSA"
+  retrieved_at: "2026-08-29"
+  source_record_create_date: "08/29/2026"
+  full_rows: 79358
+  full_bytes: 48280174
+  full_sha256: "4552ebf09bc5a40d79d71df8ea84aea165de2205953615e03571ad84f1d6b132"
+  metadata_bytes: 27433
+  metadata_sha256: "56767d21a9d86acfae8ac17ad0eac82c3a5720280a252afdd8bef7f43ab52c8e"
+  access_level: "public"
+  usage_limitations: "none stated on HRSA download page"
+  patient_level: false
+  synthetic: false
+  selected_release:
+    path: "data/hpsa_primary_care_nc_2026_08_29.csv"
+    rows: 1546
+    columns: 28
+    county_count: 100
+    sha256: "061fe5e18bc9cd58bd89256c686ddefbce6d77972c1139b1b339497f2eab5445"
+  selection:
+    - "Retained every primary-care source row with a five-character North Carolina state-and-county FIPS beginning 37."
+    - "Kept designated, proposed-withdrawal, and withdrawn status rows."
+    - "Selected 28 public fields needed to identify status, scope, score, population context, county, component, and source date."
+
+boundary_source:
+  publisher: "United States Census Bureau"
+  service: "Generalized ACS 2024 State and County MapServer"
+  service_url: "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer"
+  query_url: "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer/12/query?where=STATE%3D%2737%27&outFields=GEOID%2CNAME%2CSTATE%2CCOUNTY&returnGeometry=true&outSR=4326&f=geojson"
+  upstream_release: "../05-rates-denominators-adjustment/data/nc_county_boundaries_2024.csv"
+  path: "data/nc_county_boundaries_2024.csv"
+  rows: 7121
+  columns: 6
+  county_count: 100
+  polygon_parts: 104
+  sha256: "6eb085f49b400d4ecf6f88646f51dd01fdd4154533262e66ade02b1d1d8f666f"
+  coordinate_system: "EPSG:4326 longitude and latitude in source release"
+  teaching_projection: "Albers equal-area formula in lab.R and critique_charts.R"
+
+teaching_release:
+  data_id: "oclc-nc-place-access-2026"
+  version: "0.1.0"
+  path: "data/nc_place_access_2026.csv"
+  rows: 100
+  columns: 29
+  grain: "one North Carolina county"
+  sha256: "90a575f03bc94cc0eb336d263e3f9d8afe09cf68ddb95476bf1836c0574f9a07"
+  build_script: "build_place_access_case.py"
+  validator: "validate_place_access_case.py"
+  validation_result: "60 of 60 checks pass"
+  transformations:
+    - "Selected the 100 GHLTH rows from the pinned Module 09 North Carolina release."
+    - "Selected current HPSA rows using exact status Designated."
+    - "Counted source component rows and unique HPSA identifiers by county."
+    - "Selected the highest current component score touching each county without summing scores."
+    - "Declared a teaching screen at HPSA score 20 and a health screen above the 17.0 percent national point estimate."
+    - "Ordered 19 eligible counties by health estimate, HPSA score, county name, and FIPS; marked the first 12 as the reference discussion list."
+
+rights:
+  cdc_status: "United States government public data"
+  hrsa_status: "Public fields; usage page states no usage limitations"
+  census_status: "United States government public data"
+  documentation_license: "CC-BY-4.0"
+  code_license: "MIT"
+
+rejected_source:
+  name: "Area Health Resources Files 2024-2025"
+  data_url: "https://data.hrsa.gov/DataDownload/AHRF/AHRF_2024-2025_CSV.zip"
+  documentation_url: "https://data.hrsa.gov/DataDownload/AHRF/AHRF_USER_TECH_2024-2025.zip"
+  data_bytes: 23287136
+  data_sha256: "6974adcd93ed8e0718d655e6912707bfc5ec37a9a2baf1fc27f59f12b5c441a0"
+  documentation_bytes: 1019394
+  documentation_sha256: "aa03026107b8acf7fd5c5f2d0c96c30b44d254cbb122a31141a3aee2d726f680"
+  decision: "not redistributed"
+  reason: "The included technical documentation restricts reproduction and identifies copyrighted AMA, AHA, and ADA source fields, despite the download page reporting no usage limitations."
+
+known_limits:
+  - "PLACES values are model-based small-area estimates rather than direct county survey estimates."
+  - "The 2022 health measure and 2026 HPSA snapshot are not contemporaneous."
+  - "HPSA score is attached to designation components, not to the county as a whole."
+  - "The score-20 screen and twelve-county list are declared teaching rules, not official thresholds or validated allocation rules."
+  - "Generalized county boundaries do not represent travel time, referral patterns, service areas, or community identity."
+  - "County aggregates conceal within-county differences, local assets, readiness, trust, cost, transportation, and language access."

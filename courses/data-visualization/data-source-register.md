@@ -1,6 +1,6 @@
 # Clinical data visualization source register
 
-- Register version: `0.9.0`
+- Register version: `0.10.0`
 - Retrieved or verified: 2026-08-29
 - Scope: public course development and assignments
 
@@ -33,7 +33,8 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | National Library of Medicine, ClinicalTrials.gov API | Trial portfolios, enrollment, status, geography, sponsors, conditions, interventions, and reported results | Public records supplied by study sponsors and investigators. Registration does not establish intervention effectiveness or study quality. | https://clinicaltrials.gov/data-api |
 | Synthea | Longitudinal synthetic patients, encounters, diagnoses, procedures, medications, and observations | Open synthetic records with no real patients. Suitable for patient journeys, Sankey diagrams, cohort funnels, and networks. Clinical realism depends on the generator modules and version. | https://synthetichealth.github.io/synthea/ |
 | U.S. Food and Drug Administration, openFDA drug adverse event API | Adverse-event reporting patterns, hierarchy, time, network, and data-quality exercises | FAERS reports can contain duplicates, missing fields, and reporting bias. A report does not prove that a product caused an event. | https://open.fda.gov/apis/drug/event/ |
-| Health Resources and Services Administration, Area Health Resources Files | County and state health-workforce counts and provider-to-population ratios | Public workforce data assembled from multiple sources. Keep the year and source definition for each variable. | https://data.hrsa.gov/data/download |
+| Health Resources and Services Administration, primary-care Health Professional Shortage Areas | Current and historical shortage designations, component scope, scores, population context, and rural status | Public HRSA data-mart fields. A component score is not a county workforce rate, and a component designation is not automatically a whole-county designation. | https://data.hrsa.gov/DataDownload/DD_Files/BCD_HPSA_FCT_DET_PC.csv |
+| Health Resources and Services Administration, Area Health Resources Files | County and state workforce context | Downloadable, but the included 2024-2025 technical documentation restricts reproduction and identifies copyrighted AMA, AHA, and ADA fields. Do not redistribute AHRF extracts without resolving the field-specific rights. | https://data.hrsa.gov/data/download?data=AHRF |
 
 ## Module source map
 
@@ -48,7 +49,7 @@ Public access does not automatically permit every reuse. Keep the source terms w
 | 07. Color and accessible visual communication | Reused Module 06 CMS Unplanned Hospital Visits release plus W3C and CDC accessibility guidance | Released 65-row source-preserving accessibility table with redundant cues, contrast calculations, grayscale output, exact table, and text alternatives. |
 | 08. Time and process variation | CDC NHSN weekly hospital respiratory data by jurisdiction | Released 6,208-row jurisdiction table and 94-week Massachusetts teaching sequence with capacity, occupancy, respiratory admissions, reporting coverage, and source-season availability. |
 | 09. Comparison and small multiples | CDC PLACES county data 2024 release | Released five-measure national county table and a 100-county North Carolina comparison table with paired crude and age-adjusted estimates, uncertainty, national references, and transparent profile order. |
-| 10. Maps, geography, and place | CDC PLACES, ACS, and HRSA AHRF | Planned county health measure, population denominator, geography, and workforce ratio. |
+| 10. Maps, geography, and place | CDC PLACES, direct HRSA primary-care HPSAs, and Census generalized county boundaries | Released 100-county place-access table, 1,546-row HPSA source selection, and 7,121-point boundary release for a map-versus-non-map decision. |
 | 11. Flow, networks, composition, and hierarchy | Synthea, ClinicalTrials.gov, or openFDA | Planned patient transitions, research relationships, or reporting hierarchy with explicit grain. |
 | 12. Dashboards and multi-view composition | CMS hospitals | Planned small hospital monitoring set for one named audience and decision. |
 | 13. Audience, annotation, narrative, and capstone | One approved source above | Versioned learner extract with full provenance record. |
@@ -208,3 +209,26 @@ The all-jurisdiction release preserves 120 rows with unavailable core metrics, s
 - Validation: 58 of 58 checks pass
 
 The values are model-based small-area estimates, not observed county diagnoses or direct county survey estimates. The reference profile count gives every measure equal weight and is only a transparent teaching screen. It is not a validated equity, risk, readiness, clinical, or funding score. Age-adjusted values support comparison; crude values retain population-burden context.
+
+### DA-730 maps-geography-place release
+
+- Module: DA-730 Module 10, Maps, geography, and place
+- CDC source: PLACES county data 2024 release, measure `GHLTH`, measure year 2022
+- CDC source page: https://data.cdc.gov/d/fu4u-a9bh
+- HRSA source: Primary Care Health Professional Shortage Areas
+- HRSA source URL: https://data.hrsa.gov/DataDownload/DD_Files/BCD_HPSA_FCT_DET_PC.csv
+- HRSA metadata URL: https://data.hrsa.gov/DataDownload/DD_Files/HPSA_DATAMART_METADATA.XLSX
+- HRSA full source: 79,358 rows, 48,280,174 bytes, SHA-256 `4552ebf09bc5a40d79d71df8ea84aea165de2205953615e03571ad84f1d6b132`
+- Selected HPSA release: `courses/data-visualization/modules/10-maps-geography-place/data/hpsa_primary_care_nc_2026_08_29.csv`
+- Selected HPSA rows: 1,546 across 100 counties
+- Selected HPSA SHA-256: `061fe5e18bc9cd58bd89256c686ddefbce6d77972c1139b1b339497f2eab5445`
+- Teaching table: `courses/data-visualization/modules/10-maps-geography-place/data/nc_place_access_2026.csv`
+- Teaching rows: 100 counties
+- Teaching SHA-256: `90a575f03bc94cc0eb336d263e3f9d8afe09cf68ddb95476bf1836c0574f9a07`
+- Census boundaries: 7,121 points and 104 polygon parts, SHA-256 `6eb085f49b400d4ecf6f88646f51dd01fdd4154533262e66ade02b1d1d8f666f`
+- Source record: `courses/data-visualization/modules/10-maps-geography-place/source-record.yml`
+- Validation: 60 of 60 checks pass
+
+The reference case uses the highest current primary-care HPSA component score touching each county. That value is not a county workforce rate. Score 20 and the twelve-county review limit are declared teaching rules, not official thresholds or validated allocation rules. The map supports regional discussion; the ordered comparison and exact table support rank, uncertainty, and value review.
+
+The 2024-2025 AHRF archives were inspected but are not redistributed. The included technical documentation contains more restrictive reuse language than the catalog page and identifies copyrighted source fields. The module uses the direct public HRSA HPSA data mart instead.

@@ -306,6 +306,44 @@ if (
     throw 'DA-730 Module 09 release metadata does not match the 0.1.0 public-source comparison contract.'
 }
 
+$module10 = Test-ModuleContract `
+    -Label 'Module 10' `
+    -SpecPath (Join-Path $repo 'docs\curriculum\courses\DA-730\modules\10-maps-geography-place-spec.md') `
+    -ModuleRoot (Join-Path $repo 'courses\data-visualization\modules\10-maps-geography-place') `
+    -RequiredFiles @(
+        'README.md',
+        'data-spec.md',
+        'source-record.yml',
+        'build_place_access_case.py',
+        'validate_place_access_case.py',
+        'lab.R',
+        'critique_charts.R',
+        'assessment.md',
+        'instructor-notes.md',
+        'release.json',
+        'data\hpsa_primary_care_nc_2026_08_29.csv',
+        'data\nc_place_access_2026.csv',
+        'data\nc_county_boundaries_2024.csv'
+    )
+if (
+    $module10.Release.module.version -ne '0.1.0' -or
+    $module10.Release.module.commons_release -ne '0.21.0' -or
+    $module10.Release.data.hpsa_selected.row_count -ne 1546 -or
+    $module10.Release.data.hpsa_selected.column_count -ne 28 -or
+    $module10.Release.data.hpsa_selected.sha256 -ne '061fe5e18bc9cd58bd89256c686ddefbce6d77972c1139b1b339497f2eab5445' -or
+    $module10.Release.data.teaching.row_count -ne 100 -or
+    $module10.Release.data.teaching.column_count -ne 29 -or
+    $module10.Release.data.teaching.sha256 -ne '90a575f03bc94cc0eb336d263e3f9d8afe09cf68ddb95476bf1836c0574f9a07' -or
+    $module10.Release.data.boundaries.row_count -ne 7121 -or
+    $module10.Release.data.boundaries.column_count -ne 6 -or
+    $module10.Release.data.boundaries.sha256 -ne '6eb085f49b400d4ecf6f88646f51dd01fdd4154533262e66ade02b1d1d8f666f' -or
+    $module10.Release.validation.measured_results.active_hpsa_rows -ne 740 -or
+    $module10.Release.validation.measured_results.both_screen_conditions -ne 19 -or
+    $module10.Release.validation.measured_results.reference_shortlist -ne 12
+) {
+    throw 'DA-730 Module 10 release metadata does not match the 0.1.0 public-source place contract.'
+}
+
 $checkpoint01Root = Join-Path $repo 'courses\data-visualization\checkpoints\01-visualization-judgment-dossier'
 $checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\checkpoints\01-visualization-judgment-dossier-spec.md'
 $checkpoint01Files = @(
@@ -351,4 +389,5 @@ Write-Output "DA-730 $($module06.Label) passed: $($module06.Sections) contract s
 Write-Output "DA-730 $($module07.Label) passed: $($module07.Sections) contract sections and $($module07.FileCount) required files."
 Write-Output "DA-730 $($module08.Label) passed: $($module08.Sections) contract sections and $($module08.FileCount) required files."
 Write-Output "DA-730 $($module09.Label) passed: $($module09.Sections) contract sections and $($module09.FileCount) required files."
+Write-Output "DA-730 $($module10.Label) passed: $($module10.Sections) contract sections and $($module10.FileCount) required files."
 Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."

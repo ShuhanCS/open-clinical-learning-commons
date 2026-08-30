@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.20.0
-- Last updated: 2026-08-29
+- Current release: 0.21.0
+- Last updated: 2026-08-30
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 09, Comparison and small multiples
-- Next unit: DA-730 Module 10, Maps, geography, and place
+- Last completed unit: DA-730 Module 10, Maps, geography, and place
+- Next unit: DA-730 Module 11, Flow, networks, composition, and hierarchy
 
 ## Confirmed decisions
 
@@ -68,6 +68,13 @@
 - Module 09 passes 58 data checks. Its lab creates four figures, one 500-row decision table, and one short and long text alternative; its critique creates three deliberately flawed figures.
 - In the pinned release, 54 counties are above the national age-adjusted point estimate on all five selected measures and 9 are at or below it on all five. This shows why the national reference alone does not produce a narrow priority list.
 - The profile count and order are declared teaching devices, not validated scores. The module keeps crude and age-adjusted values, uncertainty intervals, adult denominators, direct labels, shared scales, and exact values available for review.
+- DA-730 Module 10 reuses the 100-county `GHLTH` subset from Module 09, the exact 7,121-point Census boundary release from Module 05, and a new 1,546-row North Carolina primary-care HPSA source selection.
+- Module 10 HPSA source SHA-256: `061fe5e18bc9cd58bd89256c686ddefbce6d77972c1139b1b339497f2eab5445`.
+- Module 10 teaching-table SHA-256: `90a575f03bc94cc0eb336d263e3f9d8afe09cf68ddb95476bf1836c0574f9a07`.
+- Module 10 passes 60 data checks. Its lab creates four figures, one 100-row exact table, and one text alternative; its critique creates three deliberately flawed maps.
+- The selected HRSA source contains 740 current designated component rows and 210 unique current HPSA identifiers touching 98 counties. The teaching table does not call the maximum component score a county workforce rate.
+- Seventy-three counties are above the 17.0 percent national health point, 23 meet the declared score-20 HPSA screen, and 19 meet both. The reference twelve are Robeson, Scotland, Hertford, Halifax, Warren, Greene, Washington, Wilson, Anson, Lenoir, Edgecombe, and Swain.
+- The AHRF 2024-2025 archives were inspected but not redistributed. Included documentation restricts reproduction and identifies copyrighted source fields, so Module 10 uses the directly public HRSA HPSA data mart.
 
 ## Pending confirmation
 
@@ -76,8 +83,9 @@
 
 ## Next resume instructions
 
-1. Read the DA-730 Module 10 brief and the Module 09 comparison handoff.
-2. Reuse the pinned CDC PLACES and North Carolina county releases unless the map decision requires an additional public denominator or workforce measure.
-3. Write `docs/curriculum/courses/DA-730/modules/10-maps-geography-place-spec.md` using the 21-section contract.
-4. Build a choropleth and a non-map comparison for the same named decision, with projection, geography, denominator, classification, and accessibility checks.
-5. Verify and release Module 10, then package the week-6 checkpoint.
+1. Read the DA-730 Module 11 brief and the Module 10 structure handoff.
+2. Select and pin one open source that can support a defined flow, network, hierarchy, or composition case without patient privacy risk.
+3. Prefer the existing Synthea option unless the ClinicalTrials.gov relationship case produces a clearer decision and release contract.
+4. Write `docs/curriculum/courses/DA-730/modules/11-flow-networks-composition-hierarchy-spec.md` using the 21-section contract.
+5. Define every node, edge, state, denominator, and dropped record before building the lab and critique set.
+6. Verify and release Module 11, then continue toward the week-6 checkpoint.

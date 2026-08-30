@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-da730-10",
+    "title": "Maps, geography, and place",
+    "version": "0.1.0",
+    "commons_release": "0.21.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling"
+  },
+  "data": {
+    "hpsa_selected": {
+      "id": "oclc-hrsa-primary-care-hpsa-nc-2026-08-29",
+      "version": "0.1.0",
+      "path": "data/hpsa_primary_care_nc_2026_08_29.csv",
+      "row_count": 1546,
+      "column_count": 28,
+      "county_count": 100,
+      "sha256": "061fe5e18bc9cd58bd89256c686ddefbce6d77972c1139b1b339497f2eab5445"
+    },
+    "teaching": {
+      "id": "oclc-nc-place-access-2026",
+      "version": "0.1.0",
+      "path": "data/nc_place_access_2026.csv",
+      "row_count": 100,
+      "column_count": 29,
+      "county_count": 100,
+      "sha256": "90a575f03bc94cc0eb336d263e3f9d8afe09cf68ddb95476bf1836c0574f9a07"
+    },
+    "boundaries": {
+      "id": "oclc-census-nc-county-boundaries-2024",
+      "version": "0.1.0",
+      "path": "data/nc_county_boundaries_2024.csv",
+      "row_count": 7121,
+      "column_count": 6,
+      "county_count": 100,
+      "polygon_parts": 104,
+      "sha256": "6eb085f49b400d4ecf6f88646f51dd01fdd4154533262e66ade02b1d1d8f666f"
+    },
+    "public_aggregate_data": true,
+    "patient_level": false,
+    "synthetic": false
+  },
+  "sources": {
+    "places": {
+      "publisher": "Centers for Disease Control and Prevention",
+      "dataset_id": "fu4u-a9bh",
+      "landing_page": "https://data.cdc.gov/d/fu4u-a9bh",
+      "upstream_sha256": "33b7cfc1c2459f1bde29cee7c05141aa116da2e6f79faf82646961e5162a75a9",
+      "measure_id": "GHLTH",
+      "measure_year": 2022
+    },
+    "hpsa": {
+      "publisher": "Health Resources and Services Administration",
+      "download_url": "https://data.hrsa.gov/DataDownload/DD_Files/BCD_HPSA_FCT_DET_PC.csv",
+      "metadata_url": "https://data.hrsa.gov/DataDownload/DD_Files/HPSA_DATAMART_METADATA.XLSX",
+      "retrieved_at": "2026-08-29",
+      "full_row_count": 79358,
+      "full_bytes": 48280174,
+      "full_sha256": "4552ebf09bc5a40d79d71df8ea84aea165de2205953615e03571ad84f1d6b132",
+      "metadata_sha256": "56767d21a9d86acfae8ac17ad0eac82c3a5720280a252afdd8bef7f43ab52c8e"
+    },
+    "boundaries": {
+      "publisher": "United States Census Bureau",
+      "service_page": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer",
+      "coordinate_system": "EPSG:4326 source coordinates; Albers equal-area teaching projection"
+    },
+    "source_record": "source-record.yml"
+  },
+  "environment": {
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {
+      "ggplot2": "4.0.3"
+    },
+    "tested_platform": "Windows"
+  },
+  "licenses": {
+    "documentation": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en"
+    },
+    "code": {
+      "spdx": "MIT",
+      "url": "https://opensource.org/license/mit"
+    },
+    "government_data": {
+      "spdx": "LicenseRef-US-Government-Public-Data",
+      "urls": [
+        "https://data.cdc.gov/",
+        "https://data.hrsa.gov/data/download?data=HPSA",
+        "https://tigerweb.geo.census.gov/"
+      ]
+    }
+  },
+  "curriculum_source": {
+    "title": "DA-730 Course Redesign: Analyzing, Visualizing, and Storytelling with Data",
+    "author": "Ali Goff",
+    "date": "2026-08-15",
+    "path": "../../../../docs/source/ali-goff-da-730-course-redesign.md",
+    "specification": "../../../../docs/curriculum/courses/DA-730/modules/10-maps-geography-place-spec.md"
+  },
+  "contributors": [
+    {
+      "name": "Ali Goff",
+      "role": "course designer and content owner"
+    },
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor and curriculum direction"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, data rights review, public-source release, teaching implementation, and technical checks"
+    }
+  ],
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "The validator passed 60 checks. Four lab figures, one 100-row exact table, one text alternative, and three critique figures rendered successfully and were visually inspected."
+    },
+    "required_human_roles": [
+      {
+        "role": "population-health and access-planning relevance",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "HRSA HPSA definition and source fidelity",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "geography and cartography",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "equity and community language",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "visualization and accessibility",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      },
+      {
+        "role": "independent teachability",
+        "reviewer": null,
+        "status": "pending",
+        "date": null
+      }
+    ]
+  },
+  "validation": {
+    "data_checks": "60 of 60 pass",
+    "lab_execution": "pass: four PNGs, one CSV, and one Markdown text alternative",
+    "critique_execution": "pass: three deliberately flawed PNGs",
+    "measured_results": {
+      "hpsa_selected_rows": 1546,
+      "active_hpsa_rows": 740,
+      "active_hpsa_ids": 210,
+      "counties_with_active_hpsa": 98,
+      "teaching_counties": 100,
+      "boundary_points": 7121,
+      "health_point_above_national": 73,
+      "higher_hpsa_score_screen": 23,
+      "whole_county_geographic_hpsa": 7,
+      "both_screen_conditions": 19,
+      "reference_shortlist": 12,
+      "health_range_pct": [12.1, 27.2],
+      "national_health_point_pct": 17.0,
+      "hpsa_county_max_score_range": [11, 24]
+    }
+  },
+  "known_issues": [
+    "Named population-health, HPSA, geography, equity, accessibility, visualization, and independent-instructor reviews are pending.",
+    "PLACES values are model-based small-area estimates rather than direct county survey estimates.",
+    "The 2022 health measure and 2026 HPSA snapshot are not contemporaneous.",
+    "The selected HPSA value is the highest active component score touching the county, not a county workforce rate.",
+    "The score-20 screen and twelve-county list are teaching rules, not official thresholds or validated allocation rules.",
+    "County maps do not show within-county communities, travel time, referral networks, service areas, readiness, or local priorities.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

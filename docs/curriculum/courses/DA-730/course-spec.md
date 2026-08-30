@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.20.0
+- Specification version: 0.21.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -283,10 +283,12 @@ The course totals 112.5 learner hours. Official start and end dates come from th
 - Concepts: choropleths, proportional symbols, bivariate maps, bins, projections, spatial units, modifiable areal unit problem, rurality, access, and place-based language.
 - Primary case: county health measure, population context, and health-workforce access.
 - Decision owner: regional population-health or access planner.
-- Core sources: https://data.cdc.gov/d/fu4u-a9bh, https://www.census.gov/data/developers/data-sets/acs-5year.html, and https://data.hrsa.gov/data/download
+- Core sources: https://data.cdc.gov/d/fu4u-a9bh, https://data.hrsa.gov/DataDownload/DD_Files/BCD_HPSA_FCT_DET_PC.csv, and https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer
 - Lab: build a rate map and an alternative non-map display, then choose which better supports the decision.
 - Critique: repair a raw-count map, arbitrary bins, and stigmatizing labels.
-- Submission: `module-10/place-brief.md`, `module-10/analysis.R`, `module-10/map.png`, `module-10/non-map.png`, `module-10/source-record.yml`, `module-10/alt-text.md`, and `module-10/decision-note.md`.
+- Submission: `module-10/place-brief.md`, `module-10/analysis.R`, `module-10/health-map.png`, `module-10/bivariate-map.png`, `module-10/non-map.png`, `module-10/decision-table.csv`, `module-10/source-record.yml`, `module-10/alt-text.md`, `module-10/decision-note.md`, and `module-10/ai-use.md`.
+- Full specification: `docs/curriculum/courses/DA-730/modules/10-maps-geography-place-spec.md`.
+- Runnable package: `courses/data-visualization/modules/10-maps-geography-place/`.
 - Handoff: Module 11 handles structures that ordinary comparisons and maps do not express well.
 
 ## Module 11 brief: Flow, networks, composition, and hierarchy
@@ -485,7 +487,8 @@ A polished visual cannot pass when source integrity, healthcare interpretation, 
 | ClinicalTrials.gov API | Trial enrollment, sponsors, locations, conditions, interventions, and results. | Registration and reported results do not establish intervention effectiveness or study quality. | https://clinicaltrials.gov/data-api |
 | Synthea | Synthetic patient journeys, encounters, conditions, procedures, and networks. | The records are synthetic; realism depends on the generator version and modules. | https://synthetichealth.github.io/synthea/ |
 | openFDA drug adverse events | Reporting patterns, time, hierarchy, networks, and data-quality critiques. | A report does not prove causation; duplicates, missingness, and reporting bias are expected. | https://open.fda.gov/apis/drug/event/ |
-| HRSA Area Health Resources Files | Workforce and access comparisons and maps. | Keep the year and source definition for every variable. | https://data.hrsa.gov/data/download |
+| HRSA primary-care HPSAs | Shortage-designation scope, component scores, population context, and access-planning maps. | A component score is not a county workforce rate. | https://data.hrsa.gov/DataDownload/DD_Files/BCD_HPSA_FCT_DET_PC.csv |
+| HRSA Area Health Resources Files | Workforce context for source-led analysis only. | The included 2024-2025 documentation restricts reproduction and identifies copyrighted source fields, so the Commons does not redistribute the inspected clinician extract. | https://data.hrsa.gov/data/download?data=AHRF |
 
 ## Data release rule
 
@@ -580,7 +583,7 @@ The package includes a worked answer, rubric, common misconceptions, expected ti
 | Beta | The module has been taught once and timing, defects, and revisions are recorded without student identifiers. |
 | Stable | A second instructor or program has taught the module successfully and no release-blocking issue remains. |
 
-Modules 01 through 09 are current runnable candidates. Their human reviews remain pending.
+Modules 01 through 10 are current runnable candidates. Their human reviews remain pending.
 
 ## Module build order
 
@@ -616,6 +619,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Module 07 has a complete accessibility specification, source-preserving teaching table, runnable lab, critique set, assessment, instructor key, and release record.
 - [x] Module 08 has a complete time-and-process specification, pinned CDC NHSN releases, runnable lab, critique set, assessment, instructor key, and release record.
 - [x] Module 09 has a complete comparison specification, pinned five-measure CDC PLACES releases, runnable lab, critique set, assessment, instructor key, and release record.
+- [x] Module 10 has a complete place specification, pinned public HPSA and boundary releases, runnable map-versus-non-map lab, critique set, assessment, instructor key, and release record.
 - [x] The sequence restores encoding, perception, chart selection, distributions, rates, uncertainty, color, time, comparison, maps, composition, dashboards, audience, and narrative.
 - [x] The course totals 112.5 learner hours.
 - [x] Checkpoints have exact deliverables at weeks 3, 6, and the official half-term end date.
