@@ -1,0 +1,15 @@
+publisher: "Centers for Medicare & Medicaid Services"
+landing_page: "https://data.cms.gov/provider-data/dataset/632h-zaca"
+retrieved_at: "2026-08-29"
+released: "2026-08-13"
+data_path: "courses/data-visualization/modules/06-uncertainty-variation-small-numbers/data/ma_hf_readmission_uncertainty_2026.csv"
+analysis_path: "analysis/uncertainty.R"
+figure_path: "figures/uncertainty.png"
+sha256: "33e6284a1064bb12600903526e4e65c009f875d9e6f6a3f25783d3a9a4b00727"
+transformations:
+  - "Selected all 65 Massachusetts heart-failure readmission rows and preserved source scores, intervals, denominators, status, and footnotes."
+  - "Ordered reported point estimates for display without treating rank as evidence of pairwise separation."
+known_limits:
+  - "The CMS score is risk standardized and is not a raw observed proportion."
+  - "Displayed interval overlap is descriptive, not a pairwise hypothesis test or proof of equivalence."
+  - "Suppressed and unavailable values must remain blank."

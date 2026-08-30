@@ -1,0 +1,16 @@
+publisher: "Centers for Medicare & Medicaid Services; Open Clinical Learning Commons"
+landing_page: "https://data.cms.gov/provider-data/dataset/yv7e-xc69"
+retrieved_at: "2026-08-29"
+released: "2026-08-13 CMS release; 0.2.0 synthetic teaching release"
+data_path: "courses/data-visualization/modules/04-distributions-vs-summaries/data/ed_los_2026.csv"
+analysis_path: "analysis/distribution.R"
+figure_path: "figures/distribution.png"
+sha256: "27c1c0feed8beb4ab0ac6dc77eaa3d1ed95c07b89f52f4881c25954ba43fbc55"
+calibration_data_path: "courses/data-visualization/modules/04-distributions-vs-summaries/data/cms_ed_op18b_2026.csv"
+calibration_sha256: "c9603109d4ea251b8096a655c27ad42cd6313bdb1309999bee3eb37ce79ec67d"
+transformations:
+  - "Used the released deterministic synthetic encounter table."
+  - "Grouped the encounter distribution by disposition without treating the records as observed patients."
+known_limits:
+  - "Only the discharged time center is calibrated to CMS OP_18b. The encounters, tails, trends, admissions, and boarding values are synthetic."
+  - "The display does not describe an actual hospital or estimate an intervention effect."

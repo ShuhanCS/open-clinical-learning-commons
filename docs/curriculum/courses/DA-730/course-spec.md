@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.17.0
+- Specification version: 0.17.1
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -360,14 +360,25 @@ checkpoint-1/
     rate.png
     uncertainty.png
   analysis/
+    comparison.R
+    distribution.R
+    rate.R
+    uncertainty.R
   source-records/
+    comparison-source.yml
+    distribution-source.yml
+    rate-source.yml
+    uncertainty-source.yml
   critique-and-repair.md
   accessibility-check.md
   decision-brief.md
   ai-use.md
 ```
 
-The decision brief names the audience, finding, decision, uncertainty, and material limitation. The four figures must come from at least two approved public or synthetic sources. A dossier without reproducible source files or complete provenance is incomplete.
+An approved alternative tool may replace an `.R` file with an editable `.py`, `.ipynb`, `.twb`, or `.pbix` file that keeps the same base name. The decision brief names the audience, finding, decision, uncertainty, and material limitation. The four figures must come from at least two approved public or synthetic sources. A dossier without reproducible source files or complete provenance is incomplete.
+
+- Full checkpoint specification: `docs/curriculum/courses/DA-730/checkpoints/01-visualization-judgment-dossier-spec.md`.
+- Runnable assembler, templates, and validator: `courses/data-visualization/checkpoints/01-visualization-judgment-dossier/`.
 
 ## Checkpoint 2: applied visualization portfolio
 
@@ -605,7 +616,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] The public-data portfolio uses authoritative publishers and states important limits.
 - [x] Accessibility and AI accountability are graded requirements.
 - [ ] Each module has its full specification and runnable teaching package.
-- [ ] Checkpoint assemblies run from a clean checkout.
+- [x] Checkpoint 1 assembly and validator run from a clean checkout.
 - [ ] Faculty, clinical, accessibility, and independent-instructor reviews are recorded.
 - [ ] The official DA-730 versus DA-830 course number is confirmed for publication.
 - [ ] The course has reached at least beta after a taught pilot.

@@ -1,0 +1,14 @@
+publisher: "Centers for Disease Control and Prevention; U.S. Census Bureau"
+landing_page: "https://data.cdc.gov/d/fu4u-a9bh"
+retrieved_at: "2026-08-29"
+released: "2024 PLACES release with published source updates recorded in the module source record"
+data_path: "courses/data-visualization/modules/05-rates-denominators-adjustment/data/nc_diabetes_rates_2024.csv"
+analysis_path: "analysis/rate.R"
+figure_path: "figures/rate.png"
+sha256: "1528b204830966dff88e00f57fc4f77b8dcf5db135daa122e8aff3679fdf32c7"
+transformations:
+  - "Joined complete North Carolina county PLACES crude and age-adjusted estimates with ACS adult-population context."
+  - "Displayed age-adjusted prevalence with adult-population context and retained the modeled-count distinction."
+known_limits:
+  - "PLACES values are small-area model estimates, not direct county survey estimates or observed diagnoses."
+  - "The shortlist is an instructional first pass and does not establish program readiness or causal need."

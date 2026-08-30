@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.17.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 06 are runnable release candidates with pinned public evidence, reproducible teaching data, tiered labs, critique sets, assessments, instructor keys, and validation.
+- Current version: `0.17.1`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 06 are runnable release candidates, and their Week 3 visualization judgment checkpoint now has an exact folder contract, reproducible assembler, learner templates, and validator.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -86,6 +86,8 @@ The public preview also includes a [chart atlas](courses/data-visualization/atla
 - [Module 06 assessment](courses/data-visualization/modules/06-uncertainty-variation-small-numbers/assessment.md)
 - [Module 06 instructor notes](courses/data-visualization/modules/06-uncertainty-variation-small-numbers/instructor-notes.md)
 - [Module 06 release record](courses/data-visualization/modules/06-uncertainty-variation-small-numbers/release.json)
+- [Week 3 visualization judgment checkpoint](courses/data-visualization/checkpoints/01-visualization-judgment-dossier/README.md)
+- [Week 3 checkpoint specification](docs/curriculum/courses/DA-730/checkpoints/01-visualization-judgment-dossier-spec.md)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
@@ -144,10 +146,9 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Assemble and test the week-3 visualization judgment checkpoint from Modules 01 through 06.
-2. Build DA-730 Module 07, Color and accessible visual communication.
-3. Complete the named human reviews for Modules 01 through 06.
-4. Continue the sequential DA-730 build before starting the foundation course packages.
+1. Build DA-730 Module 07, Color and accessible visual communication.
+2. Complete the named human reviews for Modules 01 through 06.
+3. Continue the sequential DA-730 build before starting the foundation course packages.
 
 ## Licensing
 

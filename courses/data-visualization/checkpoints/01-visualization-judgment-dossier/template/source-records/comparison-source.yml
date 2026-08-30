@@ -1,0 +1,16 @@
+publisher: "Centers for Medicare & Medicaid Services"
+landing_page: "https://data.cms.gov/provider-data/dataset/dgck-syfz"
+retrieved_at: "2026-08-29"
+released: "2026-08-13"
+data_path: "courses/data-visualization/modules/03-chart-selection/data/selection_cases_2026.csv"
+analysis_path: "analysis/comparison.R"
+figure_path: "figures/comparison.png"
+sha256: "0f295bd9bf94e9f5800e4fdaebea303d8cc0b28ccd3afcb01603d8e1c0a2eff8"
+upstream_data_path: "courses/data-visualization/modules/01-encoding-grammar/data/hcahps_ma_recommend_2026.csv"
+upstream_sha256: "56fa078a15ffd456f2fa8eee441e46d37462715346effb774d606b65e2300b74"
+transformations:
+  - "Selected the released comparison case and joined reported Massachusetts HCAHPS recommend rows."
+  - "Ordered reported percentages and kept completed-survey and response-rate context."
+known_limits:
+  - "HCAHPS results are descriptive and do not establish cause, statistical distinction, or overall hospital quality."
+  - "Unavailable hospital values remain outside the plotted point layer and must remain documented."

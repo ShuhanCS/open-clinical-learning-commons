@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.17.0
+- Current release: 0.17.1
 - Last updated: 2026-08-29
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 06, Uncertainty, variation, and small numbers
-- Next unit: DA-730 week-3 checkpoint verification, then Module 07, Color and accessible visual communication
+- Last completed unit: DA-730 Week 3 visualization judgment checkpoint
+- Next unit: DA-730 Module 07, Color and accessible visual communication
 
 ## Confirmed decisions
 
@@ -50,6 +50,8 @@
 - Module 06 passes 42 data checks. Its lab creates four figures and a decision table; its critique creates two deliberately flawed figures.
 - The Massachusetts case has 53 reported estimates, 52 CMS-classified no different from the national rate, 1 worse, 2 too few, and 10 not available. Only 1 of the ten highest point estimates is source-classified worse.
 - All 1,378 displayed Massachusetts interval pairs overlap descriptively. The module states that this is not a pairwise hypothesis test and does not prove equivalence.
+- DA-730 Checkpoint 1 maps Modules 03 through 06 to exact comparison, distribution, rate, and uncertainty figure names while carrying Module 01 encoding choices and Module 02 perception evidence into the selection matrix.
+- The checkpoint package assembles four figures and four editable R files from the released module data, supplies four complete source records and six writing templates, and validates the completed folder contract with a Python standard-library check.
 
 ## Pending confirmation
 
@@ -58,9 +60,8 @@
 
 ## Next resume instructions
 
-1. Verify the exact week-3 checkpoint folder contract against the released outputs from Modules 01 through 06.
-2. Read the DA-730 Module 07 brief and the Module 06 accessibility handoff.
-3. Write `docs/curriculum/courses/DA-730/modules/07-color-accessible-communication-spec.md` using the 21-section contract.
-4. Reuse the Module 06 interval and status case so color changes do not change the statistical claim.
-5. Build screen, print, grayscale, redundant-encoding, and text-alternative exercises.
-6. Verify and release Module 07, then continue to Module 08.
+1. Read the DA-730 Module 07 brief and the Module 06 accessibility handoff.
+2. Write `docs/curriculum/courses/DA-730/modules/07-color-accessible-communication-spec.md` using the 21-section contract.
+3. Reuse the Module 06 interval and status case so color changes do not change the statistical claim.
+4. Build screen, print, grayscale, redundant-encoding, and text-alternative exercises.
+5. Verify and release Module 07, then continue to Module 08.

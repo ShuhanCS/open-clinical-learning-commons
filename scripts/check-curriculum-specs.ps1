@@ -211,6 +211,41 @@ if (
     throw 'DA-730 Module 06 release metadata does not match the 0.1.0 public-source uncertainty contract.'
 }
 
+$checkpoint01Root = Join-Path $repo 'courses\data-visualization\checkpoints\01-visualization-judgment-dossier'
+$checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\checkpoints\01-visualization-judgment-dossier-spec.md'
+$checkpoint01Files = @(
+    'README.md',
+    'assemble_checkpoint.ps1',
+    'validate_checkpoint.py',
+    'template\README.md',
+    'template\selection-matrix.md',
+    'template\critique-and-repair.md',
+    'template\accessibility-check.md',
+    'template\decision-brief.md',
+    'template\ai-use.md',
+    'template\source-records\comparison-source.yml',
+    'template\source-records\distribution-source.yml',
+    'template\source-records\rate-source.yml',
+    'template\source-records\uncertainty-source.yml'
+)
+$checkpoint01Missing = @($checkpoint01Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $checkpoint01Root $_))
+})
+if (-not (Test-Path -LiteralPath $checkpoint01Spec) -or $checkpoint01Missing.Count -gt 0) {
+    throw "DA-730 Checkpoint 1 is missing its specification or package files: $($checkpoint01Missing -join ', ')."
+}
+$checkpoint01Content = Get-Content -Raw -LiteralPath $checkpoint01Spec
+if ([regex]::Matches($checkpoint01Content, '(?m)^## \d+\.').Count -ne 17) {
+    throw 'DA-730 Checkpoint 1 must define 17 numbered contract sections.'
+}
+if ($checkpoint01Content -match '[—–]') {
+    throw 'DA-730 Checkpoint 1 contains a Unicode em dash or en dash.'
+}
+& python (Join-Path $checkpoint01Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'DA-730 Checkpoint 1 validator self-check failed.'
+}
+
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
 Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
 Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."
@@ -218,3 +253,4 @@ Write-Output "DA-730 $($module03.Label) passed: $($module03.Sections) contract s
 Write-Output "DA-730 $($module04.Label) passed: $($module04.Sections) contract sections and $($module04.FileCount) required files."
 Write-Output "DA-730 $($module05.Label) passed: $($module05.Sections) contract sections and $($module05.FileCount) required files."
 Write-Output "DA-730 $($module06.Label) passed: $($module06.Sections) contract sections and $($module06.FileCount) required files."
+Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."
