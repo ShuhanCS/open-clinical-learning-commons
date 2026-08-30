@@ -1,0 +1,25 @@
+dimension,group,model,evaluation_rows,events,non_events,support,brier,roc_auc,false_positives,false_negatives,claim_limit
+age_band,18-44,transparent,77,10,67,report with boundary,0.08437309,0.82164179,10,4,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+age_band,18-44,bounded_rf,77,10,67,report with boundary,0.10452337,0.74029851,24,2,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+age_band,45-64,transparent,38,5,33,report with boundary,0.12335557,0.41818182,3,4,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+age_band,45-64,bounded_rf,38,5,33,report with boundary,0.12419840,0.40909091,2,4,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+age_band,65+,transparent,28,2,26,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+age_band,65+,bounded_rf,28,2,26,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_gender,F,transparent,75,8,67,report with boundary,0.07740934,0.68936567,10,4,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_gender,F,bounded_rf,75,8,67,report with boundary,0.10356741,0.61567164,29,3,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_gender,M,transparent,68,9,59,report with boundary,0.11669878,0.64783427,7,5,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_gender,M,bounded_rf,68,9,59,report with boundary,0.11174602,0.64218456,20,3,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,asian,transparent,11,2,9,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,asian,bounded_rf,11,2,9,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,black,transparent,14,2,12,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,black,bounded_rf,14,2,12,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,native,transparent,2,0,2,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,native,bounded_rf,2,0,2,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,other,transparent,1,0,1,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,other,bounded_rf,1,0,1,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,white,transparent,115,13,102,report with boundary,0.08607077,0.71983409,12,6,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_race,white,bounded_rf,115,13,102,report with boundary,0.09858116,0.73755656,40,3,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_ethnicity,hispanic,transparent,11,2,9,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_ethnicity,hispanic,bounded_rf,11,2,9,suppress: model-audit support rule,,,,,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_ethnicity,nonhispanic,transparent,132,15,117,report with boundary,0.09724640,0.61737892,14,9,descriptive synthetic audit only; no fairness certification ranking or group-specific action
+source_recorded_ethnicity,nonhispanic,bounded_rf,132,15,117,report with boundary,0.10617053,0.58233618,46,6,descriptive synthetic audit only; no fairness certification ranking or group-specific action

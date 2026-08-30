@@ -1,0 +1,11 @@
+model,calibration_group,rows,events,mean_probability,observed_proportion,limit
+transparent,1,29,1,0.15517603,0.03448276,small teaching group; use model-level calibration intercept and slope
+transparent,2,29,4,0.15931732,0.13793103,small teaching group; use model-level calibration intercept and slope
+transparent,3,29,2,0.16091814,0.06896552,small teaching group; use model-level calibration intercept and slope
+transparent,4,28,2,0.18373498,0.07142857,small teaching group; use model-level calibration intercept and slope
+transparent,5,28,8,0.41956219,0.28571429,small teaching group; use model-level calibration intercept and slope
+bounded_rf,1,29,4,0.07619758,0.13793103,small teaching group; use model-level calibration intercept and slope
+bounded_rf,2,29,2,0.11861204,0.06896552,small teaching group; use model-level calibration intercept and slope
+bounded_rf,3,29,0,0.18870465,0.00000000,small teaching group; use model-level calibration intercept and slope
+bounded_rf,4,28,3,0.24579313,0.10714286,small teaching group; use model-level calibration intercept and slope
+bounded_rf,5,28,8,0.32290153,0.28571429,small teaching group; use model-level calibration intercept and slope

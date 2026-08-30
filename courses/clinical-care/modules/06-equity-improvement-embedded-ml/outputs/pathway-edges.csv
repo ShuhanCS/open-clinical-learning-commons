@@ -1,0 +1,11 @@
+edge_id,from_node,to_node,count,evidence_status
+E01,N01,N02,129,observed
+E02,N01,N03,347,observed
+E03,N02,N04,25,observed
+E04,N02,N05,104,observed
+E05,N03,N06,62,observed
+E06,N03,N07,285,observed
+E07,N01,N08,,proposed collection
+E08,N08,N09,,proposed collection
+E09,N09,N10,,proposed collection
+E10,N10,N11,,proposed collection

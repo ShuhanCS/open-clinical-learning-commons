@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_id": "oclc-app1-cp02",
+  "commons_release": "0.54.0",
+  "timing": "end of instructional Week 6",
+  "course_points": 45,
+  "accepted_week3": {
+    "checkpoint_id": "oclc-app1-cp01",
+    "version": "0.1.0",
+    "commons_release": "0.51.0",
+    "candidate_files": 78,
+    "candidate_manifest_sha256": "ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860",
+    "progression": "continue with conditions"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app1-04", "version": "0.1.0", "commons_release": "0.52.0", "assembled_files": 32, "workspace_manifest_sha256": "5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb", "points": 25},
+    {"id": "oclc-app1-05", "version": "0.1.0", "commons_release": "0.53.0", "assembled_files": 30, "workspace_manifest_sha256": "7106a0ec0b412c61768eff72f03062e60cb3d9dfc0a887bb81be8f4475e7363e", "points": 20},
+    {"id": "oclc-app1-06", "version": "0.1.0", "commons_release": "0.54.0", "assembled_files": 38, "workspace_manifest_sha256": "b7127dbfac9e7a9549ea682499a1ca5d368a4acbbc20da2e307324be5813b978", "points": 0}
+  ],
+  "accepted_component_files": 100,
+  "score_map": {"oclc-app1-04": 25, "oclc-app1-05": 20, "oclc-app1-06": 0},
+  "gate_owner": "oclc-app1-06",
+  "decision": "is the analytic case strong enough to support a draft improvement recommendation and Module 07 leadership review",
+  "claim_boundary": "curriculum progression on synthetic evidence only; clinical implementation and model deployment prohibited"
+}

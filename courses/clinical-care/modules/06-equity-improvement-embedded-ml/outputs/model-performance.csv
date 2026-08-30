@@ -1,0 +1,3 @@
+model,evaluation_rows,events,brier,roc_auc,log_loss,calibration_intercept,calibration_slope,threshold,tn,fp,fn,tp,sensitivity,specificity,flagged,weighted_error_cost
+transparent,143,17,0.09609243,0.66363212,0.34684826,-0.85765595,0.98604197,0.20000000,109,17,9,8,0.47058824,0.86507937,25,44
+bounded_rf,143,17,0.10745654,0.62371615,0.37750998,-1.04707642,0.64579740,0.20000000,77,49,6,11,0.64705882,0.61111111,60,67

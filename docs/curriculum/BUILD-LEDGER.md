@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.53.0
+- Current release: 0.54.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-1 Module 05, clinical variation and patterns of care
-- Next unit: APP-1 Module 06, equity, feasible improvement, and embedded machine learning
+- Last completed unit: APP-1 Checkpoint 2, adjusted variation and feasible improvement
+- Next unit: APP-1 Module 07, clinician leadership, recommendation, and defense
 
 ## Confirmed decisions
 
@@ -333,6 +333,20 @@
 - Module-root validation passes 129 checks, complete reference validation passes 159 checks, and learner-starter validation passes 82 checks. Builder, workspace, copied-validator, mutation, score, and progression checks pass.
 - The 20-point clinical variation component passes all 18 gates and is scored once at the Week 6 checkpoint. Module 06 is permitted for curriculum construction with the bounded site finding, one equity question, one feasible improvement lever, and one transparent benchmark.
 - APP-1 Module 05 is a runnable release candidate at Commons 0.53.0.
+- APP-1 Module 06 version 0.1.0 accepts exact Module 02 cohort, Module 04 expected-outcome, and Module 05 care-pattern fingerprints. The 476 patient identities match one-to-one.
+- The fixed equity review covers 12 age, source-recorded gender, race, and ethnicity groups. Native and other race process estimates are suppressed; Asian, native, and other race outcome summaries are suppressed. Groups are not combined to evade support rules.
+- The accessible pathway preserves the observed 476 to 129/347 split and the 25/104 and 62/285 outcome branches. Offer, preference, appointment status, completion, barriers, and burden remain proposed collection states rather than inferred facts.
+- The time-ordered split contains 333 training rows with 70 events and 143 held-out rows with 17 events. Both models use the same four Module 04 baseline features and a fixed 0.20 teaching threshold.
+- The transparent GLM has held-out Brier score 0.09609243, AUC 0.66363212, 17 false positives, 9 false negatives, 25 flags, and weighted teaching cost 44. The bounded random forest has Brier score 0.10745654, AUC 0.62371615, 49 false positives, 6 false negatives, 60 flags, and cost 67.
+- The paired ML-minus-transparent Brier difference is 0.01136411 with 95 percent bootstrap limits -0.00489999 to 0.02602160. The AUC difference is -0.03991597 with limits -0.16059757 to 0.11721522. ML does not change the improvement decision.
+- Fifteen deterministic outputs total 78,042 bytes. The 11-row immutable workspace manifest is 1,833 bytes with SHA-256 `b7127dbfac9e7a9549ea682499a1ca5d368a4acbbc20da2e307324be5813b978`.
+- Module-root validation passes 153 checks, complete reference validation passes 189 checks, and learner-starter validation passes 100 checks. Builder, workspace, copied-validator, source, contract, output, and progression mutation routes pass.
+- APP-1 Module 06 is a runnable release candidate at Commons 0.54.0 and continues with conditions. Clinical implementation and model deployment are prohibited.
+- APP-1 Checkpoint 2 version 0.1.0 freezes 32 Module 04 files, 30 Module 05 files, and 38 Module 06 files without recomputing accepted evidence.
+- The checkpoint contains 100 accepted component files and 113 total files. Its 100-row, 17,062-byte candidate manifest SHA-256 is `f5f892c2b5f6c193f5389c10f7e60df81b1400ca5a163734a103efa745c54ed1`.
+- The checkpoint assigns 25 points to Module 04 and 20 points to Module 05 exactly once. Module 06 contributes 24 required gates and zero extra points.
+- Reference validation passes 496 checks and learner validation passes 473 checks. Two-build equality, copied validation, candidate mutation, score mutation, and progression mutation routes pass.
+- APP-1 Checkpoint 2 is a runnable release candidate at Commons 0.54.0 and permits Module 07 construction with all clinical, improvement, methods, equity, informatics, accessibility, privacy, responsible-AI, and independent-review conditions retained.
 
 ## Pending confirmation
 
@@ -341,11 +355,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-1 course specification, accepted Week 3 checkpoint, Module 04 and Module 05 specifications and releases, Module 06 ownership boundary, and this ledger.
-2. Write the durable APP-1 Module 06 specification before broad implementation.
-3. Preserve the exact cohort, survival limits, expected outcomes, clinical-variation outputs, synthetic-site provenance, and Module 05 manifest identity.
-4. Prespecify demographic subgroup support, missingness, equity language, pathway-access measures, and suppression before calculating subgroup results.
-5. Turn the one bounded variation finding into a feasible improvement option with implementation, process, outcome, and balancing measures; do not authorize implementation from synthetic evidence.
-6. Compare one bounded machine-learning model with the transparent benchmark under the same prediction time, eligible features, split, and evaluation rows.
-7. Keep calibration, subgroup support, error costs, failure cases, test contamination, leakage, and whether machine learning changes the decision explicit.
-8. Assemble the cumulative Week 6 package, score the 25-point survival/risk component and 20-point variation component exactly once, validate, advance semver, commit, and push.
+1. Read the APP-1 course specification, accepted Week 3 and Week 6 checkpoints, Modules 04 through 06 specifications and releases, the Module 07 ownership boundary, and this ledger.
+2. Confirm the intended Joe Joseph, MD, identity and approved publishable biography before learner-facing release.
+3. Write the durable APP-1 Module 07 specification before broad implementation.
+4. Preserve the exact 45-point Week 6 score, every open condition, the equity question, the capacity-aware scheduling proposal, and the no-deployment decision.
+5. Define the clinician decision, stakeholders, feasibility, workflow, safety, equity, workload, and unintended-consequence review.
+6. Set implementation, process, outcome, access, balancing, monitoring, reassessment, rollback, stop, and escalation rules.
+7. Build the final clinical care improvement brief, accessible technical appendix, stakeholder plan, defense, and official-end-date checkpoint without rescoring earlier evidence.
+8. Validate, advance semver, commit, and push before beginning the next applied course.

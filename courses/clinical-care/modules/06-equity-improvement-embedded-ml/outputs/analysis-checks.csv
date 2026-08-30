@@ -1,0 +1,21 @@
+check_id,check,observed,expected,status
+CHK01,accepted people,476,476,pass
+CHK02,accepted outcomes,87,87,pass
+CHK03,recorded follow-up,129,129,pass
+CHK04,equity groups,12,12,pass
+CHK05,training rows,333,333,pass
+CHK06,training events,70,70,pass
+CHK07,evaluation rows,143,143,pass
+CHK08,evaluation events,17,17,pass
+CHK09,fixed features,4,4,pass
+CHK10,fixed threshold,0.20000000,0.20000000,pass
+CHK11,bootstrap replicates,1000,1000,pass
+CHK12,model rows,2,2,pass
+CHK13,transparent weighted cost,44,44,pass
+CHK14,bounded RF weighted cost,67,67,pass
+CHK15,paired comparisons,2,2,pass
+CHK16,subgroup audit rows,24,24,pass
+CHK17,supported subgroup model rows,12,12,pass
+CHK18,false-negative and aggregate rows,17,17,pass
+CHK19,source-recorded gender missing,0,0,pass
+CHK20,small groups remain separate,2,2,pass

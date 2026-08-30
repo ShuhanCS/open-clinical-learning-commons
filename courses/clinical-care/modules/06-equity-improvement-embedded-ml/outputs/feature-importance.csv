@@ -1,0 +1,5 @@
+model,feature,importance,interpretation
+bounded_rf,age_decade_from_40,0.35570506,model allocation only; not causal importance
+bounded_rf,any_prior_acute,0.00000000,model allocation only; not causal importance
+bounded_rf,prior_365d_condition_count,0.33334882,model allocation only; not causal importance
+bounded_rf,index_inpatient,0.31094612,model allocation only; not causal importance

@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.53.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 has a complete course specification, its first five runnable modules, and its Week 3 checkpoint.
+- Current version: `0.54.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 has a complete course specification, its first six runnable modules, and its Week 3 and Week 6 checkpoints.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -70,6 +70,10 @@ The cumulative [APP-1 Week 3 checkpoint](courses/clinical-care/checkpoints/01-lo
 The fourth runnable unit is [APP-1 Module 04: Risk adjustment and fair comparison](courses/clinical-care/modules/04-risk-adjustment-fair-comparison/README.md), governed by the durable [Module 04 specification](docs/curriculum/courses/APP-1/modules/04-risk-adjustment-fair-comparison-spec.md). It classifies all 49 accepted fields, fits a four-predictor fixed-horizon expected-outcome model, releases calibration and bootstrap evidence, and compares scheduled-follow-up groups and six synthetic teaching sites without causal, fairness, ranking, or deployment claims.
 
 The fifth runnable unit is [APP-1 Module 05: Clinical variation and patterns of care](courses/clinical-care/modules/05-clinical-variation-patterns-of-care/README.md), governed by the durable [Module 05 specification](docs/curriculum/courses/APP-1/modules/05-clinical-variation-patterns-of-care-spec.md). It reads the full pinned Synthea database without generating new clinical rows, distinguishes treatment records from adherence, compares exact process, procedure, utilization, outcome, clinical-subgroup, site, and time patterns, and hands Module 06 one bounded variation finding without causal or site-ranking claims.
+
+The sixth runnable unit is [APP-1 Module 06: Equity, feasible improvement, and embedded machine learning](courses/clinical-care/modules/06-equity-improvement-embedded-ml/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/APP-1/modules/06-equity-improvement-embedded-ml-spec.md). It prespecifies 12 subgroup summaries, preserves support and suppression, maps observed and missing pathway states, designs a capacity-aware prospective workflow, and shows that one bounded random forest does not improve the held-out case enough to change the decision.
+
+The cumulative [APP-1 Week 6 checkpoint](courses/clinical-care/checkpoints/02-adjusted-variation-improvement-release/README.md) freezes 100 accepted artifacts from Modules 04 through 06. It assigns 25 points to Module 04 and 20 points to Module 05 exactly once, while keeping Module 06 as a required non-scored gate before clinician leadership review.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

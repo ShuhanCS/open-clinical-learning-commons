@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "app1-equity-improvement-ml-v1",
+  "population": "all 476 accepted day-30-landmark-eligible synthetic people",
+  "prediction_time": "day-30 landmark",
+  "outcome": "first later acute return by day 335 after landmark",
+  "features": ["age_decade_from_40", "any_prior_acute", "prior_365d_condition_count", "index_inpatient"],
+  "audit_only_fields": ["gender", "race", "ethnicity"],
+  "prohibited_features": ["landmark_exposure", "recorded_followup", "teaching_site_id", "expected_probability", "outcome_fields", "post_landmark_fields", "synthetic_assignment_fields", "demographic_audit_fields"],
+  "split": {
+    "order": ["index_start", "patient_id"],
+    "training_rows": 333,
+    "evaluation_rows": 143,
+    "evaluation_events": 17,
+    "randomness": "none"
+  },
+  "transparent_model": "training-only binomial generalized linear model with logit link",
+  "machine_learning_model": {
+    "class": "RandomForestClassifier",
+    "n_estimators": 200,
+    "max_depth": 3,
+    "min_samples_leaf": 15,
+    "max_features": null,
+    "random_state": 20260830,
+    "n_jobs": 1
+  },
+  "evaluation": ["brier", "roc_auc", "log_loss", "calibration_intercept", "calibration_slope", "confusion_counts", "weighted_error_cost"],
+  "calibration_groups": 5,
+  "threshold": 0.20,
+  "threshold_status": "fixed teaching threshold not a clinical intervention threshold",
+  "error_costs": {"false_negative": 3, "false_positive": 1, "status": "educational sensitivity scenario not clinical value"},
+  "bootstrap": {"replicates": 1000, "seed": 20260830, "method": "paired stratified person resampling"},
+  "equity_support": {
+    "process": {"minimum_people": 30, "minimum_numerator": 5, "minimum_complement": 5},
+    "outcome": {"minimum_people": 30, "minimum_events": 5, "minimum_non_events": 5, "minimum_expected_events": 5},
+    "model_audit": {"minimum_evaluation_rows": 30, "minimum_events": 5, "minimum_non_events": 5},
+    "merge_small_groups": "prohibited",
+    "ranking": "prohibited"
+  },
+  "claim_boundary": "synthetic teaching comparison; no fairness certification group-specific threshold clinical implementation or deployment"
+}

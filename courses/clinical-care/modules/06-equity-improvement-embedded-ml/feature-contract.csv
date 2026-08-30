@@ -1,0 +1,13 @@
+feature,source_field,transformation,eligible,role,reason
+age_decade_from_40,age_at_index,(age_at_index - 40) / 10,yes,baseline predictor,accepted Module 04 transparent formula
+any_prior_acute,prior_365d_acute_count,1 if count is greater than 0 else 0,yes,baseline predictor,accepted Module 04 transparent formula
+prior_365d_condition_count,prior_365d_condition_count,none,yes,baseline predictor,accepted Module 04 transparent formula
+index_inpatient,index_encounter_class,1 if inpatient else 0,yes,baseline predictor,accepted Module 04 transparent formula
+landmark_exposure,landmark_exposure,none,no,post-index pathway exposure,prohibited from the prediction benchmark
+teaching_site_id,teaching_site_id,none,no,synthetic assignment field,prohibited from the prediction benchmark
+expected_probability,expected_probability,none,no,upstream model output,would leak the benchmark prediction into comparison
+gender,gender,none,no,audit-only demographic field,not an eligible predictor
+race,race,none,no,audit-only demographic field,not an eligible predictor
+ethnicity,ethnicity,none,no,audit-only demographic field,not an eligible predictor
+event_indicator,event_indicator,none,no,outcome,label leakage
+post_landmark_fields,care pattern fields after day 30,none,no,post-prediction information,feature leakage

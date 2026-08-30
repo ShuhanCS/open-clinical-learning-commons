@@ -13,7 +13,7 @@
 - R role: read, run, and interpret published survival and risk-adjustment code; writing R from scratch is not graded.
 - Final deliverable: clinical care improvement brief with complete reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.53.0 through runnable Module 05.
+- Current Commons release: 0.54.0 through runnable Module 06 and the Week 6 checkpoint.
 - Specification status: construction candidate.
 
 APP-1 is the first applied course. Learners follow a clinical cohort over time, compare care and outcomes while accounting for baseline differences, and recommend a feasible care-pathway improvement. The course takes longitudinal cohorts, censoring, survival analysis, risk adjustment, and clinical variation from foundation recognition to working skill.
@@ -580,12 +580,18 @@ Each module may proceed as a curriculum-construction reference with explicit con
 ### Module specifications
 
 1. `docs/curriculum/courses/APP-1/modules/01-care-pathway-decision-spec.md`.
-2. `docs/curriculum/courses/APP-1/modules/02-longitudinal-cohort-follow-up-spec.md`.
+2. `docs/curriculum/courses/APP-1/modules/02-longitudinal-cohorts-followup-spec.md`.
 3. `docs/curriculum/courses/APP-1/modules/03-survival-time-to-event-spec.md`.
 4. `docs/curriculum/courses/APP-1/modules/04-risk-adjustment-fair-comparison-spec.md`.
-5. `docs/curriculum/courses/APP-1/modules/05-clinical-variation-patterns-spec.md`.
+5. `docs/curriculum/courses/APP-1/modules/05-clinical-variation-patterns-of-care-spec.md`.
 6. `docs/curriculum/courses/APP-1/modules/06-equity-improvement-embedded-ml-spec.md`.
 7. `docs/curriculum/courses/APP-1/modules/07-clinician-leadership-defense-spec.md`.
+
+### Checkpoint specifications
+
+1. `docs/curriculum/courses/APP-1/checkpoints/01-longitudinal-survival-readiness-spec.md`.
+2. `docs/curriculum/courses/APP-1/checkpoints/02-adjusted-variation-improvement-release-spec.md`.
+3. `docs/curriculum/courses/APP-1/checkpoints/03-clinical-care-improvement-package-spec.md`.
 
 ### Build sequence
 

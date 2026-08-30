@@ -1,0 +1,13 @@
+dimension,source_field,group,group_order,process_minimum_people,process_minimum_numerator,process_minimum_complement,outcome_minimum_people,outcome_minimum_events,outcome_minimum_non_events,outcome_minimum_expected,field_meaning,claim_limit
+age_band,age_at_index,18-44,1,30,5,5,30,5,5,5,calculated age at the index encounter,synthetic source result does not prove access need preference burden or inequity
+age_band,age_at_index,45-64,2,30,5,5,30,5,5,5,calculated age at the index encounter,synthetic source result does not prove access need preference burden or inequity
+age_band,age_at_index,65+,3,30,5,5,30,5,5,5,calculated age at the index encounter,synthetic source result does not prove access need preference burden or inequity
+source_recorded_gender,gender,F,1,30,5,5,30,5,5,5,source-recorded value not established gender identity,synthetic source result does not prove access discrimination fairness or inequity
+source_recorded_gender,gender,M,2,30,5,5,30,5,5,5,source-recorded value not established gender identity,synthetic source result does not prove access discrimination fairness or inequity
+source_recorded_race,race,asian,1,30,5,5,30,5,5,5,synthetic source category,synthetic source result does not prove lived identity access discrimination fairness or inequity
+source_recorded_race,race,black,2,30,5,5,30,5,5,5,synthetic source category,synthetic source result does not prove lived identity access discrimination fairness or inequity
+source_recorded_race,race,native,3,30,5,5,30,5,5,5,synthetic source category,synthetic source result does not prove lived identity access discrimination fairness or inequity
+source_recorded_race,race,other,4,30,5,5,30,5,5,5,synthetic source category,synthetic source result does not prove lived identity access discrimination fairness or inequity
+source_recorded_race,race,white,5,30,5,5,30,5,5,5,synthetic source category,synthetic source result does not prove lived identity access discrimination fairness or inequity
+source_recorded_ethnicity,ethnicity,hispanic,1,30,5,5,30,5,5,5,synthetic source category,synthetic source result does not prove lived identity access discrimination fairness or inequity
+source_recorded_ethnicity,ethnicity,nonhispanic,2,30,5,5,30,5,5,5,synthetic source category,synthetic source result does not prove lived identity access discrimination fairness or inequity

@@ -1,0 +1,12 @@
+node_id,label,count,evidence_status,meaning
+N01,Landmark-eligible people,476,observed,accepted analysis population
+N02,Recorded scheduled follow-up by day 30,129,observed,qualifying source record present
+N03,No qualifying follow-up record by day 30,347,observed,qualifying source record absent
+N04,Recorded follow-up and later acute return,25,observed,record pattern not a causal pathway
+N05,Recorded follow-up and no later acute return,104,observed,record pattern not benefit
+N06,No qualifying record and later acute return,62,observed,record pattern not preventability
+N07,No qualifying record and no later acute return,285,observed,record pattern not lack of need
+N08,Offer documented,,prospective collection,not observed retrospectively
+N09,Preference and acceptance documented,,prospective collection,not observed retrospectively
+N10,Appointment status before discharge,,prospective collection,not observed retrospectively
+N11,Completion barriers and burden,,prospective collection,not observed retrospectively

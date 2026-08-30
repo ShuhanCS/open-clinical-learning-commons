@@ -1,0 +1,4 @@
+driver_id,level,parent,statement,measure_link,candidate_change,status,claim_limit
+D00,aim,,REPLACE,REPLACE,,proposed,REPLACE
+D01,primary,D00,REPLACE,REPLACE,REPLACE,proposed,REPLACE
+D02,secondary,D01,REPLACE,REPLACE,REPLACE,proposed,REPLACE

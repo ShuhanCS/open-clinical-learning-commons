@@ -1,0 +1,81 @@
+{
+  "analysis_checks": 20,
+  "claim_boundary": "synthetic curriculum evidence only; no real access fairness ranking clinical use or deployment",
+  "commons_release": "0.54.0",
+  "models": {
+    "bootstrap_replicates": 1000,
+    "bounded_rf": "RandomForestClassifier",
+    "features": [
+      "age_decade_from_40",
+      "any_prior_acute",
+      "prior_365d_condition_count",
+      "index_inpatient"
+    ],
+    "seed": 20260830,
+    "threshold": "0.20000000",
+    "transparent": "binomial GLM logit"
+  },
+  "module": "oclc-app1-06",
+  "module_version": "0.1.0",
+  "outputs": [
+    "analysis-checks.csv",
+    "bootstrap-comparison.csv",
+    "build-report.json",
+    "calibration-bins.csv",
+    "equity-summary.csv",
+    "failure-cases.csv",
+    "feature-importance.csv",
+    "model-performance.csv",
+    "model-predictions.csv",
+    "pathway-edges.csv",
+    "pathway-figure.svg",
+    "pathway-nodes.csv",
+    "split-registry.csv",
+    "subgroup-model-audit.csv",
+    "threshold-errors.csv"
+  ],
+  "population": {
+    "evaluation_events": 17,
+    "evaluation_rows": 143,
+    "events": 87,
+    "people": 476,
+    "recorded_followup": 129,
+    "training_events": 70,
+    "training_rows": 333
+  },
+  "reference_findings": {
+    "bounded_rf_auc": "0.62371615",
+    "bounded_rf_brier": "0.10745654",
+    "bounded_rf_weighted_error_cost": 67,
+    "equity_conclusion": "question retained; key access states are not observed",
+    "implementation_authorization": "not authorized",
+    "ml_changes_improvement_decision": "no",
+    "transparent_auc": "0.66363212",
+    "transparent_brier": "0.09609243",
+    "transparent_weighted_error_cost": 44
+  },
+  "sources": {
+    "care": {
+      "access": "read-only accepted CSV extract",
+      "bytes": 99475,
+      "fields": 26,
+      "rows": 476,
+      "sha256": "c5d372e777ff3b190859e7c418b87c4f165776b84fb86346db700fa39f516a6e"
+    },
+    "cohort": {
+      "access": "read-only accepted CSV extract",
+      "bytes": 200699,
+      "fields": 49,
+      "rows": 476,
+      "sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5"
+    },
+    "expected": {
+      "access": "read-only accepted CSV extract",
+      "bytes": 54320,
+      "fields": 12,
+      "rows": 476,
+      "sha256": "e6c4efbe845bc1047040d27760aa22cf63a462ba4cca6709d6bdff8578af840e"
+    }
+  },
+  "status": "pass"
+}

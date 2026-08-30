@@ -1,0 +1,5 @@
+evidence_id,source_id,source_version,commons_release,candidate_directory,assembled_files,workspace_manifest_sha256,course_points,score_treatment,gate_treatment,progression
+E01,oclc-app1-cp01,REPLACE,REPLACE,accepted identity only,REPLACE,REPLACE,0,accepted prerequisite not rescored,REPLACE,REPLACE
+E02,oclc-app1-04,REPLACE,REPLACE,candidate/module-04,REPLACE,REPLACE,25,score exactly once,REPLACE,REPLACE
+E03,oclc-app1-05,REPLACE,REPLACE,candidate/module-05,REPLACE,REPLACE,20,score exactly once,REPLACE,REPLACE
+E04,oclc-app1-06,REPLACE,REPLACE,candidate/module-06,REPLACE,REPLACE,0,required gate with no extra points,REPLACE,REPLACE

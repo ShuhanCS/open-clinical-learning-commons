@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app1-cp02",
+    "title": "Adjusted variation and feasible improvement",
+    "version": "0.1.0",
+    "commons_release": "0.54.0",
+    "timing": "end of instructional Week 6",
+    "course_points": 45
+  },
+  "accepted_week3": {
+    "checkpoint_id": "oclc-app1-cp01",
+    "version": "0.1.0",
+    "commons_release": "0.51.0",
+    "candidate_manifest_sha256": "ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app1-04", "version": "0.1.0", "commons_release": "0.52.0", "assembled_files": 32, "manifest_sha256": "5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb", "points": 25},
+    {"id": "oclc-app1-05", "version": "0.1.0", "commons_release": "0.53.0", "assembled_files": 30, "manifest_sha256": "7106a0ec0b412c61768eff72f03062e60cb3d9dfc0a887bb81be8f4475e7363e", "points": 20},
+    {"id": "oclc-app1-06", "version": "0.1.0", "commons_release": "0.54.0", "assembled_files": 38, "manifest_sha256": "b7127dbfac9e7a9549ea682499a1ca5d368a4acbbc20da2e307324be5813b978", "points": 0}
+  ],
+  "score": {
+    "module04": 25,
+    "module05": 20,
+    "module06": 0,
+    "total": 45,
+    "double_counted_components": 0
+  },
+  "reference_decision": {
+    "score": "45.00 of 45.00",
+    "module04_gates": "18 of 18 pass",
+    "module05_gates": "18 of 18 pass",
+    "module06_gates": "24 of 24 pass",
+    "checkpoint_gates": "18 of 18 pass",
+    "progression": "continue with conditions",
+    "module07_permission": "permitted for curriculum construction",
+    "clinical_implementation": "prohibited",
+    "model_deployment": "prohibited"
+  },
+  "package": {
+    "candidate_files": 100,
+    "assembled_files": 113,
+    "candidate_manifest_bytes": 17062,
+    "candidate_manifest_sha256": "f5f892c2b5f6c193f5389c10f7e60df81b1400ca5a163734a103efa745c54ed1"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_checks": 496,
+    "learner_checks": 473,
+    "copied_validator_check": "pass",
+    "two_build_match": "pass",
+    "candidate_mutation_rejection": "pass",
+    "score_mutation_rejection": "pass",
+    "progression_mutation_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint contract, deterministic assembly, teaching records, and validation"}
+  ],
+  "known_issues": [
+    "Named clinical, improvement, methods, equity, informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "The accepted source is synthetic and cannot support real clinical, causal, fairness, ranking, implementation, or deployment claims.",
+    "The Week 3 PH-screen condition remains open and cannot be erased by the checkpoint score.",
+    "Offer, preference, appointment status, completion, barriers, and burden require prospective collection.",
+    "Module 07 leadership must decide whether to narrow, defer, refer, stop, or propose a bounded test."
+  ]
+}

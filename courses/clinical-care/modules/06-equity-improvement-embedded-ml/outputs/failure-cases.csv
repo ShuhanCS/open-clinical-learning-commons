@@ -1,0 +1,18 @@
+model,error_type,patient_id_or_aggregate,count,probability_or_mean,event_indicator,age_decade_from_40,any_prior_acute,prior_365d_condition_count,index_inpatient,review_boundary
+transparent,false_negative,0edbb001-5914-42b6-9194-0a3c753b5c25,1,0.15968857,1,0.70000000,0,1,0,baseline feature review only; no invented clinical story
+transparent,false_negative,f6f561cc-1e0a-4f36-80c9-4b734d4b1a2e,1,0.16068504,1,2.10000000,0,1,0,baseline feature review only; no invented clinical story
+transparent,false_negative,c71fe37e-26f4-4b41-b017-5be7b5e129fe,1,0.18263108,1,-1.30000000,0,2,0,baseline feature review only; no invented clinical story
+transparent,false_negative,92d23553-700d-488f-83a5-2ba9b9544295,1,0.15848530,1,-1.00000000,0,1,0,baseline feature review only; no invented clinical story
+transparent,false_negative,aa041f6e-348c-4fcc-b3a4-c65d2d38b996,1,0.15997276,1,1.10000000,0,1,0,baseline feature review only; no invented clinical story
+transparent,false_negative,af08878c-08dc-4938-aebd-cd5da315c479,1,0.13920093,1,2.80000000,0,0,0,baseline feature review only; no invented clinical story
+transparent,false_negative,b271a454-c57e-4566-899a-956e5484c5e1,1,0.18302631,1,-0.80000000,0,2,0,baseline feature review only; no invented clinical story
+transparent,false_negative,2d3e8561-04d7-48eb-8bac-a978d10f5641,1,0.15975958,1,0.80000000,0,1,0,baseline feature review only; no invented clinical story
+transparent,false_negative,0ace3e15-8aa4-41c5-8b90-2408285ebcfe,1,0.15862648,1,-0.80000000,0,1,0,baseline feature review only; no invented clinical story
+transparent,false_positive_aggregate,all false positives,17,0.35482599,0,,,,,aggregate workload review; no patient-level action or clinical value claim
+bounded_rf,false_negative,0edbb001-5914-42b6-9194-0a3c753b5c25,1,0.07404999,1,0.70000000,0,1,0,baseline feature review only; no invented clinical story
+bounded_rf,false_negative,f6f561cc-1e0a-4f36-80c9-4b734d4b1a2e,1,0.08252273,1,2.10000000,0,1,0,baseline feature review only; no invented clinical story
+bounded_rf,false_negative,92d23553-700d-488f-83a5-2ba9b9544295,1,0.10443603,1,-1.00000000,0,1,0,baseline feature review only; no invented clinical story
+bounded_rf,false_negative,aa041f6e-348c-4fcc-b3a4-c65d2d38b996,1,0.07404999,1,1.10000000,0,1,0,baseline feature review only; no invented clinical story
+bounded_rf,false_negative,2d3e8561-04d7-48eb-8bac-a978d10f5641,1,0.07404999,1,0.80000000,0,1,0,baseline feature review only; no invented clinical story
+bounded_rf,false_negative,0ace3e15-8aa4-41c5-8b90-2408285ebcfe,1,0.10443603,1,-0.80000000,0,1,0,baseline feature review only; no invented clinical story
+bounded_rf,false_positive_aggregate,all false positives,49,0.27090234,0,,,,,aggregate workload review; no patient-level action or clinical value claim

@@ -1,0 +1,5 @@
+evidence_id,source_id,source_version,commons_release,candidate_directory,assembled_files,workspace_manifest_sha256,course_points,score_treatment,gate_treatment,progression
+E01,oclc-app1-cp01,0.1.0,0.51.0,accepted identity only,78,ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860,0,accepted prerequisite not rescored,open survival and reviewer conditions retained,continue with conditions
+E02,oclc-app1-04,0.1.0,0.52.0,candidate/module-04,32,5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb,25,score 25.00 exactly once,all 18 adjustment gates accepted,continue with conditions
+E03,oclc-app1-05,0.1.0,0.53.0,candidate/module-05,30,7106a0ec0b412c61768eff72f03062e60cb3d9dfc0a887bb81be8f4475e7363e,20,score 20.00 exactly once,all 18 variation gates accepted,continue with conditions
+E04,oclc-app1-06,0.1.0,0.54.0,candidate/module-06,38,b7127dbfac9e7a9549ea682499a1ca5d368a4acbbc20da2e307324be5813b978,0,required gate with no extra points,all 24 equity improvement and ML gates accepted,continue with conditions

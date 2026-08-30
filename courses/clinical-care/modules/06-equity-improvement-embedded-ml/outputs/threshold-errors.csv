@@ -1,0 +1,9 @@
+model,threshold,classification,count,unit_cost,weighted_cost,cost_status
+transparent,0.20000000,true_negative,109,0,0,educational sensitivity scenario not clinical value
+transparent,0.20000000,false_positive,17,1,17,educational sensitivity scenario not clinical value
+transparent,0.20000000,false_negative,9,3,27,educational sensitivity scenario not clinical value
+transparent,0.20000000,true_positive,8,0,0,educational sensitivity scenario not clinical value
+bounded_rf,0.20000000,true_negative,77,0,0,educational sensitivity scenario not clinical value
+bounded_rf,0.20000000,false_positive,49,1,49,educational sensitivity scenario not clinical value
+bounded_rf,0.20000000,false_negative,6,3,18,educational sensitivity scenario not clinical value
+bounded_rf,0.20000000,true_positive,11,0,0,educational sensitivity scenario not clinical value

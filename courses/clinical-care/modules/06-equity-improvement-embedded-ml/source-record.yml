@@ -1,0 +1,26 @@
+module_id: oclc-app1-06
+module_version: 0.1.0
+commons_release: 0.54.0
+accepted_upstream:
+  module05_id: oclc-app1-05
+  module05_version: 0.1.0
+  module05_commons_release: 0.53.0
+  module05_manifest_sha256: 7106a0ec0b412c61768eff72f03062e60cb3d9dfc0a887bb81be8f4475e7363e
+care_patterns:
+  rows: 476
+  fields: 26
+  bytes: 99475
+  sha256: c5d372e777ff3b190859e7c418b87c4f165776b84fb86346db700fa39f516a6e
+analysis_cohort:
+  rows: 476
+  fields: 49
+  bytes: 200699
+  sha256: 558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5
+expected_outcomes:
+  rows: 476
+  fields: 12
+  bytes: 54320
+  sha256: e6c4efbe845bc1047040d27760aa22cf63a462ba4cca6709d6bdff8578af840e
+analysis_unit: one accepted landmark-eligible synthetic person
+source_access: accepted CSV extracts read-only
+claim_boundary: synthetic curriculum evidence only; no real access fairness group ranking clinical use or model deployment claim

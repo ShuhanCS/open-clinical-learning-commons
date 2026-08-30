@@ -1,0 +1,12 @@
+driver_id,level,parent,statement,measure_link,candidate_change,status,claim_limit
+D00,aim,,Make wanted post-discharge follow-up more reliable without adding avoidable delay or burden,M04,,proposed,leadership review required before a prospective test
+D01,primary,D00,Reliable identification of eligible discharges,M01,Add an eligibility screen to the discharge workflow,proposed,eligibility requires clinical owner confirmation
+D02,primary,D00,Patient preference is known and respected,M02,Document offer preference acceptance or decline,proposed,decline is not failure
+D03,primary,D00,Scheduling capacity is visible before discharge,M03,Show appointment status and capacity barrier,proposed,an appointment is not always wanted or appropriate
+D04,primary,D00,Transition handoff is complete and usable,M04,Confirm the selected pathway and contact route,proposed,documentation is not completed care
+D05,primary,D00,Safe escalation exists when the preferred route is unavailable,M07,Route urgent or unresolved needs to a clinician-owned alternative,proposed,workflow cannot substitute for clinical judgment
+D06,secondary,D01,Eligibility logic is consistent,M01,Use a short reviewed checklist,proposed,synthetic evidence does not define real eligibility
+D07,secondary,D02,Communication supports are available,M05,Record communication need and requested support,proposed,source categories do not measure communication access
+D08,secondary,D03,Capacity constraints have an owner,M03,Record barrier type and escalation owner,proposed,capacity data are not present retrospectively
+D09,secondary,D04,Completion and cancellation are observable,M04,Collect completion cancellation and barrier states,proposed,a record is not proof of benefit
+D10,secondary,D05,Safety exceptions trigger review,M07,Define escalation and stop rules before testing,proposed,no retrospective causal safety claim

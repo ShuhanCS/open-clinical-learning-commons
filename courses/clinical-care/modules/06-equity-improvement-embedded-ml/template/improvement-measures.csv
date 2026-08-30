@@ -1,0 +1,7 @@
+measure_id,role,label,numerator,denominator,timing,owner,source,stratification,interpretation,failure_response,reference_status
+M01,implementation,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,prospective workflow record,REPLACE,REPLACE,REPLACE,not available retrospectively
+M02,process,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,prospective workflow record,REPLACE,REPLACE,REPLACE,not available retrospectively
+M03,outcome,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,prospective workflow record,REPLACE,REPLACE,REPLACE,not available retrospectively
+M04,access,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,prospective workflow record,REPLACE,REPLACE,REPLACE,not available retrospectively
+M05,balancing,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,prospective workflow record,REPLACE,REPLACE,REPLACE,not available retrospectively
+M06,safety,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,prospective workflow record,REPLACE,REPLACE,REPLACE,not available retrospectively
