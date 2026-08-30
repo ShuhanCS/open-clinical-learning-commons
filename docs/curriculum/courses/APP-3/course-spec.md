@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.65.0 through course specification and source architecture.
+- Current Commons release: 0.66.0 through Module 01.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -177,15 +177,29 @@ The full CMS Complications and Deaths - Hospital dataset supplies aggregate safe
 
 https://data.cms.gov/provider-data/dataset/ynj2-r877
 
-Module 01 must pin the accepted full release before use. Public PSI evidence cannot detect a current local event, identify a bottleneck, or establish the cause of harm.
+Module 01 pins the accepted complete release:
+
+| Item | Accepted fact |
+|---|---|
+| CMS release date | 2026-08-13 |
+| Full rows | 95,800 |
+| Full columns | 18 |
+| Full bytes | 22,963,267 |
+| Full SHA-256 | `26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d` |
+| Facilities | 4,790 |
+| Measures | 20 |
+
+Public PSI evidence cannot detect a current local event, identify a bottleneck, or establish the cause of harm.
 
 ### Historical capacity context
 
-The HHS COVID-19 Reported Patient Impact and Hospital Capacity by Facility source supplies historical weekly utilization, capacity, occupancy, coverage, and staffing-shortage fields:
+The HHS COVID-19 Reported Patient Impact and Hospital Capacity by Facility source supplies historical weekly utilization, capacity, occupancy, coverage, emergency-demand, and correction fields:
 
 https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u
 
-Required reporting ended after 2024-05-03. The source is useful for teaching coverage, definitions, reporting changes, and historical context. It cannot support a current staffing decision.
+The accepted complete snapshot contains 1,045,406 facility-week rows, 128 columns, 5,172 facilities, and 226 weeks from 2019-12-29 through 2024-04-21. It is 481,497,539 bytes with SHA-256 `b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f`.
+
+Required reporting ended after 2024-05-03. The source is useful for teaching coverage, definitions, reporting changes, and historical context. It cannot support a current staffing decision. The complete binary is too large for routine Git storage, so Module 01 preserves its exact identity and a deterministic all-row Massachusetts extract containing 15,179 rows and 24 decision-relevant fields.
 
 ### Synthetic operational release
 
@@ -227,6 +241,7 @@ Module 06 contains eight hours of application, feasibility, and monitoring work 
 - Specification: `docs/curriculum/courses/APP-3/modules/01-clinical-performance-decision-spec.md`.
 - Decision: whether the service problem, unit of flow, source evidence, measure family, and accountable action are defined well enough to begin measure construction.
 - Submission: clinical performance charter.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.66.0`.
 
 Learners distinguish quality improvement from performance reporting, define error, near miss, adverse event, and harm, name the encounter as the primary unit of flow, map demand and capacity, write a bounded aim, identify owners and affected groups, and separate public aggregate context from the synthetic local case.
 
@@ -494,8 +509,7 @@ Open conditions before alpha:
 
 - Confirm Joe Joseph's participation, schedule, format, recording permission, and final biography wording.
 - Assign the official course section and half-term dates before publishing due dates.
-- Pin and fingerprint the exact full CMS Complications and Deaths release used by Module 01.
-- Pin and fingerprint the exact full HHS historical capacity snapshot or document why its complete binary cannot be retained in Git.
+- Reacquire and verify the pinned full public releases during pre-alpha independent reproduction.
 - Complete human review of the synthetic operational generator, known truth, subgroup design, safety events, staffing assumptions, and workload language.
 - Declare the exact control-chart families and signal rules after the generated measure distributions are accepted.
 - Declare the exact forecast horizon, rolling-origin folds, benchmark eligibility, and error-cost assumptions after the synthetic calendar-demand release is accepted.
@@ -518,6 +532,6 @@ Construction acceptance for this course-level unit:
 - [x] Synthetic operational data have a required table, truth, provenance, and validation contract.
 - [x] Every checkpoint has a decision, points, evidence, and protected handoff.
 - [x] APP-3 remains distinct from FND-1, FND-2, APP-1, APP-2, and DA-730.
-- [ ] Module 01 is not yet built.
+- [x] Module 01 pins all three complete public snapshots and releases a validated 25-file decision-framing workspace.
 
-Resume with Module 01 only: pin the remaining full public releases, build the source-feasibility and decision-framing workspace, validate it, update semver and the ledger, commit, and push before Module 02 begins.
+Resume with Module 02 only: instantiate the fictional operational event model, build versioned measure specifications, validate denominators and event order, update semver and the ledger, commit, and push before Module 03 begins.

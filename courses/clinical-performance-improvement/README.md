@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.65.0.
-- Current build: course specification and source architecture complete; modules and checkpoints not yet built.
+- Current Commons release: 0.66.0.
+- Current build: course specification, source architecture, and Module 01 complete; later modules and checkpoints not yet built.
 
 APP-3 teaches learners to define and validate clinical performance measures, distinguish process signals from routine variation, diagnose bottlenecks, forecast demand, test capacity and workflow scenarios, and defend a monitored improvement recommendation.
 
@@ -15,7 +15,7 @@ The continuing case is an explicitly fictional adult emergency service, `CGH-ED-
 
 | Module | Title | Hours | Build status |
 |---:|---|---:|---|
-| 01 | Framing a clinical performance and improvement decision | 15.5 | Specified in course contract |
+| 01 | Framing a clinical performance and improvement decision | 15.5 | Runnable release candidate |
 | 02 | Measures and operational metrics | 16.0 | Specified in course contract |
 | 03 | Variation, safety signals, and bottlenecks | 16.5 | Specified in course contract |
 | 04 | Demand forecasting and capacity | 16.5 | Specified in course contract |
@@ -40,5 +40,7 @@ The Week 3 checkpoint combines the source course's 20-point measure build and 20
 - Synthetic service: `CGH-ED-01`, generated and labeled as teaching data only.
 
 The full course contract is [the APP-3 course specification](../../docs/curriculum/courses/APP-3/course-spec.md). Source normalization and data routing are recorded in [the APP-3 source record](../../docs/source/app-3-clinical-performance-improvement-source-record.md).
+
+The first runnable package is [Module 01](modules/01-clinical-performance-decision/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/01-clinical-performance-decision-spec.md). It defines the fictional service, unit of flow, process boundary, measure families, source feasibility, accountability, claim limits, and Module 02 progression decision.
 
 No package authorizes clinical implementation, current hospital performance judgment, patient or workforce targeting, staffing change, or model deployment.

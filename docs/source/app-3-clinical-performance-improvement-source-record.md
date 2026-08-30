@@ -131,7 +131,20 @@ Stable dataset page:
 
 https://data.cms.gov/provider-data/dataset/ynj2-r877
 
-This full public hospital release supplies aggregate patient-safety and adverse-event context, including CMS Medicare PSI 90 and component measures. Module 01 must pin one exact full release before use. Its release URL, date, rows, columns, bytes, hash, reporting periods, measure inventory, unavailable values, and rights record are required.
+This full public hospital release supplies aggregate patient-safety and adverse-event context, including CMS Medicare PSI 90 and component measures. Module 01 accepts this complete snapshot:
+
+| Item | Accepted fact |
+|---|---|
+| Complete CSV | https://data.cms.gov/provider-data/sites/default/files/resources/6af7c44d77436e5a1caac3ce39a83fe9_1785189947/Complications_and_Deaths-Hospital.csv |
+| CMS release date | 2026-08-13 |
+| Full rows | 95,800 |
+| Full columns | 18 |
+| Full facilities | 4,790 |
+| Full measures | 20 |
+| Full bytes | 22,963,267 |
+| Full SHA-256 | `26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d` |
+
+The complete release includes 12 Patient Safety Indicator measures. `PSI_90` has 2,908 reported and 1,882 unavailable scores. `PSI_04` has 1,521 reported and 3,269 unavailable scores. `PSI_03` has 3,056 reported and 1,734 unavailable scores.
 
 The source is public aggregate evidence. It cannot detect a current local incident, establish the cause of harm, replace incident review, or validate the synthetic service.
 
@@ -141,9 +154,28 @@ Stable dataset page:
 
 https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u
 
-The source contains weekly facility-level hospital utilization, capacity, occupancy, coverage, and staffing-shortage fields. Required reporting ended after 2024-05-03, so this is a historical source. It may teach source coverage, capacity definitions, reporting changes, and external context. It cannot support a current staffing decision.
+The source contains weekly facility-level hospital utilization, capacity, occupancy, coverage, emergency-demand, and correction fields. Required reporting ended after 2024-05-03, so this is a historical source. It may teach source coverage, capacity definitions, reporting changes, and external context. It cannot support a current staffing decision.
 
-Because the full source may exceed repository limits, the build must still inspect and fingerprint the complete accepted snapshot. A deterministic teaching selection may be committed only with the complete-source URL, metadata, acquisition date, row count, byte count, hash, query or selection code, and an explanation of why the full binary is not stored in Git.
+Module 01 accepts this complete snapshot:
+
+| Item | Accepted fact |
+|---|---|
+| Complete CSV | https://healthdata.gov/api/views/anag-cw7u/rows.csv?accessType=DOWNLOAD |
+| Metadata | https://healthdata.gov/api/views/anag-cw7u |
+| Last update | 2024-05-03 |
+| Full rows | 1,045,406 |
+| Full columns | 128 |
+| Full facilities | 5,172 |
+| Full weeks | 226 |
+| Full date range | 2019-12-29 through 2024-04-21 |
+| Corrected false rows | 1,005,914 |
+| Corrected true rows | 39,492 |
+| Full bytes | 481,497,539 |
+| Full SHA-256 | `b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f` |
+| Repository extract | all 15,179 Massachusetts rows across 74 facilities and 24 decision-relevant fields |
+| Extract raw SHA-256 | `7689038ce3dd013fe26daf3e6433b15f419a10360e19d3a063789ce5ae2c1068` |
+
+The full 481,497,539-byte binary is not stored in Git. The module records the complete URL, metadata, acquisition date, row count, byte count, hash, query or selection code, and exclusion reason. Its profiler refuses to reproduce the teaching selection unless the supplied full national CSV matches the pinned identity.
 
 ### Public guidance and definitions
 

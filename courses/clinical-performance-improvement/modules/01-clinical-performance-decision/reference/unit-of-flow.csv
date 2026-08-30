@@ -1,0 +1,7 @@
+state_id,sequence,state,clock_status,required_fields,decision_use,failure_branch,owner
+U01,1,recorded arrival,starts encounter clock,encounter_id and arrival_at,define entry and arrival demand,missing or duplicate arrival,Module 02 data owner
+U02,2,triage,continues encounter clock,triage_at and acuity,define early process state,triage before arrival or missing triage,clinical process reviewer
+U03,3,roomed,continues encounter clock,roomed_at and care_area,define waiting transition,roomed before triage or no room state,operations reviewer
+U04,4,first clinician contact,continues encounter clock,clinician_at,define clinician-delay process measure,contact before arrival or absent contact,clinical process reviewer
+U05,5,disposition decision,continues encounter clock,disposition_at and disposition,define decision-completion state,decision before clinician or missing disposition,clinical process reviewer
+U06,6,recorded departure,stops encounter clock,departure_at and departure_status,define exit and total duration,departure before prior states or unresolved encounter,Module 02 data owner

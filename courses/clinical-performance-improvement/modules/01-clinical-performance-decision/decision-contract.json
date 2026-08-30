@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app3-01",
+    "title": "Framing a clinical performance and improvement decision",
+    "version": "0.1.0",
+    "commons_release": "0.66.0",
+    "course": "APP-3: Data for Clinical Performance and Improvement",
+    "week": 1,
+    "hours": 15.5
+  },
+  "decision": {
+    "owner": "CGH-ED-01 clinical performance and improvement council",
+    "question": "Are the service problem, unit of flow, source evidence, measure families, and accountable action defined well enough to build the local measurement system?",
+    "next_action": "build and validate local measure definitions from the fictional service event model in Module 02"
+  },
+  "service": {
+    "id": "CGH-ED-01",
+    "status": "fictional adult emergency service",
+    "unit_of_flow": "one synthetic adult emergency encounter",
+    "operational_tables_begin": "Module 02",
+    "public_hospital_linkage": "prohibited"
+  },
+  "sources": {
+    "timely": {
+      "dataset_id": "yv7e-xc69",
+      "release_date": "2026-08-13",
+      "rows": 138084,
+      "columns": 16,
+      "bytes": 34150899,
+      "sha256": "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516"
+    },
+    "complications": {
+      "dataset_id": "ynj2-r877",
+      "release_date": "2026-08-13",
+      "rows": 95800,
+      "columns": 18,
+      "bytes": 22963267,
+      "sha256": "26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d"
+    },
+    "capacity": {
+      "dataset_id": "anag-cw7u",
+      "last_update": "2024-05-03",
+      "rows": 1045406,
+      "columns": 128,
+      "bytes": 481497539,
+      "sha256": "b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f",
+      "facilities": 5172,
+      "weeks": 226,
+      "massachusetts_rows": 15179,
+      "massachusetts_facilities": 74,
+      "full_binary_in_git": false
+    }
+  },
+  "package": {
+    "immutable_manifest_rows": 14,
+    "editable_records": 10,
+    "assembled_files": 25
+  },
+  "assessment": {
+    "course_points_awarded_here": 0,
+    "week3_measure_component_points": 20,
+    "week3_performance_diagnostic_points": 20,
+    "noncompensable_gates": 12
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction"
+  }
+}

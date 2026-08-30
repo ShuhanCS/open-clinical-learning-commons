@@ -1,0 +1,21 @@
+metric_id,metric,value,unit,method,decision_use
+CP01,complete source rows,1045406,facility-weeks,stream complete accepted CSV,confirm full-source inspection
+CP02,complete source columns,128,fields,read complete header,confirm schema scale
+CP03,complete source bytes,481497539,bytes,file size,pin exact external binary
+CP04,complete source SHA-256,b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f,hash,SHA-256 complete bytes,pin exact external binary
+CP05,complete source facilities,5172,facilities,distinct hospital_pk,show national scope
+CP06,complete source weeks,226,weeks,distinct collection_week,show longitudinal coverage
+CP07,first collection week,2019/12/29,date,minimum collection_week,bound historical interpretation
+CP08,last collection week,2024/04/21,date,maximum collection_week,bound historical interpretation
+CP09,corrected false rows,1005914,facility-weeks,count is_corrected=false,retain correction status
+CP10,corrected true rows,39492,facility-weeks,count is_corrected=true,retain correction status
+CP11,Massachusetts extract rows,15179,facility-weeks,retain every state=MA row,provide reproducible teaching scale
+CP12,Massachusetts extract facilities,74,facilities,distinct hospital_pk,show facility support
+CP13,Massachusetts extract columns,24,fields,fixed decision-relevant field list,keep the repository artifact bounded
+CP14,Massachusetts extract raw bytes,1998334,bytes,decompressed artifact size,verify exact extract
+CP15,Massachusetts extract raw SHA-256,7689038ce3dd013fe26daf3e6433b15f419a10360e19d3a063789ce5ae2c1068,hash,SHA-256 decompressed artifact,verify exact extract
+CP16,reported inpatient capacity rows,15057,facility-weeks,exclude blank and -999999,assess capacity-field feasibility
+CP17,reported inpatient use rows,14807,facility-weeks,exclude blank and -999999,assess occupancy-field feasibility
+CP18,reported adult ICU capacity rows,13877,facility-weeks,exclude blank and -999999,assess specialized-capacity feasibility
+CP19,reported emergency visit rows,10909,facility-weeks,exclude blank and -999999,assess demand-field feasibility
+CP20,public patient-level rows,0,rows,source grain audit,prohibit patient inference

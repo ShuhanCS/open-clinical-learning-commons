@@ -1,0 +1,9 @@
+boundary_id,boundary_type,element,included,rule,rationale,owner,next_module
+B01,entry,qualifying adult emergency arrival,yes,age 18 or older and valid arrival state,fix the population and time zero,Module 02 data owner,Module 02
+B02,exit,departure after documented disposition,yes,first valid departure linked to the encounter,fix the end of total duration,Module 02 data owner,Module 02
+B03,setting,CGH-ED-01 adult emergency service,yes,fictional service only,prevent public facility attribution,APP-3 faculty owner,all modules
+B04,setting,pediatric emergency care,no,outside the adult service contract,avoid unsupported clinical scope,clinical reviewer,refer
+B05,setting,inpatient care after admission,no,stop the emergency clock at departure,prevent downstream length of stay from changing the unit,clinical reviewer,refer
+B06,analysis,public hospital ranking,no,public aggregates provide definitions and feasibility only,avoid unsupported comparison,source steward,none
+B07,action,staffing or workflow change,no,requires later diagnosis scenario testing and review,prevent premature recommendation,operations reviewer,Modules 03 through 07
+B08,action,clinical implementation,no,curriculum evidence cannot authorize care,protect patients and accountability,clinical reviewer,refer

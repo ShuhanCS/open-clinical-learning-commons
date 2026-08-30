@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app3-01",
+  "module_version": "0.1.0",
+  "commons_release": "0.66.0",
+  "status": "runnable release candidate",
+  "hours": 15.5,
+  "course_points_awarded_here": 0,
+  "source_snapshots": {
+    "cms_timely_rows": 138084,
+    "cms_complications_rows": 95800,
+    "hhs_capacity_rows": 1045406,
+    "hhs_capacity_repository_extract": "all 15179 Massachusetts rows and 24 decision-relevant columns"
+  },
+  "workspace": {
+    "immutable_manifest_rows": 14,
+    "editable_records": 10,
+    "assembled_files": 25
+  },
+  "reference_decision": {
+    "progression": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction",
+    "clinical_action": "prohibited",
+    "staffing_change": "prohibited",
+    "hospital_ranking": "prohibited",
+    "public_to_synthetic_linkage": "prohibited"
+  },
+  "review_status": "faculty, clinician, improvement, operations, accessibility, privacy, responsible-AI, and independent-instructor review pending before alpha"
+}

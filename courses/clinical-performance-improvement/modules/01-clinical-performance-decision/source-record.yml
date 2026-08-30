@@ -1,0 +1,54 @@
+schema_version: "1.0.0"
+module_id: "oclc-app3-01"
+accepted_on: "2026-08-30"
+sources:
+  - source_id: "CMS-TIMELY-2026-08-13"
+    title: "Timely and Effective Care - Hospital"
+    publisher: "Centers for Medicare & Medicaid Services"
+    dataset_page: "https://data.cms.gov/provider-data/dataset/yv7e-xc69"
+    complete_csv_url: "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv"
+    rows: 138084
+    columns: 16
+    bytes: 34150899
+    sha256: "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516"
+    repository_artifact: "data/raw/Timely_and_Effective_Care-Hospital.csv.gz"
+    role: "public definitions and context for emergency volume, visit duration, and left-before-seen measures"
+  - source_id: "CMS-COMPLICATIONS-2026-08-13"
+    title: "Complications and Deaths - Hospital"
+    publisher: "Centers for Medicare & Medicaid Services"
+    dataset_page: "https://data.cms.gov/provider-data/dataset/ynj2-r877"
+    complete_csv_url: "https://data.cms.gov/provider-data/sites/default/files/resources/6af7c44d77436e5a1caac3ce39a83fe9_1785189947/Complications_and_Deaths-Hospital.csv"
+    rows: 95800
+    columns: 18
+    bytes: 22963267
+    sha256: "26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d"
+    repository_artifact: "data/raw/Complications_and_Deaths-Hospital.csv.gz"
+    role: "public definitions and context for safety and adverse-event measure families"
+  - source_id: "HHS-CAPACITY-2024-05-03"
+    title: "COVID-19 Reported Patient Impact and Hospital Capacity by Facility"
+    publisher: "U.S. Department of Health and Human Services"
+    dataset_page: "https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u"
+    complete_csv_url: "https://healthdata.gov/api/views/anag-cw7u/rows.csv?accessType=DOWNLOAD"
+    metadata_url: "https://healthdata.gov/api/views/anag-cw7u"
+    rows: 1045406
+    columns: 128
+    bytes: 481497539
+    sha256: "b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f"
+    facilities: 5172
+    weeks: 226
+    date_range: "2019-12-29 through 2024-04-21"
+    repository_artifact: "data/raw/HHS-Capacity-Massachusetts.csv.gz"
+    repository_extract: "all 15179 Massachusetts facility-week rows and 24 decision-relevant columns"
+    full_binary_in_git: false
+    full_binary_exclusion_reason: "The complete accepted CSV is 481497539 bytes; its exact URL, size, row count, schema size, and SHA-256 are pinned while a reproducible state extract is stored for teaching."
+    role: "historical capacity, occupancy, coverage, and emergency-demand context"
+rights_and_limits:
+  access: "public government data"
+  patient_level_rows: 0
+  public_source_use: "measure definitions, source feasibility, historical aggregate context, and teaching"
+  prohibited_use: "current local diagnosis, hospital ranking, causal attribution, staffing prescription, patient inference, or linkage to CGH-ED-01"
+synthetic_service:
+  id: "CGH-ED-01"
+  status: "fictional"
+  public_hospital_linkage: "none and prohibited"
+  operational_results_begin: "Module 02"

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.65.0
+- Current release: 0.66.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 course specification and source architecture
-- Next unit: APP-3 Module 01, framing a clinical performance and improvement decision
+- Last completed unit: APP-3 Module 01, framing a clinical performance and improvement decision
+- Next unit: APP-3 Module 02, measures and operational metrics
 
 ## Confirmed decisions
 
@@ -457,12 +457,17 @@
 - APP-3 preserves the source 20-point measure build and 20-point performance diagnostic together at Week 3, the 25-point forecast, scenario, and evaluation component at Week 6, and the 35-point final package on the official half-term end date.
 - The continuing decision asks whether the explicitly fictional `CGH-ED-01` adult emergency service should propose a bounded 12-week flex-staffing and fast-track test. The specification does not authorize a real staffing or workflow change.
 - The public measurement anchor is the accepted 138,084-row CMS Timely and Effective Care release, 34,150,899 bytes, SHA-256 `1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516`.
-- The course source architecture also requires a pinned full CMS Complications and Deaths release and a pinned full HHS historical facility-capacity snapshot before Module 01 can complete.
+- APP-3 Module 01 version 0.1.0 pins the complete 95,800-row, 18-column, 22,963,267-byte CMS Complications and Deaths release with SHA-256 `26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d`.
+- Module 01 also inspects and fingerprints the complete 1,045,406-row, 128-column, 481,497,539-byte HHS historical capacity release with SHA-256 `b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f`.
+- The HHS full binary remains external because of its size. The repository preserves every one of the 15,179 Massachusetts facility-week rows across 74 facilities and 24 decision-relevant fields; its decompressed SHA-256 is `7689038ce3dd013fe26daf3e6433b15f419a10360e19d3a063789ce5ae2c1068`.
+- The Module 01 workspace contains 14 immutable manifest rows, ten editable decision records, and 25 files. It awards zero course points and hands Module 02 the 20-point Week 3 measure component.
+- The reference decision is `continue with conditions`. Operational diagnosis, staffing change, clinical action, hospital ranking, and public-to-synthetic linkage remain prohibited.
+- Complete validation passes 177 checks and starter validation passes 133 structural checks. Source mutation, missing-record, invalid-progression, staffing-claim, incomplete-starter, deterministic-build, and existing-target failure routes pass.
 - The synthetic operational release must contain encounters, process events, staffing, queue snapshots, safety events, calendar demand, scenarios, and known truth with exact generator, seed, relationship, defect, row, byte, and checksum evidence.
 - Modules 01 through 03 form the technical performance block. Modules 04 through 06 form the application block. Module 06 splits evenly between feasibility and monitoring and the embedded ML comparison. Module 07 is clinician led.
 - The ML extension compares the accepted transparent arrival-demand approach with one bounded gradient-boosted forecast under identical target, information cutoff, folds, horizon, and evaluation rows. Better average error alone cannot change the recommendation.
 - APP-3 uses public aggregate sources for definitions and context only. Public reporting cannot establish current local operations, cause, staffing need, safety events, or intervention effect.
-- APP-3 course architecture is complete at Commons 0.65.0. Module 01 is not yet built.
+- APP-3 Module 01 is a runnable release candidate at Commons 0.66.0. Module 02 is next.
 
 ## Pending confirmation
 
@@ -471,16 +476,15 @@
 - Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; the Module 04 MEPS linkage and denominators; the Module 05 synthetic comments, qualitative coding, group support, and equity language; and the Module 06 partnership, improvement, model, and handoff before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Assign the official APP-3 section and half-term dates from the published calendar.
-- Pin and fingerprint the full CMS Complications and Deaths release and full HHS historical facility-capacity snapshot used by APP-3 Module 01.
 - Complete human review of the APP-3 synthetic operational generator, safety-event design, subgroup construction, staffing assumptions, workload language, forecast contract, and scenario boundaries before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-3 course specification, APP-3 source record, curriculum catalog, and this ledger.
-2. Write the durable APP-3 Module 01 specification before building its package.
-3. Pin and fingerprint the complete CMS Complications and Deaths release and HHS historical facility-capacity snapshot selected for the module. Reuse the accepted full CMS Timely and Effective Care identity without silently refreshing it.
-4. Build the `CGH-ED-01` source-feasibility and decision-framing workspace with a clinical performance charter, unit of flow, measure family, process boundary, accountability map, claim boundary, AI record, instructor materials, and progression decision.
-5. Keep public aggregate evidence separate from the fictional local service. Module 01 must not diagnose a bottleneck, prescribe staffing, or imply that synthetic results describe a public hospital.
-6. Validate the reference and incomplete learner package, including deterministic builds, source mutation, false-local-claim, failed-gate, and existing-target failure routes.
-7. Advance semver, update this ledger, commit, and push before Module 02 begins.
+1. Read the master architecture, APP-3 course specification, APP-3 source record, Module 01 specification and package, curriculum catalog, and this ledger.
+2. Write the durable APP-3 Module 02 specification before building its package.
+3. Instantiate the declared `CGH-ED-01` encounters, process-events, staffing, queue-snapshots, safety-events, calendar-demand, scenarios, and known-truth contracts without using a public facility identity.
+4. Build versioned quality, safety, access, flow, capacity, workload, balancing, and supported-equity measure specifications with exact units, numerators, denominators, exclusions, clocks, unavailable states, and owners.
+5. Preserve seeded raw defects and repair them through declared transformations while conserving encounter counts across every branch.
+6. Validate source and derived fields, event order, duplicate inclusion, impossible time, missing transitions, queue conservation, staff-capacity intervals, safety-event detection, and subgroup support.
+7. Release the 20-point measure build, advance semver, update this ledger, commit, and push before Module 03 begins.

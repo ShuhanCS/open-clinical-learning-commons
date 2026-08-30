@@ -1,0 +1,8 @@
+family_id,family,role,unit,denominator_or_base,public_anchor,future_local_source,decision_use,claim_limit,owner
+M01,timeliness,outcome,minutes,eligible completed encounters,OP_18b,encounters and process-events,measure end-to-end and stage delay,no public value is a local target,measure owner
+M02,access and completion,balancing,proportion,all qualifying arrivals,OP_22,encounters and departure status,detect people leaving before completion,no reason or cause inferred from status alone,patient and access reviewer
+M03,process reliability,process,proportion,eligible encounters with required step,none,process-events,measure whether defined steps occur in order,step completion is not patient benefit,clinical process reviewer
+M04,safety,safety,count and rate,eligible encounters or exposure opportunities,PSI_90 and PSI_04,safety-events,keep error near miss adverse event and harm distinct,public PSI data cannot detect a local event,safety reviewer
+M05,demand and capacity,explanatory,encounters beds and staff-hours,calendar week or operational interval,HHS capacity fields,calendar-demand staffing and queue-snapshots,compare arrivals workload and available capacity,historical HHS values are not current local capacity,operations reviewer
+M06,workload and staff burden,balancing,staff-hours and overtime-hours,staffed interval or shift,none,staffing and process-events,measure burden alongside access and delay,no staffing prescription in Module 01,workforce reviewer
+M07,equity and supported access,equity,stratified rate or duration,eligible supported subgroup,none,encounters and declared subgroup fields,test whether aggregate improvement hides supported differences,no disparity claim without support and governance,equity reviewer

@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.65.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.66.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2816,8 +2816,8 @@ if (
     $app3Content -match '(?im)[A-Z]:\\Users\\' -or
     $app3SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app3PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app3Content -notmatch 'Current Commons release: 0\.65\.0' -or
-    $app3PackageContent -notmatch 'Current Commons release: 0\.65\.0' -or
+    $app3Content -notmatch 'Current Commons release: 0\.66\.0' -or
+    $app3PackageContent -notmatch 'Current Commons release: 0\.66\.0' -or
     $app3Content -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '26,907' -or
@@ -2841,12 +2841,109 @@ if (
     $app3Content -notmatch 'gradient-boosted' -or
     $app3Content -notmatch 'Joe Joseph, MD, SFHM' -or
     $app3Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
-    $app3Content -notmatch 'Module 01 is not yet built' -or
-    $app3PackageContent -notmatch 'modules and checkpoints not yet built' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.65.0'
+    $app3Content -notmatch 'Module 01 pins all three complete public snapshots' -or
+    $app3PackageContent -notmatch 'Module 01 complete' -or
+    $app3Content -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
+    $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
+    $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
+    $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.66.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
+
+$app3Module01Root = Join-Path $repo 'courses\clinical-performance-improvement\modules\01-clinical-performance-decision'
+$app3Module01Spec = Join-Path $repo 'docs\curriculum\courses\APP-3\modules\01-clinical-performance-decision-spec.md'
+$app3Module01Files = @(
+    '.gitattributes',
+    'README.md',
+    'VERSION',
+    'assessment.md',
+    'build_workspace.py',
+    'data-spec.md',
+    'decision-contract.json',
+    'instructor-notes.md',
+    'profile_sources.py',
+    'release.json',
+    'source-record.yml',
+    'validate_workspace.py',
+    'data\capacity-source-profile.csv',
+    'data\measure-family-anchors.csv',
+    'data\source-inventory.csv',
+    'data\raw\Complications_and_Deaths-Hospital.csv.gz',
+    'data\raw\HHS-Capacity-Massachusetts.csv.gz',
+    'data\raw\Timely_and_Effective_Care-Hospital.csv.gz',
+    'reference\ai-use.md',
+    'reference\claim-boundary.csv',
+    'reference\clinical-performance-charter.md',
+    'reference\measure-family.csv',
+    'reference\process-boundary.csv',
+    'reference\progression-decision.md',
+    'reference\source-feasibility-interpretation.md',
+    'reference\stakeholder-accountability-map.csv',
+    'reference\synthetic-service-declaration.md',
+    'reference\unit-of-flow.csv',
+    'template\ai-use.md',
+    'template\claim-boundary.csv',
+    'template\clinical-performance-charter.md',
+    'template\measure-family.csv',
+    'template\process-boundary.csv',
+    'template\progression-decision.md',
+    'template\source-feasibility-interpretation.md',
+    'template\stakeholder-accountability-map.csv',
+    'template\synthetic-service-declaration.md',
+    'template\unit-of-flow.csv'
+)
+$app3Module01Missing = @($app3Module01Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $app3Module01Root $_))
+})
+if (-not (Test-Path -LiteralPath $app3Module01Spec) -or $app3Module01Missing.Count -gt 0) {
+    throw "APP-3 Module 01 is missing its specification or package files: $($app3Module01Missing -join ', ')."
+}
+$app3Module01Content = Get-Content -Raw -LiteralPath $app3Module01Spec
+$app3Module01Sections = [regex]::Matches($app3Module01Content, '(?m)^## \d+\.').Count
+$app3Module01Release = Get-Content -Raw -LiteralPath (Join-Path $app3Module01Root 'release.json') | ConvertFrom-Json
+$app3Module01Contract = Get-Content -Raw -LiteralPath (Join-Path $app3Module01Root 'decision-contract.json') | ConvertFrom-Json
+if (
+    $app3Module01Sections -ne 21 -or
+    $app3Module01Content -match '[—–]' -or
+    $app3Module01Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app3Module01Content -notmatch '15\.5 hours' -or
+    $app3Module01Content -notmatch '138,084' -or
+    $app3Module01Content -notmatch '95,800' -or
+    $app3Module01Content -notmatch '1,045,406' -or
+    $app3Module01Content -notmatch 'CGH-ED-01' -or
+    $app3Module01Content -notmatch 'course points awarded here: 0' -or
+    $app3Module01Content -notmatch 'continue with conditions' -or
+    $app3Module01Content -notmatch 'operational diagnosis' -or
+    $app3Module01Content -notmatch 'staffing change' -or
+    $app3Module01Release.module_id -ne 'oclc-app3-01' -or
+    $app3Module01Release.module_version -ne '0.1.0' -or
+    $app3Module01Release.commons_release -ne '0.66.0' -or
+    $app3Module01Release.source_snapshots.cms_timely_rows -ne 138084 -or
+    $app3Module01Release.source_snapshots.cms_complications_rows -ne 95800 -or
+    $app3Module01Release.source_snapshots.hhs_capacity_rows -ne 1045406 -or
+    $app3Module01Release.workspace.immutable_manifest_rows -ne 14 -or
+    $app3Module01Release.workspace.editable_records -ne 10 -or
+    $app3Module01Release.workspace.assembled_files -ne 25 -or
+    $app3Module01Release.reference_decision.progression -ne 'continue with conditions' -or
+    $app3Module01Release.reference_decision.staffing_change -ne 'prohibited' -or
+    $app3Module01Release.reference_decision.public_to_synthetic_linkage -ne 'prohibited' -or
+    $app3Module01Contract.sources.timely.sha256 -ne '1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516' -or
+    $app3Module01Contract.sources.complications.sha256 -ne '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
+    $app3Module01Contract.sources.capacity.sha256 -ne 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
+    $app3Module01Contract.assessment.course_points_awarded_here -ne 0 -or
+    $app3Module01Contract.assessment.week3_measure_component_points -ne 20 -or
+    $app3Module01Contract.assessment.week3_performance_diagnostic_points -ne 20
+) {
+    throw 'APP-3 Module 01 specification, source identities, workspace contract, assessment handoff, progression, or responsible-claim boundary does not match the 0.1.0 contract.'
+}
+& python (Join-Path $app3Module01Root 'profile_sources.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 01 source profiler self-check failed.' }
+& python (Join-Path $app3Module01Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 01 builder self-check failed.' }
+& python (Join-Path $app3Module01Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 01 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
