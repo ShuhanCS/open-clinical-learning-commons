@@ -1,6 +1,6 @@
 # Curriculum build ledger
 
-- Current release: 0.50.0
+- Current release: 0.50.1
 - Last updated: 2026-08-30
 - Active phase: applied-course build
 - Last completed unit: APP-1 Module 02, longitudinal cohorts and follow-up
@@ -300,6 +300,8 @@
 - The standard-library cohort builder, workspace builder, and validator self-checks pass. Complete reference validation passes 1,140 checks, learner-starter validation passes 82 checks, and full database reproduction passes 1,150 checks. The copied learner validator enforces the same manifest contract while ignoring generated Python cache files.
 - The 20-point reference passes all 16 gates and continues with conditions. Module 03 is permitted for curriculum construction; clinical use remains prohibited.
 - APP-1 Module 02 is a runnable release candidate at Commons 0.50.0.
+- APP-1 Module 03 has a complete 21-section construction specification targeting Commons 0.51.0. It freezes the 476-person Module 02 risk set and makes count-first Kaplan-Meier evidence, fixed-time comparisons, log-rank, guided Cox output, a proportional-hazards response, paired R reading, and the cumulative Week 3 gate explicit.
+- The reference data screen estimates an unadjusted scheduled-follow-up hazard ratio near 1.11 while the event-level Schoenfeld residual time screen is below 0.05. Construction must foreground fixed-time evidence and must not present one constant hazard ratio as the main result.
 
 ## Pending confirmation
 
@@ -309,10 +311,10 @@
 ## Next resume instructions
 
 1. Read the APP-1 course specification, corrected Module 01 release, Module 02 specification and release, foundation handoffs, and this ledger.
-2. Write the durable APP-1 Module 03 specification before broad implementation.
+2. Read the complete Module 03 construction specification at `docs/curriculum/courses/APP-1/modules/03-survival-time-to-event-spec.md`.
 3. Freeze the exact 476-row Module 02 analysis cohort, 1,018-row event audit, extension contract, source database identity, and Module 02 workspace manifest.
 4. Build Kaplan-Meier evidence by scheduled-follow-up group with count-first risk tables, exact event and censoring totals, and an accessible structured alternative.
 5. Add a log-rank comparison, guided Cox model, proportional-hazards checks, uncertainty, and paired R read-run-interpret evidence without changing the risk set.
 6. Explain the three later deaths, the absence of a death-before-event censor in this release, and why cause-specific censoring does not prove noninformative censoring.
 7. Build the 20-point cumulative Week 3 checkpoint around the accepted phenotype-and-cohort component while treating survival evidence as a required progression gate.
-8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 04.
+8. Advance to Commons 0.51.0, update this ledger, commit, push, and only then continue to APP-1 Module 04.

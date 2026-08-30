@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.50.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.50.1'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -1133,6 +1133,24 @@ if ($LASTEXITCODE -ne 0) {
 & python (Join-Path $app1Module02Root 'validate_longitudinal.py') --self-check
 if ($LASTEXITCODE -ne 0) {
     throw 'APP-1 Module 02 validator self-check failed.'
+}
+
+$app1Module03Spec = Join-Path $repo 'docs\curriculum\courses\APP-1\modules\03-survival-time-to-event-spec.md'
+if (-not (Test-Path -LiteralPath $app1Module03Spec)) {
+    throw 'APP-1 Module 03 must include its durable construction specification.'
+}
+$app1Module03Content = Get-Content -Raw -LiteralPath $app1Module03Spec
+$app1Module03Sections = [regex]::Matches($app1Module03Content, '(?m)^## \d+\.').Count
+if (
+    $app1Module03Sections -ne 21 -or
+    $app1Module03Content -match '[—–]' -or
+    $app1Module03Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app1Module03Content -notmatch 'Commons release target: 0\.51\.0' -or
+    $app1Module03Content -notmatch '476-person risk set' -or
+    $app1Module03Content -notmatch 'Schoenfeld residual' -or
+    $app1Module03Content -notmatch 'cumulative Week 3 checkpoint'
+) {
+    throw 'APP-1 Module 03 must define 21 plain-ASCII sections with the frozen cohort, PH-screen, and Week 3 construction contracts.'
 }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
@@ -2421,3 +2439,4 @@ Write-Output "FND-2 final checkpoint passed: $fnd2Checkpoint03Sections contract 
 Write-Output "APP-1 specification passed: $app1ModuleCount modules, $app1Hours hours, and $app1CheckpointCount checkpoints."
 Write-Output "APP-1 Module 01 passed: $app1Module01Sections contract sections and $($app1Module01Files.Count) required files."
 Write-Output "APP-1 Module 02 passed: $app1Module02Sections contract sections and $($app1Module02Files.Count) required files."
+Write-Output "APP-1 Module 03 construction specification passed: $app1Module03Sections contract sections."

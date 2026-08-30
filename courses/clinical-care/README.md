@@ -30,6 +30,7 @@ Module 06 contains eight hours of cumulative application and equity work plus an
 - [Module 01 durable specification](../../docs/curriculum/courses/APP-1/modules/01-care-pathway-decision-spec.md)
 - [Module 02: Longitudinal cohorts and follow-up](modules/02-longitudinal-cohorts-followup/README.md)
 - [Module 02 durable specification](../../docs/curriculum/courses/APP-1/modules/02-longitudinal-cohorts-followup-spec.md)
+- [Module 03 durable specification](../../docs/curriculum/courses/APP-1/modules/03-survival-time-to-event-spec.md)
 
 Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns, and defines a 476-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
 
@@ -64,4 +65,4 @@ No real patient records are used. Synthetic frequencies do not estimate real pre
 
 ## Build order
 
-Modules 01 and 02 are complete. Module 03 next owns survival and time-to-event analysis plus the cumulative Week 3 release.
+Modules 01 and 02 are complete. The Module 03 durable specification is complete; implementation next owns survival and time-to-event analysis plus the cumulative Week 3 release.
