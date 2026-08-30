@@ -1,0 +1,30 @@
+position,field_name,timing,accepted_rows,accepted_missing,accepted_missing_percent,defective_rows,defective_missing,defective_missing_percent,delta_missing,structurally_allowed,interpretation
+1,patient_id,key,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+2,birth_date,source,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+3,death_date,source,374,343,91.711230,379,348,91.820580,5,yes,Interpret with the field and state contract; do not convert blanks to zero.
+4,age_at_index,index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+5,gender,source,374,0,0.000000,379,4,1.055409,4,no,A seeded blank in this required field must be resolved from the accepted source.
+6,race,source,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+7,ethnicity,source,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+8,index_encounter_id,key,374,0,0.000000,379,3,0.791557,3,no,A seeded blank in this required field must be resolved from the accepted source.
+9,index_start,index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+10,index_stop,index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+11,index_class,index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+12,index_code,index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+13,index_description,index,374,0,0.000000,379,0,0.000000,0,yes,Interpret with the field and state contract; do not convert blanks to zero.
+14,index_reason_code,index,374,226,60.427807,379,230,60.686016,4,yes,Interpret with the field and state contract; do not convert blanks to zero.
+15,index_reason_description,index,374,226,60.427807,379,230,60.686016,4,yes,Interpret with the field and state contract; do not convert blanks to zero.
+16,prior_365d_encounter_count,pre-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+17,prior_365d_acute_count,pre-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+18,prior_365d_condition_count,pre-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+19,prior_365d_medication_count,pre-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+20,next_30d_state,post-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+21,next_30d_encounter_id,post-index,374,263,70.320856,379,266,70.184697,3,yes,Interpret with the field and state contract; do not convert blanks to zero.
+22,next_30d_start,post-index,374,263,70.320856,379,266,70.184697,3,yes,Interpret with the field and state contract; do not convert blanks to zero.
+23,next_30d_days_after_index_stop,post-index,374,263,70.320856,379,266,70.184697,3,yes,Interpret with the field and state contract; do not convert blanks to zero.
+24,acute_return_90d,post-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+25,death_90d,post-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+26,endpoint_90d,post-index,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+27,followup_90d_complete,metadata,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+28,source_release,metadata,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.
+29,cohort_definition_version,metadata,374,0,0.000000,379,0,0.000000,0,no,A seeded blank in this required field must be resolved from the accepted source.

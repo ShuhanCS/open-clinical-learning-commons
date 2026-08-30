@@ -1,8 +1,8 @@
 # FND-1: Healthcare Data Foundations
 
-- Status: course specification complete; Modules 01 through 05 and Checkpoint 1 are runnable release candidates
+- Status: course specification complete; Modules 01 through 06 and Checkpoint 1 are runnable release candidates
 - Course specification version: 0.1.0
-- Commons release: 0.33.0
+- Commons release: 0.34.0
 - Credits: 3
 - Delivery: asynchronous online half-term with scheduled technical clinics and review
 - Planning model: seven instructional weeks mapped to official half-term dates
@@ -727,43 +727,54 @@ Handoff: Module 06 turns exact quality and descriptive tables into accessible in
 - Checkpoint role: completes the cumulative Week 6 checkpoint.
 - Out of scope: the full DA-730 visualization curriculum, formal process-control claims, forecasting, causal trends, dashboards, maps, and intervention recommendations.
 
-Planned module package:
+Runnable module package:
 
 ```text
 module-06/
+  VERSION
   README.md
-  notebooks/
-    06-accessible-inspection.ipynb
-  figures/
-    quality-display.png
-    descriptive-display.png
-    time-display.png
-  evidence-tables/
-    quality-display.csv
-    descriptive-display.csv
-    time-display.csv
-  alt-text/
-    quality-display.md
-    descriptive-display.md
-    time-display.md
-  accessibility-report.md
-  interpretation-memo.md
   source-record.yml
+  figure-spec.md
+  render_figures.py
+  data/
+    missingness-profile.csv
+    rates.csv
+    denominator-registry.csv
+    resolved-analytic-table.csv
+  tables/
+    quality-missingness.csv
+    descriptive-rates.csv
+    quarterly-index-counts.csv
+  figures/
+    quality-missingness.png
+    quality-missingness.svg
+    descriptive-rates.png
+    descriptive-rates.svg
+    quarterly-index-counts.png
+    quarterly-index-counts.svg
+  alt-text/
+    quality-missingness.md
+    descriptive-rates.md
+    quarterly-index-counts.md
+  figure-registry.csv
+  accessibility-check.md
   transformation-record.md
   reproducibility-check.md
   ai-use.md
   assessment.md
   instructor-notes.md
   release.json
+  validate_figures.py
+  learner-template/
 ```
 
-Full future specification:
+Full specification:
 
-`docs/curriculum/courses/FND-1/modules/06-accessible-time-data-spec.md`
+`docs/curriculum/courses/FND-1/modules/06-accessible-charts-time-data-spec.md`
 
-Runnable future package:
+Runnable package:
 
-`courses/healthcare-data-foundations/modules/06-accessible-time-data/`
+`courses/healthcare-data-foundations/modules/06-accessible-charts-time-data/`
 
 Handoff: the Week 6 checkpoint freezes the complete evidence set before final packaging and independent reproduction.
 
@@ -1575,7 +1586,7 @@ Each module adds its own source, data, code, output, and release checks.
 - [x] Checkpoint 1 has a runnable assembler, templates, validator, and instructor notes.
 - [x] Module 04 has a complete specification and runnable package.
 - [x] Module 05 has a complete specification and runnable package.
-- [ ] Module 06 has a complete specification and runnable package.
+- [x] Module 06 has a complete specification and runnable package.
 - [ ] Checkpoint 2 has a runnable assembler, templates, validator, and instructor notes.
 - [ ] Module 07 has a complete specification and runnable package.
 - [ ] The final checkpoint has a runnable assembler, templates, validator, and instructor notes.

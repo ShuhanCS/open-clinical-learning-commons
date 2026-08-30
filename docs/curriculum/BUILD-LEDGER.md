@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.33.0
+- Current release: 0.34.0
 - Last updated: 2026-08-30
 - Active phase: FND-1 module build
-- Last completed unit: FND-1 Module 05, Descriptive results
-- Next unit: FND-1 Module 06, Accessible charts and time-indexed data
+- Last completed unit: FND-1 Module 06, Accessible charts and time-indexed data
+- Next unit: FND-1 Checkpoint 2, Quality, descriptive, and accessible evidence release
 
 ## Confirmed decisions
 
@@ -156,6 +156,14 @@
 - The notebook executes four code cells in a fresh exact-version environment. The validator passes 1,101 release checks and 1,100 complete-submission checks.
 - The reference decision is `accept with conditions`: Module 06 must use exact released rows, preserve denominator and interpretation limits, label strata unadjusted, and make no real-population claim.
 - Module 05 is a runnable release candidate. Faculty, descriptive-statistics, clinical-informatics, notebook, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
+- FND-1 Module 06 fingerprints the exact 29-row Module 04 missingness profile, six Module 05 rates, 27-row denominator registry, and 374-row resolved analytic table before rendering.
+- F01 compares accepted and deliberately defective missingness for eight fields. F02 preserves all six Module 05 rates and Wilson intervals. F03 counts 374 selected indexes across 20 quarters, including 314 emergency and 60 inpatient indexes.
+- The release contains three exact CSV tables, three 2100-by-1200 PNG files at 300 DPI, three matching SVG files, three structured text alternatives, and a 25-field figure registry with SHA-256 `5cdd846d9318d6dc8c2f3da41a6be6ce172b7c91d6465dc085e9f3790732d62b`.
+- Every figure uses a zero-based quantitative axis, 8-point-or-larger type, explicit units, exact-table linkage, and redundant hatch, line, marker, or direct-label cues. Grayscale, 50-percent-width, 200-percent-zoom, reading-order, and text-equivalence reviews pass.
+- A fresh Python 3.12.10 environment with Matplotlib 3.10.9 and Pillow 11.1.0 produced two identical renders. All 14 generated artifacts match the canonical release byte for byte.
+- The renderer protects an existing target. The validator passes 616 release checks and 615 complete-submission checks and rejects the incomplete learner template.
+- The reference decision is `accept with conditions`: the Week 6 checkpoint must preserve exact-table links, equivalent text, N01 through N08, descriptive interval meaning, selected-cohort time wording, and synthetic-data scope.
+- Module 06 is a runnable release candidate. Faculty, clinical-analytics, accessibility, data-visualization, clinical-informatics, Python, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.
 
 ## Pending confirmation
 
@@ -164,9 +172,9 @@
 
 ## Next resume instructions
 
-1. Read the FND-1 course, Modules 01 through 05, Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
-2. Treat the Module 04 quality outputs and Module 05 six exact descriptive CSV files and denominator registry as immutable Module 06 inputs.
-3. Write the 21-section Module 06 specification around three accessible inspection views and their exact table and text alternatives.
-4. Lock chart mappings, dimensions, labels, units, accessible colors and non-color cues, alt-text fields, time-indexed source, and false-cause boundaries before rendering figures.
-5. Build the figures, exact tables, text alternatives, learner assessment, instructor key, validator, and Week 6 checkpoint handoff.
-6. Update the Commons version and this ledger, then commit and push Module 06 before building Checkpoint 2.
+1. Read the FND-1 course, Modules 01 through 06, Checkpoint 1 specifications and release records, source record, master architecture, and this ledger.
+2. Treat the Module 04 quality release, Module 05 descriptive release, and Module 06 exact tables, figures, alternatives, registry, and accessibility record as immutable Checkpoint 2 inputs.
+3. Write the cumulative Week 6 Checkpoint 2 specification around the source 25-percent assessment weight and the Module 04, 05, and 06 handoffs.
+4. Lock the exact component score, required artifact manifest, review defense, N01 through N08 conditions, and stop/fix/proceed recommendation before assembling the checkpoint.
+5. Build the safe assembler, learner and review templates, instructor reference, validator, assessment, release record, and Module 07 progression decision.
+6. Update the Commons version and this ledger, then commit and push Checkpoint 2 before building Module 07.

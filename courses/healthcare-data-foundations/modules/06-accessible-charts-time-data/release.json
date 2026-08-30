@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-fnd1-06",
+    "title": "Accessible charts and time-indexed data",
+    "version": "0.1.0",
+    "commons_release": "0.34.0",
+    "course": "FND-1: Healthcare Data Foundations",
+    "week": 6,
+    "hours": 16.0,
+    "checkpoint_component_weight_percent": 20
+  },
+  "decision": {
+    "owner": "data-quality review panel",
+    "question": "Can the Week 6 panel recover the exact values, uncertainty, source conditions, and limits through accessible figures and equivalent alternatives?",
+    "allowed": ["accept", "accept with conditions", "revise", "refer"],
+    "reference": "accept with conditions"
+  },
+  "upstream": {
+    "module_04_status": "accept with conditions",
+    "module_05_status": "accept with conditions",
+    "missingness_rows": 29,
+    "missingness_sha256": "46e9c4dd268db223fac3cd0f01e65e050a3d44f6a28e0babcfb7bd5b552b5ba5",
+    "rates_rows": 6,
+    "rates_sha256": "2398b283e449d6f876a3a3ea123e7905c637ba222f56c6aa03882cfc158942f3",
+    "denominator_registry_rows": 27,
+    "denominator_registry_sha256": "e13bd0e1cf0716b912476fd81c7e4dd8bc827b2df468421aa2efc33f1f234be6",
+    "analytic_rows": 374,
+    "analytic_sha256": "3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a",
+    "synthetic": true,
+    "contains_real_patients": false
+  },
+  "tables": {
+    "quality-missingness.csv": {"rows": 8, "fields": 12, "bytes": 1672, "sha256": "52e6960cda5d4981a647683ea202e47a1a1ad5afde0e91fb8900adf0b0521134"},
+    "descriptive-rates.csv": {"rows": 6, "fields": 13, "bytes": 1893, "sha256": "2398b283e449d6f876a3a3ea123e7905c637ba222f56c6aa03882cfc158942f3"},
+    "quarterly-index-counts.csv": {"rows": 20, "fields": 9, "bytes": 3631, "sha256": "0f5e2f8d9b163ad4b68a8f73505fdd4b34f44936eec4fb0c88c3853f58d86fb6"}
+  },
+  "figures": {
+    "quality-missingness.png": {"bytes": 169864, "sha256": "dd91d7c84fe73f1a29e4c8301b6be18e329bc03a8652927f620ff130fb6f51b6"},
+    "quality-missingness.svg": {"bytes": 71065, "sha256": "71346d9b200f00021323539961c4440f6a6fb212459b58e9ae7959a1e4b8d30f"},
+    "descriptive-rates.png": {"bytes": 132463, "sha256": "11b5edc3781248a22e2359355778be638ffde0977a899c0f8b215665416d3038"},
+    "descriptive-rates.svg": {"bytes": 68139, "sha256": "480ca1cf69a6591127bf8ad8c064bce52dde49a783aeb4dc9b524c1c9ee04c99"},
+    "quarterly-index-counts.png": {"bytes": 188721, "sha256": "9befa6d9604ed26abdaf28b07afc335cc7ad5eaa3c368b9bf2d7401dffa546e7"},
+    "quarterly-index-counts.svg": {"bytes": 76002, "sha256": "2ee876e3b141a7a0ffa6f6558ac05b3127fd5c11eb22143835b5692ffdc4700c"}
+  },
+  "registry": {
+    "rows": 3,
+    "fields": 25,
+    "bytes": 3191,
+    "sha256": "5cdd846d9318d6dc8c2f3da41a6be6ce172b7c91d6465dc085e9f3790732d62b"
+  },
+  "reference_facts": {
+    "f01_fields": 8,
+    "f02_rates": 6,
+    "f03_quarters": 20,
+    "f03_total": 374,
+    "f03_emergency": 314,
+    "f03_inpatient": 60,
+    "png_width": 2100,
+    "png_height": 1200,
+    "png_dpi": 300,
+    "canvas_inches": "7x4"
+  },
+  "environment": {
+    "tested_platform": "Windows",
+    "python": "3.12.10",
+    "matplotlib": "3.10.9",
+    "pillow": "11.1.0"
+  },
+  "package": {
+    "learner_template_files": 8,
+    "exact_tables": 3,
+    "figure_exports": 6,
+    "text_alternatives": 3,
+    "release_validation_checks": 616,
+    "complete_submission_checks": 615
+  },
+  "assessment": {
+    "points": 100,
+    "minimum_passing_points": 80,
+    "noncompensable_gates": 17
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor and curriculum direction"},
+    {"name": "OpenAI Codex", "role": "module specification, accessible figures, alternatives, and validation"}
+  ],
+  "validation": {
+    "renderer_self_check": "pass",
+    "validator_self_check": "pass",
+    "visual_inspection": "pass",
+    "grayscale_and_resize_review": "pass",
+    "byte_for_byte_reproduction": "pass",
+    "standalone_portable_render": "pass",
+    "nonempty_target_refusal": "pass",
+    "incomplete_submission_rejection": "pass"
+  },
+  "known_issues": [
+    "Named faculty, clinical-analytics, accessibility, data-visualization, clinical-informatics, Python, privacy, responsible-AI, and independent-instructor reviews are pending.",
+    "Windows reproduction is complete; named macOS and Linux reproduction remains pending.",
+    "The source is synthetic and older and cannot support real clinical, operational, or population estimates.",
+    "The orange-to-white contrast is 2.252:1, so orange is not used for small text and is reinforced by black edges, hatches, dotted lines, triangle markers, labels, and exact tables."
+  ]
+}

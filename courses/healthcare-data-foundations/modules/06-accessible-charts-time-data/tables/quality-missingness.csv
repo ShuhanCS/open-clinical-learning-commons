@@ -1,0 +1,9 @@
+figure_id,field_name,accepted_missing,accepted_denominator,accepted_missing_percent,defective_missing,defective_denominator,defective_missing_percent,delta_missing,structurally_allowed,retained_conditions,interpretation_limit
+F01,death_date,343,374,91.711230,348,379,91.820580,5,yes,N01,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.
+F01,gender,0,374,0.000000,4,379,1.055409,4,no,D11,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.
+F01,index_encounter_id,0,374,0.000000,3,379,0.791557,3,no,D02,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.
+F01,index_reason_code,226,374,60.427807,230,379,60.686016,4,yes,N02,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.
+F01,index_reason_description,226,374,60.427807,230,379,60.686016,4,yes,N02,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.
+F01,next_30d_encounter_id,263,374,70.320856,266,379,70.184697,3,yes,N03|D13|D14,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.
+F01,next_30d_start,263,374,70.320856,266,379,70.184697,3,yes,N03|D13|D14,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.
+F01,next_30d_days_after_index_stop,263,374,70.320856,266,379,70.184697,3,yes,N03|D13|D14,Accepted optional missingness is not automatically error; defective values are deterministic teaching defects.

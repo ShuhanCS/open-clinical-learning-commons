@@ -385,6 +385,68 @@ if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 05 builder self-check failed.' }
 & python (Join-Path $fnd1Module05Root 'validate_descriptive.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 05 validator self-check failed.' }
 
+$fnd1Module06Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\06-accessible-charts-time-data'
+$fnd1Module06Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\06-accessible-charts-time-data-spec.md'
+$fnd1Module06Files = @(
+    '.gitattributes', '.gitignore', 'README.md', 'VERSION', 'accessibility-check.md',
+    'ai-use.md', 'assessment.md', 'figure-registry.csv', 'figure-spec.md',
+    'instructor-notes.md', 'release.json', 'render-report.json', 'render_figures.py',
+    'reproducibility-check.md', 'source-record.yml', 'transformation-record.md',
+    'validate_figures.py', 'data\missingness-profile.csv', 'data\rates.csv',
+    'data\denominator-registry.csv', 'data\resolved-analytic-table.csv',
+    'tables\quality-missingness.csv', 'tables\descriptive-rates.csv',
+    'tables\quarterly-index-counts.csv', 'figures\quality-missingness.png',
+    'figures\quality-missingness.svg', 'figures\descriptive-rates.png',
+    'figures\descriptive-rates.svg', 'figures\quarterly-index-counts.png',
+    'figures\quarterly-index-counts.svg', 'alt-text\quality-missingness.md',
+    'alt-text\descriptive-rates.md', 'alt-text\quarterly-index-counts.md',
+    'learner-template\VERSION', 'learner-template\README.md',
+    'learner-template\source-record.yml', 'learner-template\figure-spec.md',
+    'learner-template\accessibility-check.md', 'learner-template\transformation-record.md',
+    'learner-template\reproducibility-check.md', 'learner-template\ai-use.md'
+)
+$fnd1Module06Missing = @($fnd1Module06Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $fnd1Module06Root $_))
+})
+if (-not (Test-Path -LiteralPath $fnd1Module06Spec) -or $fnd1Module06Missing.Count -gt 0) {
+    throw "FND-1 Module 06 is missing its specification or package files: $($fnd1Module06Missing -join ', ')."
+}
+$fnd1Module06Content = Get-Content -Raw -LiteralPath $fnd1Module06Spec
+$fnd1Module06Sections = [regex]::Matches($fnd1Module06Content, '(?m)^## \d+\.').Count
+$fnd1Module06Release = Get-Content -Raw -LiteralPath (Join-Path $fnd1Module06Root 'release.json') | ConvertFrom-Json
+$fnd1Module06Quality = Import-Csv -LiteralPath (Join-Path $fnd1Module06Root 'tables\quality-missingness.csv')
+$fnd1Module06Rates = Import-Csv -LiteralPath (Join-Path $fnd1Module06Root 'tables\descriptive-rates.csv')
+$fnd1Module06Quarters = Import-Csv -LiteralPath (Join-Path $fnd1Module06Root 'tables\quarterly-index-counts.csv')
+$fnd1Module06Registry = Import-Csv -LiteralPath (Join-Path $fnd1Module06Root 'figure-registry.csv')
+if (
+    $fnd1Module06Sections -ne 21 -or
+    $fnd1Module06Content -match '[—–]' -or
+    $fnd1Module06Content -match '(?im)[A-Z]:\\Users\\' -or
+    $fnd1Module06Release.module.version -ne '0.1.0' -or
+    $fnd1Module06Release.module.commons_release -ne '0.34.0' -or
+    $fnd1Module06Release.module.hours -ne 16 -or
+    $fnd1Module06Release.module.checkpoint_component_weight_percent -ne 20 -or
+    $fnd1Module06Release.package.release_validation_checks -ne 616 -or
+    $fnd1Module06Release.package.complete_submission_checks -ne 615 -or
+    $fnd1Module06Quality.Count -ne 8 -or
+    $fnd1Module06Rates.Count -ne 6 -or
+    $fnd1Module06Quarters.Count -ne 20 -or
+    $fnd1Module06Registry.Count -ne 3 -or
+    @($fnd1Module06Registry[0].PSObject.Properties).Count -ne 25 -or
+    (($fnd1Module06Quarters | Measure-Object -Property total_index_n -Sum).Sum) -ne 374 -or
+    (($fnd1Module06Quarters | Measure-Object -Property emergency_index_n -Sum).Sum) -ne 314 -or
+    (($fnd1Module06Quarters | Measure-Object -Property inpatient_index_n -Sum).Sum) -ne 60 -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $fnd1Module06Root 'tables\quality-missingness.csv')).Hash.ToLowerInvariant() -ne '52e6960cda5d4981a647683ea202e47a1a1ad5afde0e91fb8900adf0b0521134' -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $fnd1Module06Root 'tables\quarterly-index-counts.csv')).Hash.ToLowerInvariant() -ne '0f5e2f8d9b163ad4b68a8f73505fdd4b34f44936eec4fb0c88c3853f58d86fb6' -or
+    (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $fnd1Module06Root 'figure-registry.csv')).Hash.ToLowerInvariant() -ne '5cdd846d9318d6dc8c2f3da41a6be6ce172b7c91d6465dc085e9f3790732d62b'
+) {
+    throw 'FND-1 Module 06 release metadata, specification, output counts, or fingerprints do not match the 0.1.0 contract.'
+}
+& python (Join-Path $fnd1Module06Root 'render_figures.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 06 renderer self-check failed.' }
+& python (Join-Path $fnd1Module06Root 'validate_figures.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'FND-1 Module 06 validator self-check failed.' }
+
 $fnd1Checkpoint01Root = Join-Path $repo 'courses\healthcare-data-foundations\checkpoints\01-validated-cohort-release'
 $fnd1Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\checkpoints\01-validated-cohort-release-spec.md'
 $fnd1Checkpoint01Files = @(

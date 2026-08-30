@@ -1,0 +1,30 @@
+record_version: 1.0.0
+module: oclc-fnd1-06
+missingness_path: data/missingness-profile.csv
+missingness_rows: 29
+missingness_fields: 12
+missingness_bytes: 4362
+missingness_sha256: 46e9c4dd268db223fac3cd0f01e65e050a3d44f6a28e0babcfb7bd5b552b5ba5
+rates_path: data/rates.csv
+rates_rows: 6
+rates_fields: 13
+rates_bytes: 1893
+rates_sha256: 2398b283e449d6f876a3a3ea123e7905c637ba222f56c6aa03882cfc158942f3
+denominator_registry_path: data/denominator-registry.csv
+denominator_registry_rows: 27
+denominator_registry_fields: 12
+denominator_registry_bytes: 10094
+denominator_registry_sha256: e13bd0e1cf0716b912476fd81c7e4dd8bc827b2df468421aa2efc33f1f234be6
+analytic_table_path: data/resolved-analytic-table.csv
+analytic_table_rows: 374
+analytic_table_fields: 29
+analytic_table_bytes: 121787
+analytic_table_sha256: 3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a
+source_release: synthea-csv-apr2020
+cohort_definition_version: 0.1.0
+synthetic: true
+contains_real_patients: false
+source_url: https://synthea.mitre.org/downloads
+source_dictionary_url: https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary
+teaching_use: accessible exact-table-to-figure translation and time-index interpretation
+claim_boundary: no real clinical, operational, population, causal, trend, process-control, or forecast inference

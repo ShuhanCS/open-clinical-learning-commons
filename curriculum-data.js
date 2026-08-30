@@ -2,7 +2,7 @@
   "use strict";
 
   const curriculum = {
-  "version": "0.33.0",
+  "version": "0.34.0",
   "courseCount": 11,
   "moduleCount": 77,
   "courses": [
@@ -89,9 +89,9 @@
           "submission": "Accessible chart set, exploratory notebook section.",
           "hours": 16,
           "resource": {
-            "title": "Clinical visualization atlas",
-            "description": "Choose, read, and rebuild healthcare charts with a synthetic emergency department case.",
-            "url": "courses/data-visualization/atlas.html#atlas"
+            "title": "Runnable accessible-figure package",
+            "description": "Render three exact-table-linked clinical figures with PNG, SVG, structured alternatives, and accessibility checks.",
+            "url": "courses/healthcare-data-foundations/modules/06-accessible-charts-time-data/README.md"
           }
         },
         {
