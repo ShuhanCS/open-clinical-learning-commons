@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.63.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 is complete with seven modules and three checkpoints. APP-2 has all seven runnable modules plus its cumulative Week 3 and Week 6 checkpoints.
+- Current version: `0.64.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -98,6 +98,8 @@ The sixth runnable unit is [APP-2 Module 06: Partnered improvement and embedded 
 The cumulative [APP-2 Week 6 checkpoint](courses/patient-experience-engagement/checkpoints/02-linked-evidence-patient-voice-release/reference/README.md) freezes 160 accepted files from Modules 04 through 06, counts the 25-point and 20-point components once, and requires all linkage, patient-voice, equity, partnership, improvement, model, and integrity gates before Module 07. Its durable [checkpoint specification](docs/curriculum/courses/APP-2/checkpoints/02-linked-evidence-patient-voice-release-spec.md) defines the complete 174-file release and progression contract.
 
 The seventh runnable unit is [APP-2 Module 07: Clinician and patient leadership, accountability, and defense](courses/patient-experience-engagement/modules/07-clinician-patient-leadership-defense/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/APP-2/modules/07-clinician-patient-leadership-defense-spec.md). It freezes both accepted checkpoints in a 358-file candidate, requires shared clinician and patient authority, defines patient-facing feedback and 14 monitoring and stop contracts, and separates curriculum acceptance from authorization to test. Joe Joseph, MD, SFHM, is the designated clinician of record, and a named patient or caregiver co-lead remains required before alpha.
+
+The [APP-2 final checkpoint](courses/patient-experience-engagement/checkpoints/03-patient-experience-engagement-package/README.md) freezes all 358 Module 07 files and adds the final 35-point score, 26 gates, 14-question defense, reviewers, reproduction, conditions, package disposition, and separate organizational recommendation. Its durable [checkpoint specification](docs/curriculum/courses/APP-2/checkpoints/03-patient-experience-engagement-package-spec.md) records `accept with conditions` for the curriculum package and `revise before testing` for the organizational proposal. It does not authorize contact, fielding, official reporting, targeting, implementation, or deployment.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -275,8 +277,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Complete APP-2 with its final patient-experience and engagement checkpoint.
-2. Continue APP-3 through APP-7 one distinct course at a time.
+1. Specify and build APP-3, Data for Clinical Performance and Improvement.
+2. Continue APP-4 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 
 ## Licensing

@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.63.0
+- Current release: 0.64.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-2 Module 07, clinician and patient leadership, accountability, and defense
-- Next unit: APP-2 final checkpoint, patient-experience and engagement package
+- Last completed unit: APP-2 final checkpoint, patient-experience and engagement package
+- Next unit: APP-3 course specification and source architecture
 
 ## Confirmed decisions
 
@@ -437,6 +437,16 @@
 - The transparent response adjustment remains the teaching benchmark. The bounded random forest does not change the response-adjustment decision, and universal offer without patient or group targeting remains required.
 - Complete validation passes 1,847 checks and learner validation passes 1,794 checks. Deterministic assembly, copied validation, overwrite refusal, and changed-evidence, score, gate, recommendation, partnership, and progression failure routes pass.
 - APP-2 Module 07 is a runnable release candidate at Commons 0.63.0. Patient contact, fielding, official HCAHPS reporting, targeting, clinical implementation, and model deployment remain prohibited.
+- APP-2 final checkpoint version 0.1.0 freezes all 358 Module 07 candidate files without editing accepted evidence, leadership records, scores, gates, recommendation, or conditions.
+- The final review adds 15 files. The complete package has 373 files, including a 358-row candidate manifest.
+- The 358-row manifest is 60,523 bytes with SHA-256 `a3ca6bbacd22ab82d6679feb674f061ee98db9e681fc18deba5cc8ee9a93183b`.
+- The checkpoint records the 35-point component once. APP-2 totals 20 Week 3 points, 45 Week 6 points, and 35 final points, with no double counting.
+- The reference final score is 35.00 of 35.00. All 26 gates pass or pass with an allowed condition, and the 14-question defense is adequate for curriculum construction.
+- The package disposition is `accept with conditions`; the separate organizational recommendation remains `revise before testing`. Course status is `complete for curriculum construction only`.
+- The final package keeps actual patient or caregiver statements at zero and retains the named patient/caregiver co-lead as a pre-alpha condition.
+- Complete validation passes 1,890 checks and learner validation passes 1,841 checks. Deterministic assembly, overwrite and inside-target refusal, and changed-candidate, score, gate, tag, partnership, and decision failure routes pass.
+- Tag `app2-patient-experience-engagement-candidate-v0.1.0` is proposed and not created. Named human approval, direct patient review, clean reproduction, learner defense, and exact-commit verification remain required.
+- APP-2 is complete for curriculum construction at Commons 0.64.0. Contact, fielding, official HCAHPS reporting, targeting, clinical implementation, and model deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -448,11 +458,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-2 course specification, accepted Module 07 package and progression record, both accepted checkpoint release records, source record, and this ledger.
-2. Write the durable final-checkpoint specification before implementation.
-3. Freeze the complete 358-file Module 07 candidate without editing accepted evidence, leadership records, scores, gates, recommendation, or conditions.
-4. Record the 35-point component exactly once and adjudicate the 26 gates and 14-question defense.
-5. Keep package acceptance, organizational recommendation, final course progression, and authorization as separate decisions.
-6. Preserve the clinician and patient co-lead conditions, transparent adjustment, model non-adoption, universal offer, accountability plan, stop rules, and every prohibited use.
-7. Add final reviewer, reproducibility, accessibility, agent-use, and handoff records without inventing approval.
-8. Validate, advance semver, commit, and push before moving to APP-3.
+1. Read the master architecture, roadmap sources, curriculum catalog, APP-1 and APP-2 ownership maps, and this ledger.
+2. Write the durable APP-3 course specification and source record before its first module.
+3. Keep APP-3 distinct: it owns clinical performance, safety signals, process reliability, demand and capacity, operational variation, and improvement testing.
+4. Define seven modules totaling 112.5 hours with cumulative 20-point Week 3, 45-point Week 6, and 35-point official-end-date checkpoints.
+5. Give each module a different foundations revisit, an open-data decision, clear learner deliverables, and a protected handoff.
+6. Keep the embedded ML work inside Module 06 and the clinician leadership block inside Module 07.
+7. Select and fingerprint full public quality, safety, utilization, capacity, or operations sources before creating derived teaching evidence.
+8. Build, validate, advance semver, commit, and push one unit at a time.

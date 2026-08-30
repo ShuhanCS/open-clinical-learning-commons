@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.63.0.
-- Current build: Modules 01 through 07 plus the cumulative Week 3 and Week 6 checkpoints runnable; the final checkpoint is next.
+- Current Commons release: 0.64.0.
+- Current build: all seven modules and all three cumulative checkpoints are runnable release candidates.
 
 APP-2 teaches patient-reported measurement, survey representation, response bias, linked patient evidence, patient voice, patient partnership, and accountable improvement.
 
@@ -49,6 +49,8 @@ The course uses the complete public CMS HCAHPS hospital file as its first source
 [Checkpoint 02](checkpoints/02-linked-evidence-patient-voice-release/reference/README.md) freezes all 160 accepted Module 04 through Module 06 files, counts 25 and 20 points once, and carries the complete linked-evidence, patient-voice, equity, partnership, improvement, and model decision into Module 07. Its durable contract is [the Week 6 checkpoint specification](../../docs/curriculum/courses/APP-2/checkpoints/02-linked-evidence-patient-voice-release-spec.md).
 
 [Module 07](modules/07-clinician-patient-leadership-defense/README.md) freezes both accepted checkpoints into a 358-file leadership candidate. It requires shared clinician and patient authority, a patient-facing summary, a bounded universal-offer proposal, 14 monitoring measures, 14 stop rules, and a 14-question defense. Its durable contract is [the Module 07 specification](../../docs/curriculum/courses/APP-2/modules/07-clinician-patient-leadership-defense-spec.md).
+
+[Final Checkpoint 03](checkpoints/03-patient-experience-engagement-package/README.md) freezes all 358 Module 07 files, records the final 35-point component once, and adds 15 final-review files. Its package is `accept with conditions`, while the organizational recommendation remains `revise before testing`. Its durable contract is [the final-checkpoint specification](../../docs/curriculum/courses/APP-2/checkpoints/03-patient-experience-engagement-package-spec.md).
 
 The full course contract is [the APP-2 course specification](../../docs/curriculum/courses/APP-2/course-spec.md). Source normalization is recorded in [the APP-2 source record](../../docs/source/app-2-patient-experience-engagement-source-record.md).
 

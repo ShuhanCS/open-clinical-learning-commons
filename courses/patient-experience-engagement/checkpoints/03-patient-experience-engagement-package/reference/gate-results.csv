@@ -1,0 +1,27 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,Checkpoint 01 Checkpoint 02 and Module 07 release identities are exact,pass,final-review/submission-record.md,APP-2 faculty owner,
+G02,Candidate has 358 files and final manifest has 358 rows,pass,final-review/candidate-manifest.csv,Independent reproducer,
+G03,Module 07 immutable manifest has 334 exact rows,pass,release-manifest.csv,Independent reproducer,
+G04,Repository commit versions releases and proposed tag are recorded,pass with condition,final-review/submission-record.md,APP-2 faculty owner,COND-07
+G05,Source rights data classes and prohibited-data scan are complete,pass,final-review/final-audit.md,Privacy and governance reviewer,
+G06,Measurement scoring rights burden language and reporting limits remain visible,pass,evidence-synthesis.md,Patient-experience measurement reviewer,
+G07,Frame response missingness weights representation and residual limits remain visible,pass,evidence-synthesis.md,Survey-methods reviewer,
+G08,Linked evidence denominators channels and causal limits remain visible,pass,evidence-synthesis.md,Health-services data reviewer,
+G09,Generated comments coding agreement assisted classification and prevalence limits remain visible,pass,evidence-synthesis.md,Qualitative-methods reviewer,
+G10,Group support suppression uncertainty and bounded interpretation remain visible,pass,evidence-synthesis.md,Equity reviewer,
+G11,Simulated partnership remains separate from actual participation,pass with condition,patient-partner-decision-record.md,Patient partnership lead,COND-02
+G12,Shared clinical and patient authority is explicit,pass with condition,patient-partner-decision-record.md,Patient partnership lead,COND-02
+G13,Every material claim traces to accepted evidence,pass,evidence-index.csv,APP-2 faculty owner,
+G14,Package disposition and organizational recommendation are separate,pass,final-review/final-decision.md,APP-2 faculty owner,
+G15,Allowed recommendation states its authorization boundary,pass,leadership-recommendation.md,Clinical decision owner,
+G16,Protocol uses universal offer and no patient or group targeting,pass,bounded-test-plan.md,Responsible-AI and model reviewer,
+G17,Local workflow capacity collection privacy consent and governance assumptions are explicit,pass with condition,workflow-feasibility.md,Clinical decision owner,COND-03
+G18,Patient-facing summary is plain bounded and marked for direct review,pass with condition,patient-facing-summary.md,Patient partnership lead,COND-02
+G19,Feedback return accountability ownership and failure response are complete,pass,feedback-accountability.md,Patient co-lead,
+G20,Fourteen prospective measures retain complete contracts,pass,measures-monitoring.csv,Patient-experience measurement reviewer,
+G21,Transparent benchmark remains and ML does not change the decision,pass,technical-appendix.md,Responsible-AI and model reviewer,
+G22,Fourteen stop escalation restart and shared-authority rules are complete,pass,stop-escalation-rules.csv,Privacy and governance reviewer,
+G23,Language disability channel format and equivalent defense routes are complete,pass with condition,accessibility-language-review.md,Access and language reviewer,COND-05
+G24,Clean reproduction agent trace independent checks and human ownership are complete,pass with condition,final-review/final-reproduction.md,Independent reproducer,COND-07
+G25,All fourteen defense answers reviewer roles and condition ownership are adequate,pass with condition,final-review/final-defense.md,Clinician and patient co-lead,COND-08
+G26,Acceptance preserves every contact reporting targeting implementation and deployment prohibition,pass,final-review/release-acceptance.md,Clinical decision owner,

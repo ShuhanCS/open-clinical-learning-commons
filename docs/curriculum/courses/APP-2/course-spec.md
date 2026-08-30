@@ -13,7 +13,7 @@
 - R role: read, run, and interpret survey, weighting, reliability, and psychometric code; writing R from scratch is not graded.
 - Final deliverable: patient-experience and engagement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.63.0 through runnable Module 07 and Checkpoint 02.
+- Current Commons release: 0.64.0 with all seven modules and all three cumulative checkpoints runnable.
 - Specification status: construction candidate.
 
 APP-2 teaches learners to treat patient experience, engagement, and patient-reported outcomes as measured evidence. Learners must ask what a measure captures, who had a chance to respond, who is missing, how collection mode affects the result, and what action the evidence can support.
@@ -340,10 +340,16 @@ The released checkpoint freezes 65 Module 04 files, 49 Module 05 files, and 46 M
 
 - Timing: official last day of the assigned half-term.
 - Course points: 35.
-- Future path: `courses/patient-experience-engagement/checkpoints/03-patient-experience-engagement-package/`.
+- Package path: `courses/patient-experience-engagement/checkpoints/03-patient-experience-engagement-package/`.
+- Specification: `docs/curriculum/courses/APP-2/checkpoints/03-patient-experience-engagement-package-spec.md`.
+- Status: runnable release candidate at Commons 0.64.0.
 - Decision: should the organization run a bounded prospective measurement and improvement test, revise, refer, or stop?
 
 Required evidence includes both accepted checkpoints, the final reproducible repository, evidence synthesis, patient-facing report, patient-partner interpretation and disagreement record, action brief, workflow and feasibility, access and burden review, implementation, process, outcome, balancing, response, and data-quality measures, feedback and accountability plan, transparent-versus-ML conclusion, monitoring and stop rules, technical appendix, AI record, defense, 35-point score, gates, and disposition.
+
+The released checkpoint freezes all 358 Module 07 candidate files without editing them and adds 15 final-review files. Its 358-row candidate manifest is 60,523 bytes with SHA-256 `a3ca6bbacd22ab82d6679feb674f061ee98db9e681fc18deba5cc8ee9a93183b`. The complete final package has 373 files.
+
+The checkpoint records the 35-point component once, giving APP-2 a 20/45/35 course total of 100 points with no duplication. The reference passes all 26 gates and the 14-question construction defense. Its package disposition is `accept with conditions`, its separate organizational recommendation is `revise before testing`, and its course status is `complete for curriculum construction only`.
 
 ## 17. Assessment map and grading rules
 

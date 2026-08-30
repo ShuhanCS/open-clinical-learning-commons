@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint": {
+    "id": "oclc-app2-cp03",
+    "version": "0.1.0",
+    "commons_release": "0.64.0",
+    "course": "APP-2: Data for Patient Experience and Engagement",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_module07": {
+    "id": "oclc-app2-07",
+    "version": "0.1.0",
+    "candidate_files": 358,
+    "immutable_manifest_rows": 334,
+    "immutable_manifest_bytes": 64149,
+    "immutable_manifest_sha256": "53bd306692145df85d1b2a709615000f80829099a916659c6a8cfd3bd994697f",
+    "release_sha256": "2a30f59869be0041b813ce6005c226a9bcd3cd28632222464a5defc1586ca317"
+  },
+  "accepted_releases": {
+    "checkpoint1_sha256": "44f189a6225a1ed72fee70fa7366cc6dfd2ab5952c1ddcd8304fff5ea89a0137",
+    "checkpoint2_sha256": "7684d17f2441883cdcd87521e5376b133bf7d85dc0513f655770c18f19edb60c"
+  },
+  "package": {
+    "candidate_files": 358,
+    "final_review_files": 15,
+    "assembled_files": 373,
+    "final_manifest_rows": 358
+  },
+  "score": {
+    "maximum": 35.0,
+    "minimum_to_pass": 28.0,
+    "criteria": {"M01": 7.0, "P01": 8.0, "L01": 8.0, "A01": 7.0, "H01": 5.0}
+  },
+  "required_gates": 26,
+  "defense_questions": 14,
+  "allowed_package_dispositions": ["accept", "accept with conditions", "revise", "refer"],
+  "allowed_organizational_recommendations": [
+    "run bounded prospective measurement and improvement test",
+    "revise before testing",
+    "refer",
+    "stop"
+  ],
+  "reference": {
+    "package_disposition": "accept with conditions",
+    "organizational_recommendation": "revise before testing",
+    "course_status": "complete for curriculum construction only",
+    "actual_patient_or_caregiver_statements": 0,
+    "contact_and_fielding": "prohibited",
+    "official_hcahps_reporting": "prohibited",
+    "patient_or_group_targeting": "prohibited",
+    "clinical_implementation": "prohibited",
+    "model_deployment": "prohibited",
+    "proposed_tag": "app2-patient-experience-engagement-candidate-v0.1.0",
+    "tag_status": "proposed - not created"
+  }
+}
