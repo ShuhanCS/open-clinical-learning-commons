@@ -1,0 +1,11 @@
+metric,value,interpretation
+people,476,fitting cohort size
+events,87,fixed-horizon outcomes
+event_prevalence,0.18277311,cohort event rate
+brier_score,0.13490621,apparent mean squared probability error; lower is better
+roc_auc,0.66585409,apparent rank discrimination; 0.5 is chance
+log_likelihood,-208.29076775,apparent fitted log likelihood
+deviance,416.58153550,apparent binomial deviance
+non_intercept_parameters,4,prespecified baseline parameters
+events_per_non_intercept_parameter,21.75000000,descriptive support only
+sum_expected_events,87.00000000,in-sample intercept conservation

@@ -1,0 +1,6 @@
+quintile,people,observed_events,expected_events,observed_rate,mean_expected_probability,observed_minus_expected,support_status
+1,96,10,12.75994263,0.10416667,0.13291607,-2.75994263,report with caution
+2,95,11,13.07730295,0.11578947,0.13765582,-2.07730295,report with caution
+3,95,13,13.49791450,0.13684211,0.14208331,-0.49791450,report with caution
+4,95,16,14.04711566,0.16842105,0.14786438,1.95288434,report with caution
+5,95,37,33.61772427,0.38947368,0.35387078,3.38227573,report with caution

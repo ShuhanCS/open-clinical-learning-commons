@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.51.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.52.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -933,8 +933,8 @@ if (
     $app1Content -notmatch '35 points' -or
     $app1Content -notmatch 'eight-hour machine-learning extension' -or
     $app1Content -notmatch 'Joe Joseph, MD' -or
-    $app1PackageContent -notmatch 'Commons release: 0\.51\.0' -or
-    $app1PackageContent -notmatch 'Modules 01 through 03 and the Week 3 checkpoint are runnable release candidates'
+    $app1PackageContent -notmatch 'Commons release: 0\.52\.0' -or
+    $app1PackageContent -notmatch 'Modules 01 through 04 and the Week 3 checkpoint are runnable release candidates'
 ) {
     throw 'APP-1 is missing its source, version, workload, checkpoint, machine-learning, leadership, or plain-ASCII contract.'
 }
@@ -1262,6 +1262,95 @@ if (
 if ($LASTEXITCODE -ne 0) { throw 'APP-1 Checkpoint 1 builder self-check failed.' }
 & python (Join-Path $app1Checkpoint01Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-1 Checkpoint 1 validator self-check failed.' }
+
+$app1Module04Root = Join-Path $repo 'courses\clinical-care\modules\04-risk-adjustment-fair-comparison'
+$app1Module04Spec = Join-Path $repo 'docs\curriculum\courses\APP-1\modules\04-risk-adjustment-fair-comparison-spec.md'
+$app1Module04Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'source-record.yml', 'adjustment-contract.json',
+    'environment.yml', 'assessment.md', 'field-role-contract.csv', 'instructor-notes.md',
+    'paired-risk-adjustment.R', 'build_adjustment.py', 'build_workspace.py',
+    'validate_adjustment.py', 'release.json', 'risk-adjustment-memo.md', 'model-assessment.md',
+    'support-suppression-review.md', 'fair-comparison-interpretation.md',
+    'reproducibility-check.md', 'ai-use.md', 'progression-decision.md',
+    'outputs\adjusted-association.csv', 'outputs\analysis-checks.csv',
+    'outputs\bootstrap-stability.csv', 'outputs\build-report.json',
+    'outputs\calibration-quintiles.csv', 'outputs\comparison-figure.svg',
+    'outputs\expected-outcomes.csv', 'outputs\exposure-comparison.csv',
+    'outputs\field-role-summary.csv', 'outputs\model-coefficients.csv',
+    'outputs\model-performance.csv', 'outputs\site-case-mix.csv', 'outputs\site-comparison.csv',
+    'template\README.md', 'template\risk-adjustment-memo.md', 'template\model-assessment.md',
+    'template\support-suppression-review.md', 'template\fair-comparison-interpretation.md',
+    'template\reproducibility-check.md', 'template\ai-use.md', 'template\progression-decision.md'
+)
+$app1Module04Missing = @($app1Module04Files | Where-Object { -not (Test-Path -LiteralPath (Join-Path $app1Module04Root $_)) })
+if (-not (Test-Path -LiteralPath $app1Module04Spec) -or $app1Module04Missing.Count -gt 0) {
+    throw "APP-1 Module 04 is missing its specification or package files: $($app1Module04Missing -join ', ')."
+}
+$app1Module04Content = Get-Content -Raw -LiteralPath $app1Module04Spec
+$app1Module04Sections = [regex]::Matches($app1Module04Content, '(?m)^## \d+\.').Count
+if (
+    $app1Module04Sections -ne 21 -or
+    $app1Module04Content -match '[—–]' -or
+    $app1Module04Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app1Module04Content -notmatch 'Commons release target: 0\.52\.0' -or
+    $app1Module04Content -notmatch 'fixed 335-day outcome' -or
+    $app1Module04Content -notmatch 'all 49 fields classified' -or
+    $app1Module04Content -notmatch '300 person-level bootstrap samples' -or
+    $app1Module04Content -notmatch '5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb' -or
+    $app1Module04Content -notmatch '155 checks' -or
+    $app1Module04Content -notmatch '85 checks' -or
+    $app1Module04Content -notmatch '122 checks'
+) {
+    throw 'APP-1 Module 04 must define 21 plain-ASCII sections with the exact field-role, adjustment, support, validation, and manifest contracts.'
+}
+$app1Module04Release = Get-Content -Raw -LiteralPath (Join-Path $app1Module04Root 'release.json') | ConvertFrom-Json
+$app1Module04OutputNames = @(
+    'adjusted-association.csv', 'analysis-checks.csv', 'bootstrap-stability.csv', 'build-report.json',
+    'calibration-quintiles.csv', 'comparison-figure.svg', 'expected-outcomes.csv',
+    'exposure-comparison.csv', 'field-role-summary.csv', 'model-coefficients.csv',
+    'model-performance.csv', 'site-case-mix.csv', 'site-comparison.csv'
+)
+$app1Module04OutputFailures = @($app1Module04OutputNames | Where-Object {
+    $path = Join-Path $app1Module04Root "outputs\$_"
+    $metadata = $app1Module04Release.outputs.PSObject.Properties[$_].Value
+    -not $metadata -or (Get-Item -LiteralPath $path).Length -ne $metadata.bytes -or (Get-FileHash -Algorithm SHA256 -LiteralPath $path).Hash.ToLowerInvariant() -ne $metadata.sha256
+})
+if (
+    $app1Module04Release.module.id -ne 'oclc-app1-04' -or
+    $app1Module04Release.module.version -ne '0.1.0' -or
+    $app1Module04Release.module.commons_release -ne '0.52.0' -or
+    $app1Module04Release.module.hours -ne 16.5 -or
+    $app1Module04Release.module.cumulative_component_points -ne 25 -or
+    $app1Module04Release.upstream.checkpoint_manifest_sha256 -ne 'ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860' -or
+    $app1Module04Release.upstream.analysis_cohort_sha256 -ne '558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5' -or
+    $app1Module04Release.cohort.people -ne 476 -or
+    $app1Module04Release.cohort.events -ne 87 -or
+    $app1Module04Release.reference_results.brier_score_apparent -ne '0.13490621' -or
+    $app1Module04Release.reference_results.roc_auc_apparent -ne '0.66585409' -or
+    $app1Module04Release.reference_results.adjusted_exposure_odds_ratio -ne '1.16353250' -or
+    $app1Module04Release.reference_results.sites_report_with_caution -ne 6 -or
+    $app1Module04Release.reference_results.known_direct_site_effect -ne 0 -or
+    $app1Module04Release.outputs.'expected-outcomes.csv'.rows -ne 476 -or
+    $app1Module04Release.outputs.'site-comparison.csv'.rows -ne 6 -or
+    $app1Module04Release.package.output_files -ne 13 -or
+    $app1Module04Release.package.output_bytes -ne 128209 -or
+    $app1Module04Release.package.manifest_sha256 -ne '5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb' -or
+    $app1Module04Release.validation.complete_reference_checks -ne 155 -or
+    $app1Module04Release.validation.starter_checks -ne 85 -or
+    $app1Module04Release.validation.module_root_checks -ne 122 -or
+    $app1Module04Release.assessment.reference_gates_passed -ne 18 -or
+    $app1Module04Release.progression.reference -ne 'continue with conditions' -or
+    $app1Module04Release.progression.module05_permission -ne 'permitted for curriculum construction' -or
+    $app1Module04OutputFailures.Count -gt 0
+) {
+    throw "APP-1 Module 04 release metadata or frozen outputs do not match the risk-adjustment contract: $($app1Module04OutputFailures -join ', ')."
+}
+& python (Join-Path $app1Module04Root 'build_adjustment.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-1 Module 04 adjustment builder self-check failed.' }
+& python (Join-Path $app1Module04Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-1 Module 04 workspace builder self-check failed.' }
+& python (Join-Path $app1Module04Root 'validate_adjustment.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-1 Module 04 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -2551,3 +2640,4 @@ Write-Output "APP-1 Module 01 passed: $app1Module01Sections contract sections an
 Write-Output "APP-1 Module 02 passed: $app1Module02Sections contract sections and $($app1Module02Files.Count) required files."
 Write-Output "APP-1 Module 03 passed: $app1Module03Sections contract sections and $($app1Module03Files.Count) required files."
 Write-Output "APP-1 Checkpoint 1 passed: $app1Checkpoint01Sections contract sections and $($app1Checkpoint01Files.Count) required files."
+Write-Output "APP-1 Module 04 passed: $app1Module04Sections contract sections and $($app1Module04Files.Count) required files."

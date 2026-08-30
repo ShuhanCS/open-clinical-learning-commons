@@ -1,0 +1,7 @@
+teaching_site_id,people,mean_age,any_prior_acute_people,mean_prior_conditions,inpatient_indexes,scheduled_followup,low_risk,medium_risk,high_risk,field_class
+SITE-A,76,36.56578947,3,1.21052632,9,19,39,22,15,synthetic_extension
+SITE-B,75,38.16000000,3,1.24000000,9,19,35,22,18,synthetic_extension
+SITE-C,68,43.36764706,0,1.32352941,5,19,21,26,21,synthetic_extension
+SITE-D,88,43.98863636,0,1.31818182,10,21,26,32,30,synthetic_extension
+SITE-E,87,42.51724138,3,1.45977011,13,20,25,36,26,synthetic_extension
+SITE-F,82,52.12195122,3,1.36585366,12,31,13,21,48,synthetic_extension

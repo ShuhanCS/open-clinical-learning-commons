@@ -1,1 +1,1 @@
-courses/clinical-care/modules/03-survival-time-to-event/outputs/*.svg -whitespace
+courses/clinical-care/modules/*/outputs/*.svg -whitespace

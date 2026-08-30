@@ -1,0 +1,6 @@
+term,reference_coefficient,bootstrap_median,bootstrap_lower2_5,bootstrap_upper97_5,same_sign_share,successful_fits,failed_fits,boundary
+intercept,-1.91204198,-1.88999959,-2.45764128,-1.39858713,1.00000000,300,0,person bootstrap stability screen; not corrected inference or external validation
+age_decade_from_40,0.01808007,0.01524176,-0.11532817,0.15990761,0.58666667,300,0,person bootstrap stability screen; not corrected inference or external validation
+any_prior_acute,1.86449649,1.96192904,0.61109293,22.56297423,1.00000000,300,0,person bootstrap stability screen; not corrected inference or external validation
+prior_365d_condition_count,0.07539425,0.05709932,-0.27839038,0.40196209,0.66666667,300,0,person bootstrap stability screen; not corrected inference or external validation
+index_inpatient,1.40886460,1.39733874,0.80009771,2.05462567,1.00000000,300,0,person bootstrap stability screen; not corrected inference or external validation

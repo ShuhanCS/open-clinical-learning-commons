@@ -313,6 +313,16 @@
 - The checkpoint carries the Module 02 score of 20.00 out of 20.00 exactly once. Module 03 adds no Week 3 points and contributes 16 noncompensable survival gates.
 - Reference validation passes 394 checks and learner validation passes 379 checks. Duplicate assembly, learner candidate identity, copied validation, existing-target refusal, candidate mutation, and invalid score routes pass.
 - APP-1 Checkpoint 1 is a runnable release candidate at Commons 0.51.0 and permits Module 04 construction with the failed PH screen as an open methods condition.
+- APP-1 Module 04 version 0.1.0 accepts only Checkpoint 1 manifest SHA-256 `ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860` and the exact 476-row, 49-field cohort with SHA-256 `558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5`.
+- All 49 fields have frozen timing, provenance, analytic roles, permitted uses, and prohibited interpretations. The expected-outcome model uses only age by decade from 40, any prior acute encounter, prior condition count, and inpatient index status.
+- The fixed day-335 outcome is permitted because all no-event people reach the common administrative boundary and no competing death occurs before event. The failed Module 03 proportional-hazards screen remains visible and is not repaired by this model.
+- Apparent Brier score is 0.13490621 and apparent ROC AUC is 0.66585409. Person-level expected probabilities reconcile to 87 events. All 300 bootstrap fits succeed; the any-prior-acute coefficient retains a wide 0.61109293 to 22.56297423 bootstrap interval.
+- The scheduled-follow-up standardized event rate is 0.19819116 versus 0.17721417 without recorded follow-up. The secondary adjusted odds ratio is 1.16353250 with a 95 percent interval from 0.67665877 to 2.00072462 and p = 0.58392672.
+- All six synthetic teaching sites meet the prespecified support minimums and are reported with caution in fixed SITE-A through SITE-F order. SITE-B and SITE-C have exactly ten observed events, and SITE-C has 10.90777066 expected events. The known direct site effect is zero.
+- Thirteen deterministic outputs total 128,209 bytes. The ten-row immutable workspace manifest is 1,666 bytes with SHA-256 `5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb`.
+- Complete reference validation passes 155 checks, starter validation passes 85 checks, and module-root validation passes 122 checks. Copied validation and incomplete, output, score, progression, and field-role mutation rejection pass.
+- The cumulative 25-point survival and risk-adjustment component passes all 18 Module 04 gates and is scored once at the Week 6 checkpoint. Module 05 is permitted for curriculum construction with model, uncertainty, confounding, equity, survival, review, and R-execution conditions.
+- APP-1 Module 04 is a runnable release candidate at Commons 0.52.0.
 
 ## Pending confirmation
 
@@ -321,11 +331,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-1 course specification, accepted Checkpoint 1 package, Module 03 specification and release, foundation adjustment handoff, and this ledger.
-2. Write the durable APP-1 Module 04 specification before broad implementation.
-3. Freeze the 476-person risk set, event and censoring fields, fixed-time survival evidence, failed PH screen, teaching-site provenance, and Checkpoint 1 identity.
-4. Define the baseline case-mix contract before fitting. Separate prognostic baseline fields from exposure, post-exposure, outcome, extension, and prohibited fields.
-5. Build a transparent expected-outcome model with calibration, support, uncertainty, and failure checks. Do not choose the model to repair the Module 03 result.
-6. Produce unadjusted and adjusted teaching-site comparisons with suppression or pooling rules, observed-to-expected evidence, and standardized rates.
-7. Explain residual confounding, synthetic-site zero-effect provenance, and why no comparison grades a real facility or estimates a causal follow-up effect.
-8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 05.
+1. Read the APP-1 course specification, accepted Checkpoint 1 package, Module 04 specification and release, Module 05 ownership boundary, and this ledger.
+2. Write the durable APP-1 Module 05 specification before broad implementation.
+3. Preserve the exact 476-person cohort, survival evidence, expected outcomes, field roles, synthetic-site provenance, and Module 04 manifest identity.
+4. Define treatment, procedure, adherence, utilization, time, and pathway-variation measures before analysis. Keep observed care patterns separate from recommendations and causal effects.
+5. Use the accepted exposure and site comparisons to ask where pathway variation occurs, not to rank sites or repair prior results.
+6. Build exact denominator, support, uncertainty, missingness, and failure checks for each variation measure.
+7. Carry sparse-model instability, apparent-only performance, fixed-expected-count intervals, residual confounding, equity review, and failed PH conditions forward.
+8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 06.

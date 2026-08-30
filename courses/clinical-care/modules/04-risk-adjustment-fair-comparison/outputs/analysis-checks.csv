@@ -1,0 +1,17 @@
+check_name,observed_value,expected_value,status
+people,476,476,pass
+unique_people,476,476,pass
+events,87,87,pass
+administrative_censors,389,389,pass
+competing_death_censors,0,0,pass
+maximum_observed_days,335.00000000,335.00000000,pass
+source_fields,49,49,pass
+field_contract_rows,49,49,pass
+baseline_predictors,4,4,pass
+predictor_missing_values,0,0,pass
+exposure_in_expected_model,0,0,pass
+site_in_expected_model,0,0,pass
+extension_in_expected_model,0,0,pass
+teaching_sites,6,6,pass
+scheduled_followup,129,129,pass
+module03_ph_failure_carried,1,1,pass

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "app1-risk-adjustment-v1",
+  "population": "all 476 accepted day-30-landmark-eligible synthetic people",
+  "outcome": "first later acute return by day 335 after landmark",
+  "fixed_horizon_days": 335,
+  "model": "binomial generalized linear model with logit link",
+  "predictors": [
+    {"source": "age_at_index", "model_field": "age_decade_from_40", "transformation": "(age_at_index - 40) / 10"},
+    {"source": "prior_365d_acute_count", "model_field": "any_prior_acute", "transformation": "1 if count > 0 else 0"},
+    {"source": "prior_365d_condition_count", "model_field": "prior_365d_condition_count", "transformation": "none"},
+    {"source": "index_encounter_class", "model_field": "index_inpatient", "transformation": "1 if inpatient else 0"}
+  ],
+  "expected_model_excludes": ["landmark_exposure", "teaching_site_id", "outcome_fields", "post_exposure_fields", "synthetic_extension_fields", "demographic_audit_fields"],
+  "calibration_groups": 5,
+  "calibration_tie_break": "predicted probability then patient_id",
+  "bootstrap": {"samples": 300, "seed": 20260830, "unit": "person"},
+  "standardized_rate": "observed events / expected events * cohort event rate",
+  "interval": "exact Poisson interval for observed count with expected count treated as fixed",
+  "suppression": {"minimum_people": 50, "minimum_observed_events": 10, "minimum_expected_events": 10, "require_both_exposure_groups": true, "require_all_risk_tiers": true},
+  "site_order": ["SITE-A", "SITE-B", "SITE-C", "SITE-D", "SITE-E", "SITE-F"],
+  "claim_boundary": "synthetic descriptive comparison; no causal effect fairness certification real-site ranking or deployment"
+}

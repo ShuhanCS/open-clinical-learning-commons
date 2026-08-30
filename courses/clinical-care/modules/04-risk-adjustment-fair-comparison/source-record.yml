@@ -1,0 +1,26 @@
+module_id: oclc-app1-04
+module_version: 0.1.0
+commons_release: 0.52.0
+accepted_checkpoint:
+  id: oclc-app1-cp01
+  version: 0.1.0
+  commons_release: 0.51.0
+  candidate_manifest_rows: 78
+  candidate_manifest_sha256: ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860
+upstream_cohort:
+  rows: 476
+  fields: 49
+  bytes: 200699
+  sha256: 558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5
+  people: 476
+  events: 87
+  administrative_censors: 389
+  competing_death_censors: 0
+upstream_survival:
+  module_manifest_sha256: 067e1953d7fe7bcfaf878880bef2edf44788b846f71c478282ebe34f1a5d4d52
+  ph_screen_result: fail
+  ph_p_value: 0.00636020
+extension:
+  id: app1-six-site-v1
+  known_direct_site_effect: zero
+claim_boundary: synthetic fixed-horizon descriptive risk adjustment only; no causal clinical fairness facility-ranking or deployment claim

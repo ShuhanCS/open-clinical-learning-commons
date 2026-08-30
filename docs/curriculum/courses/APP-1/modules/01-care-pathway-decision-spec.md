@@ -417,12 +417,12 @@ Noncompensable gates include exact source fingerprints, complete outcome timing,
 
 | Error or failure | Why it matters | Instructor response |
 |---|---|---|
-| “Improve readmissions” without a decision owner | no one can act or accept conditions | require one owner and one bounded action |
+| "Improve readmissions" without a decision owner | no one can act or accept conditions | require one owner and one bounded action |
 | Exposure classified at discharge | follow-up occurs after discharge and creates immortal-time bias | require the day-30 landmark and visible early-event branch |
 | Early death or return deleted from the cohort story | hides clinically important pathway outcomes | restore initial cohort and landmark flow separately |
 | Outcome defined only as a database field | no patient, clinical, or decision meaning | require primary and supporting outcome concepts |
 | Raw 64-organization ranking | cells are too sparse and synthetic | prohibit ranking and carry the six-site extension requirement |
-| “Follow-up reduced returns” | observational synthetic association cannot establish cause | rewrite as difference and prospective-test rationale |
+| "Follow-up reduced returns" | observational synthetic association cannot establish cause | rewrite as difference and prospective-test rationale |
 | Feasibility counts copied without interpretation | numbers do not explain the decision | require one decision consequence per metric |
 | Patient stakeholder omitted | outcome relevance and burden are unexamined | add patient/community role and feedback route |
 | Agent output treated as a source | generated text is not evidence | require source comparison or independent check |

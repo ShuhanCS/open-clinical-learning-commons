@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app1-04",
+    "title": "Risk adjustment and fair comparison",
+    "version": "0.1.0",
+    "commons_release": "0.52.0",
+    "course": "APP-1: Data for Clinical Care",
+    "week": 4,
+    "hours": 16.5,
+    "cumulative_component_points": 25,
+    "awarded_at": "Week 6 checkpoint"
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-app1-cp01",
+    "checkpoint_version": "0.1.0",
+    "checkpoint_commons_release": "0.51.0",
+    "checkpoint_manifest_rows": 78,
+    "checkpoint_manifest_sha256": "ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860",
+    "module03_manifest_sha256": "067e1953d7fe7bcfaf878880bef2edf44788b846f71c478282ebe34f1a5d4d52",
+    "analysis_cohort_rows": 476,
+    "analysis_cohort_fields": 49,
+    "analysis_cohort_bytes": 200699,
+    "analysis_cohort_sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5"
+  },
+  "cohort": {
+    "people": 476,
+    "events": 87,
+    "administrative_censors": 389,
+    "competing_death_censors": 0,
+    "scheduled_followup": 129,
+    "no_recorded_followup": 347,
+    "fixed_horizon_days": 335,
+    "teaching_sites": 6
+  },
+  "reference_results": {
+    "formula": "event_indicator ~ age_decade_from_40 + any_prior_acute + prior_365d_condition_count + index_inpatient",
+    "brier_score_apparent": "0.13490621",
+    "roc_auc_apparent": "0.66585409",
+    "sum_expected_events": "87.00000000",
+    "bootstrap_samples": 300,
+    "bootstrap_successful": 300,
+    "bootstrap_failed": 0,
+    "any_prior_acute_bootstrap_lower2_5": "0.61109293",
+    "any_prior_acute_bootstrap_upper97_5": "22.56297423",
+    "scheduled_followup_standardized_rate": "0.19819116",
+    "no_recorded_followup_standardized_rate": "0.17721417",
+    "adjusted_exposure_odds_ratio": "1.16353250",
+    "adjusted_exposure_lower95": "0.67665877",
+    "adjusted_exposure_upper95": "2.00072462",
+    "adjusted_exposure_p_value": "0.58392672",
+    "site_order": ["SITE-A", "SITE-B", "SITE-C", "SITE-D", "SITE-E", "SITE-F"],
+    "sites_report_with_caution": 6,
+    "sites_suppressed": 0,
+    "known_direct_site_effect": 0,
+    "module03_ph_screen_result": "fail"
+  },
+  "outputs": {
+    "adjusted-association.csv": {"rows": 1, "fields": 12, "bytes": 397, "sha256": "ba45d38cf65bc19de33708827cf1b0fe27ef981d8ffd95d78fa861c758098f20"},
+    "analysis-checks.csv": {"rows": 16, "fields": 4, "bytes": 552, "sha256": "1bac4ea6f83e2799deb440b23da948beae70b1c382bdccc112012072aaa5d3b3"},
+    "bootstrap-stability.csv": {"rows": 5, "fields": 9, "bytes": 946, "sha256": "07cdfbe77b35bd869960127ea34c65d753f65a416a03b8532b86ec4608a3938c"},
+    "build-report.json": {"bytes": 13873, "sha256": "c5466c3f6778f8d689151ac6f32203b422b63b81c29868e6539f3e33f2010f43"},
+    "calibration-quintiles.csv": {"rows": 5, "fields": 8, "bytes": 495, "sha256": "01a0bcd82ba15acb556298e029057dc039bffd1971e1324eeb797508da6ce4db"},
+    "comparison-figure.svg": {"bytes": 51255, "sha256": "99221affece300425e43c8e0a25721082ad0690be3e55dffd9860e30f0e78eb9"},
+    "expected-outcomes.csv": {"rows": 476, "fields": 12, "bytes": 54320, "sha256": "e6c4efbe845bc1047040d27760aa22cf63a462ba4cca6709d6bdff8578af840e"},
+    "exposure-comparison.csv": {"rows": 2, "fields": 13, "bytes": 591, "sha256": "32c800fd3dc3099054c8ba5745c3b3bb0a4f1060f6b8fe036b6643b90713a565"},
+    "field-role-summary.csv": {"rows": 22, "fields": 4, "bytes": 1480, "sha256": "d83f11a72b612dca0dd621b4e67c995ab40a09755b3dd0c14026c59a733849fc"},
+    "model-coefficients.csv": {"rows": 5, "fields": 10, "bytes": 1230, "sha256": "032c8aec1b419f0f0efb6761b585dd2cdab1a53d0f48d969cb505a50a128b082"},
+    "model-performance.csv": {"rows": 10, "fields": 3, "bytes": 587, "sha256": "7b2b6d8e97c93a3f74f8f4888b52097e8867808b3e4278a4a429f5a525e763a3"},
+    "site-case-mix.csv": {"rows": 6, "fields": 11, "bytes": 575, "sha256": "5cc00cc5d79a66fac0729d4aa8044b8bc05e02621720f3326b26856a9e134775"},
+    "site-comparison.csv": {"rows": 6, "fields": 20, "bytes": 1908, "sha256": "a0a97799817e22bbe4252b3d296ae4150c0120eb182078fcd37b44c5e5610329"}
+  },
+  "package": {
+    "immutable_manifest_rows": 10,
+    "editable_work_files": 8,
+    "learner_files": 19,
+    "reference_files": 32,
+    "output_files": 13,
+    "output_bytes": 128209,
+    "manifest_bytes": 1666,
+    "manifest_sha256": "5eaf8ba19e965b437cd4c586a1811b6d4aeb0f5cc82ea585dae2405432c9a8bb"
+  },
+  "assessment": {
+    "cumulative_component_points": 25,
+    "criteria": 5,
+    "noncompensable_gates": 18,
+    "reference_points": 25,
+    "reference_gates_passed": 18
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 155,
+    "starter_checks": 85,
+    "module_root_checks": 122,
+    "copied_validator_check": "pass",
+    "two_build_output_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_upstream_rejection": "pass",
+    "changed_field_role_rejection": "pass",
+    "incomplete_starter_rejection": "pass",
+    "changed_output_rejection": "pass",
+    "invalid_score_rejection": "pass",
+    "invalid_progression_rejection": "pass",
+    "visual_inspection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module05_permission": "permitted for curriculum construction",
+    "clinical_use": "prohibited"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, risk-adjustment builder, teaching records, and validation"}
+  ],
+  "known_issues": [
+    "Named clinical, risk-adjustment, survival-methods, informatics, equity, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "The any-prior-acute coefficient has a very wide bootstrap upper estimate.",
+    "Performance and calibration are apparent in the fitting cohort.",
+    "Poisson intervals treat expected events as fixed and omit model-estimation uncertainty.",
+    "The six sites are deterministic synthetic labels with known direct effect zero and cannot be ranked as real facilities.",
+    "The R script is supplied, but execution awaits a named managed R environment.",
+    "The source is synthetic and cannot support real-population, causal, efficacy, fairness, ranking, or deployment claims."
+  ]
+}

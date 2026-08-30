@@ -1,0 +1,2 @@
+term,coefficient,standard_error,adjusted_odds_ratio,lower95,upper95,z_value,p_value,baseline_predictors,people,events,boundary
+landmark_exposure,0.15146063,0.27656059,1.16353250,0.67665877,2.00072462,0.54765805,0.58392672,age_decade_from_40|any_prior_acute|prior_365d_condition_count|index_inpatient,476,87,secondary adjusted observational odds ratio; not risk ratio hazard ratio or causal effect

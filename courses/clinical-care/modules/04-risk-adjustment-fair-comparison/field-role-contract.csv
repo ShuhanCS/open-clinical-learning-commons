@@ -1,0 +1,50 @@
+field_id,field,provenance,timing,role,transformation,permitted_use,prohibited_use
+F001,patient_id,source,identifier,identifier,none,row linkage,model predictor or disclosure as real identity
+F002,index_encounter_id,source,index,identifier,none,audit linkage,model predictor
+F003,index_start,source,index,timing_audit,none,temporal audit,expected-outcome predictor
+F004,index_stop,source,index,timing_audit,none,temporal audit,expected-outcome predictor
+F005,index_encounter_class,source,index,baseline_predictor,index_inpatient equals 1 for inpatient,index acuity proxy,causal treatment or real acuity truth
+F006,source_organization_id,source,index,sparse_provenance,none,source audit,site predictor or ranking
+F007,age_at_index,derived,index,baseline_predictor,age_decade_from_40 equals age minus 40 divided by 10,expected-outcome model,causal effect or exact clinical risk
+F008,gender,source,index,equity_audit_only,none,later prespecified audit,expected-outcome predictor in this release or fairness claim
+F009,race,source,index,equity_audit_only,none,later prespecified audit,expected-outcome predictor in this release or fairness claim
+F010,ethnicity,source,index,equity_audit_only,none,later prespecified audit,expected-outcome predictor in this release or fairness claim
+F011,prior_365d_encounter_count,derived,pre_index,excluded_baseline_candidate,none,descriptive support,post hoc model selection
+F012,prior_365d_acute_count,derived,pre_index,baseline_predictor,any_prior_acute equals 1 when count is above zero,expected-outcome model,linear effect of sparse maximum
+F013,prior_365d_condition_count,derived,pre_index,baseline_predictor,none,expected-outcome model,complete clinical comorbidity truth
+F014,index_death_flag,derived,index,outcome_branch,none,cohort audit,expected-outcome predictor
+F015,index_death_date,source,index,outcome_branch,none,cohort audit,expected-outcome predictor
+F016,early_death_flag,derived,post_index_pre_landmark,outcome_branch,none,cohort audit,expected-outcome predictor
+F017,early_death_date,source,post_index_pre_landmark,outcome_branch,none,cohort audit,expected-outcome predictor
+F018,early_acute_return_flag,derived,post_index_pre_landmark,outcome_branch,none,cohort audit,expected-outcome predictor
+F019,first_early_acute_id,source,post_index_pre_landmark,outcome_branch,none,event audit,expected-outcome predictor
+F020,first_early_acute_start,source,post_index_pre_landmark,outcome_branch,none,event audit,expected-outcome predictor
+F021,first_early_acute_days,derived,post_index_pre_landmark,outcome_branch,none,event audit,expected-outcome predictor
+F022,scheduled_followup_flag,derived,post_index_pre_landmark,exposure,none,group comparison only,expected-outcome predictor or causal treatment
+F023,first_followup_id,source,post_index_pre_landmark,exposure_component,none,exposure audit,expected-outcome predictor
+F024,first_followup_start,source,post_index_pre_landmark,exposure_component,none,exposure audit,expected-outcome predictor
+F025,first_followup_days,derived,post_index_pre_landmark,exposure_component,none,exposure audit,expected-outcome predictor
+F026,landmark_eligible_flag,derived,landmark,structural_constant,none,cohort verification,model predictor
+F027,landmark_exclusion_reason,derived,landmark,structural_blank,none,cohort verification,zero imputation or model predictor
+F028,landmark_datetime,derived,landmark,timing_audit,none,follow-up audit,model predictor
+F029,landmark_exposure,derived,landmark,exposure,none,group and secondary adjusted association,expected-outcome predictor or causal treatment effect
+F030,later_acute_return_flag,derived,post_landmark,outcome,none,outcome verification,predictor
+F031,first_later_acute_id,source,post_landmark,outcome_component,none,event audit,predictor
+F032,first_later_acute_start,source,post_landmark,outcome_component,none,event audit,predictor
+F033,first_later_acute_days_from_discharge,derived,post_landmark,outcome_component,none,event audit,predictor
+F034,later_death_flag,derived,post_landmark,competing_event_audit,none,death audit,predictor
+F035,later_death_date,source,post_landmark,competing_event_audit,none,death audit,predictor
+F036,later_death_before_event_flag,derived,post_landmark,censoring_audit,none,fixed-horizon justification,predictor
+F037,event_indicator,derived,post_landmark,outcome,none,model outcome,predictor
+F038,observed_time_days,derived,post_landmark,outcome_timing,none,Module 03 survival and horizon audit,fixed-horizon predictor
+F039,censor_reason,derived,post_landmark,censoring,none,fixed-horizon justification,predictor
+F040,administrative_end_datetime,derived,post_landmark,censoring_boundary,none,common-horizon audit,predictor
+F041,baseline_risk_score,synthetic_extension,baseline,extension_assignment_input,none,support audit,expected-outcome predictor or observed clinical score
+F042,baseline_risk_rank,synthetic_extension,baseline,extension_assignment_input,none,support audit,expected-outcome predictor
+F043,baseline_risk_tier,synthetic_extension,baseline,extension_support,none,site support and suppression,expected-outcome predictor or real risk category
+F044,assignment_hash_prefix,synthetic_extension,assignment,extension_provenance,none,reproduction audit,predictor
+F045,assignment_uniform,synthetic_extension,assignment,extension_provenance,none,reproduction audit,predictor
+F046,teaching_site_id,synthetic_extension,assignment,comparison_group,none,synthetic site comparison,expected-outcome predictor or real-site identity
+F047,extension_seed,synthetic_extension,assignment,extension_provenance,none,reproduction audit,predictor
+F048,extension_version,synthetic_extension,assignment,extension_provenance,none,reproduction audit,predictor
+F049,field_class,synthetic_extension,assignment,extension_provenance,none,provenance audit,predictor

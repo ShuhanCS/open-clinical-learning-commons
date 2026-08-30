@@ -1,0 +1,12 @@
+name: oclc-app1-04
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - matplotlib=3.10.9
+  - numpy=2.0.2
+  - pandas=3.0.3
+  - scipy=1.17.1
+  - statsmodels=0.14.6
+  - r-base
+  - r-stats
