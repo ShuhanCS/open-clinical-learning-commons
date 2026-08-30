@@ -1,0 +1,16 @@
+publisher: "Centers for Medicare & Medicaid Services"
+landing_page: "https://data.cms.gov/provider-data/dataset/632h-zaca"
+retrieved_at: "2026-08-29"
+released: "2026-08-13"
+data_path: "courses/data-visualization/modules/07-color-accessible-communication/data/accessibility_hf_readmission_2026.csv"
+analysis_path: "analysis/accessible-display.R"
+figure_path: "figures/accessible-display.png"
+table_path: "evidence-tables/accessible-display.csv"
+alt_text_path: "alt-text/accessible-display.md"
+sha256: "b58168d9002a3e489213b0fafde1eca76f5b1a426c71ea3d61551671d76a49c2"
+transformations:
+  - "Preserved all 65 Massachusetts Module 06 teaching rows and added redundant accessibility cues."
+  - "Rendered the released color-plus-shape view and exact status table."
+known_limits:
+  - "The source interval endpoints do not name a confidence level in the release, so the checkpoint does not invent one."
+  - "A calculated contrast ratio does not certify the complete display or delivery context."

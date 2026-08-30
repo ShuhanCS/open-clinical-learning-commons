@@ -1,0 +1,18 @@
+publisher: "The MITRE Corporation, Synthea"
+landing_page: "https://synthea.mitre.org/downloads"
+retrieved_at: "2026-08-30"
+released: "April 2020 CSV sample"
+data_path: "courses/data-visualization/modules/11-flow-networks-composition-hierarchy/data/synthea_acute_transition_cohort_2020.csv"
+analysis_path: "analysis/structure-display.R"
+figure_path: "figures/structure-display.png"
+table_path: "evidence-tables/structure-display.csv"
+alt_text_path: "alt-text/structure-display.md"
+sha256: "b3f1cf69a54fd2f38dfe6debfd009ebb1c7d2b1ef7b42d7b35c989a9f068f3ca"
+patient_source_sha256: "a208fe4ff6fc9dc5cee4a201043a2f059943b8c058fdb191e19b0f9ffbb821bf"
+encounter_source_sha256: "00298bf68f89dee9734cf133c516ad6b7efe95c8cd15a9458e7fb09c1dca56ce"
+transformations:
+  - "Selected one first qualifying acute index event per adult synthetic patient."
+  - "Assigned mutually exclusive 30-day states and 90-day endpoints with explicit precedence."
+known_limits:
+  - "The simulated paths cannot estimate real care quality, utilization, access, mortality, or readmission."
+  - "No encounter recorded means no qualifying encounter appears in the selected extract and interval."

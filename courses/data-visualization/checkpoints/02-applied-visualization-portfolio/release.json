@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "DA-730-CP2",
+    "title": "Applied visualization portfolio",
+    "version": "0.1.0",
+    "commons_release": "0.24.0",
+    "course": "DA-730: Clinical Data Visualization and Decision Storytelling",
+    "due": "end of instructional week 6",
+    "included_modules": [7, 8, 9, 10, 11, 12]
+  },
+  "package": {
+    "specification": "../../../../docs/curriculum/courses/DA-730/checkpoints/02-applied-visualization-portfolio-spec.md",
+    "assembler": "assemble_checkpoint.ps1",
+    "validator": "validate_checkpoint.py",
+    "instructor_notes": "instructor-notes.md",
+    "learner_templates": 8,
+    "analysis_wrappers": 6,
+    "source_record_templates": 6
+  },
+  "starter_outputs": {
+    "figures": 6,
+    "evidence_tables": 6,
+    "accessible_alternatives": 6,
+    "table_rows": {
+      "accessible_display": 65,
+      "time_display": 94,
+      "comparison_display": 500,
+      "place_display": 100,
+      "structure_display": 7,
+      "dashboard": 3
+    }
+  },
+  "environment": {
+    "powershell": "PowerShell 7 and Windows PowerShell compatible",
+    "python": "Python 3 standard library",
+    "r": "R version 4.6.1 (2026-06-24 ucrt)",
+    "packages": {"ggplot2": "4.0.3"},
+    "tested_platform": "Windows"
+  },
+  "review": {
+    "technical_validation": {
+      "status": "complete",
+      "date": "2026-08-30",
+      "evidence": "Validator self-check passed. The assembler regenerated six figures, six exact tables, and six accessible alternatives from released Modules 07 through 12."
+    },
+    "required_human_roles": [
+      {"role": "DA-730 faculty", "reviewer": null, "status": "pending", "date": null},
+      {"role": "clinical or health-system relevance", "reviewer": null, "status": "pending", "date": null},
+      {"role": "public-source fidelity", "reviewer": null, "status": "pending", "date": null},
+      {"role": "visualization and information design", "reviewer": null, "status": "pending", "date": null},
+      {"role": "accessibility", "reviewer": null, "status": "pending", "date": null},
+      {"role": "equity and action language", "reviewer": null, "status": "pending", "date": null},
+      {"role": "independent teachability", "reviewer": null, "status": "pending", "date": null}
+    ]
+  },
+  "validation": {
+    "validator_self_check": "pass",
+    "assembler": "pass",
+    "nonempty_target_refusal": "pass",
+    "incomplete_starter_rejection": "pass: learner instructions and word-count requirements remain visible",
+    "technical_artifact_errors": 0
+  },
+  "known_issues": [
+    "Named faculty, clinical, source, design, accessibility, equity, and independent-instructor reviews are pending.",
+    "The assembled starter intentionally fails completed-folder validation until the learner replaces every bracketed instruction and completes the required word counts.",
+    "The six cases use different populations and cannot be combined into one clinical claim.",
+    "Technical execution has been tested on Windows; macOS and Linux clean-run verification remains pending."
+  ]
+}

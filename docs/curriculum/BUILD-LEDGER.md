@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.23.0
+- Current release: 0.24.0
 - Last updated: 2026-08-30
 - Active phase: DA-730 module specification and build
-- Last completed unit: DA-730 Module 12, Dashboards and multi-view composition
-- Next unit: DA-730 Checkpoint 2, Week 6 applied visualization portfolio
+- Last completed unit: DA-730 Checkpoint 2, Week 6 applied visualization portfolio
+- Next unit: DA-730 Module 13, Audience, annotation, narrative, and capstone
 
 ## Confirmed decisions
 
@@ -90,6 +90,13 @@
 - The reference case selects Anna Jaques Hospital for a definition and current-data review because its public OP-22 value is 23 percent, the highest observed value among 53 reporting Massachusetts hospitals and above the mock 10-percent trigger.
 - The public OP-22 period ended 590 days before release. The dashboard therefore recommends definition validation and current local data, not a current operational judgment or intervention.
 - The Massachusetts medians are descriptive references. The 10-percent and 240-minute values are mock quality-improvement charter assumptions, not CMS thresholds.
+- DA-730 Checkpoint 2 packages one applied artifact from each of Modules 07 through 12 into six complete evidence chains.
+- The assembler regenerates six PNG figures, six exact CSV tables, six text alternatives, six editable analysis wrappers, and six prefilled source records from a clean target.
+- Exact released table rows are 65 for accessibility, 94 for time, 500 for comparison, 100 for place, 7 for structure, and 3 for the dashboard.
+- The package includes eight learner writing templates, a 982-line 17-section specification, instructor notes, a release record, and a Python standard-library validator.
+- The validator self-check passes a valid fixture and rejects a missing dashboard. The full assembler test passes, the incomplete starter is rejected, and a nonempty target is protected from overwrite.
+- The checkpoint decision owner is a DA-730 clinical analytics review panel. The decision is whether to approve, condition, revise, or refer a feasible Module 13 capstone proposal.
+- The six cases remain separate populations. The checkpoint uses them as evidence of transferable readiness and does not combine them into one clinical claim.
 
 ## Pending confirmation
 
@@ -98,9 +105,9 @@
 
 ## Next resume instructions
 
-1. Read the Checkpoint 1 package contract and the Module 12 Checkpoint 2 handoff.
-2. Define one coherent Week 6 portfolio using selected evidence from Modules 07 through 12, not six disconnected assignments.
-3. Require the Module 12 dashboard, exact table, measure dictionary, view-purpose audit, source records, accessibility evidence, one critique repair, decision brief, and AI-use record.
-4. Create the exact learner folder, assembly path, templates, rubric, instructor notes, release record, and standard-library validator.
-5. Test the assembler and validator from a clean temporary folder.
-6. Release Checkpoint 2 before starting Module 13.
+1. Read the DA-730 Module 13 brief, Checkpoint 2 capstone-proposal contract, and Module 12 handoff.
+2. Select one approved public or synthetic case that can be reshaped for two audiences without changing its values, definitions, uncertainty, or action boundary.
+3. Write the 21-section Module 13 specification before building the runnable package.
+4. Define exact primary figure, supporting figure, accessible table, text alternative, decision brief, source record, transformation record, reproducibility check, critique response, AI-use record, and oral defense files.
+5. Build and validate the final checkpoint for the official half-term end date.
+6. Release Module 13 and the final checkpoint before beginning the foundation-course builds.

@@ -1,0 +1,16 @@
+publisher: "Centers for Disease Control and Prevention"
+landing_page: "https://data.cdc.gov/d/fu4u-a9bh"
+retrieved_at: "2026-08-29"
+released: "PLACES county data 2024 release, measure year 2022"
+data_path: "courses/data-visualization/modules/09-comparison-small-multiples/data/nc_county_health_profiles_2024.csv"
+analysis_path: "analysis/comparison-display.R"
+figure_path: "figures/comparison-display.png"
+table_path: "evidence-tables/comparison-display.csv"
+alt_text_path: "alt-text/comparison-display.md"
+sha256: "33b7cfc1c2459f1bde29cee7c05141aa116da2e6f79faf82646961e5162a75a9"
+transformations:
+  - "Selected all 100 North Carolina counties for five measures with crude and age-adjusted values."
+  - "Applied fixed measure scales, shared county order, and descriptive national references."
+known_limits:
+  - "PLACES values are model-based small-area estimates, not observed diagnoses or direct county survey estimates."
+  - "The profile count is a transparent teaching screen, not a validated equity, risk, readiness, or funding score."

@@ -1,0 +1,16 @@
+publisher: "Centers for Disease Control and Prevention, National Healthcare Safety Network"
+landing_page: "https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/rhwp-grxi"
+retrieved_at: "2026-08-29"
+released: "selected public query through 2026-08-22"
+data_path: "courses/data-visualization/modules/08-time-process-variation/data/ma_hospital_capacity_time_2024_2026.csv"
+analysis_path: "analysis/time-display.R"
+figure_path: "figures/time-display.png"
+table_path: "evidence-tables/time-display.csv"
+alt_text_path: "alt-text/time-display.md"
+sha256: "394d9b02d2cc9b4fbf0d9f415db3da6b04393dd9430816973e81fef86fb0e616"
+transformations:
+  - "Selected 94 consecutive Massachusetts jurisdiction weeks from the released all-jurisdiction table."
+  - "Applied the declared first-26-week exploratory baseline and rendered the released process view."
+known_limits:
+  - "Reporting coverage and the reporting hospital mix may change across weeks."
+  - "Outside-limit weeks are dates for review and are not automatically formal special causes."

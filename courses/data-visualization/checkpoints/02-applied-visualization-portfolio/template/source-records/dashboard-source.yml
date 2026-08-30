@@ -1,0 +1,18 @@
+publisher: "Centers for Medicare & Medicaid Services"
+landing_page: "https://data.cms.gov/provider-data/dataset/yv7e-xc69"
+retrieved_at: "2026-08-30"
+released: "2026-08-13"
+data_path: "courses/data-visualization/modules/12-dashboards-multi-view-composition/data/ma_ed_public_reporting_dashboard_2026.csv"
+analysis_path: "analysis/dashboard.R"
+figure_path: "figures/dashboard.png"
+table_path: "evidence-tables/dashboard.csv"
+alt_text_path: "alt-text/dashboard.md"
+sha256: "fbfcfcaf10d87cd48236a702622781f559d86d52b8773ca578d72313a9b270fd"
+source_selection_path: "courses/data-visualization/modules/12-dashboards-multi-view-composition/data/cms_ma_ed_dashboard_source_2026.csv"
+source_selection_sha256: "f28f5d56e5e0e29001c7a275b01306762e673c9a21459dc7a68ff1aea782943b"
+transformations:
+  - "Selected every Massachusetts EDV, OP_18b, and OP_22 row from the pinned CMS release."
+  - "Added descriptive peer context, mock review triggers, source lag, and an ordered action path."
+known_limits:
+  - "The public aggregate values are historical and do not support real-time operations."
+  - "Massachusetts medians are descriptive, and the course triggers are not CMS thresholds."

@@ -466,6 +466,74 @@ if ($LASTEXITCODE -ne 0) {
     throw 'DA-730 Checkpoint 1 validator self-check failed.'
 }
 
+$checkpoint02Root = Join-Path $repo 'courses\data-visualization\checkpoints\02-applied-visualization-portfolio'
+$checkpoint02Spec = Join-Path $repo 'docs\curriculum\courses\DA-730\checkpoints\02-applied-visualization-portfolio-spec.md'
+$checkpoint02Files = @(
+    'README.md',
+    'assemble_checkpoint.ps1',
+    'validate_checkpoint.py',
+    'render_portfolio_artifact.R',
+    'instructor-notes.md',
+    'release.json',
+    'template\README.md',
+    'template\portfolio-index.md',
+    'template\view-purpose-audit.md',
+    'template\critique-and-repair.md',
+    'template\accessibility-report.md',
+    'template\decision-brief.md',
+    'template\capstone-proposal.md',
+    'template\ai-use.md',
+    'template\analysis\accessible-display.R',
+    'template\analysis\time-display.R',
+    'template\analysis\comparison-display.R',
+    'template\analysis\place-display.R',
+    'template\analysis\structure-display.R',
+    'template\analysis\dashboard.R',
+    'template\source-records\accessible-display-source.yml',
+    'template\source-records\time-display-source.yml',
+    'template\source-records\comparison-display-source.yml',
+    'template\source-records\place-display-source.yml',
+    'template\source-records\structure-display-source.yml',
+    'template\source-records\dashboard-source.yml'
+)
+$checkpoint02Missing = @($checkpoint02Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $checkpoint02Root $_))
+})
+if (-not (Test-Path -LiteralPath $checkpoint02Spec) -or $checkpoint02Missing.Count -gt 0) {
+    throw "DA-730 Checkpoint 2 is missing its specification or package files: $($checkpoint02Missing -join ', ')."
+}
+$checkpoint02Content = Get-Content -Raw -LiteralPath $checkpoint02Spec
+if ([regex]::Matches($checkpoint02Content, '(?m)^## \d+\.').Count -ne 17) {
+    throw 'DA-730 Checkpoint 2 must define 17 numbered contract sections.'
+}
+if ($checkpoint02Content -match '[—–]') {
+    throw 'DA-730 Checkpoint 2 contains a Unicode em dash or en dash.'
+}
+$checkpoint02Release = Get-Content -Raw -LiteralPath (Join-Path $checkpoint02Root 'release.json') | ConvertFrom-Json
+if (
+    $checkpoint02Release.checkpoint.version -ne '0.1.0' -or
+    $checkpoint02Release.checkpoint.commons_release -ne '0.24.0' -or
+    $checkpoint02Release.checkpoint.included_modules.Count -ne 6 -or
+    $checkpoint02Release.starter_outputs.figures -ne 6 -or
+    $checkpoint02Release.starter_outputs.evidence_tables -ne 6 -or
+    $checkpoint02Release.starter_outputs.accessible_alternatives -ne 6 -or
+    $checkpoint02Release.starter_outputs.table_rows.accessible_display -ne 65 -or
+    $checkpoint02Release.starter_outputs.table_rows.time_display -ne 94 -or
+    $checkpoint02Release.starter_outputs.table_rows.comparison_display -ne 500 -or
+    $checkpoint02Release.starter_outputs.table_rows.place_display -ne 100 -or
+    $checkpoint02Release.starter_outputs.table_rows.structure_display -ne 7 -or
+    $checkpoint02Release.starter_outputs.table_rows.dashboard -ne 3 -or
+    $checkpoint02Release.validation.validator_self_check -ne 'pass' -or
+    $checkpoint02Release.validation.assembler -ne 'pass' -or
+    $checkpoint02Release.validation.nonempty_target_refusal -ne 'pass'
+) {
+    throw 'DA-730 Checkpoint 2 release metadata does not match the 0.1.0 Week 6 portfolio contract.'
+}
+& python (Join-Path $checkpoint02Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) {
+    throw 'DA-730 Checkpoint 2 validator self-check failed.'
+}
+
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
 Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
 Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."
@@ -480,3 +548,4 @@ Write-Output "DA-730 $($module10.Label) passed: $($module10.Sections) contract s
 Write-Output "DA-730 $($module11.Label) passed: $($module11.Sections) contract sections and $($module11.FileCount) required files."
 Write-Output "DA-730 $($module12.Label) passed: $($module12.Sections) contract sections and $($module12.FileCount) required files."
 Write-Output "DA-730 Checkpoint 1 passed: 17 contract sections and $($checkpoint01Files.Count) package files."
+Write-Output "DA-730 Checkpoint 2 passed: 17 contract sections and $($checkpoint02Files.Count) package files."

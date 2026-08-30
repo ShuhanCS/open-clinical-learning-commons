@@ -1,7 +1,7 @@
 # DA-730: Clinical data visualization and decision storytelling
 
 - Status: course specification complete; module specifications and builds in progress
-- Specification version: 0.23.0
+- Specification version: 0.24.0
 - Credits: 3
 - Delivery: asynchronous online half-term
 - Instructional model: seven weeks mapped to the official half-term dates
@@ -400,7 +400,7 @@ An approved alternative tool may replace an `.R` file with an editable `.py`, `.
 
 - Due: end of instructional week 6.
 - Modules included: 07 through 12 plus revisions from checkpoint 1.
-- Purpose: show that the learner can build accessible displays for time, comparison, place, structure, and monitoring.
+- Purpose: let a DA-730 clinical analytics review panel decide whether the learner is ready to enter Module 13 with a feasible, sourced, reproducible, accessible, and decision-limited capstone proposal.
 
 The learner submits:
 
@@ -416,15 +416,46 @@ checkpoint-2/
     structure-display.png
     dashboard.png
   analysis/
+    accessible-display.R
+    time-display.R
+    comparison-display.R
+    place-display.R
+    structure-display.R
+    dashboard.R
+  evidence-tables/
+    accessible-display.csv
+    time-display.csv
+    comparison-display.csv
+    place-display.csv
+    structure-display.csv
+    dashboard.csv
   source-records/
+    accessible-display-source.yml
+    time-display-source.yml
+    comparison-display-source.yml
+    place-display-source.yml
+    structure-display-source.yml
+    dashboard-source.yml
+  alt-text/
+    accessible-display.md
+    time-display.md
+    comparison-display.md
+    place-display.md
+    structure-display.md
+    dashboard.md
   critique-and-repair.md
   accessibility-report.md
-  portfolio-reflection.md
+  decision-brief.md
   capstone-proposal.md
   ai-use.md
 ```
 
-The capstone proposal fixes the audience, decision, source, population, main outcome or measure, planned display, expected limitation, and reproducibility approach before Module 13 begins.
+The six figures retain exact tables with 65, 94, 500, 100, 7, and 3 released rows. The learner keeps all six populations separate, repairs one decision-contract failure, audits every view, documents accessibility and AI verification, and requests `approve`, `approve with conditions`, or `revise` for the capstone proposal.
+
+The capstone proposal fixes the audience, decision, source and rights, population, unit, time window, measures, denominators, planned analysis, displays, exact table, accessibility, ethics, expected limitation, reproducibility approach, deliverables, and review date before Module 13 begins.
+
+- Full checkpoint specification: `docs/curriculum/courses/DA-730/checkpoints/02-applied-visualization-portfolio-spec.md`.
+- Runnable assembler, templates, validator, instructor notes, and release record: `courses/data-visualization/checkpoints/02-applied-visualization-portfolio/`.
 
 ## Final checkpoint: decision-story capstone
 
@@ -640,6 +671,7 @@ Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-curriculu
 - [x] Accessibility and AI accountability are graded requirements.
 - [ ] Each module has its full specification and runnable teaching package.
 - [x] Checkpoint 1 assembly and validator run from a clean checkout.
+- [x] Checkpoint 2 assembly regenerates six figures, six exact tables, and six accessible alternatives from Modules 07 through 12; its validator self-check and overwrite guard pass.
 - [ ] Faculty, clinical, accessibility, and independent-instructor reviews are recorded.
 - [ ] The official DA-730 versus DA-830 course number is confirmed for publication.
 - [ ] The course has reached at least beta after a taught pilot.

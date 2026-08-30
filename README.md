@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.23.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 12 are runnable release candidates, and the Week 3 visualization judgment checkpoint has an exact folder contract, reproducible assembler, learner templates, and validator.
+- Current version: `0.24.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. The complete DA-730 specification defines 13 concept-first modules and 112.5 learner hours. Modules 01 through 12 are runnable release candidates. The Week 3 and Week 6 checkpoints both have exact folder contracts, reproducible assemblers, learner templates, validators, and instructor handoffs.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -118,6 +118,10 @@ The public preview also includes a [chart atlas](courses/data-visualization/atla
 - [Module 12 assessment](courses/data-visualization/modules/12-dashboards-multi-view-composition/assessment.md)
 - [Module 12 instructor notes](courses/data-visualization/modules/12-dashboards-multi-view-composition/instructor-notes.md)
 - [Module 12 release record](courses/data-visualization/modules/12-dashboards-multi-view-composition/release.json)
+- [Week 6 applied visualization portfolio](courses/data-visualization/checkpoints/02-applied-visualization-portfolio/README.md)
+- [Week 6 checkpoint specification](docs/curriculum/courses/DA-730/checkpoints/02-applied-visualization-portfolio-spec.md)
+- [Week 6 checkpoint instructor notes](courses/data-visualization/checkpoints/02-applied-visualization-portfolio/instructor-notes.md)
+- [Week 6 checkpoint release record](courses/data-visualization/checkpoints/02-applied-visualization-portfolio/release.json)
 - [Ali Goff's course redesign document in Markdown](docs/source/ali-goff-da-730-course-redesign.md)
 - [Course foundation spec](docs/specs/2026-08-15-data-visualization-course-foundation.md)
 
@@ -176,9 +180,9 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Assemble and validate the DA-730 Week 6 checkpoint from Modules 07 through 12.
-2. Build DA-730 Module 13, Audience, annotation, narrative, and capstone.
-3. Complete the named human reviews before promoting any module to alpha.
+1. Build DA-730 Module 13, Audience, annotation, narrative, and capstone.
+2. Assemble and validate the final half-term checkpoint.
+3. Complete the named human reviews before promoting any module or checkpoint to alpha.
 
 ## Licensing
 
