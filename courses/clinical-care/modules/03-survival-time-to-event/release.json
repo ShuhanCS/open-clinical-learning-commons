@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app1-03",
+    "title": "Survival and time-to-event outcomes",
+    "version": "0.1.0",
+    "commons_release": "0.51.0",
+    "course": "APP-1: Data for Clinical Care",
+    "week": 3,
+    "hours": 16.5,
+    "new_course_points": 0,
+    "carried_checkpoint_points": 20
+  },
+  "upstream": {
+    "module_id": "oclc-app1-02",
+    "module_version": "0.1.0",
+    "commons_release": "0.50.0",
+    "analysis_cohort_rows": 476,
+    "analysis_cohort_fields": 49,
+    "analysis_cohort_bytes": 200699,
+    "analysis_cohort_sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5",
+    "event_audit_rows": 1018,
+    "event_audit_sha256": "8491e4c02d33771a904bcc095982cccd6265c3d301c10fc79ac259ceede6fe9c",
+    "workspace_manifest_sha256": "9d78f888753b39797ad421d2576eef377ba0bc01fcca02d9ef3c9da388057c10"
+  },
+  "cohort": {
+    "people": 476,
+    "scheduled_followup": 129,
+    "no_scheduled_followup": 347,
+    "events": 87,
+    "exposed_events": 25,
+    "unexposed_events": 62,
+    "administrative_censors": 389,
+    "competing_death_censors": 0,
+    "later_deaths_after_event": 3
+  },
+  "reference_results": {
+    "logrank_chi_square": "0.17859356",
+    "logrank_p_value": "0.67258471",
+    "cox_hazard_ratio": "1.10542457",
+    "cox_lower95": "0.69479700",
+    "cox_upper95": "1.75873453",
+    "cox_p_value": "0.67226421",
+    "ph_correlation": "0.29040504",
+    "ph_p_value": "0.00636020",
+    "ph_screen_result": "fail",
+    "day30_event_free_difference": "0.01242097",
+    "day180_event_free_difference": "-0.03469383",
+    "day335_event_free_difference": "-0.01512410",
+    "main_summary": "count-first Kaplan-Meier and fixed-time evidence"
+  },
+  "outputs": {
+    "analysis-checks.csv": {"rows": 15, "fields": 4, "bytes": 508, "sha256": "a297438fe7aa70a70b1ad86f0c86c1f1a3df7fad8fa5925545986afcea83d64c"},
+    "build-report.json": {"bytes": 5788, "sha256": "b5ba4b8dcb522f2fe814e22a1c1a2357849e121a91ae1c7a52a905b2b302cfaa"},
+    "cohort-summary.csv": {"rows": 3, "fields": 7, "bytes": 207, "sha256": "ce12ebae8ca15b413b9431e7092e0fb8cea161609f2848e685de2becc318586f"},
+    "cox-model.csv": {"rows": 1, "fields": 13, "bytes": 326, "sha256": "b0aa566c805ffc88d6c615fe22e17a11b0d9f7df632dfb94b88b3f9a2a8f79c7"},
+    "death-audit.csv": {"rows": 3, "fields": 7, "bytes": 494, "sha256": "811cf9c23306632b4df345a6623ea77c2c4b23e6fab3a478b2b905806b61b0f1"},
+    "fixed-time-comparison.csv": {"rows": 6, "fields": 10, "bytes": 1219, "sha256": "14b82733b12644151bc5030e02426bda62acc4bb091b03622cf47c741d5a7c23"},
+    "km-curve.svg": {"bytes": 50390, "sha256": "88d4948a44ae548f518196965480e457253505891f23c1c7ea1271ad6862f904"},
+    "km-event-table.csv": {"rows": 84, "fields": 12, "bytes": 9356, "sha256": "a67cade7a9fb2d364a0c2061dbcc6865bcb055ee64813428a295a7ebda2ef5b7"},
+    "km-risk-table.csv": {"rows": 12, "fields": 12, "bytes": 1297, "sha256": "e79bef64e8ca9be0d0c3c5015aee5b9d4e08e8edf5b60994cd6e6e5faec4297c"},
+    "logrank.csv": {"rows": 1, "fields": 10, "bytes": 282, "sha256": "2cfd217834c35af550a579a0423596520c36d7211a8f73e01bf3295e4d04994f"},
+    "ph-check.csv": {"rows": 1, "fields": 8, "bytes": 337, "sha256": "419acb2d8e7107f7d36e749618cee7e9dc7cc26afe336eb58e439c1fcfc9465e"}
+  },
+  "package": {
+    "immutable_manifest_rows": 9,
+    "editable_work_files": 8,
+    "learner_files": 18,
+    "reference_files": 29,
+    "output_files": 11,
+    "output_bytes": 70204,
+    "manifest_bytes": 1385,
+    "manifest_sha256": "067e1953d7fe7bcfaf878880bef2edf44788b846f71c478282ebe34f1a5d4d52"
+  },
+  "assessment": {
+    "new_course_points": 0,
+    "carried_checkpoint_points": 20,
+    "survival_readiness_gates": 16,
+    "reference_gates_passed": 16
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 131,
+    "starter_checks": 74,
+    "module_root_checks": 101,
+    "copied_validator_check": "pass",
+    "two_build_output_match": "pass",
+    "existing_target_rejection": "pass",
+    "changed_upstream_rejection": "pass",
+    "incomplete_starter_rejection": "pass",
+    "changed_output_rejection": "pass",
+    "invalid_progression_rejection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for curriculum construction",
+    "clinical_use": "prohibited"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, survival builder, teaching records, and validation"}
+  ],
+  "known_issues": [
+    "Named clinical, survival-methods, informatics, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "The proportional-hazards screen fails; one constant hazard ratio is not the main summary.",
+    "The R script is supplied, but execution awaits a named managed R environment with the survival package.",
+    "The source is synthetic and cannot support real-population, causal, efficacy, fairness, site-ranking, or implementation claims."
+  ]
+}

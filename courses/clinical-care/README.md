@@ -9,8 +9,8 @@ APP-1 is the first domain-specific applied course. Learners use a continuing syn
 - Core tools: SQL and Python
 - Final deliverable: clinical care improvement brief with reproducible evidence and a defense
 - Course package version: 0.1.0
-- Commons release: 0.50.0
-- Current package status: Modules 01 and 02 are runnable release candidates
+- Commons release: 0.51.0
+- Current package status: Modules 01 through 03 and the Week 3 checkpoint are runnable release candidates
 
 ## Seven applied modules
 
@@ -30,13 +30,20 @@ Module 06 contains eight hours of cumulative application and equity work plus an
 - [Module 01 durable specification](../../docs/curriculum/courses/APP-1/modules/01-care-pathway-decision-spec.md)
 - [Module 02: Longitudinal cohorts and follow-up](modules/02-longitudinal-cohorts-followup/README.md)
 - [Module 02 durable specification](../../docs/curriculum/courses/APP-1/modules/02-longitudinal-cohorts-followup-spec.md)
+- [Module 03: Survival and time-to-event outcomes](modules/03-survival-time-to-event/README.md)
 - [Module 03 durable specification](../../docs/curriculum/courses/APP-1/modules/03-survival-time-to-event-spec.md)
+- [Week 3 checkpoint](checkpoints/01-longitudinal-survival-readiness/README.md)
+- [Week 3 checkpoint durable specification](../../docs/curriculum/courses/APP-1/checkpoints/01-longitudinal-survival-readiness-spec.md)
 
 Module 01 profiles the complete pinned 16-table, 471,836-row Synthea source. Its reference pathway begins with 518 synthetic adults, preserves 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns, and defines a 476-person day-30 landmark risk set. Among eligible people, 129 have scheduled follow-up and 87 have a later acute return. Sixty-four sparse source organizations make raw site ranking `not ready`.
 
 The 19-file learner workspace contains nine frozen source and contract records, nine editable decision records, and one deterministic release manifest. The standard-library profiler, builder, and validator reproduce exact evidence and reject changed source facts, missing pathway states, invalid scoring, unsupported progression, and incomplete records.
 
 Module 02 preserves all 518 initial people and makes 9 index deaths, 8 early post-discharge deaths, and 25 early acute returns explicit before defining the corrected 476-person landmark risk set. Its 1,018-row event audit supports a 476-row survival-ready analysis cohort with 129 exposed people, 87 later events, and 389 administrative censors. A deterministic six-site extension adds overlapping case mix without changing source exposure or outcomes.
+
+Module 03 releases 84 event-time rows, 12 fixed-time risk rows, and exact log-rank, Cox, proportional-hazards, death-audit, and accessible-curve evidence. The log-rank p-value is 0.67258471 and the unadjusted hazard ratio is 1.10542457, but the PH screen fails at p = 0.00636020. Fixed-time evidence remains the main summary.
+
+The Week 3 checkpoint assembles 78 accepted module files into a 91-file package. It carries the 20.00-point Module 02 score once, requires all 16 survival gates, and continues to Module 04 with the failed PH screen as an open methods condition.
 
 ## Three cumulative checkpoints
 
@@ -65,4 +72,4 @@ No real patient records are used. Synthetic frequencies do not estimate real pre
 
 ## Build order
 
-Modules 01 and 02 are complete. The Module 03 durable specification is complete; implementation next owns survival and time-to-event analysis plus the cumulative Week 3 release.
+Modules 01 through 03 and the Week 3 checkpoint are complete. Module 04 next owns risk adjustment and fair comparison without changing the accepted risk set or hiding the failed PH screen.

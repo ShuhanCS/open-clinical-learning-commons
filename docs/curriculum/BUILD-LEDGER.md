@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.50.1
+- Current release: 0.51.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-1 Module 02, longitudinal cohorts and follow-up
-- Next unit: APP-1 Module 03, survival and time-to-event outcomes
+- Last completed unit: APP-1 Checkpoint 1, longitudinal and survival readiness
+- Next unit: APP-1 Module 04, risk adjustment and fair comparison
 
 ## Confirmed decisions
 
@@ -300,8 +300,19 @@
 - The standard-library cohort builder, workspace builder, and validator self-checks pass. Complete reference validation passes 1,140 checks, learner-starter validation passes 82 checks, and full database reproduction passes 1,150 checks. The copied learner validator enforces the same manifest contract while ignoring generated Python cache files.
 - The 20-point reference passes all 16 gates and continues with conditions. Module 03 is permitted for curriculum construction; clinical use remains prohibited.
 - APP-1 Module 02 is a runnable release candidate at Commons 0.50.0.
-- APP-1 Module 03 has a complete 21-section construction specification targeting Commons 0.51.0. It freezes the 476-person Module 02 risk set and makes count-first Kaplan-Meier evidence, fixed-time comparisons, log-rank, guided Cox output, a proportional-hazards response, paired R reading, and the cumulative Week 3 gate explicit.
-- The reference data screen estimates an unadjusted scheduled-follow-up hazard ratio near 1.11 while the event-level Schoenfeld residual time screen is below 0.05. Construction must foreground fixed-time evidence and must not present one constant hazard ratio as the main result.
+- APP-1 Module 03 version 0.1.0 freezes the exact 476-row, 49-field Module 02 analysis cohort with SHA-256 `558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5`.
+- The deterministic survival builder releases 84 event-time rows, 12 fixed-time risk rows, six paired comparisons, one accessible SVG, and exact log-rank, Cox, PH-screen, death-audit, cohort, and build records in 11 files totaling 70,204 bytes.
+- Event-free differences for scheduled follow-up minus no recorded follow-up are 0.01242097 at day 30, -0.03469383 at day 180, and -0.01512410 at day 335.
+- The log-rank chi-square is 0.17859356 with p = 0.67258471. The unadjusted Cox hazard ratio is 1.10542457 with a 95 percent interval from 0.69479700 to 1.75873453.
+- The event-level Schoenfeld residual time screen correlation is 0.29040504 with p = 0.00636020 and fails. Fixed-time Kaplan-Meier evidence, not one constant hazard ratio, remains the main summary.
+- All three later deaths occur after first later acute return. No death censors a person before event, which does not prove independent censoring.
+- The nine-row Module 03 immutable manifest is 1,385 bytes with SHA-256 `067e1953d7fe7bcfaf878880bef2edf44788b846f71c478282ebe34f1a5d4d52`. Complete validation passes 131 checks, starter validation passes 74 checks, and root validation passes 101 checks.
+- APP-1 Module 03 is a runnable release candidate at Commons 0.51.0 and continues with conditions. Paired R execution remains pending until a named managed environment is available.
+- APP-1 Checkpoint 1 version 0.1.0 assembles 19 Module 01 files, 30 Module 02 files, and 29 Module 03 files without recomputing evidence.
+- The cumulative package contains 78 accepted component files and 91 total files. Its 78-row, 13,195-byte candidate manifest SHA-256 is `ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860`.
+- The checkpoint carries the Module 02 score of 20.00 out of 20.00 exactly once. Module 03 adds no Week 3 points and contributes 16 noncompensable survival gates.
+- Reference validation passes 394 checks and learner validation passes 379 checks. Duplicate assembly, learner candidate identity, copied validation, existing-target refusal, candidate mutation, and invalid score routes pass.
+- APP-1 Checkpoint 1 is a runnable release candidate at Commons 0.51.0 and permits Module 04 construction with the failed PH screen as an open methods condition.
 
 ## Pending confirmation
 
@@ -310,11 +321,11 @@
 
 ## Next resume instructions
 
-1. Read the APP-1 course specification, corrected Module 01 release, Module 02 specification and release, foundation handoffs, and this ledger.
-2. Read the complete Module 03 construction specification at `docs/curriculum/courses/APP-1/modules/03-survival-time-to-event-spec.md`.
-3. Freeze the exact 476-row Module 02 analysis cohort, 1,018-row event audit, extension contract, source database identity, and Module 02 workspace manifest.
-4. Build Kaplan-Meier evidence by scheduled-follow-up group with count-first risk tables, exact event and censoring totals, and an accessible structured alternative.
-5. Add a log-rank comparison, guided Cox model, proportional-hazards checks, uncertainty, and paired R read-run-interpret evidence without changing the risk set.
-6. Explain the three later deaths, the absence of a death-before-event censor in this release, and why cause-specific censoring does not prove noninformative censoring.
-7. Build the 20-point cumulative Week 3 checkpoint around the accepted phenotype-and-cohort component while treating survival evidence as a required progression gate.
-8. Advance to Commons 0.51.0, update this ledger, commit, push, and only then continue to APP-1 Module 04.
+1. Read the APP-1 course specification, accepted Checkpoint 1 package, Module 03 specification and release, foundation adjustment handoff, and this ledger.
+2. Write the durable APP-1 Module 04 specification before broad implementation.
+3. Freeze the 476-person risk set, event and censoring fields, fixed-time survival evidence, failed PH screen, teaching-site provenance, and Checkpoint 1 identity.
+4. Define the baseline case-mix contract before fitting. Separate prognostic baseline fields from exposure, post-exposure, outcome, extension, and prohibited fields.
+5. Build a transparent expected-outcome model with calibration, support, uncertainty, and failure checks. Do not choose the model to repair the Module 03 result.
+6. Produce unadjusted and adjusted teaching-site comparisons with suppression or pooling rules, observed-to-expected evidence, and standardized rates.
+7. Explain residual confounding, synthetic-site zero-effect provenance, and why no comparison grades a real facility or estimates a causal follow-up effect.
+8. Advance semver, update this ledger, commit, push, and only then continue to APP-1 Module 05.

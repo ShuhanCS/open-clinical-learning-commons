@@ -1,0 +1,4 @@
+patient_id,landmark_exposure,first_later_acute_start,event_time_days,later_death_date,later_death_before_event_flag,relation
+03612a7e-6460-4ef6-9528-59d60f970b93,0,2014-09-16T12:21:33Z,229.95833333,2014-09-18,0,death_after_first_later_acute_return
+703e4c46-ded2-4797-97fe-57fedda2825f,0,2015-01-09T05:03:53Z,149.93750000,2015-01-12,0,death_after_first_later_acute_return
+efa3e04c-ec23-46e4-9431-a73492ad32a5,0,2015-02-11T12:15:51Z,166.88541667,2015-02-13,0,death_after_first_later_acute_return

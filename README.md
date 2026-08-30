@@ -6,7 +6,7 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.50.1`
+- Current version: `0.51.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 has a complete course specification and its first two runnable modules.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
@@ -63,7 +63,9 @@ Its first runnable unit is [APP-1 Module 01: Framing a care-pathway decision](co
 
 The second runnable unit is [APP-1 Module 02: Longitudinal cohorts and follow-up](courses/clinical-care/modules/02-longitudinal-cohorts-followup/README.md), governed by the durable [Module 02 specification](docs/curriculum/courses/APP-1/modules/02-longitudinal-cohorts-followup-spec.md). It preserves a complete 518-person cohort and 1,018-row event audit, produces the corrected 476-person day-30 risk set with 87 later events, and adds six deterministic teaching sites with overlapping baseline-risk tiers and no injected site effect.
 
-The next construction unit is governed by the durable [APP-1 Module 03 survival and time-to-event specification](docs/curriculum/courses/APP-1/modules/03-survival-time-to-event-spec.md). It freezes the 476-person risk set, requires count-first Kaplan-Meier evidence, and prevents a failed proportional-hazards screen from being hidden behind one average hazard ratio.
+The third runnable unit is [APP-1 Module 03: Survival and time-to-event outcomes](courses/clinical-care/modules/03-survival-time-to-event/README.md), governed by the durable [Module 03 specification](docs/curriculum/courses/APP-1/modules/03-survival-time-to-event-spec.md). It freezes the 476-person risk set, releases count-first Kaplan-Meier and fixed-time evidence, and prevents a failed proportional-hazards screen from being hidden behind one average hazard ratio.
+
+The cumulative [APP-1 Week 3 checkpoint](courses/clinical-care/checkpoints/01-longitudinal-survival-readiness/README.md) freezes 78 accepted files from Modules 01 through 03, carries the 20-point phenotype-and-cohort score once, and requires the survival-readiness gates before Module 04.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 

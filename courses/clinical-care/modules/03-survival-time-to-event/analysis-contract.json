@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "app1-survival-v1",
+  "unit": "one accepted day-30-landmark-eligible synthetic person",
+  "time_zero": "day-30 landmark after index discharge",
+  "exposure": "landmark_exposure equals 1 for a recorded scheduled follow-up encounter within 30 days",
+  "comparator": "landmark_exposure equals 0",
+  "event": "first emergency or inpatient return after landmark through day 365 after index discharge",
+  "observed_time": "days from landmark to first later acute return, pre-event death, or administrative end",
+  "administrative_censor": "day 365 after index discharge, which is day 335 after landmark",
+  "competing_event": "recorded death after landmark and before first later acute return",
+  "fixed_times_days": [0, 30, 90, 180, 270, 335],
+  "group_test": "two-sided log-rank",
+  "cox_model": {
+    "predictors": ["landmark_exposure"],
+    "ties": "efron",
+    "adjusted": false
+  },
+  "ph_screen": {
+    "method": "Spearman association between event-level Schoenfeld residual and log event time",
+    "threshold": "0.05",
+    "failed_action": "foreground fixed-time Kaplan-Meier evidence and refer time-varying modeling to Module 04"
+  },
+  "extension_fields_used": false,
+  "claim_boundary": "synthetic observational association; not a probability from the Cox model, risk ratio, causal effect, or real clinical result"
+}

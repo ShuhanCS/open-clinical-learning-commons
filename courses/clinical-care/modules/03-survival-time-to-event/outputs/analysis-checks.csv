@@ -1,0 +1,16 @@
+check_name,observed_value,expected_value,status
+people,476,476,pass
+unique_people,476,476,pass
+landmark_eligible,476,476,pass
+scheduled_followup,129,129,pass
+no_scheduled_followup,347,347,pass
+events,87,87,pass
+exposed_events,25,25,pass
+unexposed_events,62,62,pass
+administrative_censors,389,389,pass
+competing_death_censors,0,0,pass
+later_deaths,3,3,pass
+later_deaths_before_event,0,0,pass
+positive_observed_time,476,476,pass
+maximum_observed_days,335.00000000,335.00000000,pass
+extension_rows,476,476,pass

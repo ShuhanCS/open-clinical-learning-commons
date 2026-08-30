@@ -1,0 +1,30 @@
+module_id: oclc-app1-03
+module_version: 0.1.0
+commons_release: 0.51.0
+upstream:
+  module_id: oclc-app1-02
+  module_version: 0.1.0
+  commons_release: 0.50.0
+  analysis_cohort:
+    rows: 476
+    fields: 49
+    bytes: 200699
+    sha256: 558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5
+  event_audit:
+    rows: 1018
+    bytes: 210154
+    sha256: 8491e4c02d33771a904bcc095982cccd6265c3d301c10fc79ac259ceede6fe9c
+  workspace_manifest_sha256: 9d78f888753b39797ad421d2576eef377ba0bc01fcca02d9ef3c9da388057c10
+  source_database_sha256: 1116dda22c4297fcfeab6bf2c99bb3dbfaf9f9b5e04041b96be90719c76e704a
+  extension_id: app1-six-site-v1
+accepted_counts:
+  people: 476
+  scheduled_followup: 129
+  no_scheduled_followup: 347
+  events: 87
+  exposed_events: 25
+  unexposed_events: 62
+  administrative_censors: 389
+  competing_death_censors: 0
+  later_deaths_after_event: 3
+claim_boundary: synthetic observational teaching evidence only; no causal clinical efficacy prevalence fairness site-ranking or implementation claim

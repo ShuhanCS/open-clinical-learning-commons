@@ -363,7 +363,11 @@ The package must:
 - parse JSON, YAML-compatible records, CSV, SVG, Python, and R artifacts; and
 - pass the whole-curriculum checker.
 
-The release record freezes the final output measurements, package manifest, validation counts, and exact reference findings after deterministic construction.
+The frozen release contains 11 output files totaling 70,204 bytes. The outputs include 84 event-time rows, 12 fixed-time risk rows, six paired fixed-time comparisons, one accessible SVG, and exact log-rank, Cox, PH-screen, death-audit, cohort, and build records.
+
+The two-sided log-rank chi-square is 0.17859356 with p = 0.67258471. The unadjusted Cox hazard ratio is 1.10542457 with a 95 percent interval from 0.69479700 to 1.75873453. The Schoenfeld residual time screen correlation is 0.29040504 with p = 0.00636020 and fails. Event-free differences for scheduled follow-up minus no recorded follow-up are 0.01242097 at day 30, -0.03469383 at day 180, and -0.01512410 at day 335.
+
+The nine-row immutable manifest is 1,385 bytes with SHA-256 `067e1953d7fe7bcfaf878880bef2edf44788b846f71c478282ebe34f1a5d4d52`. Complete reference validation passes 131 checks, learner-starter validation passes 74 checks, and module-root validation passes 101 checks. Two output builds match byte for byte. Copied-validator, existing-target, changed-upstream, incomplete-starter, changed-output, and invalid-progression routes pass.
 
 ## 21. Progression, reviewers, version, and known issues
 

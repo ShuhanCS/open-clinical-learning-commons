@@ -1,0 +1,4 @@
+landmark_exposure,group,people,events,administrative_censors,competing_death_censors,later_deaths_after_event
+0,no_recorded_followup,347,62,285,0,3
+1,scheduled_followup,129,25,104,0,0
+all,all,476,87,389,0,3

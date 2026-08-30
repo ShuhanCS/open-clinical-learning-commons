@@ -1,0 +1,149 @@
+{
+  "module": "oclc-app1-03",
+  "module_version": "0.1.0",
+  "commons_release": "0.51.0",
+  "source": {
+    "rows": 476,
+    "fields": 49,
+    "bytes": 200699,
+    "sha256": "558c31b8aa5031c12baadeaa2f8cbb788289842b08aae79f38ecfe0d68fe9bd5"
+  },
+  "checks": {
+    "people": 476,
+    "unique_people": 476,
+    "landmark_eligible": 476,
+    "scheduled_followup": 129,
+    "no_scheduled_followup": 347,
+    "events": 87,
+    "exposed_events": 25,
+    "unexposed_events": 62,
+    "administrative_censors": 389,
+    "competing_death_censors": 0,
+    "later_deaths": 3,
+    "later_deaths_before_event": 0,
+    "positive_observed_time": 476,
+    "maximum_observed_days": "335.00000000",
+    "extension_rows": 476
+  },
+  "reference": {
+    "logrank": {
+      "groups": 2,
+      "people": 476,
+      "events": 87,
+      "observed_exposed_events": "25.00000000",
+      "expected_exposed_events": "23.25595501",
+      "variance": "17.03136991",
+      "chi_square": "0.17859356",
+      "degrees_freedom": 1,
+      "p_value": "0.67258471",
+      "boundary": "two-sided group test; a large p-value does not prove equivalence or no clinical difference"
+    },
+    "cox": {
+      "term": "scheduled_followup",
+      "coefficient": "0.10022949",
+      "standard_error": "0.23692530",
+      "hazard_ratio": "1.10542457",
+      "lower95": "0.69479700",
+      "upper95": "1.75873453",
+      "z_value": "0.42304256",
+      "p_value": "0.67226421",
+      "people": 476,
+      "events": 87,
+      "censored": 389,
+      "ties": "efron",
+      "boundary": "unadjusted synthetic hazard ratio; not probability risk ratio adjusted comparison or causal effect"
+    },
+    "ph_screen": {
+      "term": "scheduled_followup",
+      "method": "event-level Schoenfeld residual Spearman correlation with log event time",
+      "event_rows": 87,
+      "correlation": "0.29040504",
+      "p_value": "0.00636020",
+      "threshold": "0.05000000",
+      "screen_result": "fail",
+      "required_action": "do not use one constant hazard ratio as the main summary; foreground fixed-time evidence and refer time-varying modeling"
+    },
+    "fixed_time_comparisons": [
+      {
+        "time_days": 0,
+        "scheduled_followup_event_free": "1.00000000",
+        "scheduled_followup_lower95": "1.00000000",
+        "scheduled_followup_upper95": "1.00000000",
+        "no_followup_event_free": "1.00000000",
+        "no_followup_lower95": "1.00000000",
+        "no_followup_upper95": "1.00000000",
+        "event_free_difference_exposed_minus_unexposed": "0.00000000",
+        "event_risk_difference_exposed_minus_unexposed": "0.00000000",
+        "boundary": "descriptive fixed-time synthetic comparison; not adjusted or causal"
+      },
+      {
+        "time_days": 30,
+        "scheduled_followup_event_free": "0.99224806",
+        "scheduled_followup_lower95": "0.94625211",
+        "scheduled_followup_upper95": "0.99890439",
+        "no_followup_event_free": "0.97982709",
+        "no_followup_lower95": "0.95815281",
+        "no_followup_upper95": "0.99033173",
+        "event_free_difference_exposed_minus_unexposed": "0.01242097",
+        "event_risk_difference_exposed_minus_unexposed": "-0.01242097",
+        "boundary": "descriptive fixed-time synthetic comparison; not adjusted or causal"
+      },
+      {
+        "time_days": 90,
+        "scheduled_followup_event_free": "0.94573643",
+        "scheduled_followup_lower95": "0.88955002",
+        "scheduled_followup_upper95": "0.97375546",
+        "no_followup_event_free": "0.95100865",
+        "no_followup_lower95": "0.92237152",
+        "no_followup_upper95": "0.96925672",
+        "event_free_difference_exposed_minus_unexposed": "-0.00527222",
+        "event_risk_difference_exposed_minus_unexposed": "0.00527222",
+        "boundary": "descriptive fixed-time synthetic comparison; not adjusted or causal"
+      },
+      {
+        "time_days": 180,
+        "scheduled_followup_event_free": "0.87596899",
+        "scheduled_followup_lower95": "0.80554656",
+        "scheduled_followup_upper95": "0.92210288",
+        "no_followup_event_free": "0.91066282",
+        "no_followup_lower95": "0.87539016",
+        "no_followup_upper95": "0.93631343",
+        "event_free_difference_exposed_minus_unexposed": "-0.03469383",
+        "event_risk_difference_exposed_minus_unexposed": "0.03469383",
+        "boundary": "descriptive fixed-time synthetic comparison; not adjusted or causal"
+      },
+      {
+        "time_days": 270,
+        "scheduled_followup_event_free": "0.84496124",
+        "scheduled_followup_lower95": "0.77008293",
+        "scheduled_followup_upper95": "0.89706248",
+        "no_followup_event_free": "0.87319885",
+        "no_followup_lower95": "0.83339708",
+        "no_followup_upper95": "0.90404001",
+        "event_free_difference_exposed_minus_unexposed": "-0.02823761",
+        "event_risk_difference_exposed_minus_unexposed": "0.02823761",
+        "boundary": "descriptive fixed-time synthetic comparison; not adjusted or causal"
+      },
+      {
+        "time_days": 335,
+        "scheduled_followup_event_free": "0.80620155",
+        "scheduled_followup_lower95": "0.72683922",
+        "scheduled_followup_upper95": "0.86463148",
+        "no_followup_event_free": "0.82132565",
+        "no_followup_lower95": "0.77680220",
+        "no_followup_upper95": "0.85778624",
+        "event_free_difference_exposed_minus_unexposed": "-0.01512410",
+        "event_risk_difference_exposed_minus_unexposed": "0.01512410",
+        "boundary": "descriptive fixed-time synthetic comparison; not adjusted or causal"
+      }
+    ]
+  },
+  "libraries": {
+    "matplotlib": "3.10.9",
+    "numpy": "2.0.2",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "claim_boundary": "synthetic observational teaching evidence only"
+}

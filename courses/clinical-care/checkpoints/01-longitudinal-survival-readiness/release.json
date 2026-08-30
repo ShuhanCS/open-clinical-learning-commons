@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app1-cp01",
+    "title": "Longitudinal and survival readiness",
+    "version": "0.1.0",
+    "commons_release": "0.51.0",
+    "course": "APP-1: Data for Clinical Care",
+    "timing": "end of instructional Week 3",
+    "course_points": 20
+  },
+  "accepted_modules": [
+    {"id": "oclc-app1-01", "version": "0.2.0", "commons_release": "0.49.1", "assembled_files": 19, "manifest_bytes": 1063, "manifest_sha256": "4f57b0bbf3e510967c5e42691eee990ce523974b7f6ea877f15f46903aa8c147"},
+    {"id": "oclc-app1-02", "version": "0.1.0", "commons_release": "0.50.0", "assembled_files": 30, "manifest_bytes": 1217, "manifest_sha256": "9d78f888753b39797ad421d2576eef377ba0bc01fcca02d9ef3c9da388057c10"},
+    {"id": "oclc-app1-03", "version": "0.1.0", "commons_release": "0.51.0", "assembled_files": 29, "manifest_bytes": 1385, "manifest_sha256": "067e1953d7fe7bcfaf878880bef2edf44788b846f71c478282ebe34f1a5d4d52"}
+  ],
+  "evidence": {
+    "initial_people": 518,
+    "index_deaths": 9,
+    "early_deaths": 8,
+    "early_acute_returns": 25,
+    "landmark_people": 476,
+    "scheduled_followup": 129,
+    "no_scheduled_followup": 347,
+    "events": 87,
+    "administrative_censors": 389,
+    "pre_event_death_censors": 0,
+    "later_deaths_after_event": 3,
+    "logrank_p_value": "0.67258471",
+    "cox_hazard_ratio": "1.10542457",
+    "ph_p_value": "0.00636020",
+    "ph_screen_result": "fail",
+    "main_survival_summary": "count-first Kaplan-Meier and fixed-time evidence"
+  },
+  "assessment": {
+    "score_owner": "oclc-app1-02",
+    "checkpoint_score": "20.00 of 20.00",
+    "module03_new_points": 0,
+    "survival_gates": "16 of 16 pass",
+    "checkpoint_integrity_gates": "9 of 9 pass"
+  },
+  "package": {
+    "accepted_component_files": 78,
+    "candidate_manifest_rows": 78,
+    "candidate_manifest_bytes": 13195,
+    "candidate_manifest_sha256": "ef5ace3d6b450473f5b7ab8c1b53bf24f63aa42910b1fdab5d72c617f4f57860",
+    "reference_files": 91,
+    "learner_files": 91,
+    "checkpoint_immutable_controls": 6,
+    "checkpoint_work_files": 6
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "reference_checks": 394,
+    "learner_checks": 379,
+    "copied_validator_check": "pass",
+    "two_reference_build_match": "pass",
+    "learner_candidate_manifest_match": "pass",
+    "existing_target_rejection": "pass",
+    "candidate_mutation_rejection": "pass",
+    "invalid_score_rejection": "pass"
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for curriculum construction",
+    "clinical_use": "prohibited"
+  },
+  "known_issues": [
+    "The Module 03 proportional-hazards screen fails and one constant hazard ratio is not the main survival summary.",
+    "Paired R execution awaits a named managed R environment with the survival package.",
+    "Named faculty, clinical, informatics, survival-methods, accessibility, privacy, responsible-AI, and independent-instructor reviews remain pending before alpha.",
+    "The source is synthetic and supports no real-population, causal, efficacy, fairness, site-ranking, or implementation claim."
+  ]
+}

@@ -1,0 +1,2 @@
+term,coefficient,standard_error,hazard_ratio,lower95,upper95,z_value,p_value,people,events,censored,ties,boundary
+scheduled_followup,0.10022949,0.23692530,1.10542457,0.69479700,1.75873453,0.42304256,0.67226421,476,87,389,efron,unadjusted synthetic hazard ratio; not probability risk ratio adjusted comparison or causal effect

@@ -1,0 +1,2 @@
+term,method,event_rows,correlation,p_value,threshold,screen_result,required_action
+scheduled_followup,event-level Schoenfeld residual Spearman correlation with log event time,87,0.29040504,0.00636020,0.05000000,fail,do not use one constant hazard ratio as the main summary; foreground fixed-time evidence and refer time-varying modeling

@@ -1,0 +1,7 @@
+time_days,scheduled_followup_event_free,scheduled_followup_lower95,scheduled_followup_upper95,no_followup_event_free,no_followup_lower95,no_followup_upper95,event_free_difference_exposed_minus_unexposed,event_risk_difference_exposed_minus_unexposed,boundary
+0,1.00000000,1.00000000,1.00000000,1.00000000,1.00000000,1.00000000,0.00000000,0.00000000,descriptive fixed-time synthetic comparison; not adjusted or causal
+30,0.99224806,0.94625211,0.99890439,0.97982709,0.95815281,0.99033173,0.01242097,-0.01242097,descriptive fixed-time synthetic comparison; not adjusted or causal
+90,0.94573643,0.88955002,0.97375546,0.95100865,0.92237152,0.96925672,-0.00527222,0.00527222,descriptive fixed-time synthetic comparison; not adjusted or causal
+180,0.87596899,0.80554656,0.92210288,0.91066282,0.87539016,0.93631343,-0.03469383,0.03469383,descriptive fixed-time synthetic comparison; not adjusted or causal
+270,0.84496124,0.77008293,0.89706248,0.87319885,0.83339708,0.90404001,-0.02823761,0.02823761,descriptive fixed-time synthetic comparison; not adjusted or causal
+335,0.80620155,0.72683922,0.86463148,0.82132565,0.77680220,0.85778624,-0.01512410,0.01512410,descriptive fixed-time synthetic comparison; not adjusted or causal

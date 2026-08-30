@@ -1,0 +1,2 @@
+groups,people,events,observed_exposed_events,expected_exposed_events,variance,chi_square,degrees_freedom,p_value,boundary
+2,476,87,25.00000000,23.25595501,17.03136991,0.17859356,1,0.67258471,two-sided group test; a large p-value does not prove equivalence or no clinical difference
