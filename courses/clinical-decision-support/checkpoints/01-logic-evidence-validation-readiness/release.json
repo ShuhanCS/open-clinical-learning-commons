@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable release candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app4-cp01",
+    "title": "Logic, evidence, calibration, and validation readiness",
+    "version": "0.1.0",
+    "commons_release": "0.80.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "due_point": "end of instructional Week 3",
+    "course_points": 40,
+    "point_source": "Module 02 20 points once plus Module 03 20 points once"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app4-01", "version": "0.1.0", "commons_release": "0.77.0", "assembled_files": 41, "manifest_rows": 29, "manifest_bytes": 3404, "manifest_sha256": "40ff7384d227a38b0f93832731d984098e6e6f3324a958dafc2319d23f282b45", "points": 0},
+    {"id": "oclc-app4-02", "version": "0.1.0", "commons_release": "0.78.0", "assembled_files": 86, "manifest_rows": 73, "manifest_bytes": 10564, "manifest_sha256": "bf3a30d66944a799a1dcbb3bc971bbcc81a6a3986e3e08cacf26fac41ecb9ded", "points": 20},
+    {"id": "oclc-app4-03", "version": "0.1.0", "commons_release": "0.79.0", "assembled_files": 118, "manifest_rows": 102, "manifest_bytes": 16354, "manifest_sha256": "e67f20599704f83ec1e695f23f571fb57c558109bde3bcc676a64afc3dcf8e22", "points": 20}
+  ],
+  "accepted_evidence": {
+    "component_files": 245,
+    "immutable_rows": 204,
+    "checkpoint_score": "40 of 40",
+    "module01_gates": "12 of 12 pass",
+    "module02_gates": "12 of 12 pass",
+    "module03_gates": "12 of 12 pass",
+    "checkpoint_gates": "20 of 20 pass",
+    "public_xpt_files": 16,
+    "synthetic_fhir_files": 25,
+    "synthetic_resource_rows": 811803,
+    "model_rows": 7544,
+    "model_events": 328,
+    "accepted_threshold": null
+  },
+  "package": {
+    "candidate_manifest_rows": 245,
+    "candidate_manifest_bytes": 45897,
+    "candidate_manifest_sha256": "4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151",
+    "checkpoint_editable_records": 9,
+    "defense_questions": 14,
+    "assembled_files": 263,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for curriculum construction",
+    "module04_scope": "alert burden, human factors, equity, less interruptive alternatives, no alert, and comparison of all six unaccepted evidence candidates",
+    "module05_permission": "prohibited until Module 04 passes",
+    "clinical_threshold_acceptance": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_alerting": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 1284,
+    "starter_checks": 1245,
+    "failure_routes_rejected": 20
+  },
+  "known_issues": [
+    "The official APP-4 section and half-term dates remain to be assigned from the published academic calendar.",
+    "Named clinical, survey-methods, calibration, clinical-informatics, patient, workflow, equity, accessibility, responsible-AI, and independent-reproduction reviews remain pending before alpha.",
+    "No evidence candidate is selected or accepted as a clinical threshold.",
+    "NHANES does not establish local validity or patient benefit.",
+    "No package authorizes real-patient scoring, clinical alerting, implementation, production connection, or deployment."
+  ]
+}

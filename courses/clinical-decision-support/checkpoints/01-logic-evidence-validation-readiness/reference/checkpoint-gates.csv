@@ -1,0 +1,21 @@
+gate_id,gate,status,evidence,owner
+G01,All three accepted module identities and complete reference workspaces are exact,pass,candidate-manifest.csv and evidence-index.csv,checkpoint assembler
+G02,The candidate manifest has 245 sorted complete rows,pass,candidate-manifest.csv,checkpoint assembler
+G03,All 204 nested immutable rows match accepted manifests,pass,candidate module release-manifest.csv files,checkpoint assembler
+G04,Module 01 source completeness intended use and authority remain exact,pass,candidate module-01,APP-4 faculty owner
+G05,The service remains fictional and the support concept remains nonbinding,pass,logic-evidence-readiness-review.md,clinical governance council
+G06,The synthetic source identity duplicate count and limits remain visible,pass,candidate module-02,synthetic-data steward
+G07,All 16 mechanics cases and ordered traces pass,pass,candidate module-02 rule-test-results.csv,logic owner
+G08,The mock score and 0.20 value remain rejected mechanics fixtures,pass,logic-evidence-readiness-review.md,logic and evidence owners
+G09,The historical target remains an observed cut-point indicator and not diagnosis,pass,logic-evidence-readiness-review.md,clinical and evidence owners
+G10,Development holdout and transport remain separate with zero retuning,pass,candidate module-03 model-specification.csv,evidence owner
+G11,Weights strata PSUs and transport phlebotomy weight remain explicit,pass,candidate module-03 survey-design-audit.csv,survey-methods reviewer
+G12,Model performance calibration and evidence identities reproduce,pass,candidate module-03 evidence release,evidence owner
+G13,All six evidence candidates remain unselected and unaccepted,pass,candidate module-03 threshold-consequence-audit.csv,clinical governance council
+G14,Burden missed-case and decision-curve evidence remains descriptive,pass,logic-evidence-readiness-review.md,clinical and patient reviewers
+G15,The 2021-2023 evidence remains a separate transport stress test,pass,candidate module-03 transport-stress-audit.csv,evidence owner
+G16,Unsupported subgroup performance remains suppressed and no group action is authorized,pass,candidate module-03 subgroup-support-audit.csv,equity and methods reviewers
+G17,Module 01 has zero points and Modules 02 and 03 have 20 points once each,pass,checkpoint-score.csv,faculty owner
+G18,All 36 inherited gates and 20 checkpoint gates pass,pass,evidence-index.csv and checkpoint-gates.csv,faculty owner
+G19,Defense reproduction AI claims ownership and conditions are complete,pass,checkpoint-defense.md and reproducibility-check.md,faculty owner
+G20,Only bounded Module 04 curriculum construction is permitted,pass,progression-decision.md,clinical governance council

@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.79.0 through Module 03.
+- Current Commons release: 0.80.0 through Checkpoint 01.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -334,11 +334,13 @@ Leadership must address uncertainty, alert burden, patient access, staff voice, 
 - Package path: `courses/clinical-decision-support/checkpoints/01-logic-evidence-validation-readiness/`.
 - Specification: `docs/curriculum/courses/APP-4/checkpoints/01-logic-evidence-validation-readiness-spec.md`.
 - Decision: may the accepted use case, logic, public evidence, calibration, threshold, and claim limits enter workflow and prototype work?
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Checkpoint version `0.1.0` and Commons release `0.80.0`; bounded Module 04 curriculum construction is permitted with conditions.
 
 Required evidence includes the Module 01 charter and source audit; exact identities for all 16 NHANES files; source limitations; fictional-service declaration; intended use; user and workflow moment; action and prohibited action; logic, trigger, suppression, input, unit, time, terminology, and unavailable-state contracts; truth table and edge cases; cohort and information cutoff; survey-design decision; transparent model; temporal holdout; later-cycle stress test; calibration; threshold table; alert budget; net-benefit interpretation; subgroup support; 40-point score; gates; AI record; defense; and progression decision.
 
 The checkpoint counts the 20-point Module 02 and 20-point Module 03 components once. Module 01 adds no points but is a required gate.
+
+The accepted checkpoint freezes 245 files from the complete Module 01 through Module 03 reference workspaces, including 204 nested immutable rows. Its candidate manifest is 45,897 bytes with SHA-256 `4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151`. The 263-file learner or reference workspace preserves a 40-point total, 36 inherited gates, 20 checkpoint gates, nine assessed records, and a 14-question defense. Reference validation passes 1,284 checks, learner validation passes 1,245 checks, and all 20 failure routes are rejected. No threshold is accepted. Module 04 may compare all six evidence candidates, a less interruptive alternative, and no alert for curriculum construction only.
 
 ### Checkpoint 2: Workflow, sandbox, safety, and monitoring release
 
@@ -519,5 +521,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 01 pins all 16 complete public XPT files, profiles 145,563 component rows and 442 fields, releases a validated 41-file decision-framing workspace, and permits Module 02 construction with conditions without fitting a model or selecting a threshold.
 - [x] Module 02 releases a complete 811,803-row synthetic FHIR source, 16 deterministic rule cases, and an 86-file workspace while keeping its mock score and threshold mechanics only.
 - [x] Module 03 releases a reproducible 7,544-row historical model cohort, untouched temporal-holdout and transport evidence, six unaccepted candidate thresholds, and a validated 118-file workspace.
+- [x] Checkpoint 01 freezes all 245 accepted Module 01 through Module 03 files, counts 20 plus 20 points once, preserves all six thresholds as unaccepted, and releases a validated 263-file cumulative workspace.
 
-APP-4 Modules 01 through 03 are complete for curriculum construction. Resume with Checkpoint 01 by freezing the accepted Module 02 and Module 03 releases, preserving their exact logic, source, model, threshold, and authority boundaries, carrying the 20-point components once each, and making one cumulative progression decision before Module 04 begins.
+APP-4 Modules 01 through 03 and Checkpoint 01 are complete for curriculum construction. Resume with Module 04 by freezing the exact Week 3 candidate manifest, preserving all six unaccepted evidence thresholds and the rejected `0.20` fixture, comparing candidate burden, human factors, access, equity, a less interruptive alternative, and no alert, and making one human-governed candidate-design recommendation without authorizing real-patient scoring or clinical use.

@@ -1,0 +1,21 @@
+component,criterion_id,criterion,points_possible,points_awarded,evidence,gate_status
+oclc-app4-02,L01,use-case and logic release,3,3,use-case-logic-release.md,pass
+oclc-app4-02,L02,ordered logic trigger suppression and reasons,5,5,logic-specification.csv and trigger-suppression-matrix.csv,pass
+oclc-app4-02,L03,event-time input terminology unit and failure contract,4,4,input-contract.csv and terminology-map.csv,pass
+oclc-app4-02,L04,synthetic provenance defects limits and reproducibility,3,3,synthetic-release-interpretation.md,pass
+oclc-app4-02,L05,sixteen expected results and ordered traces,3,3,rule-test-results.csv,pass
+oclc-app4-02,L06,change control consequences claims AI and progression,2,2,logic-change-control.md and progression-decision.md,pass
+oclc-app4-02,M02-TOTAL,Module 02 subtotal,20,20,component counted once,all 12 component gates pass
+oclc-app4-03,E01,cohort and target,2,2,cohort-target-contract.csv,pass
+oclc-app4-03,E02,survey design,2,2,survey-design-audit.csv,pass
+oclc-app4-03,E03,model specification,2,2,model-specification.csv,pass
+oclc-app4-03,E04,performance,2,2,performance-interpretation.md,pass
+oclc-app4-03,E05,calibration,2,2,calibration-audit.csv,pass
+oclc-app4-03,E06,threshold consequences,2,2,threshold-consequence-audit.csv,pass
+oclc-app4-03,E07,decision curve,1.5,1.5,decision-curve-interpretation.md,pass
+oclc-app4-03,E08,transport stress,1.5,1.5,transport-stress-audit.csv,pass
+oclc-app4-03,E09,subgroup support,1.5,1.5,subgroup-support-audit.csv,pass
+oclc-app4-03,E10,Week 3 component release,1.5,1.5,week3-component-release.md,pass
+oclc-app4-03,E11,reproducibility claims and AI,2,2,evidence-release.md and ai-use.md,pass
+oclc-app4-03,M03-TOTAL,Module 03 subtotal,20,20,component counted once,all 12 component gates pass
+checkpoint,TOTAL,Week 3 checkpoint total,40,40,Module 02 20 points once plus Module 03 20 points once,all 56 gates pass

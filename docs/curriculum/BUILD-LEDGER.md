@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.79.0
+- Current release: 0.80.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-4 Module 03, evidence, calibration, and validation
-- Next unit: APP-4 Checkpoint 01, use-case, logic, and evidence release
+- Last completed unit: APP-4 Checkpoint 01, logic, evidence, calibration, and validation readiness
+- Next unit: APP-4 Module 04, alert burden, human factors, and equity
 
 ## Confirmed decisions
 
@@ -606,6 +606,17 @@
 - The learner and reference workspaces each contain 118 files with a 102-row immutable manifest and 15 assessed records. Builders produce identical manifests, and validator checks reject mutation, copied answers, threshold acceptance, diagnostic claims, retuning, and deployment authority.
 - The 20-point reference release is `continue with conditions`, permitting Checkpoint 01 assembly for curriculum construction only. Module 04 remains prohibited until the cumulative checkpoint passes.
 - APP-4 Module 03 is a runnable release candidate at Commons 0.79.0.
+- APP-4 Checkpoint 01 version 0.1.0 assembles the complete accepted Module 01, Module 02, and Module 03 reference workspaces without editing their evidence.
+- The cumulative candidate has 245 files and 204 nested immutable rows. The module manifests are 3,404, 10,564, and 16,354 bytes with exact accepted SHA-256 identities.
+- The candidate manifest is 45,897 bytes with SHA-256 `4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151`.
+- Module 01 remains a required zero-point gate. Module 02 contributes 20 points once, Module 03 contributes 20 points once, and the Week 3 total is 40 of 40 with no new checkpoint points.
+- All 12 Module 01 gates, 12 Module 02 gates, 12 Module 03 gates, and 20 checkpoint integrity gates pass.
+- The cumulative review preserves all 16 public XPT identities, the complete 811,803-row synthetic source, all 16 passing mechanics traces, the 7,544-row model cohort, untouched temporal-holdout and transport evidence, calibration, threshold consequences, subgroup suppression, and teaching uncertainty.
+- All six evidence candidates remain unselected and unaccepted. The Module 02 `0.20` value remains a rejected mechanics fixture and cannot enter Module 04 as evidence.
+- The learner and reference workspaces each contain 263 files and nine checkpoint records. Reference validation passes 1,284 checks, learner validation passes 1,245 checks, copied validation passes, and 20 failure routes are rejected.
+- The reference release is `continue with conditions`, permitting Module 04 alert-burden, human-factors, equity, less-interruptive-alternative, no-alert, and six-candidate comparison work for curriculum construction only.
+- Diagnosis, real-patient scoring, threshold acceptance, clinical alerting, clinical action, implementation, production connection, and deployment remain prohibited.
+- APP-4 Checkpoint 01 is a runnable release candidate at Commons 0.80.0.
 
 ## Pending confirmation
 
@@ -622,16 +633,18 @@
 - Confirm APP-4's clinical target, predictors, exclusions, units, threshold candidates, confirmatory-action wording, survey-design treatment, and subgroup plan with qualified clinical and methods reviewers.
 - Complete named clinical, interoperability, terminology, safety, privacy, accessibility, responsible-AI, and independent review of the APP-4 Module 02 Synthea and Commons release before alpha.
 - Complete named primary-care or endocrinology, biostatistics, calibration, NHANES survey-methods, clinical-informatics, equity, patient, accessibility, responsible-AI, and independent-reproduction review of APP-4 Module 03 before alpha.
+- Complete named clinical, survey-methods, calibration, clinical-informatics, interoperability, terminology, workflow, human-factors, patient, access, equity, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-4 Checkpoint 01 before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-4 course specification and the complete accepted Module 02 and Module 03 releases before assembling Checkpoint 01.
-2. Freeze the accepted 73-row Module 02 and 102-row Module 03 immutable manifests without rebuilding or silently changing their evidence.
-3. Carry the 20-point logic component and the 20-point evidence component into the cumulative checkpoint exactly once for a 40-point Week 3 decision.
-4. Re-run the Module 02 and Module 03 release verifiers from the cumulative workspace and reject any source, fixture, model, partition, threshold, or authority drift.
-5. Preserve the decision that no clinical threshold is accepted. Checkpoint 01 may decide only whether curriculum construction continues with the declared conditions.
-6. Permit Module 04 only after the complete Week 3 reference checkpoint passes all noncompensable gates.
-7. Advance semver, validate the complete curriculum, commit, push, and remote-verify Checkpoint 01 before building Module 04.
+1. Read the APP-4 course specification, Checkpoint 01 specification, and complete accepted cumulative release before building Module 04.
+2. Freeze the exact 245-row Week 3 candidate manifest and all 204 nested immutable rows without editing accepted source, logic, model, calibration, threshold, or authority evidence.
+3. Use documented synthetic workflow data only for burden and human-factors teaching. Do not describe synthetic card counts as observed clinical burden.
+4. Compare all six unaccepted evidence candidates, a less interruptive alternative, and no alert. Keep `0.20` rejected as a mechanics fixture.
+5. Examine task flow, timing, competing work, repeat cards, dismissal, deferment, override, patient communication, language, disability, access, privacy, equity, and hidden work.
+6. Require a human-governed candidate-design recommendation with explicit burden, missed-case, uncertainty, ownership, and stop conditions. Do not authorize real-patient scoring or clinical use.
+7. Build the 25-point Module 04 component and its protected handoff to Module 05 without beginning the prototype early.
+8. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 04 before building Module 05.

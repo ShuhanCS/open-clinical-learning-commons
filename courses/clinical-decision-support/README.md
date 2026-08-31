@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.79.0.
-- Current build: Modules 01 through 03 are runnable release candidates; Checkpoint 01 is next.
+- Current Commons release: 0.80.0.
+- Current build: Modules 01 through 03 and Checkpoint 01 are runnable release candidates; Module 04 is next.
 
 APP-4 teaches learners to decide whether a prediction or rule can support one clinician at one workflow moment without creating unacceptable burden or harm. The course covers intended use, logic, triggers, input availability, calibration, thresholds, alert burden, human factors, a nonproduction prototype, failure modes, safety, monitoring, governance, and clinician-led defense.
 
@@ -26,7 +26,7 @@ The continuing case is an explicitly fictional adult general internal medicine a
 
 ## Checkpoints
 
-- Week 3: 40-point logic, evidence, calibration, and validation readiness package.
+- Week 3: 40-point logic, evidence, calibration, and validation readiness package. Runnable release candidate.
 - Week 6: 25-point workflow, sandbox, failure-mode, safety, monitoring, governance, and embedded-ML package.
 - Official half-term end date: 35-point clinical decision support package and defense.
 
@@ -48,5 +48,7 @@ The first runnable package is [Module 01](modules/01-cds-use-case-decision/READM
 The second runnable package is [Module 02](modules/02-logic-triggers-data/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/modules/02-logic-triggers-data-spec.md). It releases a complete 25-file, 811,803-row Synthea FHIR source; preserves 11,109 repeated provider and organization IDs; links 16 deterministic normal and failure cases; and creates an 86-file learner or reference workspace with 73 immutable files and 12 assessed records. The 20-point reference release passes every expected mechanics trace and permits Module 03 curriculum construction with conditions. The score and `0.20` value remain arbitrary fixtures, not predictions or an accepted clinical threshold.
 
 The third runnable package is [Module 03](modules/03-evidence-calibration-validation/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/modules/03-evidence-calibration-validation-spec.md). It verifies all 16 inherited NHANES sources, releases 14,892 age-eligible audit rows and 7,544 model rows with 328 outcomes, fits one fixed development-only weighted GLM, and evaluates a 1,806-row temporal holdout plus a separate 2,086-row transport stress test. Its 118-file learner or reference workspace contains 102 immutable files and 15 assessed records. The `continue with conditions` reference decision permits Checkpoint 01 assembly, keeps all six evidence thresholds unaccepted, rejects `0.20` as evidence, and prohibits Module 04 until the cumulative checkpoint passes.
+
+The first runnable cumulative package is [Checkpoint 01](checkpoints/01-logic-evidence-validation-readiness/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/checkpoints/01-logic-evidence-validation-readiness-spec.md). It freezes 245 files from the complete Module 01 through Module 03 reference workspaces and independently protects 204 nested immutable files. Module 01 remains a required zero-point gate. Module 02 and Module 03 contribute 20 points once each. The 263-file learner or reference workspace passes 1,284 reference checks and 1,245 learner checks. Its `continue with conditions` decision permits bounded Module 04 curriculum construction while all six evidence candidates remain unaccepted and every clinical-use, implementation, and deployment route remains prohibited.
 
 No package may connect to a live clinical system, process real patient data, display a clinical alert, diagnose, order, deny, target, score real patients, implement, or deploy.

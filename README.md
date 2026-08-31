@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.79.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract and runnable Modules 01 through 03.
+- Current version: `0.80.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract, runnable Modules 01 through 03, and a runnable Week 3 checkpoint.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -134,6 +134,8 @@ The first runnable unit is [APP-4 Module 01: Framing a decision support use case
 The second runnable unit is [APP-4 Module 02: Decision support logic, triggers, and data](courses/clinical-decision-support/modules/02-logic-triggers-data/README.md), governed by the durable [Module 02 specification](docs/curriculum/courses/APP-4/modules/02-logic-triggers-data-spec.md). It releases all 25 files and 811,803 resource rows from a pinned 1,000-adult Synthea FHIR build, preserves 11,109 repeated provider and organization IDs as a measured data-quality condition, links 16 deterministic workflow cases, and releases an 86-file learner or reference workspace. All reference traces pass. Module 03 historical evidence construction may begin with conditions, but the mock score and `0.20` value are mechanics only and carry no clinical-threshold authority.
 
 The third runnable unit is [APP-4 Module 03: Evidence, calibration, and validation](courses/clinical-decision-support/modules/03-evidence-calibration-validation/README.md), governed by the durable [Module 03 specification](docs/curriculum/courses/APP-4/modules/03-evidence-calibration-validation-spec.md). It verifies all 16 NHANES sources, releases 14,892 age-eligible audit rows and a 7,544-row model cohort with 328 outcomes, fits one fixed development-only weighted GLM, and evaluates an untouched 1,806-row temporal holdout plus a separate 2,086-row transport stress test. All six evidence thresholds remain candidates, the Module 02 `0.20` value is rejected as evidence, and Checkpoint 01 assembly may begin with conditions.
+
+The first APP-4 cumulative release is [Checkpoint 01: Logic, evidence, calibration, and validation readiness](courses/clinical-decision-support/checkpoints/01-logic-evidence-validation-readiness/reference/README.md), governed by the durable [Checkpoint 01 specification](docs/curriculum/courses/APP-4/checkpoints/01-logic-evidence-validation-readiness-spec.md). It freezes 245 files from the complete Module 01 through Module 03 reference workspaces, preserves Module 01 as a zero-point gate, counts the two 20-point components once, and validates a 40-point Week 3 decision. All six evidence thresholds remain unaccepted, `0.20` remains rejected as a mechanics fixture, and bounded Module 04 curriculum construction may begin with conditions.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -311,8 +313,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-4 Checkpoint 01 from the accepted Module 02 and Module 03 releases.
-2. Continue APP-4 Module 04 only after the Week 3 checkpoint passes, then complete its Week 6 and official-end-date checkpoints before moving to APP-5.
+1. Build APP-4 Module 04 from the accepted Week 3 checkpoint.
+2. Complete APP-4's Week 6 and official-end-date checkpoints before moving to APP-5.
 3. Continue APP-5 through APP-7 one distinct course at a time.
 4. Complete named human reviews before alpha promotion.
 
