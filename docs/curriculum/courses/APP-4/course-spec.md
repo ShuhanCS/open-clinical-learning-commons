@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.77.0 through Module 01.
+- Current Commons release: 0.78.0 through Module 02.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -227,13 +227,15 @@ The accepted release contains all 16 complete NHANES XPT files as deterministic 
 - Specification: `docs/curriculum/courses/APP-4/modules/02-logic-triggers-data-spec.md`.
 - Decision: is the rule and input contract testable, traceable, and bounded enough to enter evidence review?
 - Submission: 20-point use-case, logic, and data-input specification.
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.78.0`; Module 03 construction is permitted with conditions.
 
 Learners define eligibility, exclusions, suppressions, hook, context, trigger, input codes, units, value sets, availability time, staleness limits, missing and inconsistent states, threshold candidates, card content, nonaction, override, audit trace, and prohibited behavior.
 
 SQL owns cohort and event-time input logic. Python independently checks the logic table, truth table, unit handling, time ordering, unavailable states, and trace completeness. The module includes normal, boundary, stale, missing, inconsistent, delayed, duplicate, and suppressed cases before any model performance is considered.
 
 The 20-point component cannot pass with a clinically incoherent intended use, an unavailable input, a hidden default, an untraceable rule, a threshold chosen by the agent, or an automatic action.
+
+The accepted package preserves the 29 immutable Module 01 files, adds a complete 1,000-adult Synthea FHIR R4 release with 25 files and 811,803 resource rows, and measures 11,109 repeated provider and organization IDs without silently removing them. Sixteen linked Commons cases cover normal, boundary, missing, stale, inconsistent, duplicate, delayed, terminology, version, suppression, unit, context, silent-failure, and missing-score conditions. The learner and reference workspaces each contain 86 files with a 73-row immutable manifest and 12 assessed records. All reference traces pass, while model fitting inside Module 02 and clinical-threshold acceptance remain prohibited.
 
 ## 11. Module 03 brief: Evidence, calibration, and validation
 

@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.77.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.78.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2847,7 +2847,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.77.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.78.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4047,8 +4047,8 @@ if (
     $app4Content -match '(?im)[A-Z]:\\Users\\' -or
     $app4SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app4PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app4Content -notmatch 'Current Commons release: 0\.77\.0' -or
-    $app4PackageContent -notmatch 'Current Commons release: 0\.77\.0' -or
+    $app4Content -notmatch 'Current Commons release: 0\.78\.0' -or
+    $app4PackageContent -notmatch 'Current Commons release: 0\.78\.0' -or
     $app4Content -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
     $app4SourceContent -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
     $app4SourceContent -notmatch '21,676' -or
@@ -4070,8 +4070,8 @@ if (
     $app4SourceContent -notmatch 'https://hl7\.org/fhir/R4/observation\.html' -or
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
-    $app4PackageContent -notmatch 'Module 01 is a runnable release candidate; Module 02 is next' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.77.0'
+    $app4PackageContent -notmatch 'Modules 01 and 02 are runnable release candidates; Module 03 is next' -or
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.78.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4171,6 +4171,82 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 01 source profiler self-check fai
 if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 01 builder self-check failed.' }
 & python (Join-Path $app4Module01Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 01 validator self-check failed.' }
+
+$app4Module02Root = Join-Path $repo 'courses\clinical-decision-support\modules\02-logic-triggers-data'
+$app4Module02Spec = Join-Path $repo 'docs\curriculum\courses\APP-4\modules\02-logic-triggers-data-spec.md'
+$app4Module02Records = @(
+    'use-case-logic-release.md', 'logic-specification.csv', 'input-contract.csv',
+    'trigger-suppression-matrix.csv', 'rule-test-results.csv', 'terminology-map.csv',
+    'synthetic-release-interpretation.md', 'logic-change-control.md',
+    'patient-workflow-consequence-map.csv', 'claim-boundary.csv', 'ai-use.md',
+    'progression-decision.md'
+)
+$app4Module02Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md', 'build_logic_fixtures.py',
+    'build_workspace.py', 'data-spec.md', 'decision-contract.json', 'evaluate_rules.py',
+    'generate_synthetic_release.py', 'instructor-notes.md', 'release.json', 'source-record.yml',
+    'synthea.properties', 'validate_workspace.py', 'data\synthetic-release\source-manifest.csv',
+    'data\synthetic-release\build-inputs.csv', 'data\synthetic-release\synthetic-release.json',
+    'data\synthetic-release\generation-log.txt', 'data\commons\patient-linkage.csv',
+    'data\commons\rule-test-cases.csv', 'data\commons\logic-config.json'
+)
+foreach ($record in $app4Module02Records) {
+    $app4Module02Files += "reference\$record"
+    $app4Module02Files += "template\$record"
+}
+$app4Module02SourceManifest = @(Import-Csv -LiteralPath (Join-Path $app4Module02Root 'data\synthetic-release\source-manifest.csv'))
+foreach ($source in $app4Module02SourceManifest) {
+    $sourceRelative = $source.relative_path -replace '/', '\'
+    $app4Module02Files += "data\synthetic-release\$sourceRelative"
+}
+$app4Module02Missing = @($app4Module02Files | Where-Object { -not (Test-Path -LiteralPath (Join-Path $app4Module02Root $_)) })
+if (-not (Test-Path -LiteralPath $app4Module02Spec) -or $app4Module02Missing.Count -gt 0) {
+    throw "APP-4 Module 02 is missing its specification or package files: $($app4Module02Missing -join ', ')."
+}
+$app4Module02SpecContent = Get-Content -Raw -Encoding UTF8 -LiteralPath $app4Module02Spec
+$app4Module02Readme = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $app4Module02Root 'README.md')
+$app4Module02Release = Get-Content -Raw -LiteralPath (Join-Path $app4Module02Root 'release.json') | ConvertFrom-Json
+$app4Module02Contract = Get-Content -Raw -LiteralPath (Join-Path $app4Module02Root 'decision-contract.json') | ConvertFrom-Json
+$app4Module02SyntheticRelease = Get-Content -Raw -LiteralPath (Join-Path $app4Module02Root 'data\synthetic-release\synthetic-release.json') | ConvertFrom-Json
+$app4Module02BuildInputs = @(Import-Csv -LiteralPath (Join-Path $app4Module02Root 'data\synthetic-release\build-inputs.csv'))
+$app4Module02Cases = @(Import-Csv -LiteralPath (Join-Path $app4Module02Root 'data\commons\rule-test-cases.csv'))
+$app4Module02Links = @(Import-Csv -LiteralPath (Join-Path $app4Module02Root 'data\commons\patient-linkage.csv'))
+$app4Module02Results = @(Import-Csv -LiteralPath (Join-Path $app4Module02Root 'reference\rule-test-results.csv'))
+$app4Module02Sections = [regex]::Matches($app4Module02SpecContent, '(?m)^## \d+\.').Count
+$app4Module02Rows = ($app4Module02SourceManifest | Measure-Object -Property rows -Sum).Sum
+$app4Module02Uncompressed = ($app4Module02SourceManifest | Measure-Object -Property uncompressed_bytes -Sum).Sum
+$app4Module02Compressed = ($app4Module02SourceManifest | Measure-Object -Property compressed_bytes -Sum).Sum
+$app4Module02Duplicates = ($app4Module02SourceManifest | Measure-Object -Property duplicate_ids -Sum).Sum
+$app4Module02Checks = [ordered]@{
+    package_shape = ($app4Module02Files.Count -eq 71 -and $app4Module02Sections -eq 21)
+    source_shape = ($app4Module02SourceManifest.Count -eq 25 -and $app4Module02BuildInputs.Count -eq 2 -and @($app4Module02SourceManifest | Where-Object { [int]$_.parse_failures -ne 0 }).Count -eq 0)
+    fixture_shape = ($app4Module02Cases.Count -eq 16 -and $app4Module02Links.Count -eq 16 -and $app4Module02Results.Count -eq 16 -and @($app4Module02Cases.condition_class | Sort-Object -Unique).Count -eq 16 -and @($app4Module02Results | Where-Object { $_.status -ne 'pass' }).Count -eq 0)
+    source_totals = ($app4Module02Rows -eq 811803 -and $app4Module02Uncompressed -eq 1549494665 -and $app4Module02Compressed -eq 100178478 -and $app4Module02Duplicates -eq 11109)
+    plain_ascii = ($app4Module02SpecContent.IndexOf([char]0x2013) -lt 0 -and $app4Module02SpecContent.IndexOf([char]0x2014) -lt 0 -and $app4Module02Readme.IndexOf([char]0x2013) -lt 0 -and $app4Module02Readme.IndexOf([char]0x2014) -lt 0)
+    no_local_paths = (-not $app4Module02SpecContent.Contains(':\Users\') -and -not $app4Module02Readme.Contains(':\Users\'))
+    spec_contract = ($app4Module02SpecContent -match 'Module version: `0\.1\.0`' -and $app4Module02SpecContent -match 'Commons release: `0\.78\.0`' -and $app4Module02SpecContent -match '811,803' -and $app4Module02SpecContent -match '1,549,494,665' -and $app4Module02SpecContent -match '100,178,478' -and $app4Module02SpecContent -match '11,109' -and $app4Module02SpecContent -match 'Windows-1252' -and $app4Module02SpecContent -match 'canonical UTF-8' -and $app4Module02SpecContent -match '73 immutable files' -and $app4Module02SpecContent -match '12 assessed records' -and $app4Module02SpecContent -match '86 files' -and $app4Module02SpecContent -match 'continue with conditions' -and $app4Module02SpecContent -match 'mock threshold')
+    readme_contract = ($app4Module02Readme -match 'complete Synthea 4\.0\.0 FHIR R4 teaching release' -and $app4Module02Readme -match 'Module 03 historical evidence and threshold analysis may begin')
+    release_contract = ($app4Module02Release.module_version -eq '0.1.0' -and $app4Module02Release.commons_release -eq '0.78.0' -and $app4Module02Release.status -eq 'runnable release candidate' -and $app4Module02Release.course_points -eq 20 -and $app4Module02Release.synthetic_source.population -eq 1000 -and $app4Module02Release.synthetic_source.fhir_files -eq 25 -and $app4Module02Release.synthetic_source.resource_rows -eq 811803 -and $app4Module02Release.synthetic_source.duplicate_resource_ids_within_file -eq 11109 -and $app4Module02Release.rule_fixtures.cases -eq 16 -and $app4Module02Release.workspace.immutable_manifest_rows -eq 73 -and $app4Module02Release.workspace.editable_records -eq 12 -and $app4Module02Release.workspace.assembled_files -eq 86 -and $app4Module02Release.reference_decision.progression -eq 'continue with conditions' -and $app4Module02Release.reference_decision.module03_permission -eq 'permitted for curriculum construction' -and $app4Module02Release.reference_decision.clinical_threshold_acceptance -eq 'prohibited' -and $app4Module02Release.reference_decision.deployment -eq 'prohibited')
+    decision_contract = ($app4Module02Contract.assessment.points -eq 20 -and $app4Module02Contract.assessment.required_records -eq 12 -and $app4Module02Contract.assessment.noncompensable_gates -eq 12 -and $app4Module02Contract.synthetic_release.resource_rows -eq 811803 -and $app4Module02Contract.synthetic_release.duplicate_resource_ids_within_file -eq 11109 -and $app4Module02Contract.progression.reference -eq 'continue with conditions' -and $app4Module02Contract.authority.model_fitting_in_module02 -eq 'prohibited' -and $app4Module02Contract.authority.clinical_threshold_acceptance -eq 'prohibited' -and $app4Module02Contract.authority.deployment -eq 'prohibited')
+    source_identity = ($app4Module02SyntheticRelease.source_manifest_sha256 -eq '0d3c4c11e5ab29284f312d76413f8e005fb957226039d324912f80af93dcf3c0' -and $app4Module02SyntheticRelease.configuration_sha256 -eq '7179630b17f8a0b70039dbb9e0478966bd4c6ca923a948d166ae7439f3eb74bd')
+    build_inputs = (@($app4Module02BuildInputs | Where-Object { $_.sha256 -eq 'ed43c20ad40ba5c3bc724503a5af032715fe3c491620b766148e7c2361e6ecc1' }).Count -eq 1 -and @($app4Module02BuildInputs | Where-Object { $_.sha256 -eq 'bc21a93923103cdaac93ee337b0ae4365e739fde36df823dd456bc67c8a9d352' }).Count -eq 1)
+}
+$app4Module02Failures = @($app4Module02Checks.GetEnumerator() | Where-Object { -not $_.Value } | ForEach-Object { $_.Key })
+if ($app4Module02Failures.Count -gt 0) {
+    throw "APP-4 Module 02 0.1.0 contract checks failed: $($app4Module02Failures -join ', ')."
+}
+& python (Join-Path $app4Module02Root 'generate_synthetic_release.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 synthetic generator self-check failed.' }
+& python (Join-Path $app4Module02Root 'generate_synthetic_release.py') --verify
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 synthetic release verification failed.' }
+& python (Join-Path $app4Module02Root 'build_logic_fixtures.py') --verify
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 fixture verification failed.' }
+& python (Join-Path $app4Module02Root 'evaluate_rules.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 rule evaluator self-check failed.' }
+& python (Join-Path $app4Module02Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 builder self-check failed.' }
+& python (Join-Path $app4Module02Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -5489,3 +5565,4 @@ Write-Output "APP-3 Module 07 passed: $app3Module07Sections contract sections an
 Write-Output "APP-3 final checkpoint passed: $app3Checkpoint03Sections contract sections and $($app3Checkpoint03Files.Count) required files."
 Write-Output "APP-4 course architecture passed: $app4Sections sections, $app4ModuleCount modules, $app4Hours hours, $app4CheckpointCount checkpoints, and $($app4XptUrls.Count) complete NHANES XPT routes."
 Write-Output "APP-4 Module 01 passed: $app4Module01Sections contract sections, $($app4Module01Files.Count) required files, $($app4Module01Sources.Count) complete XPT sources, and $($app4Module01Fields.Count) field records."
+Write-Output "APP-4 Module 02 passed: $app4Module02Sections contract sections, $($app4Module02Files.Count) required files, $app4Module02Rows FHIR resource rows, and $($app4Module02Cases.Count) rule cases."

@@ -1,9 +1,9 @@
 # Curriculum build ledger
 
-- Current release: 0.77.0
-- Last updated: 2026-08-30
+- Current release: 0.78.0
+- Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-4 Module 01, framing a decision support use case
+- Last completed unit: APP-4 Module 02, decision support logic, triggers, and data
 - Next unit: APP-4 Module 02, decision support logic, triggers, and data
 
 ## Confirmed decisions
@@ -583,6 +583,17 @@
 - Source, builder, and validator self-checks pass. Complete validation passes 177 checks, starter validation passes 121 checks, and missing-file, source-mutation, placeholder, authority, copied-answer, and personal-path routes are rejected.
 - The reference progression is `continue with conditions`, permitting Module 02 curriculum construction only. Model fitting, final target and predictor acceptance, threshold selection, alert firing, real-patient scoring, clinical action, implementation, and deployment remain prohibited.
 - APP-4 Module 01 is a runnable release candidate at Commons 0.77.0.
+- APP-4 Module 02 version 0.1.0 freezes the accepted 29-file Module 01 chain of custody and adds the first versioned `CGH-GIM-01` synthetic clinical and workflow source.
+- Synthea 4.0.0 ran with the pinned Temurin 17.0.20.1+1 runtime, seeds 7400202 and 7400203, fixed reference and end dates of 20260831, 1,000 Massachusetts adults, five years of history, and one generation thread.
+- The full committed FHIR R4 release has 25 files, 811,803 resource rows, 1,549,494,665 canonical UTF-8 bytes, 100,178,478 gzip bytes, zero parse failures, and 11,109 repeated IDs within four provider or organization resource files.
+- Two clean generations produce the exact manifest SHA-256 `0d3c4c11e5ab29284f312d76413f8e005fb957226039d324912f80af93dcf3c0`.
+- The Windows upstream output is deterministically normalized from Windows-1252 to UTF-8. All source values are retained, gzip timestamps are fixed, and local paths and elapsed times are excluded from the release log.
+- Sixteen stable Commons cases link to 16 synthetic patients and cover normal, threshold-boundary, missing, stale, inconsistent, duplicate, delayed, terminology, version, lookback, known-condition suppression, unit, context, silent-failure, and missing-score states.
+- All 16 reference results and ordered traces pass. The score values and `0.20` branch value remain mechanics-only fixtures and cannot be treated as predictions, performance evidence, or an accepted clinical threshold.
+- The learner and reference workspaces each contain 86 files with a 73-row immutable manifest and 12 assessed records. Two reference builds have byte-identical manifests.
+- Source, fixture, evaluator, builder, and validator checks pass. Mutated source, placeholders, copied answers, threshold authority, deployment authority, and missing assessed evidence are rejected.
+- The 20-point reference release is `continue with conditions`, permitting Module 03 historical evidence, calibration, and threshold analysis for curriculum construction only. Real-patient scoring, clinical alerting, implementation, and deployment remain prohibited.
+- APP-4 Module 02 is a runnable release candidate at Commons 0.78.0.
 
 ## Pending confirmation
 
@@ -595,18 +606,18 @@
 - Run and independently review the APP-3 Module 03 base-R control-chart verification in an environment with R installed.
 - Run and independently review the APP-3 Module 04 base-R forecast verification in an environment with R installed.
 - Assign the official APP-4 section and half-term dates from the published calendar.
-- Acquire, fingerprint, profile, and independently review all 16 complete APP-4 NHANES XPT files.
+- Independently review the 16 pinned APP-4 NHANES XPT files and their survey-methods interpretation.
 - Confirm APP-4's clinical target, predictors, exclusions, units, threshold candidates, confirmatory-action wording, survey-design treatment, and subgroup plan with qualified clinical and methods reviewers.
-- Build and review the APP-4 Synthea and Commons synthetic release, workflow, burden, drift, and silent-failure truth before alpha.
+- Complete named clinical, interoperability, terminology, safety, privacy, accessibility, responsible-AI, and independent review of the APP-4 Module 02 Synthea and Commons release before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-4 course specification, source record, Module 01 specification, and complete Module 01 release before building Module 02.
-2. Freeze the 29 immutable Module 01 files and preserve the exact 16-source chain of custody.
-3. Build the first versioned `CGH-GIM-01` synthetic clinical and workflow source with generator identity, seed, resource counts, known truth, defects, and explicit synthetic flags.
-4. Specify and test the nonproduction logic, trigger, suppression, terminology, unit, timing, staleness, unavailable-state, trace, and prohibited-action contracts.
-5. Do not fit the historical model or choose a threshold in Module 02. Those belong to Module 03 after the logic and input gates pass.
-6. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 02 before moving to Module 03.
+1. Read the APP-4 course specification, source record, Module 01 and Module 02 specifications, and complete accepted releases before building Module 03.
+2. Freeze the 29 immutable Module 01 files and 73 immutable Module 02 files, including the exact public and synthetic source chains of custody.
+3. Define the historical target, eligibility, exclusions, predictors, information cutoff, missing-input rules, and survey-design treatment without importing the mock score or threshold as evidence.
+4. Fit the transparent historical model only on the declared development cycles, then evaluate temporal holdout, later-cycle transport, calibration, candidate thresholds, decision tradeoffs, and subgroup support.
+5. Preserve Module 02 hook, logic, reason, terminology, event-time, failure, and authority contracts. Return to Module 02 if an evidence-driven change invalidates them.
+6. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 03 before assembling the Week 3 checkpoint.

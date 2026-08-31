@@ -1,0 +1,2 @@
+event_or_failure,who_notices_first,patient_consequence,clinician_consequence,operational_signal,owner,required_response,stop_right
+REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

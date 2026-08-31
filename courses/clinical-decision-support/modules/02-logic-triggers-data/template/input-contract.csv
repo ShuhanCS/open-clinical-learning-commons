@@ -1,0 +1,2 @@
+input_id,name,fhir_or_context_source,code_or_field,required_at,valid_states,unit_or_format,staleness_or_time_rule,missing_behavior,duplicate_or_delay_behavior,human_owner,status
+REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

@@ -1,0 +1,17 @@
+case_id,condition_class,key_condition,expected_result,expected_reason,required_interpretation
+C01,normal negative,score 0.19 and mock threshold 0.20,no_card,below_mock_threshold,mechanics only and not evidence of low clinical risk
+C02,mock threshold boundary,score equals mock threshold,candidate_card,at_or_above_mock_threshold,equality branch passes but no clinical threshold is accepted
+C03,normal positive,score 0.42 and response delivered,candidate_card,at_or_above_mock_threshold,candidate result is not a clinical alert
+C04,missing,required input missing,no_card,required_input_missing,do not impute or treat as below threshold
+C05,stale,required input stale,no_card,required_input_stale,do not use a stale value without accepted policy
+C06,inconsistent,input states conflict,no_card,input_inconsistent,refer inconsistency to the data and clinical owners
+C07,duplicate,request duplicates C03,no_card,duplicate_request,do not emit a second response
+C08,delayed,input arrives after decision time,no_card,required_input_delayed,do not move availability backward in time
+C09,terminology mismatch,code system or concept cannot be interpreted,no_card,terminology_mismatch,do not coerce an unknown mapping
+C10,version mismatch,hook version is 0.9,no_card,hook_version_mismatch,do not evaluate with an unsupported contract
+C11,lookback boundary,prior HbA1c is exactly 365 days earlier,no_card,recent_hba1c_suppression,tests inclusive candidate boundary only
+C12,suppression,known diabetes state is present,no_card,known_diabetes_suppression,candidate suppression requires clinical review
+C13,unit mismatch,unit is not the accepted fixture unit,no_card,unit_mismatch,do not convert without a reviewed mapping
+C14,context mismatch,service is not CGH-GIM-01,no_card,unsupported_service,do not evaluate outside the fictional service
+C15,silent failure,candidate result exists but transport is suppressed,silent_failure,candidate_response_not_delivered,absence of a card is not a negative rule result
+C16,missing score,mock score fixture is absent,no_card,score_fixture_missing,do not calculate invent or backfill a score

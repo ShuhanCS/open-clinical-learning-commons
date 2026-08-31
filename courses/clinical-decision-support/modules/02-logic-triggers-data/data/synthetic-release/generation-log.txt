@@ -1,0 +1,13 @@
+APP-4 Module 02 synthetic generation log
+status=pass
+release_id=CGH-GIM-01-SYNTHETIC-2026-08-31-v1
+command=java -Xmx6g -jar synthea-with-dependencies-4.0.0.jar -s 7400202 -cs 7400203 -p 1000 -r 20260831 -e 20260831 -a 18-89 -c synthea.properties --exporter.baseDirectory=TEMP_OUTPUT Massachusetts
+resource_files=25
+resource_rows=811803
+uncompressed_bytes=1549494665
+compressed_bytes=100178478
+parse_failures=0
+duplicate_resource_ids_within_file=11109
+upstream_windows_text_encoding=windows-1252
+committed_text_encoding=utf-8
+local_paths_recorded=0

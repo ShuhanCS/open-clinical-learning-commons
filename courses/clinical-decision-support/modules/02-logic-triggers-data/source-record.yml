@@ -1,0 +1,40 @@
+module_id: oclc-app4-02
+module_version: 0.1.0
+commons_release: 0.78.0
+retrieval_date: 2026-08-31
+sources:
+  - name: Synthea
+    version: 4.0.0
+    url: https://github.com/synthetichealth/synthea/releases/tag/v4.0.0
+    license: Apache-2.0
+    role: complete synthetic FHIR R4 source generation
+    limit: synthetic output does not establish clinical correctness or local validity
+  - name: Eclipse Temurin JRE
+    version: 17.0.20.1+1
+    url: https://github.com/adoptium/temurin17-binaries/releases/tag/jdk-17.0.20.1%2B1
+    role: portable generation runtime only
+    limit: runtime binary is verified but not committed
+  - name: CDS Hooks Specification
+    version: 2.0.1
+    url: https://cds-hooks.hl7.org/
+    role: request, response, and service contract
+    limit: conformance does not establish workflow fit or safety
+  - name: patient-view hook
+    version: 1.0
+    url: https://cds-hooks.org/hooks/patient-view/
+    role: candidate fictional workflow trigger
+    limit: local invocation timing remains synthetic and unvalidated
+  - name: HL7 FHIR R4
+    version: 4.0.1
+    url: https://hl7.org/fhir/R4/
+    role: synthetic clinical resource structure
+    limit: resource validity does not establish semantic or clinical correctness
+data_classes:
+  - inherited public NHANES source files from Module 01
+  - full synthetic FHIR R4 release
+  - deterministic fictional workflow and rule fixtures
+prohibited_data:
+  - real patient data
+  - protected health information
+  - workplace or local EHR extracts
+  - public NHANES rows copied into synthetic patients

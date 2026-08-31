@@ -1,0 +1,12 @@
+branch_id,priority,condition,candidate_action,reason_code,nonaction,human_owner,status,claim_limit
+B010,10,service_id is not CGH-GIM-01,no_card,unsupported_service,do not evaluate remaining branches,clinical informatics lead,accepted for fixture testing,fictional service boundary only
+B020,20,hook hook version or user context is unsupported,no_card,context_not_supported,do not infer patient eligibility,interoperability lead,accepted for fixture testing,patient-view timing is not locally validated
+B030,30,request duplicates an already evaluated request,no_card,duplicate_request,do not emit a second response,CDS operations owner,accepted for fixture testing,idempotency behavior is synthetic
+B040,40,required input is missing stale delayed or inconsistent,no_card,input_not_ready,do not impute or move information backward in time,clinical data steward,accepted for fixture testing,required inputs remain candidates pending review
+B050,50,terminology or unit cannot be interpreted,no_card,semantic_mismatch,do not coerce an unknown code or unit,terminology owner,accepted for fixture testing,mappings require local terminology validation
+B060,60,known diabetes state is present,no_card,known_diabetes_suppression,do not show the candidate testing card,primary-care clinical owner,candidate pending clinical review,this suppression is not clinical guidance
+B070,70,prior HbA1c is within the candidate 365-day lookback,no_card,recent_hba1c_suppression,do not show the candidate testing card,primary-care clinical owner,candidate pending clinical review,365 days is a mechanics fixture not accepted care policy
+B080,80,mock score fixture is absent,no_card,score_fixture_missing,do not calculate or invent a score,methods owner,accepted for fixture testing,the supplied score is not a prediction
+B090,90,mock score is below the 0.20 fixture,no_card,below_mock_threshold,do not show a candidate card,methods owner,accepted for fixture testing,0.20 is arbitrary and not a clinical threshold
+B100,100,mock score is at or above 0.20 and transport is delivered,candidate_card,at_or_above_mock_threshold,do not diagnose order treat or automate,clinical governance council,accepted for fixture testing,candidate result is not a clinical alert or recommendation
+B110,110,a candidate response is not delivered,silent_failure,candidate_response_not_delivered,do not treat absence as a negative result,CDS operations owner,accepted for fixture testing,synthetic transport failure does not estimate local reliability

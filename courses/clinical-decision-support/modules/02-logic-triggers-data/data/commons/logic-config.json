@@ -1,0 +1,13 @@
+{
+  "authority": "curriculum construction and offline fixture evaluation only",
+  "candidate_recent_hba1c_lookback_days": 365,
+  "card_status": "nonproduction candidate result; not a clinical recommendation or alert",
+  "hook": "patient-view",
+  "hook_version": "1.0",
+  "mock_threshold": 0.2,
+  "required_user": "PractitionerRole/CGH-GIM-01-PCP",
+  "schema_version": "1.0.0",
+  "score_status": "mock branch-test value; not a prediction or performance result",
+  "service_id": "CGH-GIM-01",
+  "threshold_status": "arbitrary mechanics-only fixture; not estimated, recommended, selected, or clinically accepted"
+}

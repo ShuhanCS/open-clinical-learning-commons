@@ -1,0 +1,17 @@
+case_id,patient_id,birth_date,synthetic_release,data_class
+C01,16fea970-5b2c-6d55-aa4d-81cd6fad491a,1994-03-16,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C02,b663c3eb-93d2-53ce-f13c-5d682bf6aa20,1973-02-14,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C03,2aac1517-f730-b74e-195e-c801d591f6a2,1968-06-02,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C04,d54bd233-1397-cbee-269e-ff3303fb9018,1963-08-08,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C05,a1c4c460-dbcc-acaa-d506-9288afffa55a,1974-11-28,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C06,d4b6c427-a9a3-672d-2d30-564ee1033f1e,1954-07-07,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C07,8db13dc9-182f-f56e-f3fb-d3931228e553,1949-05-14,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C08,0dc3c789-07da-0fe5-b187-be8c953a90e4,1945-07-15,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C09,57bdf836-f70a-0c5d-3da0-ba3efba3e7dc,1987-09-29,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C10,26e53db7-427c-4e9a-17eb-c630bd5408e3,2005-02-16,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C11,288dc8f2-0aa0-5808-0c50-6946c5b9455d,1943-07-04,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C12,5c3dc4d6-5937-2b95-d7f8-847ae7f2708e,1944-03-17,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C13,58aeda6a-2639-6a2e-a295-a37cc7a50361,2002-01-14,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C14,4eb344f2-5731-79ef-f234-b855b0cc5357,2005-07-28,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C15,b86b95ae-d7e5-d772-202a-f84564894356,1961-03-10,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only
+C16,c3b1e395-c35b-583a-673c-dfb2a9632fbc,1952-01-26,CGH-GIM-01-SYNTHETIC-2026-08-31-v1,synthetic teaching data only

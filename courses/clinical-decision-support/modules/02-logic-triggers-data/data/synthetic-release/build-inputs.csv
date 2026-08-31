@@ -1,0 +1,3 @@
+input,version,url,bytes,sha256,license,committed
+Synthea runnable JAR,4.0.0,https://github.com/synthetichealth/synthea/releases/download/v4.0.0/synthea-with-dependencies.jar,201164144,ed43c20ad40ba5c3bc724503a5af032715fe3c491620b766148e7c2361e6ecc1,Apache-2.0,no
+Eclipse Temurin portable JRE,Temurin 17.0.20.1+1,https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.20.1%2B1/OpenJDK17U-jre_x64_windows_hotspot_17.0.20.1_1.zip,43780109,bc21a93923103cdaac93ee337b0ae4365e739fde36df823dd456bc67c8a9d352,GPL-2.0-with-Classpath-exception,no

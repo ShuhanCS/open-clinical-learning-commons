@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app4-02",
+    "title": "Decision support logic, triggers, and data",
+    "version": "0.1.0",
+    "commons_release": "0.78.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "week": 2,
+    "hours": 16,
+    "course_points": 20
+  },
+  "decision": {
+    "owner": "CGH-GIM-01 clinical decision support governance council",
+    "question": "Is the candidate logic, trigger, input, terminology, trace, and synthetic-test contract complete enough to hand to Module 03 for historical evidence and threshold analysis?",
+    "permitted_next_action": "construct Module 03 historical evidence, calibration, and threshold analysis for curriculum use"
+  },
+  "service": {
+    "id": "CGH-GIM-01",
+    "status": "fictional adult general internal medicine and primary care service",
+    "hook": "patient-view 1.0",
+    "concept": "nonbinding candidate advisory asking a clinician to consider whether confirmatory HbA1c testing is appropriate",
+    "real_patient_data": "prohibited"
+  },
+  "synthetic_release": {
+    "id": "CGH-GIM-01-SYNTHETIC-2026-08-31-v1",
+    "population": 1000,
+    "fhir_files": 25,
+    "resource_rows": 811803,
+    "uncompressed_bytes": 1549494665,
+    "compressed_bytes": 100178478,
+    "parse_failures": 0,
+    "duplicate_resource_ids_within_file": 11109,
+    "rule_cases": 16
+  },
+  "fixtures": {
+    "score": "mock branch-test value, not a prediction",
+    "threshold": "0.20 arbitrary mechanics-only fixture, not estimated, recommended, selected, or accepted",
+    "candidate_card": "nonproduction expected result, not a clinical recommendation or alert"
+  },
+  "assessment": {
+    "points": 20,
+    "required_records": 12,
+    "noncompensable_gates": 12
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module03_permission": "permitted for curriculum construction"
+  },
+  "authority": {
+    "model_fitting_in_module02": "prohibited",
+    "clinical_threshold_selection": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  }
+}

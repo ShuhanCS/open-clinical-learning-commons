@@ -1,0 +1,13 @@
+claim_id,claim,status,evidence_needed,owner
+CL01,the release contains 1000 synthetic adults and 811803 FHIR resource rows,allowed,pinned manifest and passing verifier,APP-4 data owner
+CL02,all committed FHIR rows parse as UTF-8 JSON,allowed,complete release verification,APP-4 data owner
+CL03,the source contains 11109 duplicate IDs within file,allowed,resource manifest and duplicate counts,APP-4 data owner
+CL04,all 16 fixture traces match expected mechanics,allowed,passing rule-test-results.csv,APP-4 faculty owner
+CL05,the mock score is a patient risk prediction,prohibited,historical model and validation evidence in Module 03,methods owner
+CL06,0.20 is a selected recommended or accepted clinical threshold,prohibited,calibration decision benefit burden missed-case and governance evidence,clinical governance council
+CL07,a candidate_card is a clinical alert or recommendation,prohibited,clinical content human-factors safety and governance approval,clinical governance council
+CL08,passing fixtures validates clinical correctness,prohibited,clinical evidence and prospective governed evaluation,clinical governance council
+CL09,Synthea establishes CGH-GIM-01 prevalence or workflow fit,prohibited,local governed evidence outside the course,clinical governance council
+CL10,Module 03 curriculum construction may begin with conditions,allowed,all 12 Module 02 gates and progression record,APP-4 faculty owner
+CL11,real-patient scoring clinical action implementation or deployment is allowed,prohibited,separate legal privacy security safety clinical and operational authorization,authorized institutional owners
+CL12,AI may select the target predictors lookback threshold or progression decision,prohibited,named human review and accountable decision,responsible-AI owner

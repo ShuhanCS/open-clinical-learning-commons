@@ -1,0 +1,13 @@
+term_id,role,system_or_standard,version,code_or_value,display_or_meaning,authoritative_url,status,claim_limit
+TM01,resource structure,HL7 FHIR R4,4.0.1,Observation,measurement resource,https://hl7.org/fhir/R4/observation.html,reference accepted,valid structure does not prove correct semantics
+TM02,resource structure,HL7 FHIR R4,4.0.1,Condition,condition resource,https://hl7.org/fhir/R4/condition.html,reference accepted,condition presence logic requires clinical review
+TM03,profile setting,US Core,7.0.0,exporter setting,US Core profile route,https://hl7.org/fhir/us/core/STU7/,generation setting accepted,export setting does not prove conformance
+TM04,request response,CDS Hooks,2.0.1,service request response,CDS service contract,https://cds-hooks.hl7.org/,reference accepted,conformance does not prove workflow fit
+TM05,workflow trigger,CDS Hooks hook,1.0,patient-view,patient record opened,https://cds-hooks.org/hooks/patient-view/,candidate accepted for fixtures,fictional invocation timing is not locally validated
+TM06,laboratory candidate,LOINC,current review pending,4548-4,Hemoglobin A1c/Hemoglobin.total in Blood,https://loinc.org/4548-4/,candidate pending terminology review,code does not establish a testing policy
+TM07,body measure candidate,LOINC,current review pending,39156-5,Body mass index (BMI) [Ratio],https://loinc.org/39156-5/,candidate pending terminology review,field is not an accepted predictor
+TM08,condition candidate,SNOMED CT,current review pending,44054006,Type 2 diabetes mellitus,http://snomed.info/id/44054006,candidate pending terminology review,concept set and status rules remain open
+TM09,HbA1c unit,UCUM,current review pending,%,percent,https://ucum.org/ucum,candidate pending unit review,unit conversion is not assumed
+TM10,BMI unit,UCUM,current review pending,kg/m2,kilogram per square meter,https://ucum.org/ucum,candidate pending unit review,unit conversion is not assumed
+TM11,local teaching identifier,Commons local,1.0,CGH-GIM-01,fictional service,https://github.com/ShuhanCS/open-clinical-learning-commons,accepted for curriculum only,no public facility linkage or live namespace
+TM12,mechanics fixture,Commons local,1.0,MOCK-THRESHOLD-0.20,arbitrary branch boundary,https://github.com/ShuhanCS/open-clinical-learning-commons,accepted for fixture mechanics,not estimated recommended selected or clinically accepted

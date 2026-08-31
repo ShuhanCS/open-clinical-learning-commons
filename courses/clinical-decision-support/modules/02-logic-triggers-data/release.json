@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app4-02",
+  "module_version": "0.1.0",
+  "commons_release": "0.78.0",
+  "status": "runnable release candidate",
+  "hours": 16,
+  "course_points": 20,
+  "synthetic_source": {
+    "population": 1000,
+    "fhir_files": 25,
+    "resource_rows": 811803,
+    "uncompressed_bytes": 1549494665,
+    "compressed_bytes": 100178478,
+    "parse_failures": 0,
+    "duplicate_resource_ids_within_file": 11109
+  },
+  "rule_fixtures": {
+    "cases": 16,
+    "expected_results": ["no_card", "candidate_card", "silent_failure"],
+    "all_reference_traces_pass": true
+  },
+  "workspace": {
+    "immutable_manifest_rows": 73,
+    "editable_records": 12,
+    "assembled_files": 86
+  },
+  "reference_decision": {
+    "progression": "continue with conditions",
+    "module03_permission": "permitted for curriculum construction",
+    "model_fitting_in_module02": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_alerting": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, primary-care or endocrinology, clinical-informatics, interoperability, terminology, human-factors, patient-safety, patient-access, privacy, accessibility, responsible-AI, and independent-reproduction review pending before alpha"
+}
