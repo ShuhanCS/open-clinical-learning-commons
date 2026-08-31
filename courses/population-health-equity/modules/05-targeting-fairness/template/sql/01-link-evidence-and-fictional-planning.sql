@@ -1,0 +1,1 @@
+-- REPLACE with SQL that links accepted public evidence and fictional planning conditions without merging their meanings.

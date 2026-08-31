@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.91.0
+- Current release: 0.92.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-5 Module 04, Place-based evidence and geographic reasoning
-- Next unit: APP-5 Module 05
+- Last completed unit: APP-5 Module 05, Targeting and fairness
+- Next unit: APP-5 Module 06
 
 ## Confirmed decisions
 
@@ -704,6 +704,13 @@
 - The deterministic 1,515,932-byte accessible SVG has SHA-256 `cf5386a255dc37c518e8410ea891f2f73726a95c13b65e22dbadf218ba6c1ae6`. It is paired with a complete 1,620-row exact table, structured facts, a written text alternative, and a non-stigmatizing context memo.
 - The reference earns 10 of 10 and passes all 22 gates. Complete validation passes 930 checks, learner validation passes 832 checks, the copied validator passes, copied-answer and complete-mode learner packages are rejected, and 22 protected failure routes are verified.
 - APP-5 Module 04 is a runnable release candidate at Commons 0.91.0 with disposition `continue with conditions`. Module 05 curriculum construction may begin. Real disparity claims, individual inference, ranking, priority labels, targeting, eligibility, outreach, funding, allocation, model fitting, intervention-effect estimation, real community action, implementation, production connection, and deployment remain prohibited.
+- APP-5 Module 05 version 0.1.0 freezes the complete 287-file Module 04 reference workspace in a 287-row, 59,768-byte handoff manifest with SHA-256 `0670760f650e0d13cfd4c5dc85ab26fdce5779cc86d35b3d3c27d6a3cc7738dd`.
+- The deterministic `fma-dp-01-fictional-planning-v1` source uses seed 73055 and adds independent fictional capacity, travel, staffing, language-access, disability-access, review, objection, burden, and ownership fields to all 1,597 candidate tracts. Its four-row source manifest has SHA-256 `a9a9cd10e67164cd8c47df667f2e559f17f8baa0e2308740ce4c9d9e675c0319`.
+- Each of four transparent rules distributes 280 fictional places through 28 equal ten-place teaching awards. The release reconciles 6,388 assignment rows, 56 county consequence rows, 76 suppression-preserving group consequence rows, six pairwise overlap rows, 20 predeclared sensitivity variants, and 40 passing SQL checks.
+- Equal geographic selection reaches all 14 counties but includes 11 language-access gaps. Need-based selection reaches seven counties and includes 26 limited-support estimates. Capacity-aware selection has no selected support or access gaps but retains six high-travel rows and one unresolved objection. Community-review selection reaches 11 counties with no selected support, access, or objection gaps, but retains 12 high-travel rows, one high-burden row, and five staffing-readiness gaps.
+- Four of six rule pairs share no selected tracts. Two sensitivity variants cannot fill every requested award. These results show that fairness and allocation consequences depend on the declared rule, resource, and review contract, not on data alone.
+- The reference earns 15 of 15 and passes all 26 gates. Complete validation passes 2,406 checks, learner validation passes 2,230 checks, the copied validator passes, copied-answer and complete-mode learner packages are rejected, deterministic builds match, and 24 protected failure routes are verified.
+- APP-5 Module 05 is a runnable release candidate at Commons 0.92.0 with disposition `continue with conditions`. Module 06 curriculum construction may begin using the community-review rule only as the least unacceptable fictional planning candidate. Real need, consent, priority, eligibility, outreach, funding, allocation, community action, service delivery, intervention-effect estimation, implementation, production connection, and deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -739,12 +746,14 @@
 - Complete named APP-5 Checkpoint 01 faculty, population-health clinical, epidemiology, biostatistics, Census and ACS, PLACES, SVI, GIS, race and ethnicity standards, language-access, disability, community, equity, privacy, accessibility, responsible-AI, and independent-reproduction review before alpha.
 - Confirm APP-5 Module 04's TIGER acquisition date, boundary and measure vintage compatibility, fixed display classes, classroom support rule, EPSG 26986 projection, 100-meter display generalization, county teaching-summary method, ecological and contextual language, and map acceptance before alpha.
 - Complete named APP-5 Module 04 faculty, population-health clinical, epidemiology, biostatistics, Census and TIGER geography, GIS, PLACES, equity, community, privacy, accessibility, responsible-AI, and independent-reproduction review before alpha.
+- Confirm APP-5 Module 05's fixed 280-place resource contract, four targeting rules, fairness definitions, support handling, geographic and group consequence measures, access and capacity assumptions, 20 sensitivity variants, community-review process, recourse routes, ownership, and progression decision before alpha.
+- Complete named APP-5 Module 05 faculty, population-health clinical, epidemiology, biostatistics, equity, community, language-access, disability-access, privacy, accessibility, resource-governance, responsible-AI, and independent-reproduction review before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the accepted APP-5 course specification and Module 04 specification, package, source and handoff manifests, exact map table, support review, county teaching summaries, aggregation comparison, claims audit, context memo, score, gates, progression decision, and open conditions.
-2. Freeze the complete 287-file Module 04 reference workspace without recomputing or repairing the accepted source, checkpoint evidence, geometry, join, unavailable states, intervals, classes, support flags, aggregation, map, score, gates, or claims.
-3. Build APP-5 Module 05 as the targeting and fairness release using fictional decisions only. Define a fixed resource constraint and compare equal, need-based, capacity-aware, and community-review rules without treating the map or an SVI rank as automatic authority.
-4. For every rule, report inclusion, exclusion, delay, burden, unsupported cases, possible benefit and harm, geographic concentration, group consequences, access, capacity, sensitivity to weights and thresholds, balancing measures, appeal, review, and the accountable human owner.
-5. Keep real eligibility, outreach, funding, allocation, community action, implementation, production connection, and deployment prohibited. Advance semver, validate, commit, push, and remote-verify Module 05 as its own unit.
+1. Read the accepted APP-5 course specification and Module 05 specification, package, source and handoff manifests, resource contract, rule definitions, assignments, consequence audits, overlap, sensitivity results, score, gates, progression decision, and open conditions.
+2. Freeze the complete 340-file Module 05 reference workspace without recomputing or repairing its accepted public evidence, fictional source, resource contract, four rules, assignments, fairness definitions, consequences, sensitivity results, score, gates, claims, or authority.
+3. Build APP-5 Module 06 as the accountable intervention, monitoring, and embedded-ML release. Give the intervention, monitoring, feedback, and governance block 8.0 hours and the fixed clustering challenger 8.0 hours.
+4. Carry the community-review rule only as the least unacceptable fictional planning candidate. Design the fictional intervention and prospective review process, then test whether the predeclared clustering challenger adds useful tailoring questions without ranking need, selecting tracts, assigning resources, determining fairness, replacing the transparent rule, or bypassing community review.
+5. Keep real need, consent, eligibility, outreach, funding, allocation, community action, service delivery, intervention-effect estimation, implementation, production connection, and deployment prohibited. Advance semver, validate, commit, push, and remote-verify Module 06 as its own unit.

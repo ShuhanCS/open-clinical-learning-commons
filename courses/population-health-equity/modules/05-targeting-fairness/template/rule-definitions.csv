@@ -1,0 +1,5 @@
+rule_id,fairness_definition,candidate_filter,selection_order,tie_breaker,main_tradeoff,automatic_action,status
+equal_geographic,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+need_based,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+capacity_aware,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+community_review,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

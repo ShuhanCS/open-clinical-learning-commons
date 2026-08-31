@@ -1,0 +1,5 @@
+rule_id,selected_counties,maximum_awards_in_one_county,county_or_counties_at_maximum,concentration_finding,claim_limit
+equal_geographic,14,2,"all 14 counties","the rule enforces equal county representation regardless of county size or readiness","fictional concentration audit; not county need or entitlement"
+need_based,7,12,Hampden,"12 of 28 awards fall in Hampden and the rule covers only seven counties","fictional consequence of one modeled-value order; not a real priority or funding statement"
+capacity_aware,8,6,Bristol,"six awards fall in Bristol and five each in Middlesex and Worcester","fictional capacity can concentrate opportunity where delivery assets already exist"
+community_review,11,3,"Bristol; Essex; Hampden; Middlesex; Norfolk; Plymouth; Suffolk; Worcester","the three-award county limit reduces but does not remove geographic concentration","fictional procedural result; not community consent or entitlement"

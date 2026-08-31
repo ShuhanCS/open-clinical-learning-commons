@@ -1,0 +1,171 @@
+{
+  "commons_release": "0.88.0",
+  "findings": {
+    "adult_denominator": 5679768,
+    "age_band_rows": 7985,
+    "direct_rates_available": 1576,
+    "direct_rates_unavailable": 21,
+    "failed_query_checks": 0,
+    "guided_indirect_required": 80,
+    "measure_tracts": 1597,
+    "public_modeled_rows": 1597,
+    "query_checks": 30,
+    "synthetic_events": 283614,
+    "tract_union": 1620
+  },
+  "handoff": {
+    "manifest_bytes": 4262,
+    "manifest_sha256": "beda2254d019c0969c952773b31fb23db30e2be99798aa8af66d5cb1fbd87a2e",
+    "nested_manifest_rows": 16,
+    "payload_files": 28,
+    "reference_files": 27,
+    "three_source_intersection": 1597,
+    "upstream_files": 29
+  },
+  "interpretation_status": "population-measure release only; no disparity, ranking, targeting, allocation, intervention, real-community, implementation, or deployment conclusion",
+  "loaded": {
+    "raw_acs_age_cells": {
+      "columns": 10,
+      "rows": 61560
+    },
+    "raw_acs_b01001": {
+      "columns": 100,
+      "rows": 1620
+    },
+    "raw_age_band_crosswalk": {
+      "columns": 7,
+      "rows": 38
+    },
+    "raw_places": {
+      "columns": 24,
+      "rows": 1597
+    },
+    "raw_svi": {
+      "columns": 158,
+      "rows": 1613
+    },
+    "raw_synthetic_events": {
+      "columns": 15,
+      "rows": 7985
+    }
+  },
+  "module_id": "oclc-app5-02",
+  "module_version": "0.1.0",
+  "outputs": {
+    "age-band-denominators.csv.gz": {
+      "bytes": 91462,
+      "columns": 13,
+      "content_bytes": 1970003,
+      "content_sha256": "bb9796b6d4bc22a5fff7f060cc6362d0598cb0b658bb523f47aad9a7f26db859",
+      "rows": 7985,
+      "sha256": "6e0c632132b65e9322f098ccba3c2ce70ca8151f4ee8f536862f635ac23eef1f"
+    },
+    "age-specific-rates.csv.gz": {
+      "bytes": 295795,
+      "columns": 16,
+      "content_bytes": 2402015,
+      "content_sha256": "ee08ae86b082942a16b61e489a99d733e79d4a0ef93c06240ef3c7bc642cc8c9",
+      "rows": 7985,
+      "sha256": "54523baa1c7ba1a73a8dc5136172f6c8f7b363fd1d91f65bbebd85e1feb70791"
+    },
+    "indirect-standardization.csv": {
+      "bytes": 463281,
+      "columns": 9,
+      "content_bytes": 463281,
+      "content_sha256": "61d66043d24047d50cc8daad4820ed709666a612c4fdc5d7f888ebe93773b5f8",
+      "rows": 1597,
+      "sha256": "61d66043d24047d50cc8daad4820ed709666a612c4fdc5d7f888ebe93773b5f8"
+    },
+    "public-modeled-prevalence.csv": {
+      "bytes": 334805,
+      "columns": 13,
+      "content_bytes": 334805,
+      "content_sha256": "5aa7d1068579d303cb8af542ddfd32dae2c9b63521803861141bf86743fccb06",
+      "rows": 1597,
+      "sha256": "5aa7d1068579d303cb8af542ddfd32dae2c9b63521803861141bf86743fccb06"
+    },
+    "query-checks.csv": {
+      "bytes": 1325,
+      "columns": 5,
+      "content_bytes": 1325,
+      "content_sha256": "b93f8a834a6040ecc298f61f3e42f5f882bff0614ce25c3edb70a8a63d71a999",
+      "rows": 30,
+      "sha256": "b93f8a834a6040ecc298f61f3e42f5f882bff0614ce25c3edb70a8a63d71a999"
+    },
+    "source-reconciliation.csv": {
+      "bytes": 818,
+      "columns": 6,
+      "content_bytes": 818,
+      "content_sha256": "32691af25e93ea8a73eb8ea5d4e688963e5c96adf859cd54e6f11e3767c8f94a",
+      "rows": 8,
+      "sha256": "32691af25e93ea8a73eb8ea5d4e688963e5c96adf859cd54e6f11e3767c8f94a"
+    },
+    "standard-population.csv": {
+      "bytes": 1272,
+      "columns": 10,
+      "content_bytes": 1272,
+      "content_sha256": "0aaafd3a8f09967d689aec90761fb1939302913a6c207b9f29226d7073b31b4e",
+      "rows": 5,
+      "sha256": "0aaafd3a8f09967d689aec90761fb1939302913a6c207b9f29226d7073b31b4e"
+    },
+    "synthetic-event-linkage.csv.gz": {
+      "bytes": 160236,
+      "columns": 19,
+      "content_bytes": 2418798,
+      "content_sha256": "bcd02e304136c87547b14a00075cb7d6620ba8e0d12cc20b202c768e55636b1f",
+      "rows": 7985,
+      "sha256": "f507b3f78bf53e856880cbc205e0773b223f7f76a903762696c6d346fb72fdc5"
+    },
+    "tract-linkage-audit.csv": {
+      "bytes": 92437,
+      "columns": 7,
+      "content_bytes": 92437,
+      "content_sha256": "680dadba21764a1a1d3c668f8ffb0243d15dc8f8526e9bc174a50340091dac3a",
+      "rows": 1620,
+      "sha256": "680dadba21764a1a1d3c668f8ffb0243d15dc8f8526e9bc174a50340091dac3a"
+    },
+    "tract-rate-summary.csv": {
+      "bytes": 373742,
+      "columns": 16,
+      "content_bytes": 373742,
+      "content_sha256": "1d557e5de780aa5bb4d5f7928086f012ddfa9a652dcd386e6b42702475b25d47",
+      "rows": 1597,
+      "sha256": "1d557e5de780aa5bb4d5f7928086f012ddfa9a652dcd386e6b42702475b25d47"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "adult_denominator": 5679768,
+    "age_bands": 5,
+    "event_rows": 7985,
+    "files": {
+      "age-band-crosswalk.csv": {
+        "bytes": 2456,
+        "sha256": "16cf59b15747375088bdd7f77e380a0b17b5d6f8f4dbb5ee1fe3e2d234646e20"
+      },
+      "data-dictionary.csv": {
+        "bytes": 5053,
+        "sha256": "66a42e357d190f85e69b3774d7b50cecb6131573398ea6615bed15f33cd93e59"
+      },
+      "raw/synthetic-events.csv.gz": {
+        "bytes": 113029,
+        "sha256": "56f04f4e660e40292351cc0ed630b8cbb2f2c0d9cf9c39fbc8420b2113d813cb"
+      },
+      "synthetic-source-manifest.csv": {
+        "bytes": 778,
+        "sha256": "9915aeb15f62d88a52cfa6304d211a4fd092d33c11e73cd5d63a14d64946823d"
+      }
+    },
+    "source_manifest_sha256": "9915aeb15f62d88a52cfa6304d211a4fd092d33c11e73cd5d63a14d64946823d",
+    "synthetic_events": 283614,
+    "tracts": 1597,
+    "zero_denominators": 41
+  },
+  "source_release": "fma-dp-01-measures-v1",
+  "sql_sha256": {
+    "01-link-sources-and-build-denominators.sql": "86c2767587aa4fd85ea08cce69f0f77bfcdc9b349d8ca4e7fcab396ed2f1b861",
+    "02-link-events-and-separate-public-measure.sql": "8d7f2b3354ef4b7923ab706fe58bc8c15619ae3d2713e68c3e396fd4a0c278ac",
+    "03-calculate-rates-and-direct-standardization.sql": "7ad773d6ac94618c3d41863f79793fd81b4f12609a7904c3650b405de997700c",
+    "04-indirect-standardization-and-validation.sql": "3a96f9fea5892a40a5f1bc1ff62fef4da07689afebb9005db17170bbbec7e7d7"
+  }
+}

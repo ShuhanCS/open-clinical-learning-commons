@@ -1,0 +1,1 @@
+-- REPLACE with SQL that audits geographic, group, access, capacity, burden, objection, and sensitivity consequences.

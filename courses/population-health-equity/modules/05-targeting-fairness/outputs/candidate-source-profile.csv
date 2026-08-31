@@ -1,0 +1,2 @@
+scenario_id,candidate_tracts,counties,public_release,synthetic_release,fictional_capacity_places,review_ready_tracts,unresolved_objection_tracts,language_access_ready_tracts,disability_access_ready_tracts,resource_places_per_rule,awards_per_rule,award_places,claim_limit
+FMA-DP-01,1597,14,CDC PLACES 2025 census-tract release,fma-dp-01-fictional-planning-v1,32270,972,146,1216,1254,280,28,10,public modeled evidence and synthetic planning assumptions remain separate and authorize no real action

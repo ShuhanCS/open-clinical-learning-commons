@@ -1,0 +1,6 @@
+criterion_id,criterion,points_available,points_awarded,status,evidence
+R1,Decision resource and rule integrity,3,3,pass,"287-file upstream handoff; 1597-row synthetic source; fixed 280-place contract; four exact rules"
+R2,Inclusion exclusion access capacity and burden accounting,4,4,pass,"6388 complete assignments; 28 selections and 280 places per rule; all exclusions and consequences visible"
+R3,Fairness geography group benefit harm and sensitivity reasoning,5,5,pass,"four named fairness definitions; 56 county rows; 76 suppression-preserving group rows; six overlaps; 20 sensitivities"
+R4,Community review recourse reproducibility AI and claim limits,3,3,pass,"accessible review, appeal, correction, pause and stop routes; deterministic release; bounded AI and progression"
+TOTAL,Module 05 Week 6 component,15,15,pass,"all 26 noncompensable gates pass; Module 06 curriculum construction may begin with conditions"

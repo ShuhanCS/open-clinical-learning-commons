@@ -1,0 +1,23 @@
+gate_id,gate,status,evidence,blocking_if_failed
+G01,Accepted Week 3 checkpoint identity is unchanged,pass,"240 frozen files; 219 candidate files; handoff SHA-256 db70b4e20a17fbddd2b49f7647dd9ce5bcd064e01af5e7a7e23df9122889914e",yes
+G02,Official TIGER archive fingerprint and inventory pass,pass,"4506627 bytes; SHA-256 74ca27e8dd9ed393e43b75e237ff7d652ef072e413532821847de58a7aa4bfd4; seven members",yes
+G03,Geometry row and unique-key counts pass,pass,"1620 rows and 1620 unique 11-character GEOIDs",yes
+G04,State and county identities pass,pass,"state FIPS 25 and 14 counties",yes
+G05,Coordinate-system contract passes,pass,"source EPSG 4269 and area/display EPSG 26986",yes
+G06,Geometry type validity null and empty checks pass,pass,"1617 Polygon; 3 MultiPolygon; 1620 valid; 0 null; 0 empty",yes
+G07,Projected area integrity check passes,pass,"maximum relative difference 0.0001990791 is below 0.001",yes
+G08,Exact tract-key join reconciles,pass,"1597 matched; 23 geometry-only; 0 measure-only; 0 linkage disagreements",yes
+G09,Unavailable values remain unavailable,pass,"23 blank estimates carry unavailable class and support state; none become zero",yes
+G10,Public and synthetic evidence remain separate,pass,"map reads only the accepted public PLACES table and does not use synthetic events or disparities",yes
+G11,Measure identity period release and intervals are retained,pass,"DIABETES; measure year 2023; CDC PLACES 2025 tract release; 1597 ordered intervals",yes
+G12,Absolute classes are declared and rank free,pass,"five percentage-point classes plus unavailable; no quantile or rank field",yes
+G13,Small-area review rule is declared and non-exclusionary,pass,"49 review flags from interval width or retained population; exact values remain visible",yes
+G14,County aggregation is labeled as a teaching summary,pass,"14 population-weighted summaries; none called an official county PLACES estimate",yes
+G15,Aggregation sensitivity is reproduced,pass,"645 of 1597 tracts change display class under the county teaching summary",yes
+G16,SVG accessibility structure passes,pass,"role img; accessible title and description; aria-labelledby; no embedded raster",yes
+G17,Meaning does not depend on color alone,pass,"named unavailable state; hatching; legend counts; exact table; structured text alternative",yes
+G18,Ecological compositional and contextual limits pass,pass,"10 claims audited; individual and community inference rejected",yes
+G19,Non-stigmatizing and non-action language passes,pass,"no place is labeled priority need vulnerable deficient eligible targeted or funded",yes
+G20,Score and required records pass,pass,"10 of 10; all 12 records and three SQL files complete",yes
+G21,AI accountability and independent reproduction pass,pass,"use disclosed; source SQL map and output checks independently reproduced",yes
+G22,Progression authority remains bounded,pass,"Module 05 curriculum construction permitted; real action implementation production and deployment prohibited",yes

@@ -1,0 +1,13 @@
+claim_id,proposed_claim,decision,evidence,repair
+TC01,"The public prevalence values show which tracts need a program",reject,"PLACES values are modeled area-level estimates and the module has no real intervention or local need evidence","The values provide public context for a fictional rule comparison"
+TC02,"The 28 need-based selections are the highest-priority tracts",reject,"26 selected rows carry the classroom support-review flag and the rule ignores capacity, access, review, burden, and objection","The rule is one transparent comparator with visible limits"
+TC03,"Equal county representation is fair",revise,"the rule reaches 14 counties but selects access, burden, staff, and objection gaps","The rule defines one narrow geographic notion of fairness and carries substantial tradeoffs"
+TC04,"Capacity-aware selection is efficient and therefore fair",reject,"the rule reaches eight counties and can reward places that already have capacity","The rule improves fictional deliverability under one constraint but may deepen capacity advantage"
+TC05,"Ready community review proves consent",reject,"the review state is generated teaching data","The rule passes a fictional procedural filter; real consent is not observed"
+TC06,"Suppressed group values can be treated as zero",reject,"selected group summaries retain hundreds of suppressed cells","Suppressed values remain unavailable and cannot be reconstructed"
+TC07,"The group table shows intersectional people",reject,"the accepted equity release contains separate marginal dimensions","Report each marginal dimension separately and do not join groups into people"
+TC08,"The community-review rule is the fairest rule",revise,"it reduces some procedural risks but retains travel, staff, burden, exclusion, and sensitivity concerns","It is the least unacceptable fictional planning candidate under the declared conditions"
+TC09,"A stable sensitivity result validates a rule",reject,"some tested capacity variants retain the base set but use one generated source and narrow assumptions","Describe local stability only and retain human review"
+TC10,"A selected tract may be contacted",reject,"the release authorizes no real outreach or action","Use results only inside the classroom scenario"
+TC11,"AI may choose the rule with the best tradeoff",reject,"fairness definitions, community rights, harms, and accountable judgment cannot be delegated","AI may assist with code or wording after human verification"
+TC12,"Module 06 may begin from the community-review comparator",accept_with_conditions,"15 of 15 points, 26 gates, 40 SQL checks, recourse, pause, stop, and authority limits pass","Freeze this release and carry the comparator only as a fictional planning candidate"

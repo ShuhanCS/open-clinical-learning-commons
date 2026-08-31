@@ -1,0 +1,28 @@
+{
+  "absolute_class_counts": {
+    "10.0% to less than 15.0%": 608,
+    "15.0% to less than 20.0%": 64,
+    "20.0% or greater": 17,
+    "5.0% to less than 10.0%": 826,
+    "less than 5.0%": 82,
+    "unavailable": 23
+  },
+  "claim_limit": "teaching display only; no observed cases, individual inference, disparity finding, rank, target, eligibility, allocation, intervention, or deployment",
+  "county_teaching_summaries": 14,
+  "geometry_tracts": 1620,
+  "limited_support_review_tracts": 49,
+  "mapped_estimates": 1597,
+  "measure": "modeled crude diabetes prevalence percent",
+  "reading_order": [
+    "Read the source, measure year, and modeled-estimate label.",
+    "Use the five absolute legend classes; gray means unavailable.",
+    "Treat hatching as a classroom review flag and read the exact interval and population field.",
+    "Use the complete tract table for exact values and unavailable states.",
+    "Do not infer individual risk, community need, priority, eligibility, or an action rule from the map."
+  ],
+  "source": "CDC PLACES 2025 census-tract release; measure year 2023; TIGER/Line 2024 Massachusetts tracts",
+  "supported_display_tracts": 1548,
+  "title": "Modeled diabetes prevalence by Massachusetts census tract",
+  "tracts_changing_class_after_county_aggregation": 645,
+  "unavailable_tracts": 23
+}

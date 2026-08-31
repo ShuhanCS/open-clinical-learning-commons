@@ -1,0 +1,95 @@
+module_id: oclc-app5-01
+module_version: 0.1.0
+commons_release: 0.87.0
+retrieved: 2026-08-31
+case_id: FMA-DP-01
+case_status: explicitly fictional Massachusetts adult diabetes-prevention planning review
+public_sources:
+  places:
+    publisher: Centers for Disease Control and Prevention
+    dataset: "PLACES: Local Data for Better Health, Census Tract Data, 2025 release"
+    dataset_id: cwsq-ngmh
+    metadata_url: https://data.cdc.gov/api/views/cwsq-ngmh
+    data_page: https://data.cdc.gov/widgets/cwsq-ngmh?mobile_redirect=true
+    measure_id: DIABETES
+    state: MA
+    measure_year: 2023
+    release: 2025
+    raw_query_bytes: 426520
+    raw_query_sha256: 55125d80183968c4aaef419ed6171ee0d897254a95c472a8e4b346aa19a35ba3
+    released_path: data/places-diabetes-ma-tract-2025.csv
+    released_rows: 1597
+    released_fields: 24
+    released_bytes: 356204
+    released_sha256: 3d55a099be438999fd52b1e34f13589dcf3e260162c56967fa01fb0a80135846
+    uncertainty: published 95 percent confidence limits
+    teaching_role: modeled adult diabetes prevalence and matching PLACES population context
+    claim_limit: not observed cases, individual risk, causal effect, program evaluation, eligibility, or allocation authority
+  acs:
+    publisher: U.S. Census Bureau
+    dataset: "2020-2024 ACS five-year Detailed Table B01001, Sex by Age"
+    table_id: B01001
+    landing_page: https://data.census.gov/table/ACSDT5Y2024.B01001
+    developer_page: https://www.census.gov/data/developers/data-sets/acs-5year.html?lv=true
+    raw_file_url: https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b01001.dat
+    raw_file_bytes: 200356282
+    raw_file_sha256: 1637b18a96881b81e050df1cd3d5ac38a33208b9b69b40e1dbeb3c4e13718f0e
+    raw_rows: 616690
+    raw_fields: 99
+    released_path: data/acs-b01001-ma-tract-2024.csv
+    released_rows: 1620
+    released_fields: 100
+    released_bytes: 576420
+    released_sha256: bca33aebaa0a9e418d6a5343818aebc1e8b1dc2d355156419e5693d1907fa419
+    uncertainty: published 90 percent margins of error
+    teaching_role: tract population and age-by-sex denominator estimates
+    claim_limit: survey estimates with no diabetes events, individual records, or intervention outcomes
+  svi:
+    publisher: CDC and Agency for Toxic Substances and Disease Registry
+    dataset: CDC/ATSDR Social Vulnerability Index 2022 Massachusetts database
+    documentation_page: https://atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html
+    raw_file_url: https://svi2.cdc.gov/webapi/Documents/download?year=2022&type=csv&category=states&name=MASSACHUSETTS
+    raw_file_bytes: 1189804
+    raw_file_sha256: 9e38e15b91041909fc58bdd56db677d9073598f9f8080048b71d16dd38f8b81e
+    released_path: data/svi2022-ma-tract.csv
+    released_rows: 1613
+    released_fields: 158
+    released_bytes: 1188187
+    released_sha256: fac1aabd51880624ce728f4a63f01ba6b50959c203c6975400c02daf21329de0
+    uncertainty: published estimates, margins, flags, themes, and relative ranks
+    teaching_role: area-level context and source-feasibility audit
+    claim_limit: not an individual trait, longitudinal score, causal effect, automatic target, eligibility rule, or funding authority
+  tiger:
+    publisher: U.S. Census Bureau
+    release: 2024 TIGER/Line census tracts
+    landing_page: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2024.html
+    download_interface: https://www.census.gov/cgi-bin/geo/shapefiles/index.php?layergroup=Census+Tracts&year=2024
+    module01_status: route fixed; geometry acquisition and validation reserved for Module 04
+profiles:
+  source_inventory:
+    path: data/source-inventory.csv
+    rows: 3
+    sha256: 1392a8a84047cf9725daf4053dbc0ac6efdbbe1b93eb6e9ed1e0c8074b6e89dd
+  field_inventory:
+    path: data/field-inventory.csv
+    rows: 282
+    sha256: d65fb0bbde925e17e2b94ee362e43c1320d4f10467241f77cd260f50329854f7
+  join_feasibility:
+    path: data/join-feasibility.csv
+    rows: 3
+    sha256: 2fc7811fc1f6350fb65581a5d946d073039b05a72006a9dd30ad829005cde1e6
+  reading_inventory:
+    path: data/reading-inventory.csv
+    rows: 9
+    sha256: 081f5d85da1657d838e51df31cb746d32f4ac6f716a3e24e4c28e33235148292
+join_contract:
+  key: 11-character census tract FIPS
+  places_tracts: 1597
+  acs_tracts: 1620
+  svi_tracts: 1613
+  three_source_intersection: 1597
+  union_tracts: 1620
+  unmatched_policy: preserve and explain; never silently drop
+public_to_synthetic_outcome_linkage: prohibited
+protected_or_identifiable_data: prohibited
+real_targeting_allocation_outreach_implementation_or_deployment: prohibited

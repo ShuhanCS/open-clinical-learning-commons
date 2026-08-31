@@ -1,0 +1,5 @@
+rule_id,selected_tracts,excluded_tracts,selected_counties,limited_support_selected,language_access_gaps,disability_access_gaps,high_travel,high_burden,unresolved_objections,interpretation
+equal_geographic,28,1569,14,1,11,9,9,6,2,"wide geographic coverage carries substantial fictional access, burden, review, and objection gaps"
+need_based,28,1569,7,26,7,8,7,9,1,"the highest modeled values are concentrated and mostly carry the classroom support-review flag"
+capacity_aware,28,1569,8,0,0,0,6,0,1,"high fictional deliverability avoids several access gaps but concentrates awards and ignores one objection"
+community_review,28,1569,11,0,0,0,12,1,0,"procedural conditions pass, but travel, one burden flag, and five staff-not-ready states remain"

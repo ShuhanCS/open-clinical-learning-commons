@@ -1,0 +1,1 @@
+-- REPLACE with SQL that creates the complete release checks.

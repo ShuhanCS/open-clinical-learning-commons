@@ -1,0 +1,1 @@
+-- REPLACE with SQL that applies and reconciles the four declared fictional rules under one fixed resource contract.

@@ -1,0 +1,5 @@
+rule_id,possible_benefit,possible_harm,balancing_measure,pause_condition,stop_condition,owner,status
+equal_geographic,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+need_based,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+capacity_aware,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+community_review,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

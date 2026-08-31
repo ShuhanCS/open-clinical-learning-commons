@@ -1,0 +1,21 @@
+variant_id,rule_id,variant_type,award_count,parameter,parameter_value,reason
+equal_geographic-base,equal_geographic,base,28,base contract,declared,reference comparison
+equal_geographic-half-resource,equal_geographic,resource,14,fictional resource places,140,test lower resource availability
+equal_geographic-expanded-resource,equal_geographic,resource,42,fictional resource places,420,test higher resource availability
+need_based-base,need_based,base,28,base contract,declared,reference comparison
+need_based-half-resource,need_based,resource,14,fictional resource places,140,test lower resource availability
+need_based-expanded-resource,need_based,resource,42,fictional resource places,420,test higher resource availability
+capacity_aware-base,capacity_aware,base,28,base contract,declared,reference comparison
+capacity_aware-half-resource,capacity_aware,resource,14,fictional resource places,140,test lower resource availability
+capacity_aware-expanded-resource,capacity_aware,resource,42,fictional resource places,420,test higher resource availability
+community_review-base,community_review,base,28,base contract,declared,reference comparison
+community_review-half-resource,community_review,resource,14,fictional resource places,140,test lower resource availability
+community_review-expanded-resource,community_review,resource,42,fictional resource places,420,test higher resource availability
+equal-geographic-reverse-tie,equal_geographic,tie_break,28,stable tie direction,reverse,test arbitrary tie-break dependence
+equal-geographic-no-county-quota,equal_geographic,county_limit,28,county quota,none,expose geographic concentration without equal representation
+need-based-lower-bound,need_based,uncertainty,28,need criterion,modeled lower confidence limit,test interval-aware ordering
+need-based-supported-only,need_based,support,28,support state,supported_for_teaching_display only,test handling of the classroom support flag
+capacity-access-ready,capacity_aware,access,28,access readiness,language and disability plans required,test access as an entry condition
+capacity-minimum-20,capacity_aware,capacity,28,minimum fictional capacity,20,test a stricter capacity threshold
+community-include-revision,community_review,community_readiness,28,review state,ready or needs_revision,test whether revision status changes selection
+community-max-two-county,community_review,county_limit,28,maximum awards per county,2,test a stricter geographic concentration limit

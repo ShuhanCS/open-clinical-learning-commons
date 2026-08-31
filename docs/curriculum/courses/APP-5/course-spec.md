@@ -14,7 +14,7 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.91.0` through Module 04.
+- Current Commons release target: `0.92.0` through Module 05.
 - Specification status: construction candidate.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
@@ -294,17 +294,23 @@ The deterministic accessible SVG, complete 1,620-row exact table, structured and
 
 - Module ID: `oclc-app5-05`.
 - Hours: 16.0.
-- Planned package path: `courses/population-health-equity/modules/05-targeting-fairness/`.
-- Planned specification: `docs/curriculum/courses/APP-5/modules/05-targeting-fairness-spec.md`.
+- Package path: `courses/population-health-equity/modules/05-targeting-fairness/`.
+- Specification: `docs/curriculum/courses/APP-5/modules/05-targeting-fairness-spec.md`.
 - Decision: which, if any, transparent fictional targeting rule is responsible enough to enter an intervention plan?
 - Submission: 15-point targeting and fairness audit.
-- Build status: planned from the accepted Module 04 handoff.
+- Build status: runnable release candidate at module version `0.1.0` and Commons release `0.92.0`.
 
 Learners compare equal allocation, need-based allocation, capacity-aware allocation, and a rule that requires structured community review before inclusion. The fixed fictional resource constraint, eligible areas, public evidence, synthetic capacity, and implementation assumptions remain identical across comparisons.
 
 For every rule, learners report who is included, excluded, delayed, burdened, or unsupported; the benefit sought; possible harm; geographic concentration; group consequences; access and capacity; sensitivity to weights and thresholds; balancing measures; appeal and review routes; and the human owner.
 
 No composite score, SVI rank, model output, or map color may become an automatic allocation. A fairness result must name the decision-specific fairness definition and its tradeoff. Average benefit cannot erase concentrated burden, missing support, inaccessible delivery, or community objection.
+
+The accepted release freezes the complete 287-file Module 04 reference workspace in a 287-row, 59,768-byte handoff manifest with SHA-256 `0670760f650e0d13cfd4c5dc85ab26fdce5779cc86d35b3d3c27d6a3cc7738dd`. The independent `fma-dp-01-fictional-planning-v1` layer uses seed 73055 and adds fictional capacity, travel, staffing, access, review, objection, burden, and owner fields to all 1,597 candidate tracts without deriving them from public modeled prevalence.
+
+Each rule distributes 280 fictional places through 28 equal ten-place teaching awards. The 6,388 rule-tract assignments reconcile to 56 county consequence rows, 76 suppression-preserving group consequence rows, six pairwise overlap rows, and 20 predeclared sensitivity variants. Equal geographic selection reaches all 14 counties but includes 11 language-access gaps. Need-based selection reaches seven counties and includes 26 limited-support estimates. Capacity-aware selection has no selected support or access gaps but retains six high-travel rows and one unresolved objection. Community-review selection reaches 11 counties with no selected support, access, or objection gaps, but retains 12 high-travel rows, one high-burden row, and five staffing-readiness gaps. Two sensitivity variants cannot fill every requested award.
+
+The reference earns 15 of 15 and passes all 26 noncompensable gates. Complete validation passes 2,406 checks, learner validation passes 2,230 checks, and 24 protected failure routes are rejected. Module 06 curriculum construction may begin with conditions using the community-review comparator only as the least unacceptable fictional planning candidate. Real need, consent, priority, eligibility, outreach, funding, allocation, community action, service delivery, intervention-effect estimation, implementation, production connection, and deployment remain prohibited.
 
 ## 14. Module 06 brief: Accountable intervention design, monitoring, and embedded ML
 
@@ -317,7 +323,7 @@ No composite score, SVI rank, model output, or map color may become an automatic
 - Decision: is the accountable intervention and monitoring design ready for clinician leadership review, and does the fixed area-profile challenger add useful planning questions without taking allocation authority?
 - Submission: cumulative Week 6 release.
 - Point role: required zero-point gate carrying the 25 Module 04 and Module 05 points once.
-- Build status: planned after Module 05 acceptance.
+- Build status: planned from the accepted Module 05 handoff.
 
 The intervention block defines the fictional intervention, theory of change, delivery pathway, eligible population, reach, uptake, refusal, access, capacity, implementation fidelity, cost, burden, balancing measures, outcome availability, community feedback, incidents, escalation, pause, revision, stop, and retirement. Each measure has a numerator, denominator, cadence, source, owner, unavailable state, threshold origin, and human response.
 

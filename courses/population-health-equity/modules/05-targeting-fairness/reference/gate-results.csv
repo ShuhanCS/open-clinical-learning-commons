@@ -1,0 +1,27 @@
+gate_id,gate,status,evidence,blocking_if_failed
+G01,Accepted Module 04 handoff identity is unchanged,pass,"287 payload files; manifest SHA-256 0670760f650e0d13cfd4c5dc85ab26fdce5779cc86d35b3d3c27d6a3cc7738dd",yes
+G02,Module 04 score gates and progression are accepted,pass,"10 of 10; 22 of 22 gates; Module 05 construction permitted",yes
+G03,Fictional planning source identity passes,pass,"1597 rows; seed 73055; manifest SHA-256 a9a9cd10e67164cd8c47df667f2e559f17f8baa0e2308740ce4c9d9e675c0319",yes
+G04,Public and synthetic roles remain separate,pass,"1597 accepted public-role rows and 1597 fictional planning-role rows",yes
+G05,Candidate keys and counties reconcile,pass,"1597 unique tract keys across 14 counties",yes
+G06,Fixed fictional resource contract passes,pass,"280 places; 28 ten-place awards; no partial awards or carryover",yes
+G07,Exactly four declared rules pass,pass,"equal geographic, need-based, capacity-aware, and community-review",yes
+G08,Complete assignment accounting passes,pass,"6388 unique rule-tract rows",yes
+G09,Every base rule fills the same constraint,pass,"28 selected and 280 fictional places for each rule",yes
+G10,Equal geographic rule is exact,pass,"two awards in each of 14 counties",yes
+G11,Need-based rule retains uncertainty and support,pass,"modeled interval and support state retained; 26 limited-support selections visible",yes
+G12,Capacity-aware criteria and tradeoff are visible,pass,"1120 selected fictional capacity places; eight counties; one objection visible",yes
+G13,Community-review filter and county limit pass,pass,"28 ready rows; no selected objection or access-plan gap; maximum three awards per county",yes
+G14,Inclusion and exclusion reasons are complete,pass,"112 selected reasons and 6276 exclusion reasons",yes
+G15,No automatic or partial action exists,pass,"zero automatic actions and zero partial awards",yes
+G16,Geographic concentration audit passes,pass,"56 rule-county rows",yes
+G17,Group consequence audit preserves suppression,pass,"76 rule-group rows; suppressed values remain unavailable",yes
+G18,Rule overlap audit passes,pass,"six pairwise comparisons",yes
+G19,Sensitivity audit is predeclared and complete,pass,"20 variants covering resource, support, access, capacity, review, county limit, uncertainty, and tie break",yes
+G20,Sensitivity shortfalls remain visible,pass,"38 of 42 expanded community awards and 26 of 28 under the two-per-county limit",yes
+G21,Access capacity burden benefit and harm are explicit,pass,"all four rule summaries and balancing records are complete",yes
+G22,Fairness definitions and tradeoffs are decision-specific,pass,"four narrow definitions with no universal fairness claim",yes
+G23,Community review recourse pause and stop routes pass,pass,"notice, access, objection, appeal, correction, reconsideration, pause, stop, and nonaction are explicit",yes
+G24,Accountable human ownership passes,pass,"one named fictional owner and six supporting roles; no delegation to a rule or AI",yes
+G25,SQL and deterministic reproduction pass,pass,"40 SQL checks; independent source, build, and workspace identities",yes
+G26,Claims AI progression and authority remain bounded,pass,"12-claim audit; AI limits; Module 06 construction only; real action and deployment prohibited",yes

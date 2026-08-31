@@ -1,0 +1,37 @@
+check_id,check_name,observed_value,expected_value,status
+Q01,equity margin rows,151715,151715,pass
+Q02,group contract rows,19,19,pass
+Q03,equity dimensions,3,3,pass
+Q04,tract age dimension keys,23955,23955,pass
+Q05,population total across three margins,17039304,17039304,pass
+Q06,event total across three margins,850842,850842,pass
+Q07,field completeness rows,7985,7985,pass
+Q08,group age rates,110,110,pass
+Q09,standardized group rates,22,22,pass
+Q10,pairwise disparity comparisons,32,32,pass
+Q11,summary disparity rows,6,6,pass
+Q12,missingness audit rows,5,5,pass
+Q13,representation audit rows,19,19,pass
+Q14,published tract group rows,30343,30343,pass
+Q15,suppression audit rows,4791,4791,pass
+Q16,bias register rows,8,8,pass
+Q17,source reconciliation rows,12,12,pass
+Q18,failed source reconciliation checks,0,0,pass
+Q19,overall reported references,3,3,pass
+Q20,predeclared group references,3,3,pass
+Q21,missing group rates,3,3,pass
+Q22,predeclared reference comparisons,16,16,pass
+Q23,overall reference comparisons,16,16,pass
+Q24,supported reported groups,16,16,pass
+Q25,failed suppression audits,0,0,pass
+Q26,published rows missing values,0,0,pass
+Q27,suppressed rows exposing values,0,0,pass
+Q28,tract total rows in published table,0,0,pass
+Q29,race missingness present,1,1,pass
+Q30,ethnicity missingness present,1,1,pass
+Q31,language missingness present,1,1,pass
+Q32,disability missingness present,1,1,pass
+Q33,conditioned geography missingness,0,0,pass
+Q34,margin-only source rows,151715,151715,pass
+Q35,synthetic source flags,151715,151715,pass
+Q36,standard population weights,1.0,1.0,pass

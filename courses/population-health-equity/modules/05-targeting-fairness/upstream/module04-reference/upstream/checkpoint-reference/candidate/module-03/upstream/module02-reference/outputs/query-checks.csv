@@ -1,0 +1,31 @@
+check_id,check_name,observed_value,expected_value,status
+Q01,tract linkage rows,1620,1620,pass
+Q02,three-source eligible tracts,1597,1597,pass
+Q03,unexpected linkage states,0,0,pass
+Q04,ACS and SVI tracts without PLACES,16,16,pass
+Q05,ACS-only tracts,7,7,pass
+Q06,age-band denominator rows,7985,7985,pass
+Q07,declared age bands,5,5,pass
+Q08,adult denominator total,5679768,5679768,pass
+Q09,zero age-band denominators,41,41,pass
+Q10,negative age-band denominators,0,0,pass
+Q11,synthetic event rows,7985,7985,pass
+Q12,synthetic tract count,1597,1597,pass
+Q13,synthetic event total,283614,283614,pass
+Q14,denominator mismatches,0,0,pass
+Q15,invalid synthetic counts,0,0,pass
+Q16,non-synthetic rows,0,0,pass
+Q17,wrong synthetic periods,0,0,pass
+Q18,standard population rows,5,5,pass
+Q19,standard weight sum,1.0000000000,1.0000000000,pass
+Q20,standard population total,5679768,5679768,pass
+Q21,age-specific rate rows,7985,7985,pass
+Q22,available age-specific rates,7944,7944,pass
+Q23,tract rate summaries,1597,1597,pass
+Q24,direct rates available,1576,1576,pass
+Q25,direct rates unavailable,21,21,pass
+Q26,guided indirect required tracts,80,80,pass
+Q27,indirect rows,1597,1597,pass
+Q28,nonpositive expected synthetic events,0,0,pass
+Q29,public modeled prevalence rows,1597,1597,pass
+Q30,failed source reconciliation rows,0,0,pass

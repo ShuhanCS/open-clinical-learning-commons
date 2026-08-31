@@ -491,7 +491,7 @@
           "title": "Targeting and fairness",
           "outcome": "Evaluate the targeting and fairness of a proposed intervention.",
           "topics": "Resource allocation, targeting rules, need-based allocation, benefit and harm tradeoffs, fairness across groups, differential impact, monitoring.",
-          "submission": "Targeting and fairness audit.",
+          "submission": "Fifteen-point targeting and fairness audit counted once in the 25-point Week 6 checkpoint.",
           "hours": 16
         },
         {

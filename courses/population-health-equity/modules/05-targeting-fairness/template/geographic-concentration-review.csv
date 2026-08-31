@@ -1,0 +1,5 @@
+rule_id,selected_counties,maximum_awards_in_one_county,county_or_counties_at_maximum,concentration_finding,claim_limit
+equal_geographic,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+need_based,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+capacity_aware,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+community_review,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

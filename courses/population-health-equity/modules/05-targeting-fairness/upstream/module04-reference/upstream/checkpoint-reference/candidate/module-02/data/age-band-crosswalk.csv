@@ -1,0 +1,39 @@
+age_band_id,age_band,band_order,sex,source_age_label,acs_estimate_field,acs_moe_field
+A01,18-34,1,male,Male 18 and 19 years,B01001_E007,B01001_M007
+A01,18-34,1,male,Male 20 years,B01001_E008,B01001_M008
+A01,18-34,1,male,Male 21 years,B01001_E009,B01001_M009
+A01,18-34,1,male,Male 22 to 24 years,B01001_E010,B01001_M010
+A01,18-34,1,male,Male 25 to 29 years,B01001_E011,B01001_M011
+A01,18-34,1,male,Male 30 to 34 years,B01001_E012,B01001_M012
+A01,18-34,1,female,Female 18 and 19 years,B01001_E031,B01001_M031
+A01,18-34,1,female,Female 20 years,B01001_E032,B01001_M032
+A01,18-34,1,female,Female 21 years,B01001_E033,B01001_M033
+A01,18-34,1,female,Female 22 to 24 years,B01001_E034,B01001_M034
+A01,18-34,1,female,Female 25 to 29 years,B01001_E035,B01001_M035
+A01,18-34,1,female,Female 30 to 34 years,B01001_E036,B01001_M036
+A02,35-49,2,male,Male 35 to 39 years,B01001_E013,B01001_M013
+A02,35-49,2,male,Male 40 to 44 years,B01001_E014,B01001_M014
+A02,35-49,2,male,Male 45 to 49 years,B01001_E015,B01001_M015
+A02,35-49,2,female,Female 35 to 39 years,B01001_E037,B01001_M037
+A02,35-49,2,female,Female 40 to 44 years,B01001_E038,B01001_M038
+A02,35-49,2,female,Female 45 to 49 years,B01001_E039,B01001_M039
+A03,50-64,3,male,Male 50 to 54 years,B01001_E016,B01001_M016
+A03,50-64,3,male,Male 55 to 59 years,B01001_E017,B01001_M017
+A03,50-64,3,male,Male 60 and 61 years,B01001_E018,B01001_M018
+A03,50-64,3,male,Male 62 to 64 years,B01001_E019,B01001_M019
+A03,50-64,3,female,Female 50 to 54 years,B01001_E040,B01001_M040
+A03,50-64,3,female,Female 55 to 59 years,B01001_E041,B01001_M041
+A03,50-64,3,female,Female 60 and 61 years,B01001_E042,B01001_M042
+A03,50-64,3,female,Female 62 to 64 years,B01001_E043,B01001_M043
+A04,65-74,4,male,Male 65 and 66 years,B01001_E020,B01001_M020
+A04,65-74,4,male,Male 67 to 69 years,B01001_E021,B01001_M021
+A04,65-74,4,male,Male 70 to 74 years,B01001_E022,B01001_M022
+A04,65-74,4,female,Female 65 and 66 years,B01001_E044,B01001_M044
+A04,65-74,4,female,Female 67 to 69 years,B01001_E045,B01001_M045
+A04,65-74,4,female,Female 70 to 74 years,B01001_E046,B01001_M046
+A05,75+,5,male,Male 75 to 79 years,B01001_E023,B01001_M023
+A05,75+,5,male,Male 80 to 84 years,B01001_E024,B01001_M024
+A05,75+,5,male,Male 85 years and over,B01001_E025,B01001_M025
+A05,75+,5,female,Female 75 to 79 years,B01001_E047,B01001_M047
+A05,75+,5,female,Female 80 to 84 years,B01001_E048,B01001_M048
+A05,75+,5,female,Female 85 years and over,B01001_E049,B01001_M049

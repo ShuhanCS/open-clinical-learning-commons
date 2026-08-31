@@ -1,0 +1,5 @@
+rule_id,selected_publishable_population,selected_publishable_rows,selected_suppressed_rows,unselected_publishable_population,unselected_publishable_rows,unselected_suppressed_rows,interpretation
+equal_geographic,246021,169,363,13570382,8944,20867,"synthetic marginal coverage only; 363 selected cells remain suppressed and cannot be reconstructed"
+need_based,131354,105,427,13685049,9008,20803,"the selected set has the fewest publishable rows and 427 suppressed selected cells; unavailable is not zero"
+capacity_aware,251286,160,372,13565117,8953,20858,"synthetic marginal coverage does not show who benefits or who is excluded"
+community_review,251050,163,369,13565353,8950,20861,"procedural readiness does not resolve 369 suppressed selected cells or create person-level group combinations"

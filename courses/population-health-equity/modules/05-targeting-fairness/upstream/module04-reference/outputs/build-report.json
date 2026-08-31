@@ -1,0 +1,160 @@
+{
+  "accessibility": {
+    "aria_labelledby": "map-title map-desc",
+    "contains_raster": false,
+    "has_description": true,
+    "has_title": true,
+    "role": "img"
+  },
+  "commons_release": "0.91.0",
+  "display": {
+    "crs_epsg": 26986,
+    "topology_preserving_simplification_meters": 100
+  },
+  "findings": {
+    "county_teaching_summaries": 14,
+    "failed_query_checks": 0,
+    "geometry_only_unavailable": 23,
+    "limited_support_review_tracts": 49,
+    "map_class_counts": {
+      "10.0% to less than 15.0%": 608,
+      "15.0% to less than 20.0%": 64,
+      "20.0% or greater": 17,
+      "5.0% to less than 10.0%": 826,
+      "less than 5.0%": 82,
+      "unavailable": 23
+    },
+    "mapped_estimates": 1597,
+    "maximum_modeled_prevalence_percent": 30.5,
+    "minimum_modeled_prevalence_percent": 0.7,
+    "query_checks": 32,
+    "retained_places_population": 5663670,
+    "supported_display_tracts": 1548,
+    "tracts_changing_class_after_county_aggregation": 645
+  },
+  "geometry": {
+    "aland_sq_m": 20204400635,
+    "awater_sq_m": 7130649971,
+    "bounds": [
+      -73.50821,
+      41.187053,
+      -69.858861,
+      42.886778
+    ],
+    "counties": 14,
+    "empty_rows": 0,
+    "maximum_area_relative_difference": 0.00019907908176003785,
+    "multipolygon_rows": 3,
+    "null_rows": 0,
+    "polygon_rows": 1617,
+    "projected_crs_epsg": 26986,
+    "rows": 1620,
+    "source_crs_epsg": 4269,
+    "unique_tracts": 1620,
+    "valid_rows": 1620
+  },
+  "interpretation_status": "responsible public teaching map only; no observed-case, individual-risk, disparity, priority, rank, target, eligibility, outreach, allocation, intervention, implementation, or deployment conclusion",
+  "loaded": {
+    "raw_geometry": {
+      "columns": 13,
+      "rows": 1620
+    },
+    "raw_linkage_audit": {
+      "columns": 7,
+      "rows": 1620
+    },
+    "raw_places": {
+      "columns": 13,
+      "rows": 1597
+    }
+  },
+  "module_id": "oclc-app5-04",
+  "module_version": "0.1.0",
+  "outputs": {
+    "aggregation-comparison.csv": {
+      "bytes": 338465,
+      "columns": 10,
+      "rows": 1597,
+      "sha256": "ede2600d166b4dff86d6ce96d1b8e5aecb5a4f30ca52782743c9d7698346ecf5"
+    },
+    "county-aggregation.csv": {
+      "bytes": 4117,
+      "columns": 13,
+      "rows": 14,
+      "sha256": "a0c4db259eae9d46e73588973f6fb4cddf308db96e96f754cf0cca5fcdaab334"
+    },
+    "geometry-audit.csv": {
+      "bytes": 152431,
+      "columns": 13,
+      "rows": 1620,
+      "sha256": "c1a77647ddccff35cbae627424d5b8b0160bda93acdade8775fb34644edfcb56"
+    },
+    "geometry-join-audit.csv": {
+      "bytes": 185111,
+      "columns": 16,
+      "rows": 1620,
+      "sha256": "0480ca600a9ee7820161a85cb2c024ebcdb73c77a8b867491aad6040d17488ba"
+    },
+    "map-class-summary.csv": {
+      "bytes": 769,
+      "columns": 6,
+      "rows": 6,
+      "sha256": "4c8d201a2f30d79d3e7a206cddd06d7cc61a8db43f36871e8a5d3124cfa37849"
+    },
+    "map-text-facts.json": {
+      "bytes": 1353,
+      "columns": 13,
+      "rows": 1,
+      "sha256": "8ac6aee80db61d9d33421d05c21c22e25907b9bc030a3b4d4bb9c3bc9ee96f2c"
+    },
+    "query-checks.csv": {
+      "bytes": 1501,
+      "columns": 5,
+      "rows": 32,
+      "sha256": "4adda17dc08f8234076e5b9d30295911b32082d51f9f3740f1339608e0fa2f35"
+    },
+    "responsible-diabetes-prevalence-map.svg": {
+      "bytes": 1515932,
+      "columns": 1,
+      "rows": 1,
+      "sha256": "cf5386a255dc37c518e8410ea891f2f73726a95c13b65e22dbadf218ba6c1ae6"
+    },
+    "small-area-stability.csv": {
+      "bytes": 326307,
+      "columns": 11,
+      "rows": 1597,
+      "sha256": "abff86472fad3ad77190ef7fcf7ef014564121b39e92c109db1f35309a965a8f"
+    },
+    "source-profile.csv": {
+      "bytes": 643,
+      "columns": 17,
+      "rows": 1,
+      "sha256": "93b9feec78c839134fa12f789ed21341d246657ebcc8b7887d8c7c3146d97e42"
+    },
+    "tract-map-table.csv": {
+      "bytes": 476853,
+      "columns": 16,
+      "rows": 1620,
+      "sha256": "37bfe52bb04f1db88173f07c441847397e0c290f2d9b5fd700691958381115d1"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "archive_bytes": 4506627,
+    "archive_sha256": "74ca27e8dd9ed393e43b75e237ff7d652ef072e413532821847de58a7aa4bfd4",
+    "source_manifest_sha256": "f1d530f18fd55aacba6d99fbfef847c214c60aba66759e8746bb9713e4d872b0"
+  },
+  "source_release": "TIGER2024-MA-TRACT",
+  "sql_sha256": {
+    "01-link-geometry-and-measures.sql": "5d1d2c7768b26fce841448e732f11bebc5035079e38784efcda1a5953a322836",
+    "02-compare-tract-and-county-aggregation.sql": "20890dc051b44cb31194e0f01ba78420b6fa0f6b53528db7547620842fee0e87",
+    "03-audit-map-release.sql": "b5a6b704f9db1c425a8f6c69f427fdbe016cb0ca5c6f181cdd4f26fd538e3e7e"
+  },
+  "upstream": {
+    "candidate_files": 219,
+    "checkpoint_id": "oclc-app5-cp01",
+    "checkpoint_version": "0.1.0",
+    "handoff_manifest_sha256": "db70b4e20a17fbddd2b49f7647dd9ce5bcd064e01af5e7a7e23df9122889914e",
+    "reference_files": 240
+  }
+}

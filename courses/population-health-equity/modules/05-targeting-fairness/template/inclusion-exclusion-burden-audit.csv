@@ -1,0 +1,5 @@
+rule_id,selected_tracts,excluded_tracts,selected_counties,limited_support_selected,language_access_gaps,disability_access_gaps,high_travel,high_burden,unresolved_objections,interpretation
+equal_geographic,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+need_based,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+capacity_aware,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+community_review,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
