@@ -1,0 +1,39 @@
+# Module 07 reproducibility check
+
+- Checkpoint 01 files: `153`.
+- Checkpoint 01 manifest SHA-256: `9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656`.
+- Checkpoint 01 release SHA-256: `270b4e49d1c21d8faf7243cd11cef1dddea836d32be551dfe72edac771b31f27`.
+- Checkpoint 02 files: `226`.
+- Checkpoint 02 manifest SHA-256: `4f2a303bc5626ea58139aa935da157f524db1d25b5a158a927ef5daec197958a`.
+- Checkpoint 02 release SHA-256: `b8af80b7e07c2eac2aeb0e9206533bfae134f55d69a5df9038a7a9a915c4dd05`.
+- Immutable release-manifest rows: `389`.
+- Immutable release-manifest bytes: `75,470`.
+- Immutable release-manifest SHA-256: `cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc`.
+- Candidate files: `416`.
+- Reference validation checks: `2,167`.
+- Starter validation checks: `2,068`.
+- Failure routes: `20`.
+- Two reference builds: `byte-identical`.
+- Learner and reference immutable evidence: `identical`.
+- Nested validators: `both pass`.
+- Existing target: `overwrite refused`.
+- Copied validator: `passes inside the assembled candidate`.
+- Changed evidence: `rejected`.
+- Changed release identity: `rejected`.
+- Invalid score: `rejected`.
+- Failed gate: `rejected`.
+- Forced scenario selection: `rejected`.
+- Hidden failed evidence: `rejected`.
+- Unavailable-as-zero claim: `rejected`.
+- Changed forecast decision: `rejected`.
+- Accepted-challenger claim: `rejected`.
+- Moved threshold: `rejected`.
+- Unauthorized test: `rejected`.
+- Missing owner: `rejected`.
+- Missing disagreement: `rejected`.
+- Incomplete defense: `rejected`.
+- Hidden agent use: `rejected`.
+- Inaccessible communication: `rejected`.
+- Invalid progression: `rejected`.
+- External Python dependencies for assembly and validation: `none`.
+- Independent human reproduction: `pending before alpha`.

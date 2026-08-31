@@ -1,0 +1,27 @@
+gate_id,gate,status,evidence,owner
+G01,Exact accepted Checkpoint 01 identity and package,REPLACE,REPLACE,REPLACE
+G02,Exact accepted Checkpoint 02 identity and package,REPLACE,REPLACE,REPLACE
+G03,Exact immutable manifest and protected assembly,REPLACE,REPLACE,REPLACE
+G04,Repository version release and candidate identity,REPLACE,REPLACE,REPLACE
+G05,Fictional public synthetic and no-linkage boundaries,REPLACE,REPLACE,REPLACE
+G06,Measure denominator clock unavailable and source limits,REPLACE,REPLACE,REPLACE
+G07,Baseline instability signals and signal-not-cause rule,REPLACE,REPLACE,REPLACE
+G08,Safety undercapture and incident-report limits,REPLACE,REPLACE,REPLACE
+G09,Bounded diagnosis root-cause and subgroup support,REPLACE,REPLACE,REPLACE
+G10,Forecast target folds rows errors failures point and range,REPLACE,REPLACE,REPLACE
+G11,Little's Law and staffing limits,REPLACE,REPLACE,REPLACE
+G12,Scenario runs effects failures and no selection,REPLACE,REPLACE,REPLACE
+G13,Safety return causal workforce and implementation limits,REPLACE,REPLACE,REPLACE
+G14,Four feasibility dispositions and evidence statuses,REPLACE,REPLACE,REPLACE
+G15,Measures unavailable values escalation rules and fallback,REPLACE,REPLACE,REPLACE
+G16,Static accessible dashboard and zero automatic actions,REPLACE,REPLACE,REPLACE
+G17,Comparable ML leakage failed R01 and transparent method,REPLACE,REPLACE,REPLACE
+G18,Week 3 and Week 6 point accounting,REPLACE,REPLACE,REPLACE
+G19,Material claim traceability,REPLACE,REPLACE,REPLACE
+G20,Allowed recommendation and authority boundary,REPLACE,REPLACE,REPLACE
+G21,People burden exclusion equity safety workforce and blame,REPLACE,REPLACE,REPLACE
+G22,Owners decision rights and disagreement route,REPLACE,REPLACE,REPLACE
+G23,Revision stewardship monitoring escalation and reassessment,REPLACE,REPLACE,REPLACE
+G24,Exact tables frontline communication and equivalent routes,REPLACE,REPLACE,REPLACE
+G25,Reproduction claims AI and defense,REPLACE,REPLACE,REPLACE
+G26,Package recommendation permission conditions and prohibited uses,REPLACE,REPLACE,REPLACE

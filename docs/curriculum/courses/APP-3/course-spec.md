@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.73.0 through Checkpoint 02.
+- Current Commons release: 0.74.0 through Module 07.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -350,6 +350,8 @@ The final package includes an evidence synthesis, frontline brief, leadership su
 
 Leadership must address blame, staff voice, patient access, uncertainty, operational burden, safety, and who has authority to pause or restart. Package acceptance and permission to run a real test remain separate decisions.
 
+Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.74.0`. The exact 153-file Week 3 and 226-file Week 6 checkpoint packages plus both release records form 381 accepted evidence files. Eight controls produce a 389-row, 75,470-byte immutable manifest with SHA-256 `cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc`. Twenty-six leadership records and the manifest complete a 416-file candidate. Reference validation passes 2,167 checks, starter validation passes 2,068 checks, and 20 failure routes pass. All 26 gates pass and the 35-point draft component is ready for final-checkpoint adjudication once, while testing and implementation remain prohibited.
+
 ## 16. Three cumulative checkpoint contracts
 
 ### Checkpoint 1: Measures, variation, and bottleneck readiness
@@ -544,5 +546,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 05 compares four scenarios across five conditions, preserves failed results, assigns the 25-point component once, and hands Module 06 a no-selection result without implementation authority.
 - [x] Module 06 preserves the no-selection result, releases an accessible monitoring design, evaluates one fixed ML challenger without leakage or tuning, and retains the transparent forecast after one predeclared rule fails.
 - [x] Checkpoint 02 freezes all 209 accepted Module 04 through Module 06 files, counts 25 Module 05 points once, passes 20 integrity gates, and hands Module 07 the no-selection and transparent-forecast decisions without action authority.
+- [x] Module 07 freezes both accepted checkpoints, preserves every failure and authority boundary, passes 26 gates and a 14-question defense, and separates curriculum acceptance from the clinical recommendation to revise before testing.
 
-Resume with Module 07 only: freeze both accepted checkpoints, preserve the no-selection and transparent-forecast decisions, and build the clinician leadership, recommendation, ownership, communication, and defense package without granting testing or implementation authority.
+Resume with Checkpoint 03 only: freeze the exact 416-file Module 07 candidate, record the 35-point component once, adjudicate all gates, defense, reviewers, conditions, package status, and clinical recommendation, and preserve every prohibition on testing and implementation.

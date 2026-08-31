@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.73.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.74.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2816,8 +2816,8 @@ if (
     $app3Content -match '(?im)[A-Z]:\\Users\\' -or
     $app3SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app3PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app3Content -notmatch 'Current Commons release: 0\.73\.0' -or
-    $app3PackageContent -notmatch 'Current Commons release: 0\.73\.0' -or
+    $app3Content -notmatch 'Current Commons release: 0\.74\.0' -or
+    $app3PackageContent -notmatch 'Current Commons release: 0\.74\.0' -or
     $app3Content -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '26,907' -or
@@ -2842,12 +2842,12 @@ if (
     $app3Content -notmatch 'Joe Joseph, MD, SFHM' -or
     $app3Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
     $app3Content -notmatch 'Module 01 pins all three complete public snapshots' -or
-    $app3PackageContent -notmatch 'Modules 01 through 06, and Checkpoints 01 and 02 complete' -or
+    $app3PackageContent -notmatch 'Modules 01 through 07, and Checkpoints 01 and 02 complete' -or
     $app3Content -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.73.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.74.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -3785,6 +3785,123 @@ if (
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Checkpoint 02 builder self-check failed.' }
 & python (Join-Path $app3Checkpoint02Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Checkpoint 02 validator self-check failed.' }
+
+$app3Module07Root = Join-Path $repo 'courses\clinical-performance-improvement\modules\07-clinician-leadership-defense'
+$app3Module07Spec = Join-Path $repo 'docs\curriculum\courses\APP-3\modules\07-clinician-leadership-defense-spec.md'
+$app3Module07Records = @(
+    'README.md',
+    'evidence-synthesis.md',
+    'frontline-brief.md',
+    'leadership-summary.md',
+    'recommendation-and-alternatives.md',
+    'people-equity-safety-workforce.md',
+    'stakeholder-roles.csv',
+    'workflow-resource-feasibility.md',
+    'revision-learning-plan.md',
+    'stewardship-plan.md',
+    'monitoring-measures.csv',
+    'escalation-fallback-rules.csv',
+    'disagreement-record.md',
+    'leadership-reflection.md',
+    'technical-appendix.md',
+    'evidence-index.csv',
+    'accessibility-review.md',
+    'reproducibility-check.md',
+    'responsible-claims-audit.md',
+    'ai-use.md',
+    'component-score.csv',
+    'gate-results.csv',
+    'conditions-register.csv',
+    'technical-defense.md',
+    'reviewer-record.md',
+    'progression-decision.md'
+)
+$app3Module07Files = @(
+    '.gitattributes',
+    'README.md',
+    'VERSION',
+    'assessment.md',
+    'assemble_candidate.py',
+    'clinician-profile.md',
+    'clinician-session-plan.md',
+    'instructor-notes.md',
+    'leadership-contract.json',
+    'release.json',
+    'validate_candidate.py'
+) + @($app3Module07Records | ForEach-Object { "reference\$_" }) + @($app3Module07Records | ForEach-Object { "template\$_" })
+$app3Module07Missing = @($app3Module07Files | Where-Object { -not (Test-Path -LiteralPath (Join-Path $app3Module07Root $_)) })
+if (-not (Test-Path -LiteralPath $app3Module07Spec) -or $app3Module07Missing.Count -gt 0) {
+    throw "APP-3 Module 07 is missing its specification or package files: $($app3Module07Missing -join ', ')."
+}
+$app3Module07Content = Get-Content -Raw -LiteralPath $app3Module07Spec
+$app3Module07Sections = [regex]::Matches($app3Module07Content, '(?m)^## \d+\.').Count
+$app3Module07Release = Get-Content -Raw -LiteralPath (Join-Path $app3Module07Root 'release.json') | ConvertFrom-Json
+$app3Module07Scores = @(Import-Csv -LiteralPath (Join-Path $app3Module07Root 'reference\component-score.csv'))
+$app3Module07Gates = @(Import-Csv -LiteralPath (Join-Path $app3Module07Root 'reference\gate-results.csv'))
+$app3Module07Measures = @(Import-Csv -LiteralPath (Join-Path $app3Module07Root 'reference\monitoring-measures.csv'))
+$app3Module07Escalation = @(Import-Csv -LiteralPath (Join-Path $app3Module07Root 'reference\escalation-fallback-rules.csv'))
+$app3Module07Conditions = @(Import-Csv -LiteralPath (Join-Path $app3Module07Root 'reference\conditions-register.csv'))
+$app3Module07Profile = Get-Content -Raw -LiteralPath (Join-Path $app3Module07Root 'clinician-profile.md')
+$app3Module07Progression = Get-Content -Raw -LiteralPath (Join-Path $app3Module07Root 'reference\progression-decision.md')
+if (
+    $app3Module07Sections -ne 21 -or
+    $app3Module07Content -match '[—–]' -or
+    $app3Module07Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app3Module07Content -notmatch 'Commons release target: `0\.74\.0`' -or
+    $app3Module07Content -notmatch '75,470 manifest bytes' -or
+    $app3Module07Content -notmatch 'cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc' -or
+    $app3Module07Content -notmatch '2,167 reference checks' -or
+    $app3Module07Content -notmatch '2,068 starter checks' -or
+    $app3Module07Release.module.id -ne 'oclc-app3-07' -or
+    $app3Module07Release.module.version -ne '0.1.0' -or
+    $app3Module07Release.module.commons_release -ne '0.74.0' -or
+    $app3Module07Release.module.hours -ne 16.0 -or
+    $app3Module07Release.module.course_points -ne 35 -or
+    $app3Module07Release.clinician_of_record.name -ne 'Joe Joseph, MD, SFHM' -or
+    $app3Module07Release.accepted_inputs[0].candidate_manifest_sha256 -ne '9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656' -or
+    $app3Module07Release.accepted_inputs[1].candidate_manifest_sha256 -ne '4f2a303bc5626ea58139aa935da157f524db1d25b5a158a927ef5daec197958a' -or
+    $app3Module07Release.package.immutable_controls -ne 8 -or
+    $app3Module07Release.package.accepted_evidence_files -ne 381 -or
+    $app3Module07Release.package.immutable_manifest_rows -ne 389 -or
+    $app3Module07Release.package.leadership_records -ne 26 -or
+    $app3Module07Release.package.candidate_files -ne 416 -or
+    $app3Module07Release.package.manifest_bytes -ne 75470 -or
+    $app3Module07Release.package.manifest_sha256 -ne 'cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc' -or
+    $app3Module07Release.reference_decision.candidate_score -ne '35.00 of 35.00' -or
+    $app3Module07Release.reference_decision.candidate_status -ne 'accept with conditions' -or
+    $app3Module07Release.reference_decision.clinical_performance_recommendation -ne 'revise before testing' -or
+    $app3Module07Release.reference_decision.selected_scenario -ne 'none' -or
+    $app3Module07Release.reference_decision.ml_decision -ne 'retain transparent forecast' -or
+    $app3Module07Release.reference_decision.test_start -ne 'prohibited' -or
+    $app3Module07Release.reference_decision.implementation -ne 'prohibited' -or
+    $app3Module07Release.validation.complete_reference_checks -ne 2167 -or
+    $app3Module07Release.validation.starter_checks -ne 2068 -or
+    $app3Module07Release.validation.failure_routes -ne 20 -or
+    $app3Module07Scores.Count -ne 6 -or
+    ($app3Module07Scores | Where-Object { $_.criterion_id -ne 'TOTAL' } | Measure-Object -Property points_available -Sum).Sum -ne 35 -or
+    ($app3Module07Scores | Where-Object { $_.criterion_id -ne 'TOTAL' } | Measure-Object -Property points_awarded -Sum).Sum -ne 35 -or
+    $app3Module07Gates.Count -ne 26 -or
+    @($app3Module07Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Module07Measures.Count -ne 12 -or
+    @($app3Module07Measures | Where-Object { $_.accepted_value -eq 'unavailable' }).Count -ne 3 -or
+    $app3Module07Escalation.Count -ne 10 -or
+    @($app3Module07Escalation | Where-Object { $_.automatic_action -ne '0' }).Count -ne 0 -or
+    $app3Module07Conditions.Count -ne 12 -or
+    @($app3Module07Conditions | Where-Object { $_.status -ne 'open' }).Count -ne 0 -or
+    $app3Module07Profile -notmatch 'makes no claim about Dr\. Joseph''s current employer or title' -or
+    $app3Module07Profile -notmatch 'soundphysicians\.com/press-release/sound-physicians-thought-leaders-presenting-at-hospital-medicine-2017-annual-conference/' -or
+    $app3Module07Progression -notmatch 'Package status: `accept with conditions`' -or
+    $app3Module07Progression -notmatch 'Clinical performance recommendation: `revise before testing`' -or
+    $app3Module07Progression -notmatch 'Final checkpoint permission: `permitted for curriculum construction`' -or
+    $app3Module07Progression -notmatch 'Test start: `prohibited`' -or
+    $app3Module07Progression -notmatch 'Implementation: `prohibited`'
+) {
+    throw 'APP-3 Module 07 release metadata, specification, clinician identity, checkpoint identities, score, gates, monitoring, conditions, validation, recommendation, or manifest facts do not match the 0.1.0 contract.'
+}
+& python (Join-Path $app3Module07Root 'assemble_candidate.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 07 assembler self-check failed.' }
+& python (Join-Path $app3Module07Root 'validate_candidate.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 07 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -5099,3 +5216,4 @@ Write-Output "APP-3 Module 04 passed: $app3Module04Sections contract sections an
 Write-Output "APP-3 Module 05 passed: $app3Module05Sections contract sections and $($app3Module05Files.Count) required files."
 Write-Output "APP-3 Module 06 passed: $app3Module06Sections contract sections and $($app3Module06Files.Count) required files."
 Write-Output "APP-3 Checkpoint 02 passed: $app3Checkpoint02Sections contract sections and $($app3Checkpoint02Files.Count) required files."
+Write-Output "APP-3 Module 07 passed: $app3Module07Sections contract sections and $($app3Module07Files.Count) required files."

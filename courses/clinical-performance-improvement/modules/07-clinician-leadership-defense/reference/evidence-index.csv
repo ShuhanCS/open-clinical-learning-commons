@@ -1,0 +1,21 @@
+claim_id,material_claim,evidence_path,owner,decision_use,limit
+E01,43 628 accepted encounters and conserved outcomes,evidence/checkpoint1/candidate/module-02/outputs/build-report.json,measurement lead,establish accepted service denominator,fictional synthetic service only
+E02,Nine signal records and provisional baseline instability,evidence/checkpoint1/candidate/module-03/outputs/signal-audit.csv,quality lead,open human review,signal is not cause
+E03,Safety trigger and incident undercapture,evidence/checkpoint1/candidate/module-03/outputs/safety-surveillance.csv,safety lead,retain prospective safety need,generated truth not real prevalence
+E04,Bounded roomed-to-clinician constraint,evidence/checkpoint1/candidate/module-03/outputs/process-stage-comparison.csv,flow lead,retain bounded diagnosis,root cause not established
+E05,Unsupported target-window support comparisons,evidence/checkpoint1/candidate/module-03/outputs/subgroup-window-support.csv,access lead,retain unavailable comparison,full-release support cannot be borrowed
+E06,Accepted forecast method and operational errors,evidence/checkpoint2/candidate/module-04/outputs/error-summary.csv,forecasting reviewer,retain seasonal exponential smoothing,forecast does not set staffing
+E07,Week 53 point and empirical range,evidence/checkpoint2/candidate/module-04/outputs/forecast-findings.json,forecasting reviewer,bound planning discussion,range is not guaranteed demand
+E08,Little's Law equilibrium not established,evidence/checkpoint2/candidate/module-04/outputs/littles-law-check.csv,operations reviewer,limit capacity inference,planning implication only
+E09,No scenario qualified in 4 000 runs,evidence/checkpoint2/candidate/module-05/outputs/scenario-findings.json,improvement methods lead,retain no selection,simulation is not causal effect
+E10,Six null or failed scenario comparisons,evidence/checkpoint2/candidate/module-05/outputs/sensitivity-review.csv,improvement methods lead,require revision,failed evidence cannot be hidden
+E11,Safety and 72-hour return not simulated,evidence/checkpoint2/candidate/module-05/outputs/evaluation-measures.csv,safety lead,require prospective data,unavailable is not zero
+E12,Four feasibility dispositions,evidence/checkpoint2/candidate/module-06/outputs/feasibility-screen.csv,clinical performance council,retain revise stop revise,no implementation authority
+E13,Twelve accepted monitoring measures,evidence/checkpoint2/candidate/module-06/outputs/monitoring-measures.csv,measurement steward,retain monitoring contract,three values remain unavailable
+E14,Ten human-owned escalation and fallback rules,evidence/checkpoint2/candidate/module-06/outputs/escalation-fallback.csv,clinical performance council,retain human response and fallback,zero automatic actions
+E15,Static accessible dashboard,evidence/checkpoint2/candidate/module-06/outputs/monitoring-dashboard.html,accessibility reviewer,support bounded discussion,no live connection or alerting
+E16,Comparable ML challenger and leakage checks,evidence/checkpoint2/candidate/module-06/outputs/leakage-tests.csv,ML reviewer,permit bounded comparison,no production scoring
+E17,Failed R01 and transparent forecast decision,evidence/checkpoint2/candidate/module-06/outputs/decision-change.csv,ML reviewer,retain transparent method,threshold cannot move after fitting
+E18,Week 3 40 points,evidence/checkpoint1/progression-decision.md,assessment owner,retain cumulative score,not rescored in Module 07
+E19,Week 6 25 points,evidence/checkpoint2/progression-decision.md,assessment owner,retain cumulative score,not rescored in Module 07
+E20,Module 07 permission and authority boundary,evidence/checkpoint2/module07-handoff.md,module owner,permit leadership construction,no test or implementation authority

@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.73.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, first six runnable modules, and cumulative Week 3 and Week 6 checkpoints.
+- Current version: `0.74.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, all seven runnable modules, and cumulative Week 3 and Week 6 checkpoints; its final checkpoint is next.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -120,6 +120,8 @@ The fifth runnable unit is [APP-3 Module 05: Improvement scenarios and evaluatio
 The sixth runnable unit is [APP-3 Module 06: Feasibility, monitoring, and embedded machine learning](courses/clinical-performance-improvement/modules/06-feasibility-monitoring-embedded-ml/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/APP-3/modules/06-feasibility-monitoring-embedded-ml-spec.md). It preserves the no-selection result, screens 28 feasibility combinations, specifies 12 monitoring measures and ten escalation rules, produces an accessible static dashboard, and evaluates one fixed gradient-boosted challenger on the same 588 shifts. The challenger passes seven of eight rules but misses the required MAE improvement by 0.018212 arrivals per shift, so the transparent forecast remains accepted and no implementation is authorized.
 
 The cumulative [APP-3 Week 6 checkpoint](courses/clinical-performance-improvement/checkpoints/02-forecast-scenario-monitoring-release/reference/README.md), governed by its [durable specification](docs/curriculum/courses/APP-3/checkpoints/02-forecast-scenario-monitoring-release-spec.md), freezes 209 accepted files from Modules 04 through 06 in a 226-file package. It carries the Module 05 25-point score once, requires all 80 inherited and checkpoint gates, retains no selected scenario and the failed ML replacement rule, and permits Module 07 clinician leadership work with conditions.
+
+The seventh runnable unit is [APP-3 Module 07: Clinician leadership, recommendation, and defense](courses/clinical-performance-improvement/modules/07-clinician-leadership-defense/README.md), governed by the durable [Module 07 specification](docs/curriculum/courses/APP-3/modules/07-clinician-leadership-defense-spec.md). It freezes both accepted checkpoints in a 416-file leadership candidate, preserves every failed or unavailable result, assigns decision and disagreement ownership, and records `accept with conditions` separately from the clinical recommendation `revise before testing`. Joe Joseph, MD, SFHM, is the designated clinician of record under a dated identity boundary; participation details remain a pre-alpha condition.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -297,7 +299,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-3 Module 07, Clinician leadership, recommendation, and defense.
+1. Build APP-3 Checkpoint 03, the final clinical performance improvement package.
 2. Continue APP-4 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 

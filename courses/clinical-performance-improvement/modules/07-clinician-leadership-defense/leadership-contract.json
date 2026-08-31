@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app3-07",
+    "version": "0.1.0",
+    "commons_release": "0.74.0",
+    "course": "APP-3: Data for Clinical Performance and Improvement",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "accepted_inputs": [
+    {"id": "oclc-app3-cp01", "version": "0.1.0", "commons_release": "0.69.0", "files": 153, "manifest_sha256": "9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656", "release_sha256": "270b4e49d1c21d8faf7243cd11cef1dddea836d32be551dfe72edac771b31f27"},
+    {"id": "oclc-app3-cp02", "version": "0.1.0", "commons_release": "0.73.0", "files": 226, "manifest_sha256": "4f2a303bc5626ea58139aa935da157f524db1d25b5a158a927ef5daec197958a", "release_sha256": "b8af80b7e07c2eac2aeb0e9206533bfae134f55d69a5df9038a7a9a915c4dd05"}
+  ],
+  "allowed_recommendations": [
+    "run bounded prospective improvement test",
+    "revise before testing",
+    "refer",
+    "stop"
+  ],
+  "reference": {
+    "package_status": "accept with conditions",
+    "recommendation": "revise before testing",
+    "selected_scenario": "none",
+    "accepted_forecast": "seasonal exponential smoothing",
+    "ml_decision": "retain transparent forecast",
+    "final_checkpoint_permission": "permitted for curriculum construction"
+  },
+  "score": {
+    "criteria": {"E01": 8.0, "C01": 9.0, "L01": 8.0, "M01": 6.0, "H01": 4.0},
+    "minimum_to_pass": 28.0,
+    "maximum": 35.0
+  },
+  "required_gates": 26,
+  "defense_questions": 14,
+  "boundaries": {
+    "clinical_action": "prohibited",
+    "staffing_change": "prohibited",
+    "schedule_change": "prohibited",
+    "automated_action": "prohibited",
+    "testing": "prohibited",
+    "implementation": "prohibited",
+    "production_scoring": "prohibited",
+    "model_deployment": "prohibited"
+  }
+}

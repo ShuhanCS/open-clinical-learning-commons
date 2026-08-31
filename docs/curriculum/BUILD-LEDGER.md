@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.73.0
+- Current release: 0.74.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Checkpoint 02, forecast, scenario, evaluation, and monitoring release
-- Next unit: APP-3 Module 07, clinician leadership, recommendation, and defense
+- Last completed unit: APP-3 Module 07, clinician leadership, recommendation, and defense
+- Next unit: APP-3 Checkpoint 03, final clinical performance improvement package
 
 ## Confirmed decisions
 
@@ -539,7 +539,16 @@
 - The ML challenger remains rejected because its 0.731788-arrival MAE improvement misses the required 0.750000 rule. Seven other rules passing does not change the `retain transparent forecast` decision.
 - Reference validation passes 1,102 checks and learner validation passes 1,061 checks. Two-build equality, copied validation, existing-target refusal, and 25 mutation or incomplete-package routes pass.
 - Progression is `continue with conditions`, permitting Module 07 clinician leadership, recommendation, and defense. Clinical, staffing, automated, testing, implementation, production-scoring, and deployment authority remain prohibited.
-- APP-3 Checkpoint 02 is a runnable release candidate at Commons 0.73.0. Module 07 is next.
+- APP-3 Checkpoint 02 is a runnable release candidate at Commons 0.73.0.
+- APP-3 Module 07 version 0.1.0 freezes the exact 153-file Week 3 checkpoint, 226-file Week 6 checkpoint, and both accepted release records without changing evidence, scores, gates, or decisions.
+- Eight immutable controls and 381 accepted evidence files produce a sorted 389-row, 75,470-byte manifest with SHA-256 `cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc`. Twenty-six leadership records and the manifest complete a 416-file candidate.
+- The package preserves 43,628 encounters, nine signal records, 28 forecast origins, 588 common target shifts, six failed or null scenario comparisons, no qualified scenario, four feasibility dispositions, 12 monitoring measures, three unavailable values, ten human-owned escalation rules, and zero automatic actions.
+- Seasonal exponential smoothing remains accepted. The fixed ML challenger remains rejected because its 0.731788-arrival MAE improvement misses the predeclared 0.750000 requirement.
+- The Module 07 draft score is 35 of 35 for Checkpoint 03 exactly once. All 26 gates pass, the 14-question defense is adequate for curriculum construction, and the package status is `accept with conditions`.
+- The separate clinical performance recommendation is `revise before testing`. Clinical action, staffing and schedule change, automated action, test start, implementation, production scoring, and model deployment remain prohibited.
+- Reference validation passes 2,167 checks, starter validation passes 2,068 checks, copied validation passes, and all 20 mutation or incomplete-record routes are rejected.
+- Joe Joseph, MD, SFHM, is the designated clinician under dated Sound Physicians sources. No current employer or title is claimed, and direct confirmation remains required before alpha.
+- APP-3 Module 07 is a runnable release candidate at Commons 0.74.0. Checkpoint 03 is next.
 
 ## Pending confirmation
 
@@ -555,10 +564,11 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoints 01 and 02, the curriculum catalog, and this ledger.
-2. Write the durable APP-3 Module 07 specification before assembling its package.
-3. Freeze both accepted checkpoint releases without editing or recomputing evidence.
-4. Preserve the no-selection result, all four scenario dispositions, monitoring and escalation ownership, failed ML replacement rule, exact 40, 25, and future 35-point accounting, and all authority boundaries.
-5. Build the clinician leadership synthesis, frontline brief, recommendation, alternatives, ownership, disagreement, stewardship, AI, reproducibility, and defense records.
-6. Confirm Joe Joseph, MD, participation details remain pending before alpha and make no current-employer or current-title claim.
-7. Advance semver, update this ledger, commit, and push before building the final checkpoint.
+1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoints 01 and 02, the exact Module 07 release, the curriculum catalog, and this ledger.
+2. Write the durable APP-3 Checkpoint 03 specification before assembling its package.
+3. Freeze the complete 416-file Module 07 candidate without editing accepted evidence or leadership records.
+4. Record the Module 07 35-point component once and preserve the prior 40-point and 25-point checkpoint scores without duplication.
+5. Adjudicate the 26 gates, 14-question defense, reviewers, reproduction, conditions, package status, clinical recommendation, and final progression decision.
+6. Keep Joe Joseph, MD, participation details and all named human reviews pending before alpha unless direct confirmations are obtained.
+7. Preserve every prohibition on clinical action, staffing and schedule change, automation, testing, implementation, production scoring, and model deployment.
+8. Advance semver, update this ledger, commit, and push before moving to APP-4.

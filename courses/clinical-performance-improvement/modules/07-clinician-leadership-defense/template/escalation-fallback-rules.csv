@@ -1,0 +1,2 @@
+rule_id,measure_id,response_level,confirmation_owner,decision_owner,fallback_state,restart_condition,automatic_action,source_path
+E01,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

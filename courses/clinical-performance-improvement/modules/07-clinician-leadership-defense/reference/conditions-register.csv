@@ -1,0 +1,13 @@
+condition_id,condition,owner,due_point,verification,effect_if_open,status
+C01,Assign the official APP-3 section and half-term dates,program owner,before alpha,published schedule and course mapping,package remains construction-only,open
+C02,Confirm Joe Joseph participation schedule format recording and biography wording,APP-3 sponsor,before alpha,direct written confirmation,do not claim delivered clinician leadership,open
+C03,Complete named clinical and safety review,medical director and safety lead,before alpha,signed review record,no clinical protocol review,open
+C04,Complete operations workflow and capacity review,operations director,before alpha,signed workflow and resource review,no scenario contract return,open
+C05,Complete workforce coverage interruption and burden review,workforce lead,before alpha,signed workforce evidence record,no staffing or schedule recommendation,open
+C06,Complete access equity and accessibility review,access and accessibility leads,before alpha,signed support and communication review,no group-specific or delivery claim,open
+C07,Complete measurement and dashboard stewardship review,measurement steward,before alpha,signed definitions dashboard and refresh review,no monitoring implementation,open
+C08,Reproduce forecast scenario and ML evidence independently,forecasting ML and reproduction reviewers,before alpha,clean run and signed comparison,no model or scenario decision change,open
+C09,Run the committed Module 03 and Module 04 base-R checks,methods reviewer,before alpha,signed R output and comparison,cross-language confirmation remains pending,open
+C10,Test the frontline concern and disagreement route,frontline representative,before alpha,documented exercise and response,no delivery claim,open
+C11,Complete responsible-claims AI privacy and governance review,responsible-AI and governance reviewers,before alpha,signed audits,no alpha promotion,open
+C12,Complete a live or approved equivalent 14-question defense,faculty and clinician panel,before final checkpoint,scored defense and reviewer record,Checkpoint 03 decision remains pending,open

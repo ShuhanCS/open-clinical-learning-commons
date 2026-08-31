@@ -1,0 +1,27 @@
+gate_id,gate,status,evidence,owner
+G01,Exact accepted Checkpoint 01 identity and 153-file package,pass,release manifest and nested validator,reproducibility owner
+G02,Exact accepted Checkpoint 02 identity and 226-file package,pass,release manifest and nested validator,reproducibility owner
+G03,Exact 389-row immutable manifest and protected assembly,pass,release-manifest.csv,reproducibility owner
+G04,Repository version release and 416-file candidate identity,pass,VERSION contract and candidate tree,module owner
+G05,Fictional service public synthetic and no-linkage boundaries visible,pass,evidence synthesis and claims audit,data steward
+G06,Measure denominator clock unavailable and source limits unchanged,pass,accepted checkpoint evidence and technical appendix,measurement lead
+G07,Baseline instability nine signals and signal-not-cause rule visible,pass,evidence synthesis,quality lead
+G08,Safety undercapture and incident-report limits visible,pass,evidence synthesis and technical appendix,safety lead
+G09,Bounded diagnosis root-cause limit and subgroup support retained,pass,evidence synthesis,clinical and access leads
+G10,Forecast target folds rows errors failures point and range unchanged,pass,technical appendix,forecasting reviewer
+G11,Little's Law and staffing limits retained,pass,evidence synthesis and claims audit,operations reviewer
+G12,Scenario runs effects failures and no-selection result retained,pass,evidence synthesis and recommendation,improvement methods lead
+G13,Safety return causal workforce and implementation limits retained,pass,people review and claims audit,clinical and workforce reviewers
+G14,Four feasibility dispositions and evidence statuses retained,pass,recommendation and technical appendix,feasibility reviewer
+G15,Twelve measures three unavailable values ten escalation rules and fallback retained,pass,monitoring and escalation records,measurement steward
+G16,Static accessible dashboard and zero automatic actions retained,pass,accessibility review and claims audit,accessibility reviewer
+G17,Fixed comparable ML leakage checks failed R01 and transparent method retained,pass,technical appendix and recommendation,ML reviewer
+G18,Week 3 40 points and Week 6 25 points remain exact and unscored here,pass,evidence index and progression,assessment owner
+G19,Every material leadership claim traces to an accepted path,pass,evidence-index.csv,module owner
+G20,One allowed recommendation with explicit test and implementation boundary,pass,recommendation-and-alternatives.md,clinical performance council
+G21,People burden exclusion equity safety workforce and blame addressed,pass,people review and frontline brief,clinical and workforce reviewers
+G22,Accountable and responsible owners decision rights and disagreement route complete,pass,stakeholder roles and disagreement record,clinical performance council
+G23,Revision stewardship monitoring escalation fallback and reassessment complete,pass,revision and stewardship records,module owner
+G24,Exact tables frontline communication and equivalent accessible routes complete,pass,frontline brief and accessibility review,accessibility reviewer
+G25,Clean reproduction claims AI checks and 14 defense answers complete,pass,reproduction audits and technical defense,independent reviewer
+G26,Package status recommendation final-checkpoint permission conditions and prohibited uses consistent,pass,progression-decision.md,module owner

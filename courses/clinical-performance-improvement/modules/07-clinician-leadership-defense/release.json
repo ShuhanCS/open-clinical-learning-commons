@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app3-07",
+    "title": "Clinician leadership, recommendation, and defense",
+    "version": "0.1.0",
+    "commons_release": "0.74.0",
+    "course": "APP-3: Clinical Performance Improvement",
+    "week": "final clinician-led block",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "clinician_of_record": {
+    "name": "Joe Joseph, MD, SFHM",
+    "identity_status": "confirmed from dated Sound Physicians public sources",
+    "current_employer_claim": "none",
+    "participation_confirmation": "required before alpha"
+  },
+  "accepted_inputs": [
+    {
+      "id": "oclc-app3-cp01",
+      "version": "0.1.0",
+      "commons_release": "0.69.0",
+      "assembled_files": 153,
+      "candidate_manifest_sha256": "9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656",
+      "release_sha256": "270b4e49d1c21d8faf7243cd11cef1dddea836d32be551dfe72edac771b31f27"
+    },
+    {
+      "id": "oclc-app3-cp02",
+      "version": "0.1.0",
+      "commons_release": "0.73.0",
+      "assembled_files": 226,
+      "candidate_manifest_sha256": "4f2a303bc5626ea58139aa935da157f524db1d25b5a158a927ef5daec197958a",
+      "release_sha256": "b8af80b7e07c2eac2aeb0e9206533bfae134f55d69a5df9038a7a9a915c4dd05"
+    }
+  ],
+  "reference_decision": {
+    "candidate_score": "35.00 of 35.00",
+    "gates": "26 of 26 pass",
+    "defense": "adequate for curriculum construction",
+    "candidate_status": "accept with conditions",
+    "clinical_performance_recommendation": "revise before testing",
+    "selected_scenario": "none",
+    "accepted_forecast": "seasonal exponential smoothing",
+    "ml_decision": "retain transparent forecast",
+    "final_checkpoint": "permitted for curriculum construction",
+    "clinical_action": "prohibited",
+    "test_start": "prohibited",
+    "implementation": "prohibited",
+    "model_deployment": "prohibited"
+  },
+  "reference_facts": {
+    "encounters": 43628,
+    "completed_encounters": 39975,
+    "left_before_seen": 3653,
+    "signal_records": 9,
+    "rolling_origins": 28,
+    "forecast_target_rows": 588,
+    "accepted_forecast_mae": "5.937283",
+    "scenario_runs": 4000,
+    "failed_or_null_scenario_comparisons": 6,
+    "qualified_scenarios": 0,
+    "feasibility_rows": 28,
+    "monitoring_measures": 12,
+    "prospectively_unavailable_measures": 3,
+    "escalation_rules": 10,
+    "automatic_actions": 0,
+    "ml_required_mae_improvement": "0.750000",
+    "ml_observed_mae_improvement": "0.731788"
+  },
+  "package": {
+    "immutable_controls": 8,
+    "accepted_evidence_files": 381,
+    "immutable_manifest_rows": 389,
+    "leadership_records": 26,
+    "candidate_files": 416,
+    "manifest_bytes": 75470,
+    "manifest_sha256": "cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 2167,
+    "starter_checks": 2068,
+    "copied_validator_check": "pass",
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "failure_routes": 20
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, leadership package, deterministic assembly, validation, and release record"
+    }
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, and final biography wording before alpha.",
+    "Named clinical, safety, operations, workforce, access, equity, accessibility, measurement, forecasting, ML, responsible-AI, and independent reviews remain pending before alpha.",
+    "Independent human clean reproduction and a live or equivalent 14-question defense remain pending.",
+    "Public-source, synthetic, and simulated teaching evidence cannot establish local clinical benefit, causal effect, feasibility, equity, safety, workforce impact, or implementation readiness.",
+    "Local clinical, safety, access, workforce, workflow, capacity, ownership, and prospective-data evidence is required before any test authorization.",
+    "The package does not authorize clinical action, staffing or schedule changes, automation, testing, implementation, production scoring, or model deployment."
+  ]
+}

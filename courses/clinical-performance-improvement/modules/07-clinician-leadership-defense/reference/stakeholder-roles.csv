@@ -1,0 +1,13 @@
+stakeholder_id,raci_role,stakeholder,decision_responsibility,required_action,evidence,owner_status
+S01,accountable,clinical performance council,accept revise refer or stop a future reviewed proposal,hold the recommendation and condition review,leadership-summary.md,named fictional role
+S02,responsible,medical director,clinical meaning acuity safety and scope,confirm clinical review and override requirements,people-equity-safety-workforce.md,named fictional role
+S03,responsible,nurse leader,nursing workflow handoffs burden and safeguards,confirm workflow and staffing-role assumptions,workflow-resource-feasibility.md,named fictional role
+S04,responsible,operations director,capacity schedule flow and implementation feasibility,confirm current workflow capacity and ownership,workflow-resource-feasibility.md,named fictional role
+S05,responsible,quality and safety lead,safety event return and escalation review,define prospective safety and follow-up collection,monitoring-measures.csv,named fictional role
+S06,responsible,access lead,language mobility reach and missingness review,confirm access routes denominators and support,people-equity-safety-workforce.md,named fictional role
+S07,responsible,workforce lead,coverage interruption workload overtime and role burden,collect baseline and review resource assumptions,monitoring-measures.csv,named fictional role
+S08,responsible,data and measurement steward,definitions completeness refresh and lineage,maintain accepted measures and evidence paths,stewardship-plan.md,named fictional role
+S09,consulted,forecasting and operations reviewer,target folds errors range and capacity interpretation,reproduce forecast and confirm staffing limit,technical-appendix.md,review pending before alpha
+S10,consulted,ML reviewer,feature eligibility leakage rules and model decision,confirm failed R01 and no deployment,technical-appendix.md,review pending before alpha
+S11,consulted,frontline representative,burden blame workflow feasibility and disagreement,test the brief and raise operational concerns,frontline-brief.md,participation pending before alpha
+S12,informed,APP-3 learner and faculty team,curriculum evidence conditions and final-checkpoint status,maintain the exact package and respond to review,progression-decision.md,named curriculum role

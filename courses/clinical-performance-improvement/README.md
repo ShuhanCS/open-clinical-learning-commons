@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.73.0.
-- Current build: course specification, source architecture, Modules 01 through 06, and Checkpoints 01 and 02 complete; Module 07 and the final checkpoint are not yet built.
+- Current Commons release: 0.74.0.
+- Current build: course specification, source architecture, Modules 01 through 07, and Checkpoints 01 and 02 complete; the final checkpoint is next.
 
 APP-3 teaches learners to define and validate clinical performance measures, distinguish process signals from routine variation, diagnose bottlenecks, forecast demand, test capacity and workflow scenarios, and defend a monitored improvement recommendation.
 
@@ -56,5 +56,7 @@ The fifth runnable package is [Module 05](modules/05-improvement-scenarios-evalu
 The sixth runnable package is [Module 06](modules/06-feasibility-monitoring-embedded-ml/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/06-feasibility-monitoring-embedded-ml-spec.md). It screens 28 scenario-domain feasibility combinations, specifies 12 owned monitoring measures and ten human escalation rules, releases a static accessible dashboard, and compares one fixed gradient-boosted challenger with the transparent forecast on the same 588 shifts. The challenger passes seven of eight replacement rules but misses the required MAE improvement by 0.018212 arrivals per shift, so the transparent forecast remains accepted. Module 06 passes 22 gates and carries the 25-point Week 6 score once without authorizing implementation.
 
 The cumulative [Week 6 checkpoint](checkpoints/02-forecast-scenario-monitoring-release/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/checkpoints/02-forecast-scenario-monitoring-release-spec.md), freezes 59 Module 04 files, 68 Module 05 files, and 82 Module 06 files in one 226-file release. Its 209-row candidate manifest is exact, the Module 05 score is counted once, all 80 gates pass, and the 14-question defense permits Module 07 with conditions while preserving every action boundary.
+
+The seventh runnable package is [Module 07](modules/07-clinician-leadership-defense/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/07-clinician-leadership-defense-spec.md). It freezes the complete 153-file Week 3 checkpoint and 226-file Week 6 checkpoint in a 416-file leadership candidate. Its 26 records preserve the no-selection result, transparent forecast, unsupported and unavailable evidence, ownership, disagreement, monitoring, conditions, and action limits. The package passes 26 gates and a 14-question defense, records `accept with conditions` for curriculum construction, and keeps the clinical recommendation at `revise before testing`.
 
 No package authorizes clinical implementation, current hospital performance judgment, patient or workforce targeting, staffing change, or model deployment.
