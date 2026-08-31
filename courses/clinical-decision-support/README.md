@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.85.0.
-- Current build: all seven modules and Checkpoints 01 and 02 are runnable release candidates; the final checkpoint is next.
+- Current Commons release: 0.86.0.
+- Current build: all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction.
 
 APP-4 teaches learners to decide whether a prediction or rule can support one clinician at one workflow moment without creating unacceptable burden or harm. The course covers intended use, logic, triggers, input availability, calibration, thresholds, alert burden, human factors, a nonproduction prototype, failure modes, safety, monitoring, governance, and clinician-led defense.
 
@@ -60,5 +60,7 @@ The sixth runnable package is [Module 06](modules/06-safety-monitoring-governanc
 The second runnable cumulative package is [Checkpoint 02](checkpoints/02-workflow-sandbox-safety-release/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/checkpoints/02-workflow-sandbox-safety-release-spec.md). It freezes all 1,030 Module 04 through Module 06 files in a 1,047-file learner or reference package with a 236,732-byte candidate manifest. The checkpoint carries Module 04's 25 points exactly once, requires all 62 inherited and 20 checkpoint gates, preserves every visible and silent failure and the blocked accessibility defect, retains the transparent model, and permits Module 07 clinician leadership review with conditions.
 
 The seventh runnable package is [Module 07](modules/07-clinician-leadership-product-defense/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/modules/07-clinician-leadership-product-defense-spec.md). It freezes both accepted checkpoints in a 1,347-file learner or reference candidate with a 1,320-row immutable manifest. Its 26 leadership records preserve no accepted threshold, the blocked accessibility defect, the detected silent failure, 22 hazards, 20 measures, 12 human escalation routes, and the failed R03, R04, and R08 ML rules. The reference earns 35.00 of 35.00, passes all 26 gates, records `accept with conditions` for curriculum construction, and recommends `revise before seeking local silent-mode approval`.
+
+The [final checkpoint](checkpoints/03-clinical-decision-support-package/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/checkpoints/03-clinical-decision-support-package-spec.md), freezes the exact 1,347-file Module 07 reference candidate in a 1,362-file final package. Its 1,347-row manifest is exact, the 35-point component is counted once, all 26 gates pass or pass with a linked condition, and the 14-question defense is adequate for curriculum construction. The course closes as `accept with conditions`; the CDS recommendation remains `revise before seeking local silent-mode approval`, and every clinical, silent-mode, implementation, production, and deployment boundary remains prohibited.
 
 No package may connect to a live clinical system, process real patient data, display a clinical alert, diagnose, order, deny, target, score real patients, implement, or deploy.

@@ -6,7 +6,7 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.85.0`
+- Current version: `0.86.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract, runnable Modules 01 through 06, and runnable Week 3 and Week 6 checkpoints.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
@@ -146,6 +146,8 @@ The sixth runnable unit is [APP-4 Module 06: Safety case, monitoring, governance
 The cumulative [APP-4 Week 6 checkpoint](courses/clinical-decision-support/checkpoints/02-workflow-sandbox-safety-release/reference/README.md), governed by its [durable specification](docs/curriculum/courses/APP-4/checkpoints/02-workflow-sandbox-safety-release-spec.md), freezes 1,030 accepted Module 04 through Module 06 files in a 1,047-file package. It carries the 25-point Module 04 score once, requires all 82 inherited and checkpoint gates, preserves all failures and the blocked accessibility defect, retains the transparent model after R03, R04, and R08 fail, and permits Module 07 clinician leadership review with conditions.
 
 The seventh runnable unit is [APP-4 Module 07: Clinician leadership, product brief, and defense](courses/clinical-decision-support/modules/07-clinician-leadership-product-defense/README.md), governed by its durable [Module 07 specification](docs/curriculum/courses/APP-4/modules/07-clinician-leadership-product-defense-spec.md). It freezes the complete 263-file Week 3 and 1,047-file Week 6 checkpoints in a 1,347-file leadership candidate, preserves all unaccepted thresholds and failures, assigns 17 stakeholder roles and 16 open conditions, and records `accept with conditions` separately from `revise before seeking local silent-mode approval`. Joe Joseph, MD, SFHM, is the designated clinician of record under a dated identity boundary; participation details remain a pre-alpha condition.
+
+The [APP-4 final checkpoint](courses/clinical-decision-support/checkpoints/03-clinical-decision-support-package/README.md), governed by its durable [checkpoint specification](docs/curriculum/courses/APP-4/checkpoints/03-clinical-decision-support-package-spec.md), freezes all 1,347 Module 07 files in a 1,362-file final package. It records the 35-point component once, requires all 26 gates, preserves 16 open conditions and a 14-question defense, and closes APP-4 for curriculum construction as `accept with conditions` while the separate CDS recommendation remains `revise before seeking local silent-mode approval`.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -323,9 +325,9 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Complete the APP-4 official-end-date checkpoint from the accepted Module 07 release.
-2. Close and remote-verify APP-4 before moving to APP-5.
-3. Continue APP-5 through APP-7 one distinct course at a time.
+1. Begin APP-5 Module 01 from its distinct course and source contract.
+2. Continue APP-5 through APP-7 one distinct course at a time.
+3. Preserve separate final checkpoints and clinician-led leadership blocks for every applied course.
 4. Complete named human reviews before alpha promotion.
 
 ## Licensing

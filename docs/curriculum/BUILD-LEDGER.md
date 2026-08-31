@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.85.0
+- Current release: 0.86.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-4 Module 07, clinician leadership, product brief, and defense
-- Next unit: APP-4 final checkpoint, Clinical Decision Support package
+- Last completed unit: APP-4 final checkpoint, Clinical Decision Support package
+- Next unit: APP-5 Module 01
 
 ## Confirmed decisions
 
@@ -661,6 +661,13 @@
 - The curriculum package status is `accept with conditions`. The separate CDS recommendation is `revise before seeking local silent-mode approval`.
 - Reference validation passes 9,436 checks, learner validation passes 9,351 checks, copied validation passes, two reference assemblies match, and 30 deliberate failure routes are rejected.
 - APP-4 Module 07 is a runnable release candidate at Commons 0.85.0. The official-end-date checkpoint is the next isolated build unit.
+- APP-4 Checkpoint 03 version 0.1.0 freezes the exact 1,347-file Module 07 reference candidate and verifies its 1,320-row, 319,268-byte immutable manifest with SHA-256 `8fc03ea9a7ebce8e0e4bf350b2699c5f74ec4a9c5ae493f25f26c94be8c2cea9`.
+- The final package contains 1,362 files. Its 1,347-row, 295,377-byte final manifest has SHA-256 `217a64aad1cbaf5bde9fb2e9a1bd5325140b6a82f20541818b7e1cfd170d17b3`.
+- The 35-point final component is counted once, producing `40 + 25 + 35 = 100` with zero duplication. All 26 gates pass or pass with a linked condition, all 16 conditions remain open, and all 14 defense answers are complete.
+- The final package preserves no accepted threshold, the blocked accessibility defect, the detected silent failure, all 17 failures, 22 hazards, 20 measures, 12 human escalation routes, zero automatic actions, failed R03/R04/R08, and the retained transparent model.
+- The curriculum package disposition is `accept with conditions`. The separate CDS recommendation remains `revise before seeking local silent-mode approval`.
+- Complete reference validation passes 6,817 checks, learner validation passes 6,785 checks, deterministic assemblies match, and 20 deliberate failure routes plus complete-mode learner rejection are verified.
+- APP-4 is complete for curriculum construction at Commons 0.86.0. Real-patient scoring, clinical threshold acceptance, clinical alerting or action, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -688,9 +695,8 @@
 
 ## Next resume instructions
 
-1. Read the APP-4 course, Module 07 release, both accepted checkpoint releases, and the final-checkpoint contract.
-2. Freeze the exact 1,347-file Module 07 reference candidate without recomputing, repairing, or improving its evidence.
-3. Count the 35-point Module 07 component once and preserve all 26 gates, 16 open conditions, 14 defense answers, reviewer state, and reproduction boundary.
-4. Preserve `accept with conditions` as the curriculum package status and `revise before seeking local silent-mode approval` as the separate CDS recommendation.
-5. Keep every threshold, failure, accessibility, safety, monitoring, ML, clinical, silent-mode, implementation, production, and deployment boundary exact.
-6. Advance semver, validate the complete curriculum, commit, push, and remote-verify the official-end-date checkpoint before beginning APP-5.
+1. Read the APP-5 course source record and master curriculum routing contract.
+2. Confirm APP-5's distinct domain decision, seven-module sequence, public-source ownership, Week 3 and Week 6 deliverables, embedded ML boundary, and clinician-led Module 07 outcome.
+3. Write the APP-5 course-level durable specification before building Module 01 if it is not already complete.
+4. Build APP-5 Module 01 as an isolated release without importing APP-4's fictional case, thresholds, model, prototype, score, or governance conclusion.
+5. Advance semver, validate the complete curriculum, commit, push, and remote-verify each APP-5 unit before moving to the next.

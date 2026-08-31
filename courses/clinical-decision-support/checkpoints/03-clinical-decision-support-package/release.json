@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app4-cp03",
+    "title": "Clinical Decision Support package",
+    "version": "0.1.0",
+    "commons_release": "0.86.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_candidate": {
+    "id": "oclc-app4-07",
+    "version": "0.1.0",
+    "commons_release": "0.85.0",
+    "candidate_files": 1347,
+    "immutable_manifest_rows": 1320,
+    "immutable_manifest_bytes": 319268,
+    "immutable_manifest_sha256": "8fc03ea9a7ebce8e0e4bf350b2699c5f74ec4a9c5ae493f25f26c94be8c2cea9",
+    "release_bytes": 4590,
+    "release_sha256": "8e2eada4dadc30d92976963bc8bd01639ea851b88e115464801ee9900ed6e7cd"
+  },
+  "accepted_release_sha256": {
+    "checkpoint01": "8f637bef551ebe5cb91e93b3b91fef51f25736d07168b904851405c703b62c03",
+    "checkpoint02": "05e65b59f0d4c4b33dc341256141e39c02cfffc32e22aca546dbb85384cb1221"
+  },
+  "course_score": {
+    "week3": 40,
+    "week6": 25,
+    "final": 35,
+    "total": 100,
+    "final_score": "35.00 of 35.00",
+    "double_counted_components": 0
+  },
+  "reference_decision": {
+    "gates": "26 of 26 pass or pass with an allowed condition",
+    "defense": "adequate for curriculum construction",
+    "package_disposition": "accept with conditions",
+    "cds_recommendation": "revise before seeking local silent-mode approval",
+    "accepted_threshold": null,
+    "selected_design": "panel-t003 mechanics fixture only",
+    "ml_decision": "retain transparent model",
+    "open_conditions": 16,
+    "reviewer_roles": 14,
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited",
+    "course_status": "complete for curriculum construction only",
+    "proposed_tag": "app4-clinical-decision-support-candidate-v0.1.0",
+    "tag_status": "proposed - not created"
+  },
+  "package": {
+    "candidate_files": 1347,
+    "final_review_files": 15,
+    "assembled_files": 1362,
+    "candidate_manifest_rows": 1347,
+    "candidate_manifest_bytes": 295377,
+    "candidate_manifest_sha256": "217a64aad1cbaf5bde9fb2e9a1bd5325140b6a82f20541818b7e1cfd170d17b3"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 6817,
+    "starter_checks": 6785,
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "inside_candidate_target_rejection": "pass",
+    "failure_routes": 20,
+    "complete_mode_template_rejection": "pass"
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "checkpoint specification, deterministic final assembly, review package, validation, and release record"
+    }
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, and final biography wording before alpha.",
+    "Named clinical, informatics, interoperability, safety, workflow, patient, access, equity, accessibility, survey-methods, model-risk, privacy, security, responsible-AI, and independent reviews remain pending.",
+    "Independent human clean reproduction and a live or approved equivalent 14-question defense remain pending.",
+    "The official section and half-term dates remain to be assigned from the published calendar.",
+    "No clinical threshold is accepted; the malformed-card accessibility defect remains blocked; local validity, utility, workflow, access, equity, privacy, security, and safety evidence remains absent.",
+    "The tag is proposed and has not been created.",
+    "The package does not authorize real-patient scoring, clinical threshold acceptance, clinical alerting or action, silent-mode evaluation, implementation, production connection, or deployment."
+  ]
+}

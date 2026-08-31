@@ -1,0 +1,27 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,Exact Checkpoint 01 Checkpoint 02 and Module 07 release identities,pass,final-review/submission-record.md,independent reproducer,
+G02,Exact 1347-file candidate and 1347-row final manifest,pass,final-review/candidate-manifest.csv,independent reproducer,
+G03,Exact 1320-row Module 07 immutable manifest and fingerprint,pass,release-manifest.csv,independent reproducer,
+G04,Repository source commit versions releases and proposed tag recorded,pass with condition,final-review/submission-record.md,APP-4 faculty owner,C16
+G05,Source roles data classes fictional service and prohibited-data boundaries pass,pass,final-review/final-audit.md,data-governance reviewer,
+G06,Intended use action nonaction workflow timing and prohibited action remain unchanged,pass,product-brief.md,clinical decision owner,
+G07,All six thresholds remain unaccepted and the 0.20 fixture remains rejected,pass,logic-input-threshold.md,clinical governance reviewer,
+G08,Panel-t003 and 0.03000000 remain mechanics fixtures only,pass,prototype-disclosure.md,clinical informatics reviewer,
+G09,All 17 visible and silent failures remain visible,pass,prototype-disclosure.md,patient-safety reviewer,
+G10,The malformed-card accessibility defect remains blocked,pass with condition,accessible-communication.md,accessibility reviewer,C04
+G11,All 22 hazards and complete safety life-cycle controls remain visible,pass with condition,safety-case.md,patient-safety reviewer,C06
+G12,All 20 monitoring measures and unavailable states remain visible,pass with condition,monitoring-silent-failure-plan.md,monitoring reviewer,C07
+G13,All 12 escalation routes remain human owned and automatic actions remain zero,pass,monitoring-silent-failure-plan.md,patient-safety reviewer,
+G14,Historical evidence limits and absent local validity or utility remain explicit,pass,evidence-synthesis.md,survey-methods reviewer,
+G15,Workflow burden hidden work override staff voice and blame protection remain explicit,pass with condition,workflow-patient-consequences.md,human-factors reviewer,C08
+G16,Patient access language disability cost privacy equity and recourse remain addressed,pass with condition,workflow-patient-consequences.md,patient and equity reviewers,C09
+G17,Fixed comparable ML evidence and failed R03 R04 R08 remain exact,pass with condition,technical-appendix.md,model-risk reviewer,C11
+G18,The transparent model remains retained and no threshold is accepted,pass,responsible-claims-audit.md,model-risk reviewer,
+G19,Week 3 Week 6 and final course points are counted exactly once,pass,final-review/final-score.csv,assessment owner,
+G20,Package disposition and CDS recommendation remain separate allowed and bounded,pass,final-review/final-decision.md,clinical decision owner,
+G21,Future evaluation remains a proposal requiring local human approval,pass with condition,evaluation-proposal.md,local evaluation owner,C13
+G22,Ownership decision rights disagreement stop restart and retirement are complete,pass with condition,final-review/reviewer-record.md,APP-4 faculty owner,C12
+G23,Accessible exact communication claims AI disclosure and reproduction are complete,pass with condition,final-review/final-audit.md,independent reproducer,C16
+G24,All 16 conditions remain open owned and linked to evidence,pass with condition,final-review/conditions-register.csv,APP-4 faculty owner,C15
+G25,All 14 defense answers are adequate and all reviewer roles are present,pass with condition,final-review/final-defense.md,faculty and clinician panel,C14
+G26,Course completion tag state decisions and every authority prohibition are consistent,pass,final-review/release-acceptance.md,APP-4 faculty owner,

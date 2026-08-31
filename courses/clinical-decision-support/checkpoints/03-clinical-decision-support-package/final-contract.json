@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint": {
+    "id": "oclc-app4-cp03",
+    "version": "0.1.0",
+    "commons_release": "0.86.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_module07": {
+    "id": "oclc-app4-07",
+    "version": "0.1.0",
+    "candidate_files": 1347,
+    "immutable_manifest_rows": 1320,
+    "immutable_manifest_bytes": 319268,
+    "immutable_manifest_sha256": "8fc03ea9a7ebce8e0e4bf350b2699c5f74ec4a9c5ae493f25f26c94be8c2cea9",
+    "release_bytes": 4590,
+    "release_sha256": "8e2eada4dadc30d92976963bc8bd01639ea851b88e115464801ee9900ed6e7cd"
+  },
+  "accepted_releases": {
+    "checkpoint1_sha256": "8f637bef551ebe5cb91e93b3b91fef51f25736d07168b904851405c703b62c03",
+    "checkpoint2_sha256": "05e65b59f0d4c4b33dc341256141e39c02cfffc32e22aca546dbb85384cb1221"
+  },
+  "package": {
+    "candidate_files": 1347,
+    "final_review_files": 15,
+    "assembled_files": 1362,
+    "final_manifest_rows": 1347,
+    "final_manifest_bytes": 295377,
+    "final_manifest_sha256": "217a64aad1cbaf5bde9fb2e9a1bd5325140b6a82f20541818b7e1cfd170d17b3"
+  },
+  "score": {
+    "maximum": 35.0,
+    "minimum_to_pass": 28.0,
+    "criteria": {"E01": 8.0, "C01": 9.0, "L01": 8.0, "G01": 6.0, "H01": 4.0}
+  },
+  "required_gates": 26,
+  "defense_questions": 14,
+  "required_conditions": 16,
+  "required_reviewer_roles": 14,
+  "allowed_package_dispositions": ["accept", "accept with conditions", "revise", "refer"],
+  "allowed_cds_recommendations": [
+    "recommend seeking local approval for bounded silent-mode evaluation",
+    "revise before seeking local silent-mode approval",
+    "refer",
+    "stop"
+  ],
+  "reference": {
+    "package_disposition": "accept with conditions",
+    "cds_recommendation": "revise before seeking local silent-mode approval",
+    "accepted_threshold": null,
+    "selected_design": "panel-t003 mechanics fixture only",
+    "ml_decision": "retain transparent model",
+    "course_status": "complete for curriculum construction only",
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited",
+    "proposed_tag": "app4-clinical-decision-support-candidate-v0.1.0",
+    "tag_status": "proposed - not created"
+  }
+}

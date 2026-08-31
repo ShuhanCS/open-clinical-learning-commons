@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.85.0 through Module 07.
+- Current Commons release: 0.86.0 through the final checkpoint.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -380,7 +380,7 @@ The accepted checkpoint freezes 1,030 files from the complete Module 04 through 
 - Package path: `courses/clinical-decision-support/checkpoints/03-clinical-decision-support-package/`.
 - Specification: `docs/curriculum/courses/APP-4/checkpoints/03-clinical-decision-support-package-spec.md`.
 - Decision: should the fictional governance council recommend seeking local approval for a bounded silent-mode evaluation, revise, refer, or stop?
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Checkpoint version `0.1.0` and Commons release `0.86.0`; APP-4 is complete for curriculum construction with conditions.
 
 Required evidence includes both accepted checkpoints; immutable candidate manifest; final reproducible repository; intended-use and product brief; evidence synthesis; logic and input contract; threshold and alert budget; workflow and patient-consequence brief; prototype disclosure; safety case; monitoring and silent-failure plan; evaluation proposal; model, rule, terminology, data, and interface stewardship; escalation, stop, fallback, restart, and retirement rules; accountability and disagreement records; accessible exact evidence; technical appendix; AI and claims audit; 35-point score; gates; defense; reviewer record; reproduction; conditions; and separate package and evaluation recommendations.
 
@@ -545,5 +545,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 06 freezes all 341 Module 05 files, builds a complete safety and monitoring case, evaluates one fixed challenger on the same 7,544 rows, retains the transparent model after three replacement-rule failures, and protects the zero-point Week 6 handoff.
 - [x] Checkpoint 02 freezes all 1,030 Module 04 through Module 06 files, counts the 25-point Module 04 score once, preserves all 82 inherited and checkpoint gates, and releases a validated 1,047-file cumulative workspace.
 - [x] Module 07 freezes both accepted checkpoints in a validated 1,347-file leadership candidate, adds the 35-point final component, passes 26 gates, and separates curriculum acceptance from the recommendation to revise before seeking local silent-mode approval.
+- [x] The final checkpoint freezes the exact 1,347-file Module 07 candidate in a validated 1,362-file package, counts the 35-point component once, preserves all 16 conditions and 14 defense answers, and closes APP-4 for curriculum construction without adding authority.
 
-APP-4 Modules 01 through 07 and Checkpoints 01 and 02 are complete for curriculum construction. Resume with the final checkpoint by freezing the exact 1,347-file Module 07 release, counting its 35-point component once, preserving all 26 gates and 16 open conditions, and retaining the separate `accept with conditions` package status and `revise before seeking local silent-mode approval` CDS recommendation.
+APP-4 Modules 01 through 07 and all three checkpoints are complete for curriculum construction. The final course disposition is `accept with conditions`; the separate CDS recommendation is `revise before seeking local silent-mode approval`. Resume the program build with APP-5 Module 01 under its own domain decision, public-source contract, and distinct foundation revisit.
