@@ -1,0 +1,10 @@
+role_id,source_or_layer,accepted_role,module01_evidence,later_use,not_supported,status,owner
+"DR-01","CDC PLACES 2025 Massachusetts DIABETES tracts","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-02","ACS 2020-2024 B01001 Massachusetts tracts","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-03","CDC/ATSDR SVI 2022 Massachusetts tracts","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-04","TIGER/Line 2024 Massachusetts tracts","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-05","Future deterministic synthetic event aggregates","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-06","Future synthetic program capacity","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-07","Future synthetic community-review records","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-08","Future synthetic implementation stream","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"DR-09","Agent-produced material","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"

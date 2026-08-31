@@ -1,0 +1,11 @@
+contract_id,measure_or_role,numerator,denominator,population,source,period,geography,module01_status,later_owner,claim_limit
+"PD-01","PLACES modeled diagnosed-diabetes prevalence","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-02","ACS total population estimate","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-03","ACS adult age-by-sex denominator","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-04","Direct-standardization denominator","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-05","Guided indirect-standardization denominator","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-06","Synthetic event numerator","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-07","SVI population context","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-08","Unmatched-tract state","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-09","Individual denominator","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"PD-10","Allocation denominator","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"

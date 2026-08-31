@@ -449,17 +449,17 @@
       "stage": "Applied",
       "title": "Data for Population Health and Equity",
       "credits": 3,
-      "format": "Seven-week online block",
+      "format": "Seven-module online half-term",
       "prerequisites": "FND-1 and FND-2",
-      "summary": "Measure how health differs across groups and places, then shape an accountable intervention.",
-      "finalDeliverable": "Final population intervention analytics plan.",
+      "summary": "Build population measures, study disparities and place, test fair targeting choices, and shape an accountable intervention.",
+      "finalDeliverable": "Population intervention analytics plan with an equity rationale, monitoring, community accountability, and a clinician-led defense.",
       "modules": [
         {
           "week": 1,
           "title": "Framing a population-health decision",
           "outcome": "Frame a population-health decision with its denominator, geography, time frame, and accountable audience.",
-          "topics": "Population and community health, denominator logic, geographic levels, surveillance framing, community accountability, equity and disparity definitions.",
-          "submission": "Population decision charter.",
+          "topics": "Population and community health, denominator roles, tract geography, source periods, public-data limits, community accountability, equity and disparity language.",
+          "submission": "Population decision charter and source-feasibility release.",
           "hours": 15.5
         },
         {
@@ -496,17 +496,17 @@
         },
         {
           "week": 6,
-          "title": "Designing an accountable intervention plan",
-          "outcome": "Design an accountable population intervention analytics plan.",
-          "topics": "Intervention analytics design, implementation measures, evaluation design, community communication, feedback loops, accountability.",
-          "submission": "Draft population intervention plan.",
+          "title": "Accountable intervention design, monitoring, and embedded ML",
+          "outcome": "Design an accountable intervention and decide whether a fixed area-profile challenger adds useful planning questions.",
+          "topics": "Intervention analytics, implementation measures, monitoring, feedback, governance, fixed clustering challenger, stability, support, and human decision ownership.",
+          "submission": "Cumulative Week 6 place, targeting, intervention, monitoring, and ML release.",
           "hours": 16
         },
         {
           "week": 7,
-          "title": "Defending the population recommendation",
-          "outcome": "Defend the population recommendation and its monitoring plan.",
-          "topics": "Evidence synthesis, equity rationale, monitoring measures, community-facing communication, decision accountability, stated limits.",
+          "title": "Clinician leadership and equity recommendation",
+          "outcome": "Defend a bounded population recommendation with clinician leadership and community accountability.",
+          "topics": "Evidence synthesis, equity rationale, clinical consequences, monitoring, community-facing communication, disagreement, stop rights, stewardship, and stated limits.",
           "submission": "Final population intervention analytics plan.",
           "hours": 16
         }

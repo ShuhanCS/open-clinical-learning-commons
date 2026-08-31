@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.86.0
+- Current release: 0.87.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-4 final checkpoint, Clinical Decision Support package
-- Next unit: APP-5 Module 01
+- Last completed unit: APP-5 Module 01, Framing a population-health decision
+- Next unit: APP-5 Module 02
 
 ## Confirmed decisions
 
@@ -21,6 +21,8 @@
 - FND-1 preserves the source assessment weights through cumulative checkpoints: 40 percent at Week 3, 25 percent at Week 6, and 35 percent on the official last day.
 - APP-3 preserves its own source assessment weights through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day. The generic APP-1 and APP-2 `20 / 45 / 35` pattern does not apply.
 - APP-4 preserves its own source assessment weights through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day.
+- APP-5 preserves all source assessment work through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day.
+- APP-5 owns population denominators, standardization, disparity measurement, geographic reasoning, fair targeting, accountable intervention design, monitoring, community accountability, and a clinician-led equity recommendation.
 
 ## Source status
 
@@ -47,6 +49,9 @@
 - APP-4 uses 16 complete NHANES source routes for historical evidence and a separate synthetic FHIR R4 and CDS Hooks layer for workflow, burden, drift, interaction, and silent-failure evidence.
 - APP-4 uses the explicitly fictional `CGH-GIM-01` service. No NHANES or synthetic result may be represented as local clinical validation.
 - APP-4 Module 06 contains eight hours of safety, monitoring, and governance plus an eight-hour gradient-boosted classification ML extension. Module 07 is clinician led.
+- The APP-5 source file is byte-for-byte identical in both supplied archives: 20,996 bytes and SHA-256 `681f7e41878205492156535a5242a2ca599de677763fad69bbc73324e8eb38a7`.
+- The APP-5 specification defines seven distinct applied modules totaling 112.5 hours. Module 06 contains eight hours of intervention design, monitoring, feedback, and governance plus an eight-hour fixed clustering challenger. Module 07 is clinician led.
+- APP-5 uses Massachusetts census tracts for the fictional `FMA-DP-01` adult diabetes-prevention planning review. Public small-area estimates are not observed cases, individual traits, local validation, causal evidence, automatic eligibility, or allocation authority.
 - FND-2 owns analytic aims and targets, regression, prediction evaluation, validity, adjustment, longitudinal boundaries, forecasting, testing, agent verification, model cards, monitoring, governance, and defense. It does not repeat FND-1 data-pipeline work.
 - The primary modeling case preserves the accepted 374-row FND-1 synthetic analytic table and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
 - The 90-day acute-return label contains 36 positive and 338 negative rows. The fixed temporal split contains 224, 75, and 75 rows with 25, 7, and 4 positive outcomes.
@@ -668,6 +673,11 @@
 - The curriculum package disposition is `accept with conditions`. The separate CDS recommendation remains `revise before seeking local silent-mode approval`.
 - Complete reference validation passes 6,817 checks, learner validation passes 6,785 checks, deterministic assemblies match, and 20 deliberate failure routes plus complete-mode learner rejection are verified.
 - APP-4 is complete for curriculum construction at Commons 0.86.0. Real-patient scoring, clinical threshold acceptance, clinical alerting or action, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
+- APP-5 Module 01 version 0.1.0 pins 1,597 Massachusetts CDC PLACES 2025 diabetes tract rows, 1,620 ACS 2020-2024 B01001 tract rows, and 1,613 CDC/ATSDR SVI 2022 tract rows.
+- All 1,597 PLACES tracts match both ACS and SVI. The three-source union contains 1,620 tracts, and all source-specific differences remain explicit.
+- The release inventories 282 fields and builds a 27-file learner or reference workspace from 16 immutable manifest rows and ten editable records.
+- Complete validation passes 176 checks, starter validation passes 112 checks, copied validation passes, deterministic reference assemblies match, and eight protected failure routes are rejected.
+- APP-5 Module 01 is a runnable release candidate at Commons 0.87.0. Module 02 population-measure construction may begin with conditions; rate construction, standardization, disparity claims, mapping, tract ranking, targeting, allocation, model fitting, intervention-effect estimation, real community action, implementation, and deployment remain prohibited in Module 01.
 
 ## Pending confirmation
 
@@ -691,12 +701,16 @@
 - Complete named APP-4 Checkpoint 02 clinical, patient-safety, workflow, interoperability, model-risk, survey-methods, equity, accessibility, privacy, security, governance, responsible-AI, clinician-leadership, and independent-reproduction review before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
+- Assign the official APP-5 section and half-term dates from the published calendar.
+- Confirm APP-5's population, numerator concept, denominator roles, geography, source periods, community-review model, possible benefit and harm, alternative action, nonaction, review rights, and stop rights before alpha.
+- Independently review the pinned PLACES, ACS B01001, SVI, and TIGER source versions, field roles, estimates, margins, flags, sentinel values, joins, and licensing or attribution requirements.
+- Complete named faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, GIS, community, equity, language-access, disability-access, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 01 before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-5 course source record and master curriculum routing contract.
-2. Confirm APP-5's distinct domain decision, seven-module sequence, public-source ownership, Week 3 and Week 6 deliverables, embedded ML boundary, and clinician-led Module 07 outcome.
-3. Write the APP-5 course-level durable specification before building Module 01 if it is not already complete.
-4. Build APP-5 Module 01 as an isolated release without importing APP-4's fictional case, thresholds, model, prototype, score, or governance conclusion.
-5. Advance semver, validate the complete curriculum, commit, push, and remote-verify each APP-5 unit before moving to the next.
+1. Read the accepted APP-5 course specification, source record, Module 01 specification, package, and release record.
+2. Freeze the exact Module 01 public-source releases, 16 immutable manifest rows, 27-file reference workspace, progression decision, conditions, and authority limits.
+3. Build APP-5 Module 02 as the population-measure and denominator release: link the accepted tract sources, add the approved synthetic event layer, construct crude and specific rates, and perform direct and indirect standardization.
+4. Do not rank tracts, make disparity claims, select targeting or allocation rules, fit a model, estimate intervention effects, make real community claims, implement, or deploy.
+5. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 02 before moving to Module 03.

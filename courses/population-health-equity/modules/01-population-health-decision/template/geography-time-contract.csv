@@ -1,0 +1,9 @@
+contract_id,element,accepted_value,status,source_or_owner,later_use,limit
+"GT-01","Primary public key","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"GT-02","PLACES geography and time","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"GT-03","ACS geography and time","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"GT-04","SVI geography and time","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"GT-05","Boundary source","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"GT-06","Aggregation comparison","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"GT-07","Surveillance cadence","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"GT-08","Individual geography","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"

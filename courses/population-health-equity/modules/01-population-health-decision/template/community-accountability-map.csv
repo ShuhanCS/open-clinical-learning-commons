@@ -1,0 +1,13 @@
+stakeholder_id,role,decision_right,module01_evidence_owned,can_require_revision,can_stop,open_condition
+"CA-01","affected residents","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-02","community organizations","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-03","population-health clinician","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-04","epidemiologist","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-05","biostatistician","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-06","GIS and geography reviewer","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-07","racial and ethnic equity reviewer","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-08","language and disability access reviewer","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-09","public-health program lead","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-10","data steward and privacy reviewer","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-11","resource-allocation owner","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"
+"CA-12","FMA-DP-01 fictional planning council","REPLACE","REPLACE","REPLACE","REPLACE","REPLACE"

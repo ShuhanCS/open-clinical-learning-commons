@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.86.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract, runnable Modules 01 through 06, and runnable Week 3 and Week 6 checkpoints.
+- Current version: `0.87.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-4 are complete with seven modules and three checkpoints each. APP-5 has a complete course contract and a runnable first module.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -148,6 +148,10 @@ The cumulative [APP-4 Week 6 checkpoint](courses/clinical-decision-support/check
 The seventh runnable unit is [APP-4 Module 07: Clinician leadership, product brief, and defense](courses/clinical-decision-support/modules/07-clinician-leadership-product-defense/README.md), governed by its durable [Module 07 specification](docs/curriculum/courses/APP-4/modules/07-clinician-leadership-product-defense-spec.md). It freezes the complete 263-file Week 3 and 1,047-file Week 6 checkpoints in a 1,347-file leadership candidate, preserves all unaccepted thresholds and failures, assigns 17 stakeholder roles and 16 open conditions, and records `accept with conditions` separately from `revise before seeking local silent-mode approval`. Joe Joseph, MD, SFHM, is the designated clinician of record under a dated identity boundary; participation details remain a pre-alpha condition.
 
 The [APP-4 final checkpoint](courses/clinical-decision-support/checkpoints/03-clinical-decision-support-package/README.md), governed by its durable [checkpoint specification](docs/curriculum/courses/APP-4/checkpoints/03-clinical-decision-support-package-spec.md), freezes all 1,347 Module 07 files in a 1,362-file final package. It records the 35-point component once, requires all 26 gates, preserves 16 open conditions and a 14-question defense, and closes APP-4 for curriculum construction as `accept with conditions` while the separate CDS recommendation remains `revise before seeking local silent-mode approval`.
+
+The fifth applied course is specified in [APP-5: Data for Population Health and Equity](docs/curriculum/courses/APP-5/course-spec.md), with its exact curriculum-source fingerprint and public-data routing in [the APP-5 source record](docs/source/app-5-population-health-equity-source-record.md). APP-5 owns population denominators, standardization, disparity measurement, geographic reasoning, fair targeting, accountable intervention design, monitoring, community review, and a clinician-led equity recommendation. It preserves 40 points at Week 3, 25 points at Week 6, and 35 points on the official half-term end date.
+
+The first runnable unit is [APP-5 Module 01: Framing a population-health decision](courses/population-health-equity/modules/01-population-health-decision/README.md), governed by its durable [Module 01 specification](docs/curriculum/courses/APP-5/modules/01-population-health-decision-spec.md). It pins 1,597 Massachusetts CDC PLACES diabetes tract rows, 1,620 ACS tract rows, and 1,613 SVI tract rows; inventories 282 fields; and releases a 27-file learner or reference workspace. All 1,597 PLACES tracts match both ACS and SVI. Module 02 measure construction may begin with conditions, while rate calculation, standardization, disparity claims, tract ranking, targeting, model fitting, real community action, implementation, and deployment remain outside Module 01 authority.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -325,8 +329,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Begin APP-5 Module 01 from its distinct course and source contract.
-2. Continue APP-5 through APP-7 one distinct course at a time.
+1. Begin APP-5 Module 02 from the accepted Module 01 handoff.
+2. Continue APP-5 through APP-7 one distinct module and course at a time.
 3. Preserve separate final checkpoints and clinician-led leadership blocks for every applied course.
 4. Complete named human reviews before alpha promotion.
 
