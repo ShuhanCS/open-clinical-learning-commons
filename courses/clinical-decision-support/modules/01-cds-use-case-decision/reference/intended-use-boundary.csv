@@ -1,0 +1,13 @@
+boundary_id,element,status,module01_decision,later_owner,reason
+IU01,primary user,accepted,clinician responsible for the current adult encounter,Module 02 logic owner,one named human receives support
+IU02,workflow moment,accepted,after required encounter information is available and before encounter close,Module 02 workflow and trigger owner,timing must be testable
+IU03,intended support,accepted,ask the clinician to consider whether confirmatory HbA1c testing is appropriate,clinical content reviewer,nonbinding wording separates support from diagnosis
+IU04,final clinical eligibility,open,not finalized in Module 01,clinical content reviewer and Module 02,requires clinical and data-availability review
+IU05,final analytic target,open,not finalized in Module 01,clinical and methods reviewers in Module 03,requires reviewed outcome and time contract
+IU06,predictor list,open,not finalized in Module 01,Module 02 and Module 03,inputs must be available at the decision and clinically supportable
+IU07,threshold,prohibited,not selected in Module 01,Module 03 with human governance,requires calibration burden missed-case and consequence evidence
+IU08,automatic order,prohibited,never permitted in the course,local clinical governance outside course,removes human decision ownership
+IU09,diagnosis,prohibited,the advisory cannot diagnose,qualified clinician outside course,a prediction or survey value is not a diagnosis
+IU10,real-patient scoring,prohibited,no live or silent scoring authorized,local governance outside course,curriculum evidence cannot approve prospective use
+IU11,production connection,prohibited,no live EHR or clinical network connection,local governance outside course,security privacy safety and implementation review are absent
+IU12,course progression,accepted,Module 02 construction may begin with conditions,APP-4 faculty owner,progression concerns curriculum construction only

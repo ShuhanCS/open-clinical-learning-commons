@@ -1,0 +1,32 @@
+module_id: oclc-app4-01
+module_version: 0.1.0
+commons_release: 0.77.0
+retrieved: 2026-08-30
+publisher: CDC National Center for Health Statistics
+collection: National Health and Nutrition Examination Survey
+portal: https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/
+analytic_guidance: https://wwwn.cdc.gov/Nchs/data/nhanes/analyticguidelines/11-16-analytic-guidelines.pdf
+complete_xpt_files: 16
+cycles: 4
+components_per_cycle: 4
+raw_bytes: 34221200
+gzip_bytes: 3149043
+source_rows: 145563
+field_inventory_rows: 442
+duplicate_seqn_rows: 0
+source_inventory: data/source-inventory.csv
+source_inventory_sha256: 10861ec8526a8cdb9c5e47b45d3b226ea2d545fdecb324b0fda755b274a37e54
+field_inventory: data/field-inventory.csv
+field_inventory_sha256: 2b124ea7954bc0eb2225ba4e15abc637eb575a0e9037832aeb0df7a12149b848
+cycle_join_profile: data/cycle-join-profile.csv
+cycle_join_profile_sha256: c57edf48acdcd2399eef7fd42a45f58182c810e010dfde36040cd965683b797c
+standards_inventory: data/standards-inventory.csv
+standards_inventory_sha256: 1f89b457b376cb0ae138580bb2c6afae21daabdf5c266d12b4eaaf38827cc9bc
+raw_directory: data/raw
+raw_files_committed: true
+compression: deterministic gzip with empty filename and mtime zero
+join_key: SEQN within cycle only
+teaching_role: historical survey source feasibility and later evidence evaluation
+claim_limit: not local workflow evidence, local prevalence, prospective utility, clinical guidance, or deployment validation
+synthetic_service: CGH-GIM-01
+public_to_synthetic_identity_linkage: prohibited

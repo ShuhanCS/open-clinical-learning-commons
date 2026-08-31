@@ -1,0 +1,6 @@
+source_id,title,version,url,teaching_role,claim_limit
+CDS-HOOKS-2.0.1,CDS Hooks,2.0.1,https://cds-hooks.hl7.org/,"nonproduction hook, context, request, and response shapes",does not certify conformance or EHR compatibility
+FHIR-R4-OBSERVATION,FHIR R4 Observation,4.0.1,https://hl7.org/fhir/R4/observation.html,synthetic observation shape and timing,does not certify terminology or implementation readiness
+FHIR-R4-CONDITION,FHIR R4 Condition,4.0.1,https://hl7.org/fhir/R4/condition.html,synthetic condition shape and status,does not define a clinical diagnosis or local problem list
+SYNTHEA-4.0.0,Synthea synthetic patient generator,4.0.0,https://github.com/synthetichealth/synthea/releases/tag/v4.0.0,candidate upstream synthetic FHIR generator for Module 02,synthetic output is not clinical or deployment evidence
+ONC-SAFER-CPOE-CDS,SAFER Guide 3: Computerized Provider Order Entry with Decision Support,2025 PDF,https://www.healthit.gov/wp-content/uploads/2025/06/SAFER-Guide-3.-CPOE-Final.pdf,"safety, governance, and unintended-consequence prompts","does not replace local review, policy, testing, or approval"

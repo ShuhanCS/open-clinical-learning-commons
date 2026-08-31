@@ -1,0 +1,14 @@
+stakeholder_id,role,decision_right,module01_evidence_owned,can_require_revision,can_stop,open_condition
+ST01,APP-4 faculty owner,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST02,primary care or endocrinology clinical reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST03,clinical informatics physician,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST04,nursing and workflow lead,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST05,patient and access representative,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST06,NHANES survey-methods reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST07,FHIR and CDS Hooks reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST08,patient-safety reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST09,privacy and data-governance reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST10,accessibility and communication reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST11,responsible-AI reviewer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST12,independent reproducer,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+ST13,Joe Joseph MD SFHM,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

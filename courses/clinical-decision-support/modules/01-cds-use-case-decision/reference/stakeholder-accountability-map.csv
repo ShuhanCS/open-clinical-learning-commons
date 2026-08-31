@@ -1,0 +1,14 @@
+stakeholder_id,role,decision_right,module01_evidence_owned,can_require_revision,can_stop,open_condition
+ST01,APP-4 faculty owner,accept revise refer or stop curriculum progression,complete module contract and assessment,true,true,name and confirm before alpha
+ST02,primary care or endocrinology clinical reviewer,accept revise or reject clinical purpose eligibility exclusions and wording,clinical coherence and patient consequence,true,true,name and confirm before alpha
+ST03,clinical informatics physician,accept revise or reject workflow trigger input and override concept,intended use and workflow boundary,true,true,name and confirm before alpha
+ST04,nursing and workflow lead,accept revise or reject timing role burden and handoff assumptions,user workflow and hidden work,true,true,name and confirm before alpha
+ST05,patient and access representative,accept revise or refer patient burden access privacy and recourse language,patient consequence and access questions,true,true,name terms and support before alpha
+ST06,NHANES survey-methods reviewer,accept revise or reject source and survey-design interpretation,cycle roles weights support and comparability,true,true,name and confirm before alpha
+ST07,FHIR and CDS Hooks reviewer,accept revise or reject teaching message and resource claims,standards role and nonconformance boundary,true,true,name and confirm before alpha
+ST08,patient-safety reviewer,accept revise or stop hazard failure escalation and authority wording,prohibited action and future failure requirements,true,true,name and confirm before alpha
+ST09,privacy and data-governance reviewer,accept revise or stop data-role and access plan,public synthetic and future local boundaries,true,true,name and confirm before alpha
+ST10,accessibility and communication reviewer,accept revise inaccessible or coercive materials,plain language and structured records,true,true,name and confirm before alpha
+ST11,responsible-AI reviewer,accept revise or stop agent use and automation claims,AI disclosure and human ownership,true,true,name and confirm before alpha
+ST12,independent reproducer,accept or reject source and workspace reproduction,source bytes profiles builds and validation,true,true,name and complete clean reproduction before alpha
+ST13,Joe Joseph MD SFHM,Module 07 clinician leadership and defense only,no Module 01 review claimed,true,true,direct participation remains pending before alpha

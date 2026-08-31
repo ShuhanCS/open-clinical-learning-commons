@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.76.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.77.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2847,7 +2847,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.76.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.77.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4047,8 +4047,8 @@ if (
     $app4Content -match '(?im)[A-Z]:\\Users\\' -or
     $app4SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app4PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app4Content -notmatch 'Current Commons release: 0\.76\.0' -or
-    $app4PackageContent -notmatch 'Current Commons release: 0\.76\.0' -or
+    $app4Content -notmatch 'Current Commons release: 0\.77\.0' -or
+    $app4PackageContent -notmatch 'Current Commons release: 0\.77\.0' -or
     $app4Content -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
     $app4SourceContent -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
     $app4SourceContent -notmatch '21,676' -or
@@ -4070,11 +4070,107 @@ if (
     $app4SourceContent -notmatch 'https://hl7\.org/fhir/R4/observation\.html' -or
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
-    $app4PackageContent -notmatch 'course contract complete; Module 01 is next' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.76.0'
+    $app4PackageContent -notmatch 'Module 01 is a runnable release candidate; Module 02 is next' -or
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.77.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
+
+$app4Module01Root = Join-Path $repo 'courses\clinical-decision-support\modules\01-cds-use-case-decision'
+$app4Module01Spec = Join-Path $repo 'docs\curriculum\courses\APP-4\modules\01-cds-use-case-decision-spec.md'
+$app4Module01Records = @(
+    'cds-use-case-charter.md', 'user-workflow-action-map.csv', 'intended-use-boundary.csv',
+    'source-feasibility-interpretation.md', 'public-synthetic-data-role-map.csv',
+    'input-availability-inventory.csv', 'synthetic-generation-contract.md',
+    'stakeholder-accountability-map.csv', 'claim-boundary.csv', 'ai-use.md',
+    'progression-decision.md'
+)
+$app4Module01Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'requirements.txt', 'assessment.md',
+    'build_workspace.py', 'data-spec.md', 'decision-contract.json', 'instructor-notes.md',
+    'profile_sources.py', 'release.json', 'source-record.yml', 'validate_workspace.py',
+    'data\source-inventory.csv', 'data\field-inventory.csv', 'data\cycle-join-profile.csv',
+    'data\standards-inventory.csv'
+)
+foreach ($suffix in @('H', 'I', 'J', 'L')) {
+    foreach ($component in @('DEMO', 'BMX', 'DIQ', 'GHB')) {
+        $app4Module01Files += "data\raw\$($component)_$($suffix).xpt.gz"
+    }
+}
+foreach ($record in $app4Module01Records) {
+    $app4Module01Files += "reference\$record"
+    $app4Module01Files += "template\$record"
+}
+$app4Module01Missing = @($app4Module01Files | Where-Object { -not (Test-Path -LiteralPath (Join-Path $app4Module01Root $_)) })
+if (-not (Test-Path -LiteralPath $app4Module01Spec) -or $app4Module01Missing.Count -gt 0) {
+    throw "APP-4 Module 01 is missing its specification or package files: $($app4Module01Missing -join ', ')."
+}
+$app4Module01SpecContent = Get-Content -Raw -LiteralPath $app4Module01Spec
+$app4Module01Readme = Get-Content -Raw -LiteralPath (Join-Path $app4Module01Root 'README.md')
+$app4Module01Release = Get-Content -Raw -LiteralPath (Join-Path $app4Module01Root 'release.json') | ConvertFrom-Json
+$app4Module01Contract = Get-Content -Raw -LiteralPath (Join-Path $app4Module01Root 'decision-contract.json') | ConvertFrom-Json
+$app4Module01Sources = @(Import-Csv -LiteralPath (Join-Path $app4Module01Root 'data\source-inventory.csv'))
+$app4Module01Fields = @(Import-Csv -LiteralPath (Join-Path $app4Module01Root 'data\field-inventory.csv'))
+$app4Module01Joins = @(Import-Csv -LiteralPath (Join-Path $app4Module01Root 'data\cycle-join-profile.csv'))
+$app4Module01Standards = @(Import-Csv -LiteralPath (Join-Path $app4Module01Root 'data\standards-inventory.csv'))
+$app4Module01Sections = [regex]::Matches($app4Module01SpecContent, '(?m)^## \d+\.').Count
+$app4Module01RawBytes = ($app4Module01Sources | Measure-Object -Property raw_bytes -Sum).Sum
+$app4Module01GzipBytes = ($app4Module01Sources | Measure-Object -Property gzip_bytes -Sum).Sum
+$app4Module01SourceRows = ($app4Module01Sources | Measure-Object -Property rows -Sum).Sum
+$app4Module01JoinCounts = @($app4Module01Joins | ForEach-Object { [int]$_.all_four_joined })
+if (
+    $app4Module01Files.Count -ne 55 -or
+    $app4Module01Sections -ne 21 -or
+    $app4Module01Sources.Count -ne 16 -or
+    $app4Module01Fields.Count -ne 442 -or
+    $app4Module01Joins.Count -ne 4 -or
+    $app4Module01Standards.Count -ne 5 -or
+    $app4Module01RawBytes -ne 34221200 -or
+    $app4Module01GzipBytes -ne 3149043 -or
+    $app4Module01SourceRows -ne 145563 -or
+    (@($app4Module01Sources | Where-Object { [int]$_.seqn_duplicates -ne 0 })).Count -ne 0 -or
+    ($app4Module01JoinCounts -join ',') -ne '6979,6744,6401,7199' -or
+    $app4Module01SpecContent -match '[—–]' -or
+    $app4Module01Readme -match '[—–]' -or
+    $app4Module01SpecContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app4Module01Readme -match '(?im)[A-Z]:\\Users\\' -or
+    $app4Module01SpecContent -notmatch 'Module version: `0\.1\.0`' -or
+    $app4Module01SpecContent -notmatch 'Commons release: `0\.77\.0`' -or
+    $app4Module01SpecContent -notmatch '34,221,200' -or
+    $app4Module01SpecContent -notmatch '145,563' -or
+    $app4Module01SpecContent -notmatch '442' -or
+    $app4Module01SpecContent -notmatch '41-file workspace' -or
+    $app4Module01SpecContent -notmatch '29-row immutable manifest' -or
+    $app4Module01SpecContent -notmatch 'continue with conditions' -or
+    $app4Module01SpecContent -notmatch 'Model, target, predictor, threshold, alert, patient scoring, clinical action, implementation, and deployment authority: prohibited' -or
+    $app4Module01Readme -notmatch 'all 16 complete official NHANES XPT files' -or
+    $app4Module01Release.module_version -ne '0.1.0' -or
+    $app4Module01Release.commons_release -ne '0.77.0' -or
+    $app4Module01Release.status -ne 'runnable release candidate' -or
+    $app4Module01Release.public_source_release.complete_xpt_files -ne 16 -or
+    $app4Module01Release.public_source_release.source_rows -ne 145563 -or
+    $app4Module01Release.workspace.immutable_manifest_rows -ne 29 -or
+    $app4Module01Release.workspace.assembled_files -ne 41 -or
+    $app4Module01Release.reference_decision.progression -ne 'continue with conditions' -or
+    $app4Module01Release.reference_decision.module02_permission -ne 'permitted for curriculum construction' -or
+    $app4Module01Release.reference_decision.model_fitting -ne 'prohibited' -or
+    $app4Module01Release.reference_decision.threshold_selection -ne 'prohibited' -or
+    $app4Module01Release.reference_decision.deployment -ne 'prohibited' -or
+    $app4Module01Contract.public_release.source_inventory_sha256 -ne '10861ec8526a8cdb9c5e47b45d3b226ea2d545fdecb324b0fda755b274a37e54' -or
+    $app4Module01Contract.public_release.field_inventory_sha256 -ne '2b124ea7954bc0eb2225ba4e15abc637eb575a0e9037832aeb0df7a12149b848' -or
+    $app4Module01Contract.assessment.noncompensable_gates -ne 12 -or
+    $app4Module01Contract.package.immutable_manifest_rows -ne 29 -or
+    $app4Module01Contract.package.editable_records -ne 11 -or
+    $app4Module01Contract.package.assembled_files -ne 41
+) {
+    throw 'APP-4 Module 01 specification, source release, workspace contract, progression, validation, or responsible-claim boundary does not match the 0.1.0 contract.'
+}
+& python (Join-Path $app4Module01Root 'profile_sources.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 01 source profiler self-check failed.' }
+& python (Join-Path $app4Module01Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 01 builder self-check failed.' }
+& python (Join-Path $app4Module01Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 01 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -5392,3 +5488,4 @@ Write-Output "APP-3 Checkpoint 02 passed: $app3Checkpoint02Sections contract sec
 Write-Output "APP-3 Module 07 passed: $app3Module07Sections contract sections and $($app3Module07Files.Count) required files."
 Write-Output "APP-3 final checkpoint passed: $app3Checkpoint03Sections contract sections and $($app3Checkpoint03Files.Count) required files."
 Write-Output "APP-4 course architecture passed: $app4Sections sections, $app4ModuleCount modules, $app4Hours hours, $app4CheckpointCount checkpoints, and $($app4XptUrls.Count) complete NHANES XPT routes."
+Write-Output "APP-4 Module 01 passed: $app4Module01Sections contract sections, $($app4Module01Files.Count) required files, $($app4Module01Sources.Count) complete XPT sources, and $($app4Module01Fields.Count) field records."

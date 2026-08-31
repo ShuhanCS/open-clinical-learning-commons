@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app4-01",
+    "title": "Framing a decision support use case",
+    "version": "0.1.0",
+    "commons_release": "0.77.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "week": 1,
+    "hours": 15.5
+  },
+  "decision": {
+    "owner": "CGH-GIM-01 clinical decision support governance council",
+    "question": "Are the intended use, user, workflow moment, action boundary, source evidence roles, synthetic-data plan, and accountable owners defined well enough to begin logic and input specification?",
+    "permitted_next_action": "construct and test the nonproduction logic and input contract in Module 02"
+  },
+  "service": {
+    "id": "CGH-GIM-01",
+    "status": "fictional adult general internal medicine and primary care service",
+    "concept": "nonbinding advisory asking a clinician to consider whether confirmatory HbA1c testing is appropriate",
+    "public_facility_linkage": "prohibited",
+    "real_patient_data": "prohibited"
+  },
+  "public_release": {
+    "publisher": "CDC NCHS NHANES",
+    "complete_xpt_files": 16,
+    "cycles": 4,
+    "components_per_cycle": 4,
+    "raw_bytes": 34221200,
+    "gzip_bytes": 3149043,
+    "source_rows": 145563,
+    "field_inventory_rows": 442,
+    "duplicate_seqn_rows": 0,
+    "source_inventory_sha256": "10861ec8526a8cdb9c5e47b45d3b226ea2d545fdecb324b0fda755b274a37e54",
+    "field_inventory_sha256": "2b124ea7954bc0eb2225ba4e15abc637eb575a0e9037832aeb0df7a12149b848",
+    "cycle_join_profile_sha256": "c57edf48acdcd2399eef7fd42a45f58182c810e010dfde36040cd965683b797c",
+    "standards_inventory_sha256": "1f89b457b376cb0ae138580bb2c6afae21daabdf5c266d12b4eaaf38827cc9bc"
+  },
+  "cycle_support": [
+    {"cycle": "2013-2014", "role": "development evidence", "all_four_joined": 6979},
+    {"cycle": "2015-2016", "role": "development evidence", "all_four_joined": 6744},
+    {"cycle": "2017-2018", "role": "temporal holdout", "all_four_joined": 6401},
+    {"cycle": "2021-2023", "role": "later-cycle transport stress test", "all_four_joined": 7199}
+  ],
+  "package": {
+    "immutable_manifest_rows": 29,
+    "editable_records": 11,
+    "assembled_files": 41
+  },
+  "assessment": {
+    "course_points_awarded_here": 0,
+    "module02_week3_points": 20,
+    "module03_week3_points": 20,
+    "noncompensable_gates": 12
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction"
+  },
+  "authority": {
+    "model_fitting": "prohibited",
+    "target_finalization": "prohibited",
+    "threshold_selection": "prohibited",
+    "alert_firing": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  }
+}

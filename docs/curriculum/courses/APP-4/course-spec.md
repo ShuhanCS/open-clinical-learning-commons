@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.76.0 through the course contract.
+- Current Commons release: 0.77.0 through Module 01.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -207,7 +207,7 @@ Modules 01 through 03 form the applied technical block. Modules 04 through 06 fo
 - Decision: may the fictional advisory concept proceed to logic and input specification?
 - Submission: CDS use-case charter and source-feasibility release.
 - Point role: required zero-point gate for Checkpoint 01.
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.77.0`; Module 02 construction is permitted with conditions.
 
 Learners identify the receiving clinician, patient consequence, encounter boundary, decision moment, intended action, alternative action, nonaction, possible benefit, possible harm, accountable owner, and people who can pause the concept. They draw the workflow before adding an alert.
 
@@ -216,6 +216,8 @@ The module acquires and inspects all 16 complete NHANES files, the interoperabil
 Progression requires an accepted intended-use statement, user and workflow map, source feasibility record, public-versus-synthetic data-role map, preliminary input-availability inventory, clinical and patient consequence map, ownership and decision-rights record, claim boundary, and decision to begin logic construction.
 
 No prediction, threshold choice, alert firing, clinical recommendation, or implementation claim is allowed in Module 01.
+
+The accepted release contains all 16 complete NHANES XPT files as deterministic gzip artifacts. The official raw files total 34,221,200 bytes and 145,563 component rows; the repository copies total 3,149,043 gzip bytes. The 442-row field inventory and four-row join profile reproduce, every file has unique `SEQN`, and the all-four intersections are 6,979, 6,744, 6,401, and 7,199 across the four cycles. The learner and reference workspaces each contain 41 files with a 29-row immutable manifest. Complete validation passes 177 checks, starter validation passes 121 checks, and six protected failure routes pass.
 
 ## 10. Module 02 brief: Decision support logic, triggers, and data
 
@@ -510,5 +512,6 @@ Construction acceptance for this course-level unit:
 - [x] Every checkpoint has a decision, points, evidence, and protected handoff.
 - [x] APP-4 remains distinct from FND-1, FND-2, DA-730, and APP-1 through APP-3.
 - [x] Clinical use, live scoring, automatic action, implementation, and deployment remain outside course authority.
+- [x] Module 01 pins all 16 complete public XPT files, profiles 145,563 component rows and 442 fields, releases a validated 41-file decision-framing workspace, and permits Module 02 construction with conditions without fitting a model or selecting a threshold.
 
-APP-4 is ready for Module 01 construction. Resume by downloading and fingerprinting the complete public evidence, fixing the fictional use-case and synthetic-generation contract, and releasing the source-feasibility workspace before any model or threshold work begins.
+APP-4 Module 01 is complete for curriculum construction. Resume with Module 02 by freezing its 29-file immutable handoff, preserving all 16 source identities and authority limits, building the first versioned synthetic release, and specifying logic and event-time input availability without fitting the Module 03 model early.

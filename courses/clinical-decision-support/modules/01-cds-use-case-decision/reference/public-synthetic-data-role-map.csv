@@ -1,0 +1,13 @@
+role_id,evidence_question,public_nhanes_role,synthetic_cgh_gim_01_role,status,claim_limit
+DR01,source field and codebook availability,primary evidence,not used,accepted,NHANES fields do not prove local availability
+DR02,historical outcome and predictor support,later historical evidence,not used,conditional,no target or predictor is accepted in Module 01
+DR03,survey design and population estimates,primary future survey evidence,not used,conditional,weight and variance method remain open
+DR04,temporal holdout and later-cycle transport,later historical evidence,not used,conditional,cycle differences do not prove cause or local drift
+DR05,event-time input availability,cannot answer,known synthetic truth in Module 02,planned,synthetic availability does not establish real EHR availability
+DR06,trigger and suppression behavior,cannot answer,known synthetic truth in Module 02,planned,passing teaching logic does not prove clinical correctness
+DR07,card count and repeated burden,cannot answer,synthetic workflow evidence in Modules 04 and 05,planned,synthetic burden does not estimate local burden
+DR08,clinician interaction,cannot answer,synthetic view dismissal defer and unavailable states,planned,a synthetic dismissal is not proof of fatigue or poor care
+DR09,latency and version mismatch,cannot answer,seeded synthetic failure truth in Module 05,planned,teaching failures do not certify production behavior
+DR10,calibration drift,cannot answer for the fictional service,seeded synthetic monitoring truth in Module 06,planned,seeded drift is not local evidence
+DR11,silent failure,cannot answer,seeded request response log and detection truth,planned,a detected teaching failure does not prove production surveillance
+DR12,clinical benefit and harm,cannot establish,cannot establish,unavailable,requires prospective local evidence and governance outside course

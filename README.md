@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.76.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. The APP-4 course contract is complete, and Module 01 is next.
+- Current version: `0.77.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract and a runnable Module 01 release.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -128,6 +128,8 @@ The [APP-3 final checkpoint](courses/clinical-performance-improvement/checkpoint
 The fourth applied course is specified in [APP-4: Data for Clinical Decision Support](docs/curriculum/courses/APP-4/course-spec.md), with its exact DOCX fingerprint, 16 complete NHANES source routes, synthetic FHIR R4 and CDS Hooks contract, and source routing in [the APP-4 source record](docs/source/app-4-clinical-decision-support-source-record.md). APP-4 owns intended use, workflow logic, triggers, input availability, thresholds in use, calibration in use, alert burden, human factors, sandbox failure modes, safety cases, monitoring, governance, and clinician-led defense.
 
 APP-4 uses the explicitly fictional `CGH-GIM-01` service to assess whether an advisory card about confirmatory HbA1c testing should proceed from offline sandbox work to a proposal for locally governed silent-mode evaluation. The course preserves 40 points at Week 3, 25 points at Week 6, and 35 points on the official half-term end date. No course artifact authorizes real patient scoring, clinical action, implementation, or deployment.
+
+The first runnable unit is [APP-4 Module 01: Framing a decision support use case](courses/clinical-decision-support/modules/01-cds-use-case-decision/README.md), governed by the durable [Module 01 specification](docs/curriculum/courses/APP-4/modules/01-cds-use-case-decision-spec.md). It acquires all 16 complete official NHANES XPT files, pins 34,221,200 raw bytes and 145,563 component rows, inventories 442 fields, preserves four cycle-specific joins, and releases a 41-file learner or reference workspace. It permits Module 02 curriculum construction with conditions while model fitting, threshold selection, alert firing, real-patient scoring, clinical action, implementation, and deployment remain prohibited.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -305,7 +307,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-4 Module 01 from the accepted course and source contracts.
+1. Build APP-4 Module 02 from the accepted Module 01 source and decision handoff.
 2. Complete APP-4's Week 3, Week 6, and official-end-date checkpoints before moving to APP-5.
 3. Continue APP-5 through APP-7 one distinct course at a time.
 4. Complete named human reviews before alpha promotion.

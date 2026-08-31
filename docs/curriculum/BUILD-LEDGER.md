@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.76.0
+- Current release: 0.77.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-4 course specification and source contract
-- Next unit: APP-4 Module 01, framing a decision support use case
+- Last completed unit: APP-4 Module 01, framing a decision support use case
+- Next unit: APP-4 Module 02, decision support logic, triggers, and data
 
 ## Confirmed decisions
 
@@ -574,6 +574,15 @@
 - Module 06 splits 16 hours into eight hours of safety, monitoring, and governance and eight hours of embedded ML. One fixed gradient-boosted challenger must use the transparent model's exact target, predictors, cutoffs, splits, thresholds, alert budget, and evaluation rows.
 - Joe Joseph, MD, SFHM, is the designated clinician of record under the existing dated identity boundary. Direct participation and final wording remain pending before alpha.
 - APP-4 is specified at Commons 0.76.0. Module 01 is the next isolated build unit.
+- APP-4 Module 01 version 0.1.0 acquires and pins all 16 complete NHANES DEMO, BMX, DIQ, and GHB XPT files across four cycles.
+- The official XPT files total 34,221,200 raw bytes and 145,563 component rows. Sixteen deterministic gzip copies total 3,149,043 bytes.
+- Every file has unique `SEQN` with zero duplicates. The field inventory contains 442 rows, and the all-four intersections are 6,979, 6,744, 6,401, and 7,199 across 2013-2014, 2015-2016, 2017-2018, and 2021-2023.
+- The cycle roles remain development evidence, temporal holdout, and later-cycle transport stress. The intersections are source-support counts, not final cohorts.
+- The reference use case names the clinician responsible for the current adult encounter, a decision moment before encounter close, nonbinding confirmatory-testing support, explicit nonaction, and prohibited diagnosis, automatic ordering, treatment, denial, targeting, and live use.
+- The learner and reference workspaces each contain 41 files with a 29-row immutable manifest and 11 assessed records.
+- Source, builder, and validator self-checks pass. Complete validation passes 177 checks, starter validation passes 121 checks, and missing-file, source-mutation, placeholder, authority, copied-answer, and personal-path routes are rejected.
+- The reference progression is `continue with conditions`, permitting Module 02 curriculum construction only. Model fitting, final target and predictor acceptance, threshold selection, alert firing, real-patient scoring, clinical action, implementation, and deployment remain prohibited.
+- APP-4 Module 01 is a runnable release candidate at Commons 0.77.0.
 
 ## Pending confirmation
 
@@ -590,12 +599,14 @@
 - Confirm APP-4's clinical target, predictors, exclusions, units, threshold candidates, confirmatory-action wording, survey-design treatment, and subgroup plan with qualified clinical and methods reviewers.
 - Build and review the APP-4 Synthea and Commons synthetic release, workflow, burden, drift, and silent-failure truth before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
+- Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-4 plan, source record, course specification, complete APP-3 release, and accepted FND-1 and FND-2 handoffs before building Module 01.
-2. Download, fingerprint, profile, and preserve all 16 complete NHANES XPT files before deriving any teaching evidence.
-3. Fix the `CGH-GIM-01` intended-use, source-feasibility, synthetic-generation, ownership, and claim-boundary contracts in a runnable Module 01 package.
-4. Do not fit a model, select a threshold, or build an alert in Module 01. Those belong to later modules after the source and decision gates pass.
-5. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 01 before moving to Module 02.
+1. Read the APP-4 course specification, source record, Module 01 specification, and complete Module 01 release before building Module 02.
+2. Freeze the 29 immutable Module 01 files and preserve the exact 16-source chain of custody.
+3. Build the first versioned `CGH-GIM-01` synthetic clinical and workflow source with generator identity, seed, resource counts, known truth, defects, and explicit synthetic flags.
+4. Specify and test the nonproduction logic, trigger, suppression, terminology, unit, timing, staleness, unavailable-state, trace, and prohibited-action contracts.
+5. Do not fit the historical model or choose a threshold in Module 02. Those belong to Module 03 after the logic and input gates pass.
+6. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 02 before moving to Module 03.

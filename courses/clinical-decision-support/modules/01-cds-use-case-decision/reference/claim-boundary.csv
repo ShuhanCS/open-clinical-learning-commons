@@ -1,0 +1,15 @@
+claim_id,claim,status,evidence_required,owner
+CL01,all 16 named NHANES files were acquired in full,allowed,pinned bytes hashes and source inventory,source steward
+CL02,every accepted XPT file has unique SEQN,allowed,profile and mutation checks,source steward
+CL03,the four files in each cycle can be linked on SEQN for source feasibility,allowed,cycle join profile,source steward
+CL04,the four-component intersection is a final analytic cohort,prohibited,accepted clinical cohort contract in later modules,Module 03 clinical and methods reviewers
+CL05,NHANES validates CGH-GIM-01,prohibited,local governed evidence outside the course,local clinical governance
+CL06,one survey cycle proves local calibration,prohibited,local temporal and prospective evidence,local clinical governance
+CL07,the advisory will improve patient outcomes,prohibited,prospective evaluation under local approval,local clinical governance
+CL08,age BMI diabetes history or HbA1c is an accepted predictor target or exclusion,conditional,reviewed Module 02 and Module 03 contracts,clinical and methods reviewers
+CL09,a clinical threshold is accepted,prohibited,calibration burden missed-case safety and human governance evidence,Module 03 governance reviewers
+CL10,the card may place an order or diagnose,prohibited,no course evidence can authorize this,clinical governance outside course
+CL11,the future sandbox is FHIR conformant or EHR ready,prohibited,formal conformance implementation security and local testing,interoperability and security owners
+CL12,Module 02 curriculum construction may begin with conditions,allowed,all 12 gates and progression record,APP-4 faculty owner
+CL13,real-patient silent-mode scoring may begin,prohibited,local approval privacy security safety implementation and evaluation evidence,local governance outside course
+CL14,Joe Joseph MD SFHM reviewed or endorsed Module 01,prohibited,direct documented confirmation,APP-4 program owner

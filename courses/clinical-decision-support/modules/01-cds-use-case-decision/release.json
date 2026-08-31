@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app4-01",
+  "module_version": "0.1.0",
+  "commons_release": "0.77.0",
+  "status": "runnable release candidate",
+  "hours": 15.5,
+  "course_points_awarded_here": 0,
+  "public_source_release": {
+    "complete_xpt_files": 16,
+    "cycles": 4,
+    "raw_bytes": 34221200,
+    "gzip_bytes": 3149043,
+    "source_rows": 145563,
+    "field_inventory_rows": 442,
+    "duplicate_seqn_rows": 0
+  },
+  "workspace": {
+    "immutable_manifest_rows": 29,
+    "editable_records": 11,
+    "assembled_files": 41
+  },
+  "reference_decision": {
+    "progression": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction",
+    "model_fitting": "prohibited",
+    "threshold_selection": "prohibited",
+    "alert_firing": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, primary-care or endocrinology, clinical-informatics, NHANES survey-methods, interoperability, human-factors, patient-safety, patient-access, privacy, accessibility, responsible-AI, and independent-reproduction review pending before alpha"
+}

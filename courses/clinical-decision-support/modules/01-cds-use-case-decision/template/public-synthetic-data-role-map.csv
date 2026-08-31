@@ -1,0 +1,13 @@
+role_id,evidence_question,public_nhanes_role,synthetic_cgh_gim_01_role,status,claim_limit
+DR01,source field and codebook availability,REPLACE,REPLACE,REPLACE,REPLACE
+DR02,historical outcome and predictor support,REPLACE,REPLACE,REPLACE,REPLACE
+DR03,survey design and population estimates,REPLACE,REPLACE,REPLACE,REPLACE
+DR04,temporal holdout and later-cycle transport,REPLACE,REPLACE,REPLACE,REPLACE
+DR05,event-time input availability,REPLACE,REPLACE,REPLACE,REPLACE
+DR06,trigger and suppression behavior,REPLACE,REPLACE,REPLACE,REPLACE
+DR07,card count and repeated burden,REPLACE,REPLACE,REPLACE,REPLACE
+DR08,clinician interaction,REPLACE,REPLACE,REPLACE,REPLACE
+DR09,latency and version mismatch,REPLACE,REPLACE,REPLACE,REPLACE
+DR10,calibration drift,REPLACE,REPLACE,REPLACE,REPLACE
+DR11,silent failure,REPLACE,REPLACE,REPLACE,REPLACE
+DR12,clinical benefit and harm,REPLACE,REPLACE,REPLACE,REPLACE

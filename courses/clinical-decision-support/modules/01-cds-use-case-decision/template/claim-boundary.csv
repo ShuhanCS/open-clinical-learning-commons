@@ -1,0 +1,15 @@
+claim_id,claim,status,evidence_required,owner
+CL01,all 16 named NHANES files were acquired in full,REPLACE,REPLACE,REPLACE
+CL02,every accepted XPT file has unique SEQN,REPLACE,REPLACE,REPLACE
+CL03,the four files in each cycle can be linked on SEQN for source feasibility,REPLACE,REPLACE,REPLACE
+CL04,the four-component intersection is a final analytic cohort,REPLACE,REPLACE,REPLACE
+CL05,NHANES validates CGH-GIM-01,REPLACE,REPLACE,REPLACE
+CL06,one survey cycle proves local calibration,REPLACE,REPLACE,REPLACE
+CL07,the advisory will improve patient outcomes,REPLACE,REPLACE,REPLACE
+CL08,age BMI diabetes history or HbA1c is an accepted predictor target or exclusion,REPLACE,REPLACE,REPLACE
+CL09,a clinical threshold is accepted,REPLACE,REPLACE,REPLACE
+CL10,the card may place an order or diagnose,REPLACE,REPLACE,REPLACE
+CL11,the future sandbox is FHIR conformant or EHR ready,REPLACE,REPLACE,REPLACE
+CL12,Module 02 curriculum construction may begin with conditions,REPLACE,REPLACE,REPLACE
+CL13,real-patient silent-mode scoring may begin,REPLACE,REPLACE,REPLACE
+CL14,Joe Joseph MD SFHM reviewed or endorsed Module 01,REPLACE,REPLACE,REPLACE
