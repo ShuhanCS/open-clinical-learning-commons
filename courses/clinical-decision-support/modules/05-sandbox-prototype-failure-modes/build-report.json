@@ -1,0 +1,123 @@
+{
+  "authority": {
+    "clinical_action": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "deployment": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "silent_mode_evaluation": "prohibited"
+  },
+  "claim_limit": "local synthetic teaching sandbox only; not FHIR or CDS Hooks conformance, clinical evidence, a clinical alert, threshold acceptance, implementation, or deployment",
+  "design": {
+    "accepted_threshold": null,
+    "id": "panel-t003",
+    "role": "passive contextual panel fixture for mechanics testing only",
+    "threshold": "0.03000000",
+    "threshold_status": "unaccepted sandbox fixture"
+  },
+  "generator": "APP-4 Module 05 Python standard-library builder 0.1.0",
+  "output_manifest": [
+    {
+      "bytes": 3033,
+      "relative_path": "data/sandbox/requests.ndjson.gz",
+      "sha256": "2419168e463ed48423d5c50ff8a28055a096d2ef2a5be0f16bdae8e13c200b3c"
+    },
+    {
+      "bytes": 2685,
+      "relative_path": "data/sandbox/prefetch-resources.ndjson.gz",
+      "sha256": "43e6e9beb9bf4f436e1c10f6ae2de8ce59d1a6caffe0d03cdc1955b8a3af4e4f"
+    },
+    {
+      "bytes": 1344,
+      "relative_path": "data/sandbox/responses.ndjson.gz",
+      "sha256": "46101587936fe506de14fbf7cb746ac7c962af61d94aa4f92fec9b316c94badf"
+    },
+    {
+      "bytes": 789,
+      "relative_path": "outputs/trace-events.csv.gz",
+      "sha256": "a9ad0a50579d31744d6ef4cae3c56c614da135f9aa380718647e339439f20ceb"
+    },
+    {
+      "bytes": 9649,
+      "relative_path": "outputs/test-matrix.csv",
+      "sha256": "be16404ac9bf80eac24fb3bec441dcb7e5338d6efb2371bc92810e197562cdb8"
+    },
+    {
+      "bytes": 8560,
+      "relative_path": "outputs/test-results.csv",
+      "sha256": "07dbc44ccd5aaeb5f46ab2122ada331c2ca849623f6bc4c878e3db39383525a8"
+    },
+    {
+      "bytes": 9172,
+      "relative_path": "outputs/visibility-audit.csv",
+      "sha256": "08724a024409102b686f88c5cb029ef6e4403e7349f4d2c64192e4b85a51db3c"
+    },
+    {
+      "bytes": 7585,
+      "relative_path": "outputs/accessibility-checks.csv",
+      "sha256": "5a712763028dc88c03f53b3dc3749b71797be67c7fc22a958825c30f9d1d1464"
+    },
+    {
+      "bytes": 917,
+      "relative_path": "outputs/invariant-checks.csv",
+      "sha256": "eb332ae840dbdc873248fad7f3a70f1921f0eab6d0cebafa2be6c19a600f2145"
+    }
+  ],
+  "release_id": "APP4-M05-LOCAL-SANDBOX-2026-08-31-v1",
+  "runtime": {
+    "external_python_dependencies": [],
+    "fhir_server": null,
+    "network_client": false,
+    "network_listener": false
+  },
+  "sandbox": {
+    "accessibility_defects_blocked": 1,
+    "cases": 31,
+    "module04_positive_cases": 12,
+    "passing_tests": 31,
+    "prefetch_resources": 184,
+    "repeat_positive_cases": 1,
+    "responses": 31,
+    "silent_failures_detected": 1,
+    "trace_events": 61,
+    "visible_failure_cases": 12
+  },
+  "schema_version": "1.0.0",
+  "source_contract": {
+    "module04-build-report": {
+      "bytes": 4536,
+      "sha256": "02944e755b2f3ded279f02f655cd3be4f57a4fe89db21df663d02afeb9ed90f2"
+    },
+    "module04-candidate-events": {
+      "bytes": 82953,
+      "sha256": "278a9c74294c5ad13b38ade0215a88c8e4af37e7bc5e8d2e7fcc297d781a929f"
+    },
+    "module04-decision-contract": {
+      "bytes": 2804,
+      "sha256": "6ddb5f565744715897a12d8798f06bbe74d038aa5631ae0b4f888536886624a3"
+    },
+    "module04-encounters": {
+      "bytes": 25394,
+      "sha256": "b71bd822a8bb0d1b1c87430213fcf6e09e056b80ab18366812cbca65e08b4f87"
+    },
+    "module04-patient-frame": {
+      "bytes": 54854,
+      "sha256": "bfa374fa13c683a5bcc6915c776282b22c98015623db8c1b30562018dd3e7b2d"
+    },
+    "module04-release": {
+      "bytes": 2522,
+      "sha256": "2ef40e8ff78976f2689c81e4b0b79af9efeb5c3496d4c888315a448ef9ecf4b3"
+    }
+  },
+  "status": "local nonnetworked synthetic teaching sandbox only",
+  "upstream": {
+    "commons_release": "0.81.0",
+    "module": "oclc-app4-04@0.1.0",
+    "reference_files": 302,
+    "reference_manifest_bytes": 60302,
+    "reference_manifest_rows": 285,
+    "reference_manifest_sha256": "41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9"
+  }
+}

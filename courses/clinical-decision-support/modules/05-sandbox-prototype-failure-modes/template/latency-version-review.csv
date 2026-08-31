@@ -1,0 +1,2 @@
+case_id,domain,fixture,expected_control,observed,status,claim_limit
+INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE

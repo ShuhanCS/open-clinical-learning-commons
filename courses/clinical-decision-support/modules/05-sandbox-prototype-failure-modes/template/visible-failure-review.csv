@@ -1,0 +1,2 @@
+case_id,failure,transport,human_notice,terminal_trace,control,status,claim_limit
+INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE,INCOMPLETE

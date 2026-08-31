@@ -1,0 +1,22 @@
+category,case_count,expected_behavior,review_status,claim_limit
+normal positive,11,candidate panel with no suggestion or notice,pass,synthetic mechanics only
+repeat positive,1,candidate panel with repeat disclosure,pass,not observed repeat burden
+normal negative,1,empty card with below-fixture terminal trace,pass,not low risk
+threshold boundary,1,candidate panel at exact unaccepted fixture,pass,not threshold acceptance
+missing input,1,visible teaching status,pass,not imputed
+stale input,1,visible teaching status,pass,not imputed
+inconsistent input,1,visible teaching status,pass,not imputed
+delayed input,1,visible teaching status,pass,not measured latency
+duplicate request,1,empty card with duplicate terminal trace,pass,not a repeat encounter
+terminology mismatch,1,visible teaching status,pass,no terminology conformance claim
+hook version mismatch,1,HTTP 400 OperationOutcome-shaped body,pass,no CDS Hooks conformance claim
+unit mismatch,1,visible teaching status,pass,no unit conversion inferred
+unsupported service,1,HTTP 400 OperationOutcome-shaped body,pass,no service discovery claim
+missing score,1,visible teaching status,pass,no score imputation
+known diabetes suppression,1,empty card with suppression trace,pass,no diagnosis claim
+recent HbA1c suppression,1,empty card with suppression trace,pass,no test claim
+service unavailable,1,HTTP 503 visible failure,pass,not measured availability
+response timeout,1,HTTP 504 visible failure,pass,not measured performance
+silent failure,1,no response terminal trace or notice and audit detects silence,pass,seeded synthetic failure
+accessibility defect,1,HTTP 422 and malformed card blocked,pass,not proof of accessibility
+model version mismatch,1,visible teaching status,pass,no model approval

@@ -1,0 +1,18 @@
+failure_id,case_id,failure,cause,detection,visible_to_human,control,module06_owner,status
+FM01,M05-F01,missing input,BMI prefetch absent,required-field branch,true,stop evaluation and show unavailable state,data steward,pass
+FM02,M05-F02,stale input,BMI date outside teaching window,date comparison,true,stop evaluation and show stale state,data steward,pass
+FM03,M05-F03,inconsistent input,negative BMI fixture,range check,true,stop evaluation and show inconsistent state,data steward,pass
+FM04,M05-F04,delayed input,input delay above teaching budget,latency branch,true,stop evaluation and show delayed state,clinical informatics owner,pass
+FM05,M05-F05,duplicate request,reused hookInstance,request identity ledger,false,suppress duplicate and retain trace,clinical informatics owner,pass
+FM06,M05-F06,terminology mismatch,unexpected BMI code,system and code check,true,stop evaluation and refer terminology,terminology steward,pass
+FM07,M05-F07,hook version mismatch,unsupported hook version,version check,true,reject request visibly,clinical informatics owner,pass
+FM08,M05-F08,unit mismatch,unexpected BMI unit,UCUM system and code check,true,stop evaluation and refer unit mapping,data steward,pass
+FM09,M05-F09,unsupported service,unexpected service ID,service allowlist,true,reject request visibly,governance owner,pass
+FM10,M05-F10,missing score,prediction prefetch absent,required-field branch,true,stop evaluation and show unavailable score,model steward,pass
+FM11,M05-F11,known diabetes suppression,active synthetic condition,suppression branch,false,empty card and trace reason,clinical owner,pass
+FM12,M05-F12,recent HbA1c suppression,recent synthetic observation,suppression branch,false,empty card and trace reason,clinical owner,pass
+FM13,M05-F13,service unavailable,seeded service flag,availability branch,true,503 result trace and notice,service owner,pass
+FM14,M05-F14,response timeout,seeded response delay,latency branch,true,504 result trace and notice,service owner,pass
+FM15,M05-F15,silent failure,drop after receipt,independent four-ledger reconciliation,false,escalate reconcile and stop,patient-safety owner,pass
+FM16,M05-F16,accessibility defect,summary removed,card structure audit,true,block malformed card,accessibility owner,pass
+FM17,M05-F17,model version mismatch,unexpected model version,version check,true,stop evaluation and show mismatch,model steward,pass

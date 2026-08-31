@@ -1,0 +1,6 @@
+case_id,domain,fixture,expected_control,observed,status,claim_limit
+M05-F04,input latency,2001 ms against 2000 ms teaching budget,visible delayed-input status and no evaluation,visible_input_delayed,pass,not measured performance
+M05-F14,response latency,2001 ms against 2000 ms teaching budget,visible timeout with terminal trace and notice,visible_timeout,pass,not measured performance
+M05-F07,hook version,0.9 against accepted teaching shape 1.0,reject visibly with HTTP 400,visible_hook_version_mismatch,pass,no conformance claim
+M05-F17,model version,UNKNOWN-MODEL against APP4-M03-LOGIT-2026-08-31-v1,show mismatch and stop evaluation,visible_model_version_mismatch,pass,no model approval
+all evaluable cases,threshold version,0.03000000 with unaccepted status,preserve exact value and status without acceptance,exact and unaccepted,pass,no clinical threshold

@@ -1,0 +1,13 @@
+case_id,failure,transport,human_notice,terminal_trace,control,status,claim_limit
+M05-F01,missing input,200,true,true,show unavailable state and do not impute,pass,synthetic teaching failure
+M05-F02,stale input,200,true,true,show stale state and stop evaluation,pass,synthetic teaching failure
+M05-F03,inconsistent input,200,true,true,show inconsistent state and stop evaluation,pass,synthetic teaching failure
+M05-F04,delayed input,200,true,true,show delayed state and stop evaluation,pass,synthetic teaching failure
+M05-F06,terminology mismatch,200,true,true,show mismatch and require steward review,pass,no terminology conformance claim
+M05-F07,hook version mismatch,400,true,true,reject unsupported version visibly,pass,no CDS Hooks conformance claim
+M05-F08,unit mismatch,200,true,true,show mismatch and do not convert silently,pass,no unit conformance claim
+M05-F09,unsupported service,400,true,true,reject unsupported context visibly,pass,no service discovery claim
+M05-F10,missing score,200,true,true,show unavailable score and do not impute,pass,no clinical score claim
+M05-F13,service unavailable,503,true,true,return visible service failure,pass,not measured availability
+M05-F14,response timeout,504,true,true,return visible timeout at teaching budget,pass,not measured performance
+M05-F17,model version mismatch,200,true,true,show version mismatch and stop evaluation,pass,no model approval

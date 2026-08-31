@@ -1,0 +1,21 @@
+gate_id,domain,status,evidence,noncompensable_reason
+G01,Module 04 release identity,pass,"release-manifest.csv; upstream/module04/release-manifest.csv",accepted workflow evidence cannot change
+G02,nested Week 3 chain,pass,"upstream/module04/upstream/checkpoint01/candidate/module-01/release-manifest.csv; upstream/module04/upstream/checkpoint01/candidate/module-02/release-manifest.csv; upstream/module04/upstream/checkpoint01/candidate/module-03/release-manifest.csv",all 204 nested immutable rows must remain exact
+G03,local nonnetworked runtime,pass,"prototype-architecture.md; build-report.json",real endpoint or network execution is prohibited
+G04,FHIR-shaped resource disclosure,pass,"request-prefetch-contract.csv; prefetch-resources.ndjson.gz",teaching shape and conformance limit must remain explicit
+G05,CDS Hooks-shaped message disclosure,pass,"request-prefetch-contract.csv; response-card-contract.csv",teaching shape and conformance limit must remain explicit
+G06,complete case matrix,pass,"test-matrix-review.csv; test-matrix.csv",all 31 declared cases are required
+G07,positive and repeat fixtures,pass,"test-matrix-review.csv; requests.ndjson.gz",all 12 positive cases and the repeat must remain
+G08,normal and boundary behavior,pass,"test-results.csv; test-matrix-review.csv",normal negative and exact boundary behavior must be explicit
+G09,input failures,pass,"visible-failure-review.csv; failure-mode-register.csv",missing stale inconsistent and delayed states cannot be hidden or imputed
+G10,duplicate suppression and no card,pass,"test-results.csv; response-card-contract.csv",empty cards need a trace reason and cannot mean low risk
+G11,terminology and unit mismatch,pass,"visible-failure-review.csv; request-prefetch-contract.csv",semantic mismatch cannot be silently converted
+G12,hook and model version mismatch,pass,"latency-version-review.csv; visible-failure-review.csv",version mismatch must stop evaluation visibly
+G13,service and timeout failure,pass,"visible-failure-review.csv; latency-version-review.csv",unavailability and delay must be visible
+G14,trace completeness,pass,"traceability-audit.csv; trace-events.csv.gz",request and terminal evidence must reconcile
+G15,silent-failure detection,pass,"silent-failure-review.md; visibility-audit.csv",silence must be detected from independent ledgers
+G16,accessibility blocking,pass,"accessibility-review.csv; accessibility-checks.csv",malformed output cannot pass release
+G17,no clinical action route,pass,"response-card-contract.csv; prototype-architecture.md",suggestion order link and clinical action are prohibited
+G18,reproduction and AI accountability,pass,"reproducibility-check.md; ai-use.md",generated evidence and agent use require independent verification
+G19,score carryforward,pass,checkpoint-score-carryforward.csv,Module 04 points count once and Module 05 adds none
+G20,progression and authority,pass,progression-module06-handoff.md,Module 06 curriculum permission cannot grant clinical or deployment authority

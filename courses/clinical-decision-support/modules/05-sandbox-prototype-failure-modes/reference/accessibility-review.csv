@@ -1,0 +1,7 @@
+check,scope,expected,observed,status,claim_limit
+summary,candidate and status cards,nonempty plain-language summary,present in every released card,pass,structure check only
+detail,candidate and status cards,nonempty limits and state detail,present in every released card,pass,structure check only
+source label,candidate and status cards,synthetic teaching source named,present in every released card,pass,structure check only
+suggestions,all released cards,none,none,pass,no action route
+external links,all released cards,none,none,pass,no external navigation
+malformed fixture M05-F16,card missing summary,detect and block before release,defect detected and HTTP 422 returned,pass,not proof of accessibility in use

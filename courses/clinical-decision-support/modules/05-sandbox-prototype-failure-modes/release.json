@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable release candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app4-05",
+    "title": "Sandbox prototype and failure modes",
+    "version": "0.1.0",
+    "commons_release": "0.82.0",
+    "hours": 16.0,
+    "course_points": 0
+  },
+  "upstream": {
+    "module": "oclc-app4-04@0.1.0",
+    "reference_manifest_rows": 285,
+    "reference_manifest_bytes": 60302,
+    "reference_manifest_sha256": "41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9",
+    "reference_files": 302,
+    "nested_immutable_rows": 204
+  },
+  "sandbox": {
+    "release_id": "APP4-M05-LOCAL-SANDBOX-2026-08-31-v1",
+    "cases": 31,
+    "module04_positive_cases": 12,
+    "repeat_positive_cases": 1,
+    "prefetch_resources": 184,
+    "responses": 31,
+    "trace_events": 61,
+    "passing_tests": 31,
+    "silent_failures_detected": 1,
+    "accessibility_defects_blocked": 1,
+    "output_manifest_sha256": "e34f75bdcba3d2474912f587b54f81b7038b65790c51435bb10810d40643c97f"
+  },
+  "design": {
+    "id": "panel-t003",
+    "threshold": "0.03000000",
+    "threshold_status": "unaccepted sandbox fixture",
+    "accepted_threshold": null
+  },
+  "workspace": {
+    "immutable_manifest_rows": 324,
+    "editable_records": 16,
+    "assembled_files": 341
+  },
+  "assessment": {
+    "module_points": 0,
+    "module04_score_carried_once": "25.00 of 25.00",
+    "gates": 20,
+    "reference_progression": "continue with conditions"
+  },
+  "validation": {
+    "sandbox_builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_checks": 2649,
+    "starter_checks": 2558,
+    "copied_validation": "pass",
+    "failure_routes_rejected": 20
+  },
+  "runtime": {
+    "network_listener": false,
+    "network_client": false,
+    "fhir_server": null,
+    "external_python_dependencies": []
+  },
+  "authority": {
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  },
+  "known_issues": [
+    "The official APP-4 section and half-term dates remain to be assigned from the published academic calendar.",
+    "The resources and messages are teaching shapes, not reviewed FHIR or CDS Hooks conformance artifacts.",
+    "The failure routes are seeded synthetic fixtures, not observed clinical incidents.",
+    "Named interoperability, accessibility, patient-safety, clinical, privacy, and independent-reproduction reviews remain pending before alpha."
+  ]
+}

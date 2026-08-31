@@ -1,0 +1,4 @@
+component,source_points,module05_points,checkpoint02_points_so_far,rule,status
+Module 04 workflow burden human factors and equity,25.00,0.00,25.00,carry accepted score exactly once,pass
+Module 05 sandbox prototype and failure modes,0.00,0.00,25.00,required gate with no added points,pass
+Checkpoint 02 current subtotal,25.00,0.00,25.00,Module 06 adds gates but no points,pass

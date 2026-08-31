@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.81.0
+- Current release: 0.82.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-4 Module 04, alert burden, human factors, and equity
-- Next unit: APP-4 Module 05, sandbox prototype and failure modes
+- Last completed unit: APP-4 Module 05, sandbox prototype and failure modes
+- Next unit: APP-4 Module 06, safety case, monitoring, governance, and embedded machine learning
 
 ## Confirmed decisions
 
@@ -626,6 +626,14 @@
 - The reference scores 25.00 of 25.00 and passes all 20 noncompensable gates. Reference validation passes 2,400 checks, learner validation passes 2,284 checks, copied validation passes, and 20 failure routes are rejected.
 - Progression is `continue with conditions`. `panel-t003` may enter Module 05 as a passive-panel sandbox fixture. The `0.03` value remains unaccepted, and real-patient scoring, clinical threshold acceptance, clinical alerting, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
 - APP-4 Module 04 is a runnable release candidate at Commons 0.81.0.
+- APP-4 Module 05 version 0.1.0 freezes the complete 302-file Module 04 reference workspace, its 285-row manifest, and all 204 nested Week 3 rows without changing evidence, score, gates, design, threshold role, or authority.
+- The local standard-library sandbox contains 31 cases, including all 12 Module 04 positive fixtures and one repeat, plus 184 FHIR R4-shaped prefetch resources, 31 response envelopes, and 61 trace events.
+- All 31 declared tests and all 20 release invariants pass. Twelve failures are visible, one seeded silent failure is detected from request, response, terminal-trace, and notice evidence, and one malformed card is blocked.
+- The Module 05 learner or reference workspace contains 324 immutable rows, 16 assessed records, and 341 files. Its final manifest is 75,019 bytes with SHA-256 `6bc3e7c0040b8ae93d273d1464459ae8d500913e0e8a423ca1e5b120256c8baf`.
+- Reference validation passes 2,649 checks, learner validation passes 2,558 checks, copied validation passes, and 20 failure routes are rejected.
+- Module 05 adds zero points and carries the accepted 25.00 Module 04 points into Checkpoint 02 exactly once. All 20 Module 05 gates pass.
+- Progression is `continue with conditions`. Module 06 may construct a nonproduction safety, monitoring, governance, and fixed-challenger package. The design and threshold remain fixtures, and real-patient scoring, clinical alerting, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
+- APP-4 Module 05 is a runnable release candidate at Commons 0.82.0.
 
 ## Pending confirmation
 
@@ -644,6 +652,7 @@
 - Complete named primary-care or endocrinology, biostatistics, calibration, NHANES survey-methods, clinical-informatics, equity, patient, accessibility, responsible-AI, and independent-reproduction review of APP-4 Module 03 before alpha.
 - Complete named clinical, survey-methods, calibration, clinical-informatics, interoperability, terminology, workflow, human-factors, patient, access, equity, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-4 Checkpoint 01 before alpha.
 - Complete named workflow, human-factors, clinical, patient, Spanish-language, broader language-access, disability-access, equity, privacy, accessibility, patient-safety, responsible-AI, and independent-reproduction review of APP-4 Module 04 before alpha.
+- Complete named APP-4 Module 05 clinical-informatics, FHIR and CDS Hooks, patient-safety, workflow, patient, language-access, disability-access, accessibility, equity, privacy, security, responsible-AI, and independent-reproduction review before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.

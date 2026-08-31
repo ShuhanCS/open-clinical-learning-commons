@@ -1,0 +1,10 @@
+response_kind,http_status,body_shape,summary_and_detail,human_notice,suggestions_or_links,meaning,claim_limit
+candidate panel,200,CDS Hooks-shaped cards array,required,false,none,synthetic branch met the unaccepted fixture,not a clinical recommendation or alert
+repeat candidate panel,200,CDS Hooks-shaped cards array,required with repeat disclosure,false,none,repeat synthetic opportunity reproduced,not observed burden or behavior
+empty card,200,empty cards array,not applicable,false,none,declared negative duplicate or suppression branch,not low risk or safe nonaction
+visible status,200,CDS Hooks-shaped information card,required,true,none,fixture could not be evaluated as declared,not a clinical error message
+unsupported request,400,FHIR R4-shaped OperationOutcome,not applicable,true,none,hook or service contract rejected,no conformance claim
+service unavailable,503,FHIR R4-shaped OperationOutcome,not applicable,true,none,seeded service failure surfaced,not measured availability
+response timeout,504,FHIR R4-shaped OperationOutcome,not applicable,true,none,seeded latency failure surfaced,not measured performance
+accessibility blocked,422,FHIR R4-shaped OperationOutcome,not applicable,true,none,malformed card stopped before release,not proof of accessibility
+silent failure,0,null,absent,false,none,request lacks response terminal trace and notice,seeded failure detected by independent ledgers

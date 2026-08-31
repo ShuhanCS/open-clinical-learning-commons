@@ -1,0 +1,13 @@
+element,shape,required,validation,failure_behavior,authority
+case wrapper,local teaching envelope,yes,case ID category fixture origin service and hook version present,reject incomplete case,not a CDS Hooks field
+hookInstance,CDS Hooks request string,yes,request ledger identity present,detect duplicate or reject missing identity,synthetic only
+hook,CDS Hooks request string,yes,patient-view exact,visible unsupported-hook result,no conformance claim
+context.patientId,CDS Hooks context string,yes,starts with SP,reject non-synthetic identity,no real patient
+context.encounterId,CDS Hooks context string,yes,starts with WF-E,reject missing context,no real encounter
+context.userId,CDS Hooks context string,yes,fictional PractitionerRole reference,reject missing context,no real clinician
+prefetch.patient,FHIR R4-shaped Patient,yes,synthetic tag and ID present,reject missing patient,no conformance claim
+prefetch.encounter,FHIR R4-shaped Encounter,yes,patient reference and decision time present,reject missing encounter,no conformance claim
+prefetch.bmi,FHIR R4-shaped Observation,conditional,LOINC 39156-5 UCUM kg/m2 positive and current,visible missing stale inconsistent terminology or unit state,no clinical measurement claim
+prefetch.conditions,FHIR R4-shaped Bundle,yes,collection entries inspected,empty bundle means no scripted suppression only,no diagnosis claim
+prefetch.hba1c,FHIR R4-shaped Bundle,yes,collection entries inspected,recent entry suppresses fixture only,no test recommendation
+prefetch.prediction,FHIR R4-shaped Parameters,conditional,model version score threshold and status exact,visible missing score or version mismatch,no clinical score or accepted threshold

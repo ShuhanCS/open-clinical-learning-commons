@@ -1,0 +1,21 @@
+invariant_id,status,check
+I01,pass,31 declared sandbox cases
+I02,pass,case identifiers unique
+I03,pass,all 12 Module 04 positive fixtures present
+I04,pass,one Module 04 repeat fixture present
+I05,pass,every case carries the claim limit
+I06,pass,every request is explicitly synthetic
+I07,pass,no request contains a FHIR server endpoint
+I08,pass,only Commons synthetic patient identifiers used
+I09,pass,all declared outcomes reproduced
+I10,pass,one silent failure detected
+I11,pass,unavailable service route tested
+I12,pass,response timeout route tested
+I13,pass,duplicate route tested
+I14,pass,model version route tested
+I15,pass,accessibility defect detected and blocked
+I16,pass,no response contains an action suggestion
+I17,pass,no response contains an external link
+I18,pass,trace terminal states explicit
+I19,pass,every response carries the claim limit
+I20,pass,threshold remains the unaccepted Module 04 fixture

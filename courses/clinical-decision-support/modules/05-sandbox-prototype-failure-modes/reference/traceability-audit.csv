@@ -1,0 +1,6 @@
+ledger,grain,expected_rows,observed_rows,reconciliation,status,meaning
+request ledger,one declared case,31,31,every case has one received request record,pass,proves fixture receipt only
+response ledger,one declared case,31,31,every case has a response envelope including the null silent body,pass,does not prove real delivery
+terminal trace,one terminal event when service completes,30,30,all cases except M05-F15 have a terminal trace,pass,shows local branch completion only
+human notice,one Boolean per response envelope,31,31,12 cases surface a teaching notice and M05-F15 does not,pass,scripted visibility only
+silence detector,one comparison per case,31,31,request response terminal trace and notice compared independently,pass,detects exactly M05-F15

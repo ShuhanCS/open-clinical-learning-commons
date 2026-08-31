@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.81.0.
-- Current build: Modules 01 through 04 and Checkpoint 01 are runnable release candidates; Module 05 is next.
+- Current Commons release: 0.82.0.
+- Current build: Modules 01 through 05 and Checkpoint 01 are runnable release candidates; Module 06 is next.
 
 APP-4 teaches learners to decide whether a prediction or rule can support one clinician at one workflow moment without creating unacceptable burden or harm. The course covers intended use, logic, triggers, input availability, calibration, thresholds, alert burden, human factors, a nonproduction prototype, failure modes, safety, monitoring, governance, and clinician-led defense.
 
@@ -19,7 +19,7 @@ The continuing case is an explicitly fictional adult general internal medicine a
 | 02 | Decision support logic, triggers, and data | 16.0 | Runnable release candidate |
 | 03 | Evidence, calibration, and validation | 16.5 | Runnable release candidate |
 | 04 | Alert burden, human factors, and equity | 16.5 | Runnable release candidate |
-| 05 | Sandbox prototype and failure modes | 16.0 | Specified |
+| 05 | Sandbox prototype and failure modes | 16.0 | Runnable release candidate |
 | 06 | Safety case, monitoring, governance, and embedded machine learning | 16.0 | Specified |
 | 07 | Clinician leadership, product brief, and defense | 16.0 | Specified |
 | Total |  | 112.5 |  |
@@ -52,5 +52,7 @@ The third runnable package is [Module 03](modules/03-evidence-calibration-valida
 The first runnable cumulative package is [Checkpoint 01](checkpoints/01-logic-evidence-validation-readiness/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/checkpoints/01-logic-evidence-validation-readiness-spec.md). It freezes 245 files from the complete Module 01 through Module 03 reference workspaces and independently protects 204 nested immutable files. Module 01 remains a required zero-point gate. Module 02 and Module 03 contribute 20 points once each. The 263-file learner or reference workspace passes 1,284 reference checks and 1,245 learner checks. Its `continue with conditions` decision permits bounded Module 04 curriculum construction while all six evidence candidates remain unaccepted and every clinical-use, implementation, and deployment route remains prohibited.
 
 The fourth runnable package is [Module 04](modules/04-alert-burden-human-factors-equity/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/modules/04-alert-burden-human-factors-equity-spec.md). It carries the complete Week 3 reference release into a 302-file learner or reference workspace, builds 1,200 synthetic encounter opportunities and 7,200 candidate-event rows, and compares six interruptive banners, six passive contextual panels, and no alert. The 25-point reference passes all 20 gates and permits only `panel-t003` Module 05 sandbox construction. The `0.03` value remains an unaccepted sandbox fixture.
+
+The fifth runnable package is [Module 05](modules/05-sandbox-prototype-failure-modes/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/modules/05-sandbox-prototype-failure-modes-spec.md). It freezes the complete 302-file Module 04 reference workspace inside a 341-file learner or reference workspace, creates 31 local FHIR R4 and CDS Hooks-shaped cases with 184 prefetch resources, and reconciles 61 trace events. All 31 declared tests and 20 gates pass. The reference detects one seeded silent failure, blocks one malformed card, carries the 25 Module 04 points once, adds no points, and permits only nonproduction Module 06 curriculum construction.
 
 No package may connect to a live clinical system, process real patient data, display a clinical alert, diagnose, order, deny, target, score real patients, implement, or deploy.

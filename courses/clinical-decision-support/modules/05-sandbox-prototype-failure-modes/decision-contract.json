@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app4-05",
+    "title": "Sandbox prototype and failure modes",
+    "version": "0.1.0",
+    "commons_release": "0.82.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "hours": 16.0,
+    "course_points": 0,
+    "assessment_role": "required zero-point gate for Checkpoint 02"
+  },
+  "decision": {
+    "owner": "CGH-GIM-01 clinical decision support governance council",
+    "question": "Does the local nonproduction prototype behave as specified and fail visibly enough to enter Module 06 safety, monitoring, governance, and embedded-ML work?",
+    "permitted_next_action": "construct the Module 06 safety and monitoring case from the frozen sandbox release"
+  },
+  "upstream": {
+    "module": "oclc-app4-04@0.1.0",
+    "commons_release": "0.81.0",
+    "reference_manifest_rows": 285,
+    "reference_manifest_bytes": 60302,
+    "reference_manifest_sha256": "41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9",
+    "reference_files": 302,
+    "module04_score": "25.00 of 25.00, carried into Checkpoint 02 exactly once",
+    "module04_gates": "20 of 20 pass"
+  },
+  "prototype": {
+    "release_id": "APP4-M05-LOCAL-SANDBOX-2026-08-31-v1",
+    "design": "panel-t003",
+    "design_role": "passive contextual panel fixture for mechanics testing only",
+    "threshold": "0.03000000",
+    "threshold_status": "unaccepted sandbox fixture",
+    "accepted_threshold": null,
+    "runtime": "local file execution with Python standard library only",
+    "network_listener": false,
+    "network_client": false,
+    "fhir_server": null,
+    "fhir_role": "FHIR R4-shaped teaching resources",
+    "cds_hooks_role": "CDS Hooks 2.0.1-shaped teaching requests and responses",
+    "conformance_claim": "prohibited"
+  },
+  "test_contract": {
+    "cases": 31,
+    "module04_positive_cases": 12,
+    "repeat_positive_cases": 1,
+    "categories": [
+      "normal positive",
+      "normal negative",
+      "threshold boundary",
+      "repeat positive",
+      "missing input",
+      "stale input",
+      "inconsistent input",
+      "delayed input",
+      "duplicate request",
+      "terminology mismatch",
+      "hook version mismatch",
+      "unit mismatch",
+      "unsupported service",
+      "missing score",
+      "known diabetes suppression",
+      "recent HbA1c suppression",
+      "service unavailable",
+      "response timeout",
+      "silent failure",
+      "accessibility defect",
+      "model version mismatch"
+    ],
+    "silent_failure_definition": "a received request with no response, no terminal trace, and no human notice",
+    "silent_failure_detection": "compare the request ledger with the response ledger, terminal trace, and human notice evidence"
+  },
+  "assessment": {
+    "points": 0,
+    "required_records": 16,
+    "noncompensable_gates": 20,
+    "score_rule": "carry the accepted 25-point Module 04 score once; do not rescore it"
+  },
+  "progression": {
+    "allowed": ["continue with conditions", "revise", "refer", "stop"],
+    "reference": "continue with conditions",
+    "module06_permission": "permitted for nonproduction safety, monitoring, governance, and fixed-challenger curriculum construction"
+  },
+  "authority": {
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

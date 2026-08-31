@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.81.0 through Module 04.
+- Current Commons release: 0.82.0 through Module 05.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -284,13 +284,17 @@ The release compares six interruptive banners, six passive contextual panels, an
 - Decision: does the nonproduction prototype behave as specified and fail visibly enough to enter a safety case?
 - Submission: sandbox prototype and failure-mode checkpoint.
 - Point role: required zero-point gate for Checkpoint 02.
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.82.0`; Module 06 curriculum construction is permitted with conditions.
 
 Learners implement the accepted logic in a local, nonnetworked FHIR R4 and CDS Hooks teaching sandbox. Every request, prefetch item, rule branch, prediction version, threshold, suppression, response, and no-response state is traceable.
 
 The test matrix includes normal, boundary, missing, stale, inconsistent, duplicate, delayed, unavailable-service, terminology mismatch, version mismatch, and silent-failure cases. Learners distinguish a visible failure from a request that disappeared without a response, log, or human notice.
 
 The prototype cannot connect to a real EHR, process real patient data, send a clinical message, or claim conformance. Passing sandbox tests is evidence about the teaching implementation only.
+
+The accepted release freezes all 302 files in the Module 04 reference workspace, including its 285-row immutable manifest and 204 nested Week 3 rows. The local standard-library sandbox contains 31 cases, 184 FHIR R4-shaped prefetch resources, 31 response envelopes, and 61 trace events. It reproduces all 12 Module 04 positive fixtures, including one repeat, and adds declared normal-negative, exact-boundary, visible-failure, silent-failure, and accessibility-defect tests.
+
+All 31 declared tests pass and all 20 release invariants pass. The four-ledger visibility audit detects one seeded silent failure, and the accessibility audit blocks one malformed card. The 341-file learner or reference workspace contains 324 immutable rows and 16 assessed records. The reference passes 2,649 checks, the learner starter passes 2,558 checks, copied validation passes, and 20 deliberate failure routes are rejected. Module 05 adds no points, carries the accepted 25 Module 04 points once, and permits Module 06 curriculum construction without permitting silent-mode evaluation, implementation, production connection, or deployment.
 
 ## 14. Module 06 brief: Safety case, monitoring, governance, and embedded machine learning
 
@@ -527,5 +531,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 03 releases a reproducible 7,544-row historical model cohort, untouched temporal-holdout and transport evidence, six unaccepted candidate thresholds, and a validated 118-file workspace.
 - [x] Checkpoint 01 freezes all 245 accepted Module 01 through Module 03 files, counts 20 plus 20 points once, preserves all six thresholds as unaccepted, and releases a validated 263-file cumulative workspace.
 - [x] Module 04 freezes the complete Week 3 release, compares all six unaccepted candidates with interruptive, passive, and no-alert designs, scores the 25-point workflow component once, and releases a validated 302-file workspace with a protected Module 05 sandbox handoff.
+- [x] Module 05 freezes all 302 Module 04 files, releases 31 local FHIR R4 and CDS Hooks-shaped normal and failure cases in a validated 341-file workspace, detects seeded silent failure from independent ledgers, blocks a malformed card, and protects the zero-point Module 06 handoff.
 
-APP-4 Modules 01 through 04 and Checkpoint 01 are complete for curriculum construction. Resume with Module 05 by freezing the complete Module 04 release manifest, preserving `panel-t003` and the unaccepted `0.03` sandbox role, and building nonproduction FHIR R4 and CDS Hooks-shaped normal, boundary, repeat, missing, stale, inconsistent, delayed, terminology, version, and silent-failure cases without expanding clinical authority.
+APP-4 Modules 01 through 05 and Checkpoint 01 are complete for curriculum construction. Resume with Module 06 by freezing the complete Module 05 release manifest, preserving every visible and silent failure, carrying the 25-point Module 04 score once, and building the nonproduction hazard, monitoring, governance, and fixed-challenger comparison without changing intended use, design, threshold, subgroup support, or clinical authority.
