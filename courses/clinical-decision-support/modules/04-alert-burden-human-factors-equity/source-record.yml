@@ -1,0 +1,29 @@
+schema_version: 1.0.0
+module_id: oclc-app4-04
+module_version: 0.1.0
+commons_release: 0.81.0
+status: scripted synthetic workflow teaching evidence only
+upstream_checkpoint:
+  id: oclc-app4-cp01
+  version: 0.1.0
+  candidate_manifest_sha256: 4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151
+public_evidence:
+  name: NHANES complete public releases carried through Module 03
+  url: https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/
+  role: historical classification, calibration, threshold, transport, and subgroup evidence
+synthetic_evidence:
+  name: Synthea 4.0.0 complete FHIR release carried through Module 02
+  url: https://github.com/synthetichealth/synthea/releases/tag/v4.0.0
+  release_id: CGH-GIM-01-SYNTHETIC-2026-08-31-v1
+  role: fictional workflow input and deterministic Commons teaching overlay
+standards_and_guidance:
+  cds_hooks: https://cds-hooks.hl7.org/
+  fhir_r4: https://hl7.org/fhir/R4/
+  onc_safer: https://www.healthit.gov/topic/safety/safer-guides
+workflow_release:
+  id: APP4-M04-SYNTHETIC-WORKFLOW-2026-08-31-v1
+  generator: APP-4 Module 04 Python standard-library builder 0.1.0
+  patients: 1000
+  encounter_opportunities: 1200
+  candidate_events: 7200
+claim_limit: no source or generated record establishes local workflow, burden, behavior, clinical utility, safety, equity, threshold acceptance, implementation, or deployment readiness

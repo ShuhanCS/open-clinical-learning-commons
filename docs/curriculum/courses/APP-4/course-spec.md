@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.80.0 through Checkpoint 01.
+- Current Commons release: 0.81.0 through Module 04.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -263,13 +263,17 @@ The accepted package verifies all 16 inherited NHANES sources before parsing and
 - Specification: `docs/curriculum/courses/APP-4/modules/04-alert-burden-human-factors-equity-spec.md`.
 - Decision: is one candidate design supportable enough to prototype without unacceptable burden or exclusion?
 - Submission: 25-point workflow, alert-burden, human-factors, and equity review.
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.81.0`; Module 05 sandbox construction is permitted with conditions.
 
 Learners test the card against a task analysis, workflow map, timing window, role and handoff map, alert budget, interruption level, competing alerts, expected action, dismissal and deferment, patient communication, access needs, privacy, and override. They compare at least one less interruptive alternative and no alert.
 
 Burden is reported as eligible encounters, cards, cards per clinician session, repeated cards, unavailable inputs, response time, views, dismissals, deferments, and unresolved cases. A dismissal is not automatically misuse, fatigue, or poor care.
 
 The equity review asks who is excluded by missing measurements, coded diagnoses, language, disability, access, and workflow design. It separates unsupported subgroup estimates from observed differences and keeps patients out of automated targeting.
+
+The accepted release freezes the complete 263-file Week 3 reference checkpoint and verifies all 204 nested immutable rows. Its deterministic workflow layer contains 1,000 synthetic people, 1,200 encounter opportunities, 200 repeats, 120 sessions, 12 fictional clinicians, 288 candidate-frame encounters, 39 unavailable inputs, 7,200 candidate-event rows, and 108 access and equity slices. The six evidence candidates produce 116, 12, 3, 3, 0, and 0 synthetic cards.
+
+The release compares six interruptive banners, six passive contextual panels, and no alert. Its 302-file learner or reference workspace contains 285 immutable rows and 16 assessed records. The 25-point reference passes all 20 gates, 2,400 reference checks, 2,284 learner checks, copied validation, and 20 deliberate failure routes. The human reference advances `panel-t003` for Module 05 mechanics only. The `0.03` value remains unaccepted, and every clinical-use, implementation, and deployment route remains prohibited.
 
 ## 13. Module 05 brief: Sandbox prototype and failure modes
 
@@ -522,5 +526,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 02 releases a complete 811,803-row synthetic FHIR source, 16 deterministic rule cases, and an 86-file workspace while keeping its mock score and threshold mechanics only.
 - [x] Module 03 releases a reproducible 7,544-row historical model cohort, untouched temporal-holdout and transport evidence, six unaccepted candidate thresholds, and a validated 118-file workspace.
 - [x] Checkpoint 01 freezes all 245 accepted Module 01 through Module 03 files, counts 20 plus 20 points once, preserves all six thresholds as unaccepted, and releases a validated 263-file cumulative workspace.
+- [x] Module 04 freezes the complete Week 3 release, compares all six unaccepted candidates with interruptive, passive, and no-alert designs, scores the 25-point workflow component once, and releases a validated 302-file workspace with a protected Module 05 sandbox handoff.
 
-APP-4 Modules 01 through 03 and Checkpoint 01 are complete for curriculum construction. Resume with Module 04 by freezing the exact Week 3 candidate manifest, preserving all six unaccepted evidence thresholds and the rejected `0.20` fixture, comparing candidate burden, human factors, access, equity, a less interruptive alternative, and no alert, and making one human-governed candidate-design recommendation without authorizing real-patient scoring or clinical use.
+APP-4 Modules 01 through 04 and Checkpoint 01 are complete for curriculum construction. Resume with Module 05 by freezing the complete Module 04 release manifest, preserving `panel-t003` and the unaccepted `0.03` sandbox role, and building nonproduction FHIR R4 and CDS Hooks-shaped normal, boundary, repeat, missing, stale, inconsistent, delayed, terminology, version, and silent-failure cases without expanding clinical authority.

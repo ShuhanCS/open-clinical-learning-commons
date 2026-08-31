@@ -1,0 +1,11 @@
+assumption_id,assumption,value,evidence,status,sensitivity,claim_limit
+A01,synthetic schedule size,"120 sessions, 10 opportunities per session, 12 fictional clinicians",workflow-profile.csv,scripted teaching assumption,"change sessions and concentration before local use",not a staffing or capacity estimate
+A02,repeat opportunities,200 second visits,workflow-profile.csv,scripted teaching assumption,"change repeat timing and frequency",not a local revisit rate
+A03,input-state overlay,"ready, missing, stale, or inconsistent by deterministic hash",encounter-opportunities.csv.gz,scripted teaching assumption,"change each unavailable-state frequency",not local data availability
+A04,competing alerts,"6 through 18 scripted alerts per session",session-burden.csv.gz,scripted teaching assumption,"test lower and higher competing work",not an observed alert count
+A05,interaction mix,"acknowledgment, dismissal, deferment, view only, or unresolved",candidate-events.csv.gz,scripted teaching assumption,"change the mix without assigning motive",not clinician behavior or fatigue
+A06,response time,"20 through 300 seconds when the script resolves",candidate-events.csv.gz,scripted teaching assumption,"test shorter, longer, and unresolved work",not measured response time
+A07,task minutes,"3.0 acknowledge, 1.0 dismiss, 2.0 defer, 1.0 view only, 0.5 unresolved",candidate-events.csv.gz,scripted teaching assumption,"double and halve every value",not measured labor or cost
+A08,teaching interruption screen,"compare every banner event with zero scripted passive-panel interruptions",design-comparison.csv,comparison rule only,"test panel visibility and cognitive burden separately",zero scripted interruption does not mean zero burden
+A09,equity support rule,"at least 30 ready encounters and 10 candidate cards",equity-slices.csv,predeclared teaching rule,"do not merge groups to pass the rule",not fairness certification
+A10,sandbox positive-case screen,at least 10 scripted positive cases,design-comparison.csv,mechanics criterion only,"increase test fixtures in Module 05 without changing clinical evidence",not threshold selection or utility evidence

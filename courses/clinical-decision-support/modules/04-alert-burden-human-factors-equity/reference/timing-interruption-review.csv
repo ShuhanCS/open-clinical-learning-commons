@@ -1,0 +1,9 @@
+review_id,moment_or_task,scripted_evidence,risk,reference_design,control,owner,status
+T01,session preparation,120 sessions and scripted competing alerts,another queue could add hidden work,no session-start queue,keep the candidate inside patient-view context,workflow lead,conditioned
+T02,patient-view open,one decision time per opportunity,panel could appear before required data are ready,passive contextual panel,evaluate only after readiness is known,clinical informatics lead,conditioned
+T03,input unavailable,39 of 288 candidate-frame encounters,missing stale or inconsistent data could look negative,no card with unavailable reason,never impute or label below threshold,data steward,pass
+T04,candidate result,12 cards at the 0.03 sandbox fixture,even a passive panel competes for attention,passive contextual panel,count every card and session concentration,workflow lead,conditioned
+T05,repeat visit,one repeat card at the 0.03 fixture,repetition may add burden or confusion,repeat visible in trace,test repeat handling without silent suppression,clinical informatics lead,conditioned
+T06,interaction,scripted acknowledgments dismissals deferments views and unresolved states,interaction could be mislabeled as motive or quality,no automated consequence,retain the scripted label and avoid motive claims,patient-safety lead,pass
+T07,patient discussion,language and disability needs carried with the opportunity,unsupported communication may exclude or burden patients,clinician-owned discussion,route qualified language and accessible-format support,patient and access reviewers,conditioned
+T08,encounter close,unresolved script remains possible,hidden work may continue after close,no automatic escalation,record unresolved work and permit pause or redesign,workflow lead,conditioned

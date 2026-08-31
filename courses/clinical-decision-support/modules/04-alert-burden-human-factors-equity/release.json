@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable release candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app4-04",
+    "title": "Alert burden, human factors, and equity",
+    "version": "0.1.0",
+    "commons_release": "0.81.0",
+    "hours": 16.5,
+    "course_points": 25
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-app4-cp01",
+    "checkpoint_version": "0.1.0",
+    "candidate_files": 245,
+    "candidate_manifest_bytes": 45897,
+    "candidate_manifest_sha256": "4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151",
+    "nested_immutable_rows": 204,
+    "checkpoint_files": 263
+  },
+  "workflow": {
+    "release_id": "APP4-M04-SYNTHETIC-WORKFLOW-2026-08-31-v1",
+    "synthetic_people": 1000,
+    "encounter_opportunities": 1200,
+    "candidate_frame_encounters": 288,
+    "input_unavailable_encounters": 39,
+    "candidate_event_rows": 7200,
+    "equity_rows": 108,
+    "candidate_cards": [116, 12, 3, 3, 0, 0]
+  },
+  "reference_decision": {
+    "progression": "continue with conditions",
+    "sandbox_design": "panel-t003",
+    "sandbox_threshold_role": "0.03000000 unaccepted sandbox fixture",
+    "module05_permission": "permitted for nonproduction sandbox construction",
+    "accepted_threshold": null
+  },
+  "workspace": {
+    "immutable_manifest_rows": 285,
+    "editable_records": 16,
+    "assembled_files": 302
+  },
+  "validation": {
+    "workflow_builder_self_check": "pass",
+    "workspace_builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_checks": 2400,
+    "starter_checks": 2284,
+    "failure_routes_rejected": 20
+  },
+  "authority": {
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  },
+  "known_issues": [
+    "The official APP-4 section and half-term dates remain to be assigned from the published academic calendar.",
+    "Named workflow, human-factors, clinical, patient, language-access, disability-access, equity, privacy, accessibility, responsible-AI, and independent-reproduction reviews remain pending before alpha.",
+    "All workflow and interaction values are synthetic scripts, not local measurements.",
+    "No clinical threshold is selected or accepted."
+  ]
+}

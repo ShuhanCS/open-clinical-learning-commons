@@ -1,0 +1,11 @@
+measure,value,definition,status,claim_limit
+synthetic_people,1000,one committed Synthea Patient row,synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+candidate_frame_people,238,"age, BMI, diabetes, and recent-HbA1c teaching frame",synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+encounter_opportunities,1200,scripted fictional service opportunities,synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+repeat_encounter_opportunities,200,second scripted visits,synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+clinician_sessions,120,scripted sessions,synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+fictional_clinicians,12,scripted clinician identifiers,synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+candidate_frame_encounters,288,eligible before scripted input state,synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+unavailable_candidate_inputs,39,"missing, stale, or inconsistent scripted states",synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+candidate_event_rows,7200,six evidence candidates times every encounter opportunity,synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"
+design_rows,13,"six banner, six passive-panel, and one no-alert comparison",synthetic teaching evidence,"not local prevalence, workflow, workload, behavior, utility, safety, or deployment evidence"

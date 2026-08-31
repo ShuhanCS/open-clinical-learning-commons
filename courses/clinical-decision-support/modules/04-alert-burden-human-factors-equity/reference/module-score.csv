@@ -1,0 +1,12 @@
+criterion_id,criterion,possible_points,earned_points,status,evidence
+S01,workflow task analysis,3.00,3.00,complete,workflow-task-analysis.md
+S02,"roles, handoffs, timing, and interruption",2.50,2.50,complete,"role-handoff-map.csv; timing-interruption-review.csv"
+S03,six-candidate comparison,3.00,3.00,complete,candidate-design-review.md
+S04,burden and alert-budget review,3.00,3.00,complete,"candidate-burden.csv; burden-assumption-register.csv"
+S05,passive-panel and no-alert comparison,3.00,3.00,complete,candidate-design-review.md
+S06,usability and human-factors review,2.50,2.50,complete,usability-review.csv
+S07,"automation-bias, override, and stop controls",2.00,2.00,complete,"automation-bias-controls.csv; override-stop-conditions.md"
+S08,"access, equity, and privacy review",3.00,3.00,complete,access-equity-privacy-review.csv
+S09,patient communication and hidden work,1.50,1.50,complete,patient-communication-hidden-work.md
+S10,"reproduction, AI record, decision, and handoff",1.50,1.50,complete,"reproducibility-check.md; ai-use.md; progression-module05-handoff.md"
+total,total,25.00,25.00,complete,exact Module 04 score carried once to Week 6

@@ -1,0 +1,21 @@
+invariant_id,status,check
+I01,pass,exact synthetic Patient frame
+I02,pass,exact encounter opportunities
+I03,pass,exact repeat opportunities
+I04,pass,exact session count
+I05,pass,exact fictional clinician count
+I06,pass,"six candidates by 1,200 opportunities"
+I07,pass,all six evidence candidates and no other value
+I08,pass,rejected 0.20 fixture excluded
+I09,pass,no threshold acceptance
+I10,pass,candidate counts are monotone by threshold
+I11,pass,"six banner, six passive-panel, and no-alert designs"
+I12,pass,one zero-card no-alert design
+I13,pass,six thresholds by 120 sessions
+I14,pass,equity and access slices released
+I15,pass,unsupported candidate-card rates are blank
+I16,pass,patient frame explicitly synthetic
+I17,pass,encounters explicitly synthetic
+I18,pass,unavailable inputs never receive an encounter score
+I19,pass,dismissal script present without motive inference
+I20,pass,every candidate event denies alert authority

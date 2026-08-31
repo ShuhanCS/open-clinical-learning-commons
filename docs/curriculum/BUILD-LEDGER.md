@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.80.0
+- Current release: 0.81.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-4 Checkpoint 01, logic, evidence, calibration, and validation readiness
-- Next unit: APP-4 Module 04, alert burden, human factors, and equity
+- Last completed unit: APP-4 Module 04, alert burden, human factors, and equity
+- Next unit: APP-4 Module 05, sandbox prototype and failure modes
 
 ## Confirmed decisions
 
@@ -617,6 +617,15 @@
 - The reference release is `continue with conditions`, permitting Module 04 alert-burden, human-factors, equity, less-interruptive-alternative, no-alert, and six-candidate comparison work for curriculum construction only.
 - Diagnosis, real-patient scoring, threshold acceptance, clinical alerting, clinical action, implementation, production connection, and deployment remain prohibited.
 - APP-4 Checkpoint 01 is a runnable release candidate at Commons 0.80.0.
+- APP-4 Module 04 version 0.1.0 freezes the complete 263-file Week 3 reference checkpoint, its 245-row candidate manifest, and all 204 nested immutable rows without changing accepted evidence, score, gates, progression, or authority.
+- The deterministic workflow release contains 1,000 synthetic people, 1,200 encounter opportunities, 200 repeats, 120 sessions, 12 fictional clinicians, 288 candidate-frame encounters, and 39 unavailable input states.
+- Six unaccepted evidence candidates produce 116, 12, 3, 3, 0, and 0 synthetic cards across 7,200 candidate-event rows. The rejected `0.20` fixture is excluded.
+- The design comparison contains six interruptive banners, six passive contextual panels, and no alert. Public NHANES consequences remain separate from synthetic workflow counts.
+- The 108 access and equity slices use a predeclared support rule. Fourteen synthetic comparisons are reportable with a boundary, 94 rates are suppressed, and no suppressed rate is filled.
+- The Module 04 learner or reference workspace contains 285 immutable rows, 16 assessed records, and 302 files. Its final manifest is 60,302 bytes with SHA-256 `41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9`.
+- The reference scores 25.00 of 25.00 and passes all 20 noncompensable gates. Reference validation passes 2,400 checks, learner validation passes 2,284 checks, copied validation passes, and 20 failure routes are rejected.
+- Progression is `continue with conditions`. `panel-t003` may enter Module 05 as a passive-panel sandbox fixture. The `0.03` value remains unaccepted, and real-patient scoring, clinical threshold acceptance, clinical alerting, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
+- APP-4 Module 04 is a runnable release candidate at Commons 0.81.0.
 
 ## Pending confirmation
 
@@ -634,17 +643,18 @@
 - Complete named clinical, interoperability, terminology, safety, privacy, accessibility, responsible-AI, and independent review of the APP-4 Module 02 Synthea and Commons release before alpha.
 - Complete named primary-care or endocrinology, biostatistics, calibration, NHANES survey-methods, clinical-informatics, equity, patient, accessibility, responsible-AI, and independent-reproduction review of APP-4 Module 03 before alpha.
 - Complete named clinical, survey-methods, calibration, clinical-informatics, interoperability, terminology, workflow, human-factors, patient, access, equity, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-4 Checkpoint 01 before alpha.
+- Complete named workflow, human-factors, clinical, patient, Spanish-language, broader language-access, disability-access, equity, privacy, accessibility, patient-safety, responsible-AI, and independent-reproduction review of APP-4 Module 04 before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-4 course specification, Checkpoint 01 specification, and complete accepted cumulative release before building Module 04.
-2. Freeze the exact 245-row Week 3 candidate manifest and all 204 nested immutable rows without editing accepted source, logic, model, calibration, threshold, or authority evidence.
-3. Use documented synthetic workflow data only for burden and human-factors teaching. Do not describe synthetic card counts as observed clinical burden.
-4. Compare all six unaccepted evidence candidates, a less interruptive alternative, and no alert. Keep `0.20` rejected as a mechanics fixture.
-5. Examine task flow, timing, competing work, repeat cards, dismissal, deferment, override, patient communication, language, disability, access, privacy, equity, and hidden work.
-6. Require a human-governed candidate-design recommendation with explicit burden, missed-case, uncertainty, ownership, and stop conditions. Do not authorize real-patient scoring or clinical use.
-7. Build the 25-point Module 04 component and its protected handoff to Module 05 without beginning the prototype early.
-8. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 04 before building Module 05.
+1. Read the APP-4 course and Module 04 specifications plus the complete accepted Module 04 release before building Module 05.
+2. Freeze the exact 302-file Module 04 workspace and 60,302-byte release manifest with SHA-256 `41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9`.
+3. Preserve `panel-t003` as a passive contextual panel sandbox fixture and `0.03` as unaccepted. Do not introduce `0.20` or accept any clinical threshold.
+4. Build nonproduction FHIR R4 and CDS Hooks-shaped requests and responses for normal, boundary, repeat, missing, stale, inconsistent, delayed, terminology, version, and silent-failure cases.
+5. Keep unavailable states visible, preserve human nonaction and override, and test language and disability access without connecting to a live system.
+6. Record every expected result, trace, latency, visible failure, silent failure, and rollback condition. Do not call passing message tests interoperability or safety approval.
+7. Add the required zero-point Module 05 gate and protected Module 06 handoff without changing the 25-point Module 04 component.
+8. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 05 before building Module 06.

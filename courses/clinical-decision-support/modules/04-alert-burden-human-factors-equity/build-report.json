@@ -1,0 +1,138 @@
+{
+  "accepted_threshold": null,
+  "authority": {
+    "clinical_action": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "deployment": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "real_patient_scoring": "prohibited"
+  },
+  "candidate_cards": {
+    "0.02000000": 116,
+    "0.03000000": 12,
+    "0.04000000": 3,
+    "0.05000000": 3,
+    "0.07500000": 0,
+    "0.10000000": 0
+  },
+  "candidate_thresholds": [
+    "0.02000000",
+    "0.03000000",
+    "0.04000000",
+    "0.05000000",
+    "0.07500000",
+    "0.10000000"
+  ],
+  "claim_limit": "NHANES evidence and synthetic workflow counts remain separate; this release does not establish local workflow, burden, behavior, utility, safety, equity, or clinical authority",
+  "designs": {
+    "interruptive_banner": 6,
+    "no_alert": 1,
+    "passive_context_panel": 6
+  },
+  "generator": "APP-4 Module 04 Python standard-library builder 0.1.0",
+  "human_design_selection": null,
+  "module02_mock_threshold": {
+    "status": "rejected mechanics fixture; excluded from Module 04 evidence",
+    "value": "0.20000000"
+  },
+  "output_manifest": [
+    {
+      "bytes": 54854,
+      "relative_path": "data/workflow/patient-frame.csv.gz",
+      "sha256": "bfa374fa13c683a5bcc6915c776282b22c98015623db8c1b30562018dd3e7b2d"
+    },
+    {
+      "bytes": 25394,
+      "relative_path": "data/workflow/encounter-opportunities.csv.gz",
+      "sha256": "b71bd822a8bb0d1b1c87430213fcf6e09e056b80ab18366812cbca65e08b4f87"
+    },
+    {
+      "bytes": 82953,
+      "relative_path": "data/workflow/candidate-events.csv.gz",
+      "sha256": "278a9c74294c5ad13b38ade0215a88c8e4af37e7bc5e8d2e7fcc297d781a929f"
+    },
+    {
+      "bytes": 1935,
+      "relative_path": "outputs/workflow-profile.csv",
+      "sha256": "6336dc5e4e98c640dcdd6081c92529b2fa8ef9f835ea23ad384d17d5afe6a078"
+    },
+    {
+      "bytes": 1729,
+      "relative_path": "outputs/candidate-burden.csv",
+      "sha256": "8eee3c98314083d4d741dd135fcf84137d1de1c7fb6dcd0bc5e74fef2c57b1ad"
+    },
+    {
+      "bytes": 4905,
+      "relative_path": "outputs/design-comparison.csv",
+      "sha256": "c9dbeff717dbc16772521b2ee53481c835d36f90c08cdd52578b4228e43168e8"
+    },
+    {
+      "bytes": 3542,
+      "relative_path": "outputs/session-burden.csv.gz",
+      "sha256": "6086ad9279575b7406e8ef03215753a47e6dbd7731571720802f889089b2e83c"
+    },
+    {
+      "bytes": 34139,
+      "relative_path": "outputs/equity-slices.csv",
+      "sha256": "bc0ac37d4d56ef5bd7a3b62b499e04e60addd379103f630e76ba1d5ac822a99f"
+    },
+    {
+      "bytes": 936,
+      "relative_path": "outputs/invariant-checks.csv",
+      "sha256": "ef9846bad989c3bd197ad6a5da24719dbaef271629ac55c16da951d7f4b6ec8b"
+    }
+  ],
+  "release_id": "APP4-M04-SYNTHETIC-WORKFLOW-2026-08-31-v1",
+  "schema_version": "1.0.0",
+  "source_contract": {
+    "checkpoint-contract": {
+      "bytes": 2282,
+      "sha256": "3005bdaf4a28ae0cd4c6efd43c90d1c1272907a7a15275204fb961720458a931"
+    },
+    "checkpoint-release": {
+      "bytes": 3489,
+      "sha256": "8f637bef551ebe5cb91e93b3b91fef51f25736d07168b904851405c703b62c03"
+    },
+    "module02-condition": {
+      "bytes": 1578721,
+      "sha256": "63ceed4bdebc61c8570302d474b464f872cb0412637569123decc580044556df"
+    },
+    "module02-observation": {
+      "bytes": 21844378,
+      "sha256": "f2d7c14001ef3f656db0e51d23f5099a228c1f357e82d0b9c8134fa3751f6982"
+    },
+    "module02-patient": {
+      "bytes": 235743,
+      "sha256": "167fc8a4d52d2195cfbcc7282dd390e647b13c48dc51cceb9d37d78131619b74"
+    },
+    "module02-synthetic-release": {
+      "bytes": 1089,
+      "sha256": "4daa5f934a949852c30ab2909aae6e6681532633fa6da7b96e64853a90419e28"
+    },
+    "module03-model-coefficients": {
+      "bytes": 1149,
+      "sha256": "cfecfbadfc88a1b9ec9935ac5865627686731d5022a1cf691aa626a876ecbe0b"
+    },
+    "module03-performance": {
+      "bytes": 1413,
+      "sha256": "dd3abf11aef8fad8ea1f04a66e16e7c545a80975181f4914527e63d7e4a1d035"
+    },
+    "module03-threshold-audit": {
+      "bytes": 5089,
+      "sha256": "51e98dad554bda526d9497ae31487cd7a1c237573ae17239c2063af3ed925e10"
+    }
+  },
+  "status": "scripted synthetic workflow teaching evidence only",
+  "workflow": {
+    "candidate_frame_encounters": 288,
+    "candidate_frame_people": 238,
+    "encounter_opportunities": 1200,
+    "fictional_clinicians": 12,
+    "input_unavailable_encounters": 39,
+    "repeat_opportunities": 200,
+    "sessions": 120,
+    "synthetic_people": 1000
+  }
+}

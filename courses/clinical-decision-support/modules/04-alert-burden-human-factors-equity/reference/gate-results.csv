@@ -1,0 +1,21 @@
+gate_id,domain,status,evidence,noncompensable_reason
+G01,checkpoint identity,pass,"release-manifest.csv; upstream/checkpoint01/candidate-manifest.csv",accepted Week 3 chain of custody cannot change
+G02,nested immutable evidence,pass,"upstream/checkpoint01/candidate/module-01/release-manifest.csv; upstream/checkpoint01/candidate/module-02/release-manifest.csv; upstream/checkpoint01/candidate/module-03/release-manifest.csv",all 204 accepted immutable rows must remain exact
+G03,evidence candidates,pass,"candidate-design-review.md; design-comparison.csv",all six unaccepted candidates must be compared
+G04,rejected fixture,pass,"workflow-evidence-release.md; build-report.json",0.20 must remain rejected and excluded from evidence
+G05,synthetic-only workflow,pass,"patient-frame.csv.gz; encounter-opportunities.csv.gz",workflow records must remain explicitly synthetic
+G06,task analysis,pass,workflow-task-analysis.md,user moment action nonaction burden and patient consequence are required
+G07,roles timing and handoffs,pass,"role-handoff-map.csv; timing-interruption-review.csv",work must have human owners and pause rights
+G08,burden metrics,pass,"candidate-burden.csv; session-burden.csv.gz",cards sessions repeats unavailable inputs and scripted work must remain visible
+G09,repeat and unavailable states,pass,"candidate-events.csv.gz; timing-interruption-review.csv",repeat cards and unavailable inputs cannot be hidden or defaulted
+G10,interaction interpretation,pass,"burden-assumption-register.csv; patient-communication-hidden-work.md",scripted interaction cannot become a behavior or quality claim
+G11,less interruptive alternative,pass,"candidate-design-review.md; design-comparison.csv",passive contextual panel comparison is required
+G12,no alert,pass,"candidate-design-review.md; design-comparison.csv",no-alert burden and missed-case boundary are required
+G13,usability and human factors,pass,usability-review.csv,workflow fit and accessibility cannot be inferred from a score
+G14,automation bias and override,pass,"automation-bias-controls.csv; override-stop-conditions.md",human review nonaction and stop controls are required
+G15,language disability and patient communication,pass,"access-equity-privacy-review.csv; patient-communication-hidden-work.md",access needs and patient recourse cannot be omitted
+G16,equity support and suppression,pass,"equity-slices.csv; access-equity-privacy-review.csv",unsupported rates must remain blank and untargeted
+G17,privacy and minimization,pass,"access-equity-privacy-review.csv; source-record.yml",direct identifiers and live data are prohibited
+G18,human recommendation and stop conditions,pass,"candidate-design-review.md; override-stop-conditions.md",only humans may recommend a bounded sandbox fixture
+G19,reproduction and AI accountability,pass,"reproducibility-check.md; ai-use.md",generated evidence and agent use must be independently checked
+G20,progression and authority,pass,progression-module05-handoff.md,Module 05 sandbox permission cannot grant clinical or deployment authority

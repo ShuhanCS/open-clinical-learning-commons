@@ -1,0 +1,11 @@
+heuristic_id,heuristic,finding,risk,required_control,owner,status
+U01,visibility of system status,input unavailable and no-card reasons must remain distinguishable,absence could look like low risk,show explicit test-state and reason in the sandbox trace,clinical informatics lead,conditioned
+U02,match with clinical workflow,patient-view timing is a candidate assumption,panel may arrive before or after the useful moment,test timing with receiving roles,workflow lead,conditioned
+U03,user control and freedom,clinician may ignore dismiss defer or close,interaction could trigger an unwanted consequence,no automatic order escalation penalty or repeat suppression,clinical owner,pass
+U04,consistency and standards,card vocabulary must match the accepted intended-use boundary,screening language could drift into diagnosis,reuse the bounded Module 01 and Module 02 language,clinical content reviewer,conditioned
+U05,error prevention,missing stale and inconsistent inputs occur,hidden defaults could create false certainty,stop evaluation and preserve the unavailable state,data steward,pass
+U06,recognition rather than recall,limits and nonaction must be visible,users should not have to remember course documentation,place short limits and ownership in the panel,accessibility reviewer,conditioned
+U07,flexibility and efficiency,passive panel avoids a scripted interruption,it may still add attention and documentation work,count exposure and hidden work separately,workflow lead,conditioned
+U08,minimalist presentation,only purpose evidence uncertainty and nonaction belong in the first view,extra detail could obscure the boundary,link detail without crowding the panel,human-factors reviewer,conditioned
+U09,error recovery,repeat or unresolved cases can occur,users need a safe way to stop or report a defect,provide pause report and rollback routes in the sandbox,patient-safety lead,conditioned
+U10,accessibility and language,most 0.03 access slices are unsupported,a single English default may exclude users or patients,test qualified language screen-reader low-vision motor and cognitive-support routes,patient and access reviewers,conditioned

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app4-04",
+    "title": "Alert burden, human factors, and equity",
+    "version": "0.1.0",
+    "commons_release": "0.81.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "week": 4,
+    "hours": 16.5,
+    "course_points": 25
+  },
+  "decision": {
+    "owner": "CGH-GIM-01 clinical decision support governance council",
+    "question": "Is one candidate design supportable enough to enter a nonproduction Module 05 sandbox without accepting a clinical threshold?",
+    "reference_design": "panel-t003",
+    "reference_design_role": "passive contextual panel sandbox fixture only",
+    "reference_threshold": "0.03000000 unaccepted sandbox fixture",
+    "permitted_next_action": "construct the Module 05 nonproduction sandbox with all authority limits retained"
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-app4-cp01",
+    "version": "0.1.0",
+    "commons_release": "0.80.0",
+    "candidate_files": 245,
+    "candidate_manifest_bytes": 45897,
+    "candidate_manifest_sha256": "4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151",
+    "nested_immutable_rows": 204,
+    "assembled_files": 263,
+    "course_points": 40
+  },
+  "workflow": {
+    "release_id": "APP4-M04-SYNTHETIC-WORKFLOW-2026-08-31-v1",
+    "synthetic_people": 1000,
+    "encounter_opportunities": 1200,
+    "repeat_opportunities": 200,
+    "candidate_frame_encounters": 288,
+    "input_unavailable_encounters": 39,
+    "sessions": 120,
+    "fictional_clinicians": 12,
+    "candidate_event_rows": 7200,
+    "equity_rows": 108
+  },
+  "thresholds": {
+    "evidence_candidates": [0.02, 0.03, 0.04, 0.05, 0.075, 0.10],
+    "candidate_cards": [116, 12, 3, 3, 0, 0],
+    "module02_mock": "0.20 rejected mechanics fixture",
+    "accepted": null,
+    "agent_selection": "prohibited"
+  },
+  "designs": {
+    "interruptive_banner": 6,
+    "passive_context_panel": 6,
+    "no_alert": 1,
+    "generated_selection": null,
+    "human_reference_recommendation": "panel-t003 for sandbox mechanics only"
+  },
+  "assessment": {
+    "points": 25,
+    "required_records": 16,
+    "noncompensable_gates": 20
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer", "stop"],
+    "reference": "continue with conditions",
+    "module05_permission": "permitted for nonproduction sandbox construction",
+    "clinical_threshold_acceptance": "prohibited"
+  },
+  "authority": {
+    "diagnosis": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

@@ -1,0 +1,11 @@
+control_id,risk,control,human_owner,test_evidence,status,claim_limit
+AB01,score presented as fact,label the score as offline synthetic teaching evidence,methods owner,wording test required in Module 05,conditioned,no clinical probability claim
+AB02,threshold presented as accepted,label 0.03000000 an unaccepted sandbox fixture,governance council,threshold-status assertion,pass,no threshold authority
+AB03,panel interpreted as diagnosis,state that one HbA1c result is not diagnosis and the panel cannot diagnose,clinical content reviewer,content test required,conditioned,no diagnosis
+AB04,panel interpreted as an order,provide no suggestion action or automatic order,clinical informatics lead,response-shape test required,conditioned,no ordering authority
+AB05,no card interpreted as low risk,show unavailable suppressed and below-candidate states separately,data steward,reason-code tests,conditioned,no negative clinical conclusion
+AB06,dismissal treated as error or poor care,record interaction without motive or quality label,patient-safety lead,interaction-language test,pass,no behavior inference
+AB07,repetition drives compliance,count repeats and permit ignore dismiss defer or pause,workflow lead,repeat-case test required,conditioned,no compliance pressure
+AB08,unsupported groups receive a group rule,keep suppressed cells blank and prohibit group-specific action,equity reviewer,suppression assertions,pass,no targeting authority
+AB09,agent chooses the design,require named human governance review and recorded conditions,governance council,signed decision pending before alpha,conditioned,no autonomous selection
+AB10,passing sandbox treated as implementation approval,show the authority boundary in every release and handoff,governance council,progression and release assertions,pass,no implementation or deployment
