@@ -642,7 +642,16 @@
 - The final Module 06 workspace manifest is 88,971 bytes with SHA-256 `e6553079256fdd2a37ab042a87c2ec69812cad7074abefa7d7907e6ee7b56f7d`.
 - Module 06 adds zero points and carries the accepted 25.00 Module 04 points into Checkpoint 02 exactly once. All 22 Module 06 gates pass.
 - Progression is `continue with conditions`. Checkpoint 02 may assemble the frozen Week 6 curriculum package. The design and threshold remain fixtures, the transparent model remains accepted, and real-patient scoring, clinical alerting, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
-- APP-4 Module 06 is a runnable release candidate at Commons 0.83.0. Checkpoint 02 is the next isolated build unit.
+- APP-4 Module 06 is a runnable release candidate at Commons 0.83.0.
+- APP-4 Checkpoint 02 version 0.1.0 freezes the exact 302-file Module 04, 341-file Module 05, and 387-file Module 06 reference workspaces without recomputing accepted evidence.
+- The checkpoint contains 1,030 accepted component files and 1,047 assembled files. Its 1,030-row, 236,732-byte candidate manifest has SHA-256 `14ac12dd890045dce21cdc44a9b614770b8b2428bd71a1d4f5eb9cc9de63d642`.
+- Module 04 contributes 25.00 points exactly once. Modules 05 and 06 contribute zero points and retain 20 plus 22 gates. With Module 04's 20 gates and 20 checkpoint gates, all 82 gates are noncompensable.
+- `panel-t003` remains a passive contextual panel fixture. `0.03000000` remains unaccepted, and no clinical threshold is accepted.
+- All 31 sandbox cases, 17 inherited failure modes, the reconciled silent failure, and the blocked malformed-card accessibility defect remain visible.
+- All 22 hazards, 20 monitoring measures, eight monitoring scenarios, and 12 human-owned escalation routes remain exact. Automatic clinical actions total zero.
+- The challenger retains 7,544 common rows and the fixed evidence contract. R03, R04, and R08 fail, 8 of 11 replacement rules pass, and the transparent model remains retained.
+- The reference package passes 8,353 checks, the learner package passes 8,308 checks, copied validation passes, two reference assemblies match, and 24 deliberate failure routes are rejected.
+- APP-4 Checkpoint 02 is a runnable release candidate at Commons 0.84.0. Module 07 clinician leadership review is the next isolated build unit.
 
 ## Pending confirmation
 
@@ -663,16 +672,17 @@
 - Complete named workflow, human-factors, clinical, patient, Spanish-language, broader language-access, disability-access, equity, privacy, accessibility, patient-safety, responsible-AI, and independent-reproduction review of APP-4 Module 04 before alpha.
 - Complete named APP-4 Module 05 clinical-informatics, FHIR and CDS Hooks, patient-safety, workflow, patient, language-access, disability-access, accessibility, equity, privacy, security, responsible-AI, and independent-reproduction review before alpha.
 - Complete named APP-4 Module 06 clinical, patient-safety, workflow, model-risk, biostatistics, equity, accessibility, privacy, security, governance, responsible-AI, and independent-reproduction review before alpha.
+- Complete named APP-4 Checkpoint 02 clinical, patient-safety, workflow, interoperability, model-risk, survey-methods, equity, accessibility, privacy, security, governance, responsible-AI, clinician-leadership, and independent-reproduction review before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-4 course, Checkpoint 02 contract, and complete accepted Module 04 through Module 06 releases.
-2. Freeze the exact 302-file Module 04, 341-file Module 05, and 387-file Module 06 workspaces without recomputing accepted evidence.
-3. Preserve `panel-t003`, the unaccepted `0.03000000` fixture, all visible and silent failures, the blocked accessibility defect, and the retained transparent-model decision.
-4. Carry the 25.00 Module 04 points exactly once. Modules 05 and 06 add zero points and retain all 20 plus 22 inherited gates.
-5. Assemble one cumulative Week 6 evidence index, score record, gate record, responsible-claims check, reproducibility record, AI-use record, defense, and protected Module 07 handoff.
-6. Reject any changed upstream file, duplicate points, hidden failed replacement rule, threshold acceptance, or expanded clinical or production authority.
-7. Advance semver, validate the complete curriculum, commit, push, and remote-verify Checkpoint 02 before building Module 07.
+1. Read the APP-4 course, accepted Checkpoint 01 and Checkpoint 02 releases, and the Module 07 clinician leadership contract.
+2. Freeze both checkpoint identities without recomputing, repairing, or improving their evidence.
+3. Preserve all unaccepted thresholds, sandbox failures, the blocked accessibility defect, the 22 hazards, 20 monitoring measures, 12 escalation routes, R03/R04/R08 failures, and retained transparent-model decision.
+4. Design the 16-hour clinician-led product brief and defense around Joe Joseph, MD, under the established identity and participation-confirmation boundary.
+5. Require the clinician recommendation to address uncertainty, alert burden, patient access, staff voice, clinical override, hidden work, failure detection, stop authority, reconsideration evidence, and absent course authority.
+6. Draft the 35-point final component without duplicating the accepted 40-point and 25-point checkpoint scores.
+7. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 07 before building the official-end-date checkpoint.

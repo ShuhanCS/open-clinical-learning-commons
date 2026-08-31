@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.83.0 through Module 06.
+- Current Commons release: 0.84.0 through Checkpoint 02.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -365,11 +365,13 @@ The accepted checkpoint freezes 245 files from the complete Module 01 through Mo
 - Package path: `courses/clinical-decision-support/checkpoints/02-workflow-sandbox-safety-release/`.
 - Specification: `docs/curriculum/courses/APP-4/checkpoints/02-workflow-sandbox-safety-release-spec.md`.
 - Decision: is the complete nonproduction case strong enough for clinician leadership review?
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Checkpoint version `0.1.0` and Commons release `0.84.0`; Module 07 clinician leadership review is permitted with conditions.
 
 Required evidence includes the accepted Week 3 identity; workflow and task analysis; role and handoff map; alert burden; alternatives; usability review; automation-bias controls; access, equity, privacy, and patient consequences; FHIR and CDS Hooks message shapes; traceable prototype; normal and edge tests; visible and silent failures; latency and version tests; hazard log; safety controls; monitoring measures; drift and subgroup checks; incident route; escalation, stop, fallback, restart, and retirement rules; governance; transparent-versus-ML comparison; leakage tests; 25-point score; gates; AI record; defense; and progression decision.
 
 The checkpoint counts the 25-point Module 04 component once. Modules 05 and 06 supply required prototype, failure, safety, monitoring, governance, and ML gates without adding points.
+
+The accepted checkpoint freezes 1,030 files from the complete Module 04 through Module 06 reference workspaces. Its candidate manifest is 236,732 bytes with SHA-256 `14ac12dd890045dce21cdc44a9b614770b8b2428bd71a1d4f5eb9cc9de63d642`. The 1,047-file learner or reference package preserves a 25-point total, 62 inherited gates, 20 checkpoint gates, nine assessed records, and a 14-question defense. Reference validation passes 8,353 checks, learner validation passes 8,308 checks, and all 24 failure routes are rejected. `panel-t003` and `0.03000000` remain mechanics fixtures, no threshold is accepted, the sandbox failures and accessibility blocker remain visible, and the transparent model remains retained.
 
 ### Final checkpoint: Clinical decision support package
 

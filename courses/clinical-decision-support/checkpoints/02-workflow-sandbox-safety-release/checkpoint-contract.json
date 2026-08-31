@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_id": "oclc-app4-cp02",
+  "version": "0.1.0",
+  "commons_release": "0.84.0",
+  "course": "APP-4: Data for Clinical Decision Support",
+  "due_point": "end of instructional Week 6",
+  "course_points": 25,
+  "point_source": "oclc-app4-04 25 points once; oclc-app4-05 and oclc-app4-06 are zero-point gates",
+  "accepted_component_files": 1030,
+  "accepted_modules": [
+    {"id": "oclc-app4-04", "version": "0.1.0", "commons_release": "0.81.0", "assembled_files": 302, "manifest_rows": 285, "manifest_bytes": 60302, "manifest_sha256": "41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9", "points": 25, "gates": 20},
+    {"id": "oclc-app4-05", "version": "0.1.0", "commons_release": "0.82.0", "assembled_files": 341, "manifest_rows": 324, "manifest_bytes": 75019, "manifest_sha256": "6bc3e7c0040b8ae93d273d1464459ae8d500913e0e8a423ca1e5b120256c8baf", "points": 0, "gates": 20},
+    {"id": "oclc-app4-06", "version": "0.1.0", "commons_release": "0.83.0", "assembled_files": 387, "manifest_rows": 369, "manifest_bytes": 88971, "manifest_sha256": "e6553079256fdd2a37ab042a87c2ec69812cad7074abefa7d7907e6ee7b56f7d", "points": 0, "gates": 22}
+  ],
+  "required_gates": {
+    "module04_workflow": 20,
+    "module05_sandbox": 20,
+    "module06_safety_monitoring_ml": 22,
+    "checkpoint_integrity": 20
+  },
+  "accepted_decisions": {
+    "design": "panel-t003",
+    "design_role": "passive contextual panel fixture for mechanics only",
+    "threshold": "0.03000000 unaccepted sandbox fixture",
+    "accepted_threshold": null,
+    "ml": "retain transparent model",
+    "replacement_rules": "8 of 11 pass; R03, R04, and R08 fail",
+    "progression": "continue with conditions"
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "continue_permission": "permitted for Module 07 clinician leadership review and defense",
+    "next_module": "oclc-app4-07"
+  },
+  "authority": {
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

@@ -1,0 +1,14 @@
+record_type,source_id,criterion,possible_points,earned_points,treatment,evidence,status
+criterion,M04-S01,workflow task analysis,3.00,3.00,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S02,"roles handoffs timing and interruption",2.50,2.50,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S03,six-candidate comparison,3.00,3.00,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S04,burden and alert-budget review,3.00,3.00,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S05,passive-panel and no-alert comparison,3.00,3.00,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S06,usability and human-factors review,2.50,2.50,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S07,"automation-bias override and stop controls",2.00,2.00,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S08,"access equity and privacy review",3.00,3.00,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S09,patient communication and hidden work,1.50,1.50,count once,candidate/module-04/module-score.csv,pass
+criterion,M04-S10,"reproduction AI record decision and handoff",1.50,1.50,count once,candidate/module-04/module-score.csv,pass
+gate,M05,sandbox prototype and failure modes,0.00,0.00,required zero-point gate,candidate/module-05/gate-results.csv,pass
+gate,M06,"safety monitoring governance and embedded ML",0.00,0.00,required zero-point gate,candidate/module-06/gate-results.csv,pass
+summary,W6-TOTAL,cumulative Week 6 checkpoint,25.00,25.00,summary only and not a second score,checkpoint-score.csv,pass

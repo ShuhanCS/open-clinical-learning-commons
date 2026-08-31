@@ -1,0 +1,21 @@
+gate_id,gate,status,evidence,owner
+G01,All three accepted module identities and complete reference workspaces are exact,pass,candidate-manifest.csv,checkpoint assembler
+G02,The candidate manifest has 1030 sorted complete rows,pass,candidate-manifest.csv,checkpoint assembler
+G03,The 302 341 and 387 file counts and all three nested release manifests remain exact,pass,evidence-index.csv and candidate module release-manifest.csv files,checkpoint assembler
+G04,Module 04 contributes 25 points exactly once and Modules 05 and 06 contribute zero,pass,checkpoint-score.csv,APP-4 faculty owner
+G05,All 62 inherited gates and all 20 checkpoint gates pass,pass,candidate module gate-results.csv files and checkpoint-gates.csv,APP-4 faculty owner
+G06,The design remains panel-t003 as a passive contextual mechanics fixture,pass,responsible-claims-check.md,clinical decision support governance council
+G07,The 0.03000000 threshold remains unaccepted and no clinical threshold is accepted,pass,responsible-claims-check.md,clinical decision support governance council
+G08,All 31 sandbox cases and their normal boundary repeat and failure results remain visible,pass,candidate/module-05/test-matrix-review.csv,clinical informatics reviewer
+G09,All 17 inherited failure modes remain visible and no-card states retain trace reasons,pass,candidate/module-05/failure-mode-register.csv,patient-safety owner
+G10,The reconciled silent failure remains detected through four independent ledgers,pass,candidate/module-06/silent-failure-monitoring.md,patient-safety owner
+G11,The blocked malformed-card accessibility defect remains a release blocker,pass,candidate/module-05/accessibility-review.csv,accessibility owner
+G12,All 22 hazards retain controls owners escalation fallback stop restart and retirement routes,pass,candidate/module-06/hazard-review.csv,patient-safety owner
+G13,All 20 monitoring measures retain cadence owner origin unavailable state and human action,pass,candidate/module-06/monitoring-plan.csv,monitoring owner
+G14,All 12 escalation routes remain human owned with zero automatic clinical actions,pass,candidate/module-06/incident-escalation-review.csv,governance council
+G15,The fixed challenger uses 7544 common rows and the same evidence predictors splits weights thresholds and alert budgets,pass,candidate/module-06/ml-contract-review.md,model-risk reviewer
+G16,R03 R04 and R08 remain failed with exact untouched-set and subgroup degradation evidence,pass,candidate/module-06/model-comparison.md,model-risk reviewer
+G17,The transparent model remains retained because replacement requires all 11 rules,pass,candidate/module-06/model-comparison.md,clinical decision support governance council
+G18,Claims reproduction AI-use defense ownership and uncertainty records are complete,pass,responsible-claims-check.md and reproducibility-check.md,APP-4 faculty owner
+G19,Module 07 receives an exact protected evidence handoff and may not rewrite the candidate,pass,module07-handoff.md,clinician leader and faculty owner
+G20,Real-patient scoring threshold acceptance clinical alerting or action silent mode implementation production connection and deployment remain prohibited,pass,module07-handoff.md,clinical decision support governance council

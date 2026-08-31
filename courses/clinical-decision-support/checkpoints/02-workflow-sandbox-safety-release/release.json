@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable release candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app4-cp02",
+    "title": "Workflow, sandbox, safety, and monitoring release",
+    "version": "0.1.0",
+    "commons_release": "0.84.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "due_point": "end of instructional Week 6",
+    "course_points": 25,
+    "point_source": "Module 04 25 points once; Modules 05 and 06 zero-point gates"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app4-04", "version": "0.1.0", "commons_release": "0.81.0", "assembled_files": 302, "manifest_rows": 285, "manifest_bytes": 60302, "manifest_sha256": "41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9", "points": 25, "gates": 20},
+    {"id": "oclc-app4-05", "version": "0.1.0", "commons_release": "0.82.0", "assembled_files": 341, "manifest_rows": 324, "manifest_bytes": 75019, "manifest_sha256": "6bc3e7c0040b8ae93d273d1464459ae8d500913e0e8a423ca1e5b120256c8baf", "points": 0, "gates": 20},
+    {"id": "oclc-app4-06", "version": "0.1.0", "commons_release": "0.83.0", "assembled_files": 387, "manifest_rows": 369, "manifest_bytes": 88971, "manifest_sha256": "e6553079256fdd2a37ab042a87c2ec69812cad7074abefa7d7907e6ee7b56f7d", "points": 0, "gates": 22}
+  ],
+  "accepted_evidence": {
+    "component_files": 1030,
+    "checkpoint_score": "25.00 of 25.00 counted once",
+    "inherited_gates": "62 of 62 pass",
+    "checkpoint_gates": "20 of 20 pass",
+    "design": "panel-t003 passive contextual panel fixture for mechanics only",
+    "threshold": "0.03000000 unaccepted sandbox fixture",
+    "accepted_threshold": null,
+    "sandbox_cases": 31,
+    "inherited_failure_modes": 17,
+    "silent_failures_detected": 1,
+    "accessibility_defects_blocked": 1,
+    "hazards": 22,
+    "monitoring_measures": 20,
+    "monitoring_scenarios": 8,
+    "escalation_routes": 12,
+    "prediction_rows": 7544,
+    "replacement_rules_passed": 8,
+    "replacement_rules_total": 11,
+    "failed_replacement_rules": ["R03", "R04", "R08"],
+    "ml_decision": "retain transparent model"
+  },
+  "package": {
+    "candidate_manifest_rows": 1030,
+    "candidate_manifest_bytes": 236732,
+    "candidate_manifest_sha256": "14ac12dd890045dce21cdc44a9b614770b8b2428bd71a1d4f5eb9cc9de63d642",
+    "checkpoint_editable_records": 9,
+    "defense_questions": 14,
+    "assembled_files": 1047,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module07_permission": "permitted for clinician leadership review, recommendation, and defense",
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 8353,
+    "learner_checks": 8308,
+    "two_reference_assemblies_match": "pass",
+    "existing_target_rejection": "pass",
+    "failure_routes_rejected": 24
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, cumulative assembly, defense contract, validation, and release record"}
+  ],
+  "known_issues": [
+    "The official APP-4 section and half-term dates remain to be assigned from the published academic calendar.",
+    "Joe Joseph, MD, participation, schedule, session format, recording permission, and final biography wording require direct confirmation before alpha.",
+    "Named clinical, patient-safety, workflow, interoperability, model-risk, survey-methods, equity, accessibility, privacy, security, governance, responsible-AI, clinician-leadership, and independent-reproduction reviews remain pending before alpha.",
+    "The resources and messages are teaching shapes, not reviewed FHIR or CDS Hooks conformance artifacts.",
+    "Monitoring thresholds are teaching triggers, not validated clinical control limits.",
+    "No package authorizes real-patient scoring, clinical threshold acceptance, clinical alerting or action, silent-mode evaluation, implementation, production connection, or deployment."
+  ]
+}
