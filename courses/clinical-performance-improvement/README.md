@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.74.0.
-- Current build: course specification, source architecture, Modules 01 through 07, and Checkpoints 01 and 02 complete; the final checkpoint is next.
+- Current Commons release: 0.75.0.
+- Current build: all seven modules and all three checkpoints complete as runnable release candidates.
 
 APP-3 teaches learners to define and validate clinical performance measures, distinguish process signals from routine variation, diagnose bottlenecks, forecast demand, test capacity and workflow scenarios, and defend a monitored improvement recommendation.
 
@@ -58,5 +58,7 @@ The sixth runnable package is [Module 06](modules/06-feasibility-monitoring-embe
 The cumulative [Week 6 checkpoint](checkpoints/02-forecast-scenario-monitoring-release/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/checkpoints/02-forecast-scenario-monitoring-release-spec.md), freezes 59 Module 04 files, 68 Module 05 files, and 82 Module 06 files in one 226-file release. Its 209-row candidate manifest is exact, the Module 05 score is counted once, all 80 gates pass, and the 14-question defense permits Module 07 with conditions while preserving every action boundary.
 
 The seventh runnable package is [Module 07](modules/07-clinician-leadership-defense/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/07-clinician-leadership-defense-spec.md). It freezes the complete 153-file Week 3 checkpoint and 226-file Week 6 checkpoint in a 416-file leadership candidate. Its 26 records preserve the no-selection result, transparent forecast, unsupported and unavailable evidence, ownership, disagreement, monitoring, conditions, and action limits. The package passes 26 gates and a 14-question defense, records `accept with conditions` for curriculum construction, and keeps the clinical recommendation at `revise before testing`.
+
+The [final checkpoint](checkpoints/03-clinical-performance-improvement-package/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/checkpoints/03-clinical-performance-improvement-package-spec.md), freezes all 416 Module 07 files in a 431-file final package. Its 416-row manifest is exact, the 35-point component is counted once, all 26 gates pass or pass with an allowed condition, and the 14-question defense is adequate for curriculum construction. The course closes as `accept with conditions` while the clinical recommendation remains `revise before testing` and all action boundaries remain prohibited.
 
 No package authorizes clinical implementation, current hospital performance judgment, patient or workforce targeting, staffing change, or model deployment.

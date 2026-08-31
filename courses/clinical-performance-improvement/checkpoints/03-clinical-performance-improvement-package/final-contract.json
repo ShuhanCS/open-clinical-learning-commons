@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint": {
+    "id": "oclc-app3-cp03",
+    "version": "0.1.0",
+    "commons_release": "0.75.0",
+    "course": "APP-3: Data for Clinical Performance and Improvement",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_module07": {
+    "id": "oclc-app3-07",
+    "version": "0.1.0",
+    "candidate_files": 416,
+    "immutable_manifest_rows": 389,
+    "immutable_manifest_bytes": 75470,
+    "immutable_manifest_sha256": "cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc",
+    "release_bytes": 4532,
+    "release_sha256": "5dcec682080346570e89915473a9b2939c15cf57a28a15250137694d056486e2"
+  },
+  "accepted_releases": {
+    "checkpoint1_sha256": "270b4e49d1c21d8faf7243cd11cef1dddea836d32be551dfe72edac771b31f27",
+    "checkpoint2_sha256": "b8af80b7e07c2eac2aeb0e9206533bfae134f55d69a5df9038a7a9a915c4dd05"
+  },
+  "package": {
+    "candidate_files": 416,
+    "final_review_files": 15,
+    "assembled_files": 431,
+    "final_manifest_rows": 416,
+    "final_manifest_bytes": 70531,
+    "final_manifest_sha256": "b41acddef7397f9e55deee99f815b3d586d246f2353bbd92cf0873654499e8b6"
+  },
+  "score": {
+    "maximum": 35.0,
+    "minimum_to_pass": 28.0,
+    "criteria": {"E01": 8.0, "C01": 9.0, "L01": 8.0, "M01": 6.0, "H01": 4.0}
+  },
+  "required_gates": 26,
+  "defense_questions": 14,
+  "required_conditions": 12,
+  "required_reviewer_roles": 13,
+  "allowed_package_dispositions": ["accept", "accept with conditions", "revise", "refer"],
+  "allowed_clinical_performance_recommendations": [
+    "run bounded prospective improvement test",
+    "revise before testing",
+    "refer",
+    "stop"
+  ],
+  "reference": {
+    "package_disposition": "accept with conditions",
+    "clinical_performance_recommendation": "revise before testing",
+    "selected_scenario": "none",
+    "accepted_forecast": "seasonal exponential smoothing",
+    "ml_decision": "retain transparent forecast",
+    "course_status": "complete for curriculum construction only",
+    "clinical_action": "prohibited",
+    "staffing_change": "prohibited",
+    "schedule_change": "prohibited",
+    "automated_action": "prohibited",
+    "test_start": "prohibited",
+    "implementation": "prohibited",
+    "production_scoring": "prohibited",
+    "model_deployment": "prohibited",
+    "proposed_tag": "app3-clinical-performance-improvement-candidate-v0.1.0",
+    "tag_status": "proposed - not created"
+  }
+}

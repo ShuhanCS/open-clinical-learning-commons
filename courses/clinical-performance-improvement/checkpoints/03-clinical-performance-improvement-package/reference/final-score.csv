@@ -1,0 +1,6 @@
+criterion_id,criterion,maximum,score,evidence,status
+E01,Correct evidence decision and claim boundary,8.00,8.00,evidence-synthesis.md,pass
+C01,Clinical performance reasoning safety access and workforce judgment,9.00,9.00,people-equity-safety-workforce.md,pass
+L01,Leadership recommendation feasibility alternatives and ownership,8.00,8.00,recommendation-and-alternatives.md,pass
+M01,Monitoring stewardship escalation disagreement and communication,6.00,6.00,stewardship-plan.md,pass
+H01,Reproducibility accessibility responsible agent use and defense,4.00,4.00,final-review/final-reproduction.md,pass

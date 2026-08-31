@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app3-cp03",
+    "title": "Clinical performance improvement package",
+    "version": "0.1.0",
+    "commons_release": "0.75.0",
+    "course": "APP-3: Data for Clinical Performance and Improvement",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_candidate": {
+    "id": "oclc-app3-07",
+    "version": "0.1.0",
+    "commons_release": "0.74.0",
+    "candidate_files": 416,
+    "immutable_manifest_rows": 389,
+    "immutable_manifest_bytes": 75470,
+    "immutable_manifest_sha256": "cd88ad1910ca35d231da734f919f58420e2f3f25deda9135ee6ca8c20105d2fc",
+    "release_bytes": 4532,
+    "release_sha256": "5dcec682080346570e89915473a9b2939c15cf57a28a15250137694d056486e2"
+  },
+  "accepted_release_sha256": {
+    "checkpoint01": "270b4e49d1c21d8faf7243cd11cef1dddea836d32be551dfe72edac771b31f27",
+    "checkpoint02": "b8af80b7e07c2eac2aeb0e9206533bfae134f55d69a5df9038a7a9a915c4dd05"
+  },
+  "course_score": {
+    "week3": 40,
+    "week6": 25,
+    "final": 35,
+    "total": 100,
+    "final_score": "35.00 of 35.00",
+    "double_counted_components": 0
+  },
+  "reference_decision": {
+    "gates": "26 of 26 pass or pass with an allowed condition",
+    "defense": "adequate for curriculum construction",
+    "package_disposition": "accept with conditions",
+    "clinical_performance_recommendation": "revise before testing",
+    "selected_scenario": "none",
+    "accepted_forecast": "seasonal exponential smoothing",
+    "ml_decision": "retain transparent forecast",
+    "open_conditions": 12,
+    "clinical_action": "prohibited",
+    "staffing_change": "prohibited",
+    "schedule_change": "prohibited",
+    "automated_action": "prohibited",
+    "test_start": "prohibited",
+    "implementation": "prohibited",
+    "production_scoring": "prohibited",
+    "model_deployment": "prohibited",
+    "course_status": "complete for curriculum construction only",
+    "proposed_tag": "app3-clinical-performance-improvement-candidate-v0.1.0",
+    "tag_status": "proposed - not created"
+  },
+  "package": {
+    "candidate_files": 416,
+    "final_review_files": 15,
+    "assembled_files": 431,
+    "candidate_manifest_rows": 416,
+    "candidate_manifest_bytes": 70531,
+    "candidate_manifest_sha256": "b41acddef7397f9e55deee99f815b3d586d246f2353bbd92cf0873654499e8b6"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 2177,
+    "starter_checks": 2131,
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "inside_candidate_target_rejection": "pass",
+    "failure_routes": 15,
+    "complete_mode_template_rejection": "pass"
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "checkpoint specification, deterministic final assembly, review package, validation, and release record"
+    }
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, and final biography wording before alpha.",
+    "Named clinical, safety, improvement, simulation, operations, capacity, workforce, access, equity, measurement, statistical-process, forecasting, accessibility, responsible-AI, ML, governance, and independent reviews remain pending.",
+    "Independent human clean reproduction and a live or approved equivalent 14-question defense remain pending.",
+    "The official section and half-term dates remain to be assigned from the published calendar.",
+    "The committed Module 03 and Module 04 base-R checks still require independent review in an environment with R installed.",
+    "The tag is proposed and has not been created.",
+    "The package does not authorize clinical action, staffing or schedule change, automation, testing, implementation, production scoring, or model deployment."
+  ]
+}

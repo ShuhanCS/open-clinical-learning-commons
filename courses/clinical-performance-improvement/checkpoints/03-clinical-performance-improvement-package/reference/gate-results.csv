@@ -1,0 +1,27 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,Exact Checkpoint 01 Checkpoint 02 and Module 07 release identities,pass,final-review/submission-record.md,independent reproducer,
+G02,Exact 416-file candidate and 416-row final manifest,pass,final-review/candidate-manifest.csv,independent reproducer,
+G03,Exact 389-row Module 07 immutable manifest and fingerprint,pass,release-manifest.csv,independent reproducer,
+G04,Repository source commit versions releases and proposed tag recorded,pass with condition,final-review/submission-record.md,APP-3 faculty owner,C01
+G05,Source rights data classes fictional synthetic and prohibited-data boundaries pass,pass,final-review/final-audit.md,data-governance reviewer,
+G06,Measure denominator clock unavailable and source limits remain unchanged,pass,technical-appendix.md,measurement reviewer,
+G07,Baseline instability nine signals and signal-not-cause rule remain visible,pass,evidence-synthesis.md,statistical-process reviewer,
+G08,Safety undercapture and incident-report limits remain visible,pass with condition,evidence-synthesis.md,safety reviewer,C03
+G09,Bounded diagnosis root-cause limit and subgroup support remain visible,pass with condition,evidence-synthesis.md,clinical decision owner,C03
+G10,Forecast target folds rows errors failures point and range remain unchanged,pass with condition,technical-appendix.md,forecasting reviewer,C08
+G11,Little's Law and staffing limits remain visible,pass with condition,evidence-synthesis.md,operations reviewer,C04
+G12,Scenario runs effects failures and no-selection result remain visible,pass with condition,recommendation-and-alternatives.md,improvement reviewer,C04
+G13,Safety return causal workforce and implementation limits remain visible,pass with condition,people-equity-safety-workforce.md,workforce reviewer,C05
+G14,Four feasibility dispositions and evidence statuses remain unchanged,pass,technical-appendix.md,improvement reviewer,
+G15,Twelve measures three unavailable values ten escalation rules and fallback remain unchanged,pass with condition,monitoring-measures.csv,measurement reviewer,C07
+G16,Static accessible dashboard equivalent routes and zero automatic actions remain visible,pass with condition,accessibility-review.md,accessibility reviewer,C06
+G17,Fixed comparable ML leakage checks failed R01 and transparent forecast remain visible,pass with condition,technical-appendix.md,responsible-AI and ML reviewer,C08
+G18,Week 3 Week 6 and final course points are counted exactly once,pass,final-review/final-score.csv,assessment owner,
+G19,Every material final claim traces to an accepted path,pass,evidence-index.csv,APP-3 faculty owner,
+G20,Package disposition and clinical recommendation are separate allowed and bounded,pass,final-review/final-decision.md,clinical decision owner,
+G21,People burden exclusion access equity safety workforce and blame are addressed,pass with condition,people-equity-safety-workforce.md,access and workforce reviewers,C06
+G22,Ownership reviewer independence decision rights and disagreement route are complete,pass with condition,final-review/reviewer-record.md,APP-3 faculty owner,C10
+G23,Revision stewardship monitoring escalation fallback reassessment and conditions are complete,pass with condition,final-review/conditions-register.csv,clinical performance council,C07
+G24,Exact tables communication accessibility reproduction claims and agent use are complete,pass with condition,final-review/final-audit.md,independent reproducer,C11
+G25,All 14 defense answers are adequate and required reviewer roles are present,pass with condition,final-review/final-defense.md,faculty and clinician panel,C12
+G26,Course completion tag status package decision recommendation and prohibited uses are consistent,pass,final-review/release-acceptance.md,APP-3 faculty owner,

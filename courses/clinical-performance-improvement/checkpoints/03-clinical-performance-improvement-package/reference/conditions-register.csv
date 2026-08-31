@@ -1,0 +1,13 @@
+condition_id,condition,owner,due_point,evidence,verifier,status,escalation_trigger
+C01,Assign official APP-3 section half-term dates and exact reviewed commit,program owner,before alpha,final-review/submission-record.md,APP-3 faculty owner,open,no course promotion or tag authorization
+C02,Confirm Joe Joseph participation schedule format recording and biography wording,APP-3 sponsor,before alpha,clinician-profile.md,APP-3 faculty owner,open,do not claim delivered clinician leadership
+C03,Complete named clinical and safety review,medical director and safety lead,before alpha,people-equity-safety-workforce.md,APP-3 faculty owner,open,no clinical protocol review
+C04,Complete improvement simulation operations workflow and capacity review,improvement and operations reviewers,before alpha,workflow-resource-feasibility.md,local clinical decision owner,open,no scenario contract return
+C05,Complete workforce coverage interruption and burden review,workforce lead,before alpha,people-equity-safety-workforce.md,local clinical decision owner,open,no staffing or schedule recommendation
+C06,Complete access equity accessibility and communication review,access equity and accessibility leads,before alpha,accessibility-review.md,APP-3 faculty owner,open,no group-specific or delivery claim
+C07,Complete measurement dashboard stewardship monitoring and escalation review,measurement steward,before alpha,stewardship-plan.md,safety reviewer,open,no monitoring implementation
+C08,Reproduce forecast scenario and ML evidence independently,forecasting ML and reproduction reviewers,before alpha,final-review/final-reproduction.md,APP-3 faculty owner,open,no model or scenario decision change
+C09,Run and review the committed Module 03 and Module 04 base-R checks,statistical-process and forecasting reviewers,before alpha,reproducibility-check.md,independent reproducer,open,cross-language confirmation remains pending
+C10,Test frontline concern disagreement and response route,frontline representative,before alpha,disagreement-record.md,local clinical decision owner,open,no delivery or participation claim
+C11,Complete responsible claims AI privacy governance and prohibited-data review,responsible-AI and governance reviewers,before alpha,final-review/final-audit.md,APP-3 faculty owner,open,no alpha promotion
+C12,Complete a live or approved equivalent 14-question defense and reviewer acknowledgment,faculty clinician and reviewer panel,before final acceptance,final-review/final-defense.md,APP-3 faculty owner,open,tag remains uncreated and package construction-only

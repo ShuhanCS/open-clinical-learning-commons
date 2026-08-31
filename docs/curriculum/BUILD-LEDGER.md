@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.74.0
+- Current release: 0.75.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Module 07, clinician leadership, recommendation, and defense
-- Next unit: APP-3 Checkpoint 03, final clinical performance improvement package
+- Last completed unit: APP-3 Checkpoint 03, final clinical performance improvement package
+- Next unit: APP-4 course specification and Module 01
 
 ## Confirmed decisions
 
@@ -548,7 +548,15 @@
 - The separate clinical performance recommendation is `revise before testing`. Clinical action, staffing and schedule change, automated action, test start, implementation, production scoring, and model deployment remain prohibited.
 - Reference validation passes 2,167 checks, starter validation passes 2,068 checks, copied validation passes, and all 20 mutation or incomplete-record routes are rejected.
 - Joe Joseph, MD, SFHM, is the designated clinician under dated Sound Physicians sources. No current employer or title is claimed, and direct confirmation remains required before alpha.
-- APP-3 Module 07 is a runnable release candidate at Commons 0.74.0. Checkpoint 03 is next.
+- APP-3 Module 07 is a runnable release candidate at Commons 0.74.0.
+- APP-3 Checkpoint 03 version 0.1.0 freezes all 416 Module 07 candidate files without changing evidence, leadership records, score, gates, recommendation, or conditions.
+- Fifteen final-review files bring the complete package to 431 files. Its sorted 416-row candidate manifest is 70,531 bytes with SHA-256 `b41acddef7397f9e55deee99f815b3d586d246f2353bbd92cf0873654499e8b6`.
+- The final checkpoint records the Module 07 35-point component once. APP-3 totals `40 + 25 + 35 = 100` with zero duplicated components.
+- All 26 final gates pass or pass with an allowed condition. The 14-question defense is adequate for curriculum construction, all 13 reviewer roles are specified, and 12 conditions remain honestly open.
+- The package disposition is `accept with conditions`. The separate clinical performance recommendation remains `revise before testing`, no scenario is selected, seasonal exponential smoothing remains accepted, and the ML decision remains `retain transparent forecast`.
+- Complete validation passes 2,177 checks and learner validation passes 2,131 checks. Two-build identity, existing-target refusal, inside-candidate refusal, all 15 failure routes, and complete-mode learner rejection pass.
+- The proposed tag is `app3-clinical-performance-improvement-candidate-v0.1.0` with status `proposed - not created`. Named review and exact-commit authorization remain required.
+- APP-3 Checkpoint 03 is a runnable release candidate at Commons 0.75.0. APP-3 is complete for curriculum construction only.
 
 ## Pending confirmation
 
@@ -564,11 +572,9 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoints 01 and 02, the exact Module 07 release, the curriculum catalog, and this ledger.
-2. Write the durable APP-3 Checkpoint 03 specification before assembling its package.
-3. Freeze the complete 416-file Module 07 candidate without editing accepted evidence or leadership records.
-4. Record the Module 07 35-point component once and preserve the prior 40-point and 25-point checkpoint scores without duplication.
-5. Adjudicate the 26 gates, 14-question defense, reviewers, reproduction, conditions, package status, clinical recommendation, and final progression decision.
-6. Keep Joe Joseph, MD, participation details and all named human reviews pending before alpha unless direct confirmations are obtained.
-7. Preserve every prohibition on clinical action, staffing and schedule change, automation, testing, implementation, production scoring, and model deployment.
-8. Advance semver, update this ledger, commit, and push before moving to APP-4.
+1. Read the master architecture, curriculum catalog, source inventory, cross-course ownership map, and complete APP-3 release before defining APP-4.
+2. Recover APP-4's authoritative source file, assessment weights, open-data opportunities, course-owned methods, and boundaries with FND-1, FND-2, DA-730, and APP-1 through APP-3.
+3. Write a durable APP-4 course specification and source record before building Module 01.
+4. Preserve the 7.5-week architecture, distinct module ownership, embedded ML, clinician-led final block, and Week 3, Week 6, and official-end-date checkpoint deliverables.
+5. Use full public clinical datasets with exact source fingerprints and a synthetic layer only where public data cannot support the teaching decision.
+6. Advance semver, validate the complete curriculum, commit, push, and remote-verify each unit before moving to the next.

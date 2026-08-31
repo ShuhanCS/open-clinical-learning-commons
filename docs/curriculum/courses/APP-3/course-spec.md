@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.74.0 through Module 07.
+- Current Commons release: 0.75.0 through the final checkpoint.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -384,13 +384,16 @@ The checkpoint counts the 25-point Module 05 component once. Module 04 supplies 
 
 - Timing: official last day of the assigned half-term.
 - Course points: 35.
-- Future package path: `courses/clinical-performance-improvement/checkpoints/03-clinical-performance-improvement-package/`.
-- Future specification: `docs/curriculum/courses/APP-3/checkpoints/03-clinical-performance-improvement-package-spec.md`.
+- Package path: `courses/clinical-performance-improvement/checkpoints/03-clinical-performance-improvement-package/`.
+- Specification: `docs/curriculum/courses/APP-3/checkpoints/03-clinical-performance-improvement-package-spec.md`.
 - Decision: should the fictional service propose a bounded prospective test, revise, refer, or stop?
+- Build status: runnable release candidate at Checkpoint version `0.1.0` and Commons release `0.75.0`; APP-3 is complete for curriculum construction only.
 
 Required evidence includes both accepted checkpoints; immutable candidate manifest; final reproducible repository; evidence synthesis; frontline brief; leadership summary; recommendation and alternatives; feasibility and resource record; measure, forecast, scenario, and ML stewardship; monitoring schedule; implementation, process, outcome, safety, access, workforce, and balancing measures; escalation, stop, fallback, and restart rules; accountability and disagreement records; accessible exact evidence; technical appendix; AI and claims audit; 35-point score; gates; defense; reviewer record; reproduction; conditions; and separate package and test recommendations.
 
 The final checkpoint adds 35 points once, giving a course total of `40 + 25 + 35 = 100` with no duplication.
+
+The final assembler freezes all 416 Module 07 files and adds 15 final-review files. Its 416-row manifest is 70,531 bytes with SHA-256 `b41acddef7397f9e55deee99f815b3d586d246f2353bbd92cf0873654499e8b6`. Complete validation passes 2,177 checks, learner validation passes 2,131 checks, and all 15 failure routes plus complete-mode learner rejection pass. The 35-point score is recorded once, all 26 gates pass or pass with an allowed condition, and the 14-question defense is adequate for curriculum construction. The package disposition is `accept with conditions`; the separate clinical performance recommendation is `revise before testing`.
 
 ## 17. Assessment map and grading rules
 
@@ -547,5 +550,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 06 preserves the no-selection result, releases an accessible monitoring design, evaluates one fixed ML challenger without leakage or tuning, and retains the transparent forecast after one predeclared rule fails.
 - [x] Checkpoint 02 freezes all 209 accepted Module 04 through Module 06 files, counts 25 Module 05 points once, passes 20 integrity gates, and hands Module 07 the no-selection and transparent-forecast decisions without action authority.
 - [x] Module 07 freezes both accepted checkpoints, preserves every failure and authority boundary, passes 26 gates and a 14-question defense, and separates curriculum acceptance from the clinical recommendation to revise before testing.
+- [x] Checkpoint 03 freezes the 416-file Module 07 candidate, counts the final 35 points once, verifies 26 gates and 14 defense answers, and closes APP-3 for curriculum construction without creating a tag or granting clinical authority.
 
-Resume with Checkpoint 03 only: freeze the exact 416-file Module 07 candidate, record the 35-point component once, adjudicate all gates, defense, reviewers, conditions, package status, and clinical recommendation, and preserve every prohibition on testing and implementation.
+APP-3 is complete for curriculum construction. Resume with APP-4 only after reading the master architecture, source routing, cross-course ownership map, and this complete APP-3 release so APP-4 remains distinct.
