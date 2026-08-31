@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.75.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.76.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2847,7 +2847,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.75.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.76.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4009,6 +4009,72 @@ if (
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Checkpoint 03 assembler self-check failed.' }
 & python (Join-Path $app3Checkpoint03Root 'validate_final.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Checkpoint 03 validator self-check failed.' }
+
+$app4 = Join-Path $repo 'docs\curriculum\courses\APP-4\course-spec.md'
+$app4Source = Join-Path $repo 'docs\source\app-4-clinical-decision-support-source-record.md'
+$app4Package = Join-Path $repo 'courses\clinical-decision-support\README.md'
+if (-not (Test-Path -LiteralPath $app4) -or -not (Test-Path -LiteralPath $app4Source) -or -not (Test-Path -LiteralPath $app4Package)) {
+    throw 'APP-4 must include its course specification, source record, and course package README.'
+}
+$app4Content = Get-Content -Raw -LiteralPath $app4
+$app4SourceContent = Get-Content -Raw -LiteralPath $app4Source
+$app4PackageContent = Get-Content -Raw -LiteralPath $app4Package
+$app4Sections = [regex]::Matches($app4Content, '(?m)^## \d+\.').Count
+$app4ModuleCount = [regex]::Matches($app4Content, '(?m)^## \d+\. Module \d{2} brief:').Count
+$app4HourMatches = [regex]::Matches(
+    $app4Content,
+    '(?m)^\| \d{2} \| [^|]+ \| (?<hours>\d+(?:\.\d+)?) \|'
+)
+$app4Hours = ($app4HourMatches | ForEach-Object { [decimal]$_.Groups['hours'].Value } | Measure-Object -Sum).Sum
+$app4CheckpointCount = [regex]::Matches($app4Content, '(?m)^### (?:Checkpoint \d|Final checkpoint):').Count
+$app4SourceModuleRows = [regex]::Matches($app4SourceContent, '(?m)^\| [1-7] \| [^|]+ \| (?<hours>\d+(?:\.\d+)?) \|').Count
+$app4XptUrls = [regex]::Matches($app4SourceContent, 'https://wwwn\.cdc\.gov/Nchs/Data/Nhanes/Public/(?:2013|2015|2017|2021)/DataFiles/(?:DEMO|BMX|DIQ|GHB)_[HIJL]\.xpt')
+if (
+    $app4Sections -ne 24 -or
+    $app4ModuleCount -ne 7 -or
+    $app4HourMatches.Count -ne 7 -or
+    $app4Hours -ne [decimal]112.5 -or
+    $app4CheckpointCount -ne 3 -or
+    $app4SourceModuleRows -ne 7 -or
+    $app4XptUrls.Count -ne 16
+) {
+    throw "APP-4 must define 24 course sections, seven modules, seven schedule rows totaling 112.5 hours, three checkpoints, seven source rows, and 16 complete NHANES XPT routes; found $app4Sections sections, $app4ModuleCount modules, $($app4HourMatches.Count) schedule rows, $app4Hours hours, $app4CheckpointCount checkpoints, $app4SourceModuleRows source rows, and $($app4XptUrls.Count) XPT routes."
+}
+if (
+    $app4Content -match '[—–]' -or
+    $app4SourceContent -match '[—–]' -or
+    $app4PackageContent -match '[—–]' -or
+    $app4Content -match '(?im)[A-Z]:\\Users\\' -or
+    $app4SourceContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app4PackageContent -match '(?im)[A-Z]:\\Users\\' -or
+    $app4Content -notmatch 'Current Commons release: 0\.76\.0' -or
+    $app4PackageContent -notmatch 'Current Commons release: 0\.76\.0' -or
+    $app4Content -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
+    $app4SourceContent -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
+    $app4SourceContent -notmatch '21,676' -or
+    $app4SourceContent -notmatch 'Curriculum-30-Credits-2026-08-29\.zip' -or
+    $app4SourceContent -notmatch 'OneDrive_2026-08-29 \(1\)\.zip' -or
+    ([regex]::Matches($app4SourceContent, '20%')).Count -ne 2 -or
+    $app4SourceContent -notmatch '25%' -or
+    $app4SourceContent -notmatch '35%' -or
+    $app4Content -notmatch '40 \+ 25 \+ 35 = 100' -or
+    $app4Content -notmatch 'CGH-GIM-01' -or
+    $app4SourceContent -notmatch 'CGH-GIM-01' -or
+    $app4PackageContent -notmatch 'CGH-GIM-01' -or
+    $app4Content -notmatch 'Safety, monitoring, and governance block: 8\.0 hours' -or
+    $app4Content -notmatch 'Embedded ML extension: 8\.0 hours' -or
+    $app4Content -notmatch 'gradient-boosted classification challenger' -or
+    $app4Content -notmatch 'Joe Joseph, MD, SFHM' -or
+    $app4Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
+    $app4SourceContent -notmatch 'https://cds-hooks\.hl7\.org/' -or
+    $app4SourceContent -notmatch 'https://hl7\.org/fhir/R4/observation\.html' -or
+    $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
+    $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
+    $app4PackageContent -notmatch 'course contract complete; Module 01 is next' -or
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.76.0'
+) {
+    throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
+}
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -5325,3 +5391,4 @@ Write-Output "APP-3 Module 06 passed: $app3Module06Sections contract sections an
 Write-Output "APP-3 Checkpoint 02 passed: $app3Checkpoint02Sections contract sections and $($app3Checkpoint02Files.Count) required files."
 Write-Output "APP-3 Module 07 passed: $app3Module07Sections contract sections and $($app3Module07Files.Count) required files."
 Write-Output "APP-3 final checkpoint passed: $app3Checkpoint03Sections contract sections and $($app3Checkpoint03Files.Count) required files."
+Write-Output "APP-4 course architecture passed: $app4Sections sections, $app4ModuleCount modules, $app4Hours hours, $app4CheckpointCount checkpoints, and $($app4XptUrls.Count) complete NHANES XPT routes."

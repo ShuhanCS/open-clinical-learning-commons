@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.75.0
+- Current release: 0.76.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Checkpoint 03, final clinical performance improvement package
-- Next unit: APP-4 course specification and Module 01
+- Last completed unit: APP-4 course specification and source contract
+- Next unit: APP-4 Module 01, framing a decision support use case
 
 ## Confirmed decisions
 
@@ -20,6 +20,7 @@
 - Every module requires exact learner, instructor, data, assessment, rubric, accessibility, and release deliverables.
 - FND-1 preserves the source assessment weights through cumulative checkpoints: 40 percent at Week 3, 25 percent at Week 6, and 35 percent on the official last day.
 - APP-3 preserves its own source assessment weights through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day. The generic APP-1 and APP-2 `20 / 45 / 35` pattern does not apply.
+- APP-4 preserves its own source assessment weights through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day.
 
 ## Source status
 
@@ -40,6 +41,12 @@
 - APP-3 owns clinical performance measures, safety signals, process reliability, statistical process control, operational flow, demand and capacity, bottlenecks, improvement scenarios, balancing measures, monitoring, and a performance recommendation.
 - APP-3 uses the explicitly fictional `CGH-ED-01` adult emergency service. No synthetic operational result may be attributed to a public hospital.
 - APP-3 Module 06 contains eight hours of feasibility and monitoring plus an eight-hour gradient-boosted arrival-demand ML extension. Module 07 is clinician led.
+- The APP-4 source file is byte-for-byte identical in both supplied archives: 21,676 bytes and SHA-256 `20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2`.
+- The APP-4 specification defines seven distinct applied modules totaling 112.5 hours and preserves source assessment weights of 20, 20, 25, and 35 percent through 40-point Week 3, 25-point Week 6, and 35-point official-end-date checkpoints.
+- APP-4 owns intended use, CDS workflow logic, triggers, input availability, thresholds in use, calibration in use, alert burden, human factors, sandbox prototyping, failure modes, safety cases, monitoring, governance, retirement, and a clinician-led CDS recommendation.
+- APP-4 uses 16 complete NHANES source routes for historical evidence and a separate synthetic FHIR R4 and CDS Hooks layer for workflow, burden, drift, interaction, and silent-failure evidence.
+- APP-4 uses the explicitly fictional `CGH-GIM-01` service. No NHANES or synthetic result may be represented as local clinical validation.
+- APP-4 Module 06 contains eight hours of safety, monitoring, and governance plus an eight-hour gradient-boosted classification ML extension. Module 07 is clinician led.
 - FND-2 owns analytic aims and targets, regression, prediction evaluation, validity, adjustment, longitudinal boundaries, forecasting, testing, agent verification, model cards, monitoring, governance, and defense. It does not repeat FND-1 data-pipeline work.
 - The primary modeling case preserves the accepted 374-row FND-1 synthetic analytic table and SHA-256 `3c9944edc3806aa3b709a9ca08a9986a2f79978b1074ed098e31f19b533db25a`.
 - The 90-day acute-return label contains 36 positive and 338 negative rows. The fixed temporal split contains 224, 75, and 75 rows with 25, 7, and 4 positive outcomes.
@@ -557,6 +564,16 @@
 - Complete validation passes 2,177 checks and learner validation passes 2,131 checks. Two-build identity, existing-target refusal, inside-candidate refusal, all 15 failure routes, and complete-mode learner rejection pass.
 - The proposed tag is `app3-clinical-performance-improvement-candidate-v0.1.0` with status `proposed - not created`. Named review and exact-commit authorization remain required.
 - APP-3 Checkpoint 03 is a runnable release candidate at Commons 0.75.0. APP-3 is complete for curriculum construction only.
+- APP-4 course specification version target 0.1.0 is registered at Commons 0.76.0 with seven modules, 112.5 hours, and three cumulative checkpoints.
+- The source `08-APP-4-Clinical-Decision-Support.docx` is byte-identical in both supplied archives at 21,676 bytes with SHA-256 `20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2`.
+- APP-4 preserves the 20-point use-case and logic component and 20-point evidence, calibration, and threshold component together at Week 3, the 25-point workflow, alert-burden, and equity component at Week 6, and the 35-point final package on the official half-term end date.
+- The continuing case uses fictional service `CGH-GIM-01` and a nonproduction advisory about considering confirmatory HbA1c testing. The course may recommend seeking local approval for silent-mode evaluation but cannot grant approval, score real patients, display a live alert, diagnose, order, implement, or deploy.
+- The public-source contract names 16 complete official NHANES XPT files from the 2013-2014, 2015-2016, 2017-2018, and 2021-2023 cycles. Module 01 must download, fingerprint, profile, and inspect all 16 before deriving a teaching table.
+- NHANES supplies historical development, temporal-holdout, later-cycle transport, calibration, threshold, and subgroup evidence. It does not supply local workflow, burden, prospective utility, or deployment validity.
+- The separate synthetic contract uses FHIR R4-shaped clinical resources, CDS Hooks-shaped requests and responses, predictions, interactions, monitoring, and known truth for stale inputs, missing inputs, burden, drift, version errors, latency, and silent failure.
+- Module 06 splits 16 hours into eight hours of safety, monitoring, and governance and eight hours of embedded ML. One fixed gradient-boosted challenger must use the transparent model's exact target, predictors, cutoffs, splits, thresholds, alert budget, and evaluation rows.
+- Joe Joseph, MD, SFHM, is the designated clinician of record under the existing dated identity boundary. Direct participation and final wording remain pending before alpha.
+- APP-4 is specified at Commons 0.76.0. Module 01 is the next isolated build unit.
 
 ## Pending confirmation
 
@@ -568,13 +585,17 @@
 - Complete human review of the APP-3 synthetic operational generator, safety-event design, subgroup construction, staffing assumptions, workload language, forecast contract, scenario boundaries, Module 06 feasibility dispositions, monitoring thresholds, dashboard, and ML decision before alpha.
 - Run and independently review the APP-3 Module 03 base-R control-chart verification in an environment with R installed.
 - Run and independently review the APP-3 Module 04 base-R forecast verification in an environment with R installed.
+- Assign the official APP-4 section and half-term dates from the published calendar.
+- Acquire, fingerprint, profile, and independently review all 16 complete APP-4 NHANES XPT files.
+- Confirm APP-4's clinical target, predictors, exclusions, units, threshold candidates, confirmatory-action wording, survey-design treatment, and subgroup plan with qualified clinical and methods reviewers.
+- Build and review the APP-4 Synthea and Commons synthetic release, workflow, burden, drift, and silent-failure truth before alpha.
+- Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the master architecture, curriculum catalog, source inventory, cross-course ownership map, and complete APP-3 release before defining APP-4.
-2. Recover APP-4's authoritative source file, assessment weights, open-data opportunities, course-owned methods, and boundaries with FND-1, FND-2, DA-730, and APP-1 through APP-3.
-3. Write a durable APP-4 course specification and source record before building Module 01.
-4. Preserve the 7.5-week architecture, distinct module ownership, embedded ML, clinician-led final block, and Week 3, Week 6, and official-end-date checkpoint deliverables.
-5. Use full public clinical datasets with exact source fingerprints and a synthetic layer only where public data cannot support the teaching decision.
-6. Advance semver, validate the complete curriculum, commit, push, and remote-verify each unit before moving to the next.
+1. Read the APP-4 plan, source record, course specification, complete APP-3 release, and accepted FND-1 and FND-2 handoffs before building Module 01.
+2. Download, fingerprint, profile, and preserve all 16 complete NHANES XPT files before deriving any teaching evidence.
+3. Fix the `CGH-GIM-01` intended-use, source-feasibility, synthetic-generation, ownership, and claim-boundary contracts in a runnable Module 01 package.
+4. Do not fit a model, select a threshold, or build an alert in Module 01. Those belong to later modules after the source and decision gates pass.
+5. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 01 before moving to Module 02.
