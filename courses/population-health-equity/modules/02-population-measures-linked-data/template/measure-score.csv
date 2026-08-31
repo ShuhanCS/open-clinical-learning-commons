@@ -1,0 +1,7 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+R01,"Population, age-band, numerator, denominator, and linkage logic",4,REPLACE,REPLACE
+R02,Crude and age-specific rates,4,REPLACE,REPLACE
+R03,Direct and indirect standardization,4,REPLACE,REPLACE
+R04,"Uncertainty, support, and evidence separation",4,REPLACE,REPLACE
+R05,"Reproducibility, interpretation, and handoff",4,REPLACE,REPLACE
+TOTAL,Total,20,REPLACE,REPLACE

@@ -1,0 +1,16 @@
+gate_id,gate,status,evidence,owner
+G01,Frozen Module 01 handoff reproduces,pass,upstream/module01-handoff-manifest.csv,Module 02 faculty owner
+G02,Public source union and three-source intersection remain complete,pass,outputs/tract-linkage-audit.csv,Data steward
+G03,All 38 ACS source cells and five adult age bands are declared,pass,data/age-band-crosswalk.csv; age-band-and-moe-method.md,Epidemiology reviewer
+G04,Every estimate remains paired with its ACS margin,pass,outputs/age-band-denominators.csv.gz,ACS methods reviewer
+G05,Synthetic source identity and all 7985 rows reproduce,pass,data/synthetic-source-manifest.csv,Synthetic-data steward
+G06,Every synthetic row matches exactly one derived denominator,pass,outputs/synthetic-event-linkage.csv.gz,Data engineer
+G07,Counts and denominators conserve without hidden drops,pass,outputs/source-reconciliation.csv; outputs/query-checks.csv,Biostatistics reviewer
+G08,Crude and age-specific rates use the declared multiplier and unavailable states,pass,outputs/age-specific-rates.csv.gz; outputs/tract-rate-summary.csv,Epidemiology reviewer
+G09,Direct standard weights are complete and total one,pass,outputs/standard-population.csv,Biostatistics reviewer
+G10,Direct rates never convert zero denominators to zero rates,pass,outputs/tract-rate-summary.csv,Biostatistics reviewer
+G11,Indirect expected counts and ratios reproduce,pass,outputs/indirect-standardization.csv,Epidemiology reviewer
+G12,PLACES modeled prevalence remains separate from synthetic events,pass,outputs/public-modeled-prevalence.csv; public-synthetic-separation.md,PLACES methods reviewer
+G13,SQL and independent Python results match,pass,outputs/build-report.json; reproducibility-check.md,Independent reproducer
+G14,No observed-case disparity ranking targeting or allocation claim appears,pass,public-synthetic-separation.md; progression-decision.md,Population-health clinical reviewer
+G15,Progression and real-world authority remain bounded,pass,progression-decision.md,Course director

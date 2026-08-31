@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app5-01",
+  "module_version": "0.1.0",
+  "commons_release": "0.87.0",
+  "status": "runnable release candidate",
+  "hours": 15.5,
+  "course_points_awarded_here": 0,
+  "public_source_release": {
+    "places_rows": 1597,
+    "places_fields": 24,
+    "acs_rows": 1620,
+    "acs_fields": 100,
+    "svi_rows": 1613,
+    "svi_fields": 158,
+    "field_inventory_rows": 282,
+    "three_source_intersection": 1597,
+    "union_tracts": 1620
+  },
+  "workspace": {
+    "immutable_manifest_rows": 16,
+    "editable_records": 10,
+    "assembled_files": 27
+  },
+  "reference_decision": {
+    "progression": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction",
+    "rate_calculation_in_module01": "prohibited",
+    "standardization_in_module01": "prohibited",
+    "disparity_claim_in_module01": "prohibited",
+    "mapping_in_module01": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_allocation": "prohibited",
+    "model_fitting": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "real_community_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, GIS, community, equity, language-access, disability-access, privacy, accessibility, responsible-AI, and independent-reproduction review pending before alpha"
+}

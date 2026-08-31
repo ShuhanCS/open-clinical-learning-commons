@@ -14,7 +14,7 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.87.0` through Module 01.
+- Current Commons release target: `0.88.0` through Module 02.
 - Specification status: construction candidate.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
@@ -234,17 +234,19 @@ No rate calculation, standardization, disparity metric, tract ranking, targeting
 
 - Module ID: `oclc-app5-02`.
 - Hours: 16.0.
-- Planned package path: `courses/population-health-equity/modules/02-population-measures-linked-data/`.
-- Planned specification: `docs/curriculum/courses/APP-5/modules/02-population-measures-linked-data-spec.md`.
+- Package path: `courses/population-health-equity/modules/02-population-measures-linked-data/`.
+- Specification: `docs/curriculum/courses/APP-5/modules/02-population-measures-linked-data-spec.md`.
 - Decision: are the linked population, subgroup, numerator, denominator, rate, and standardization measures correct and supported enough to enter disparity analysis?
 - Submission: 20-point population measure and denominator build.
-- Build status: planned after Module 01 acceptance.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.88.0`.
 
 SQL owns tract and age-group keys, accepted joins, numerator and denominator alignment, missing and unmatched states, aggregation, duplicate detection, and reconciliation totals. Python independently checks every rate and standardization table.
 
 Learners build crude and group-specific rates, perform direct standardization to one declared standard population, and complete a guided indirect-standardization exercise where direct support is sparse. Every result preserves the numerator, denominator, multiplier, age groups, standard weights, interval, source, period, geography, suppression state, and claim limit.
 
 The public PLACES value remains modeled prevalence. Synthetic event counts remain synthetic. Learners may compare them as separately labeled evidence but cannot combine them into a false observed local measure.
+
+The accepted release freezes the complete 27-file Module 01 reference workspace, preserves all 1,620 union tracts, and constructs 7,985 denominator rows and 7,985 generated event rows across 1,597 matched tracts. The adult denominator totals 5,679,768 and the generated numerator totals 283,614. Direct rates are available for 1,576 tracts and remain unavailable for 21; 80 tracts require the guided indirect exercise. All 30 SQL checks, independent Python reproduction, 266 complete checks, 187 starter checks, and 12 protected failure routes pass.
 
 The component cannot pass with a mismatched population, denominator, period, geography, age group, source, uncertainty, or standard population; a hidden unmatched row; an unavailable value converted to zero; or an unsupported observed-case claim.
 

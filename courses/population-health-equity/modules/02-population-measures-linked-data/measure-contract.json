@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app5-02",
+    "version": "0.1.0",
+    "commons_release": "0.88.0",
+    "hours": 16.0,
+    "course_points": 20
+  },
+  "upstream": {
+    "module_id": "oclc-app5-01",
+    "module_version": "0.1.0",
+    "commons_release": "0.87.0",
+    "reference_files": 27,
+    "payload_files": 28,
+    "upstream_files": 29,
+    "nested_manifest_rows": 16,
+    "handoff_manifest_bytes": 4262,
+    "handoff_manifest_sha256": "beda2254d019c0969c952773b31fb23db30e2be99798aa8af66d5cb1fbd87a2e"
+  },
+  "source": {
+    "release": "fma-dp-01-measures-v1",
+    "generator_version": "0.1.0",
+    "seed": 73052,
+    "period": "2024",
+    "tracts": 1597,
+    "age_bands": 5,
+    "rows": 7985,
+    "adult_denominator": 5679768,
+    "synthetic_events": 283614,
+    "zero_denominators": 41,
+    "manifest_sha256": "9915aeb15f62d88a52cfa6304d211a4fd092d33c11e73cd5d63a14d64946823d"
+  },
+  "measures": {
+    "rate_multiplier": 100000,
+    "sql_files": 4,
+    "accepted_output_tables": 10,
+    "query_checks": 30,
+    "tract_union": 1620,
+    "measure_tracts": 1597,
+    "age_band_rows": 7985,
+    "direct_rates_available": 1576,
+    "direct_rates_unavailable": 21,
+    "guided_indirect_required": 80,
+    "public_modeled_rows": 1597
+  },
+  "assessment": {
+    "criteria": 5,
+    "points": 20,
+    "noncompensable_gates": 15
+  },
+  "workspace": {
+    "learner_files": 61,
+    "learner_manifest_rows": 46,
+    "reference_files": 72,
+    "reference_manifest_rows": 57,
+    "editable_records": 10,
+    "sql_files": 4
+  },
+  "authority": {
+    "disparity_claim": "prohibited",
+    "mapping": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_allocation": "prohibited",
+    "model_fitting": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "real_community_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  }
+}

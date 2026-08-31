@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.87.0
+- Current release: 0.88.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-5 Module 01, Framing a population-health decision
-- Next unit: APP-5 Module 02
+- Last completed unit: APP-5 Module 02, Population measures from linked data
+- Next unit: APP-5 Module 03
 
 ## Confirmed decisions
 
@@ -678,6 +678,12 @@
 - The release inventories 282 fields and builds a 27-file learner or reference workspace from 16 immutable manifest rows and ten editable records.
 - Complete validation passes 176 checks, starter validation passes 112 checks, copied validation passes, deterministic reference assemblies match, and eight protected failure routes are rejected.
 - APP-5 Module 01 is a runnable release candidate at Commons 0.87.0. Module 02 population-measure construction may begin with conditions; rate construction, standardization, disparity claims, mapping, tract ranking, targeting, allocation, model fitting, intervention-effect estimation, real community action, implementation, and deployment remain prohibited in Module 01.
+- APP-5 Module 02 version 0.1.0 freezes the complete 27-file Module 01 reference workspace, the Module 01 release record, and a 28-row, 4,262-byte handoff manifest with SHA-256 `beda2254d019c0969c952773b31fb23db30e2be99798aa8af66d5cb1fbd87a2e`.
+- The deterministic `fma-dp-01-measures-v1` release uses seed 73052 and contains 7,985 synthetic tract-age rows across all 1,597 matched tracts. The synthetic source manifest has SHA-256 `9915aeb15f62d88a52cfa6304d211a4fd092d33c11e73cd5d63a14d64946823d`.
+- The accepted measures reconcile 5,679,768 ACS adult denominator units, 283,614 generated planning-need events, 7,944 available age-specific rates, 1,576 available direct rates, 21 unavailable direct rates, and 80 guided indirect cases.
+- The five standard-population rows total 5,679,768 and their weights total one. Public PLACES modeled prevalence remains in a separate 1,597-row table and is never relabeled as observed cases or combined with the synthetic numerator.
+- All 30 SQL checks and eight source-reconciliation checks pass. Complete validation passes 266 checks, starter validation passes 187 checks, deterministic source, measure, and workspace builds match, and copied-answer, complete-mode starter, and 12 protected failure routes are rejected.
+- APP-5 Module 02 is a runnable release candidate at Commons 0.88.0. Module 03 disparity and data-limit construction may begin with conditions; disparity claims, mapping, tract ranking, targeting, allocation, model fitting, intervention-effect estimation, real community action, implementation, and deployment remain prohibited at the Module 02 handoff.
 
 ## Pending confirmation
 
@@ -705,12 +711,14 @@
 - Confirm APP-5's population, numerator concept, denominator roles, geography, source periods, community-review model, possible benefit and harm, alternative action, nonaction, review rights, and stop rights before alpha.
 - Independently review the pinned PLACES, ACS B01001, SVI, and TIGER source versions, field roles, estimates, margins, flags, sentinel values, joins, and licensing or attribution requirements.
 - Complete named faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, GIS, community, equity, language-access, disability-access, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 01 before alpha.
+- Confirm APP-5 Module 02's five adult age bands, 38-cell ACS routing, approximate margin method, synthetic planning-need numerator, fixed probabilities, common standard population, interval methods, zero-denominator rule, small-support rule, and indirect comparison limit.
+- Complete named faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, community, equity, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 02 before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the accepted APP-5 course specification, source record, Module 01 specification, package, and release record.
-2. Freeze the exact Module 01 public-source releases, 16 immutable manifest rows, 27-file reference workspace, progression decision, conditions, and authority limits.
-3. Build APP-5 Module 02 as the population-measure and denominator release: link the accepted tract sources, add the approved synthetic event layer, construct crude and specific rates, and perform direct and indirect standardization.
-4. Do not rank tracts, make disparity claims, select targeting or allocation rules, fit a model, estimate intervention effects, make real community claims, implement, or deploy.
-5. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 02 before moving to Module 03.
+1. Read the accepted APP-5 course specification, source record, Module 02 specification, package, release record, score, gates, progression decision, and eight conditions.
+2. Freeze the complete 72-file Module 02 reference workspace and its 57 immutable rows without recomputing or repairing accepted Module 01 sources, the generated numerator, denominators, rates, standardization results, unavailable states, score, or gates.
+3. Build APP-5 Module 03 as the disparity and data-limit release: add the approved synthetic equity-group layer, calculate absolute and relative disparity measures, test reference-group sensitivity, audit missingness and representation, and apply deterministic support and suppression rules.
+4. Preserve suppressed values as unavailable and non-reconstructable. Do not map, rank tracts, select a target or allocation rule, fit a model, estimate intervention effects, make real community claims, implement, or deploy.
+5. Assemble the 40-point Week 3 checkpoint only after Module 03 passes. Advance semver, validate, commit, push, and remote-verify each isolated unit.

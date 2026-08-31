@@ -1,0 +1,16 @@
+gate_id,gate,status,evidence,owner
+G01,Frozen Module 01 handoff reproduces,REPLACE,REPLACE,REPLACE
+G02,Public source union and three-source intersection remain complete,REPLACE,REPLACE,REPLACE
+G03,All 38 ACS source cells and five adult age bands are declared,REPLACE,REPLACE,REPLACE
+G04,Every estimate remains paired with its ACS margin,REPLACE,REPLACE,REPLACE
+G05,Synthetic source identity and all 7985 rows reproduce,REPLACE,REPLACE,REPLACE
+G06,Every synthetic row matches exactly one derived denominator,REPLACE,REPLACE,REPLACE
+G07,Counts and denominators conserve without hidden drops,REPLACE,REPLACE,REPLACE
+G08,Crude and age-specific rates use the declared multiplier and unavailable states,REPLACE,REPLACE,REPLACE
+G09,Direct standard weights are complete and total one,REPLACE,REPLACE,REPLACE
+G10,Direct rates never convert zero denominators to zero rates,REPLACE,REPLACE,REPLACE
+G11,Indirect expected counts and ratios reproduce,REPLACE,REPLACE,REPLACE
+G12,PLACES modeled prevalence remains separate from synthetic events,REPLACE,REPLACE,REPLACE
+G13,SQL and independent Python results match,REPLACE,REPLACE,REPLACE
+G14,No observed-case disparity ranking targeting or allocation claim appears,REPLACE,REPLACE,REPLACE
+G15,Progression and real-world authority remain bounded,REPLACE,REPLACE,REPLACE

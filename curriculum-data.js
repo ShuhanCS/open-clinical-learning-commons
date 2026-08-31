@@ -465,9 +465,9 @@
         {
           "week": 2,
           "title": "Population measures from linked data",
-          "outcome": "Build and validate population, subgroup, rate, and denominator measures from linked data.",
-          "topics": "Data linkage, census and ACS variables, social-determinant indices, crude and specific rates, direct and indirect standardization, provenance.",
-          "submission": "Population measure build.",
+          "outcome": "Build and validate linked adult denominators, crude and age-specific rates, and direct and indirect standardization.",
+          "topics": "Complete tract-union audit, ACS B01001 age bands and margins, synthetic numerator linkage, rates per 100,000, direct and indirect standardization, support states, and public-synthetic separation.",
+          "submission": "Twenty-point population measure and denominator release.",
           "hours": 16
         },
         {
