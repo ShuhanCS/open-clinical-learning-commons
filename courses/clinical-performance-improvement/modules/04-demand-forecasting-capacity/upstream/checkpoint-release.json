@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app3-cp01",
+    "title": "Measures, variation, and bottleneck readiness",
+    "version": "0.1.0",
+    "commons_release": "0.69.0",
+    "course": "APP-3: Data for Clinical Performance and Improvement",
+    "due_point": "end of instructional Week 3",
+    "course_points": 40,
+    "point_source": "Module 02 20 points once plus Module 03 20 points once"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app3-01", "version": "0.1.0", "commons_release": "0.66.0", "assembled_files": 25, "manifest_rows": 14, "manifest_bytes": 1741, "manifest_sha256": "ecd8400c5e972e7070d64770086d752a89fd8bc659a1c5c1345c612d0236605d", "points": 0},
+    {"id": "oclc-app3-02", "version": "0.1.0", "commons_release": "0.67.0", "assembled_files": 58, "manifest_rows": 43, "manifest_bytes": 5266, "manifest_sha256": "868f87c365de83e052c3acee6c7742586a8007dd75d9976343b2f06dfbf622e4", "points": 20},
+    {"id": "oclc-app3-03", "version": "0.1.0", "commons_release": "0.68.0", "assembled_files": 54, "manifest_rows": 40, "manifest_bytes": 5115, "manifest_sha256": "6528e85f2324fd4b2068788598417be96f6c3a699a587a6ef5eb63f176b0242f", "points": 20}
+  ],
+  "accepted_evidence": {
+    "component_files": 137,
+    "checkpoint_score": "40 of 40",
+    "module01_gates": "12 of 12 pass",
+    "module02_gates": "15 of 15 pass",
+    "module03_gates": "18 of 18 pass",
+    "checkpoint_gates": "18 of 18 pass",
+    "accepted_encounters": 43628,
+    "signal_records": 9,
+    "known_true_safety_events": 894,
+    "bounded_diagnosis": "roomed-to-clinician constraint on evening shifts in Weeks 35 through 44",
+    "root_cause": "not established"
+  },
+  "package": {
+    "candidate_manifest_rows": 137,
+    "candidate_manifest_bytes": 23862,
+    "candidate_manifest_sha256": "9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656",
+    "checkpoint_editable_records": 8,
+    "defense_questions": 12,
+    "assembled_files": 153,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for demand forecasting and capacity analysis",
+    "staffing_change": "prohibited",
+    "clinical_action": "prohibited",
+    "automated_action": "prohibited",
+    "implementation": "prohibited",
+    "machine_learning": "reserved for Module 06"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 742,
+    "starter_checks": 700,
+    "two_assemblies_match": "pass",
+    "existing_target_rejection": "pass",
+    "failure_routes_rejected": 18
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, cumulative assembly, defense contract, validation, and release record"}
+  ],
+  "known_issues": [
+    "The official APP-3 section and half-term dates remain to be assigned from the published academic calendar.",
+    "Named faculty, clinician, clinical-performance, safety, equity, access, workforce, accessibility, responsible-AI, and independent reproduction reviews remain pending before alpha.",
+    "The included base-R control-chart verification has not run independently because R is unavailable in the construction environment.",
+    "The provisional baseline and all signal, safety, subgroup, diagnosis, and escalation limits must remain visible downstream.",
+    "The point score cannot compensate for a failed inherited or checkpoint gate.",
+    "No package authorizes staffing, clinical, automated, or implementation action."
+  ]
+}

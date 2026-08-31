@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app3-03",
+    "version": "0.1.0",
+    "commons_release": "0.68.0",
+    "hours": 16.5,
+    "course_points": 20
+  },
+  "upstream": {
+    "module_id": "oclc-app3-02",
+    "module_version": "0.1.0",
+    "commons_release": "0.67.0",
+    "files": 14,
+    "accepted_encounters": 43628,
+    "query_checks": 30
+  },
+  "phases": {
+    "baseline_weeks": [1, 24],
+    "evaluation_weeks": [25, 52],
+    "target_weeks": [35, 44],
+    "target_shift": "evening",
+    "recovery_weeks": [45, 52]
+  },
+  "diagnostic": {
+    "charts": 4,
+    "signal_rules": 3,
+    "signal_records": 9,
+    "outputs": 13,
+    "stage": "roomed_to_clinician",
+    "target_stage_median_minutes": 66.0,
+    "root_cause_status": "not established"
+  },
+  "assessment": {
+    "criteria": 5,
+    "points_available": 20,
+    "pass_score": 16,
+    "noncompensable_gates": 18,
+    "week3_total_points": 40
+  },
+  "prohibited": [
+    "public-to-synthetic linkage",
+    "signal as proof of cause",
+    "staffing adequacy claim",
+    "staffing change",
+    "clinical action",
+    "automated action",
+    "real subgroup disparity claim",
+    "implementation decision"
+  ]
+}

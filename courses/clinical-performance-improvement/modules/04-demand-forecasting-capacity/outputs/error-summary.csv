@@ -1,0 +1,4 @@
+method,evaluation_rows,mae_arrivals,rmse_arrivals,bias_arrivals,wape_percent,underforecast_arrivals,overforecast_arrivals,selected_flag,selection_reason,synthetic_flag
+last_value,588,10.775510,13.291345,-3.391156,27.479724,4165.000000,2171.000000,0,eligible comparison method,1
+seasonal_naive,588,7.095238,9.060079,-0.149660,18.094288,2130.000000,2042.000000,0,eligible comparison method,1
+seasonal_exponential_smoothing,588,5.937283,7.307180,0.008215,15.141268,1743.145982,1747.976153,1,lowest eligible MAE beyond the 0.25-arrival tie tolerance,1

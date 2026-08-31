@@ -1,0 +1,14 @@
+quantity_id,quantity,value,unit,period,source_or_rule,interpretation_limit,synthetic_flag
+C01,baseline planning conversion,0.960000,clinician-hours per arrival,Weeks 1-24,median accepted shift value,"historical conversion, not required staffing",1
+C02,historical weekly clinician-hours minimum,822.000000,clinician-hours,Weeks 1-24,accepted shift sum,"historical observation, not minimum safe capacity",1
+C03,historical weekly clinician-hours median,842.000000,clinician-hours,Weeks 1-24,accepted shift sum,"historical observation, not a target",1
+C04,historical weekly clinician-hours maximum,852.000000,clinician-hours,Weeks 1-24,accepted shift sum,"historical observation, not maximum useful capacity",1
+C05,Week 53 raw forecast total,876.924084,arrivals,Week 53,seasonal_exponential_smoothing,"forecast, not guaranteed demand",1
+C06,Week 53 rounded shift forecast total,878.000000,arrivals,Week 53,sum of shift-level half-up rounding,presentation total only,1
+C07,Week 53 empirical lower actual-equivalent,805.136639,arrivals,Week 53,10th and 90th fold-total error inversion,"empirical range, not calibrated coverage",1
+C08,Week 53 empirical upper actual-equivalent,970.733035,arrivals,Week 53,10th and 90th fold-total error inversion,"empirical range, not calibrated coverage",1
+C09,Week 53 point planning conversion,841.847121,clinician-hours,Week 53,raw forecast times C01,"planning equivalent, not a staffing recommendation",1
+C10,Week 53 lower planning conversion,772.931174,clinician-hours,Week 53,C07 times C01,"planning equivalent, not a staffing floor",1
+C11,Week 53 upper planning conversion,931.903714,clinician-hours,Week 53,C08 times C01,"planning equivalent, not a staffing ceiling",1
+C12,selected-model mean absolute weekly total error,64.678197,arrivals,28 evaluation weeks,mean absolute fold-total error,fold-total error remains operationally material,1
+C13,weekly error planning conversion,62.091069,clinician-hours,28 evaluation weeks,C12 times C01,"error equivalent, not observed shortage or excess",1

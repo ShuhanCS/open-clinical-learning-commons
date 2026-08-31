@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.69.0 through Checkpoint 01.
+- Current Commons release: 0.70.0 through Module 04.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -289,6 +289,7 @@ The bottleneck claim must reconcile process transitions, queue states, wait, ser
 - Specification: `docs/curriculum/courses/APP-3/modules/04-demand-forecasting-capacity-spec.md`.
 - Decision: what demand and capacity implication is supportable for the declared staffing horizon.
 - Submission: forecasting and capacity evidence for the Week 6 assessment.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.70.0`; Module 05 construction is permitted with conditions.
 
 Learners define the target, issue time, horizon, unit, decision, eligible history, calendar effects, and cost of error before fitting. They compare last-value and seasonal-naive benchmarks with one bounded exponential-smoothing model on identical rolling-origin folds.
 
@@ -514,8 +515,8 @@ Open conditions before alpha:
 - Assign the official course section and half-term dates before publishing due dates.
 - Reacquire and verify the pinned full public releases during pre-alpha independent reproduction.
 - Complete human review of the synthetic operational generator, known truth, subgroup design, safety events, staffing assumptions, and workload language.
-- Declare the exact control-chart families and signal rules after the generated measure distributions are accepted.
-- Declare the exact forecast horizon, rolling-origin folds, benchmark eligibility, and error-cost assumptions after the synthetic calendar-demand release is accepted.
+- Run and independently review the Module 03 base-R control-chart verification in an environment with R installed.
+- Run and independently review the Module 04 base-R forecast verification in an environment with R installed.
 - Declare the scenario warm-up, replications, seeds, conservation checks, and decision thresholds after the baseline model is validated.
 - Declare the ML decision-change threshold before fitting the ML candidate.
 - Confirm SimPy, statsmodels, R, qcc, and a supported forecasting package in one teaching environment, or document a tested course-supported alternative.
@@ -536,5 +537,6 @@ Construction acceptance for this course-level unit:
 - [x] Every checkpoint has a decision, points, evidence, and protected handoff.
 - [x] APP-3 remains distinct from FND-1, FND-2, APP-1, APP-2, and DA-730.
 - [x] Module 01 pins all three complete public snapshots and releases a validated 25-file decision-framing workspace.
+- [x] Module 04 freezes Checkpoint 01, compares three transparent methods on 28 rolling origins, and releases a bounded Week 53 planning range without staffing authority.
 
-Resume with Module 02 only: instantiate the fictional operational event model, build versioned measure specifications, validate denominators and event order, update semver and the ledger, commit, and push before Module 03 begins.
+Resume with Module 05 only: use the frozen point forecast, empirical range, difficult folds, Week 3 diagnosis, and action boundaries to compare no change with bounded improvement scenarios and define the 25-point evaluation component.

@@ -1,0 +1,25 @@
+module_id: oclc-app3-04
+module_version: 0.1.0
+commons_release: 0.70.0
+service_id: CGH-ED-01
+service_status: fictional
+upstream:
+  checkpoint_id: oclc-app3-cp01
+  checkpoint_version: 0.1.0
+  commons_release: 0.69.0
+  manifest: upstream/checkpoint-handoff-manifest.csv
+  frozen_files: 23
+accepted_evidence:
+  candidate_files: 137
+  shift_rows: 1092
+  weeks: 52
+  accepted_encounters: 43628
+forecast_contract:
+  target: arrivals per eight-hour shift
+  horizon: 21 shifts
+  folds: 28
+  methods: 3
+  outputs: 10
+privacy: no real patient, clinician, workforce, or hospital data
+public_source_role: inherited definition and historical aggregate context only; no public-to-synthetic linkage
+claim_limit: bounded synthetic forecast and planning implication only; no staffing, equilibrium, clinical, causal, automated, or implementation authority

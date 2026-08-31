@@ -1,0 +1,2 @@
+fold_id,issue_date,train_end_week,test_week,horizon_shifts,special_event_shifts,actual_arrivals,forecast_arrivals,forecast_error,fold_mae_arrivals,eligibility_status
+REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

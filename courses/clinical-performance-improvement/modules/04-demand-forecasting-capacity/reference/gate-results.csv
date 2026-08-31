@@ -1,0 +1,19 @@
+gate_id,gate,required_status,evidence,status
+G01,checkpoint handoff identity,pass,23 frozen upstream files plus handoff manifest,pass
+G02,target and decision declared,pass,forecast-plan.md,pass
+G03,issue time cutoff and horizon declared,pass,forecast-plan.md,pass
+G04,no future leakage,pass,fold-audit.csv and forecast-predictions.csv,pass
+G05,28 common rolling origins,pass,fold-audit.csv,pass
+G06,three eligible methods compared,pass,model-comparison.md,pass
+G07,seasonal lag and smoothing fixed,pass,forecast-plan.md,pass
+G08,primary and secondary errors reported,pass,model-comparison.md,pass
+G09,under and over errors separated,pass,model-comparison.md,pass
+G10,failure periods reviewed,pass,failure-period-review.md,pass
+G11,calendar slice support retained,pass,failure-period-review.md,pass
+G12,Week 53 uncertainty retained,pass,capacity-interpretation.md,pass
+G13,capacity conversion bounded,pass,capacity-interpretation.md,pass
+G14,no staffing recommendation,pass,capacity-interpretation.md,pass
+G15,Little's Law limits retained,pass,littles-law-interpretation.md,pass
+G16,accessible outputs reviewed,pass,accessible-output-review.md,pass
+G17,reproducibility confirmed,pass,reproducibility-check.md,pass
+G18,Module 05 permission and boundaries explicit,pass,progression-decision.md,pass

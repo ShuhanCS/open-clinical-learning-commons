@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="860" height="430" viewBox="0 0 860 430">
+<title>Mean absolute forecast error by transparent method</title>
+<desc>Seasonal exponential smoothing has the lowest mean absolute error at 5.937 arrivals per shift, followed by seasonal naive at 7.095 and last value at 10.776.</desc>
+<rect width="100%" height="100%" fill="#ffffff" />
+<text x="430" y="35" text-anchor="middle" font-size="23" font-weight="bold">Forecast error on 588 common shifts</text>
+<line x1="100" y1="330" x2="800" y2="330" stroke="#1f2937" />
+<line x1="100" y1="70" x2="100" y2="330" stroke="#1f2937" />
+<text x="25" y="210" transform="rotate(-90 25 210)" text-anchor="middle" font-size="15">MAE, arrivals per shift</text>
+<rect x="150" y="103.9" width="120" height="226.1" fill="#61758a" />
+<text x="210" y="93.9" text-anchor="middle" font-size="17">10.776</text>
+<text x="210" y="360" text-anchor="middle" font-size="14">Last&#160;value</text>
+<rect x="380" y="181.1" width="120" height="148.9" fill="#2d7d8a" />
+<text x="440" y="171.1" text-anchor="middle" font-size="17">7.095</text>
+<text x="440" y="360" text-anchor="middle" font-size="14">Seasonal&#160;naive</text>
+<rect x="610" y="205.4" width="120" height="124.6" fill="#1f49b6" />
+<text x="670" y="195.4" text-anchor="middle" font-size="17">5.937</text>
+<text x="670" y="360" text-anchor="middle" font-size="14">Seasonal&#160;exponential&#160;smoothing</text>
+<text x="430" y="410" text-anchor="middle" font-size="13">Lower is better. Exact values are available in error-summary.csv.</text>
+</svg>

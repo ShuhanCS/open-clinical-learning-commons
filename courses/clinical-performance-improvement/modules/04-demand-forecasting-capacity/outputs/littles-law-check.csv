@@ -1,0 +1,5 @@
+context_id,context,shifts,arrival_rate_per_hour,median_arrival_to_clinician_hours,lambda_times_w,mean_queue_end_snapshot,signed_gap,equilibrium_status,interpretation_limit,synthetic_flag
+baseline_all,"Weeks 1-24, all shifts",504,5.101935,1.625000,8.290644,8.286086,0.004557,not established,"rate uses arrivals, W is a median elapsed time, and L is a mean queue-end snapshot",1
+evaluation_all,"Weeks 25-52, all shifts",588,4.901573,1.616667,7.924210,7.999681,-0.075471,not established,"rate uses arrivals, W is a median elapsed time, and L is a mean queue-end snapshot",1
+target_evening,"Weeks 35-44, evening shifts",70,5.269643,1.933333,10.187976,9.702679,0.485298,not established,"rate uses arrivals, W is a median elapsed time, and L is a mean queue-end snapshot",1
+recovery_evening,"Weeks 45-52, evening shifts",56,5.470982,1.650000,9.027121,9.029018,-0.001897,not established,"rate uses arrivals, W is a median elapsed time, and L is a mean queue-end snapshot",1

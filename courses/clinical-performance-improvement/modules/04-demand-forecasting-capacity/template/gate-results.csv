@@ -1,0 +1,19 @@
+gate_id,gate,required_status,evidence,status
+G01,checkpoint handoff identity,pass,REPLACE,REPLACE
+G02,target and decision declared,pass,REPLACE,REPLACE
+G03,issue time cutoff and horizon declared,pass,REPLACE,REPLACE
+G04,no future leakage,pass,REPLACE,REPLACE
+G05,28 common rolling origins,pass,REPLACE,REPLACE
+G06,three eligible methods compared,pass,REPLACE,REPLACE
+G07,seasonal lag and smoothing fixed,pass,REPLACE,REPLACE
+G08,primary and secondary errors reported,pass,REPLACE,REPLACE
+G09,under and over errors separated,pass,REPLACE,REPLACE
+G10,failure periods reviewed,pass,REPLACE,REPLACE
+G11,calendar slice support retained,pass,REPLACE,REPLACE
+G12,Week 53 uncertainty retained,pass,REPLACE,REPLACE
+G13,capacity conversion bounded,pass,REPLACE,REPLACE
+G14,no staffing recommendation,pass,REPLACE,REPLACE
+G15,Little's Law limits retained,pass,REPLACE,REPLACE
+G16,accessible outputs reviewed,pass,REPLACE,REPLACE
+G17,reproducibility confirmed,pass,REPLACE,REPLACE
+G18,Module 05 permission and boundaries explicit,pass,REPLACE,REPLACE

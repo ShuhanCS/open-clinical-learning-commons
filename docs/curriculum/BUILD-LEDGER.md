@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.69.0
+- Current release: 0.70.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Checkpoint 01, measures, variation, and bottleneck readiness
-- Next unit: APP-3 Module 04, demand forecasting and capacity
+- Last completed unit: APP-3 Module 04, demand forecasting and capacity
+- Next unit: APP-3 Module 05, improvement scenarios and evaluation
 
 ## Confirmed decisions
 
@@ -497,7 +497,19 @@
 - The copied validator passes. Two reference assemblies match, existing targets are protected, and 18 mutation or incomplete-submission routes are rejected.
 - The 12-question defense covers decision and unit, data classes, measures, charts, baseline instability, safety, bottleneck evidence, subgroup support, E01, points, reproduction, and Module 04 ownership.
 - Progression is `continue with conditions`. Module 04 demand forecasting and capacity analysis is permitted. Root cause remains unestablished, and staffing, clinical, automated, and implementation action remain prohibited.
-- APP-3 Checkpoint 01 is a runnable release candidate at Commons 0.69.0. Module 04 is next.
+- APP-3 Checkpoint 01 is a runnable release candidate at Commons 0.69.0.
+- APP-3 Module 04 version 0.1.0 freezes 23 exact checkpoint, Module 02, and Module 03 files plus a handoff manifest. The full 137-row checkpoint manifest remains the chain of custody.
+- The forecast target is accepted arrivals per eight-hour shift, issued at the end of each completed week for the next 21 shifts. Weeks 1 through 24 form the initial training window, and Weeks 25 through 52 supply 28 expanding rolling-origin folds.
+- All three methods use the same 588 evaluation shifts. Last value has MAE 10.775510, seasonal naive has MAE 7.095238, and fixed seasonal exponential smoothing has MAE 5.937283 arrivals per shift.
+- Seasonal exponential smoothing is selected with alpha 0.30, gamma 0.20, seasonal period 21, no trend, and a nonnegative floor. It has RMSE 7.307180, bias 0.008215, and WAPE 15.141268 percent.
+- The release retains 1,743.145982 under-forecast arrivals and 1,747.976153 over-forecast arrivals. F03, F09, F15, and F16 remain visible as difficult folds, and the nine-row holiday slice is not supported.
+- The Week 53 raw forecast is 876.924084 arrivals. The empirical actual-equivalent range is 805.136639 to 970.733035 arrivals.
+- The 0.96 historical clinician-hour conversion gives a point planning equivalent of 841.847121 hours and a range of 772.931174 to 931.903714 hours. These values do not define required staffing, safe staffing, or productivity.
+- Four Little's Law rows are retained as bounded consistency checks. Equilibrium is not established because the accepted rate, median elapsed time, and queue snapshot do not define one stationary queue system.
+- The learner workspace has 49 files and 36 immutable manifest rows. The reference has 59 files and 46 immutable manifest rows. Complete validation passes 255 checks and starter validation passes 151 structural checks.
+- Upstream, forecast, workspace, and validator self-checks pass. Nineteen mutation and incomplete-workspace routes are rejected. The committed base-R cross-check remains pending because Rscript is unavailable in the construction environment.
+- The reference passes all 18 zero-point gates. Progression is `continue with conditions`, permitting Module 05 improvement scenario and evaluation construction while staffing, scenario-effect, clinical, automated, and implementation claims remain prohibited.
+- APP-3 Module 04 is a runnable release candidate at Commons 0.70.0. Module 05 is next.
 
 ## Pending confirmation
 
@@ -508,14 +520,15 @@
 - Assign the official APP-3 section and half-term dates from the published calendar.
 - Complete human review of the APP-3 synthetic operational generator, safety-event design, subgroup construction, staffing assumptions, workload language, forecast contract, and scenario boundaries before alpha.
 - Run and independently review the APP-3 Module 03 base-R control-chart verification in an environment with R installed.
+- Run and independently review the APP-3 Module 04 base-R forecast verification in an environment with R installed.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoint 01 specification and package, curriculum catalog, and this ledger.
-2. Read the frozen Module 02 measure contract and Module 03 baseline, chart, signal, safety, bottleneck, subgroup, and escalation evidence carried by the checkpoint.
-3. Write the durable APP-3 Module 04 specification before building its package.
-4. Freeze the accepted Week 3 checkpoint identity and declare the forecast target, issue time, information cutoff, horizon, eligible history, calendar assumptions, cost of error, and capacity decision before fitting.
-5. Compare last-value and seasonal-naive benchmarks with one bounded exponential-smoothing model on identical rolling-origin folds.
-6. Translate forecast error into a bounded capacity implication, state Little's Law limits, and keep staffing, root-cause, clinical, and implementation claims prohibited.
-7. Release the zero-point Module 04 forecast gate for Module 05, advance semver, update this ledger, commit, and push.
+1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoint 01 package, Module 04 specification and package, curriculum catalog, and this ledger.
+2. Freeze the accepted Week 3 diagnosis and Module 04 forecast, range, difficult folds, unsupported holiday slice, and action boundaries without recomputing them.
+3. Write the durable APP-3 Module 05 specification before building its package.
+4. Configure a provided discrete-event scenario with explicit arrivals, service, routing, priority, staffing, capacity, warm-up, replication, seed, and conservation rules.
+5. Compare no change with at least two bounded redesign options across wait, cycle time, throughput, abandonment, utilization, overtime, escalation delay, safety, access, subgroup, workforce, and balancing measures.
+6. Preserve failed runs and uncertainty, and separate scenario evidence from a real intervention-effect claim.
+7. Release the 25-point Module 05 scenario and evaluation component for Module 06, advance semver, update this ledger, commit, and push.

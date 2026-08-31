@@ -1,0 +1,22 @@
+forecast_shift_id,date,shift_name,horizon_shift,selected_method,raw_forecast_arrivals,planning_arrivals,holiday_flag,prediction_status,synthetic_flag
+20241230-night,2024-12-30,night,1,seasonal_exponential_smoothing,35.011142,35,0,future synthetic planning estimate; actual unavailable,1
+20241230-day,2024-12-30,day,2,seasonal_exponential_smoothing,56.870912,57,0,future synthetic planning estimate; actual unavailable,1
+20241230-evening,2024-12-30,evening,3,seasonal_exponential_smoothing,49.798508,50,0,future synthetic planning estimate; actual unavailable,1
+20241231-night,2024-12-31,night,4,seasonal_exponential_smoothing,32.026490,32,0,future synthetic planning estimate; actual unavailable,1
+20241231-day,2024-12-31,day,5,seasonal_exponential_smoothing,51.197247,51,0,future synthetic planning estimate; actual unavailable,1
+20241231-evening,2024-12-31,evening,6,seasonal_exponential_smoothing,40.779011,41,0,future synthetic planning estimate; actual unavailable,1
+20250101-night,2025-01-01,night,7,seasonal_exponential_smoothing,27.792707,28,1,future synthetic planning estimate; actual unavailable,1
+20250101-day,2025-01-01,day,8,seasonal_exponential_smoothing,49.810389,50,1,future synthetic planning estimate; actual unavailable,1
+20250101-evening,2025-01-01,evening,9,seasonal_exponential_smoothing,43.186950,43,1,future synthetic planning estimate; actual unavailable,1
+20250102-night,2025-01-02,night,10,seasonal_exponential_smoothing,29.358370,29,0,future synthetic planning estimate; actual unavailable,1
+20250102-day,2025-01-02,day,11,seasonal_exponential_smoothing,49.756658,50,0,future synthetic planning estimate; actual unavailable,1
+20250102-evening,2025-01-02,evening,12,seasonal_exponential_smoothing,44.460986,44,0,future synthetic planning estimate; actual unavailable,1
+20250103-night,2025-01-03,night,13,seasonal_exponential_smoothing,31.597517,32,0,future synthetic planning estimate; actual unavailable,1
+20250103-day,2025-01-03,day,14,seasonal_exponential_smoothing,52.852418,53,0,future synthetic planning estimate; actual unavailable,1
+20250103-evening,2025-01-03,evening,15,seasonal_exponential_smoothing,48.888175,49,0,future synthetic planning estimate; actual unavailable,1
+20250104-night,2025-01-04,night,16,seasonal_exponential_smoothing,27.724094,28,0,future synthetic planning estimate; actual unavailable,1
+20250104-day,2025-01-04,day,17,seasonal_exponential_smoothing,47.694645,48,0,future synthetic planning estimate; actual unavailable,1
+20250104-evening,2025-01-04,evening,18,seasonal_exponential_smoothing,42.691884,43,0,future synthetic planning estimate; actual unavailable,1
+20250105-night,2025-01-05,night,19,seasonal_exponential_smoothing,29.062765,29,0,future synthetic planning estimate; actual unavailable,1
+20250105-day,2025-01-05,day,20,seasonal_exponential_smoothing,45.888655,46,0,future synthetic planning estimate; actual unavailable,1
+20250105-evening,2025-01-05,evening,21,seasonal_exponential_smoothing,40.474558,40,0,future synthetic planning estimate; actual unavailable,1

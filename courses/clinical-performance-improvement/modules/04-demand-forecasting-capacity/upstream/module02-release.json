@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app3-02",
+  "module_version": "0.1.0",
+  "commons_release": "0.67.0",
+  "status": "runnable release candidate",
+  "source_release": "cgh-ed-01-operational-v1",
+  "reference_score": 20,
+  "reference_gates_passed": 15,
+  "reference_progression": "continue with conditions",
+  "next_module": "oclc-app3-03",
+  "next_module_permission": "permitted for curriculum construction",
+  "diagnosis_or_action_authorized": false
+}

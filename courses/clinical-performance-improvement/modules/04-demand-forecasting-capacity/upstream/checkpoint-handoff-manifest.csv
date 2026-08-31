@@ -1,0 +1,24 @@
+relative_path,source_path,bytes,sha256,source_release,role
+upstream/calendar-demand.csv.gz,calendar-demand.csv.gz,12960,a68cd31d1de7736050334b4528e4a35d7b9103386b1418cf1fb58679425435c8,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-candidate-manifest.csv,candidate-manifest.csv,23862,9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-contract.json,checkpoint-contract.json,1767,14de3cb8ebc9efa8813cfbacebd6f119f7c7d43f7f3ff34ab76d183977a3b42f,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-defense.md,checkpoint-defense.md,5582,9066449669bec8ce57b887be9a44720d6bfd2e571761d14560c2f4c74c853503,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-evidence-index.csv,evidence-index.csv,1043,3ad3e5d36f57072c00ac5e3be6cea48aea9528490fd90d09ea5a56873d76ab1a,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-gates.csv,checkpoint-gates.csv,2372,32f293e545fd17e1196311a0503a64fb7a2d62f8b8a12e7ec525746d577a001f,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-progression-decision.md,progression-decision.md,1910,a54a87d6c11110d6347a425a4e1d6fc6f5ea81f8ed1de3ae0dc1f1081fc15c4a,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-readiness-review.md,measures-variation-readiness-review.md,4695,ce9cab11a5129a8ef09e106a51c084493c2806eb591060f9faf861f0e4706ba0,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/checkpoint-release.json,release.json,3835,270b4e49d1c21d8faf7243cd11cef1dddea836d32be551dfe72edac771b31f27,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module02-build-report.json,build-report.json,4760,512029fd3703000e356643d2eff7622dda85f3679e28617f0d12d618221ad516,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module02-operational-contract.json,operational-contract.json,1158,e9363e5388532d88dd79ed9c0335e05e53cbf22c8282c862d192e1d168d05305,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module02-release.json,release.json,470,f4715966d9ad986172585552316d99235aeef2f273944d60b8c70618b4856efb,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-bottleneck-reconciliation.csv,bottleneck-reconciliation.csv,1305,11a51ac3465d1efdee41392003926120046da65e1fed0947547f94b014bacda0,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-diagnostic-contract.json,diagnostic-contract.json,1183,3b6ba9a74d55cb1bf33c46679065a9c856a5c0fa0f39945f2ae736ec4af897fe,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-diagnostic-findings.json,diagnostic-findings.json,2687,0b88e52ea31755d2c540e9f97efb4f1b8a4cfdca6b027135626e94bf4dc06468,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-escalation-rule.md,escalation-rule.md,1178,3b258ff74247fad12e9f1b52e178b0ab2450e8376db76c8b2c324d16957e0f63,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-release.json,release.json,515,08b6de11641595943bebea53445714cfa9500383f8a4548bf555ffef8d5c5fc3,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-signal-audit.csv,signal-audit.csv,1405,c8ead1f67920ec99ab7f3fdb3dc22bbdd5d064b5958dbb6253c924033d9fc71f,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-subgroup-window-support.csv,subgroup-window-support.csv,1183,e32aa63d10bf5830a8a5df7db6474e62fe04b048e0735b1e8f67df422b2c42b1,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/module03-variation-series.csv,variation-series.csv,30981,b42e6e9f5b82fb392e3e59558a4335fc5873f265cf1af1af2799d8f85d2b0e5b,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/shift-metrics.csv,shift-metrics.csv,153192,cd2ca9163acc7c79572b0014fd54f9726614c1cfd352a4efa11fd1bbedeacd57,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/staffing.csv.gz,staffing.csv.gz,32179,d4c9e93e55b62895b46bcecc9f4f96949e3333605b01b90e344bb64f4337c56e,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff
+upstream/weekly-metrics.csv,weekly-metrics.csv,5395,61c8fd5ec4d47ce97c3d1d38297b865a06d2ae9f6f9ee916406bccaba139e00d,oclc-app3-cp01@0.1.0+commons.0.69.0,accepted APP-3 Week 3 handoff

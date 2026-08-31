@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="1060" height="470" viewBox="0 0 1060 470">
+<title>Selected Week 53 arrival-demand forecast</title>
+<desc>The 21-shift seasonal exponential-smoothing forecast totals 876.924 arrivals. The empirical 80 percent actual-equivalent weekly range is 805.137 to 970.733 arrivals.</desc>
+<rect width="100%" height="100%" fill="#ffffff" />
+<text x="530" y="34" text-anchor="middle" font-size="23" font-weight="bold">Week 53 forecast by eight-hour shift</text>
+<line x1="70" y1="350" x2="1000" y2="350" stroke="#1f2937" />
+<line x1="70" y1="70" x2="70" y2="350" stroke="#1f2937" />
+<polyline points="70.0,200.1 116.5,106.5 163.0,136.8 209.5,212.9 256.0,130.8 302.5,175.4 349.0,231.0 395.5,136.7 442.0,165.1 488.5,224.3 535.0,137.0 581.5,159.7 628.0,214.7 674.5,123.7 721.0,140.7 767.5,231.3 814.0,145.8 860.5,167.2 907.0,225.6 953.5,153.5 1000.0,176.7" fill="none" stroke="#1f49b6" stroke-width="3" />
+<circle cx="70.0" cy="200.1" r="3" fill="#1f49b6" />
+<circle cx="116.5" cy="106.5" r="3" fill="#1f49b6" />
+<circle cx="163.0" cy="136.8" r="3" fill="#1f49b6" />
+<circle cx="209.5" cy="212.9" r="3" fill="#1f49b6" />
+<circle cx="256.0" cy="130.8" r="3" fill="#1f49b6" />
+<circle cx="302.5" cy="175.4" r="3" fill="#1f49b6" />
+<circle cx="349.0" cy="231.0" r="3" fill="#1f49b6" />
+<circle cx="395.5" cy="136.7" r="3" fill="#1f49b6" />
+<circle cx="442.0" cy="165.1" r="3" fill="#1f49b6" />
+<circle cx="488.5" cy="224.3" r="3" fill="#1f49b6" />
+<circle cx="535.0" cy="137.0" r="3" fill="#1f49b6" />
+<circle cx="581.5" cy="159.7" r="3" fill="#1f49b6" />
+<circle cx="628.0" cy="214.7" r="3" fill="#1f49b6" />
+<circle cx="674.5" cy="123.7" r="3" fill="#1f49b6" />
+<circle cx="721.0" cy="140.7" r="3" fill="#1f49b6" />
+<circle cx="767.5" cy="231.3" r="3" fill="#1f49b6" />
+<circle cx="814.0" cy="145.8" r="3" fill="#1f49b6" />
+<circle cx="860.5" cy="167.2" r="3" fill="#1f49b6" />
+<circle cx="907.0" cy="225.6" r="3" fill="#1f49b6" />
+<circle cx="953.5" cy="153.5" r="3" fill="#1f49b6" />
+<circle cx="1000.0" cy="176.7" r="3" fill="#1f49b6" />
+<text x="116.5" y="380" text-anchor="middle" font-size="12">12-30</text>
+<text x="256.0" y="380" text-anchor="middle" font-size="12">12-31</text>
+<text x="395.5" y="380" text-anchor="middle" font-size="12">01-01</text>
+<text x="535.0" y="380" text-anchor="middle" font-size="12">01-02</text>
+<text x="674.5" y="380" text-anchor="middle" font-size="12">01-03</text>
+<text x="814.0" y="380" text-anchor="middle" font-size="12">01-04</text>
+<text x="953.5" y="380" text-anchor="middle" font-size="12">01-05</text>
+<text x="530" y="420" text-anchor="middle" font-size="15">Point total 876.924; empirical weekly range 805.137 to 970.733 arrivals</text>
+<text x="530" y="448" text-anchor="middle" font-size="13">This is a synthetic planning forecast, not a staffing order or demand guarantee.</text>
+</svg>

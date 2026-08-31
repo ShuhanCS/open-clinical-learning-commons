@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app3-04",
+    "version": "0.1.0",
+    "commons_release": "0.70.0",
+    "hours": 16.5,
+    "course_points": 0
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-app3-cp01",
+    "version": "0.1.0",
+    "commons_release": "0.69.0",
+    "candidate_files": 137,
+    "candidate_manifest_sha256": "9f4dbbf58fdef8ac0935f298de26ae04b87b8722c3be2d3b2b6e2aefbc147656",
+    "frozen_files": 23,
+    "shift_rows": 1092,
+    "weeks": 52
+  },
+  "forecast": {
+    "target": "accepted arrivals per eight-hour shift",
+    "issue_time": "end of the final shift in each completed week",
+    "horizon_shifts": 21,
+    "horizon_days": 7,
+    "seasonal_period_shifts": 21,
+    "initial_training_weeks": [1, 24],
+    "evaluation_weeks": [25, 52],
+    "rolling_folds": 28,
+    "evaluation_rows_per_method": 588,
+    "methods": ["last_value", "seasonal_naive", "seasonal_exponential_smoothing"],
+    "primary_metric": "mean absolute error in arrivals per shift",
+    "tie_tolerance_arrivals": 0.25,
+    "alpha": 0.30,
+    "gamma": 0.20,
+    "trend": "none",
+    "nonnegative_floor": 0
+  },
+  "capacity": {
+    "anchor_period_weeks": [1, 24],
+    "anchor": "median clinician staff-hours per arrival across accepted baseline shifts",
+    "anchor_value": 0.96,
+    "historical_weekly_clinician_hours": {"minimum": 822.0, "median": 842.0, "maximum": 852.0},
+    "uncertainty": "empirical 10th and 90th percentiles of selected-model fold-total forecast error",
+    "staffing_recommendation": "prohibited"
+  },
+  "assessment": {
+    "noncompensable_gates": 18,
+    "course_points_awarded_here": 0,
+    "next_module": "oclc-app3-05"
+  }
+}
