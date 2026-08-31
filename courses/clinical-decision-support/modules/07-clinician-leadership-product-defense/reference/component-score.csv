@@ -1,0 +1,7 @@
+criterion_id,criterion,points_possible,points_awarded,status,evidence
+E01,"Correct evidence, product, and claim boundary",8.00,8.00,complete,"product-brief.md; evidence-synthesis.md; logic-input-threshold.md"
+C01,"Clinical CDS reasoning, patient consequences, workflow, safety, and access",9.00,9.00,complete,"workflow-patient-consequences.md; prototype-disclosure.md; safety-case.md"
+L01,"Leadership recommendation, evaluation readiness, alternatives, and ownership",8.00,8.00,complete,"recommendation-and-alternatives.md; evaluation-proposal.md; stakeholder-roles.csv"
+G01,"Monitoring, stewardship, governance, disagreement, and communication",6.00,6.00,complete,"monitoring-silent-failure-plan.md; stewardship-governance-retirement.md; disagreement-record.md; accessible-communication.md"
+H01,"Reproducibility, accessibility, responsible agent use, and defense",4.00,4.00,complete,"reproducibility-check.md; responsible-claims-audit.md; ai-use.md; technical-defense.md"
+TOTAL,Module 07 final component,35.00,35.00,complete,record once at Checkpoint 03; Week 3 and Week 6 points are not rescored

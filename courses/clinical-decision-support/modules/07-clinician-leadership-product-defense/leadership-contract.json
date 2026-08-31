@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app4-07",
+    "version": "0.1.0",
+    "commons_release": "0.85.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "accepted_inputs": [
+    {"id": "oclc-app4-cp01", "version": "0.1.0", "commons_release": "0.80.0", "files": 263, "manifest_sha256": "4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151", "release_sha256": "8f637bef551ebe5cb91e93b3b91fef51f25736d07168b904851405c703b62c03"},
+    {"id": "oclc-app4-cp02", "version": "0.1.0", "commons_release": "0.84.0", "files": 1047, "manifest_sha256": "14ac12dd890045dce21cdc44a9b614770b8b2428bd71a1d4f5eb9cc9de63d642", "release_sha256": "05e65b59f0d4c4b33dc341256141e39c02cfffc32e22aca546dbb85384cb1221"}
+  ],
+  "allowed_recommendations": [
+    "recommend seeking local approval for bounded silent-mode evaluation",
+    "revise before seeking local silent-mode approval",
+    "refer",
+    "stop"
+  ],
+  "reference": {
+    "package_status": "accept with conditions",
+    "recommendation": "revise before seeking local silent-mode approval",
+    "design": "panel-t003 passive contextual mechanics fixture",
+    "accepted_threshold": null,
+    "ml_decision": "retain transparent model",
+    "final_checkpoint_permission": "permitted for curriculum construction"
+  },
+  "score": {
+    "criteria": {"E01": 8.0, "C01": 9.0, "L01": 8.0, "G01": 6.0, "H01": 4.0},
+    "minimum_to_pass": 28.0,
+    "maximum": 35.0
+  },
+  "required_gates": 26,
+  "defense_questions": 14,
+  "boundaries": {
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

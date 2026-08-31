@@ -1,0 +1,214 @@
+"""Assemble the APP-4 Module 07 clinician leadership candidate."""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import json
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+
+MODULE_ROOT = Path(__file__).resolve().parent
+COURSE_ROOT = MODULE_ROOT.parent.parent
+REFERENCE_ROOT = MODULE_ROOT / "reference"
+TEMPLATE_ROOT = MODULE_ROOT / "template"
+CONTROL_FILES = (
+    ".gitattributes", "VERSION", "leadership-contract.json", "clinician-profile.md",
+    "clinician-session-plan.md", "assessment.md", "assemble_candidate.py", "validate_candidate.py",
+)
+RECORD_FILES = (
+    "README.md", "product-brief.md", "evidence-synthesis.md", "logic-input-threshold.md",
+    "workflow-patient-consequences.md", "prototype-disclosure.md", "safety-case.md",
+    "monitoring-silent-failure-plan.md", "evaluation-proposal.md",
+    "stewardship-governance-retirement.md", "stakeholder-roles.csv",
+    "recommendation-and-alternatives.md", "disagreement-record.md", "leadership-reflection.md",
+    "accessible-communication.md", "technical-appendix.md", "evidence-index.csv",
+    "reproducibility-check.md", "responsible-claims-audit.md", "ai-use.md",
+    "component-score.csv", "gate-results.csv", "conditions-register.csv", "technical-defense.md",
+    "reviewer-record.md", "progression-decision.md",
+)
+CHECKPOINTS = (
+    {
+        "id": "oclc-app4-cp01", "version": "0.1.0", "directory": "checkpoint1",
+        "root": COURSE_ROOT / "checkpoints/01-logic-evidence-validation-readiness", "files": 263,
+        "manifest_sha256": "4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151",
+        "release_sha256": "8f637bef551ebe5cb91e93b3b91fef51f25736d07168b904851405c703b62c03",
+        "validator_args": ("{validator}", "{checkpoint}"),
+    },
+    {
+        "id": "oclc-app4-cp02", "version": "0.1.0", "directory": "checkpoint2",
+        "root": COURSE_ROOT / "checkpoints/02-workflow-sandbox-safety-release", "files": 1047,
+        "manifest_sha256": "14ac12dd890045dce21cdc44a9b614770b8b2428bd71a1d4f5eb9cc9de63d642",
+        "release_sha256": "05e65b59f0d4c4b33dc341256141e39c02cfffc32e22aca546dbb85384cb1221",
+        "validator_args": ("{validator}", "--workspace", "{checkpoint}", "--complete"),
+    },
+)
+MANIFEST_FIELDS = ["relative_path", "source_unit", "source_version", "bytes", "sha256", "role"]
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def run(command: list[str], label: str) -> None:
+    result = subprocess.run(command, capture_output=True, text=True, check=False)
+    if result.returncode:
+        raise ValueError(f"{label} failed: {result.stderr.strip() or result.stdout.strip()}")
+
+
+def validate_checkpoint(checkpoint: Path, contract: dict[str, object]) -> None:
+    validator = Path(contract["root"]) / "validate_checkpoint.py"
+    command = [sys.executable] + [
+        value.format(validator=str(validator), checkpoint=str(checkpoint))
+        for value in contract["validator_args"]
+    ]
+    run(command, str(contract["id"]))
+    files = sum(path.is_file() for path in checkpoint.rglob("*") if "__pycache__" not in path.parts)
+    if files != contract["files"]:
+        raise ValueError(f"{contract['id']} file count changed")
+    manifest = checkpoint / "candidate-manifest.csv"
+    if sha256(manifest) != contract["manifest_sha256"]:
+        raise ValueError(f"{contract['id']} candidate manifest changed")
+    identity = json.loads((checkpoint / "checkpoint-contract.json").read_text(encoding="utf-8"))
+    if identity["checkpoint_id"] != contract["id"] or (checkpoint / "VERSION").read_text(encoding="utf-8").strip() != contract["version"]:
+        raise ValueError(f"{contract['id']} identity changed")
+
+
+def build_reference_checkpoint(target: Path, contract: dict[str, object]) -> None:
+    builder = Path(contract["root"]) / "build_checkpoint.py"
+    run([sys.executable, str(builder), "--target", str(target), "--reference"], f"Build {contract['id']}")
+
+
+def copy_registered(source: Path, target: Path, relative: str, unit: str, version: str, role: str, manifest: list[dict[str, object]]) -> None:
+    portable = Path(relative)
+    if portable.is_absolute() or ".." in portable.parts:
+        raise ValueError(f"Path is not portable: {relative}")
+    destination = target / portable
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source, destination)
+    manifest.append({
+        "relative_path": relative.replace("\\", "/"),
+        "source_unit": unit,
+        "source_version": version,
+        "bytes": destination.stat().st_size,
+        "sha256": sha256(destination),
+        "role": role,
+    })
+
+
+def assemble(checkpoint1: Path, checkpoint2: Path, target: Path, reference: bool = False) -> dict[str, object]:
+    target = target.resolve()
+    if target.exists():
+        raise FileExistsError(f"Refusing to overwrite existing target: {target}")
+    checkpoints = (checkpoint1.resolve(), checkpoint2.resolve())
+    record_root = REFERENCE_ROOT if reference else TEMPLATE_ROOT
+    missing = [name for name in CONTROL_FILES if not (MODULE_ROOT / name).is_file()]
+    missing += [name for name in RECORD_FILES if not (record_root / name).is_file()]
+    if missing:
+        raise FileNotFoundError(f"Module package is missing: {', '.join(missing)}")
+    for checkpoint, contract in zip(checkpoints, CHECKPOINTS, strict=True):
+        validate_checkpoint(checkpoint, contract)
+        release = Path(contract["root"]) / "release.json"
+        if not release.is_file() or sha256(release) != contract["release_sha256"]:
+            raise ValueError(f"{contract['id']} release identity changed")
+
+    target.mkdir(parents=True)
+    manifest: list[dict[str, object]] = []
+    for name in CONTROL_FILES:
+        copy_registered(MODULE_ROOT / name, target, name, "APP-4 Module 07", "0.1.0", "immutable leadership control", manifest)
+    for name in RECORD_FILES:
+        destination = target / name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(record_root / name, destination)
+    for checkpoint, contract in zip(checkpoints, CHECKPOINTS, strict=True):
+        directory = str(contract["directory"])
+        for source in sorted(path for path in checkpoint.rglob("*") if path.is_file() and "__pycache__" not in path.parts):
+            within = source.relative_to(checkpoint).as_posix()
+            copy_registered(source, target, f"evidence/{directory}/{within}", str(contract["id"]), str(contract["version"]), f"accepted {directory} package artifact", manifest)
+        release = Path(contract["root"]) / "release.json"
+        copy_registered(release, target, f"evidence/provenance/{directory}-release.json", str(contract["id"]), str(contract["version"]), "accepted checkpoint release record", manifest)
+
+    manifest.sort(key=lambda row: str(row["relative_path"]))
+    manifest_path = target / "release-manifest.csv"
+    with manifest_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=MANIFEST_FIELDS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(manifest)
+    files = sum(path.is_file() for path in target.rglob("*") if "__pycache__" not in path.parts)
+    if len(manifest) != 1320 or files != 1347:
+        raise ValueError(f"Candidate contract changed: {len(manifest)} manifest rows and {files} files")
+    return {
+        "status": "pass",
+        "mode": "reference" if reference else "learner",
+        "manifest_rows": len(manifest),
+        "manifest_bytes": manifest_path.stat().st_size,
+        "manifest_sha256": sha256(manifest_path),
+        "assembled_files": files,
+    }
+
+
+def self_check() -> None:
+    with tempfile.TemporaryDirectory(prefix="app4-module07-assemble-") as temp_dir:
+        base = Path(temp_dir)
+        checkpoint1, checkpoint2 = base / "checkpoint1", base / "checkpoint2"
+        build_reference_checkpoint(checkpoint1, CHECKPOINTS[0])
+        build_reference_checkpoint(checkpoint2, CHECKPOINTS[1])
+        first, second, learner = base / "reference-1", base / "reference-2", base / "learner"
+        one = assemble(checkpoint1, checkpoint2, first, reference=True)
+        assert "REPLACE" not in (first / "recommendation-and-alternatives.md").read_text(encoding="utf-8")
+        shutil.rmtree(first)
+        two = assemble(checkpoint1, checkpoint2, second, reference=True)
+        shutil.rmtree(second)
+        starter = assemble(checkpoint1, checkpoint2, learner)
+        assert one == two
+        assert one["manifest_rows"] == 1320 and one["assembled_files"] == 1347
+        assert starter["manifest_sha256"] == one["manifest_sha256"]
+        assert "REPLACE" in (learner / "recommendation-and-alternatives.md").read_text(encoding="utf-8")
+        try:
+            assemble(checkpoint1, checkpoint2, learner)
+        except FileExistsError:
+            pass
+        else:
+            raise AssertionError("Assembler overwrote an existing target")
+    print("APP-4 Module 07 assembler self-check passed: 1,320 immutable rows and 1,347 candidate files.")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--target", type=Path)
+    parser.add_argument("--checkpoint1", type=Path)
+    parser.add_argument("--checkpoint2", type=Path)
+    parser.add_argument("--reference", action="store_true")
+    parser.add_argument("--self-check", action="store_true")
+    args = parser.parse_args()
+    try:
+        if args.self_check:
+            self_check()
+        elif args.target and args.reference:
+            if args.checkpoint1 or args.checkpoint2:
+                parser.error("--reference cannot be combined with checkpoint paths")
+            with tempfile.TemporaryDirectory(prefix="app4-module07-reference-") as temp_dir:
+                base = Path(temp_dir)
+                checkpoint1, checkpoint2 = base / "checkpoint1", base / "checkpoint2"
+                build_reference_checkpoint(checkpoint1, CHECKPOINTS[0])
+                build_reference_checkpoint(checkpoint2, CHECKPOINTS[1])
+                print(json.dumps(assemble(checkpoint1, checkpoint2, args.target, reference=True), indent=2))
+        elif args.target and args.checkpoint1 and args.checkpoint2:
+            print(json.dumps(assemble(args.checkpoint1, args.checkpoint2, args.target), indent=2))
+        else:
+            parser.error("use --target with --reference or with --checkpoint1 and --checkpoint2")
+    except (OSError, ValueError) as error:
+        parser.exit(1, f"Assembly failed: {error}\n")
+
+
+if __name__ == "__main__":
+    main()

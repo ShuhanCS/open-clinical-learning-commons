@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.84.0.
-- Current build: Modules 01 through 06 and Checkpoints 01 and 02 are runnable release candidates; Module 07 is next.
+- Current Commons release: 0.85.0.
+- Current build: all seven modules and Checkpoints 01 and 02 are runnable release candidates; the final checkpoint is next.
 
 APP-4 teaches learners to decide whether a prediction or rule can support one clinician at one workflow moment without creating unacceptable burden or harm. The course covers intended use, logic, triggers, input availability, calibration, thresholds, alert burden, human factors, a nonproduction prototype, failure modes, safety, monitoring, governance, and clinician-led defense.
 
@@ -21,7 +21,7 @@ The continuing case is an explicitly fictional adult general internal medicine a
 | 04 | Alert burden, human factors, and equity | 16.5 | Runnable release candidate |
 | 05 | Sandbox prototype and failure modes | 16.0 | Runnable release candidate |
 | 06 | Safety case, monitoring, governance, and embedded machine learning | 16.0 | Runnable release candidate |
-| 07 | Clinician leadership, product brief, and defense | 16.0 | Specified |
+| 07 | Clinician leadership, product brief, and defense | 16.0 | Runnable release candidate |
 | Total |  | 112.5 |  |
 
 ## Checkpoints
@@ -58,5 +58,7 @@ The fifth runnable package is [Module 05](modules/05-sandbox-prototype-failure-m
 The sixth runnable package is [Module 06](modules/06-safety-monitoring-governance-embedded-ml/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/modules/06-safety-monitoring-governance-embedded-ml-spec.md). It freezes the complete 341-file Module 05 workspace, preserves every sandbox failure, and adds 22 hazards, 20 monitoring measures, eight scenarios, and 12 human escalation routes. One fixed gradient-boosted challenger uses the same 7,544 rows, three predictors, weights, splits, and six unaccepted thresholds as the transparent model. It passes 8 of 11 replacement rules but loses holdout, transport, and supported-subgroup discrimination rules, so the transparent model remains accepted. The 387-file reference passes all 22 gates and permits cumulative Week 6 assembly with conditions.
 
 The second runnable cumulative package is [Checkpoint 02](checkpoints/02-workflow-sandbox-safety-release/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/checkpoints/02-workflow-sandbox-safety-release-spec.md). It freezes all 1,030 Module 04 through Module 06 files in a 1,047-file learner or reference package with a 236,732-byte candidate manifest. The checkpoint carries Module 04's 25 points exactly once, requires all 62 inherited and 20 checkpoint gates, preserves every visible and silent failure and the blocked accessibility defect, retains the transparent model, and permits Module 07 clinician leadership review with conditions.
+
+The seventh runnable package is [Module 07](modules/07-clinician-leadership-product-defense/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-4/modules/07-clinician-leadership-product-defense-spec.md). It freezes both accepted checkpoints in a 1,347-file learner or reference candidate with a 1,320-row immutable manifest. Its 26 leadership records preserve no accepted threshold, the blocked accessibility defect, the detected silent failure, 22 hazards, 20 measures, 12 human escalation routes, and the failed R03, R04, and R08 ML rules. The reference earns 35.00 of 35.00, passes all 26 gates, records `accept with conditions` for curriculum construction, and recommends `revise before seeking local silent-mode approval`.
 
 No package may connect to a live clinical system, process real patient data, display a clinical alert, diagnose, order, deny, target, score real patients, implement, or deploy.

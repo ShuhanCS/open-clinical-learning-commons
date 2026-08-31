@@ -1,0 +1,17 @@
+condition_id,condition,owner,required_before,status,evidence_needed
+C01,"Confirm Joe Joseph MD SFHM participation schedule format recording permission and final biography wording",APP-4 program owner,alpha,open,direct documented confirmation
+C02,"Confirm the local clinical purpose action nonaction decision owner and acceptable reconsideration question",local clinical decision owner,future approval request,open,signed intended-use review
+C03,"Select and justify any proposed clinical threshold and alert budget through local governance",clinical governance council,future approval request,open,predeclared local threshold and consequence review
+C04,"Repair the malformed-card accessibility defect and independently verify equivalent access",accessibility owner,future approval request,open,accessible interface test and human review
+C05,"Review FHIR CDS Hooks terminology unit time version suppression trace and unavailable-state behavior",clinical informatics and interoperability owners,future approval request,open,local conformance and failure report
+C06,"Verify all 22 hazards controls owners fallback stop restart and retirement routes in the proposed environment",patient-safety owner,future approval request,open,local safety-case review
+C07,"Reproduce silent-failure detection from independent request response terminal-trace and notice ledgers",patient-safety and monitoring owners,future approval request,open,local reconciliation test
+C08,"Collect local workflow burden hidden-work override and staff-voice evidence without blame",workflow and human-factors owner,future approval request,open,co-design and burden study
+C09,"Review patient benefit harm language disability access cost privacy recourse and equity consequences",patient access and equity owners,future approval request,open,patient and caregiver review
+C10,"Approve data minimization access retention security incident and credential boundaries",privacy security and data-governance owners,future approval request,open,data and security review
+C11,"Independently reproduce historical evidence calibration subgroup support and the fixed ML decision",survey-methods and model-risk reviewers,alpha,open,clean human reproduction
+C12,"Name accountable clinical safety workflow access data model accessibility privacy and security owners",local governance council,future approval request,open,signed ownership record
+C13,"Draft and independently review a separate bounded silent-mode protocol without starting it",local evaluation owner,future approval request,open,approved protocol submitted to the proper local body
+C14,"Complete a live or approved equivalent 14-question clinician-led defense",clinician of record and faculty owner,alpha,open,defense and reviewer record
+C15,"Assign the official APP-4 section and half-term dates",program owner,alpha,open,published course schedule
+C16,"Run clean independent assembly and confirm the exact reviewed commit",independent reproducer,alpha,open,reproduction record and commit identity

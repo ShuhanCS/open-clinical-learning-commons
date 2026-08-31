@@ -6,7 +6,7 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.84.0`
+- Current version: `0.85.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract, runnable Modules 01 through 06, and runnable Week 3 and Week 6 checkpoints.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
@@ -144,6 +144,8 @@ The fifth runnable unit is [APP-4 Module 05: Sandbox prototype and failure modes
 The sixth runnable unit is [APP-4 Module 06: Safety case, monitoring, governance, and embedded machine learning](courses/clinical-decision-support/modules/06-safety-monitoring-governance-embedded-ml/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/APP-4/modules/06-safety-monitoring-governance-embedded-ml-spec.md). It freezes all 341 Module 05 files, preserves the silent failure and blocked accessibility defect, and creates 22 hazards, 20 monitoring measures, eight scenarios, and 12 human escalation routes. Its fixed gradient-boosted challenger passes 8 of 11 replacement rules but loses discrimination on the temporal holdout, transport stress set, and worst supported subgroup, so the transparent model remains accepted and no threshold or clinical authority is added.
 
 The cumulative [APP-4 Week 6 checkpoint](courses/clinical-decision-support/checkpoints/02-workflow-sandbox-safety-release/reference/README.md), governed by its [durable specification](docs/curriculum/courses/APP-4/checkpoints/02-workflow-sandbox-safety-release-spec.md), freezes 1,030 accepted Module 04 through Module 06 files in a 1,047-file package. It carries the 25-point Module 04 score once, requires all 82 inherited and checkpoint gates, preserves all failures and the blocked accessibility defect, retains the transparent model after R03, R04, and R08 fail, and permits Module 07 clinician leadership review with conditions.
+
+The seventh runnable unit is [APP-4 Module 07: Clinician leadership, product brief, and defense](courses/clinical-decision-support/modules/07-clinician-leadership-product-defense/README.md), governed by its durable [Module 07 specification](docs/curriculum/courses/APP-4/modules/07-clinician-leadership-product-defense-spec.md). It freezes the complete 263-file Week 3 and 1,047-file Week 6 checkpoints in a 1,347-file leadership candidate, preserves all unaccepted thresholds and failures, assigns 17 stakeholder roles and 16 open conditions, and records `accept with conditions` separately from `revise before seeking local silent-mode approval`. Joe Joseph, MD, SFHM, is the designated clinician of record under a dated identity boundary; participation details remain a pre-alpha condition.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -321,8 +323,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-4 Module 07 from the accepted Week 3 and Week 6 checkpoints.
-2. Complete the APP-4 official-end-date checkpoint before moving to APP-5.
+1. Complete the APP-4 official-end-date checkpoint from the accepted Module 07 release.
+2. Close and remote-verify APP-4 before moving to APP-5.
 3. Continue APP-5 through APP-7 one distinct course at a time.
 4. Complete named human reviews before alpha promotion.
 

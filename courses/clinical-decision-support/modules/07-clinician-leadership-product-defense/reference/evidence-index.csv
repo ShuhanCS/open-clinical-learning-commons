@@ -1,0 +1,3 @@
+input_id,version,commons_release,assembled_files,candidate_rows,candidate_manifest_bytes,candidate_manifest_sha256,release_sha256,points,decision,module07_role
+oclc-app4-cp01,0.1.0,0.80.0,263,245,45897,4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151,8f637bef551ebe5cb91e93b3b91fef51f25736d07168b904851405c703b62c03,40,continue with conditions,frozen Week 3 evidence not rescored
+oclc-app4-cp02,0.1.0,0.84.0,1047,1030,236732,14ac12dd890045dce21cdc44a9b614770b8b2428bd71a1d4f5eb9cc9de63d642,05e65b59f0d4c4b33dc341256141e39c02cfffc32e22aca546dbb85384cb1221,25,continue with conditions,frozen Week 6 evidence not rescored

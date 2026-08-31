@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app4-07",
+    "title": "Clinician leadership, product brief, and defense",
+    "version": "0.1.0",
+    "commons_release": "0.85.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "week": "final clinician-led block",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "clinician_of_record": {
+    "name": "Joe Joseph, MD, SFHM",
+    "identity_status": "confirmed from dated Sound Physicians public sources",
+    "current_employer_claim": "none",
+    "participation_confirmation": "required before alpha"
+  },
+  "accepted_inputs": [
+    {
+      "id": "oclc-app4-cp01",
+      "version": "0.1.0",
+      "commons_release": "0.80.0",
+      "assembled_files": 263,
+      "candidate_manifest_sha256": "4e78d2313ce324fd372e6fc187afee333b27ed0cc0270c6ab8c08354dd5c3151",
+      "release_sha256": "8f637bef551ebe5cb91e93b3b91fef51f25736d07168b904851405c703b62c03"
+    },
+    {
+      "id": "oclc-app4-cp02",
+      "version": "0.1.0",
+      "commons_release": "0.84.0",
+      "assembled_files": 1047,
+      "candidate_manifest_sha256": "14ac12dd890045dce21cdc44a9b614770b8b2428bd71a1d4f5eb9cc9de63d642",
+      "release_sha256": "05e65b59f0d4c4b33dc341256141e39c02cfffc32e22aca546dbb85384cb1221"
+    }
+  ],
+  "reference_decision": {
+    "candidate_score": "35.00 of 35.00",
+    "gates": "26 of 26 pass",
+    "defense": "adequate for curriculum construction",
+    "candidate_status": "accept with conditions",
+    "cds_recommendation": "revise before seeking local silent-mode approval",
+    "accepted_threshold": null,
+    "selected_design": "panel-t003 mechanics fixture only",
+    "ml_decision": "retain transparent model",
+    "final_checkpoint": "permitted for curriculum construction",
+    "real_patient_scoring": "prohibited",
+    "clinical_alerting": "prohibited",
+    "silent_mode": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "reference_facts": {
+    "historical_model_rows": 7544,
+    "historical_outcomes": 328,
+    "candidate_thresholds": 6,
+    "accepted_thresholds": 0,
+    "sandbox_cases": 31,
+    "prefetch_resources": 184,
+    "trace_events": 61,
+    "inherited_failure_modes": 17,
+    "silent_failures_detected": 1,
+    "blocked_accessibility_defects": 1,
+    "hazards": 22,
+    "monitoring_measures": 20,
+    "monitoring_scenarios": 8,
+    "human_escalation_routes": 12,
+    "automatic_actions": 0,
+    "ml_rules_passed": 8,
+    "ml_rules_total": 11,
+    "failed_ml_rules": ["R03", "R04", "R08"]
+  },
+  "package": {
+    "immutable_controls": 8,
+    "checkpoint_files": 1310,
+    "accepted_release_records": 2,
+    "immutable_manifest_rows": 1320,
+    "leadership_records": 26,
+    "candidate_files": 1347,
+    "manifest_bytes": 319268,
+    "manifest_sha256": "8fc03ea9a7ebce8e0e4bf350b2699c5f74ec4a9c5ae493f25f26c94be8c2cea9"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 9436,
+    "starter_checks": 9351,
+    "copied_validator_check": "pass",
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "failure_routes": 30
+  },
+  "contributors": [
+    {
+      "name": "Shuhan He",
+      "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"
+    },
+    {
+      "name": "OpenAI Codex",
+      "role": "module specification, leadership package, deterministic assembly, validation, and release record"
+    }
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, and final biography wording before alpha.",
+    "Named clinical, informatics, interoperability, safety, workflow, patient, access, equity, accessibility, privacy, security, model-risk, responsible-AI, and independent reviews remain pending before alpha.",
+    "Independent human clean reproduction and a live or approved equivalent 14-question defense remain pending.",
+    "The malformed-card accessibility defect remains blocked and the seeded silent failure remains part of the accepted evidence.",
+    "No clinical threshold is accepted, and local clinical validity, utility, workflow, burden, access, equity, privacy, security, and safety evidence remains absent.",
+    "The package does not authorize real-patient scoring, clinical alerting or action, silent-mode evaluation, implementation, production connection, or deployment."
+  ]
+}

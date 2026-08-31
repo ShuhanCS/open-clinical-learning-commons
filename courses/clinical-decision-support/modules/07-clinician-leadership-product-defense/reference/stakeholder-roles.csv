@@ -1,0 +1,18 @@
+role_id,role,accountability,decision_right,consulted,informed,status
+R01,APP-4 faculty owner,curriculum completeness score gates and progression,accept revise or refer curriculum candidate,true,true,assigned for construction
+R02,"Joe Joseph MD SFHM clinician of record",clinical leadership framing and defense standard,record clinical conditions and challenge recommendation,true,true,pending direct confirmation before alpha
+R03,local clinical decision owner,intended use action nonaction and local clinical decision,approve or reject a future local evaluation request,true,true,not assigned in fictional case
+R04,patient-safety owner,hazards incidents silent failure stop and restart,stop affected evaluation route,true,true,fictional teaching owner
+R05,workflow and human-factors owner,workflow fit burden hidden work override and staff voice,pause for workflow or burden review,true,true,fictional teaching owner
+R06,patient access and equity owner,patient consequences language disability access exclusion and recourse,stop inaccessible or inequitable route,true,true,fictional teaching owner
+R07,clinical informatics and interoperability owner,logic inputs terminology versions FHIR and CDS Hooks review,block incompatible or untraceable route,true,true,fictional teaching owner
+R08,evidence and survey-methods owner,NHANES cohort weights calibration uncertainty and claim limits,withhold evidence acceptance,true,true,fictional teaching owner
+R09,model-risk owner,transparent model challenger leakage replacement rules and drift,withhold model-change acceptance,true,true,fictional teaching owner
+R10,accessibility owner,equivalent access card semantics and blocked defects,stop inaccessible release,true,true,fictional teaching owner
+R11,privacy and security owners,data minimization access retention credentials and incident route,stop unauthorized data or connection,true,true,fictional teaching owners
+R12,data and terminology steward,source versions mappings units manifests and provenance,block unversioned or mismatched evidence,true,true,fictional teaching owner
+R13,frontline clinician representative,interruption hidden work trust and override concerns,raise disagreement and request pause,true,true,not an observed participant
+R14,patient or caregiver representative,patient burden understanding access privacy and recourse concerns,raise disagreement and request review,true,true,not an observed participant
+R15,independent reproducer,clean assembly validation evidence identity and claims,withhold reproduction acceptance,true,true,pending human review
+R16,learner,product brief synthesis recommendation and defense,may recommend but cannot authorize,true,true,assigned within course
+R17,external agent,assistance only with disclosed verification,no decision or sign-off right,false,true,bounded tool role

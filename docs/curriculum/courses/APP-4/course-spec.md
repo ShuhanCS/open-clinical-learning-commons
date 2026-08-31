@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.84.0 through Checkpoint 02.
+- Current Commons release: 0.85.0 through Module 07.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -333,7 +333,7 @@ All 22 Module 06 gates pass. Reference validation passes 1,230 checks, learner v
 - Specification: `docs/curriculum/courses/APP-4/modules/07-clinician-leadership-product-defense-spec.md`.
 - Decision: whether to recommend seeking local approval for a bounded silent-mode evaluation, revise the concept or evidence, refer the question, or stop.
 - Submission: final CDS product brief, prototype, evaluation proposal, safety case, and defense.
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.85.0`; final-checkpoint curriculum assembly is permitted with conditions.
 
 Module 07 freezes the accepted Week 3 and Week 6 evidence before adding leadership records. Learners cannot change the cohort, model, threshold, alert budget, workflow score, prototype result, failed test, or ML decision inside the leadership package.
 
@@ -543,5 +543,7 @@ Construction acceptance for this course-level unit:
 - [x] Module 04 freezes the complete Week 3 release, compares all six unaccepted candidates with interruptive, passive, and no-alert designs, scores the 25-point workflow component once, and releases a validated 302-file workspace with a protected Module 05 sandbox handoff.
 - [x] Module 05 freezes all 302 Module 04 files, releases 31 local FHIR R4 and CDS Hooks-shaped normal and failure cases in a validated 341-file workspace, detects seeded silent failure from independent ledgers, blocks a malformed card, and protects the zero-point Module 06 handoff.
 - [x] Module 06 freezes all 341 Module 05 files, builds a complete safety and monitoring case, evaluates one fixed challenger on the same 7,544 rows, retains the transparent model after three replacement-rule failures, and protects the zero-point Week 6 handoff.
+- [x] Checkpoint 02 freezes all 1,030 Module 04 through Module 06 files, counts the 25-point Module 04 score once, preserves all 82 inherited and checkpoint gates, and releases a validated 1,047-file cumulative workspace.
+- [x] Module 07 freezes both accepted checkpoints in a validated 1,347-file leadership candidate, adds the 35-point final component, passes 26 gates, and separates curriculum acceptance from the recommendation to revise before seeking local silent-mode approval.
 
-APP-4 Modules 01 through 06 and Checkpoint 01 are complete for curriculum construction. Resume with Checkpoint 02 by freezing the complete Module 04, Module 05, and Module 06 releases, carrying the 25-point Module 04 score exactly once, preserving all 20 Module 05 and 22 Module 06 gates, and retaining the transparent model, `panel-t003`, the unaccepted `0.03000000` fixture, every visible and silent failure, and every clinical and production prohibition.
+APP-4 Modules 01 through 07 and Checkpoints 01 and 02 are complete for curriculum construction. Resume with the final checkpoint by freezing the exact 1,347-file Module 07 release, counting its 35-point component once, preserving all 26 gates and 16 open conditions, and retaining the separate `accept with conditions` package status and `revise before seeking local silent-mode approval` CDS recommendation.

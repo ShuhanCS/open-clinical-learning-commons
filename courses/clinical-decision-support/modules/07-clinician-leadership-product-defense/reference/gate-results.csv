@@ -1,0 +1,27 @@
+gate_id,domain,status,evidence,noncompensable_reason
+G01,accepted Checkpoint 01 identity,pass,"release-manifest.csv; evidence/checkpoint1/candidate-manifest.csv",all 263 accepted Week 3 files must remain exact
+G02,accepted Checkpoint 02 identity,pass,"release-manifest.csv; evidence/checkpoint2/candidate-manifest.csv",all 1047 accepted Week 6 files must remain exact
+G03,Module 07 immutable release identity,pass,release-manifest.csv,all 1320 immutable rows must verify
+G04,score architecture,pass,component-score.csv,40 and 25 earlier points remain unscored and the 35-point component is counted once
+G05,intended use and product boundary,pass,product-brief.md,user workflow action nonaction patient consequence and prohibited action must remain explicit
+G06,logic input terminology and version boundary,pass,logic-input-threshold.md,leadership cannot rewrite accepted logic or input behavior
+G07,threshold and alert-budget boundary,pass,logic-input-threshold.md,all candidates remain unaccepted and accepted threshold remains none
+G08,workflow burden automation bias and override,pass,workflow-patient-consequences.md,synthetic mechanics cannot become local burden or behavior claims
+G09,patient access equity privacy and recourse,pass,workflow-patient-consequences.md,unsupported group claims targeting and inaccessible routes are prohibited
+G10,prototype disclosure and complete tests,pass,prototype-disclosure.md,passing expected behavior cannot become interoperability safety or utility approval
+G11,visible and silent failure preservation,pass,"prototype-disclosure.md; monitoring-silent-failure-plan.md",all 17 failures and four-ledger silence detection must remain visible
+G12,accessibility blocker preservation,pass,"prototype-disclosure.md; accessible-communication.md",the malformed-card defect cannot be waived inside the frozen candidate
+G13,complete hazard and safety life cycle,pass,safety-case.md,all 22 hazards require detection control ownership fallback stop restart and retirement
+G14,complete monitoring scope and unavailable states,pass,monitoring-silent-failure-plan.md,all 20 measures retain origin cadence owner trigger unavailable state and human response
+G15,human escalation and zero automatic action,pass,"monitoring-silent-failure-plan.md; stewardship-governance-retirement.md",all 12 escalation routes remain human owned
+G16,fixed comparable ML decision,pass,"evidence-synthesis.md; technical-appendix.md",same rows evidence splits weights thresholds and budgets are required
+G17,failed ML rules and transparent-model retention,pass,"technical-appendix.md; responsible-claims-audit.md",R03 R04 and R08 cannot be hidden rounded or waived
+G18,responsible evidence and product claims,pass,responsible-claims-audit.md,historical and synthetic evidence cannot become local clinical proof
+G19,separate package status and CDS recommendation,pass,recommendation-and-alternatives.md,curriculum acceptance cannot become evaluation or clinical approval
+G20,bounded evaluation return path,pass,evaluation-proposal.md,revision prerequisites cannot be represented as an approved protocol
+G21,accountable owners decision rights and stop authority,pass,stakeholder-roles.csv,no learner model analyst or agent receives clinical authority
+G22,staff voice disagreement and blame protection,pass,"disagreement-record.md; workflow-patient-consequences.md",silence cannot become agreement and concerns need a response route
+G23,stewardship governance restart and retirement,pass,stewardship-governance-retirement.md,every material asset and decision needs a human owner and change route
+G24,accessible exact communication,pass,"accessible-communication.md; technical-appendix.md",decision facts failures uncertainty and limits need equivalent text access
+G25,reproduction AI accountability and 14-question defense,pass,"reproducibility-check.md; ai-use.md; technical-defense.md",material claims and agent work require independent human verification
+G26,clinician boundary conditions and final-checkpoint progression,pass,"clinician-profile.md; reviewer-record.md; conditions-register.csv; progression-decision.md",identity participation package status recommendation and absent authority must stay separate
