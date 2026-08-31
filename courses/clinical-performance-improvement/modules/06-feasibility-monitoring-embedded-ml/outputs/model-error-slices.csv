@@ -1,0 +1,39 @@
+method,slice_type,slice_value,rows,mae_arrivals,rmse_arrivals,bias_arrivals,underforecast_arrivals,overforecast_arrivals,support_status,synthetic_flag
+seasonal_exponential_smoothing,shift,day,196,6.474502,7.772974,0.072634,627.383017,641.619332,supported,1
+seasonal_exponential_smoothing,shift,evening,196,6.363190,7.890712,0.117449,612.082666,635.102667,supported,1
+seasonal_exponential_smoothing,shift,night,196,4.974155,6.123904,-0.165439,503.680297,471.254157,supported,1
+seasonal_exponential_smoothing,weekday,Friday,84,6.327745,8.034449,0.136834,260.018252,271.512340,supported,1
+seasonal_exponential_smoothing,weekday,Monday,84,5.410051,6.939380,-0.626863,253.550424,200.893899,supported,1
+seasonal_exponential_smoothing,weekday,Saturday,84,6.194035,7.673050,0.196752,251.885856,268.413055,supported,1
+seasonal_exponential_smoothing,weekday,Sunday,84,6.239641,7.327976,-0.328192,275.849013,248.280862,supported,1
+seasonal_exponential_smoothing,weekday,Thursday,84,4.926996,6.111189,0.239324,196.882228,216.985470,supported,1
+seasonal_exponential_smoothing,weekday,Tuesday,84,6.295805,7.629472,-0.372861,280.083988,248.763629,supported,1
+seasonal_exponential_smoothing,weekday,Wednesday,84,6.166704,7.275056,0.812508,224.876219,293.126901,supported,1
+seasonal_exponential_smoothing,holiday,no,579,5.967333,7.335646,0.009187,1724.882986,1730.202538,supported,1
+seasonal_exponential_smoothing,holiday,yes,9,4.004068,5.155558,-0.054375,18.262994,17.773618,limited,1
+seasonal_exponential_smoothing,horizon,early 1-7,196,5.898282,7.250633,-0.319874,609.379319,546.683931,supported,1
+seasonal_exponential_smoothing,horizon,late 15-21,196,6.416832,7.806789,-0.025014,631.300886,626.398187,supported,1
+seasonal_exponential_smoothing,horizon,middle 8-14,196,5.496734,6.831327,0.369532,502.465775,574.894038,supported,1
+seasonal_exponential_smoothing,difficult_fold,F03,21,8.037380,9.469734,-7.211001,160.107994,8.676983,supported,1
+seasonal_exponential_smoothing,difficult_fold,F09,21,8.174933,9.801059,6.925418,13.119912,158.553685,supported,1
+seasonal_exponential_smoothing,difficult_fold,F15,21,7.408872,8.343328,7.282091,1.331204,154.255109,supported,1
+seasonal_exponential_smoothing,difficult_fold,F16,21,7.952120,9.193278,-6.986254,156.852929,10.141595,supported,1
+gradient_boosted,shift,day,196,5.759733,7.163178,-1.064226,668.748045,460.159707,supported,1
+gradient_boosted,shift,evening,196,5.615460,7.080673,-0.466061,595.989054,504.641059,supported,1
+gradient_boosted,shift,night,196,4.241289,5.239695,-0.008891,416.517657,414.775069,supported,1
+gradient_boosted,weekday,Friday,84,5.648649,7.085177,-1.444613,297.917017,176.569497,supported,1
+gradient_boosted,weekday,Monday,84,5.123620,6.824145,-2.282753,311.067656,119.316386,supported,1
+gradient_boosted,weekday,Saturday,84,5.436685,7.051990,-0.579238,252.668756,204.012766,supported,1
+gradient_boosted,weekday,Sunday,84,5.323063,6.367460,0.538125,200.967390,246.169899,supported,1
+gradient_boosted,weekday,Thursday,84,4.136160,5.098409,0.227542,164.161928,183.275484,supported,1
+gradient_boosted,weekday,Tuesday,84,5.397405,6.627129,-0.152224,233.084444,220.297589,supported,1
+gradient_boosted,weekday,Wednesday,84,5.372878,6.619189,0.101746,221.387565,229.934214,supported,1
+gradient_boosted,holiday,no,579,5.220251,6.576272,-0.549987,1670.483959,1352.041257,supported,1
+gradient_boosted,holiday,yes,9,4.256153,4.994083,1.862642,10.770797,27.534577,limited,1
+gradient_boosted,horizon,early 1-7,196,5.316834,6.721613,-0.793015,598.765159,443.334232,supported,1
+gradient_boosted,horizon,late 15-21,196,5.541546,6.938720,-0.196038,562.283231,523.859786,supported,1
+gradient_boosted,horizon,middle 8-14,196,4.758103,5.964525,-0.550125,520.206366,412.381817,supported,1
+gradient_boosted,difficult_fold,F03,21,5.769494,6.750311,-2.764020,89.601901,31.557475,supported,1
+gradient_boosted,difficult_fold,F09,21,6.089323,7.846456,4.636272,15.257043,112.618750,supported,1
+gradient_boosted,difficult_fold,F15,21,3.513632,4.439955,1.140983,24.912814,48.873450,supported,1
+gradient_boosted,difficult_fold,F16,21,5.592426,7.221934,-3.215546,92.483701,24.957242,supported,1

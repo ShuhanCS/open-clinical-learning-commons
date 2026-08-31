@@ -1,0 +1,9 @@
+threat_id,threat,detection,response,status
+T01,secular trend,extend the accepted series and inspect pre-test direction,model time and avoid a two-period mean claim,addressed in design
+T02,regression to the mean,compare trigger period with the full baseline and recovery,require sustained prospective evidence,addressed in design
+T03,measurement change,rerun measure specifications and missingness checks,freeze definitions or label the discontinuity,addressed in design
+T04,concurrent intervention,maintain a dated intervention log,separate model or defer the effect claim,addressed in design
+T05,case mix,compare acuity arrival mode and support distributions,stratify or adjust only with a declared plan,addressed in design
+T06,gaming,audit event order exclusions unavailable states and routing,pause reporting and investigate,addressed in design
+T07,contamination and adoption,record eligibility activation adherence and crossover,report as implemented and preserve deviations,addressed in design
+T08,missing or unsupported groups,recalculate group support in every window,report unavailable and do not infer equity,addressed in design

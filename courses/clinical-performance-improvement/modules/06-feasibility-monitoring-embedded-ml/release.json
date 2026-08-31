@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app3-06",
+  "module_version": "0.1.0",
+  "commons_release": "0.72.0",
+  "status": "runnable release candidate",
+  "reference_score": 25,
+  "points_added_here": 0,
+  "reference_gates_passed": 22,
+  "reference_progression": "continue with conditions",
+  "selected_option": "none",
+  "accepted_forecast": "seasonal_exponential_smoothing",
+  "ml_decision": "retain transparent forecast",
+  "outputs": {
+    "files": 19,
+    "feasibility_rows": 28,
+    "monitoring_measures": 12,
+    "prediction_rows": 1176,
+    "common_evaluation_rows": 588
+  },
+  "workspace": {
+    "learner_files": 63,
+    "learner_manifest_rows": 45,
+    "reference_files": 82,
+    "reference_manifest_rows": 64,
+    "learner_records": 17
+  },
+  "validation": {
+    "complete_checks": 354,
+    "starter_checks": 183,
+    "failure_routes_rejected": 18,
+    "python_release_checks": "pass"
+  },
+  "module07_permission": "permitted for clinician leadership and defense with no scenario or ML challenger authorized",
+  "implementation_authorized": false
+}

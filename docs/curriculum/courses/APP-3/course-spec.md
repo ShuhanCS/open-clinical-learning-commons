@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.71.0 through Module 05.
+- Current Commons release: 0.72.0 through Module 06.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -332,6 +332,8 @@ ML changes the recommendation only if a prespecified decision rule is met and th
 
 The Week 6 package carries the 25 Module 05 course points once. Module 06 gates are required but add no points.
 
+Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.72.0`. The release preserves all four Module 05 dispositions, specifies 12 monitoring measures and ten human-owned escalation rules, and provides a static accessible dashboard. One fixed gradient-boosted challenger is evaluated on the same 588 target shifts as the accepted transparent method. It passes seven of eight replacement rules but improves MAE by 0.731788 rather than the required 0.750000 arrivals per shift. The transparent method remains accepted, the cumulative Week 6 score remains 25 points once, and Checkpoint 2 construction is permitted without implementation authority.
+
 ## 15. Module 07 brief: Clinician leadership, recommendation, and defense
 
 - Module ID: `oclc-app3-07`.
@@ -518,7 +520,7 @@ Open conditions before alpha:
 - Complete human review of the synthetic operational generator, known truth, subgroup design, safety events, staffing assumptions, and workload language.
 - Run and independently review the Module 03 base-R control-chart verification in an environment with R installed.
 - Run and independently review the Module 04 base-R forecast verification in an environment with R installed.
-- Declare the ML decision-change threshold before fitting the ML candidate.
+- Independently review the fixed Module 06 ML contract, leakage checks, near-miss result, and retained transparent-method decision before alpha.
 - Confirm SimPy, statsmodels, R, qcc, and a supported forecasting package in one teaching environment, or document a tested course-supported alternative.
 - Name the faculty, clinical, nursing, operations, measurement, process-control, safety, forecasting, operations-research, workforce, equity, accessibility, governance, model, responsible-AI, and independent-reproduction reviewers.
 
@@ -539,5 +541,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 01 pins all three complete public snapshots and releases a validated 25-file decision-framing workspace.
 - [x] Module 04 freezes Checkpoint 01, compares three transparent methods on 28 rolling origins, and releases a bounded Week 53 planning range without staffing authority.
 - [x] Module 05 compares four scenarios across five conditions, preserves failed results, assigns the 25-point component once, and hands Module 06 a no-selection result without implementation authority.
+- [x] Module 06 preserves the no-selection result, releases an accessible monitoring design, evaluates one fixed ML challenger without leakage or tuning, and retains the transparent forecast after one predeclared rule fails.
 
-Resume with Module 06 only: freeze the Module 05 no-selection result, failed sensitivities, evaluation measures, threat audit, and authority boundary before testing feasibility, monitoring, and the bounded embedded-ML comparison.
+Resume with Checkpoint 2 only: freeze the accepted Module 04 through Module 06 packages without recomputing them, count the Module 05 25-point component once, and assemble the forecast, scenario, monitoring, and ML evidence for clinician leadership review.

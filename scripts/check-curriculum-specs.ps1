@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.71.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.72.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2816,8 +2816,8 @@ if (
     $app3Content -match '(?im)[A-Z]:\\Users\\' -or
     $app3SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app3PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app3Content -notmatch 'Current Commons release: 0\.71\.0' -or
-    $app3PackageContent -notmatch 'Current Commons release: 0\.71\.0' -or
+    $app3Content -notmatch 'Current Commons release: 0\.72\.0' -or
+    $app3PackageContent -notmatch 'Current Commons release: 0\.72\.0' -or
     $app3Content -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '26,907' -or
@@ -2842,12 +2842,12 @@ if (
     $app3Content -notmatch 'Joe Joseph, MD, SFHM' -or
     $app3Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
     $app3Content -notmatch 'Module 01 pins all three complete public snapshots' -or
-    $app3PackageContent -notmatch 'Modules 01 through 05, and Checkpoint 01 complete' -or
+    $app3PackageContent -notmatch 'Modules 01 through 06, and Checkpoint 01 complete' -or
     $app3Content -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.71.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.72.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -3520,6 +3520,177 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 05 scenario self-check failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 05 workspace-builder self-check failed.' }
 & python (Join-Path $app3Module05Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 05 validator self-check failed.' }
+
+$app3Module06Root = Join-Path $repo 'courses\clinical-performance-improvement\modules\06-feasibility-monitoring-embedded-ml'
+$app3Module06Spec = Join-Path $repo 'docs\curriculum\courses\APP-3\modules\06-feasibility-monitoring-embedded-ml-spec.md'
+$app3Module06RecordNames = @(
+    'feasibility-review.md', 'quality-safety-review.md',
+    'access-equity-review.md', 'workforce-review.md', 'dashboard-review.md',
+    'escalation-fallback-review.md', 'monitoring-stewardship.md',
+    'accountability-map.csv', 'ml-contract-review.md', 'model-comparison.md',
+    'failure-review.md', 'week6-score.csv', 'gate-results.csv',
+    'module07-handoff.md', 'ai-use.md', 'progression-decision.md',
+    'reproducibility-check.md'
+)
+$app3Module06OutputNames = @(
+    'upstream-inventory.csv', 'feasibility-screen.csv', 'monitoring-measures.csv',
+    'escalation-fallback.csv', 'dashboard-data.csv', 'ml-split-registry.csv',
+    'ml-predictions.csv', 'model-performance.csv', 'fold-comparison.csv',
+    'model-error-slices.csv', 'feature-importance.csv', 'failure-cases.csv',
+    'leakage-tests.csv', 'week53-model-comparison.csv', 'decision-change.csv',
+    'invariant-checks.csv', 'build-report.json', 'forecast-comparison.svg',
+    'monitoring-dashboard.html'
+)
+$app3Module06Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md',
+    'build_evidence.py', 'build_workspace.py', 'data-spec.md',
+    'ml-contract.json', 'freeze_upstream.py', 'instructor-notes.md',
+    'release.json', 'source-record.yml', 'validate_workspace.py',
+    'upstream\module06-handoff-manifest.csv'
+) + @($app3Module06OutputNames | ForEach-Object { "outputs\$_" }) + @($app3Module06RecordNames | ForEach-Object { "reference\$_" }) + @($app3Module06RecordNames | ForEach-Object { "template\$_" })
+$app3Module06Missing = @($app3Module06Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $app3Module06Root $_))
+})
+if (-not (Test-Path -LiteralPath $app3Module06Spec) -or $app3Module06Missing.Count -gt 0) {
+    throw "APP-3 Module 06 is missing its specification or package files: $($app3Module06Missing -join ', ')."
+}
+$app3Module06Content = Get-Content -Raw -LiteralPath $app3Module06Spec
+$app3Module06Sections = [regex]::Matches($app3Module06Content, '(?m)^## \d+\.').Count
+$app3Module06Release = Get-Content -Raw -LiteralPath (Join-Path $app3Module06Root 'release.json') | ConvertFrom-Json
+$app3Module06Contract = Get-Content -Raw -LiteralPath (Join-Path $app3Module06Root 'ml-contract.json') | ConvertFrom-Json
+$app3Module06Report = Get-Content -Raw -LiteralPath (Join-Path $app3Module06Root 'outputs\build-report.json') | ConvertFrom-Json
+$app3Module06Inventory = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\upstream-inventory.csv'))
+$app3Module06Feasibility = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\feasibility-screen.csv'))
+$app3Module06Monitoring = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\monitoring-measures.csv'))
+$app3Module06Escalation = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\escalation-fallback.csv'))
+$app3Module06Splits = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\ml-split-registry.csv'))
+$app3Module06Predictions = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\ml-predictions.csv'))
+$app3Module06Performance = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\model-performance.csv'))
+$app3Module06Folds = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\fold-comparison.csv'))
+$app3Module06Slices = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\model-error-slices.csv'))
+$app3Module06Importance = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\feature-importance.csv'))
+$app3Module06Failures = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\failure-cases.csv'))
+$app3Module06Leakage = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\leakage-tests.csv'))
+$app3Module06Week53 = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\week53-model-comparison.csv'))
+$app3Module06Decisions = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\decision-change.csv'))
+$app3Module06Invariants = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'outputs\invariant-checks.csv'))
+$app3Module06Gates = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'reference\gate-results.csv'))
+$app3Module06Score = @(Import-Csv -LiteralPath (Join-Path $app3Module06Root 'reference\week6-score.csv'))
+$app3Module06Transparent = @($app3Module06Performance | Where-Object { $_.method -eq 'seasonal_exponential_smoothing' })
+$app3Module06Ml = @($app3Module06Performance | Where-Object { $_.method -eq 'gradient_boosted' })
+$app3Module06Difficult = @($app3Module06Folds | Where-Object { $_.difficult_fold -eq '1' })
+if (
+    $app3Module06Sections -ne 26 -or
+    $app3Module06Content -match '[—–]' -or
+    $app3Module06Content -notmatch 'Student effort: 16\.0 hours' -or
+    $app3Module06Content -notmatch '0\.731788' -or
+    $app3Module06Content -notmatch '0\.018212' -or
+    $app3Module06Content -notmatch '860\.277096' -or
+    $app3Module06Content -notmatch 'retain transparent forecast' -or
+    $app3Module06Content -notmatch '354 complete checks' -or
+    $app3Module06Content -notmatch '183 structural checks' -or
+    $app3Module06Content -notmatch '18 failure routes' -or
+    $app3Module06Release.module_id -ne 'oclc-app3-06' -or
+    $app3Module06Release.module_version -ne '0.1.0' -or
+    $app3Module06Release.commons_release -ne '0.72.0' -or
+    $app3Module06Release.reference_score -ne 25 -or
+    $app3Module06Release.points_added_here -ne 0 -or
+    $app3Module06Release.reference_gates_passed -ne 22 -or
+    $app3Module06Release.reference_progression -ne 'continue with conditions' -or
+    $app3Module06Release.selected_option -ne 'none' -or
+    $app3Module06Release.accepted_forecast -ne 'seasonal_exponential_smoothing' -or
+    $app3Module06Release.ml_decision -ne 'retain transparent forecast' -or
+    $app3Module06Release.outputs.files -ne 19 -or
+    $app3Module06Release.outputs.feasibility_rows -ne 28 -or
+    $app3Module06Release.outputs.monitoring_measures -ne 12 -or
+    $app3Module06Release.outputs.prediction_rows -ne 1176 -or
+    $app3Module06Release.outputs.common_evaluation_rows -ne 588 -or
+    $app3Module06Release.workspace.learner_files -ne 63 -or
+    $app3Module06Release.workspace.learner_manifest_rows -ne 45 -or
+    $app3Module06Release.workspace.reference_files -ne 82 -or
+    $app3Module06Release.workspace.reference_manifest_rows -ne 64 -or
+    $app3Module06Release.workspace.learner_records -ne 17 -or
+    $app3Module06Release.validation.complete_checks -ne 354 -or
+    $app3Module06Release.validation.starter_checks -ne 183 -or
+    $app3Module06Release.validation.failure_routes_rejected -ne 18 -or
+    $app3Module06Release.implementation_authorized -ne $false -or
+    $app3Module06Contract.module.hours -ne 16.0 -or
+    $app3Module06Contract.module.application_hours -ne 8.0 -or
+    $app3Module06Contract.module.machine_learning_hours -ne 8.0 -or
+    $app3Module06Contract.module.course_points_added -ne 0 -or
+    $app3Module06Contract.module.week6_points -ne 25 -or
+    $app3Module06Contract.comparison.folds -ne 28 -or
+    $app3Module06Contract.comparison.evaluation_rows -ne 588 -or
+    $app3Module06Contract.comparison.horizon_shifts -ne 21 -or
+    $app3Module06Contract.model.n_estimators -ne 100 -or
+    $app3Module06Contract.model.learning_rate -ne 0.05 -or
+    $app3Module06Contract.model.max_depth -ne 2 -or
+    $app3Module06Contract.model.min_samples_leaf -ne 15 -or
+    $app3Module06Contract.model.random_state -ne 7300600 -or
+    $app3Module06Contract.model.tuning -ne 'prohibited' -or
+    $app3Module06Contract.decision_rules.minimum_mae_improvement -ne 0.75 -or
+    $app3Module06Contract.assessment.noncompensable_gates -ne 22 -or
+    $app3Module06Report.outputs -ne 19 -or
+    $app3Module06Report.feasibility_rows -ne 28 -or
+    $app3Module06Report.monitoring_measures -ne 12 -or
+    $app3Module06Report.rolling_folds -ne 28 -or
+    $app3Module06Report.prediction_rows -ne 1176 -or
+    $app3Module06Report.common_evaluation_rows -ne 588 -or
+    $app3Module06Report.mae_improvement_arrivals -ne 0.731788 -or
+    $app3Module06Report.week53_ml_arrivals -ne 860.277096 -or
+    $app3Module06Report.decision_rules_passed -ne 7 -or
+    $app3Module06Report.ml_decision -ne 'retain transparent forecast' -or
+    $app3Module06Report.implementation_authorized -ne $false -or
+    $app3Module06Inventory.Count -ne 33 -or
+    @($app3Module06Inventory | Where-Object { $_.verification_status -ne 'pass' }).Count -ne 0 -or
+    $app3Module06Feasibility.Count -ne 28 -or
+    @($app3Module06Feasibility | Where-Object { $_.implementation_authorized -ne '0' }).Count -ne 0 -or
+    $app3Module06Monitoring.Count -ne 12 -or
+    @($app3Module06Monitoring | Where-Object { $_.value -eq 'unavailable' }).Count -ne 3 -or
+    $app3Module06Escalation.Count -ne 10 -or
+    @($app3Module06Escalation | Where-Object { $_.automatic_action -ne '0' }).Count -ne 0 -or
+    $app3Module06Splits.Count -ne 28 -or
+    $app3Module06Predictions.Count -ne 1176 -or
+    @($app3Module06Predictions | Where-Object { $_.method -eq 'seasonal_exponential_smoothing' }).Count -ne 588 -or
+    @($app3Module06Predictions | Where-Object { $_.method -eq 'gradient_boosted' }).Count -ne 588 -or
+    $app3Module06Transparent.Count -ne 1 -or
+    [decimal]$app3Module06Transparent[0].mae_arrivals -ne [decimal]5.937283 -or
+    $app3Module06Transparent[0].selected_flag -ne '1' -or
+    $app3Module06Ml.Count -ne 1 -or
+    [decimal]$app3Module06Ml[0].mae_arrivals -ne [decimal]5.205494 -or
+    $app3Module06Ml[0].selected_flag -ne '0' -or
+    $app3Module06Folds.Count -ne 28 -or
+    $app3Module06Difficult.Count -ne 4 -or
+    @($app3Module06Difficult | Where-Object { $_.difficult_fold_rule_status -ne 'pass' }).Count -ne 0 -or
+    $app3Module06Slices.Count -ne 38 -or
+    $app3Module06Importance.Count -ne 30 -or
+    $app3Module06Failures.Count -ne 10 -or
+    $app3Module06Leakage.Count -ne 12 -or
+    @($app3Module06Leakage | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Module06Week53.Count -ne 22 -or
+    [decimal]$app3Module06Week53[-1].ml_forecast_arrivals -ne [decimal]860.277096 -or
+    $app3Module06Decisions.Count -ne 9 -or
+    $app3Module06Decisions[0].rule_id -ne 'R01' -or
+    $app3Module06Decisions[0].status -ne 'fail' -or
+    [decimal]$app3Module06Decisions[0].observed -ne [decimal]0.731788 -or
+    $app3Module06Decisions[-1].decision_effect -ne 'retain transparent forecast' -or
+    $app3Module06Invariants.Count -ne 20 -or
+    @($app3Module06Invariants | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Module06Gates.Count -ne 22 -or
+    @($app3Module06Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Module06Score.Count -ne 5 -or
+    [decimal]$app3Module06Score[-1].points_awarded -ne [decimal]25
+) {
+    throw 'APP-3 Module 06 specification, feasibility, monitoring, dashboard, ML comparison, assessment, progression, or responsible-claim boundary does not match the 0.1.0 contract.'
+}
+& python (Join-Path $app3Module06Root 'freeze_upstream.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 06 upstream self-check failed.' }
+& python (Join-Path $app3Module06Root 'build_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 06 evidence-builder self-check failed.' }
+& python (Join-Path $app3Module06Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 06 workspace-builder self-check failed.' }
+& python (Join-Path $app3Module06Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 06 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -4832,3 +5003,4 @@ Write-Output "APP-3 Module 03 passed: $app3Module03Sections contract sections an
 Write-Output "APP-3 Checkpoint 01 passed: $app3Checkpoint01Sections contract sections and $($app3Checkpoint01Files.Count) required files."
 Write-Output "APP-3 Module 04 passed: $app3Module04Sections contract sections and $($app3Module04Files.Count) required files."
 Write-Output "APP-3 Module 05 passed: $app3Module05Sections contract sections and $($app3Module05Files.Count) required files."
+Write-Output "APP-3 Module 06 passed: $app3Module06Sections contract sections and $($app3Module06Files.Count) required files."

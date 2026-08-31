@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app3-06",
+    "version": "0.1.0",
+    "commons_release": "0.72.0",
+    "hours": 16.0,
+    "application_hours": 8.0,
+    "machine_learning_hours": 8.0,
+    "course_points_added": 0,
+    "week6_points": 25
+  },
+  "upstream": {
+    "forecast_module": "oclc-app3-04@0.1.0+commons.0.70.0",
+    "scenario_module": "oclc-app3-05@0.1.0+commons.0.71.0",
+    "selected_option": "none",
+    "implementation_authorized": false
+  },
+  "comparison": {
+    "target": "accepted arrivals per eight-hour shift",
+    "issue_time": "end of the final shift in each completed week",
+    "horizon_shifts": 21,
+    "folds": 28,
+    "evaluation_rows": 588,
+    "evaluation_weeks": [25, 52],
+    "transparent_method": "seasonal_exponential_smoothing",
+    "challenger": "GradientBoostingRegressor"
+  },
+  "features": {
+    "numeric": [
+      "horizon_shift",
+      "week_index",
+      "holiday_flag",
+      "lag_21",
+      "lag_42",
+      "lag_63",
+      "prior_21_mean",
+      "prior_63_mean"
+    ],
+    "categorical": ["shift_name", "weekday", "month"],
+    "excluded": ["synthetic_special_event_flag", "target_week_outcomes", "post_issue_revisions"],
+    "complete_week_means_only": true,
+    "training_fold_preprocessing_only": true
+  },
+  "model": {
+    "loss": "squared_error",
+    "n_estimators": 100,
+    "learning_rate": 0.05,
+    "max_depth": 2,
+    "min_samples_leaf": 15,
+    "max_features": null,
+    "random_state": 7300600,
+    "nonnegative_floor": 0,
+    "tuning": "prohibited"
+  },
+  "decision_rules": {
+    "minimum_mae_improvement": 0.75,
+    "maximum_rmse_worsening": 0.0,
+    "minimum_wape_percentage_point_improvement": 1.0,
+    "maximum_absolute_bias": 1.0,
+    "minimum_weighted_cost_percent_improvement": 5.0,
+    "difficult_folds": ["F03", "F09", "F15", "F16"],
+    "minimum_difficult_folds_not_worse_over_10_percent": 3,
+    "required_evaluation_rows": 588,
+    "week53_total_range": [805.136639, 970.733035],
+    "all_rules_required": true
+  },
+  "assessment": {
+    "noncompensable_gates": 22,
+    "course_points_awarded_here": 0,
+    "week6_points_counted_once": 25,
+    "next_module": "oclc-app3-07"
+  }
+}

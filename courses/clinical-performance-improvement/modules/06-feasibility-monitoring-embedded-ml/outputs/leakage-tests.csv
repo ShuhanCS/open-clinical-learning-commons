@@ -1,0 +1,13 @@
+test_id,test,status,evidence
+L01,common evaluation rows,pass,588 exact challenger rows
+L02,temporal cutoffs,pass,every test week follows its training end
+L03,lag source,pass,lags use only earlier shifts
+L04,complete-week means,pass,means use completed prior weeks
+L05,target-week exclusion,pass,no target-week row enters training
+L06,special-event exclusion,pass,unverified issue-time event flag excluded
+L07,prohibited outcome exclusion,pass,post-target outcomes excluded
+L08,training-only preprocessing,pass,one encoder fit per training fold
+L09,feature completeness,pass,all eligible rows complete
+L10,row identity,pass,fold and target IDs unique
+L11,fixed model family,pass,one GradientBoostingRegressor; no tuning
+L12,supported environment,pass,"Python 3.12.10, NumPy 2.0.2, pandas 3.0.3, scikit-learn 1.9.0"

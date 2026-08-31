@@ -1,0 +1,6 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+W6-01,Module 04 forecast gate,0,0,accepted zero-point gate
+W6-02,Module 05 scenario and evaluation,25,25,accepted score carried once
+W6-03,Module 06 feasibility and monitoring gates,0,0,required zero-point gates
+W6-04,Module 06 embedded ML gates,0,0,required zero-point gates
+TOTAL,Cumulative Week 6 package,25,25,counted once

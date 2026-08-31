@@ -1,0 +1,28 @@
+{
+  "common_evaluation_rows": 588,
+  "commons_release": "0.72.0",
+  "decision_rules_passed": 7,
+  "environment": {
+    "numpy": "2.0.2",
+    "pandas": "3.0.3",
+    "python": "3.12.10",
+    "scikit_learn": "1.9.0"
+  },
+  "feasibility_rows": 28,
+  "implementation_authorized": false,
+  "mae_improvement_arrivals": 0.731788,
+  "ml_decision": "retain transparent forecast",
+  "ml_mae_arrivals": 5.205494,
+  "module06_points_added": 0,
+  "module_id": "oclc-app3-06",
+  "module_version": "0.1.0",
+  "monitoring_measures": 12,
+  "outputs": 19,
+  "prediction_rows": 1176,
+  "rolling_folds": 28,
+  "status": "pass",
+  "transparent_mae_arrivals": 5.937283,
+  "upstream_files": 33,
+  "week53_ml_arrivals": 860.277096,
+  "week6_points": 25
+}

@@ -1,0 +1,3 @@
+method,evaluation_rows,mae_arrivals,rmse_arrivals,bias_arrivals,wape_percent,underforecast_arrivals,overforecast_arrivals,weighted_error_cost,selected_flag,selection_reason,synthetic_flag
+seasonal_exponential_smoothing,588,5.937283,7.307180,0.008215,15.141268,1743.145980,1747.976156,5234.268116,1,accepted method retained because the challenger fails one predeclared rule,1
+gradient_boosted,588,5.205494,6.554934,-0.513059,13.275060,1681.254756,1379.575834,4742.085347,0,challenger misses the 0.750000 MAE-improvement rule,1

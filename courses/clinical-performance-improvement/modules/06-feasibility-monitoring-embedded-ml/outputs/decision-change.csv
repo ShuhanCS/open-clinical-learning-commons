@@ -1,0 +1,10 @@
+rule_id,rule,threshold,observed,status,decision_effect
+R01,MAE improvement,at least 0.750000 arrivals per shift,0.731788,fail,required for replacement
+R02,RMSE change,no worsening above 0.000000,-0.752247,pass,required for replacement
+R03,WAPE improvement,at least 1.000000 percentage point,1.866208,pass,required for replacement
+R04,absolute ML bias,no more than 1.000000 arrival per shift,0.513059,pass,required for replacement
+R05,weighted error cost improvement,at least 5.000000 percent,9.403087,pass,required for replacement
+R06,difficult folds,at least 3 of 4 not worse by more than 10 percent,4,pass,required for replacement
+R07,row and leakage identity,588 rows and all leakage checks pass,588 rows; all pass,pass,required for replacement
+R08,Week 53 total,inside 805.136639 to 970.733035,860.277096,pass,required for replacement
+FINAL,all predeclared rules,8 of 8 pass,7 of 8 pass,fail,retain transparent forecast

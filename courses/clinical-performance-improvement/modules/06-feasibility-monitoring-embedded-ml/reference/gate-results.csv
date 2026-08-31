@@ -1,0 +1,23 @@
+gate_id,gate,status,evidence
+G01,exact upstream identity,pass,33 files plus manifest verified
+G02,retained no-selection handoff,pass,no option qualifies
+G03,four supported scenario dispositions,pass,retain revise stop revise
+G04,implementation feasibility evidence,pass,28 domain screens
+G05,quality and safety boundary,pass,prospective clinical review retained
+G06,access and equity boundary,pass,two support groups and unavailable rules retained
+G07,workforce burden boundary,pass,modeled hours separated from staffing
+G08,all 12 measures specified,pass,units denominators owners cadence and limits
+G09,accessible bounded dashboard,pass,static semantic exact table
+G10,escalation and fallback ownership,pass,10 human-owned rules and zero automatic actions
+G11,monitoring stewardship and sustainability,pass,owners cadence and restart conditions
+G12,exact target issue time and horizon,pass,accepted arrivals and 21 shifts
+G13,28 folds and 588 common rows,pass,exact row identity
+G14,eligible issue-time features only,pass,calendar lag and complete-week features
+G15,training-only categorical preprocessing,pass,one encoder per fold
+G16,one fixed untuned model,pass,GradientBoostingRegressor seed 7300600
+G17,operational-unit error reporting,pass,MAE RMSE bias WAPE under over and weighted cost
+G18,difficult periods and failure cases retained,pass,38 slices and 10 largest errors
+G19,all eight replacement rules applied,pass,7 pass and one retained failure
+G20,25 points counted once,pass,Module 06 adds zero
+G21,no clinical staffing testing implementation or deployment authority,pass,authority not authorized
+G22,reproducibility and responsible AI complete,pass,deterministic build and accountable use

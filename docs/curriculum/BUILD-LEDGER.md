@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.71.0
+- Current release: 0.72.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Module 05, improvement scenarios and evaluation
-- Next unit: APP-3 Module 06, feasibility, monitoring, and embedded machine learning
+- Last completed unit: APP-3 Module 06, feasibility, monitoring, and embedded machine learning
+- Next unit: APP-3 Checkpoint 02, forecast, scenario, evaluation, and monitoring release
 
 ## Confirmed decisions
 
@@ -521,7 +521,17 @@
 - The learner workspace has 56 files and 41 immutable manifest rows. The reference has 68 files and 53 immutable manifest rows. Complete validation passes 271 checks and starter validation passes 166 structural checks.
 - Upstream, scenario, workspace, and validator self-checks pass. Twelve mutation and incomplete-workspace routes are rejected.
 - The reference scores 25 of 25 once and passes all 20 gates. Progression is `continue with conditions`, permitting Module 06 feasibility, monitoring, and embedded-ML construction with no selected option and no implementation authority.
-- APP-3 Module 05 is a runnable release candidate at Commons 0.71.0. Module 06 is next.
+- APP-3 Module 05 is a runnable release candidate at Commons 0.71.0 and permits Module 06 construction with conditions.
+- APP-3 Module 06 version 0.1.0 freezes 33 exact Module 04 and Module 05 files plus a handoff manifest. It preserves 1,092 historical shifts, 28 folds, 588 transparent evaluation rows, the 876.924084 Week 53 point forecast, the 805.136639 to 970.733035 range, all Module 05 scenario evidence, the 25-point score, 20 gates, and the no-selection decision.
+- The feasibility release contains 28 scenario-domain screens: five supported, 18 requiring local evidence, and five not supported. It retains S00 as the monitoring baseline, requires revision before reconsidering S01 and S03, and stops S02 in its current form. No option receives implementation authority.
+- The monitoring release specifies all 12 accepted prospective measures, including three explicit unavailable states, and ten human-owned investigation, pause-review, immediate clinical-review, interpretability, and baseline rules. The static dashboard contains exact values, text states, owners, cadence, denominators, narrow-screen support, and no scripts or automatic action.
+- The fixed gradient-boosted challenger uses seed 7300600, only issue-time calendar, shift, lag, and complete-week features, training-fold-only categorical encoding, and no tuning. All 12 leakage and environment tests pass.
+- Both methods use the exact same 588 shifts. The transparent forecast has MAE 5.937283 and RMSE 7.307180. The challenger has MAE 5.205494, RMSE 6.554934, bias -0.513059, WAPE 13.275060 percent, and 9.403087 percent lower weighted error cost.
+- The challenger passes seven of eight replacement rules and improves all four accepted difficult folds. Its MAE improvement is 0.731788, below the declared 0.750000 requirement by 0.018212 arrivals per shift. Its Week 53 total is 860.277096 inside the accepted range. The transparent forecast remains accepted without retuning.
+- The learner workspace has 63 files and 45 immutable manifest rows. The reference has 82 files and 64 immutable manifest rows. Complete validation passes 354 checks and starter validation passes 183 structural checks.
+- Upstream, evidence, workspace, and validator self-checks pass. Nineteen deterministic outputs reproduce byte for byte, and 18 mutation or incomplete-workspace routes are rejected.
+- The Week 6 score remains 25 of 25 counted once from Module 05. Module 06 adds zero points and passes all 22 gates. Progression is `continue with conditions`, permitting Checkpoint 02 assembly with no clinical, staffing, testing, implementation, or deployment authority.
+- APP-3 Module 06 is a runnable release candidate at Commons 0.72.0. Checkpoint 02 is next.
 
 ## Pending confirmation
 
@@ -530,17 +540,17 @@
 - Complete named human review of the Module 02 HCAHPS version, scoring, access, naming, and comparison decisions; the Module 03 MEPS population, response, weighting, privacy, and progression decisions; the Module 04 MEPS linkage and denominators; the Module 05 synthetic comments, qualitative coding, group support, and equity language; and the Module 06 partnership, improvement, model, and handoff before alpha.
 - Assign the official APP-1 and APP-2 sections and half-term dates from the published calendar.
 - Assign the official APP-3 section and half-term dates from the published calendar.
-- Complete human review of the APP-3 synthetic operational generator, safety-event design, subgroup construction, staffing assumptions, workload language, forecast contract, and scenario boundaries before alpha.
+- Complete human review of the APP-3 synthetic operational generator, safety-event design, subgroup construction, staffing assumptions, workload language, forecast contract, scenario boundaries, Module 06 feasibility dispositions, monitoring thresholds, dashboard, and ML decision before alpha.
 - Run and independently review the APP-3 Module 03 base-R control-chart verification in an environment with R installed.
 - Run and independently review the APP-3 Module 04 base-R forecast verification in an environment with R installed.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoint 01 package, Module 04 specification and package, curriculum catalog, and this ledger.
-2. Freeze the accepted Week 3 diagnosis and Module 04 forecast, range, difficult folds, unsupported holiday slice, and action boundaries without recomputing them.
-3. Write the durable APP-3 Module 06 specification before building its package.
-4. Preserve the Module 05 no-selection result, six failed comparisons, 12 prospective measures, eight threats, exact 25-point score, and authority boundary without retuning them.
-5. Test feasibility, access, workforce burden, implementation measures, monitoring cadence, escalation, stop, fallback, and stewardship for no change and any explicitly revised bounded option.
-6. Fit one bounded gradient-boosted forecast on the accepted Module 04 target, cutoffs, folds, horizons, and eligible rows, and compare it with the transparent method without leakage.
-7. Release the cumulative Week 6 package with the Module 05 points counted once, advance semver, update this ledger, commit, and push.
+1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoint 01, Modules 04 through 06, the curriculum catalog, and this ledger.
+2. Write the durable APP-3 Checkpoint 02 specification before assembling its package.
+3. Freeze the accepted Module 04, Module 05, and Module 06 reference workspaces without editing or recomputing evidence.
+4. Preserve the transparent forecast, empirical range, difficult folds, no-selection scenario result, six failed comparisons, 12 measures, ten escalation rules, failed ML replacement rule, exact 25-point score, and all authority boundaries.
+5. Assemble one candidate manifest, evidence index, defense, score, gates, AI record, progression decision, and exact Module 07 handoff.
+6. Prove that the Module 05 points are counted once, Module 04 and Module 06 add zero points, every upstream gate remains required, and no option or challenger is silently accepted.
+7. Advance semver, update this ledger, commit, and push before starting Module 07.

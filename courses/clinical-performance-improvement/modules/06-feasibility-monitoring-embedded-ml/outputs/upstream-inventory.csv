@@ -1,0 +1,34 @@
+relative_path,source_path,bytes,sha256,source_release,role,verification_status
+upstream/error-slices.csv,outputs/error-slices.csv,1911,c3fa9aca4ef696cc2082e4fdbff2e7dfac02ea383e08f45998c11643820ee2f7,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/error-summary.csv,outputs/error-summary.csv,548,d624bf3d8c67c1359382d1239a8e1ed2e7dbb271cccba50ef2187f49804905b6,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/evaluation-measures.csv,outputs/evaluation-measures.csv,4135,5ccff224c384b39fb7d77fbd79e10e425ef904a9e127a1c45e75c5910ea201f5,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/evaluation-threats.csv,outputs/evaluation-threats.csv,2181,0249e61f7fc4e0ab7c47a003a12a017a0ccaa9ab938ded9511e40324d2ec614e,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/folds.csv,outputs/folds.csv,4142,48f1bf6857acc2295d9723f90b6f3430623722aa70dc393b2cf7d4390cd68515,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/forecast-findings.json,outputs/forecast-findings.json,2460,9a8de1e178e3a555bcf34c62bad8633a3f2e4918496920bf498e955e2700c303,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module04-capacity-interpretation.md,reference/capacity-interpretation.md,1139,5c6a70707fd7326e7da13a00cd003ac4d404cf30a96e5a126b508c7a6ec943f1,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module04-failure-period-review.md,reference/failure-period-review.md,1054,5142624676e7b9afd4612caa23795601eb7e37290c0969afc3d1b94058a1c136,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module04-forecast-contract.json,forecast-contract.json,1663,b43dba9e2452a34aad4a517d2504d1b6adafb7fc4d113e706a235c8867914621,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module04-model-comparison.md,reference/model-comparison.md,1082,42041d52c12ff17264a482fdd9d7a7271186458eb2e72eb416b621d55741281a,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module04-progression-decision.md,reference/progression-decision.md,1062,de58fcfc8b6bf8485787740ece12b21f56968f053853032a5df02a446114707c,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module04-release.json,release.json,1057,2f5a0426b11f728cd5f0273ea2e3644f86f8be973f2d3d977348dc0cbbb99f5b,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module04-version.txt,VERSION,6,e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/module05-access-workforce-safety-review.md,reference/access-workforce-safety-review.md,1118,3e4fb9c015436e7834215762077d35f5af8023b7c96f774263b1d2e56d482843,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-evaluation-design.md,reference/evaluation-design.md,1021,a81abd3f1e7a24267e623f4e4a342f65872cdee56372cdcd34ff8c060c9a4298,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-evaluation-threat-audit.csv,reference/evaluation-threat-audit.csv,1138,d205870f7217e9a5fc0fb14297ad9b3d85f1022eeea4de86d41c11bfb7013e21,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-gaming-unintended-effects.md,reference/gaming-unintended-effects.md,858,ead9adb22041c604c8a6b8cd1f58d08ac92269b4fce1650156f623ee0451e0c2,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-gate-results.csv,reference/gate-results.csv,1432,7671c7c59da1cf260e0f5848a51506043aace9c72e4ec6b2eb734f2fc21e336a,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-progression-decision.md,reference/progression-decision.md,637,c5463309026a33bd8484faa216fbcfd307bc6bb81a8f952449683a113240ae42,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-release.json,release.json,899,f4042fdc165a225e05f64b76e0bed13eea734dbcd7a5e13ccfd0bbf19a43a4e3,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-reproducibility-check.md,reference/reproducibility-check.md,616,b199406cb320872df817dd1f69824844eb62e7b39d1af768bb51c2ef8078b350,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-scenario-contract.json,scenario-contract.json,1787,7ab12b7992b9c8231a64ef6b21ccf6c3ab99ee09659b9d14a96ee043686ed481,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-version.txt,VERSION,6,e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module05-week6-score.csv,reference/week6-score.csv,652,aa201d0d59c915a5276976fc9d245a42b570f1011e383981d8d9a4ad109319e4,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/module06-handoff.md,reference/module06-handoff.md,853,8492b125e99ca7ea77f8ea0472ac69cfdb21d39c160cf49f8dc03a6eace73da1,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/paired-effects.csv,outputs/paired-effects.csv,5184,725ba564808465ec32e75fb59a3fa63a1214dee2724d356fde7d2ae5fdbef422,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/scenario-findings.json,outputs/scenario-findings.json,5017,e051cd33111ed0eb2a66b60fe4a6c3a8d46a379c7c42d7355ae4283cad6e3825,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/scenario-summary.csv,outputs/scenario-summary.csv,10261,0f62995a9a383a83f67545b7753dd1ac6c6d1eeeadacf58a3bafbd1be0907a20,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/scenario-validation-checks.csv,outputs/validation-checks.csv,1652,343eb94145a16a7d4da0928c1812d59279145587fedde14fa053502553ed0753,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/sensitivity-review.csv,outputs/sensitivity-review.csv,2228,8edafa93b951f159c4368e5640bfb80aa92ad59bed9260b884046056298be597,oclc-app3-05@0.1.0+commons.0.71.0,accepted scenario and evaluation evidence,pass
+upstream/shift-metrics.csv,upstream/shift-metrics.csv,153192,cd2ca9163acc7c79572b0014fd54f9726614c1cfd352a4efa11fd1bbedeacd57,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/transparent-predictions.csv,outputs/forecast-predictions.csv,219133,2a58a48129b164f0f2486b31a2f22f29e8fce76f4c06bd675e03750b3c993654,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass
+upstream/week53-forecast.csv,outputs/week53-forecast.csv,3039,80b026b5331f2a95125fbc43a9cb31afc5630982a86a7c499950eb80bc61f804,oclc-app3-04@0.1.0+commons.0.70.0,accepted forecast evidence,pass

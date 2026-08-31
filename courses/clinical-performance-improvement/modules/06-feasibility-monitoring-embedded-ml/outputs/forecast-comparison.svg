@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+<title id="title">Transparent and gradient-boosted forecast error</title>
+<desc id="desc">The ML challenger has lower MAE and RMSE, but its MAE improvement misses the predeclared replacement threshold.</desc>
+<rect width="640" height="360" fill="white"/>
+<text x="20" y="34" font-size="20" font-weight="700">Forecast error on 588 common shifts</text>
+<text x="20" y="58" font-size="14">Lower is better. Values are arrivals per shift.</text>
+<text x="20" y="108" font-size="14">Transparent MAE</text>
+<rect x="175" y="90" width="225.62" height="24" fill="#1f49b6"/>
+<text x="410.62" y="108" font-size="14">5.937283</text>
+<text x="20" y="158" font-size="14">ML MAE</text>
+<rect x="175" y="140" width="197.81" height="24" fill="#0f766e"/>
+<text x="382.81" y="158" font-size="14">5.205494</text>
+<text x="20" y="248" font-size="14">Transparent RMSE</text>
+<rect x="175" y="230" width="277.67" height="24" fill="#1f49b6"/>
+<text x="462.67" y="248" font-size="14">7.307180</text>
+<text x="20" y="298" font-size="14">ML RMSE</text>
+<rect x="175" y="280" width="249.09" height="24" fill="#0f766e"/>
+<text x="434.09" y="298" font-size="14">6.554934</text>
+<text x="20" y="330" font-size="14" font-weight="700">Decision: retain transparent forecast</text>
+</svg>

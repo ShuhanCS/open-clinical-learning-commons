@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app3-05",
+    "version": "0.1.0",
+    "commons_release": "0.71.0",
+    "hours": 16.0,
+    "course_points": 25
+  },
+  "upstream": {
+    "module_id": "oclc-app3-04",
+    "module_version": "0.1.0",
+    "commons_release": "0.70.0",
+    "forecast_method": "seasonal_exponential_smoothing",
+    "point_arrivals": 876.924084,
+    "lower_arrivals": 805.136639,
+    "upper_arrivals": 970.733035,
+    "accepted_encounters": 43628
+  },
+  "simulation": {
+    "warmup_days": 7,
+    "measurement_days": 7,
+    "replications_per_scenario_condition": 200,
+    "base_seed": 7300500,
+    "paired_common_random_numbers": true,
+    "arrival_process": "shift-specific homogeneous Poisson within accepted Week 53 demand shape",
+    "priority": "nonpreemptive acuity order, acuity 1 highest",
+    "effective_service_fraction": 0.20,
+    "base_clinician_slots": {
+      "night": 2,
+      "day": 6,
+      "evening": 4
+    },
+    "queue_trigger_patients": 4,
+    "queue_trigger_persistence_minutes": 15,
+    "fast_track_eligible_acuity": [4, 5],
+    "fast_track_service_multiplier": 0.70,
+    "forecast_threshold_arrivals": {
+      "night": 32,
+      "day": 55,
+      "evening": 48
+    }
+  },
+  "scenarios": ["S00", "S01", "S02", "S03"],
+  "conditions": ["C01", "C02", "C03", "C04", "C05"],
+  "selection": {
+    "primary_condition": "C02",
+    "stress_condition": "C04",
+    "median_wait_improvement_minutes": 10,
+    "p90_wait_improvement_minutes": 15,
+    "left_before_seen_improvement_percentage_points": 1.0,
+    "maximum_throughput_loss_percent": 1.0,
+    "maximum_language_gap_worsening_minutes": 5,
+    "near_tie_minutes": 5
+  },
+  "assessment": {
+    "course_points": 25,
+    "noncompensable_gates": 20,
+    "next_module": "oclc-app3-06"
+  }
+}

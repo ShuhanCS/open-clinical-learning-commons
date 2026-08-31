@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.71.0.
-- Current build: course specification, source architecture, Modules 01 through 05, and Checkpoint 01 complete; later modules and checkpoints not yet built.
+- Current Commons release: 0.72.0.
+- Current build: course specification, source architecture, Modules 01 through 06, and Checkpoint 01 complete; the Week 6 checkpoint, Module 07, and final checkpoint are not yet built.
 
 APP-3 teaches learners to define and validate clinical performance measures, distinguish process signals from routine variation, diagnose bottlenecks, forecast demand, test capacity and workflow scenarios, and defend a monitored improvement recommendation.
 
@@ -20,7 +20,7 @@ The continuing case is an explicitly fictional adult emergency service, `CGH-ED-
 | 03 | Variation, safety signals, and bottlenecks | 16.5 | Runnable release candidate |
 | 04 | Demand forecasting and capacity | 16.5 | Runnable release candidate |
 | 05 | Improvement scenarios and evaluation | 16.0 | Runnable release candidate |
-| 06 | Feasibility, monitoring, and embedded machine learning | 16.0 | Specified in course contract |
+| 06 | Feasibility, monitoring, and embedded machine learning | 16.0 | Runnable release candidate |
 | 07 | Clinician leadership, recommendation, and defense | 16.0 | Specified in course contract |
 | Total |  | 112.5 |  |
 
@@ -52,5 +52,7 @@ The cumulative [Week 3 checkpoint](checkpoints/01-measures-variation-readiness/r
 The fourth runnable package is [Module 04](modules/04-demand-forecasting-capacity/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/04-demand-forecasting-capacity-spec.md). It compares three transparent methods on 28 common rolling origins, selects bounded seasonal exponential smoothing, releases the Week 53 point and empirical range, and passes 18 zero-point gates before permitting Module 05 scenario construction with conditions.
 
 The fifth runnable package is [Module 05](modules/05-improvement-scenarios-evaluation/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/05-improvement-scenarios-evaluation-spec.md). It runs 4,000 paired scenario simulations across five conditions, retains six null or failed comparisons, defines 12 prospective measures and eight evaluation threats, awards the 25-point component once, and passes 20 gates. No option clears the predeclared decision rule, so Module 06 receives a bounded no-selection result without implementation authority.
+
+The sixth runnable package is [Module 06](modules/06-feasibility-monitoring-embedded-ml/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/06-feasibility-monitoring-embedded-ml-spec.md). It screens 28 scenario-domain feasibility combinations, specifies 12 owned monitoring measures and ten human escalation rules, releases a static accessible dashboard, and compares one fixed gradient-boosted challenger with the transparent forecast on the same 588 shifts. The challenger passes seven of eight replacement rules but misses the required MAE improvement by 0.018212 arrivals per shift, so the transparent forecast remains accepted. Module 06 passes 22 gates and carries the 25-point Week 6 score once without authorizing implementation.
 
 No package authorizes clinical implementation, current hospital performance judgment, patient or workforce targeting, staffing change, or model deployment.

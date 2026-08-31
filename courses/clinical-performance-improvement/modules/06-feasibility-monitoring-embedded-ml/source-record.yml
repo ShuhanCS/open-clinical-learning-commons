@@ -1,0 +1,24 @@
+module_id: oclc-app3-06
+module_version: 0.1.0
+commons_release: 0.72.0
+service_id: CGH-ED-01
+service_status: fictional
+upstream:
+  forecast_module: oclc-app3-04@0.1.0+commons.0.70.0
+  scenario_module: oclc-app3-05@0.1.0+commons.0.71.0
+  manifest: upstream/module06-handoff-manifest.csv
+accepted_evidence:
+  evaluation_rows: 588
+  forecast_arrivals: 876.924084
+  forecast_lower: 805.136639
+  forecast_upper: 970.733035
+  selected_option: none
+  week6_points: 25
+machine_learning:
+  family: GradientBoostingRegressor
+  random_state: 7300600
+  tuning: prohibited
+  synthetic_flag: 1
+privacy: no real patient, clinician, workforce, or hospital data
+public_source_role: inherited definition and historical aggregate context only; no public-to-synthetic linkage
+claim_limit: bounded feasibility, monitoring, and forecast comparison only; no clinical, staffing, safety, causal, automated, testing, implementation, or deployment authority

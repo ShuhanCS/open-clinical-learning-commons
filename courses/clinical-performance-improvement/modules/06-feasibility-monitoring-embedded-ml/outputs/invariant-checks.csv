@@ -1,0 +1,21 @@
+check_id,check,status
+I01,33 upstream files verify,pass
+I02,selected option remains none,pass
+I03,four scenario dispositions are present,pass
+I04,28 feasibility-domain rows are present,pass
+I05,no implementation is authorized,pass
+I06,12 monitoring measures are present,pass
+I07,three prospective measures remain unavailable,pass
+I08,all measures have owners and cadence,pass
+I09,28 rolling folds are present,pass
+I10,588 common target rows are present,pass
+I11,two methods use identical target rows,pass
+I12,all predictions are nonnegative,pass
+I13,all leakage tests pass,pass
+I14,one predeclared decision rule fails,pass
+I15,final model decision retains transparent forecast,pass
+I16,Module 05 points remain 25,pass
+I17,Module 06 adds zero points,pass
+I18,safety and return outcomes are not invented,pass
+I19,machine learning does not alter Module 05,pass
+I20,Module 07 receives no implementation authority,pass

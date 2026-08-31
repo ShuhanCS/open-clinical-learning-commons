@@ -1,0 +1,23 @@
+record_type,target_shift_id,date,shift_name,horizon_shift,transparent_forecast_arrivals,ml_forecast_arrivals,ml_minus_transparent_arrivals,accepted_range_status,actual_status,synthetic_flag
+shift,20241230-night,2024-12-30,night,1,35.011142,33.950040,-1.061102,not applicable at shift level,future synthetic actual unavailable,1
+shift,20241230-day,2024-12-30,day,2,56.870912,53.281099,-3.589813,not applicable at shift level,future synthetic actual unavailable,1
+shift,20241230-evening,2024-12-30,evening,3,49.798508,46.351979,-3.446529,not applicable at shift level,future synthetic actual unavailable,1
+shift,20241231-night,2024-12-31,night,4,32.026490,32.124334,0.097844,not applicable at shift level,future synthetic actual unavailable,1
+shift,20241231-day,2024-12-31,day,5,51.197247,51.547666,0.350419,not applicable at shift level,future synthetic actual unavailable,1
+shift,20241231-evening,2024-12-31,evening,6,40.779011,44.231639,3.452628,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250101-night,2025-01-01,night,7,27.792707,29.306869,1.514162,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250101-day,2025-01-01,day,8,49.810389,51.050793,1.240404,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250101-evening,2025-01-01,evening,9,43.186950,42.963708,-0.223242,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250102-night,2025-01-02,night,10,29.358370,29.306869,-0.051501,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250102-day,2025-01-02,day,11,49.756658,48.887556,-0.869102,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250102-evening,2025-01-02,evening,12,44.460986,44.297177,-0.163809,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250103-night,2025-01-03,night,13,31.597517,29.901130,-1.696387,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250103-day,2025-01-03,day,14,52.852418,50.188900,-2.663518,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250103-evening,2025-01-03,evening,15,48.888175,45.233286,-3.654889,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250104-night,2025-01-04,night,16,27.724094,27.609534,-0.114560,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250104-day,2025-01-04,day,17,47.694645,46.014524,-1.680121,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250104-evening,2025-01-04,evening,18,42.691884,40.663272,-2.028612,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250105-night,2025-01-05,night,19,29.062765,27.555294,-1.507471,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250105-day,2025-01-05,day,20,45.888655,45.424034,-0.464621,not applicable at shift level,future synthetic actual unavailable,1
+shift,20250105-evening,2025-01-05,evening,21,40.474558,40.387394,-0.087164,not applicable at shift level,future synthetic actual unavailable,1
+total,WEEK53_TOTAL,2024-12-30 to 2025-01-05,all,21,876.924084,860.277096,-16.646988,pass: inside 805.136639 to 970.733035,future synthetic actual unavailable,1

@@ -1,0 +1,11 @@
+accountability_id,decision_or_measure,responsible,accountable,consulted,informed,authority_limit
+A01,weekly flow measures,flow lead,operations council,clinical and access leads,frontline team,monitor and investigate only
+A02,left before seen and access gaps,access lead,clinical performance council,flow and data leads,frontline team,pause review only
+A03,reviewed safety-event candidates,safety lead,clinical safety authority,clinical and quality leads,operations council,governed clinical review only
+A04,return within 72 hours,quality lead,quality council,data and clinical leads,operations council,interpret only after completeness passes
+A05,overtime and modeled flex hours,workforce lead,operations council,finance and clinical leads,frontline team,no staffing recommendation
+A06,interruptions and perceived load,workforce lead,operations council,frontline representatives,clinical performance council,baseline collection only
+A07,data completeness and dashboard,data owner,quality council,measure owners,clinical performance council,no automatic alerting
+A08,scenario reconsideration,quality lead,clinical performance council,all measure owners,frontline team,new Module 05 contract required
+A09,forecast challenger,data analyst,clinical performance council,operations and clinical leads,frontline team,no production scoring or deployment
+A10,Module 07 recommendation,Joe Joseph MD,clinical performance council,course faculty and measure owners,learner team,leadership review only; implementation not authorized
