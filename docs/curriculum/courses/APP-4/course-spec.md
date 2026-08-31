@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.78.0 through Module 02.
+- Current Commons release: 0.79.0 through Module 03.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -245,13 +245,15 @@ The accepted package preserves the 29 immutable Module 01 files, adds a complete
 - Specification: `docs/curriculum/courses/APP-4/modules/03-evidence-calibration-validation-spec.md`.
 - Decision: does the historical evidence justify continuing to workflow and sandbox evaluation under stated limits?
 - Submission: 20-point evidence, calibration, and threshold audit and the 40-point Week 3 release.
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.79.0`; Checkpoint 01 assembly is permitted with conditions.
 
 Learners build the NHANES evidence cohort with a fixed information cutoff, preserve survey-cycle identity, fit the transparent model on the declared development evidence, and evaluate the temporal holdout without tuning it. They report the target definition, prevalence, missingness, support, discrimination, calibration-in-the-large, calibration slope, calibration by score range, confusion measures at every candidate threshold, alert count, and missed eligible cases.
 
 The later-cycle release is a transport stress test. Learners state what changed in data availability, support, prevalence, calibration, and burden without assigning an unsupported cause. Subgroup review begins with denominators, outcome counts, missingness, support, and uncertainty.
 
 Decision-curve or net-benefit output is interpreted only for the declared threshold range and consequence assumptions. It does not prove patient benefit. Checkpoint 01 freezes Modules 01 through 03 before workflow scoring begins.
+
+The accepted package verifies all 16 inherited NHANES sources before parsing and releases 14,892 age-eligible audit rows, 7,544 model rows, and 328 observed HbA1c outcomes. One fixed survey-weighted binomial GLM is fit on 3,652 development rows, then evaluated without tuning on a 1,806-row temporal holdout and a separate 2,086-row 2021-2023 transport stress test using `WTPH2YR`. The 17-file evidence release includes weighted performance, calibration, six candidate-threshold audits, decision-curve quantities, subgroup support and suppression, transport comparison, 500-replicate teaching intervals, and 20 passing invariants. No threshold is selected or accepted, and the Module 02 `0.20` value is rejected as evidence.
 
 ## 12. Module 04 brief: Alert burden, human factors, and equity
 
@@ -515,5 +517,7 @@ Construction acceptance for this course-level unit:
 - [x] APP-4 remains distinct from FND-1, FND-2, DA-730, and APP-1 through APP-3.
 - [x] Clinical use, live scoring, automatic action, implementation, and deployment remain outside course authority.
 - [x] Module 01 pins all 16 complete public XPT files, profiles 145,563 component rows and 442 fields, releases a validated 41-file decision-framing workspace, and permits Module 02 construction with conditions without fitting a model or selecting a threshold.
+- [x] Module 02 releases a complete 811,803-row synthetic FHIR source, 16 deterministic rule cases, and an 86-file workspace while keeping its mock score and threshold mechanics only.
+- [x] Module 03 releases a reproducible 7,544-row historical model cohort, untouched temporal-holdout and transport evidence, six unaccepted candidate thresholds, and a validated 118-file workspace.
 
-APP-4 Module 01 is complete for curriculum construction. Resume with Module 02 by freezing its 29-file immutable handoff, preserving all 16 source identities and authority limits, building the first versioned synthetic release, and specifying logic and event-time input availability without fitting the Module 03 model early.
+APP-4 Modules 01 through 03 are complete for curriculum construction. Resume with Checkpoint 01 by freezing the accepted Module 02 and Module 03 releases, preserving their exact logic, source, model, threshold, and authority boundaries, carrying the 20-point components once each, and making one cumulative progression decision before Module 04 begins.

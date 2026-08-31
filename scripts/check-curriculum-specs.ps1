@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.78.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.79.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2847,7 +2847,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.78.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.79.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4047,8 +4047,8 @@ if (
     $app4Content -match '(?im)[A-Z]:\\Users\\' -or
     $app4SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app4PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app4Content -notmatch 'Current Commons release: 0\.78\.0' -or
-    $app4PackageContent -notmatch 'Current Commons release: 0\.78\.0' -or
+    $app4Content -notmatch 'Current Commons release: 0\.79\.0 through Module 03' -or
+    $app4PackageContent -notmatch 'Current Commons release: 0\.79\.0' -or
     $app4Content -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
     $app4SourceContent -notmatch '20d651c3a777c878fa2d1219738366b99da76ba985e6082c73168cf8df63ded2' -or
     $app4SourceContent -notmatch '21,676' -or
@@ -4070,8 +4070,8 @@ if (
     $app4SourceContent -notmatch 'https://hl7\.org/fhir/R4/observation\.html' -or
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
-    $app4PackageContent -notmatch 'Modules 01 and 02 are runnable release candidates; Module 03 is next' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.78.0'
+    $app4PackageContent -notmatch 'Modules 01 through 03 are runnable release candidates; Checkpoint 01 is next' -or
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.79.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4247,6 +4247,101 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 rule evaluator self-check fail
 if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 builder self-check failed.' }
 & python (Join-Path $app4Module02Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 02 validator self-check failed.' }
+
+$app4Module03Root = Join-Path $repo 'courses\clinical-decision-support\modules\03-evidence-calibration-validation'
+$app4Module03Spec = Join-Path $repo 'docs\curriculum\courses\APP-4\modules\03-evidence-calibration-validation-spec.md'
+$app4Module03Records = @(
+    'evidence-release.md', 'cohort-target-contract.csv', 'survey-design-audit.csv',
+    'model-specification.csv', 'performance-interpretation.md', 'calibration-audit.csv',
+    'threshold-consequence-audit.csv', 'decision-curve-interpretation.md',
+    'subgroup-support-audit.csv', 'transport-stress-audit.csv',
+    'evidence-limitations.md', 'claim-boundary.csv', 'ai-use.md',
+    'week3-component-release.md', 'progression-decision.md'
+)
+$app4Module03Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md', 'build_evidence.py',
+    'build_workspace.py', 'data-spec.md', 'decision-contract.json', 'environment.yml',
+    'instructor-notes.md', 'release.json', 'requirements.txt', 'source-record.yml',
+    'validate_workspace.py', 'data\evidence\evidence-manifest.csv'
+)
+$app4Module03ManifestPath = Join-Path $app4Module03Root 'data\evidence\evidence-manifest.csv'
+if (-not (Test-Path -LiteralPath $app4Module03ManifestPath)) {
+    throw 'APP-4 Module 03 evidence manifest is missing.'
+}
+$app4Module03Manifest = @(Import-Csv -LiteralPath $app4Module03ManifestPath)
+foreach ($record in $app4Module03Records) {
+    $app4Module03Files += "reference\$record"
+    $app4Module03Files += "template\$record"
+}
+foreach ($evidence in $app4Module03Manifest) {
+    $app4Module03Files += "data\evidence\$($evidence.relative_path -replace '/', '\')"
+}
+$app4Module03Missing = @($app4Module03Files | Where-Object { -not (Test-Path -LiteralPath (Join-Path $app4Module03Root $_)) })
+if (-not (Test-Path -LiteralPath $app4Module03Spec) -or $app4Module03Missing.Count -gt 0) {
+    throw "APP-4 Module 03 is missing its specification or package files: $($app4Module03Missing -join ', ')."
+}
+$app4Module03SpecContent = Get-Content -Raw -Encoding UTF8 -LiteralPath $app4Module03Spec
+$app4Module03Readme = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $app4Module03Root 'README.md')
+$app4Module03Release = Get-Content -Raw -LiteralPath (Join-Path $app4Module03Root 'release.json') | ConvertFrom-Json
+$app4Module03Contract = Get-Content -Raw -LiteralPath (Join-Path $app4Module03Root 'decision-contract.json') | ConvertFrom-Json
+$app4Module03Report = Get-Content -Raw -LiteralPath (Join-Path $app4Module03Root 'data\evidence\build-report.json') | ConvertFrom-Json
+$app4Module03Performance = @(Import-Csv -LiteralPath (Join-Path $app4Module03Root 'data\evidence\performance.csv'))
+$app4Module03Calibration = @(Import-Csv -LiteralPath (Join-Path $app4Module03Root 'data\evidence\calibration.csv'))
+$app4Module03Thresholds = @(Import-Csv -LiteralPath (Join-Path $app4Module03Root 'data\evidence\threshold-audit.csv'))
+$app4Module03Subgroups = @(Import-Csv -LiteralPath (Join-Path $app4Module03Root 'data\evidence\subgroup-support.csv'))
+$app4Module03Bootstrap = @(Import-Csv -LiteralPath (Join-Path $app4Module03Root 'data\evidence\bootstrap-intervals.csv'))
+$app4Module03Invariants = @(Import-Csv -LiteralPath (Join-Path $app4Module03Root 'data\evidence\invariants.csv'))
+$app4Module03Sections = [regex]::Matches($app4Module03SpecContent, '(?m)^## \d+\.').Count
+$app4Module03ManifestRows = @{}
+foreach ($evidence in $app4Module03Manifest) { $app4Module03ManifestRows[$evidence.relative_path] = [int]$evidence.rows }
+$app4Module03ExpectedRows = [ordered]@{
+    'cohort-audit.csv.gz' = 14892; 'model-cohort.csv.gz' = 7544; 'predictions.csv.gz' = 7544;
+    'cohort-flow.csv' = 36; 'missingness.csv' = 32; 'survey-design.csv' = 3;
+    'model-coefficients.csv' = 4; 'performance.csv' = 6; 'calibration.csv' = 3;
+    'calibration-groups.csv' = 15; 'threshold-audit.csv' = 21; 'net-benefit.csv' = 63;
+    'subgroup-support.csv' = 48; 'bootstrap-intervals.csv' = 48;
+    'transport-comparison.csv' = 13; 'invariants.csv' = 20; 'build-report.json' = 1
+}
+$app4Module03ManifestRowsMatch = $true
+foreach ($entry in $app4Module03ExpectedRows.GetEnumerator()) {
+    if ($app4Module03ManifestRows[$entry.Key] -ne $entry.Value) { $app4Module03ManifestRowsMatch = $false }
+}
+$app4Module03HoldoutPerformance = @($app4Module03Performance | Where-Object { $_.partition -eq 'temporal_holdout' -and $_.model -eq 'transparent_weighted_logit' })[0]
+$app4Module03TransportPerformance = @($app4Module03Performance | Where-Object { $_.partition -eq 'transport_stress' -and $_.model -eq 'transparent_weighted_logit' })[0]
+$app4Module03HoldoutCalibration = @($app4Module03Calibration | Where-Object { $_.partition -eq 'temporal_holdout' })[0]
+$app4Module03TransportCalibration = @($app4Module03Calibration | Where-Object { $_.partition -eq 'transport_stress' })[0]
+$app4Module03Candidates = @($app4Module03Thresholds | Where-Object { $_.threshold_status -eq 'evidence candidate, not selected or accepted' } | Select-Object -ExpandProperty threshold | Sort-Object -Unique)
+$app4Module03Suppressed = @($app4Module03Subgroups | Where-Object { $_.support_status -eq 'suppress performance: support rule not met' })
+$app4Module03Checks = [ordered]@{
+    package_shape = ($app4Module03Files.Count -eq 62 -and $app4Module03Sections -eq 21)
+    evidence_shape = ($app4Module03Manifest.Count -eq 17 -and $app4Module03ManifestRowsMatch -and $app4Module03Performance.Count -eq 6 -and $app4Module03Calibration.Count -eq 3 -and $app4Module03Thresholds.Count -eq 21 -and $app4Module03Subgroups.Count -eq 48 -and $app4Module03Bootstrap.Count -eq 48 -and $app4Module03Invariants.Count -eq 20)
+    source_totals = ($app4Module03Report.source_files -eq 16 -and $app4Module03Report.source_component_rows -eq 145563 -and $app4Module03Report.source_gzip_bytes -eq 3149043 -and $app4Module03Report.age_eligible_rows -eq 14892 -and $app4Module03Report.model_rows -eq 7544 -and $app4Module03Report.model_events -eq 328)
+    partition_totals = ($app4Module03Report.partitions.development.rows -eq 3652 -and $app4Module03Report.partitions.development.events -eq 156 -and $app4Module03Report.partitions.temporal_holdout.rows -eq 1806 -and $app4Module03Report.partitions.temporal_holdout.events -eq 97 -and $app4Module03Report.partitions.transport_stress.rows -eq 2086 -and $app4Module03Report.partitions.transport_stress.events -eq 75)
+    holdout_performance = ($app4Module03HoldoutPerformance.weighted_prevalence -eq '0.02904272' -and $app4Module03HoldoutPerformance.weighted_mean_probability -eq '0.03015261' -and $app4Module03HoldoutPerformance.weighted_brier -eq '0.02811126' -and $app4Module03HoldoutPerformance.weighted_log_loss -eq '0.12694930' -and $app4Module03HoldoutPerformance.weighted_roc_auc -eq '0.68783144' -and $app4Module03HoldoutCalibration.calibration_in_the_large -eq '-0.03946013' -and $app4Module03HoldoutCalibration.calibration_slope -eq '0.88441129')
+    transport_performance = ($app4Module03TransportPerformance.weighted_prevalence -eq '0.03274014' -and $app4Module03TransportPerformance.weighted_mean_probability -eq '0.03041245' -and $app4Module03TransportPerformance.weighted_brier -eq '0.03175435' -and $app4Module03TransportPerformance.weighted_log_loss -eq '0.14019059' -and $app4Module03TransportPerformance.weighted_roc_auc -eq '0.68422573' -and $app4Module03TransportCalibration.calibration_in_the_large -eq '0.07788522' -and $app4Module03TransportCalibration.calibration_slope -eq '0.81620710')
+    threshold_contract = (($app4Module03Candidates -join ',') -eq '0.02000000,0.03000000,0.04000000,0.05000000,0.07500000,0.10000000' -and @($app4Module03Thresholds | Where-Object { $_.threshold_status -eq 'rejected Module 02 mechanics fixture' -and $_.threshold -eq '0.20000000' }).Count -eq 3 -and $null -eq $app4Module03Report.accepted_threshold)
+    subgroup_suppression = (@($app4Module03Subgroups | Where-Object { $_.partition -eq 'temporal_holdout' -and $_.support_status -eq 'report with boundary' }).Count -eq 8 -and @($app4Module03Subgroups | Where-Object { $_.partition -eq 'temporal_holdout' -and $_.support_status -like 'suppress*' }).Count -eq 8 -and @($app4Module03Subgroups | Where-Object { $_.partition -eq 'transport_stress' -and $_.support_status -eq 'report with boundary' }).Count -eq 5 -and @($app4Module03Subgroups | Where-Object { $_.partition -eq 'transport_stress' -and $_.support_status -like 'suppress*' }).Count -eq 11 -and @($app4Module03Suppressed | Where-Object { $_.weighted_brier -ne '' -or $_.weighted_roc_auc -ne '' }).Count -eq 0)
+    uncertainty = (@($app4Module03Bootstrap | Where-Object { $_.valid_replicates -ne '500' -or $_.requested_replicates -ne '500' -or $_.seed -ne '7400303' }).Count -eq 0)
+    invariants = (@($app4Module03Invariants | Where-Object { $_.status -ne 'pass' }).Count -eq 0)
+    plain_ascii = ($app4Module03SpecContent.IndexOf([char]0x2013) -lt 0 -and $app4Module03SpecContent.IndexOf([char]0x2014) -lt 0 -and $app4Module03Readme.IndexOf([char]0x2013) -lt 0 -and $app4Module03Readme.IndexOf([char]0x2014) -lt 0)
+    no_local_paths = (-not $app4Module03SpecContent.Contains(':\Users\') -and -not $app4Module03Readme.Contains(':\Users\'))
+    spec_contract = ($app4Module03SpecContent -match 'Module version: `0\.1\.0`' -and $app4Module03SpecContent -match 'Commons release: `0\.79\.0`' -and $app4Module03SpecContent -match '16\.5 hours' -and $app4Module03SpecContent -match '14,892' -and $app4Module03SpecContent -match '7,544' -and $app4Module03SpecContent -match '328 outcomes' -and $app4Module03SpecContent -match '102-row immutable manifest' -and $app4Module03SpecContent -match '15 assessed records' -and $app4Module03SpecContent -match '118 total files' -and $app4Module03SpecContent -match 'continue with conditions' -and $app4Module03SpecContent -match 'Checkpoint 01')
+    readme_contract = ($app4Module03Readme -match 'six candidate-threshold audits' -and $app4Module03Readme -match 'None is selected or accepted' -and $app4Module03Readme -match 'permits APP-4 Checkpoint 01 assembly with conditions' -and $app4Module03Readme -match 'does not yet permit Module 04 construction')
+    release_contract = ($app4Module03Release.module_version -eq '0.1.0' -and $app4Module03Release.commons_release -eq '0.79.0' -and $app4Module03Release.status -eq 'runnable release candidate' -and $app4Module03Release.hours -eq 16.5 -and $app4Module03Release.course_points -eq 20 -and $app4Module03Release.evidence.evidence_manifest_sha256 -eq 'b226b33cc0ba2cec0efe2a5046357b10431941e0c9e286f9be889de05321c9a3' -and $app4Module03Release.workspace.immutable_manifest_rows -eq 102 -and $app4Module03Release.workspace.editable_records -eq 15 -and $app4Module03Release.workspace.assembled_files -eq 118 -and $app4Module03Release.thresholds.candidate_count -eq 6 -and $null -eq $app4Module03Release.thresholds.accepted -and $app4Module03Release.reference_decision.progression -eq 'continue with conditions' -and $app4Module03Release.reference_decision.checkpoint01_permission -eq 'permitted for curriculum construction' -and $app4Module03Release.reference_decision.module04_permission -eq 'prohibited until Checkpoint 01 passes' -and $app4Module03Release.reference_decision.deployment -eq 'prohibited')
+    decision_contract = ($app4Module03Contract.assessment.points -eq 20 -and $app4Module03Contract.assessment.required_records -eq 15 -and $app4Module03Contract.assessment.noncompensable_gates -eq 12 -and $app4Module03Contract.model.holdout_or_transport_fit_rows -eq 0 -and $app4Module03Contract.uncertainty.replicates -eq 500 -and $app4Module03Contract.uncertainty.seed -eq 7400303 -and $null -eq $app4Module03Contract.thresholds.accepted -and $app4Module03Contract.progression.checkpoint01_permission -eq 'permitted for curriculum construction' -and $app4Module03Contract.progression.module04_permission -eq 'prohibited until Checkpoint 01 passes' -and $app4Module03Contract.authority.clinical_threshold_acceptance -eq 'prohibited' -and $app4Module03Contract.authority.deployment -eq 'prohibited')
+}
+$app4Module03Failures = @($app4Module03Checks.GetEnumerator() | Where-Object { -not $_.Value } | ForEach-Object { $_.Key })
+if ($app4Module03Failures.Count -gt 0) {
+    throw "APP-4 Module 03 0.1.0 contract checks failed: $($app4Module03Failures -join ', ')."
+}
+& python (Join-Path $app4Module03Root 'build_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 03 evidence builder self-check failed.' }
+& python (Join-Path $app4Module03Root 'build_evidence.py') --verify
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 03 evidence release verification failed.' }
+& python (Join-Path $app4Module03Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 03 workspace builder self-check failed.' }
+& python (Join-Path $app4Module03Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-4 Module 03 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -5566,3 +5661,4 @@ Write-Output "APP-3 final checkpoint passed: $app3Checkpoint03Sections contract 
 Write-Output "APP-4 course architecture passed: $app4Sections sections, $app4ModuleCount modules, $app4Hours hours, $app4CheckpointCount checkpoints, and $($app4XptUrls.Count) complete NHANES XPT routes."
 Write-Output "APP-4 Module 01 passed: $app4Module01Sections contract sections, $($app4Module01Files.Count) required files, $($app4Module01Sources.Count) complete XPT sources, and $($app4Module01Fields.Count) field records."
 Write-Output "APP-4 Module 02 passed: $app4Module02Sections contract sections, $($app4Module02Files.Count) required files, $app4Module02Rows FHIR resource rows, and $($app4Module02Cases.Count) rule cases."
+Write-Output "APP-4 Module 03 passed: $app4Module03Sections contract sections, $($app4Module03Files.Count) required files, $($app4Module03Report.model_rows) model rows, and $($app4Module03Report.model_events) outcomes."

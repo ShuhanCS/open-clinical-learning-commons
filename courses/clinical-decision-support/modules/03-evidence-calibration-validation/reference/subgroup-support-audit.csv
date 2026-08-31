@@ -1,0 +1,15 @@
+partition,dimension,group,rows,events,effective_n,support_status,decision,claim_limit
+temporal_holdout,recorded_sex,female,950,59,396.58002172,report with boundary,retain descriptive performance,source field is not gender identity or a treatment rule
+temporal_holdout,recorded_sex,male,856,38,338.51369819,report with boundary,retain descriptive performance,no group-specific threshold or action
+temporal_holdout,age_band,35-44,510,18,262.85288378,suppress performance,show denominator and outcomes only,fewer than 20 outcomes
+temporal_holdout,age_band,55-64,581,43,204.51406935,report with boundary,retain descriptive performance,no age-specific action
+temporal_holdout,bmi_band,40.0+,194,18,85.11438309,suppress performance,show denominator and outcomes only,fewer than 20 outcomes
+temporal_holdout,race_and_hispanic_origin,Non-Hispanic Black,458,33,354.18480967,report with boundary,retain descriptive performance,no trait fairness label or action
+temporal_holdout,race_and_hispanic_origin,Non-Hispanic White,553,8,333.47827525,suppress performance,show denominator and outcomes only,fewer than 20 outcomes
+transport_stress,recorded_sex,female,1155,40,779.21017724,report with boundary,retain descriptive performance,no group-specific threshold or action
+transport_stress,recorded_sex,male,931,35,617.92512277,report with boundary,retain descriptive performance,no group-specific threshold or action
+transport_stress,age_band,55-64,661,27,429.28129387,report with boundary,retain descriptive performance,no age-specific action
+transport_stress,bmi_band,25.0-29.9,956,16,632.54209072,suppress performance,show denominator and outcomes only,fewer than 20 outcomes
+transport_stress,race_and_hispanic_origin,Non-Hispanic White,1247,34,844.31639496,report with boundary,retain descriptive performance,no trait fairness label or action
+transport_stress,race_and_hispanic_origin,Other or multiracial,126,1,81.18944395,suppress performance,show denominator and outcomes only,fewer than 20 outcomes
+all,all prespecified groups,all groups,7544,328,not applicable,mixed support,read all 48 rows in subgroup-support.csv,unsupported estimates stay blank and no group-specific action is authorized

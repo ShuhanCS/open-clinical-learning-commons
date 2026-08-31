@@ -1,0 +1,4 @@
+partition,cycles,weight_source,analytic_weight_rule,rows,events,strata,psu_within_stratum,effective_n,weight_sum,pooling_status,claim_limit
+development,2013-2014|2015-2016,WTMEC2YR,WTMEC2YR / 2 per development cycle,3652,156,30,2,1992.06282318,82997841.57664450,pooled only for development,weighted teaching analysis pending named NHANES survey-methods review
+temporal_holdout,2017-2018,WTMEC2YR,WTMEC2YR,1806,97,15,2,730.02670353,87377608.55225027,kept separate,weighted teaching analysis pending named NHANES survey-methods review
+transport_stress,2021-2023,WTPH2YR,WTPH2YR,2086,75,15,2,1378.67389200,87480099.34025775,kept separate,weighted teaching analysis pending named NHANES survey-methods review

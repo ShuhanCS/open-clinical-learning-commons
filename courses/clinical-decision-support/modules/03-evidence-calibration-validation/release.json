@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app4-03",
+  "module_version": "0.1.0",
+  "commons_release": "0.79.0",
+  "status": "runnable release candidate",
+  "hours": 16.5,
+  "course_points": 20,
+  "source": {
+    "xpt_files": 16,
+    "component_rows": 145563,
+    "gzip_bytes": 3149043
+  },
+  "evidence": {
+    "age_eligible_rows": 14892,
+    "model_rows": 7544,
+    "model_events": 328,
+    "evidence_files_before_manifest": 17,
+    "evidence_manifest_sha256": "b226b33cc0ba2cec0efe2a5046357b10431941e0c9e286f9be889de05321c9a3"
+  },
+  "partitions": {
+    "development": {"rows": 3652, "events": 156},
+    "temporal_holdout": {"rows": 1806, "events": 97, "weighted_roc_auc": 0.68783144, "weighted_brier": 0.02811126},
+    "transport_stress": {"rows": 2086, "events": 75, "weighted_roc_auc": 0.68422573, "weighted_brier": 0.03175435}
+  },
+  "thresholds": {
+    "candidate_count": 6,
+    "module02_mock_status": "rejected mechanics fixture",
+    "accepted": null
+  },
+  "workspace": {
+    "immutable_manifest_rows": 102,
+    "editable_records": 15,
+    "assembled_files": 118
+  },
+  "reference_decision": {
+    "progression": "continue with conditions",
+    "checkpoint01_permission": "permitted for curriculum construction",
+    "module04_permission": "prohibited until Checkpoint 01 passes",
+    "clinical_threshold_acceptance": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_alerting": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, primary-care or endocrinology, biostatistics, calibration, NHANES survey-methods, clinical-informatics, equity, patient, accessibility, responsible-AI, and independent-reproduction review pending before alpha"
+}

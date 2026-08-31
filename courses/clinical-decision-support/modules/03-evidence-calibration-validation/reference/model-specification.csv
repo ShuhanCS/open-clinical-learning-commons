@@ -1,0 +1,11 @@
+element,specification,status,verification,claim_limit
+model_type,survey-weighted binomial GLM with logit link,fixed,build-report.json,transparent does not mean clinically valid
+fit_partition,NHANES 2013-2014 and 2015-2016 development rows only,fixed,3652 rows and 156 outcomes,no holdout or transport row enters fit
+intercept,coefficient -3.60085649,fixed,model-coefficients.csv,not a baseline clinical risk
+age,center at 50 and divide by 10 coefficient 0.10287215,fixed,model-coefficients.csv,association is not causal
+body_mass_index,center at 30 and divide by 5 coefficient 0.41904828,fixed,model-coefficients.csv,association is not causal
+female_indicator,1 for source-recorded female and 0 for source-recorded male coefficient -0.42667556,fixed,model-coefficients.csv,source coding is not gender identity or a treatment rule
+race_and_hispanic_origin,audit only and not a predictor,excluded,subgroup-support.csv,no group-specific coefficient or action
+missingness,no imputation,fixed,cohort-flow.csv and missingness.csv,complete-case analysis may select a different population
+retuning,none on temporal holdout or transport,prohibited,zero fit rows from both partitions,observed performance cannot trigger refit in this module
+coefficient_uncertainty,not released,pending,named complex-survey method review required,do not interpret point estimates as precise effects

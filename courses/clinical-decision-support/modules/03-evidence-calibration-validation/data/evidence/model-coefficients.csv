@@ -1,0 +1,5 @@
+term,coefficient,odds_ratio,coding,fit_partition,uncertainty_status,claim_limit
+const,-3.60085649,0.02730033,"intercept at age 50, BMI 30, and male indicator",NHANES 2013-2014 and 2015-2016 development evidence only,not released pending design-reviewed coefficient variance method,prediction-model term; not causal and not a clinical effect
+age_centered_per_10,0.10287215,1.10834970,age centered at 50 and divided by 10,NHANES 2013-2014 and 2015-2016 development evidence only,not released pending design-reviewed coefficient variance method,prediction-model term; not causal and not a clinical effect
+bmi_centered_per_5,0.41904828,1.52051377,BMI centered at 30 kg/m2 and divided by 5,NHANES 2013-2014 and 2015-2016 development evidence only,not released pending design-reviewed coefficient variance method,prediction-model term; not causal and not a clinical effect
+female_indicator,-0.42667556,0.65267527,1 for source-recorded female and 0 for source-recorded male,NHANES 2013-2014 and 2015-2016 development evidence only,not released pending design-reviewed coefficient variance method,prediction-model term; not causal and not a clinical effect

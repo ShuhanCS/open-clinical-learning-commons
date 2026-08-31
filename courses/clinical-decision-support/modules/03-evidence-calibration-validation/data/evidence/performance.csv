@@ -1,0 +1,7 @@
+partition,model,rows,events,effective_n,weighted_prevalence,weighted_mean_probability,weighted_brier,weighted_log_loss,weighted_roc_auc,claim_limit
+development,development_prevalence_baseline,3652,156,1992.06282318,0.02916349,0.02916349,0.02831298,0.13182226,0.50000000,historical public survey classification evidence; not local validity or clinical utility
+development,transparent_weighted_logit,3652,156,1992.06282318,0.02916349,0.02916349,0.02802258,0.12642281,0.68292125,historical public survey classification evidence; not local validity or clinical utility
+temporal_holdout,development_prevalence_baseline,1806,97,730.02670353,0.02904272,0.02916349,0.02819925,0.13139891,0.50000000,historical public survey classification evidence; not local validity or clinical utility
+temporal_holdout,transparent_weighted_logit,1806,97,730.02670353,0.02904272,0.03015261,0.02811126,0.12694930,0.68783144,historical public survey classification evidence; not local validity or clinical utility
+transport_stress,development_prevalence_baseline,2086,75,1378.67389200,0.03274014,0.02916349,0.03168102,0.14435926,0.50000000,historical public survey classification evidence; not local validity or clinical utility
+transport_stress,transparent_weighted_logit,2086,75,1378.67389200,0.03274014,0.03041245,0.03175435,0.14019059,0.68422573,historical public survey classification evidence; not local validity or clinical utility

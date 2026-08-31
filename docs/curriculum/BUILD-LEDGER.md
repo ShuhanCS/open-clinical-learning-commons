@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.78.0
+- Current release: 0.79.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-4 Module 02, decision support logic, triggers, and data
-- Next unit: APP-4 Module 02, decision support logic, triggers, and data
+- Last completed unit: APP-4 Module 03, evidence, calibration, and validation
+- Next unit: APP-4 Checkpoint 01, use-case, logic, and evidence release
 
 ## Confirmed decisions
 
@@ -594,6 +594,18 @@
 - Source, fixture, evaluator, builder, and validator checks pass. Mutated source, placeholders, copied answers, threshold authority, deployment authority, and missing assessed evidence are rejected.
 - The 20-point reference release is `continue with conditions`, permitting Module 03 historical evidence, calibration, and threshold analysis for curriculum construction only. Real-patient scoring, clinical alerting, implementation, and deployment remain prohibited.
 - APP-4 Module 02 is a runnable release candidate at Commons 0.78.0.
+- APP-4 Module 03 version 0.1.0 verifies all 16 inherited NHANES sources, totaling 145,563 component rows and 3,149,043 deterministic gzip bytes, before constructing historical evidence.
+- The fixed cohort includes nonpregnant adults ages 35 through 70 with BMI at least 25, no self-reported diabetes, observed HbA1c, and complete survey-design fields. No imputation is used.
+- The target is observed `LBXGH` at or above 6.5 percent. It is a laboratory cut point, not a diagnosis or confirmation of disease.
+- The release contains 14,892 age-eligible audit rows and 7,544 model rows with 328 outcomes: 3,652 development rows with 156 outcomes, 1,806 untouched temporal-holdout rows with 97 outcomes, and 2,086 separate transport-stress rows with 75 outcomes.
+- One survey-weighted binomial GLM with a logit link uses age centered at 50 per 10 years, BMI centered at 30 per 5 kg/m2, and a female indicator. Race and Hispanic origin are audit dimensions, not model predictors.
+- Temporal-holdout weighted prevalence is 0.02904272, Brier score is 0.02811126, ROC AUC is 0.68783144, calibration-in-the-large is -0.03946013, and calibration slope is 0.88441129.
+- Transport-stress weighted prevalence is 0.03274014, Brier score is 0.03175435, ROC AUC is 0.68422573, calibration-in-the-large is 0.07788522, and calibration slope is 0.81620710.
+- The evidence release has 17 fingerprinted files and manifest SHA-256 `b226b33cc0ba2cec0efe2a5046357b10431941e0c9e286f9be889de05321c9a3`. All 20 invariants pass.
+- All six evidence thresholds remain candidates. No threshold is accepted, and Module 02's `0.20` value is explicitly rejected as a mechanics fixture rather than imported as evidence.
+- The learner and reference workspaces each contain 118 files with a 102-row immutable manifest and 15 assessed records. Builders produce identical manifests, and validator checks reject mutation, copied answers, threshold acceptance, diagnostic claims, retuning, and deployment authority.
+- The 20-point reference release is `continue with conditions`, permitting Checkpoint 01 assembly for curriculum construction only. Module 04 remains prohibited until the cumulative checkpoint passes.
+- APP-4 Module 03 is a runnable release candidate at Commons 0.79.0.
 
 ## Pending confirmation
 
@@ -609,15 +621,17 @@
 - Independently review the 16 pinned APP-4 NHANES XPT files and their survey-methods interpretation.
 - Confirm APP-4's clinical target, predictors, exclusions, units, threshold candidates, confirmatory-action wording, survey-design treatment, and subgroup plan with qualified clinical and methods reviewers.
 - Complete named clinical, interoperability, terminology, safety, privacy, accessibility, responsible-AI, and independent review of the APP-4 Module 02 Synthea and Commons release before alpha.
+- Complete named primary-care or endocrinology, biostatistics, calibration, NHANES survey-methods, clinical-informatics, equity, patient, accessibility, responsible-AI, and independent-reproduction review of APP-4 Module 03 before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-4 course specification, source record, Module 01 and Module 02 specifications, and complete accepted releases before building Module 03.
-2. Freeze the 29 immutable Module 01 files and 73 immutable Module 02 files, including the exact public and synthetic source chains of custody.
-3. Define the historical target, eligibility, exclusions, predictors, information cutoff, missing-input rules, and survey-design treatment without importing the mock score or threshold as evidence.
-4. Fit the transparent historical model only on the declared development cycles, then evaluate temporal holdout, later-cycle transport, calibration, candidate thresholds, decision tradeoffs, and subgroup support.
-5. Preserve Module 02 hook, logic, reason, terminology, event-time, failure, and authority contracts. Return to Module 02 if an evidence-driven change invalidates them.
-6. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 03 before assembling the Week 3 checkpoint.
+1. Read the APP-4 course specification and the complete accepted Module 02 and Module 03 releases before assembling Checkpoint 01.
+2. Freeze the accepted 73-row Module 02 and 102-row Module 03 immutable manifests without rebuilding or silently changing their evidence.
+3. Carry the 20-point logic component and the 20-point evidence component into the cumulative checkpoint exactly once for a 40-point Week 3 decision.
+4. Re-run the Module 02 and Module 03 release verifiers from the cumulative workspace and reject any source, fixture, model, partition, threshold, or authority drift.
+5. Preserve the decision that no clinical threshold is accepted. Checkpoint 01 may decide only whether curriculum construction continues with the declared conditions.
+6. Permit Module 04 only after the complete Week 3 reference checkpoint passes all noncompensable gates.
+7. Advance semver, validate the complete curriculum, commit, push, and remote-verify Checkpoint 01 before building Module 04.

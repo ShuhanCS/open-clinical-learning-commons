@@ -1,0 +1,5 @@
+partition,cycles,weight_rule,strata_psu,rows,events,decision,limit
+development,2013-2014 and 2015-2016,WTMEC2YR divided by 2 within each cycle,SDMVSTRA and SDMVPSU retained,3652,156,fit fixed model only,coefficient variance method still needs named survey-methods review
+temporal_holdout,2017-2018,cycle-specific WTMEC2YR,SDMVSTRA and SDMVPSU retained,1806,97,evaluate once without tuning,one cycle does not prove future or local performance
+transport_stress,August 2021-August 2023,cycle-specific WTPH2YR phlebotomy weight,SDMVSTRA and SDMVPSU retained,2086,75,keep separate and describe change,do not pool or assign a cause
+uncertainty,holdout and transport,analytic weights with 500 stratified-PSU sensitivity replicates,seed 7400303,48,48,all requested metric intervals reproduced,teaching method is not an NCHS-endorsed publication variance estimator

@@ -1,0 +1,8 @@
+threshold,status,holdout_flags_per_1000,holdout_sensitivity,holdout_specificity,holdout_ppv,holdout_missed_per_1000,reference_decision,claim_limit
+0.02000000,evidence candidate not selected or accepted,661.57323641,0.89675075,0.34546126,0.03936689,2.99863880,retain for cumulative comparison,large candidate-card burden and no patient-benefit evidence
+0.03000000,evidence candidate not selected or accepted,325.40301123,0.60091129,0.68283783,0.05363225,11.59062056,retain for cumulative comparison,tradeoff requires human consequence review
+0.04000000,evidence candidate not selected or accepted,172.19709642,0.36288643,0.83350669,0.06120433,18.50350918,retain for cumulative comparison,tradeoff requires human consequence review
+0.05000000,evidence candidate not selected or accepted,105.90526558,0.22855075,0.89776324,0.06267615,22.40498219,retain for cumulative comparison,tradeoff requires human consequence review
+0.07500000,evidence candidate not selected or accepted,36.68485865,0.06348936,0.96411690,0.05026334,27.19881351,retain for cumulative comparison,low sensitivity prevents unqualified progression
+0.10000000,evidence candidate not selected or accepted,17.08750038,0.03841504,0.98355044,0.06529200,27.92703988,retain for cumulative comparison,low sensitivity prevents unqualified progression
+0.20000000,rejected Module 02 mechanics fixture,3.33598651,0.01149340,0.99690801,0.10006020,28.70891753,reject as evidence candidate,transport captures zero weighted outcomes and mechanics never created authority

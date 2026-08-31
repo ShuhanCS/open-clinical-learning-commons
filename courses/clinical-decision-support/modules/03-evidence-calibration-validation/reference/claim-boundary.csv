@@ -1,0 +1,13 @@
+claim_id,claim,status,evidence,required_next_evidence,human_owner
+CL01,The release reproduces historical NHANES classification evidence.,allowed,17 derived evidence files and 20 passing invariants,independent clean reproduction,methods owner
+CL02,The fixed model has weighted holdout ROC AUC 0.68783144.,allowed,performance.csv and bootstrap-intervals.csv,named calibration and survey-methods review,methods owner
+CL03,All six candidate thresholds have reproducible historical tradeoffs.,allowed,threshold-audit.csv and net-benefit.csv,clinical consequence and workflow review,clinical governance council
+CL04,One NHANES HbA1c result diagnoses diabetes.,prohibited,target is an observed cut-point indicator only,clinical diagnostic evaluation outside course,qualified clinician
+CL05,The model is locally valid for CGH-GIM-01.,prohibited,NHANES is not the fictional service,approved local prospective evaluation,local governance council
+CL06,The model has stable transport because AUC values are similar.,prohibited,calibration burden support and intervals also differ,external and local validation,methods owner
+CL07,The 0.20 Module 02 value is an evidence threshold.,prohibited,it is a rejected mechanics fixture,human-reviewed evidence candidate process,clinical governance council
+CL08,A candidate threshold is clinically selected or accepted.,prohibited,accepted threshold is null,clinical patient workflow safety and governance review,clinical governance council
+CL09,Reported subgroup differences are traits or justify group action.,prohibited,subgroup rows are descriptive and often suppressed,adequately supported equity review,equity and patient reviewers
+CL10,Positive net benefit proves patient benefit.,prohibited,threshold odds are hypothetical,prospective patient-centered evaluation,clinical and patient owners
+CL11,The package may enter Week 3 checkpoint assembly.,allowed,reference progression is continue with conditions,passing cumulative checkpoint,APP-4 faculty owner
+CL12,The package authorizes real-patient scoring alerting action implementation or deployment.,prohibited,curriculum authority excludes every live-use route,local approval outside course,local governance council

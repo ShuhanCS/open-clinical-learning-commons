@@ -1,0 +1,40 @@
+schema_version: 1.0.0
+record_id: APP4-M03-NHANES-EVIDENCE-2026-08-31-v1
+title: APP-4 Module 03 historical evidence release
+status: public historical teaching evidence only
+retrieved_source_release: 2026-08-30
+module_release: 2026-08-31
+sources:
+  - name: NHANES continuous survey portal
+    url: https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/
+  - name: NHANES weighting tutorial
+    url: https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx
+  - name: NHANES August 2021-August 2023 analytic overview
+    url: https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/OverviewBrief.aspx?Cycle=2021-2023
+  - name: NHANES August 2021-August 2023 glycohemoglobin documentation
+    url: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/GHB_L.htm
+  - name: USPSTF prediabetes and type 2 diabetes screening recommendation
+    url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-for-prediabetes-and-type-2-diabetes
+  - name: NIDDK diabetes and prediabetes tests
+    url: https://www.niddk.nih.gov/health-information/professionals/clinical-tools-patient-management/diabetes/diabetes-prediabetes
+inherited_public_release:
+  files: 16
+  cycles: 4
+  component_rows: 145563
+  gzip_bytes: 3149043
+derived_release:
+  evidence_files_before_manifest: 17
+  evidence_manifest_sha256: b226b33cc0ba2cec0efe2a5046357b10431941e0c9e286f9be889de05321c9a3
+  age_eligible_rows: 14892
+  model_rows: 7544
+  model_events: 328
+rights: U.S. federal public data; retain source attribution and cycle-specific documentation
+privacy: Public-use NHANES respondent identifiers only; no local patient, employee, credential, or protected data
+claim_limits:
+  - The cohort is a teaching construct and not a complete clinical screening policy.
+  - One HbA1c value at or above 6.5 percent is not a diagnosis or confirmed disease.
+  - NHANES does not establish local prevalence, prospective validity, workflow fit, utility, safety, fairness, or benefit.
+  - The 2021-2023 release is a separate transport stress test and is not pooled with earlier cycles.
+  - The bootstrap is a teaching sensitivity method pending formal complex-survey review.
+  - No candidate threshold is clinically selected or accepted.
+  - No artifact authorizes real-patient scoring, clinical alerting, implementation, or deployment.

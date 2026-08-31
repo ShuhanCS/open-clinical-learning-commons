@@ -1,0 +1,10 @@
+element,reference_contract,evidence,owner,status,claim_limit
+population,nonpregnant adults ages 35 through 70 with BMI at least 25 and no self-reported diabetes,USPSTF-aligned teaching frame,clinical content reviewer,candidate accepted for curriculum construction,not a complete local screening policy
+age,RIDAGEYR from 35 through 70 inclusive,14892 age-eligible audit rows,methods owner,accepted,age range does not establish individual need
+body_mass_index,BMXBMI observed and at least 25 kg/m2,explicit cohort flow and no imputation,clinical and methods owners,candidate accepted,one BMI rule may exclude people who warrant screening
+diabetes_history,DIQ010 equals 2 for no self-reported diabetes,questionnaire route in every cycle,clinical content reviewer,candidate accepted,self-report is not a local problem list
+pregnancy,exclude pregnant and unknown states when RIDEXPRG applies,cycle-specific flow counts,clinical content reviewer,candidate accepted,not-applicable differs from missing
+outcome,LBXGH at or above 6.5 percent,328 observed outcomes in 7544 model rows,clinical and methods owners,candidate accepted for historical analysis,one result is not diagnosis or confirmed disease
+information_cutoff,age sex BMI and history are the only declared pre-result fields,no HbA1c-derived predictor,methods owner,accepted,NHANES timing does not prove local event-time availability
+missingness,no imputation and every exclusion remains counted,cohort-flow.csv and missingness.csv,methods owner,accepted,complete-case results may differ from excluded people
+clinical_action,none in this module,no patient-level output or clinical order,clinical governance council,prohibited,historical evidence cannot authorize care

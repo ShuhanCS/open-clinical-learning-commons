@@ -1,0 +1,12 @@
+measure,temporal_holdout,transport_stress,change,interpretation,prohibited_inference
+weight,WTMEC2YR,WTPH2YR,phlebotomy weight required in later release,preserve cycle-specific analytic guidance,do not pool weights
+rows,1806,2086,280 more model rows,report exact support only,do not call this improved representativeness
+events,97,75,22 fewer observed outcomes,report exact support only,do not assign a population cause
+weighted_prevalence,0.02904272,0.03274014,0.00369742 higher,describe without causal explanation,do not call this local drift
+weighted_mean_probability,0.03015261,0.03041245,0.00025984 higher,compare with observed prevalence,do not claim successful transport
+weighted_brier,0.02811126,0.03175435,0.00364309 higher,retain as stress evidence,do not rank cycles as quality
+weighted_log_loss,0.12694930,0.14019059,0.01324129 higher,retain as stress evidence,do not retune here
+weighted_roc_auc,0.68783144,0.68422573,-0.00360571 lower,intervals overlap broadly,do not claim equivalence
+calibration_in_the_large,-0.03946013,0.07788522,0.11734535 higher,describe direction and uncertainty,do not recalibrate here
+calibration_slope,0.88441129,0.81620710,-0.06820419 lower,describe direction and uncertainty,do not assign a laboratory or pandemic cause
+candidate_flag_rate,see all six rows in transport-comparison.csv,see all six rows in transport-comparison.csv,threshold-dependent,carry every candidate to workflow review,do not choose one from burden alone

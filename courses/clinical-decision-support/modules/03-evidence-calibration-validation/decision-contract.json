@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app4-03",
+    "title": "Evidence, calibration, and validation",
+    "version": "0.1.0",
+    "commons_release": "0.79.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "week": 3,
+    "hours": 16.5,
+    "course_points": 20
+  },
+  "decision": {
+    "owner": "CGH-GIM-01 clinical decision support governance council",
+    "question": "Does the historical evidence justify assembling the Week 3 release and continuing toward workflow evaluation under stated limits?",
+    "permitted_next_action": "assemble APP-4 Checkpoint 01 for curriculum review"
+  },
+  "public_release": {
+    "complete_xpt_files": 16,
+    "source_component_rows": 145563,
+    "source_gzip_bytes": 3149043,
+    "age_eligible_audit_rows": 14892,
+    "model_rows": 7544,
+    "model_events": 328,
+    "evidence_files_before_manifest": 17,
+    "evidence_manifest_sha256": "b226b33cc0ba2cec0efe2a5046357b10431941e0c9e286f9be889de05321c9a3"
+  },
+  "cohort": {
+    "age": "35 through 70",
+    "bmi": "at least 25 kg/m2",
+    "diabetes_history": "DIQ010 equals 2 for no self-reported diabetes",
+    "pregnancy": "nonpregnant or not applicable; pregnant and unknown states excluded",
+    "missingness": "no imputation",
+    "target": "LBXGH at or above 6.5 percent; observed result, not diagnosis"
+  },
+  "partitions": {
+    "development": {"cycles": ["2013-2014", "2015-2016"], "rows": 3652, "events": 156, "weight": "WTMEC2YR divided by 2"},
+    "temporal_holdout": {"cycles": ["2017-2018"], "rows": 1806, "events": 97, "weight": "WTMEC2YR", "retuning": "prohibited"},
+    "transport_stress": {"cycles": ["2021-2023"], "rows": 2086, "events": 75, "weight": "WTPH2YR", "pooling": "prohibited"}
+  },
+  "model": {
+    "type": "survey-weighted binomial GLM with logit link",
+    "predictors": ["age centered at 50 per 10 years", "BMI centered at 30 per 5 kg/m2", "female indicator"],
+    "race_and_hispanic_origin": "audit only, not a predictor",
+    "holdout_or_transport_fit_rows": 0
+  },
+  "thresholds": {
+    "evidence_candidates": [0.02, 0.03, 0.04, 0.05, 0.075, 0.10],
+    "module02_mock": "0.20 rejected mechanics fixture",
+    "accepted": null,
+    "agent_selection": "prohibited"
+  },
+  "uncertainty": {
+    "method": "stratified PSU sensitivity bootstrap with fixed predictions",
+    "replicates": 500,
+    "seed": 7400303,
+    "status": "teaching method pending formal complex-survey review"
+  },
+  "assessment": {
+    "points": 20,
+    "required_records": 15,
+    "noncompensable_gates": 12
+  },
+  "workspace": {
+    "immutable_manifest_rows": 102,
+    "editable_records": 15,
+    "assembled_files": 118
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "checkpoint01_permission": "permitted for curriculum construction",
+    "module04_permission": "prohibited until Checkpoint 01 passes"
+  },
+  "authority": {
+    "diagnosis": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  }
+}

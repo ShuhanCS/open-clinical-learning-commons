@@ -1,0 +1,70 @@
+{
+  "accepted_threshold": null,
+  "age_eligible_rows": 14892,
+  "authority": {
+    "clinical_alerting": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "deployment": "prohibited",
+    "diagnosis": "prohibited",
+    "implementation": "prohibited",
+    "real_patient_scoring": "prohibited"
+  },
+  "bootstrap": {
+    "method": "stratified PSU sensitivity bootstrap with fixed predictions",
+    "replicates": 500,
+    "seed": 7400303
+  },
+  "candidate_thresholds": [
+    "0.02000000",
+    "0.03000000",
+    "0.04000000",
+    "0.05000000",
+    "0.07500000",
+    "0.10000000"
+  ],
+  "development_prevalence_baseline": "0.02916349",
+  "model": "survey-weighted binomial GLM with logit link; age, BMI, and female indicator",
+  "model_coefficients": {
+    "age_centered_per_10": "0.10287215",
+    "bmi_centered_per_5": "0.41904828",
+    "const": "-3.60085649",
+    "female_indicator": "-0.42667556"
+  },
+  "model_events": 328,
+  "model_rows": 7544,
+  "module02_mock_threshold": {
+    "status": "rejected mechanics fixture; not an evidence candidate",
+    "value": "0.20000000"
+  },
+  "partitions": {
+    "development": {
+      "events": 156,
+      "rows": 3652
+    },
+    "temporal_holdout": {
+      "events": 97,
+      "rows": 1806
+    },
+    "transport_stress": {
+      "events": 75,
+      "rows": 2086
+    }
+  },
+  "release_id": "APP4-M03-NHANES-EVIDENCE-2026-08-31-v1",
+  "schema_version": "1.0.0",
+  "source_component_rows": 145563,
+  "source_files": 16,
+  "source_gzip_bytes": 3149043,
+  "status": "historical public teaching evidence only",
+  "target": "LBXGH at or above 6.5 percent; observed laboratory result, not diagnosis",
+  "temporal_holdout": {
+    "weighted_brier": "0.02811126",
+    "weighted_prevalence": "0.02904272",
+    "weighted_roc_auc": "0.68783144"
+  },
+  "transport_stress": {
+    "weighted_brier": "0.03175435",
+    "weighted_prevalence": "0.03274014",
+    "weighted_roc_auc": "0.68422573"
+  }
+}
