@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_id": "FMA-DP-01",
+  "candidate": "fictional voluntary diabetes-prevention access and navigation program",
+  "starting_rule": "community-review comparison carried only as the least unacceptable fictional planning candidate",
+  "fictional_resource": {"tracts": 28, "places_per_tract": 10, "places_total": 280},
+  "population": "adults represented through accepted area-level planning evidence only",
+  "delivery": "accessible information, voluntary response, navigation, accessible group or remote support, feedback, incident review, and named pause and stop rights",
+  "monitoring_measures": 20,
+  "automatic_action": false,
+  "effect_estimate": false,
+  "owners": [
+    "population health clinical lead",
+    "program operations owner",
+    "language access owner",
+    "disability access owner",
+    "community accountability owner",
+    "safety and privacy owner",
+    "monitoring owner",
+    "program steward"
+  ],
+  "prohibited": [
+    "personal eligibility",
+    "real outreach",
+    "funding or allocation",
+    "service delivery",
+    "intervention effect estimation",
+    "implementation",
+    "production connection",
+    "deployment"
+  ]
+}

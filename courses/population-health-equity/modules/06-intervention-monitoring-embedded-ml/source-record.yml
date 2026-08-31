@@ -1,0 +1,25 @@
+source_id: fma-dp-01-monitoring-dry-run-v1
+title: APP-5 Module 06 fictional intervention monitoring dry run
+version: 0.1.0
+seed: 73056
+records: 280
+license: CC0-1.0 for the generated fictional teaching source
+generator: generate_monitoring_fixture.py
+upstream_public_context:
+  source: CDC PLACES 2025 modeled tract estimates carried from the accepted Module 05 handoff
+  role: area-level context only
+  generated_fields_dependency: none
+synthetic_role: software and governance testing only
+contains_people: false
+contains_observed_services: false
+contains_clinical_outcomes: false
+contains_community_input: false
+authorizes_action: false
+identity:
+  manifest_sha256: d6e09f0e57d4890300d44bf48fcf1be34f52698af05a0934c62e25926f6622cd
+  dry_run_sha256: 067ac19e07eb8db3a48373d063e77a5b898d63a65b83f7e27504fba8beacdcda
+limitations:
+  - Not a participant, patient, encounter, service, outcome, or implementation dataset.
+  - Threshold results are teaching triggers rather than validated clinical or operational standards.
+  - No intervention effect can be estimated because outcomes are intentionally unavailable.
+  - No real need, consent, eligibility, outreach, allocation, service, or deployment conclusion is permitted.

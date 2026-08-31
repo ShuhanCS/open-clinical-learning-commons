@@ -1,0 +1,16 @@
+claim_id,claim,status,evidence,required_wording,prohibited_wording
+C01,The source contains 280 deterministic fictional tests,permitted,source manifest and reconciliation,fictional software and governance tests,participants or patients
+C02,The intervention design has six monitoring triggers,permitted,monitoring-results.csv,human review triggers,clinical failures
+C03,Five selected areas are staff-not-ready in the fictional layer,permitted,intervention-readiness.csv,fictional staff-not-ready conditions,real staffing shortage
+C04,Twelve selected areas have high fictional travel,permitted,intervention-readiness.csv,fictional travel concerns,real access deserts
+C05,The design is complete enough for checkpoint review,permitted,34 gates and progression record,curriculum package readiness,implementation readiness
+C06,The intervention is effective,prohibited,outcomes unavailable,no effect estimate,effective or improved outcomes
+C07,The 28 tracts need the intervention,prohibited,area context cannot prove need,carried fictional planning candidate,high-need communities
+C08,The selected communities consented,prohibited,no real community input,no consent claim,community approved or consented
+C09,The clusters identify population types,prohibited,area-profile challenger only,descriptive area-profile clusters,types of people
+C10,The challenger is useful,prohibited,scaling and coverage standards fail,rejected as not useful,validated or actionable model
+C11,The model changed the transparent selection,prohibited,selected review preserves all rows,no selection change,ML-optimized targeting
+C12,Monitoring thresholds can trigger action automatically,prohibited,measure contract requires humans,human review only,automatic outreach or enrollment
+C13,APP-6 may later estimate a defined effect,permitted,evaluation proposal,prospective causal design only,current causal finding
+C14,The package may enter Week 6 checkpoint construction,permitted,progression decision,checkpoint construction with conditions,course completion
+C15,Real implementation or deployment is authorized,prohibited,authority contract,no real-world authority,ready to deploy

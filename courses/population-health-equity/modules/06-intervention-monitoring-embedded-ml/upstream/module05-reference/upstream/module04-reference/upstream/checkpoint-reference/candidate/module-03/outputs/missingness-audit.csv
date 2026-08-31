@@ -1,0 +1,6 @@
+field_id,eligible_records,missing_records,missing_percent,capture_state,interpretation_limit
+race,283614,6000,2.1155514185,generated_missingness_present,generated field completeness describes the synthetic event layer only
+ethnicity,283614,7578,2.6719414415,generated_missingness_present,generated field completeness describes the synthetic event layer only
+primary_language,283614,5314,1.873673373,generated_missingness_present,generated field completeness describes the synthetic event layer only
+disability_status,283614,8376,2.9533097802,generated_missingness_present,generated field completeness describes the synthetic event layer only
+tract_geography,283614,0,0,conditioned_on_linked_analytic_universe,zero missingness follows the accepted tract-linked input and does not measure records excluded before linkage

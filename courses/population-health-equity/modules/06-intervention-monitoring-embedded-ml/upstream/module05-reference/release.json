@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app5-05",
+  "module_version": "0.1.0",
+  "commons_release": "0.92.0",
+  "status": "runnable release candidate",
+  "hours": 16.0,
+  "course_points": 15,
+  "week6_checkpoint_points_after_acceptance": 25,
+  "upstream_handoff": {
+    "module_id": "oclc-app5-04",
+    "module_version": "0.1.0",
+    "commons_release": "0.91.0",
+    "reference_files": 287,
+    "manifest_bytes": 59768,
+    "manifest_sha256": "0670760f650e0d13cfd4c5dc85ab26fdce5779cc86d35b3d3c27d6a3cc7738dd"
+  },
+  "synthetic_source": {
+    "source_id": "fma-dp-01-fictional-planning-v1",
+    "rows": 1597,
+    "seed": 73055,
+    "manifest_sha256": "a9a9cd10e67164cd8c47df667f2e559f17f8baa0e2308740ce4c9d9e675c0319",
+    "planning_layer_sha256": "b9ce228fc824ec7c62bbede5fcd8459722b328fc39fa5215036c6e924f562aed",
+    "independent_of_public_prevalence": true
+  },
+  "targeting_release": {
+    "candidate_tracts": 1597,
+    "rules": 4,
+    "assignment_rows": 6388,
+    "fictional_places_per_rule": 280,
+    "awards_per_rule": 28,
+    "county_consequence_rows": 56,
+    "group_consequence_rows": 76,
+    "overlap_rows": 6,
+    "sensitivity_variants": 20,
+    "sensitivity_shortfalls": 2,
+    "query_checks": 40,
+    "outputs": 10
+  },
+  "rule_findings": {
+    "equal_geographic": {"selected_counties": 14, "limited_support": 1, "language_access_gaps": 11, "disability_access_gaps": 9, "high_travel": 9, "high_burden": 6, "unresolved_objections": 2},
+    "need_based": {"selected_counties": 7, "limited_support": 26, "language_access_gaps": 7, "disability_access_gaps": 8, "high_travel": 7, "high_burden": 9, "unresolved_objections": 1},
+    "capacity_aware": {"selected_counties": 8, "limited_support": 0, "language_access_gaps": 0, "disability_access_gaps": 0, "high_travel": 6, "high_burden": 0, "unresolved_objections": 1},
+    "community_review": {"selected_counties": 11, "limited_support": 0, "language_access_gaps": 0, "disability_access_gaps": 0, "high_travel": 12, "high_burden": 1, "unresolved_objections": 0}
+  },
+  "output_identity": {
+    "build_report_sha256": "d2b2621c6b97365fb9751902d7c1eac091567d6d8f2e5b5188fc4f4bafaa700a",
+    "assignments_sha256": "33f502587ff16b291ddadd83a6ba96600616d84837d86e4bff3c467808b568ce",
+    "summary_sha256": "e0c3743fd00da6512a7e7843fc2e7b901b01419fa2c6715b26958894f66551c8",
+    "sensitivity_sha256": "97181653260ea933d08415ad5e3de20a4f728315b090ec87d80bf3e120939ada"
+  },
+  "workspace": {
+    "learner_files": 330,
+    "learner_manifest_rows": 308,
+    "reference_files": 340,
+    "reference_manifest_rows": 318,
+    "editable_records": 17,
+    "editable_sql_files": 4
+  },
+  "validation": {
+    "complete_checks": 2406,
+    "starter_checks": 2230,
+    "protected_failure_routes": 24,
+    "copied_answer_rejected": true,
+    "complete_mode_starter_rejected": true,
+    "two_upstream_freezes_match": true,
+    "two_source_generations_match": true,
+    "two_targeting_builds_match": true,
+    "two_reference_workspaces_match": true
+  },
+  "reference_decision": {
+    "score": 15,
+    "gates_passed": 26,
+    "progression": "continue with conditions",
+    "module06_permission": "permitted for curriculum construction",
+    "week6_checkpoint_permission": "not yet; Module 06 must pass first",
+    "planning_candidate": "community-review rule as the least unacceptable fictional planning candidate",
+    "automatic_rule_use": "prohibited",
+    "real_priority_or_eligibility": "prohibited",
+    "outreach": "prohibited",
+    "allocation_or_funding": "prohibited",
+    "real_community_action": "prohibited",
+    "service_delivery": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, population-health clinical, epidemiology, biostatistics, equity, community, language-access, disability-access, privacy, accessibility, resource-governance, responsible-AI, and independent-reproduction review required before alpha"
+}

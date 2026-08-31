@@ -1,0 +1,5 @@
+cluster_id,tracts,counties,limited_support_tracts,community_review_selected_tracts,mean_modeled_crude_prevalence_percent,mean_interval_width_percentage_points,mean_log1p_places_adult_population_field,mean_fictional_capacity_places,mean_fictional_travel_minutes,mean_fictional_delivery_burden_score,mean_fictional_language_access_ready,mean_fictional_disability_access_ready,mean_fictional_staff_readiness,interpretation_limit
+C01,673,14,0,16,8.433284,2.404903,8.173013,18.915305,42.157504,3.052006,1,1,0.600297,"descriptive area-profile summary, not an individual or causal group"
+C02,267,14,0,0,9.290637,2.631835,8.159403,20.93633,40.689139,2.902622,0,1,0.629213,"descriptive area-profile summary, not an individual or causal group"
+C03,328,14,0,0,9.615549,2.720122,8.145054,19.573171,43.021341,2.945122,0.722561,0,0.585366,"descriptive area-profile summary, not an individual or causal group"
+C04,329,13,0,12,13.331307,3.489362,7.843173,22.887538,43.887538,2.972644,0.930091,0.954407,0.568389,"descriptive area-profile summary, not an individual or causal group"

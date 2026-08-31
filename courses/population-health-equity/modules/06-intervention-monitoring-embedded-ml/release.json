@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app5-06",
+  "module_version": "0.1.0",
+  "commons_release": "0.93.0",
+  "status": "runnable release candidate",
+  "hours": 16.0,
+  "intervention_monitoring_hours": 8.0,
+  "embedded_ml_hours": 8.0,
+  "course_points": 0,
+  "week6_checkpoint_points_after_acceptance": 25,
+  "upstream_handoff": {
+    "module_id": "oclc-app5-05",
+    "module_version": "0.1.0",
+    "commons_release": "0.92.0",
+    "reference_files": 340,
+    "manifest_bytes": 76008,
+    "manifest_sha256": "0ab8cc15d252ef91436aa1b281f316e4eb21115aefc668a0930d04c90397a828"
+  },
+  "synthetic_source": {
+    "source_id": "fma-dp-01-monitoring-dry-run-v1",
+    "rows": 280,
+    "seed": 73056,
+    "manifest_sha256": "d6e09f0e57d4890300d44bf48fcf1be34f52698af05a0934c62e25926f6622cd",
+    "dry_run_sha256": "067ac19e07eb8db3a48373d063e77a5b898d63a65b83f7e27504fba8beacdcda",
+    "independent_of_public_prevalence": true,
+    "outcomes_available": false
+  },
+  "intervention_release": {
+    "candidate": "fictional voluntary diabetes-prevention access and navigation program",
+    "selected_tracts": 28,
+    "fictional_places": 280,
+    "staff_not_ready": 5,
+    "high_travel": 12,
+    "high_burden": 1,
+    "monitoring_measures": 20,
+    "monitoring_triggers": 6,
+    "objection_tests": 14,
+    "incident_tests": 23,
+    "implementation_readiness": "not ready for real implementation"
+  },
+  "challenger_release": {
+    "library": "scikit-learn==1.9.0",
+    "algorithm": "KMeans",
+    "candidate_rows": 1597,
+    "features": 9,
+    "clusters": 4,
+    "seed": 73056,
+    "n_init": 20,
+    "variants": 8,
+    "base_smallest_cluster": 267,
+    "alternate_seed_minimum_ari": 0.893633,
+    "scaling_variant_median_ari": 0.11995481449421869,
+    "selected_clusters": 2,
+    "stable_for_bounded_questions": false,
+    "accepted_use": "not useful; preserve transparent community-review rule only"
+  },
+  "output_identity": {
+    "build_report_sha256": "f53dc9a5b3274ee33917a3f78d1b0152f1dcaca232bc07de3b39045e5246f6f7",
+    "cluster_assignments_sha256": "442afe63bd7c9b8b8ae5ab791f525c0e8f06267b0b9438f04690ba86b7b38e51",
+    "monitoring_results_sha256": "39d07363b2154758f52837fb6f374935a0fb9eec6f056ebfad2203bfda6346eb",
+    "challenger_stability_sha256": "cc8fcd6a20f33151426300b1598063ce555d84a1d0e1fedaad21d18065a9f01e"
+  },
+  "workspace": {
+    "learner_files": 389,
+    "learner_manifest_rows": 363,
+    "reference_files": 403,
+    "reference_manifest_rows": 377,
+    "editable_records": 21,
+    "editable_sql_files": 4
+  },
+  "validation": {
+    "complete_checks": 1269,
+    "starter_checks": 1144,
+    "protected_failure_routes": 14,
+    "copied_answer_rejected": true,
+    "complete_mode_starter_rejected": true,
+    "two_upstream_freezes_match": true,
+    "two_source_generations_match": true,
+    "two_analysis_builds_match": true,
+    "two_reference_workspaces_match": true
+  },
+  "reference_decision": {
+    "gates_passed": 34,
+    "progression": "continue with conditions to separate Week 6 checkpoint construction",
+    "module04_points_carried": 10,
+    "module05_points_carried": 15,
+    "module06_points_added": 0,
+    "week6_checkpoint_points": 25,
+    "intervention_ready_for_real_use": false,
+    "challenger_accepted": false,
+    "module07_permission": "not yet; the separate Week 6 checkpoint must pass first",
+    "automatic_action": "prohibited",
+    "effect_estimation": "prohibited in Module 06",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, population-health clinical, implementation, epidemiology, biostatistics, causal, equity, community, language-access, disability-access, privacy, accessibility, safety, responsible-AI, resource-governance, and independent-reproduction review required before alpha"
+}

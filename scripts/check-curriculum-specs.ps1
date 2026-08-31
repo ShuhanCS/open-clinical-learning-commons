@@ -115,7 +115,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.92.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.93.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2848,7 +2848,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.92.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.93.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4072,7 +4072,7 @@ if (
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
     $app4PackageContent -notmatch 'all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.92.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.93.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -5146,6 +5146,54 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 05 targeting builder self-check f
 if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 05 workspace-builder self-check failed.' }
 & python (Join-Path $app5Module05Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 05 validator self-check failed.' }
+
+$app5Module06Root = Join-Path $repo 'courses\population-health-equity\modules\06-intervention-monitoring-embedded-ml'
+$app5Module06Spec = Join-Path $repo 'docs\curriculum\courses\APP-5\modules\06-intervention-monitoring-embedded-ml-spec.md'
+$app5Module06Plan = Join-Path $repo 'docs\plans\2026-08-31-app5-module06-plan.md'
+if (-not (Test-Path -LiteralPath $app5Module06Root) -or -not (Test-Path -LiteralPath $app5Module06Spec) -or -not (Test-Path -LiteralPath $app5Module06Plan)) {
+    throw 'APP-5 Module 06 is missing its package, specification, or build plan.'
+}
+$app5Module06SpecContent = Get-Content -Raw -Encoding UTF8 -LiteralPath $app5Module06Spec
+$app5Module06Readme = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $app5Module06Root 'README.md')
+$app5Module06Sections = [regex]::Matches($app5Module06SpecContent, '(?m)^## \d+\.').Count
+$app5Module06FileCount = @(Get-ChildItem -Recurse -File -LiteralPath $app5Module06Root).Count
+$app5Module06Contract = Get-Content -Raw -LiteralPath (Join-Path $app5Module06Root 'intervention-contract.json') | ConvertFrom-Json
+$app5Module06Release = Get-Content -Raw -LiteralPath (Join-Path $app5Module06Root 'release.json') | ConvertFrom-Json
+$app5Module06Report = Get-Content -Raw -LiteralPath (Join-Path $app5Module06Root 'outputs\build-report.json') | ConvertFrom-Json
+$app5Module06Sources = @(Import-Csv -LiteralPath (Join-Path $app5Module06Root 'data\synthetic-source-manifest.csv'))
+$app5Module06Handoff = @(Import-Csv -LiteralPath (Join-Path $app5Module06Root 'upstream\module05-handoff-manifest.csv'))
+$app5Module06Measures = @(Import-Csv -LiteralPath (Join-Path $app5Module06Root 'outputs\monitoring-results.csv'))
+$app5Module06Stability = @(Import-Csv -LiteralPath (Join-Path $app5Module06Root 'outputs\challenger-stability.csv'))
+$app5Module06Selected = @(Import-Csv -LiteralPath (Join-Path $app5Module06Root 'outputs\selected-tract-cluster-review.csv'))
+$app5Module06Queries = @(Import-Csv -LiteralPath (Join-Path $app5Module06Root 'outputs\query-checks.csv'))
+$app5Module06Gates = @(Import-Csv -LiteralPath (Join-Path $app5Module06Root 'reference\week6-gate-results.csv'))
+$app5Module06Checks = [ordered]@{
+    package_shape = ($app5Module06FileCount -eq 427 -and $app5Module06Sections -eq 21)
+    plain_ascii = ($app5Module06SpecContent -notmatch '[—–]' -and $app5Module06Readme -notmatch '[—–]')
+    no_personal_paths = ($app5Module06SpecContent -notmatch '(?im)[A-Z]:\\Users\\' -and $app5Module06Readme -notmatch '(?im)[A-Z]:\\Users\\')
+    spec_contract = ($app5Module06SpecContent -match 'Module version: `0\.1\.0`' -and $app5Module06SpecContent -match 'Commons release: `0\.93\.0`' -and $app5Module06SpecContent -match '0ab8cc15d252ef91436aa1b281f316e4eb21115aefc668a0930d04c90397a828' -and $app5Module06SpecContent -match 'd6e09f0e57d4890300d44bf48fcf1be34f52698af05a0934c62e25926f6622cd' -and $app5Module06SpecContent -match 'f53dc9a5b3274ee33917a3f78d1b0152f1dcaca232bc07de3b39045e5246f6f7' -and $app5Module06SpecContent -match '1,269 checks' -and $app5Module06SpecContent -match '1,144 checks' -and $app5Module06SpecContent -match '14 protected failure routes')
+    contract_identity = ($app5Module06Contract.schema_version -eq '1.0.0' -and $app5Module06Contract.scenario_id -eq 'FMA-DP-01' -and $app5Module06Contract.fictional_resource.tracts -eq 28 -and $app5Module06Contract.fictional_resource.places_total -eq 280 -and $app5Module06Contract.monitoring_measures -eq 20 -and -not $app5Module06Contract.automatic_action -and -not $app5Module06Contract.effect_estimate)
+    release_contract = ($app5Module06Release.module_id -eq 'oclc-app5-06' -and $app5Module06Release.commons_release -eq '0.93.0' -and $app5Module06Release.course_points -eq 0 -and $app5Module06Release.week6_checkpoint_points_after_acceptance -eq 25 -and $app5Module06Release.output_identity.build_report_sha256 -eq 'f53dc9a5b3274ee33917a3f78d1b0152f1dcaca232bc07de3b39045e5246f6f7' -and $app5Module06Release.validation.complete_checks -eq 1269 -and $app5Module06Release.validation.starter_checks -eq 1144 -and $app5Module06Release.validation.protected_failure_routes -eq 14 -and $app5Module06Release.reference_decision.gates_passed -eq 34 -and -not $app5Module06Release.reference_decision.intervention_ready_for_real_use -and -not $app5Module06Release.reference_decision.challenger_accepted -and $app5Module06Release.reference_decision.deployment -eq 'prohibited')
+    source_and_handoff = ($app5Module06Sources.Count -eq 6 -and $app5Module06Handoff.Count -eq 340 -and $app5Module06Release.synthetic_source.rows -eq 280 -and $app5Module06Release.synthetic_source.manifest_sha256 -eq 'd6e09f0e57d4890300d44bf48fcf1be34f52698af05a0934c62e25926f6622cd' -and $app5Module06Release.upstream_handoff.manifest_sha256 -eq '0ab8cc15d252ef91436aa1b281f316e4eb21115aefc668a0930d04c90397a828')
+    intervention_findings = ($app5Module06Report.findings.selected_tracts -eq 28 -and $app5Module06Report.findings.fictional_places -eq 280 -and $app5Module06Report.findings.staff_not_ready -eq 5 -and $app5Module06Report.findings.high_travel -eq 12 -and $app5Module06Report.findings.high_burden -eq 1 -and $app5Module06Report.findings.monitoring_measures -eq 20 -and $app5Module06Report.findings.monitoring_triggers -eq 6 -and $app5Module06Report.findings.objection_tests -eq 14 -and $app5Module06Report.findings.incident_tests -eq 23)
+    challenger_findings = ($app5Module06Report.findings.cluster_features -eq 9 -and $app5Module06Report.findings.cluster_variants -eq 8 -and $app5Module06Report.findings.base_smallest_cluster -eq 267 -and [decimal]$app5Module06Report.findings.alternate_seed_minimum_ari -eq [decimal]0.893633 -and [decimal]$app5Module06Report.findings.scaling_variant_median_ari -lt [decimal]0.12 -and $app5Module06Report.findings.selected_clusters -eq 2 -and -not $app5Module06Report.findings.challenger_stable_for_bounded_questions)
+    analysis_shape = ($app5Module06Measures.Count -eq 20 -and @($app5Module06Measures | Where-Object { $_.result -eq 'triggered' }).Count -eq 6 -and @($app5Module06Measures | Where-Object { $_.automatic_action -ne 'no' }).Count -eq 0 -and $app5Module06Stability.Count -eq 8 -and $app5Module06Selected.Count -eq 28 -and @($app5Module06Selected | Where-Object { $_.selection_preserved -ne 'yes' }).Count -eq 0 -and $app5Module06Queries.Count -eq 48 -and @($app5Module06Queries | Where-Object { $_.status -ne 'pass' }).Count -eq 0)
+    assessment_contract = ($app5Module06Gates.Count -eq 34 -and @($app5Module06Gates | Where-Object { $_.noncompensable -ne 'yes' -or $_.status -ne 'pass' }).Count -eq 0 -and $app5Module06Release.reference_decision.module04_points_carried -eq 10 -and $app5Module06Release.reference_decision.module05_points_carried -eq 15 -and $app5Module06Release.reference_decision.module06_points_added -eq 0)
+}
+$app5Module06Failures = @($app5Module06Checks.GetEnumerator() | Where-Object { -not $_.Value } | ForEach-Object { $_.Key })
+if ($app5Module06Failures.Count -gt 0) {
+    throw "APP-5 Module 06 0.1.0 contract checks failed: $($app5Module06Failures -join ', ')."
+}
+& python (Join-Path $app5Module06Root 'freeze_upstream.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 06 handoff self-check failed.' }
+& python (Join-Path $app5Module06Root 'generate_monitoring_fixture.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 06 fictional-source self-check failed.' }
+& python (Join-Path $app5Module06Root 'build_intervention_monitoring.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 06 analysis builder self-check failed.' }
+& python (Join-Path $app5Module06Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 06 workspace-builder self-check failed.' }
+& python (Join-Path $app5Module06Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 06 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -6480,3 +6528,4 @@ Write-Output "APP-5 Module 03 passed: $app5Module03Sections contract sections, $
 Write-Output "APP-5 Checkpoint 01 passed: $app5Checkpoint01Sections contract sections, $app5Checkpoint01FileCount package files, $($app5Checkpoint01Release.package.assembled_files) assembled files, and $($app5Checkpoint01Gates.Count) checkpoint gates."
 Write-Output "APP-5 Module 04 passed: $app5Module04Sections contract sections, $app5Module04FileCount package files, $($app5Module04Report.findings.mapped_estimates) mapped estimates, and $($app5Module04Gates.Count) gates."
 Write-Output "APP-5 Module 05 passed: $app5Module05Sections contract sections, $app5Module05FileCount package files, $($app5Module05Report.findings.assignments) assignments, and $($app5Module05Gates.Count) gates."
+Write-Output "APP-5 Module 06 passed: $app5Module06Sections contract sections, $app5Module06FileCount package files, $($app5Module06Report.findings.monitoring_measures) monitoring measures, and $($app5Module06Gates.Count) gates."

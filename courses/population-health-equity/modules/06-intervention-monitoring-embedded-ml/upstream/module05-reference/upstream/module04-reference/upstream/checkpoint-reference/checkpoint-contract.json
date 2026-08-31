@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_id": "oclc-app5-cp01",
+  "version": "0.1.0",
+  "commons_release": "0.90.0",
+  "course": "APP-5: Data for Population Health and Equity",
+  "due_point": "end of instructional Week 3",
+  "course_points": 40,
+  "point_source": "oclc-app5-02 20 points once plus oclc-app5-03 20 points once",
+  "accepted_component_files": 219,
+  "accepted_immutable_rows": 177,
+  "accepted_modules": [
+    {
+      "id": "oclc-app5-01",
+      "version": "0.1.0",
+      "commons_release": "0.87.0",
+      "assembled_files": 27,
+      "manifest_rows": 16,
+      "manifest_bytes": 1907,
+      "manifest_sha256": "65ea81f391ed426f63e84593588d57542e827f89f2493aa0b3a2f8b1d9a2b0e9",
+      "points": 0
+    },
+    {
+      "id": "oclc-app5-02",
+      "version": "0.1.0",
+      "commons_release": "0.88.0",
+      "assembled_files": 72,
+      "manifest_rows": 57,
+      "manifest_bytes": 7588,
+      "manifest_sha256": "330b4e9ba5071ad4529d46f4af5b15555e8db84ef1718de2a8de42d0aa76a4b0",
+      "points": 20
+    },
+    {
+      "id": "oclc-app5-03",
+      "version": "0.1.0",
+      "commons_release": "0.89.0",
+      "assembled_files": 120,
+      "manifest_rows": 104,
+      "manifest_bytes": 15465,
+      "manifest_sha256": "d9591e028ba49d79762d444d769821dc21055a712aceda3f501c0e31bb7d24b8",
+      "points": 20
+    }
+  ],
+  "required_gates": {
+    "module01_decision": 12,
+    "module02_measures": 15,
+    "module03_disparities": 18,
+    "checkpoint_integrity": 22
+  },
+  "package": {
+    "candidate_manifest_rows": 219,
+    "candidate_manifest_bytes": 41641,
+    "candidate_manifest_sha256": "b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192",
+    "checkpoint_editable_records": 12,
+    "defense_questions": 15,
+    "assembled_files": 240,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for curriculum construction",
+    "module04_scope": "geometry acquisition and validation, geographic aggregation, small-area stability, ecological and contextual reasoning, one responsible accessible map, and a context memo",
+    "module05_permission": "prohibited until Module 04 passes"
+  },
+  "authority": {
+    "real_disparity_claim": "prohibited",
+    "intersectional_claim": "prohibited",
+    "mapping_in_checkpoint": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_eligibility": "prohibited",
+    "outreach": "prohibited",
+    "allocation_or_funding": "prohibited",
+    "model_fitting": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "real_community_action": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

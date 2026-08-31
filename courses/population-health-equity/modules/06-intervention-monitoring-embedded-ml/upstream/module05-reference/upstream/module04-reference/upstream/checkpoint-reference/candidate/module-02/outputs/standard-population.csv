@@ -1,0 +1,6 @@
+age_band_id,age_band,band_order,standard_population,standard_weight,statewide_synthetic_events,statewide_synthetic_rate_per_100k,standard_source,event_period,claim_limit
+A01,18-34,1,1681962,0.296132166,30524,1814.78535187,"ACS 2020-2024 B01001 adult population across all 1,597 matched tracts",synthetic 2024 event period,one common teaching standard; not a real risk or allocation standard
+A02,35-49,2,1330444,0.2342426662,46481,3493.6457303,"ACS 2020-2024 B01001 adult population across all 1,597 matched tracts",synthetic 2024 event period,one common teaching standard; not a real risk or allocation standard
+A03,50-64,3,1409112,0.248093232,91534,6495.86406191,"ACS 2020-2024 B01001 adult population across all 1,597 matched tracts",synthetic 2024 event period,one common teaching standard; not a real risk or allocation standard
+A04,65-74,4,739218,0.13014933,62984,8520.35529438,"ACS 2020-2024 B01001 adult population across all 1,597 matched tracts",synthetic 2024 event period,one common teaching standard; not a real risk or allocation standard
+A05,75+,5,519032,0.0913826058,52091,10036.18274018,"ACS 2020-2024 B01001 adult population across all 1,597 matched tracts",synthetic 2024 event period,one common teaching standard; not a real risk or allocation standard

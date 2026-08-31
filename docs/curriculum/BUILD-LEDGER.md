@@ -1,16 +1,16 @@
 # Curriculum build ledger
 
-- Current release: 0.92.0
+- Current release: 0.93.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-5 Module 05, Targeting and fairness
-- Next unit: APP-5 Module 06
+- Last completed unit: APP-5 Module 06, Accountable intervention design, monitoring, and embedded ML
+- Next unit: APP-5 Checkpoint 02
 
 ## Confirmed decisions
 
 - FND-1 and FND-2 are separate straight-through technical foundation courses.
 - APP-1 through APP-7 revisit foundations through different domain methods and decisions.
-- Applied courses use seven distinct modules. Module 6 contains the week-6 application checkpoint and an embedded half-week machine-learning extension.
+- Applied courses use seven distinct modules. Module 6 closes the week-6 application block and includes the embedded half-week machine-learning extension; the cumulative Week 6 checkpoint is a separate release.
 - Module 7 is the final clinician-led leadership block.
 - Every applied course has cumulative checkpoints at instructional weeks 3 and 6 and on the official last day of the half-term.
 - Three-credit courses retain 112.5 total learner hours.
@@ -711,6 +711,15 @@
 - Four of six rule pairs share no selected tracts. Two sensitivity variants cannot fill every requested award. These results show that fairness and allocation consequences depend on the declared rule, resource, and review contract, not on data alone.
 - The reference earns 15 of 15 and passes all 26 gates. Complete validation passes 2,406 checks, learner validation passes 2,230 checks, the copied validator passes, copied-answer and complete-mode learner packages are rejected, deterministic builds match, and 24 protected failure routes are verified.
 - APP-5 Module 05 is a runnable release candidate at Commons 0.92.0 with disposition `continue with conditions`. Module 06 curriculum construction may begin using the community-review rule only as the least unacceptable fictional planning candidate. Real need, consent, priority, eligibility, outreach, funding, allocation, community action, service delivery, intervention-effect estimation, implementation, production connection, and deployment remain prohibited.
+- APP-5 Module 06 version 0.1.0 freezes the complete 340-file Module 05 reference workspace in a 340-row, 76,008-byte handoff manifest with SHA-256 `0ab8cc15d252ef91436aa1b281f316e4eb21115aefc668a0930d04c90397a828`.
+- The deterministic `fma-dp-01-monitoring-dry-run-v1` source uses seed 73056 and creates 280 fictional software and governance tests without using public prevalence to generate response, access, burden, feedback, incident, or pause states. Its six-row source manifest has SHA-256 `d6e09f0e57d4890300d44bf48fcf1be34f52698af05a0934c62e25926f6622cd`.
+- The intervention release preserves five staff-not-ready areas, twelve high-travel areas, one high-burden area, fourteen objection tests, twenty-three incident tests, and all 280 fictional places. Twenty measures report complete denominators and six human-review triggers. No threshold creates automatic action.
+- Every objection test is paused, all twenty-three incidents have a named route, and all seventy-two required pauses are honored. Outcomes remain unavailable, so Module 06 estimates no intervention effect.
+- The fixed scikit-learn KMeans challenger uses all 1,597 area profiles, nine features, four clusters, seed 73056, 20 initializations, four alternate seeds, and robust, min-max, and unit-norm scaling variants. Selection labels are excluded.
+- The base smallest cluster has 267 tracts and alternate-seed adjusted Rand agreement is at least 0.893633. The scaling-variant median is 0.119955, below the 0.60 standard, and the 28 carried rows span only two clusters instead of at least three. The challenger is rejected without tuning and does not change the transparent community-review comparison.
+- The learner workspace has 389 files and 363 immutable rows. The reference workspace has 403 files and 377 immutable rows. Complete validation passes 1,269 checks, learner validation passes 1,144 checks, deterministic builds match, and 14 protected failure routes are rejected.
+- Module 06 adds zero points and carries the accepted 10 Module 04 points plus 15 Module 05 points once into the separate Week 6 checkpoint. All 34 gates pass.
+- APP-5 Module 06 is a runnable release candidate at Commons 0.93.0 with disposition `continue with conditions` to Checkpoint 02 construction. The fictional intervention remains unready for real use, the ML challenger remains rejected, Module 07 remains gated, and real need, consent, eligibility, outreach, funding, allocation, service delivery, effect estimation, implementation, production connection, and deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -748,12 +757,14 @@
 - Complete named APP-5 Module 04 faculty, population-health clinical, epidemiology, biostatistics, Census and TIGER geography, GIS, PLACES, equity, community, privacy, accessibility, responsible-AI, and independent-reproduction review before alpha.
 - Confirm APP-5 Module 05's fixed 280-place resource contract, four targeting rules, fairness definitions, support handling, geographic and group consequence measures, access and capacity assumptions, 20 sensitivity variants, community-review process, recourse routes, ownership, and progression decision before alpha.
 - Complete named APP-5 Module 05 faculty, population-health clinical, epidemiology, biostatistics, equity, community, language-access, disability-access, privacy, accessibility, resource-governance, responsible-AI, and independent-reproduction review before alpha.
+- Confirm APP-5 Module 06's fictional intervention, intended population, theory of change, pathway, 20 measures, threshold origins, six triggers, access failures, objection and incident routes, pause and stop rights, evaluation boundary, fixed feature matrix, KMeans contract, stability decision, point carry, and progression before alpha.
+- Complete named APP-5 Module 06 faculty, population-health clinical, implementation, epidemiology, biostatistics, causal, equity, community, language-access, disability-access, privacy, accessibility, safety, responsible-AI, resource-governance, and independent-reproduction review before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the accepted APP-5 course specification and Module 05 specification, package, source and handoff manifests, resource contract, rule definitions, assignments, consequence audits, overlap, sensitivity results, score, gates, progression decision, and open conditions.
-2. Freeze the complete 340-file Module 05 reference workspace without recomputing or repairing its accepted public evidence, fictional source, resource contract, four rules, assignments, fairness definitions, consequences, sensitivity results, score, gates, claims, or authority.
-3. Build APP-5 Module 06 as the accountable intervention, monitoring, and embedded-ML release. Give the intervention, monitoring, feedback, and governance block 8.0 hours and the fixed clustering challenger 8.0 hours.
-4. Carry the community-review rule only as the least unacceptable fictional planning candidate. Design the fictional intervention and prospective review process, then test whether the predeclared clustering challenger adds useful tailoring questions without ranking need, selecting tracts, assigning resources, determining fairness, replacing the transparent rule, or bypassing community review.
-5. Keep real need, consent, eligibility, outreach, funding, allocation, community action, service delivery, intervention-effect estimation, implementation, production connection, and deployment prohibited. Advance semver, validate, commit, push, and remote-verify Module 06 as its own unit.
+1. Read the accepted APP-5 course specification and Module 04 through Module 06 specifications, packages, release records, points, gates, progression decisions, and open conditions.
+2. Freeze the complete Module 04, Module 05, and Module 06 reference workspaces without recomputing or repairing public evidence, fictional sources, maps, targeting rules, consequences, intervention evidence, monitoring triggers, ML failure, scores, gates, claims, or authority.
+3. Build APP-5 Checkpoint 02 as the separate Week 6 place, targeting, intervention, monitoring, and accountability release.
+4. Count the accepted 10 Module 04 points and 15 Module 05 points once. Keep Module 06 as a required zero-point gate. Preserve all inherited and checkpoint gates.
+5. Keep the fictional intervention unready, the challenger rejected, and real need, consent, eligibility, outreach, funding, allocation, community action, service delivery, intervention-effect estimation, implementation, production connection, and deployment prohibited. Advance semver, validate, commit, push, and remote-verify Checkpoint 02 as its own unit.

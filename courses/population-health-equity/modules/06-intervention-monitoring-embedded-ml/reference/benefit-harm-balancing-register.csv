@@ -1,0 +1,9 @@
+item_id,possible_benefit,possible_harm,evidence_or_test,owner,current_disposition,claim_limit
+B01,Accessible information could improve understanding,Language or format barriers could exclude people,Language and disability dry-run tests,access owners,triggered and requires correction,hypothesis only
+B02,Navigation could reduce scheduling friction,Navigation could become pressure or surveillance,Response scheduling refusal and withdrawal states,community accountability owner,choice routes preserved; continue review,not observed benefit
+B03,Remote or hybrid options could reduce travel,Technology access or privacy could worsen burden,Travel modality burden and privacy tests,program operations and privacy owners,travel and incident concerns unresolved,not observed access
+B04,Monitoring could expose failure,Thresholds could become punitive targets,All 20 declared measures,monitoring owner,six human-review triggers; no automatic action,not validated operations
+B05,Feedback could improve accountability,Objections could be ignored or relabeled,Four feedback states and 14 objections,community review council,all objections paused and routed,synthetic test only
+B06,Clustering could suggest tailoring questions,Unstable groups could obscure context or drive unfair action,Eight fixed challenger variants,responsible AI owner,rejected as not useful,no model validity claim
+B07,A later evaluation could estimate benefit,Poor causal design could create a false effect,Prospective APP-6 proposal,evaluation methods owner,deferred; no outcome available,no effect estimate
+B08,Stopping can prevent continued failure,Retirement could be resisted after sunk effort,Named pause stop revision and retirement rights,program steward,rights retained,not proof of safety

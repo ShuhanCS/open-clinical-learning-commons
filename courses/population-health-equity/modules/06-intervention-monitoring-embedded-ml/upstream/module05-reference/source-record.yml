@@ -1,0 +1,43 @@
+schema_version: "1.0.0"
+module_id: "oclc-app5-05"
+module_version: "0.1.0"
+commons_release: "0.92.0"
+upstream:
+  module_id: "oclc-app5-04"
+  module_version: "0.1.0"
+  commons_release: "0.91.0"
+  reference_files: 287
+  handoff_manifest_bytes: 59768
+  handoff_manifest_sha256: "0670760f650e0d13cfd4c5dc85ab26fdce5779cc86d35b3d3c27d6a3cc7738dd"
+public_evidence:
+  source: "CDC PLACES 2025 census-tract release"
+  measure_year: 2023
+  measure_id: "DIABETES"
+  estimate_type: "modeled small-area crude prevalence"
+  rows: 1597
+  role: "accepted public modeled area-level context"
+  prohibited_roles:
+    - "observed cases"
+    - "individual risk"
+    - "real community need"
+    - "consent"
+    - "automatic priority or allocation"
+synthetic_source:
+  source_id: "fma-dp-01-fictional-planning-v1"
+  generator_version: "0.1.0"
+  seed: 73055
+  rows: 1597
+  manifest_bytes: 1560
+  manifest_sha256: "a9a9cd10e67164cd8c47df667f2e559f17f8baa0e2308740ce4c9d9e675c0319"
+  planning_layer_sha256: "b9ce228fc824ec7c62bbede5fcd8459722b328fc39fa5215036c6e924f562aed"
+  role: "fictional capacity, access, staff, review, objection, burden, and accountability conditions"
+resource_contract:
+  fictional_places_per_rule: 280
+  awards_per_rule: 28
+  places_per_award: 10
+  partial_awards: false
+  automatic_action: false
+source_rights_and_attribution:
+  public_sources: "Retain the accepted upstream source labels, terms, and attribution. Do not relabel generated teaching data as a public source."
+  synthetic_source: "Commons-generated teaching data released with this module."
+claim_limit: "Fictional rule comparison only; no real need, consent, eligibility, outreach, funding, allocation, community action, service, implementation, production connection, or deployment."

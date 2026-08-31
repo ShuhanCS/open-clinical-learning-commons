@@ -318,12 +318,12 @@ The reference earns 15 of 15 and passes all 26 noncompensable gates. Complete va
 - Hours: 16.0.
 - Intervention design, monitoring, feedback, and governance block: 8.0 hours.
 - Embedded ML extension: 8.0 hours.
-- Planned package path: `courses/population-health-equity/modules/06-intervention-monitoring-embedded-ml/`.
-- Planned specification: `docs/curriculum/courses/APP-5/modules/06-intervention-monitoring-embedded-ml-spec.md`.
+- Package path: `courses/population-health-equity/modules/06-intervention-monitoring-embedded-ml/`.
+- Specification: `docs/curriculum/courses/APP-5/modules/06-intervention-monitoring-embedded-ml-spec.md`.
 - Decision: is the accountable intervention and monitoring design ready for clinician leadership review, and does the fixed area-profile challenger add useful planning questions without taking allocation authority?
-- Submission: cumulative Week 6 release.
+- Submission: required zero-point intervention, monitoring, governance, and ML gate for the separate Week 6 checkpoint.
 - Point role: required zero-point gate carrying the 25 Module 04 and Module 05 points once.
-- Build status: planned from the accepted Module 05 handoff.
+- Build status: runnable release candidate at module version `0.1.0` and Commons release `0.93.0`.
 
 The intervention block defines the fictional intervention, theory of change, delivery pathway, eligible population, reach, uptake, refusal, access, capacity, implementation fidelity, cost, burden, balancing measures, outcome availability, community feedback, incidents, escalation, pause, revision, stop, and retirement. Each measure has a numerator, denominator, cadence, source, owner, unavailable state, threshold origin, and human response.
 
@@ -332,6 +332,12 @@ Learners propose a later evaluation design but do not estimate a real interventi
 The ML extension fits one fixed clustering challenger to the same accepted area-profile matrix. The features, transformations, missing-value rule, scaling, cluster count, seed, stability checks, and interpretation limits are predeclared. Learners test stability across seeds and reasonable scaling choices, inspect support and geographic concentration, and determine whether the grouping contributes useful tailoring questions.
 
 The challenger cannot rank need, select a tract, assign resources, infer individual traits, determine fairness, replace the transparent rule, or bypass community review. A clean cluster display is not an intervention decision. The Week 6 package carries 25 scored points once and adds required intervention, monitoring, accountability, ML, AI, claims, and progression gates.
+
+The accepted release freezes the complete 340-file Module 05 reference workspace and preserves the community-review result as a fictional starting point. A deterministic 280-record dry run exposes five staff-not-ready areas, twelve high-travel areas, one high-burden area, fourteen objection tests, twenty-three incident tests, and six monitoring triggers. All required objections, escalation routes, and pauses remain visible and human-owned.
+
+The fixed KMeans challenger uses 1,597 area profiles, nine declared features, four clusters, seed 73056, four alternate seeds, and three scaling variants. Alternate-seed agreement passes, but the scaling-variant median adjusted Rand value is 0.120 and the carried rows appear in only two clusters. The challenger therefore fails its declared standard and is rejected without tuning.
+
+All 34 Module 06 gates pass. The package may enter construction of the separate Week 6 checkpoint. The fictional intervention is not ready for real implementation, the transparent community-review comparison remains unchanged, and Module 07 remains gated by checkpoint acceptance.
 
 ## 15. Module 07 brief: Clinician leadership and equity recommendation
 

@@ -1,0 +1,21 @@
+measure_id,measure_name,numerator,denominator,observed_value,result,owner,human_response,automatic_action
+M01,Selected-area operational readiness,23,28,0.821429,triggered,program operations owner,hold any not-ready tract for human review,no
+M02,Selected-area travel concern,16,28,0.571429,triggered,access owner,revise modality and site plan,no
+M03,Offer tests processed,230,280,0.821429,triggered,monitoring owner,review readiness holds,no
+M04,Response available,230,230,1,pass,monitoring owner,repair response capture,no
+M05,Fictional interest,151,230,0.656522,descriptive_only,monitoring owner,report without performance claim,no
+M06,Fictional refusal,33,230,0.143478,descriptive_only,community accountability owner,preserve refusal without penalty,no
+M07,Language access delivered,69,73,0.945205,triggered,language access owner,pause affected path and correct,no
+M08,Disability access delivered,44,47,0.93617,triggered,disability access owner,pause affected path and correct,no
+M09,Scheduling completed,137,151,0.907285,pass,program operations owner,review scheduling and access,no
+M10,Attendance,117,137,0.854015,descriptive_only,program operations owner,report without outcome claim,no
+M11,Completion,94,117,0.803419,descriptive_only,program operations owner,report without outcome claim,no
+M12,Fidelity,106,117,0.905983,pass,implementation owner,review workflow and training,no
+M13,Low burden,217,230,0.943478,pass,community accountability owner,revise modality and workload,no
+M14,Feedback captured,230,230,1,pass,community accountability owner,repair feedback capture,no
+M15,Objection tests resolved,14,14,1,pass,community review council,hold and review every objection,no
+M16,Incident-free dry run,209,230,0.908696,triggered,safety and privacy owner,escalate and investigate incidents,no
+M17,Escalation routed,23,23,1,pass,program steward,stop until routing is complete,no
+M18,Pause trigger honored,72,72,1,pass,program steward,stop until pause is honored,no
+M19,Outcome availability,0,280,0,descriptive_only,evaluation methods owner,make no effect estimate,no
+M20,Real-world action,0,280,0,pass,program steward,stop release if any real action appears,no

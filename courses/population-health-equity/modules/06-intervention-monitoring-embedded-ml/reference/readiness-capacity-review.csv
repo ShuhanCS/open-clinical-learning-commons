@@ -1,0 +1,7 @@
+condition,affected_tracts,affected_tests,status,owner,required_response,implementation_authority
+staff_not_ready,5,50,unresolved,program operations owner,hold and resolve staffing before another fictional exercise,none
+high_travel,12,120,unresolved,access owner,revise modality site and travel assumptions,none
+high_burden,1,10,unresolved,community accountability owner,review burden and revise the pathway,none
+language_access_failure,4,4,triggered,language access owner,pause correct and retest each affected path,none
+disability_access_failure,3,3,triggered,disability access owner,pause correct and retest each affected path,none
+incident_test,23,23,triggered,safety privacy and program steward,investigate route correct and retain stop right,none

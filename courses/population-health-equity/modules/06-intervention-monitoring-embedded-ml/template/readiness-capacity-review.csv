@@ -1,0 +1,7 @@
+condition,affected_tracts,affected_tests,status,owner,required_response,implementation_authority
+staff_not_ready,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,none
+high_travel,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,none
+high_burden,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,none
+language_access_failure,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,none
+disability_access_failure,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,none
+incident_test,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,none

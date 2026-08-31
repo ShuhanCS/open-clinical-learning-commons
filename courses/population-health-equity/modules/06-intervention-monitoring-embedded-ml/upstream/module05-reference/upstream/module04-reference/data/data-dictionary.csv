@@ -1,0 +1,26 @@
+artifact,field,type,unit_or_values,definition,claim_limit
+geometry-audit.csv,tract_fips,text,11-character GEOID,2024 TIGER census tract key,not a person address service area or community identity
+geometry-audit.csv,county_fips,text,5-character county FIPS,state and county portion of the tract key,county boundaries do not define a care market or community
+geometry-audit.csv,geometry_type,text,Polygon or MultiPolygon,source geometry type,not a quality rank
+geometry-audit.csv,is_valid,integer,0 or 1,Shapely validity result for the source geometry,technical geometry check only
+geometry-audit.csv,projected_area_sq_m,number,square meters,geometry area after projection to EPSG 26986,used only to verify geometry integrity
+geometry-audit.csv,area_relative_difference,number,proportion,absolute difference between projected area and ALAND plus AWATER divided by source area,not a measure of tract quality
+geometry-join-audit.csv,join_state,text,matched_measure or geometry_only_unavailable or linkage_disagreement,exact key-join result,unavailable is not zero
+tract-map-table.csv,modeled_crude_prevalence_percent,number,percent,CDC PLACES modeled crude adult diabetes prevalence,not observed cases or individual risk
+tract-map-table.csv,modeled_low_confidence_limit,number,percent,lower 95 percent model interval,retain with the point estimate
+tract-map-table.csv,modeled_high_confidence_limit,number,percent,upper 95 percent model interval,retain with the point estimate
+tract-map-table.csv,interval_width_percentage_points,number,percentage points,upper model interval minus lower model interval,classroom review input only
+tract-map-table.csv,places_adult_population_field,integer,people,retained population field from the accepted PLACES release,not a program denominator or eligible population
+tract-map-table.csv,map_class,text,one of six declared absolute classes,display class from fixed percentage-point cutoffs,not a quantile rank priority or target
+tract-map-table.csv,support_state,text,supported_for_teaching_display or limited_support_review or unavailable,classroom review state from the declared interval-width and population rules,not a CDC designation suppression rule or exclusion rule
+small-area-stability.csv,review_reason,text,declared classroom rule result,reason the support state was assigned,does not prove estimate validity or invalidity
+county-aggregation.csv,weighted_modeled_prevalence_percent,number,percent,population-weighted summary of accepted tract modeled estimates,not an official county PLACES estimate
+county-aggregation.csv,within_county_range_percentage_points,number,percentage points,maximum minus minimum mapped tract estimate within the county,descriptive area-level spread only
+aggregation-comparison.csv,absolute_difference_percentage_points,number,percentage points,absolute difference between a tract estimate and its county teaching summary,not an individual or causal difference
+aggregation-comparison.csv,class_changes_after_aggregation,integer,0 or 1,indicates whether tract and county teaching-summary classes differ,not evidence that either geography is correct
+map-class-summary.csv,tract_count,integer,tracts,number of source geometry tracts in each absolute display class,not a rank or allocation count
+map-class-summary.csv,limited_support_tracts,integer,tracts,number of class members carrying the classroom review flag,not a suppression count
+query-checks.csv,status,text,pass or fail,result of one exact release check,a passing check does not authorize action
+map-text-facts.json,reading_order,array,ordered instructions,nonvisual reading sequence for the assessed map,does not replace the complete exact tract table
+responsible-diabetes-prevalence-map.svg,map-title,text,accessible name,short title embedded in the SVG,teaching display only
+responsible-diabetes-prevalence-map.svg,map-desc,text,accessible description,source scope class counts support states unavailable states and action limits,does not state individual or community need

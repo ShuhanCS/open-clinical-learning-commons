@@ -1,0 +1,7 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+R01,"Population, age-band, numerator, denominator, and linkage logic",4,4,"tract-linkage-audit.csv; age-band-denominators.csv.gz; linkage-and-denominator-audit.md"
+R02,Crude and age-specific rates,4,4,"age-specific-rates.csv.gz; tract-rate-summary.csv; population-measure-specifications.csv"
+R03,Direct and indirect standardization,4,4,"standard-population.csv; tract-rate-summary.csv; indirect-standardization.csv; standardization-interpretation.md"
+R04,"Uncertainty, support, and evidence separation",4,4,"age-band-and-moe-method.md; public-modeled-prevalence.csv; public-synthetic-separation.md"
+R05,"Reproducibility, interpretation, and handoff",4,4,"query-checks.csv; reproducibility-check.md; gate-results.csv; progression-decision.md; ai-use.md"
+TOTAL,Total,20,20,All five criteria complete and all noncompensable gates pass

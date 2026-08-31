@@ -1,0 +1,4 @@
+dimension_id,primary_reference,alternative_reference,primary_summary_absolute_difference,primary_summary_ratio,alternative_summary_absolute_difference,alternative_summary_ratio,interpretation,status
+disability_status,no_reported_disability,overall_reported,2172.8508009662,1.4717380179,1086.4254004831,1.220960203,the same generated rates yield smaller summary measures against the overall reported population,pass
+primary_language,english,overall_reported,778.3285287899,1.1628981428,584.3473603512,1.1189871509,reference choice changes the average absolute and relative distance without changing source counts,pass
+race_ethnicity,white,overall_reported,974.8180920556,1.2129238385,718.9414708135,1.1478378374,reference choice changes magnitude and can change individual pairwise direction,pass

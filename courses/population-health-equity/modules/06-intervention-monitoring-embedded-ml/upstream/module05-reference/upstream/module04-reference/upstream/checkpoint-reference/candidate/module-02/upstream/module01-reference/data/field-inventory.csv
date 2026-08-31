@@ -1,0 +1,283 @@
+source_id,field_order,field_name,source_or_derived,rows,nonmissing,missing,distinct_nonmissing,negative_sentinel_like,teaching_role
+cdc-places-tract-2025-ma-diabetes,1,year,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,2,stateabbr,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,3,statedesc,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,4,countyname,source,1597,1597,0,14,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,5,countyfips,source,1597,1597,0,14,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,6,locationname,source,1597,1597,0,1597,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,7,datasource,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,8,category,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,9,measure,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,10,data_value_unit,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,11,data_value_type,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,12,data_value,source,1597,1597,0,177,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,13,data_value_footnote_symbol,source,1597,0,1597,0,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,14,data_value_footnote,source,1597,0,1597,0,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,15,low_confidence_limit,source,1597,1597,0,163,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,16,high_confidence_limit,source,1597,1597,0,195,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,17,totalpopulation,source,1597,1597,0,1392,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,18,totalpop18plus,source,1597,1597,0,1329,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,19,geolocation,source,1597,1597,0,1597,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,20,locationid,source,1597,1597,0,1597,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,21,categoryid,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,22,measureid,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,23,datavaluetypeid,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+cdc-places-tract-2025-ma-diabetes,24,short_question_text,source,1597,1597,0,1,0,"modeled adult diabetes prevalence, interval, population, county, and tract"
+census-acs5-2024-b01001-ma-tract,1,tract_fips,derived tract key,1620,1620,0,1620,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,2,GEO_ID,source,1620,1620,0,1620,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,3,B01001_E001,source,1620,1620,0,1413,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,4,B01001_M001,source,1620,1620,0,695,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,5,B01001_E002,source,1620,1620,0,1236,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,6,B01001_M002,source,1620,1620,0,522,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,7,B01001_E003,source,1620,1620,0,318,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,8,B01001_M003,source,1620,1620,0,233,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,9,B01001_E004,source,1620,1620,0,335,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,10,B01001_M004,source,1620,1620,0,221,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,11,B01001_E005,source,1620,1620,0,354,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,12,B01001_M005,source,1620,1620,0,225,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,13,B01001_E006,source,1620,1620,0,263,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,14,B01001_M006,source,1620,1620,0,186,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,15,B01001_E007,source,1620,1620,0,237,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,16,B01001_M007,source,1620,1620,0,184,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,17,B01001_E008,source,1620,1620,0,178,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,18,B01001_M008,source,1620,1620,0,149,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,19,B01001_E009,source,1620,1620,0,167,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,20,B01001_M009,source,1620,1620,0,149,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,21,B01001_E010,source,1620,1620,0,286,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,22,B01001_M010,source,1620,1620,0,221,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,23,B01001_E011,source,1620,1620,0,422,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,24,B01001_M011,source,1620,1620,0,263,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,25,B01001_E012,source,1620,1620,0,397,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,26,B01001_M012,source,1620,1620,0,250,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,27,B01001_E013,source,1620,1620,0,355,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,28,B01001_M013,source,1620,1620,0,234,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,29,B01001_E014,source,1620,1620,0,345,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,30,B01001_M014,source,1620,1620,0,226,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,31,B01001_E015,source,1620,1620,0,327,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,32,B01001_M015,source,1620,1620,0,212,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,33,B01001_E016,source,1620,1620,0,358,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,34,B01001_M016,source,1620,1620,0,219,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,35,B01001_E017,source,1620,1620,0,366,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,36,B01001_M017,source,1620,1620,0,229,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,37,B01001_E018,source,1620,1620,0,205,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,38,B01001_M018,source,1620,1620,0,168,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,39,B01001_E019,source,1620,1620,0,257,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,40,B01001_M019,source,1620,1620,0,185,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,41,B01001_E020,source,1620,1620,0,187,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,42,B01001_M020,source,1620,1620,0,156,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,43,B01001_E021,source,1620,1620,0,226,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,44,B01001_M021,source,1620,1620,0,169,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,45,B01001_E022,source,1620,1620,0,272,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,46,B01001_M022,source,1620,1620,0,172,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,47,B01001_E023,source,1620,1620,0,211,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,48,B01001_M023,source,1620,1620,0,146,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,49,B01001_E024,source,1620,1620,0,151,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,50,B01001_M024,source,1620,1620,0,132,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,51,B01001_E025,source,1620,1620,0,157,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,52,B01001_M025,source,1620,1620,0,143,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,53,B01001_E026,source,1620,1620,0,1260,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,54,B01001_M026,source,1620,1620,0,509,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,55,B01001_E027,source,1620,1620,0,314,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,56,B01001_M027,source,1620,1620,0,223,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,57,B01001_E028,source,1620,1620,0,317,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,58,B01001_M028,source,1620,1620,0,212,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,59,B01001_E029,source,1620,1620,0,344,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,60,B01001_M029,source,1620,1620,0,223,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,61,B01001_E030,source,1620,1620,0,256,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,62,B01001_M030,source,1620,1620,0,185,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,63,B01001_E031,source,1620,1620,0,233,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,64,B01001_M031,source,1620,1620,0,183,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,65,B01001_E032,source,1620,1620,0,186,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,66,B01001_M032,source,1620,1620,0,156,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,67,B01001_E033,source,1620,1620,0,185,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,68,B01001_M033,source,1620,1620,0,162,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,69,B01001_E034,source,1620,1620,0,285,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,70,B01001_M034,source,1620,1620,0,216,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,71,B01001_E035,source,1620,1620,0,407,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,72,B01001_M035,source,1620,1620,0,255,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,73,B01001_E036,source,1620,1620,0,391,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,74,B01001_M036,source,1620,1620,0,236,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,75,B01001_E037,source,1620,1620,0,370,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,76,B01001_M037,source,1620,1620,0,222,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,77,B01001_E038,source,1620,1620,0,347,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,78,B01001_M038,source,1620,1620,0,209,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,79,B01001_E039,source,1620,1620,0,346,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,80,B01001_M039,source,1620,1620,0,213,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,81,B01001_E040,source,1620,1620,0,354,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,82,B01001_M040,source,1620,1620,0,212,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,83,B01001_E041,source,1620,1620,0,373,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,84,B01001_M041,source,1620,1620,0,227,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,85,B01001_E042,source,1620,1620,0,202,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,86,B01001_M042,source,1620,1620,0,162,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,87,B01001_E043,source,1620,1620,0,263,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,88,B01001_M043,source,1620,1620,0,184,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,89,B01001_E044,source,1620,1620,0,186,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,90,B01001_M044,source,1620,1620,0,149,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,91,B01001_E045,source,1620,1620,0,238,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,92,B01001_M045,source,1620,1620,0,170,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,93,B01001_E046,source,1620,1620,0,306,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,94,B01001_M046,source,1620,1620,0,190,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,95,B01001_E047,source,1620,1620,0,246,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,96,B01001_M047,source,1620,1620,0,166,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,97,B01001_E048,source,1620,1620,0,192,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,98,B01001_M048,source,1620,1620,0,151,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,99,B01001_E049,source,1620,1620,0,225,0,population and age-by-sex denominator estimates and margins
+census-acs5-2024-b01001-ma-tract,100,B01001_M049,source,1620,1620,0,172,0,population and age-by-sex denominator estimates and margins
+cdc-atsdr-svi-2022-ma-tract,1,ST,source,1613,1613,0,1,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,2,STATE,source,1613,1613,0,1,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,3,ST_ABBR,source,1613,1613,0,1,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,4,STCNTY,source,1613,1613,0,14,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,5,COUNTY,source,1613,1613,0,14,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,6,FIPS,source,1613,1613,0,1613,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,7,LOCATION,source,1613,1613,0,1613,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,8,AREA_SQMI,source,1613,1613,0,1613,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,9,E_TOTPOP,source,1613,1613,0,1412,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,10,M_TOTPOP,source,1613,1613,0,716,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,11,E_HU,source,1613,1613,0,1200,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,12,M_HU,source,1613,1613,0,333,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,13,E_HH,source,1613,1613,0,1152,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,14,M_HH,source,1613,1613,0,335,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,15,E_POV150,source,1613,1613,0,975,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,16,M_POV150,source,1613,1613,0,587,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,17,E_UNEMP,source,1613,1613,0,366,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,18,M_UNEMP,source,1613,1613,0,261,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,19,E_HBURD,source,1613,1613,0,745,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,20,M_HBURD,source,1613,1613,0,323,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,21,E_NOHSDP,source,1613,1613,0,627,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,22,M_NOHSDP,source,1613,1613,0,345,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,23,E_UNINSUR,source,1613,1613,0,363,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,24,M_UNINSUR,source,1613,1613,0,299,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,25,E_AGE65,source,1613,1613,0,947,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,26,M_AGE65,source,1613,1613,0,358,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,27,E_AGE17,source,1613,1613,0,1018,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,28,M_AGE17,source,1613,1613,0,461,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,29,E_DISABL,source,1613,1613,0,806,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,30,M_DISABL,source,1613,1613,0,366,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,31,E_SNGPNT,source,1613,1613,0,329,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,32,M_SNGPNT,source,1613,1613,0,209,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,33,E_LIMENG,source,1613,1613,0,536,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,34,M_LIMENG,source,1613,1613,0,321,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,35,E_MINRTY,source,1613,1613,0,1226,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,36,M_MINRTY,source,1613,1613,0,817,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,37,E_MUNIT,source,1613,1613,0,676,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,38,M_MUNIT,source,1613,1613,0,290,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,39,E_MOBILE,source,1613,1613,0,140,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,40,M_MOBILE,source,1613,1613,0,112,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,41,E_CROWD,source,1613,1613,0,200,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,42,M_CROWD,source,1613,1613,0,157,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,43,E_NOVEH,source,1613,1613,0,543,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,44,M_NOVEH,source,1613,1613,0,270,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,45,E_GROUPQ,source,1613,1613,0,350,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,46,M_GROUPQ,source,1613,1613,0,69,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,47,EP_POV150,source,1613,1613,0,463,15,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,48,MP_POV150,source,1613,1613,0,192,15,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,49,EP_UNEMP,source,1613,1613,0,187,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,50,MP_UNEMP,source,1613,1613,0,131,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,51,EP_HBURD,source,1613,1613,0,472,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,52,MP_HBURD,source,1613,1613,0,174,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,53,EP_NOHSDP,source,1613,1613,0,320,13,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,54,MP_NOHSDP,source,1613,1613,0,144,13,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,55,EP_UNINSUR,source,1613,1613,0,122,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,56,MP_UNINSUR,source,1613,1613,0,102,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,57,EP_AGE65,source,1613,1613,0,332,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,58,MP_AGE65,source,1613,1613,0,111,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,59,EP_AGE17,source,1613,1613,0,304,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,60,MP_AGE17,source,1613,1613,0,109,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,61,EP_DISABL,source,1613,1613,0,256,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,62,MP_DISABL,source,1613,1613,0,109,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,63,EP_SNGPNT,source,1613,1613,0,225,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,64,MP_SNGPNT,source,1613,1613,0,135,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,65,EP_LIMENG,source,1613,1613,0,241,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,66,MP_LIMENG,source,1613,1613,0,123,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,67,EP_MINRTY,source,1613,1613,0,678,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,68,MP_MINRTY,source,1613,1613,0,291,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,69,EP_MUNIT,source,1613,1613,0,493,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,70,MP_MUNIT,source,1613,1613,0,167,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,71,EP_MOBILE,source,1613,1613,0,99,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,72,MP_MOBILE,source,1613,1613,0,100,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,73,EP_CROWD,source,1613,1613,0,136,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,74,MP_CROWD,source,1613,1613,0,120,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,75,EP_NOVEH,source,1613,1613,0,423,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,76,MP_NOVEH,source,1613,1613,0,166,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,77,EP_GROUPQ,source,1613,1613,0,180,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,78,MP_GROUPQ,source,1613,1613,0,56,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,79,EPL_POV150,source,1613,1613,0,463,15,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,80,EPL_UNEMP,source,1613,1613,0,187,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,81,EPL_HBURD,source,1613,1613,0,472,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,82,EPL_NOHSDP,source,1613,1613,0,320,13,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,83,EPL_UNINSUR,source,1613,1613,0,122,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,84,SPL_THEME1,source,1613,1613,0,1575,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,85,RPL_THEME1,source,1613,1613,0,1575,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,86,EPL_AGE65,source,1613,1613,0,332,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,87,EPL_AGE17,source,1613,1613,0,304,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,88,EPL_DISABL,source,1613,1613,0,256,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,89,EPL_SNGPNT,source,1613,1613,0,225,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,90,EPL_LIMENG,source,1613,1613,0,241,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,91,SPL_THEME2,source,1613,1613,0,1548,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,92,RPL_THEME2,source,1613,1613,0,1548,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,93,EPL_MINRTY,source,1613,1613,0,678,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,94,SPL_THEME3,source,1613,1613,0,678,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,95,RPL_THEME3,source,1613,1613,0,678,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,96,EPL_MUNIT,source,1613,1613,0,493,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,97,EPL_MOBILE,source,1613,1613,0,99,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,98,EPL_CROWD,source,1613,1613,0,136,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,99,EPL_NOVEH,source,1613,1613,0,423,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,100,EPL_GROUPQ,source,1613,1613,0,180,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,101,SPL_THEME4,source,1613,1613,0,1547,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,102,RPL_THEME4,source,1613,1613,0,1547,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,103,SPL_THEMES,source,1613,1613,0,1581,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,104,RPL_THEMES,source,1613,1613,0,1581,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,105,F_POV150,source,1613,1613,0,3,15,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,106,F_UNEMP,source,1613,1613,0,3,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,107,F_HBURD,source,1613,1613,0,3,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,108,F_NOHSDP,source,1613,1613,0,3,13,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,109,F_UNINSUR,source,1613,1613,0,3,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,110,F_THEME1,source,1613,1613,0,7,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,111,F_AGE65,source,1613,1613,0,3,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,112,F_AGE17,source,1613,1613,0,3,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,113,F_DISABL,source,1613,1613,0,3,12,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,114,F_SNGPNT,source,1613,1613,0,3,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,115,F_LIMENG,source,1613,1613,0,3,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,116,F_THEME2,source,1613,1613,0,6,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,117,F_MINRTY,source,1613,1613,0,3,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,118,F_THEME3,source,1613,1613,0,3,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,119,F_MUNIT,source,1613,1613,0,3,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,120,F_MOBILE,source,1613,1613,0,3,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,121,F_CROWD,source,1613,1613,0,3,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,122,F_NOVEH,source,1613,1613,0,3,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,123,F_GROUPQ,source,1613,1613,0,3,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,124,F_THEME4,source,1613,1613,0,6,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,125,F_TOTAL,source,1613,1613,0,14,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,126,E_DAYPOP,source,1613,1613,0,1452,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,127,E_NOINT,source,1613,1613,0,415,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,128,M_NOINT,source,1613,1613,0,240,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,129,E_AFAM,source,1613,1613,0,599,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,130,M_AFAM,source,1613,1613,0,456,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,131,E_HISP,source,1613,1613,0,839,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,132,M_HISP,source,1613,1613,0,570,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,133,E_ASIAN,source,1613,1613,0,663,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,134,M_ASIAN,source,1613,1613,0,435,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,135,E_AIAN,source,1613,1613,0,68,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,136,M_AIAN,source,1613,1613,0,82,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,137,E_NHPI,source,1613,1613,0,44,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,138,M_NHPI,source,1613,1613,0,59,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,139,E_TWOMORE,source,1613,1613,0,460,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,140,M_TWOMORE,source,1613,1613,0,367,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,141,E_OTHERRACE,source,1613,1613,0,241,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,142,M_OTHERRACE,source,1613,1613,0,258,0,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,143,EP_NOINT,source,1613,1613,0,285,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,144,MP_NOINT,source,1613,1613,0,149,19,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,145,EP_AFAM,source,1613,1613,0,285,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,146,MP_AFAM,source,1613,1613,0,149,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,147,EP_HISP,source,1613,1613,0,402,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,148,MP_HISP,source,1613,1613,0,163,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,149,EP_ASIAN,source,1613,1613,0,290,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,150,MP_ASIAN,source,1613,1613,0,138,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,151,EP_AIAN,source,1613,1613,0,30,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,152,MP_AIAN,source,1613,1613,0,55,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,153,EP_NHPI,source,1613,1613,0,23,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,154,MP_NHPI,source,1613,1613,0,54,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,155,EP_TWOMORE,source,1613,1613,0,157,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,156,MP_TWOMORE,source,1613,1613,0,121,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,157,EP_OTHERRACE,source,1613,1613,0,97,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"
+cdc-atsdr-svi-2022-ma-tract,158,MP_OTHERRACE,source,1613,1613,0,103,11,"area-level contextual estimates, margins, flags, themes, and relative ranks"

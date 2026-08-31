@@ -1,0 +1,9 @@
+variant_id,variant_type,scaling,seed,adjusted_rand_vs_base,nonempty_clusters,smallest_cluster,largest_cluster,selected_clusters,inertia,automatic_action,interpretation_limit,scaling_variant_median_ari,challenger_stable_for_bounded_questions,challenger_use
+base,base,standard,73056,1,4,267,673,2,10447.947997,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only
+seed-73057,seed,standard,73057,0.893633,4,268,628,2,10451.837544,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only
+seed-73058,seed,standard,73058,0.985534,4,267,668,2,10448.316378,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only
+seed-73059,seed,standard,73059,0.953791,4,267,655,2,10449.547315,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only
+seed-73060,seed,standard,73060,0.981759,4,267,666,2,10448.394323,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only
+robust-scaling,scaling,robust,73056,0.119955,4,218,573,4,4547.970182,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only
+minmax-scaling,scaling,minmax,73056,0.507448,4,287,572,2,802.455115,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only
+unitnorm-scaling,scaling,unitnorm,73056,0.004578,4,150,587,3,46.2757,no,"stability diagnostic, not model validity, fairness, need, or authority",0.119955,no,not useful; preserve transparent rule only

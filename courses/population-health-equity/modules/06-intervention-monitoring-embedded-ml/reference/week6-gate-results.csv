@@ -1,0 +1,35 @@
+gate_id,gate,noncompensable,status,evidence,disposition
+G01,Module 05 handoff identity preserved,yes,pass,module05-handoff-manifest.csv,continue
+G02,Community-review candidate and 280-place resource preserved,yes,pass,source-profile.csv,continue
+G03,Public and fictional evidence remain separated,yes,pass,data-spec.md,continue
+G04,Fictional source identity and seed pinned,yes,pass,synthetic-source-manifest.csv,continue
+G05,Outcomes remain unavailable and no effect is estimated,yes,pass,dry-run-interpretation.md,continue
+G06,Intervention and human authority are explicit,yes,pass,intervention-and-authority-contract.md,continue
+G07,Intended population does not create personal eligibility,yes,pass,population-access-capacity-plan.md,continue
+G08,Theory of change names assumptions and failures,yes,pass,theory-of-change.csv,continue
+G09,Delivery pathway names every human decision,yes,pass,delivery-pathway.csv,continue
+G10,Language and disability access conditions are visible,yes,pass,readiness-capacity-review.csv,continue with correction conditions
+G11,Five staff-not-ready conditions remain visible,yes,pass,readiness-capacity-review.csv,continue with holds
+G12,Twelve high-travel conditions remain visible,yes,pass,readiness-capacity-review.csv,continue with revision conditions
+G13,High burden remains visible,yes,pass,readiness-capacity-review.csv,continue with revision condition
+G14,All 20 measures are predeclared,yes,pass,monitoring-plan.csv,continue
+G15,Every measure reports a denominator and availability,yes,pass,monitoring-results.csv,continue
+G16,All six triggers remain visible with human responses,yes,pass,monitoring-plan.csv,continue with conditions
+G17,Feedback correction refusal appeal and disagreement routes exist,yes,pass,feedback-recourse-plan.md,continue
+G18,All objection tests are paused and reviewed,yes,pass,feedback-recourse-results.csv,continue
+G19,Every incident test has a named escalation route,yes,pass,incident-escalation-register.csv,continue
+G20,Every required pause is honored,yes,pass,monitoring-results.csv,continue
+G21,Stop revision and retirement rights remain human,yes,pass,pause-stop-revision-retirement.md,continue
+G22,Effect estimation is deferred to APP-6,yes,pass,evaluation-proposal.md,continue
+G23,The nine clustering features remain fixed,yes,pass,cluster-model-card.md,continue
+G24,Cluster count seed algorithm and transformations remain fixed,yes,pass,cluster-model-card.md,continue
+G25,Selection labels are excluded from features,yes,pass,cluster-feature-matrix.csv.gz,continue
+G26,Four alternate-seed tests are reported,yes,pass,challenger-stability.csv,continue
+G27,Scaling-instability failure is preserved,yes,pass,cluster-stability-support-review.md,reject challenger
+G28,Selected-area cluster-coverage failure is preserved,yes,pass,selected-tract-cluster-review.csv,reject challenger
+G29,Failed challenger is not tuned or used,yes,pass,tailoring-questions.md,preserve transparent rule
+G30,No threshold or model creates automatic action,yes,pass,query-checks.csv,continue
+G31,Claims remain within public synthetic causal and authority limits,yes,pass,responsible-claims-audit.csv,continue
+G32,AI use preserves human accountability,yes,pass,ai-use.md,continue
+G33,Source analysis and workspace reproduction pass,yes,pass,reproducibility-check.md,continue
+G34,Zero points added and accepted 25 points carried once,yes,pass,progression-decision.md,permit Week 6 checkpoint construction

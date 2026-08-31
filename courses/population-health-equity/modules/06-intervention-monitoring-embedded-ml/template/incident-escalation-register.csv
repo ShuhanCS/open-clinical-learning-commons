@@ -1,0 +1,5 @@
+incident_state,records,named_route_records,pause_records,owner,required_response,closure_rule,automatic_action
+access_failure,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,no
+privacy_near_miss,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,no
+scheduling_failure,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,no
+none,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,no

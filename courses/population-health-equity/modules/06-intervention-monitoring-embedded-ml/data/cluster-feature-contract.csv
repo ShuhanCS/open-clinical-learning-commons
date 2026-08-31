@@ -1,0 +1,10 @@
+feature_id,source_field,role,transformation,scaling,missing_rule,source_type,prohibited_use
+F01,modeled_crude_prevalence_percent,public modeled area prevalence,identity,standard,fail,public,not need ranking or eligibility
+F02,interval_width_percentage_points,public uncertainty width,identity,standard,fail,public,not a confidence or exclusion score
+F03,places_adult_population_field,public adult population field,log1p,standard,fail,public,not a resource weight
+F04,fictional_capacity_places,fictional capacity,identity,standard,fail,synthetic,not real capacity
+F05,fictional_travel_minutes,fictional travel,identity,standard,fail,synthetic,not real travel time
+F06,fictional_delivery_burden_score,fictional burden,identity,standard,fail,synthetic,not an individual burden trait
+F07,fictional_language_access_ready,fictional language-access readiness,yes=1; no=0,standard,fail,synthetic,not a language identity
+F08,fictional_disability_access_ready,fictional disability-access readiness,yes=1; no=0,standard,fail,synthetic,not disability status
+F09,fictional_staff_readiness,fictional staff readiness,ready=1; otherwise=0,standard,fail,synthetic,not real staffing

@@ -1,0 +1,5 @@
+incident_test_state,records,named_route_records,pause_records,owner,required_response,automatic_action
+access_failure,7,7,7,program steward and named incident owner,"human investigation, correction, and stop review",no
+none,257,0,60,monitoring owner,retain for descriptive audit,no
+privacy_near_miss,5,5,5,program steward and named incident owner,"human investigation, correction, and stop review",no
+scheduling_failure,11,11,0,program steward and named incident owner,"human investigation, correction, and stop review",no

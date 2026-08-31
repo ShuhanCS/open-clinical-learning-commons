@@ -1,0 +1,49 @@
+check_id,check_name,actual,expected,status
+Q01,accepted candidate rows,1597,1597,pass
+Q02,accepted rule assignments,6388,6388,pass
+Q03,carried selected tracts,28,28,pass
+Q04,carried fictional places,280,280,pass
+Q05,dry-run records,280,280,pass
+Q06,unique dry-run tests,280,280,pass
+Q07,staff-not-ready concerns,5,5,pass
+Q08,high-travel concerns,12,12,pass
+Q09,high-burden concerns,1,1,pass
+Q10,selected counties,11,11,pass
+Q11,language-access gaps,0,0,pass
+Q12,disability-access gaps,0,0,pass
+Q13,unresolved selected questions,0,0,pass
+Q14,intervention readiness rows,28,28,pass
+Q15,automatic intervention actions,0,0,pass
+Q16,reconciled selected areas,28,28,pass
+Q17,reconciled fictional records,280,280,pass
+Q18,readiness-held tests,50,50,pass
+Q19,outcome records,0,0,pass
+Q20,public prevalence generated records,0,0,pass
+Q21,monitoring measures,20,20,pass
+Q22,monitoring records with denominators,20,20,pass
+Q23,automatic monitoring actions,0,0,pass
+Q24,hidden unavailable results,0,0,pass
+Q25,incident routes named,23,23,pass
+Q26,required pauses honored,72,72,pass
+Q27,feedback states reported,4,4,pass
+Q28,objection tests present,True,True,pass
+Q29,incident states reported,4,4,pass
+Q30,cluster feature rows,1597,1597,pass
+Q31,fixed feature count,9,9,pass
+Q32,selection label excluded from features,0,0,pass
+Q33,cluster assignments,1597,1597,pass
+Q34,base clusters,4,4,pass
+Q35,base support result recorded,True,True,pass
+Q36,cluster profiles,4,4,pass
+Q37,cluster by county rows,56,56,pass
+Q38,selected cluster review rows,28,28,pass
+Q39,selected comparison preserved,28,28,pass
+Q40,selected cluster coverage recorded,2,2,pass
+Q41,challenger variants,8,8,pass
+Q42,alternate seed variants,4,4,pass
+Q43,scaling variants,3,3,pass
+Q44,stability values recorded,8,8,pass
+Q45,automatic cluster actions,0,0,pass
+Q46,cluster changed selections,0,0,pass
+Q47,real implementation-ready rows,0,0,pass
+Q48,challenger decision recorded,True,True,pass

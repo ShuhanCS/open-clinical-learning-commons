@@ -1,0 +1,15 @@
+item_id,item,specification,authority,owner,stop_condition
+I01,candidate,fictional voluntary diabetes-prevention access and navigation program,planning only,population health analytics lead,any real-world use
+I02,starting rule,community-review comparison carried as least unacceptable fictional planning candidate,not an allocation decision,community review council,rule used automatically
+I03,resource,"28 equal teaching awards of 10 fictional places, 280 places total",fixed fictional constraint,resource governance owner,resource amount changed
+I04,population,adults represented only through area-level planning evidence,no personal eligibility,population health clinical lead,individual inference
+I05,information,accessible program information before any voluntary response,fictional design,language and disability access owner,access plan absent
+I06,review,human and community review before any fictional next step,no automatic action,community review council,unresolved objection
+I07,choice,"voluntary interest, refusal, correction, and withdrawal routes",fictional design,community accountability owner,choice route absent
+I08,delivery,navigation plus accessible group or remote prevention support,not service delivery,program operations owner,staff not ready
+I09,monitoring,"twenty predeclared process, access, burden, feedback, incident, and availability measures",teaching triggers only,monitoring owner,denominator unavailable
+I10,feedback,"question, correction, refusal, appeal, disagreement, pause, and stop routes",fictional exercise,community accountability owner,feedback suppressed or ignored
+I11,incident,"named escalation for access, privacy, scheduling, burden, and objection tests",human review required,safety and privacy owner,incident unresolved
+I12,evaluation,later prospective evaluation proposal with no effect estimate,APP-6 owns effect estimation,evaluation methods owner,effect claim made
+I13,retirement,"stop and retire when access, safety, community, evidence, or stewardship conditions fail",human authority,program steward,stop right removed
+I14,deployment,no production connection or deployment,prohibited,program steward,deployment language added

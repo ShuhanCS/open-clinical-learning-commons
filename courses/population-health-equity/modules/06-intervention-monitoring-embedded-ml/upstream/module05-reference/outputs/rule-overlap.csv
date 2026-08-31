@@ -1,0 +1,7 @@
+left_rule_id,right_rule_id,shared_selected_tracts,left_only_tracts,right_only_tracts,jaccard_overlap,interpretation_limit
+capacity_aware,community_review,5,23,23,0.0980392157,rule turnover exposes decision dependence; it is not validation of either rule
+capacity_aware,equal_geographic,0,28,28,0,rule turnover exposes decision dependence; it is not validation of either rule
+capacity_aware,need_based,0,28,28,0,rule turnover exposes decision dependence; it is not validation of either rule
+community_review,equal_geographic,1,27,27,0.0181818182,rule turnover exposes decision dependence; it is not validation of either rule
+community_review,need_based,0,28,28,0,rule turnover exposes decision dependence; it is not validation of either rule
+equal_geographic,need_based,0,28,28,0,rule turnover exposes decision dependence; it is not validation of either rule

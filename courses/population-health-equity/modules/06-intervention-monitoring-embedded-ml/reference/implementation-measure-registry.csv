@@ -1,0 +1,9 @@
+domain,measure_ids,question,primary_owner,balancing_or_failure_measure,current_finding,automatic_action
+readiness,M01,Can the selected areas enter another fictional dry run,program operations owner,Staff holds remain visible,23 of 28 are not marked staff-not-ready; trigger,no
+access,M02 M07 M08,Can travel language and disability access conditions be met,access owners,Access failures and travel burden,Three access measures trigger,no
+reach,M03 M04,Are fictional offers processed and response states captured,monitoring owner,Held offers and no-response,Processing triggers; response capture passes,no
+choice,M05 M06 M15,Are interest refusal and objection routes preserved,community accountability owner,Refusal or objection cannot reduce access,Descriptive choice states; objection route passes,no
+delivery,M09 M10 M11,Can fictional scheduling attendance and completion states be reconciled,program operations owner,Missing schedules and burden,Scheduling passes; later states descriptive,no
+implementation,M12,Does the fictional workflow pass its fidelity test,implementation owner,Fidelity failure,106 of 117 attended tests pass,no
+balancing,M13 M14,Are burden and feedback visible,community accountability owner,High burden or missing feedback,Burden and feedback measures pass,no
+safety_and_governance,M16 M17 M18 M19 M20,Are incidents routes pauses availability and authority visible,program steward,Incident outcome or real-action failure,Incident-free measure triggers; routes pauses and authority pass,no

@@ -1,0 +1,9 @@
+variant_id,variant_type,scaling,seed,clusters,role
+base,base,standard,73056,4,accepted fixed challenger
+seed-73057,seed,standard,73057,4,alternate seed only
+seed-73058,seed,standard,73058,4,alternate seed only
+seed-73059,seed,standard,73059,4,alternate seed only
+seed-73060,seed,standard,73060,4,alternate seed only
+robust-scaling,scaling,robust,73056,4,median and interquartile range
+minmax-scaling,scaling,minmax,73056,4,zero to one feature range
+unitnorm-scaling,scaling,unitnorm,73056,4,row unit norm after fixed transformations

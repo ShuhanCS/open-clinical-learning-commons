@@ -1,0 +1,9 @@
+check_id,item,observed_value,expected_value,status,interpretation
+SR01,ACS tract rows,1620,1620,pass,complete accepted Massachusetts B01001 release
+SR02,PLACES diabetes tract rows,1597,1597,pass,complete accepted Massachusetts DIABETES extract
+SR03,SVI tract rows,1613,1613,pass,complete accepted Massachusetts SVI tract release
+SR04,three-source intersection,1597,1597,pass,every measure tract is present in all three accepted sources
+SR05,union tracts,1620,1620,pass,unmatched public-source states remain visible
+SR06,age-band denominator rows,7985,7985,pass,"1,597 tracts times five declared adult age bands"
+SR07,synthetic event rows,7985,7985,pass,one generated tract-age-period row per denominator
+SR08,public modeled prevalence rows,1597,1597,pass,public modeled prevalence stays separate from synthetic events

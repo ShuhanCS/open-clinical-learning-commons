@@ -1,0 +1,6 @@
+criterion_id,criterion,points_available,points_awarded,status,evidence
+R1,Source and geometry integrity,2,2,pass,"exact official archive fingerprint; 1620 unique tracts; EPSG 4269; 1620 valid geometry rows; projected area check passes"
+R2,Join aggregation and stability accounting,3,3,pass,"1597 matched and 23 unavailable; 14 county teaching summaries; 49 support-review tracts; 645 class changes after aggregation"
+R3,Responsible accessible map and exact alternative,3,3,pass,"accessible SVG with fixed absolute classes; complete 1620-row exact table; structured text alternative and legend counts"
+R4,Ecological contextual reproducibility and claim limits,2,2,pass,"10-claim audit; context memo; deterministic build; AI record; bounded progression"
+TOTAL,Module 04 Week 6 component,10,10,pass,"all 22 noncompensable gates pass; Module 05 curriculum construction may begin with conditions"

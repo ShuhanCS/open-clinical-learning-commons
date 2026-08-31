@@ -1,0 +1,85 @@
+schema_version: 1.0.0
+module_id: oclc-app5-02
+module_version: 0.1.0
+commons_release: 0.88.0
+verified: 2026-08-31
+case_id: FMA-DP-01
+upstream:
+  module_id: oclc-app5-01
+  module_version: 0.1.0
+  commons_release: 0.87.0
+  reference_files: 27
+  payload_files: 28
+  upstream_files: 29
+  handoff_manifest_bytes: 4262
+  handoff_manifest_sha256: beda2254d019c0969c952773b31fb23db30e2be99798aa8af66d5cb1fbd87a2e
+public_sources:
+  - source_id: cdc-places-tract-2025-ma-diabetes
+    publisher: Centers for Disease Control and Prevention
+    official_metadata: https://data.cdc.gov/api/views/cwsq-ngmh
+    released_rows: 1597
+    released_fields: 24
+    released_bytes: 356204
+    released_sha256: 3d55a099be438999fd52b1e34f13589dcf3e260162c56967fa01fb0a80135846
+    role: separate modeled crude adult diabetes prevalence evidence
+    limit: not observed diagnoses, event counts, intervention effects, or allocation authority
+  - source_id: census-acs5-2024-b01001-ma-tract
+    publisher: United States Census Bureau
+    official_table: https://data.census.gov/table/ACSDT5Y2024.B01001
+    official_variables: https://api.census.gov/data/2024/acs/acs5/groups/B01001.json
+    released_rows: 1620
+    released_fields: 100
+    released_bytes: 576420
+    released_sha256: bca33aebaa0a9e418d6a5343818aebc1e8b1dc2d355156419e5693d1907fa419
+    role: adult age-band denominator estimates and paired 90 percent margins
+    limit: survey-derived area estimates; the approximate sum margin omits covariance
+  - source_id: cdc-atsdr-svi-2022-ma-tract
+    publisher: Centers for Disease Control and Prevention and Agency for Toxic Substances and Disease Registry
+    official_documentation: https://atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html
+    released_rows: 1613
+    released_fields: 158
+    released_bytes: 1188187
+    released_sha256: fac1aabd51880624ce728f4a63f01ba6b50959c203c6975400c02daf21329de0
+    role: source-presence and contextual handoff only in Module 02
+    limit: area context cannot be assigned to individuals or used alone for targeting or funding
+synthetic_source:
+  release: fma-dp-01-measures-v1
+  generator: generate_synthetic_events.py
+  generator_version: 0.1.0
+  seed: 73052
+  period: 2024
+  tracts: 1597
+  age_bands: 5
+  rows: 7985
+  adult_denominator: 5679768
+  synthetic_events: 283614
+  zero_denominators: 41
+  source_manifest_bytes: 778
+  source_manifest_sha256: 9915aeb15f62d88a52cfa6304d211a4fd092d33c11e73cd5d63a14d64946823d
+  event_file_bytes: 113029
+  event_file_sha256: 56f04f4e660e40292351cc0ed630b8cbb2f2c0d9cf9c39fbc8420b2113d813cb
+  role: generated adult planning-need numerator for rate construction
+  generation_inputs: ACS denominator structure, fixed age probabilities, seeded fictional tract effect
+  excluded_generation_inputs: PLACES prevalence, SVI values, diagnoses, intervention outcomes, community preference
+  limit: not a diagnosis, PLACES case, patient record, eligibility result, local observation, intervention outcome, targeting score, or allocation signal
+methods:
+  census_moe_guidance: https://www.census.gov/content/dam/Census/programs-surveys/acs/guidance/training-presentations/20180418_MOE_Webinar_Transcript.pdf
+  cdc_direct_age_adjustment: https://www.cdc.gov/nchs/hus/sources-definitions/age-adjustment.htm
+  cdc_direct_indirect_discussion: https://www.cdc.gov/pcd/issues/2010/jan/09_0054.htm
+  rate_multiplier: 100000
+  direct_standard: ACS 2020-2024 adult population across all 1597 matched tracts
+  direct_rates_available: 1576
+  direct_rates_unavailable: 21
+  guided_indirect_required: 80
+  claim_limit: standardized results are teaching indexes and ratios, not real risk, excess cases, disparity, need, or action
+authority:
+  module03_curriculum_construction: permitted with conditions
+  disparity_claim: prohibited
+  mapping: prohibited
+  tract_ranking: prohibited
+  targeting_or_allocation: prohibited
+  model_fitting: prohibited
+  intervention_effect_estimation: prohibited
+  real_community_action: prohibited
+  implementation: prohibited
+  deployment: prohibited

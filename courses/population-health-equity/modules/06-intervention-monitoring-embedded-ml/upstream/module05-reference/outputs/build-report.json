@@ -1,0 +1,202 @@
+{
+  "commons_release": "0.92.0",
+  "findings": {
+    "assignments": 6388,
+    "candidate_tracts": 1597,
+    "county_consequence_rows": 56,
+    "failed_query_checks": 0,
+    "fictional_places_per_rule": 280,
+    "group_consequence_rows": 76,
+    "overlap_rows": 6,
+    "query_checks": 40,
+    "rule_summaries": {
+      "capacity_aware": {
+        "allocated_places": 280,
+        "candidate_tracts": 1597,
+        "excluded_tracts": 1569,
+        "fairness_definition": "feasible fictional delivery under the fixed resource constraint",
+        "fictional_selected_capacity_places": 1120,
+        "interpretation_limit": "rule comparison, not a validated fairness result or real allocation decision",
+        "mean_selected_modeled_prevalence_percent": 9.37142857142857,
+        "possible_benefit": "280 fictional program places if all assumptions hold",
+        "possible_harm": "exclusion, delay, burden, access failure, capacity failure, or treating a classroom rule as authority",
+        "rule_id": "capacity_aware",
+        "rule_name": "Capacity-aware rule",
+        "selected_counties": 8,
+        "selected_disability_access_gaps": 0,
+        "selected_high_burden": 0,
+        "selected_high_travel": 6,
+        "selected_language_access_gaps": 0,
+        "selected_limited_support": 0,
+        "selected_review_ready": 17,
+        "selected_staff_not_ready": 0,
+        "selected_tracts": 28,
+        "selected_unresolved_objections": 1,
+        "selected_unresolved_questions": 40
+      },
+      "community_review": {
+        "allocated_places": 280,
+        "candidate_tracts": 1597,
+        "excluded_tracts": 1569,
+        "fairness_definition": "procedural readiness with fictional review, access, objection, recourse, and county concentration limits",
+        "fictional_selected_capacity_places": 800,
+        "interpretation_limit": "rule comparison, not a validated fairness result or real allocation decision",
+        "mean_selected_modeled_prevalence_percent": 10.185714285714285,
+        "possible_benefit": "280 fictional program places if all assumptions hold",
+        "possible_harm": "exclusion, delay, burden, access failure, capacity failure, or treating a classroom rule as authority",
+        "rule_id": "community_review",
+        "rule_name": "Community-review rule",
+        "selected_counties": 11,
+        "selected_disability_access_gaps": 0,
+        "selected_high_burden": 1,
+        "selected_high_travel": 12,
+        "selected_language_access_gaps": 0,
+        "selected_limited_support": 0,
+        "selected_review_ready": 28,
+        "selected_staff_not_ready": 5,
+        "selected_tracts": 28,
+        "selected_unresolved_objections": 0,
+        "selected_unresolved_questions": 0
+      },
+      "equal_geographic": {
+        "allocated_places": 280,
+        "candidate_tracts": 1597,
+        "excluded_tracts": 1569,
+        "fairness_definition": "equal geographic representation with two teaching awards in each of 14 counties",
+        "fictional_selected_capacity_places": 580,
+        "interpretation_limit": "rule comparison, not a validated fairness result or real allocation decision",
+        "mean_selected_modeled_prevalence_percent": 10.014285714285714,
+        "possible_benefit": "280 fictional program places if all assumptions hold",
+        "possible_harm": "exclusion, delay, burden, access failure, capacity failure, or treating a classroom rule as authority",
+        "rule_id": "equal_geographic",
+        "rule_name": "Equal geographic rule",
+        "selected_counties": 14,
+        "selected_disability_access_gaps": 9,
+        "selected_high_burden": 6,
+        "selected_high_travel": 9,
+        "selected_language_access_gaps": 11,
+        "selected_limited_support": 1,
+        "selected_review_ready": 16,
+        "selected_staff_not_ready": 3,
+        "selected_tracts": 28,
+        "selected_unresolved_objections": 2,
+        "selected_unresolved_questions": 53
+      },
+      "need_based": {
+        "allocated_places": 280,
+        "candidate_tracts": 1597,
+        "excluded_tracts": 1569,
+        "fairness_definition": "greater fictional attention to higher accepted modeled area-level prevalence",
+        "fictional_selected_capacity_places": 710,
+        "interpretation_limit": "rule comparison, not a validated fairness result or real allocation decision",
+        "mean_selected_modeled_prevalence_percent": 20.99285714285714,
+        "possible_benefit": "280 fictional program places if all assumptions hold",
+        "possible_harm": "exclusion, delay, burden, access failure, capacity failure, or treating a classroom rule as authority",
+        "rule_id": "need_based",
+        "rule_name": "Need-based rule",
+        "selected_counties": 7,
+        "selected_disability_access_gaps": 8,
+        "selected_high_burden": 9,
+        "selected_high_travel": 7,
+        "selected_language_access_gaps": 7,
+        "selected_limited_support": 26,
+        "selected_review_ready": 20,
+        "selected_staff_not_ready": 11,
+        "selected_tracts": 28,
+        "selected_unresolved_objections": 1,
+        "selected_unresolved_questions": 42
+      }
+    },
+    "rules": 4,
+    "selected_per_rule": 28,
+    "sensitivity_shortfalls": 2,
+    "sensitivity_variants": 20
+  },
+  "interpretation_status": "fictional rule comparison only; no real need, consent, eligibility, outreach, funding, allocation, community action, service, implementation, production connection, or deployment conclusion",
+  "module_id": "oclc-app5-05",
+  "module_version": "0.1.0",
+  "outputs": {
+    "candidate-source-profile.csv": {
+      "bytes": 496,
+      "columns": 14,
+      "rows": 1,
+      "sha256": "262b8807f10aadb466595dd52ce3f6fcc30e0208a493b90814ce6fdbb4ea235c"
+    },
+    "county-concentration.csv": {
+      "bytes": 7609,
+      "columns": 10,
+      "rows": 56,
+      "sha256": "d8e5b41f1199f8ef2e6cf8dd0ae58cbdab55bf177337b662096863b0c2733df0"
+    },
+    "group-consequences.csv": {
+      "bytes": 17922,
+      "columns": 12,
+      "rows": 76,
+      "sha256": "029c81cc2ef5cef1c92ff0ca68f2eae11b09330fe23c03fbcf5a14cd53f9581a"
+    },
+    "linked-candidate-table.csv.gz": {
+      "bytes": 34393,
+      "columns": 25,
+      "rows": 1597,
+      "sha256": "957fc1bd320b5c9c4745e2789a0f86df4f73968b73724dabf11793eb9d411be1"
+    },
+    "query-checks.csv": {
+      "bytes": 1702,
+      "columns": 5,
+      "rows": 40,
+      "sha256": "307268a47860099e3fa36e11d383b50d60afebfdbeb9c392b9f1083038a7f3a3"
+    },
+    "rule-assignments.csv.gz": {
+      "bytes": 103785,
+      "columns": 26,
+      "rows": 6388,
+      "sha256": "33f502587ff16b291ddadd83a6ba96600616d84837d86e4bff3c467808b568ce"
+    },
+    "rule-overlap.csv": {
+      "bytes": 858,
+      "columns": 7,
+      "rows": 6,
+      "sha256": "92048bd15ea8902f4ea123e9ce998f9ff532b3492687d01096fcd1aecbd70c21"
+    },
+    "rule-summary.csv": {
+      "bytes": 2132,
+      "columns": 22,
+      "rows": 4,
+      "sha256": "e0c3743fd00da6512a7e7843fc2e7b901b01419fa2c6715b26958894f66551c8"
+    },
+    "sensitivity-results.csv": {
+      "bytes": 4597,
+      "columns": 19,
+      "rows": 20,
+      "sha256": "97181653260ea933d08415ad5e3de20a4f728315b090ec87d80bf3e120939ada"
+    }
+  },
+  "resource_contract": {
+    "automatic_action": false,
+    "awards": 28,
+    "fictional_places": 280,
+    "partial_awards": false,
+    "places_per_award": 10
+  },
+  "schema_version": "1.0.0",
+  "sql_sha256": {
+    "01-link-evidence-and-fictional-planning.sql": "cb1ace1e060272bdb5695d09ab242480644d7ea7be00e389943897a89899cc1f",
+    "02-apply-and-reconcile-rules.sql": "940532c8f10bec8560d99c55fa9aec4a52ed482e34eb89e11936b3e45da1bf88",
+    "03-audit-consequences-and-sensitivity.sql": "aa8f743cb52313ad3e778d2403471389b3ec2884fe440349071625550e212f7b",
+    "04-audit-release.sql": "a5c17976dcaa17534938debfcf8a746cdfbfd0b2574321dad6bcfdfe96b7a9d7"
+  },
+  "synthetic_source": {
+    "independent_of_public_prevalence": true,
+    "manifest_sha256": "a9a9cd10e67164cd8c47df667f2e559f17f8baa0e2308740ce4c9d9e675c0319",
+    "rows": 1597,
+    "seed": 73055,
+    "source_id": "fma-dp-01-fictional-planning-v1"
+  },
+  "upstream": {
+    "commons_release": "0.91.0",
+    "handoff_manifest_sha256": "0670760f650e0d13cfd4c5dc85ab26fdce5779cc86d35b3d3c27d6a3cc7738dd",
+    "module_id": "oclc-app5-04",
+    "module_version": "0.1.0",
+    "reference_files": 287
+  }
+}

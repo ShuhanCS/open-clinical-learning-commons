@@ -1,0 +1,111 @@
+{
+  "challenger_use": "not useful; preserve transparent community-review rule only",
+  "commons_release": "0.93.0",
+  "findings": {
+    "alternate_seed_minimum_ari": 0.893633,
+    "base_smallest_cluster": 267,
+    "candidate_rows": 1597,
+    "challenger_stable_for_bounded_questions": false,
+    "cluster_features": 9,
+    "cluster_variants": 8,
+    "dry_run_rows": 280,
+    "failed_query_checks": 0,
+    "fictional_places": 280,
+    "high_burden": 1,
+    "high_travel": 12,
+    "incident_tests": 23,
+    "monitoring_measures": 20,
+    "monitoring_triggers": 6,
+    "objection_tests": 14,
+    "query_checks": 48,
+    "scaling_variant_median_ari": 0.11995481449421869,
+    "selected_clusters": 2,
+    "selected_tracts": 28,
+    "staff_not_ready": 5
+  },
+  "interpretation_status": "fictional intervention planning, monitoring dry run, and descriptive clustering only; no effect estimate or implementation authority",
+  "intervention_readiness": "not ready for any real implementation; revise fictional staffing, travel, burden, access, incident, and monitoring triggers before any later exercise",
+  "module_id": "oclc-app5-06",
+  "module_version": "0.1.0",
+  "outputs": {
+    "challenger-stability.csv": {
+      "bytes": 1822,
+      "columns": 15,
+      "rows": 8,
+      "sha256": "cc8fcd6a20f33151426300b1598063ce555d84a1d0e1fedaad21d18065a9f01e"
+    },
+    "cluster-assignments.csv.gz": {
+      "bytes": 14306,
+      "columns": 9,
+      "rows": 1597,
+      "sha256": "442afe63bd7c9b8b8ae5ab791f525c0e8f06267b0b9438f04690ba86b7b38e51"
+    },
+    "cluster-feature-matrix.csv.gz": {
+      "bytes": 24952,
+      "columns": 15,
+      "rows": 1597,
+      "sha256": "25e965a63082a78732aca365eb1d9fa42a01a924cfe58ceaea54793b48ce97bf"
+    },
+    "cluster-profiles.csv": {
+      "bytes": 1065,
+      "columns": 15,
+      "rows": 4,
+      "sha256": "871f2cb5c1485b10d0ed5b60ba24f1027193cd949b7764cab56f26f7fd4ec7c4"
+    },
+    "cluster-support-geography.csv": {
+      "bytes": 5792,
+      "columns": 8,
+      "rows": 56,
+      "sha256": "7e50e777cc86604dd2686f5764c7592bf3da9ffc89e497302c0777ec66d04afc"
+    },
+    "dry-run-reconciliation.csv": {
+      "bytes": 3440,
+      "columns": 13,
+      "rows": 28,
+      "sha256": "3e03f8d923e57e547c55e26336c1dc86b9fd73523587601536cd1fc524fb5d42"
+    },
+    "escalation-results.csv": {
+      "bytes": 523,
+      "columns": 7,
+      "rows": 4,
+      "sha256": "17074481e88183185db85de0e2164ad4955c250e5829bceeed4297dfab55141d"
+    },
+    "feedback-recourse-results.csv": {
+      "bytes": 544,
+      "columns": 7,
+      "rows": 4,
+      "sha256": "e787128725f45d8bf36ac7f9244c0582f877fb662f0daeb6465d139574a1ae30"
+    },
+    "intervention-readiness.csv": {
+      "bytes": 6058,
+      "columns": 15,
+      "rows": 28,
+      "sha256": "77d138433265d0cdce2efc521bbf6368a90df9c231f84a1e7927bf1648f5e209"
+    },
+    "monitoring-results.csv": {
+      "bytes": 7088,
+      "columns": 20,
+      "rows": 20,
+      "sha256": "39d07363b2154758f52837fb6f374935a0fb9eec6f056ebfad2203bfda6346eb"
+    },
+    "query-checks.csv": {
+      "bytes": 1943,
+      "columns": 5,
+      "rows": 48,
+      "sha256": "6a721b1d47790c60e32f25ec4bfe768df86d728c3bfcba14f60238eb30f0eb35"
+    },
+    "selected-tract-cluster-review.csv": {
+      "bytes": 3768,
+      "columns": 13,
+      "rows": 28,
+      "sha256": "fbcfa962ada336f04c1eee975518baea3fcfe7024c79fadd9ae9c611f5c068d0"
+    },
+    "source-profile.csv": {
+      "bytes": 659,
+      "columns": 16,
+      "rows": 1,
+      "sha256": "1ffc99fd1df94ceb55943516a62ff6d45831c0319ea3640f6e8c7f7f5d1f5701"
+    }
+  },
+  "progression": "Module 06 package may enter separate Week 6 checkpoint construction; no real-world action is permitted"
+}

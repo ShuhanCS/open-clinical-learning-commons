@@ -1,0 +1,8 @@
+step,input_or_activity,expected_near_term_change,assumption,failure_signal,owner,claim_limit
+T01,Accessible information before response,People can understand the fictional offer,Formats and language meet actual needs,Language or disability access test fails,language and disability access owners,design hypothesis only
+T02,Voluntary response and refusal route,Choice remains visible and nonpunitive,No-response is not treated as refusal or consent,Response state missing or refusal changes access,community accountability owner,not observed choice
+T03,Navigation and scheduling,Interested tests reach an accessible schedule,Staff and modality are available,Staff hold or scheduling failure,program operations owner,not observed access
+T04,Group remote or hybrid support,The fictional pathway can be delivered,Travel and technology burdens are addressed,High travel burden or access incident,program operations and access owners,not observed service
+T05,Fidelity and completion checks,Workflow failures become visible,Measures represent the intended process,Fidelity failure or unavailable denominator,implementation owner,not service quality or outcome
+T06,Feedback incident and pause routes,Problems lead to accountable human review,People can disagree without penalty,Objection ignored incident unrouted or pause missed,program steward,not proof of safety
+T07,Later prospective evaluation,A future study could estimate a defined effect,Ethical implementation and causal design occur first,Outcome absent or causal contrast undefined,evaluation methods owner,no effect estimate in Module 06

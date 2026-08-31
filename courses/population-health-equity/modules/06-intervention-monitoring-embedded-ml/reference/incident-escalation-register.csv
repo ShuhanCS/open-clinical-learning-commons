@@ -1,0 +1,5 @@
+incident_state,records,named_route_records,pause_records,owner,required_response,closure_rule,automatic_action
+access_failure,7,7,7,access owner and program steward,pause correct access and retest,human confirms correction and repeat test,no
+privacy_near_miss,5,5,5,privacy owner and program steward,pause investigate and revise handling,human documents containment and prevention,no
+scheduling_failure,11,11,0,program operations owner,review schedule access and workload,human records correction or explicit stop,no
+none,257,0,60,monitoring owner,retain descriptive audit state,no incident closure needed; other pause reasons remain separate,no

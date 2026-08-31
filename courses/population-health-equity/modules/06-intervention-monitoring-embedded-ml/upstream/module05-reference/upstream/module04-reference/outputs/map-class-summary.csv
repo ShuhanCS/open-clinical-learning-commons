@@ -1,0 +1,7 @@
+class_order,map_class,tract_count,limited_support_tracts,retained_places_population,interpretation_limit
+1,less than 5.0%,82,2,267453,"absolute display class; not a rank, priority, target, or eligibility group"
+2,5.0% to less than 10.0%,826,2,3100451,"absolute display class; not a rank, priority, target, or eligibility group"
+3,10.0% to less than 15.0%,608,8,2081299,"absolute display class; not a rank, priority, target, or eligibility group"
+4,15.0% to less than 20.0%,64,20,181956,"absolute display class; not a rank, priority, target, or eligibility group"
+5,20.0% or greater,17,17,32511,"absolute display class; not a rank, priority, target, or eligibility group"
+6,unavailable,23,0,0,"absolute display class; not a rank, priority, target, or eligibility group"

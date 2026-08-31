@@ -1,0 +1,11 @@
+step_id,stage,test_state,human_decision,owner,pause_condition,record,authority_limit
+D01,Planning candidate,Carry transparent community-review comparison,Confirm fictional starting point only,community review council,Any claim of consent or authority,intervention contract,not real allocation
+D02,Readiness,Review staff travel burden and access,Hold or revise before dry run,program operations owner,Staff not ready,intervention-readiness.csv,not implementation readiness
+D03,Information,Prepare accessible fictional information,Approve formats and routes,access owners,Required access absent,access plan,not real outreach
+D04,Offer test,Process or hold each fictional test,Release only readiness-cleared tests,program operations owner,Readiness hold,dry-run record,not a person or offer
+D05,Response test,Record interested declined or no response,Preserve refusal and ambiguity,community accountability owner,Choice route missing,dry-run record,not consent
+D06,Scheduling test,Match accessible modality and timing,Revise schedule or route,program operations owner,Access or scheduling failure,dry-run record,not an appointment
+D07,Delivery test,Exercise attendance completion and fidelity,Review failures without punishment,implementation owner,Fidelity or burden trigger,dry-run record,not a service
+D08,Feedback and incident,Route questions objections and incidents,Correct pause stop or escalate,named incident owner,Objection access failure or privacy near miss,incident register,not observed harm
+D09,Monitoring,Review all 20 measures and denominators,Assign human response,monitoring owner,Trigger or unavailable denominator,monitoring-results.csv,no automatic action
+D10,Evaluation boundary,Prepare later causal proposal,Defer effect work to APP-6,evaluation methods owner,Any effect claim,evaluation proposal,no effect estimate

@@ -1,0 +1,41 @@
+check_id,check_name,expected,actual,status
+Q01,candidate rows,1597,1597,pass
+Q02,unique candidate tracts,1597,1597,pass
+Q03,candidate counties,14,14,pass
+Q04,accepted public release,1,1,pass
+Q05,fictional synthetic release,1,1,pass
+Q06,public modeled estimates retained,1597,1597,pass
+Q07,limited-support rows retained,49,49,pass
+Q08,declared rules,4,4,pass
+Q09,assignment rows,6388,6388,pass
+Q10,unique rule-tract assignments,6388,6388,pass
+Q11,candidate rows per rule,1597 each,1597 to 1597,pass
+Q12,selected tracts per rule,28 each,28 to 28,pass
+Q13,allocated places per rule,280 each,280 to 280,pass
+Q14,partial awards,0,0,pass
+Q15,automatic actions,0,0,pass
+Q16,equal-rule county rows,14,14,pass
+Q17,equal awards per county,2 each,2 to 2,pass
+Q18,need rule selected tracts,28,28,pass
+Q19,capacity rule selected tracts,28,28,pass
+Q20,community rule selected tracts,28,28,pass
+Q21,capacity rule minimum capacity,0 invalid,0,pass
+Q22,community readiness requirements,0 invalid,0,pass
+Q23,community county maximum,<=3,3,pass
+Q24,rule summaries,4,4,pass
+Q25,county consequence rows,56,56,pass
+Q26,group consequence rows,76,76,pass
+Q27,group rows per rule,19 each,19 to 19,pass
+Q28,suppression rows preserved,>0,84920,pass
+Q29,pairwise rule overlaps,6,6,pass
+Q30,sensitivity variants,20,20,pass
+Q31,base sensitivity variants,4,4,pass
+Q32,resource sensitivity variants,8,8,pass
+Q33,selected order populated,112,112,pass
+Q34,excluded order empty,0 invalid,0,pass
+Q35,selected inclusion reason,112,112,pass
+Q36,excluded reason,6276,6276,pass
+Q37,one accountable owner,1,1,pass
+Q38,candidate public role,1597,1597,pass
+Q39,candidate synthetic role,1597,1597,pass
+Q40,claim limits populated,0 missing,0,pass

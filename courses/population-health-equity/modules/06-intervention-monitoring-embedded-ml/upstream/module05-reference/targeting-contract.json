@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app5-05",
+    "version": "0.1.0",
+    "commons_release": "0.92.0",
+    "hours": 16.0,
+    "course_points": 15,
+    "week6_checkpoint_points_after_acceptance": 25
+  },
+  "upstream": {
+    "module_id": "oclc-app5-04",
+    "module_version": "0.1.0",
+    "commons_release": "0.91.0",
+    "reference_files": 287,
+    "reference_manifest_rows": 271,
+    "handoff_payload_files": 287,
+    "handoff_manifest_bytes": 59768,
+    "handoff_manifest_sha256": "0670760f650e0d13cfd4c5dc85ab26fdce5779cc86d35b3d3c27d6a3cc7738dd"
+  },
+  "source": {
+    "id": "fma-dp-01-fictional-planning-v1",
+    "generator_version": "0.1.0",
+    "seed": 73055,
+    "rows": 1597,
+    "manifest_rows": 4,
+    "manifest_bytes": 1560,
+    "manifest_sha256": "a9a9cd10e67164cd8c47df667f2e559f17f8baa0e2308740ce4c9d9e675c0319",
+    "planning_layer_sha256": "b9ce228fc824ec7c62bbede5fcd8459722b328fc39fa5215036c6e924f562aed",
+    "independent_of_public_prevalence": true
+  },
+  "resource": {
+    "fictional_places": 280,
+    "awards": 28,
+    "places_per_award": 10,
+    "partial_awards": false,
+    "carryover": false,
+    "automatic_action": false
+  },
+  "analysis": {
+    "candidate_tracts": 1597,
+    "rules": 4,
+    "assignment_rows": 6388,
+    "county_consequence_rows": 56,
+    "group_consequence_rows": 76,
+    "overlap_rows": 6,
+    "sensitivity_variants": 20,
+    "sensitivity_shortfalls": 2,
+    "query_checks": 40,
+    "outputs": 10
+  },
+  "assessment": {
+    "criteria": 4,
+    "points": 15,
+    "pass_score": 12,
+    "noncompensable_gates": 26,
+    "week6_component_points": 15
+  },
+  "workspace": {
+    "learner_files": 330,
+    "learner_manifest_rows": 308,
+    "reference_files": 340,
+    "reference_manifest_rows": 318,
+    "editable_records": 17,
+    "editable_sql_files": 4
+  },
+  "authority": {
+    "fictional_rule_comparison": "permitted",
+    "fictional_intervention_planning": "reserved for Module 06",
+    "real_need_claim": "prohibited",
+    "real_consent_claim": "prohibited",
+    "individual_inference": "prohibited",
+    "automatic_rule_use": "prohibited",
+    "real_priority_or_eligibility": "prohibited",
+    "outreach": "prohibited",
+    "allocation_or_funding": "prohibited",
+    "real_community_action": "prohibited",
+    "service_delivery": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

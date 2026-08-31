@@ -1,0 +1,3 @@
+source_id,relative_path,format,rows,columns,bytes,sha256,content_bytes,content_sha256,generator_version,seed,synthetic_flag,period,claim_limit
+synthetic-events,data/raw/synthetic-events.csv.gz,deterministic gzip CSV,7985,15,113029,56f04f4e660e40292351cc0ed630b8cbb2f2c0d9cf9c39fbc8420b2113d813cb,2293555,223cff52a9caed59bf57e560c12aba5882142716634947c14970d1ae5b3e41bf,0.1.0,73052,1,2024,"generated teaching numerator only; no real cases, eligibility, outcomes, targeting, or allocation"
+age-band-crosswalk,data/age-band-crosswalk.csv,CSV,38,7,2456,16cf59b15747375088bdd7f77e380a0b17b5d6f8f4dbb5ee1fe3e2d234646e20,2456,16cf59b15747375088bdd7f77e380a0b17b5d6f8f4dbb5ee1fe3e2d234646e20,0.1.0,,0,ACS 2020-2024,field routing only; ACS estimates remain survey-derived area estimates

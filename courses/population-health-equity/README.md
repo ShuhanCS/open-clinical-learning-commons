@@ -34,5 +34,7 @@ Checkpoint totals are 40 points at Week 3, 25 points at Week 6, and 35 points on
 - Module 04 specification: `docs/curriculum/courses/APP-5/modules/04-place-evidence-geographic-reasoning-spec.md`
 - Module 05 package: `courses/population-health-equity/modules/05-targeting-fairness/`
 - Module 05 specification: `docs/curriculum/courses/APP-5/modules/05-targeting-fairness-spec.md`
+- Module 06 package: `courses/population-health-equity/modules/06-intervention-monitoring-embedded-ml/`
+- Module 06 specification: `docs/curriculum/courses/APP-5/modules/06-intervention-monitoring-embedded-ml-spec.md`
 
 Each module is built, validated, versioned, committed, pushed, and remote-verified before the next module begins.

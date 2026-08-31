@@ -499,7 +499,7 @@
           "title": "Accountable intervention design, monitoring, and embedded ML",
           "outcome": "Design an accountable intervention and decide whether a fixed area-profile challenger adds useful planning questions.",
           "topics": "Intervention analytics, implementation measures, monitoring, feedback, governance, fixed clustering challenger, stability, support, and human decision ownership.",
-          "submission": "Cumulative Week 6 place, targeting, intervention, monitoring, and ML release.",
+          "submission": "Required zero-point intervention, monitoring, governance, and ML gate for the separate Week 6 checkpoint.",
           "hours": 16
         },
         {
