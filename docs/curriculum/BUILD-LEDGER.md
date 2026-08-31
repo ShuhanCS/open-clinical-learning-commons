@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.89.0
+- Current release: 0.90.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-5 Module 03, Disparities and data limits
-- Next unit: APP-5 Week 3 checkpoint
+- Last completed unit: APP-5 Week 3 checkpoint, Population measures, disparities, and data-limit readiness
+- Next unit: APP-5 Module 04
 
 ## Confirmed decisions
 
@@ -689,7 +689,13 @@
 - The accepted analysis contains 110 group-age rates, 22 standardized group rates, 32 reference comparisons, six summary disparity records, five missingness results, 19 representation records, and an eight-row selection, linkage, and measurement-bias register.
 - Deterministic rules suppress 19,742 cells for primary small-number or denominator limits and 1,488 complementary cells. Of 30,343 tract-group rows, 9,113 remain publishable and 21,230 remain unavailable. All 4,791 non-reconstruction audits pass, and tract totals are not published.
 - All 36 SQL checks and 12 source-reconciliation checks pass. Complete validation passes 431 checks, starter validation passes 332 checks, deterministic source, analysis, and workspace builds match, and copied-answer, complete-mode starter, and 17 protected failure routes are rejected.
-- APP-5 Module 03 is a runnable release candidate at Commons 0.89.0. The separate 40-point Week 3 checkpoint may be assembled with conditions. Module 04 may not begin until that checkpoint accepts the frozen package. Real or intersectional disparity claims, mapping, tract ranking, targeting, allocation, model fitting, intervention-effect estimation, real community action, implementation, and deployment remain prohibited.
+- APP-5 Module 03 is a runnable release candidate at Commons 0.89.0 and hands its frozen package to the separate Week 3 checkpoint. Module 04 remains gated by checkpoint acceptance. Real or intersectional disparity claims, mapping, tract ranking, targeting, allocation, model fitting, intervention-effect estimation, real community action, implementation, and deployment remain prohibited at the Module 03 boundary.
+- APP-5 Checkpoint 01 version 0.1.0 freezes 27 Module 01 files, 72 Module 02 files, and 120 Module 03 files in one 219-row candidate manifest. The three nested manifests protect 177 immutable rows.
+- The candidate manifest is 41,641 bytes with SHA-256 `b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192`. Independent reference builds match byte for byte, and learner and reference packages receive the same candidate.
+- Module 01 remains a required zero-point gate. Module 02 contributes 20 points once, Module 03 contributes 20 points once, and the reference checkpoint score is 40 of 40. All 45 inherited gates and 22 checkpoint integrity gates pass.
+- The checkpoint preserves 1,620 union tracts, 1,597 measure tracts, 5,679,768 denominator units, 283,614 synthetic events, 1,576 available direct rates, 21 unavailable direct rates, 80 guided indirect cases, three separate marginal dimensions, 19 groups, 151,715 group-margin rows, five missingness results, eight bias records, and 21,230 protected cells.
+- Complete checkpoint validation passes 1,460 checks, learner validation passes 1,446 checks, the copied validator passes, deterministic assembly matches, and 27 deliberate failure routes plus complete-mode learner rejection are verified.
+- APP-5 Checkpoint 01 is a runnable release candidate at Commons 0.90.0 with disposition `continue with conditions`. Module 04 place-based curriculum construction may begin. Module 05 remains prohibited until Module 04 passes. Real or intersectional disparity claims, map publication from the checkpoint, ranking, targeting, eligibility, outreach, allocation, funding, real community action, implementation, production connection, and deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -721,12 +727,14 @@
 - Complete named faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, community, equity, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 02 before alpha.
 - Confirm APP-5 Module 03's marginal group contract, reference groups, interval treatment, completeness assumptions, bias register, event and denominator thresholds, complementary-suppression policy, and bounded synthetic claim before alpha.
 - Complete named faculty, population-health clinical, epidemiology, biostatistics, equity, community, privacy, race and ethnicity standards, language-access, disability, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 03 before alpha.
+- Complete the 12 owned APP-5 Checkpoint 01 conditions covering dates, source roles, measure methods, group standards, references, missingness, bias, suppression, community rights, accessibility, responsible AI, and clean reproduction before alpha.
+- Complete named APP-5 Checkpoint 01 faculty, population-health clinical, epidemiology, biostatistics, Census and ACS, PLACES, SVI, GIS, race and ethnicity standards, language-access, disability, community, equity, privacy, accessibility, responsible-AI, and independent-reproduction review before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the accepted APP-5 course specification and the Module 01 through Module 03 specifications, packages, release records, scores, gates, progression decisions, and open conditions.
-2. Freeze the complete Module 03 reference workspace and preserve its nested Module 02 handoff, synthetic source identity, group contract, standard population, measures, references, missingness results, bias register, suppression states, responsible claim, score, and gates without recomputing or repairing them.
-3. Build the separate APP-5 Week 3 checkpoint. Count the Module 02 20-point component and Module 03 20-point component once; retain Module 01 as a required zero-point gate.
-4. Require the cumulative defense, reviewer record, independent reproduction, conditions register, progression decision, and explicit acceptance or revision decision before Module 04.
-5. Preserve all unavailable and suppressed states. Do not map, rank tracts, select a target or allocation rule, fit a model, estimate intervention effects, make real community claims, implement, or deploy. Advance semver, validate, commit, push, and remote-verify the checkpoint as its own unit.
+1. Read the accepted APP-5 course specification, Checkpoint 01 specification, package, release, candidate manifest identity, evidence index, readiness review, responsible-claims audit, conditions, and progression decision.
+2. Freeze the complete 240-file Checkpoint 01 reference workspace without recomputing or repairing accepted sources, denominators, measures, standardization, references, missingness, bias, suppression, score, gates, or claims.
+3. Build APP-5 Module 04 as the place-based evidence and geographic-reasoning release. Acquire and validate the complete accepted 2024 Massachusetts tract geometry before mapping.
+4. Preserve key, vintage, coordinate reference system, invalid geometry, missing geometry, extra geometry, and spatial-join accounting. Compare tract and county aggregation, small-area stability, ecological and contextual interpretation, and non-stigmatizing language.
+5. Create one responsible accessible teaching map, exact table, text alternative, and context memo. Do not rank, target, define eligibility, contact, allocate, fund, fit a model, estimate effects, implement, or deploy. Advance semver, validate, commit, push, and remote-verify Module 04 as its own unit.

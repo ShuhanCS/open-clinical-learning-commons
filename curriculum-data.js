@@ -475,7 +475,7 @@
           "title": "Disparities and data limits",
           "outcome": "Decide whether the evidence supports a bounded disparity statement after testing reference choice, missingness, representation, and small-number limits.",
           "topics": "Absolute, relative, and summary disparity measures; reference-group sensitivity; race, ethnicity, language, disability, and geography completeness; selection, linkage, and measurement bias; deterministic primary and complementary suppression.",
-          "submission": "Twenty-point disparity and data-limit analysis for the separate 40-point Week 3 checkpoint.",
+          "submission": "Twenty-point disparity and data-limit analysis counted once in the cumulative 40-point Week 3 checkpoint.",
           "hours": 16.5
         },
         {

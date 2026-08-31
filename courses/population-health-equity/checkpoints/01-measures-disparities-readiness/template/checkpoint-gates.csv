@@ -1,0 +1,23 @@
+gate_id,gate,status,evidence,owner
+G01,Accepted module identities,REPLACE,REPLACE,REPLACE
+G02,Outer candidate chain of custody,REPLACE,REPLACE,REPLACE
+G03,Nested immutable chain of custody,REPLACE,REPLACE,REPLACE
+G04,Public source identity and role,REPLACE,REPLACE,REPLACE
+G05,Population denominator geography time and audience,REPLACE,REPLACE,REPLACE
+G06,Linkage and reconciliation,REPLACE,REPLACE,REPLACE
+G07,Rate and standardization contract,REPLACE,REPLACE,REPLACE
+G08,Uncertainty and support,REPLACE,REPLACE,REPLACE
+G09,Public and synthetic evidence separation,REPLACE,REPLACE,REPLACE
+G10,Separate marginal dimensions,REPLACE,REPLACE,REPLACE
+G11,Group and reference contract,REPLACE,REPLACE,REPLACE
+G12,Disparity measures and sensitivity,REPLACE,REPLACE,REPLACE
+G13,Missingness and representation,REPLACE,REPLACE,REPLACE
+G14,Selection linkage and measurement bias,REPLACE,REPLACE,REPLACE
+G15,Primary and complementary suppression,REPLACE,REPLACE,REPLACE
+G16,Non-reconstruction and unavailable state,REPLACE,REPLACE,REPLACE
+G17,Point source and no duplication,REPLACE,REPLACE,REPLACE
+G18,Inherited gates,REPLACE,REPLACE,REPLACE
+G19,Checkpoint score and gates,REPLACE,REPLACE,REPLACE
+G20,Defense review conditions reproduction AI and claims,REPLACE,REPLACE,REPLACE
+G21,Bounded fictional claim,REPLACE,REPLACE,REPLACE
+G22,Bounded progression and authority,REPLACE,REPLACE,REPLACE

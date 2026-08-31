@@ -14,7 +14,7 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.89.0` through Module 03.
+- Current Commons release target: `0.90.0` through the Week 3 checkpoint.
 - Specification status: construction candidate.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
@@ -278,7 +278,7 @@ The Week 3 checkpoint freezes the population, denominator, source identities, st
 - Planned specification: `docs/curriculum/courses/APP-5/modules/04-place-evidence-geographic-reasoning-spec.md`.
 - Decision: can the accepted population evidence be communicated geographically without unstable, ecological, misleading, or stigmatizing claims?
 - Submission: 10-point responsible map and context memo.
-- Build status: planned after Checkpoint 01 acceptance.
+- Build status: planned from the accepted Checkpoint 01 handoff.
 
 Learners acquire and validate the complete accepted Massachusetts tract geometry. They test keys, coordinate reference systems, invalid geometry, missing geometry, extra geometry, tract vintage, spatial joins, and aggregation before mapping.
 
@@ -347,13 +347,18 @@ Leadership must address uncertainty, small numbers, missing and misclassified eq
 
 - Timing: end of instructional Week 3.
 - Course points: 40.
-- Planned package path: `courses/population-health-equity/checkpoints/01-measures-disparities-readiness/`.
-- Planned specification: `docs/curriculum/courses/APP-5/checkpoints/01-measures-disparities-readiness-spec.md`.
+- Package path: `courses/population-health-equity/checkpoints/01-measures-disparities-readiness/`.
+- Specification: `docs/curriculum/courses/APP-5/checkpoints/01-measures-disparities-readiness-spec.md`.
 - Decision: may the accepted population, denominator, measures, standardization, disparity analysis, and claim limits enter place and targeting work?
+- Build status: runnable release candidate at checkpoint version `0.1.0` and Commons release `0.90.0`.
 
 Required evidence includes the Module 01 decision charter and complete source-feasibility release; public versus synthetic data roles; exact PLACES, ACS, and SVI identities; geography and time contract; accountable audience and community-review rights; SQL joins and reconciliation; numerator and denominator tables; crude, specific, direct-standardized, and guided indirect-standardized measures; uncertainty; disparity measures; reference-group sensitivity; missing equity-field profile; selection, linkage, and measurement-bias analysis; support; small-number and suppression rules; accessible exact tables; 40-point score; gates; AI record; claim audit; defense; and progression decision.
 
 The checkpoint counts the 20-point Module 02 and 20-point Module 03 components once. Module 01 adds no points but is a required gate.
+
+The accepted checkpoint freezes 219 complete candidate files from Modules 01 through 03 and verifies 177 nested immutable rows. Its 41,641-byte candidate manifest has SHA-256 `b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192`. The reference earns 40 of 40 and passes all 67 inherited and checkpoint gates. Complete validation passes 1,460 checks, learner validation passes 1,446 checks, and 27 deliberate failure routes are rejected.
+
+The reference disposition is `continue with conditions`. Module 04 curriculum construction is permitted for bounded geographic reasoning, one responsible accessible teaching map, and a context memo. Module 05 remains prohibited until Module 04 passes. No checkpoint artifact authorizes a real or intersectional disparity claim, map publication, tract ranking, targeting, eligibility, outreach, allocation, funding, model fitting, real community action, implementation, production connection, or deployment.
 
 Checkpoint acceptance freezes the population, geography, period, source identities, join decisions, synthetic-release identity, denominators, standard population, rate definitions, disparity measures, reference groups, support, missingness, suppression, uncertainty, and claim boundaries. Later modules may add place and intervention evidence but may not silently revise the technical foundation.
 

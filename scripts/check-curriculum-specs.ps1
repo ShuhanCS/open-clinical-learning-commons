@@ -115,7 +115,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.89.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.90.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2848,7 +2848,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.89.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.90.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4072,7 +4072,7 @@ if (
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
     $app4PackageContent -notmatch 'all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.89.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.90.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -5008,6 +5008,46 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 03 disparity-builder self-check f
 if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 03 workspace-builder self-check failed.' }
 & python (Join-Path $app5Module03Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 03 validator self-check failed.' }
+
+$app5Checkpoint01Root = Join-Path $repo 'courses\population-health-equity\checkpoints\01-measures-disparities-readiness'
+$app5Checkpoint01Spec = Join-Path $repo 'docs\curriculum\courses\APP-5\checkpoints\01-measures-disparities-readiness-spec.md'
+$app5Checkpoint01Plan = Join-Path $repo 'docs\plans\2026-08-31-app5-checkpoint01-plan.md'
+if (-not (Test-Path -LiteralPath $app5Checkpoint01Root) -or -not (Test-Path -LiteralPath $app5Checkpoint01Spec) -or -not (Test-Path -LiteralPath $app5Checkpoint01Plan)) {
+    throw 'APP-5 Checkpoint 01 is missing its package, specification, or build plan.'
+}
+$app5Checkpoint01SpecContent = Get-Content -Raw -Encoding UTF8 -LiteralPath $app5Checkpoint01Spec
+$app5Checkpoint01Sections = [regex]::Matches($app5Checkpoint01SpecContent, '(?m)^## \d+\.').Count
+$app5Checkpoint01FileCount = @(Get-ChildItem -Recurse -File -LiteralPath $app5Checkpoint01Root).Count
+$app5Checkpoint01Contract = Get-Content -Raw -LiteralPath (Join-Path $app5Checkpoint01Root 'checkpoint-contract.json') | ConvertFrom-Json
+$app5Checkpoint01Release = Get-Content -Raw -LiteralPath (Join-Path $app5Checkpoint01Root 'release.json') | ConvertFrom-Json
+$app5Checkpoint01Scores = @(Import-Csv -LiteralPath (Join-Path $app5Checkpoint01Root 'reference\checkpoint-score.csv'))
+$app5Checkpoint01Gates = @(Import-Csv -LiteralPath (Join-Path $app5Checkpoint01Root 'reference\checkpoint-gates.csv'))
+$app5Checkpoint01Conditions = @(Import-Csv -LiteralPath (Join-Path $app5Checkpoint01Root 'reference\conditions-register.csv'))
+$app5Checkpoint01Defense = Get-Content -Raw -LiteralPath (Join-Path $app5Checkpoint01Root 'reference\checkpoint-defense.md')
+$app5Checkpoint01Reviewer = Get-Content -Raw -LiteralPath (Join-Path $app5Checkpoint01Root 'reference\reviewer-record.md')
+$app5Checkpoint01Reproduction = Get-Content -Raw -LiteralPath (Join-Path $app5Checkpoint01Root 'reference\reproducibility-check.md')
+$app5Checkpoint01Checks = [ordered]@{
+    package_shape = ($app5Checkpoint01FileCount -eq 32 -and $app5Checkpoint01Sections -eq 17)
+    plain_ascii = ($app5Checkpoint01SpecContent -notmatch '[—–]')
+    no_personal_paths = ($app5Checkpoint01SpecContent -notmatch '(?im)[A-Z]:\\Users\\')
+    spec_contract = ($app5Checkpoint01SpecContent -match 'Checkpoint version: `0\.1\.0`' -and $app5Checkpoint01SpecContent -match 'Commons release: `0\.90\.0`' -and $app5Checkpoint01SpecContent -match '219 candidate files' -and $app5Checkpoint01SpecContent -match '177 nested immutable rows' -and $app5Checkpoint01SpecContent -match '41,641 bytes' -and $app5Checkpoint01SpecContent -match 'b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192' -and $app5Checkpoint01SpecContent -match '1,460 checks' -and $app5Checkpoint01SpecContent -match '1,446 checks' -and $app5Checkpoint01SpecContent -match '27 deliberate failure routes')
+    contract_identity = ($app5Checkpoint01Contract.checkpoint_id -eq 'oclc-app5-cp01' -and $app5Checkpoint01Contract.version -eq '0.1.0' -and $app5Checkpoint01Contract.commons_release -eq '0.90.0' -and $app5Checkpoint01Contract.course_points -eq 40 -and $app5Checkpoint01Contract.accepted_component_files -eq 219 -and $app5Checkpoint01Contract.accepted_immutable_rows -eq 177 -and @($app5Checkpoint01Contract.accepted_modules).Count -eq 3 -and ($app5Checkpoint01Contract.accepted_modules.points -join ',') -eq '0,20,20')
+    package_contract = ($app5Checkpoint01Contract.package.candidate_manifest_rows -eq 219 -and $app5Checkpoint01Contract.package.candidate_manifest_bytes -eq 41641 -and $app5Checkpoint01Contract.package.candidate_manifest_sha256 -eq 'b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192' -and $app5Checkpoint01Contract.package.checkpoint_editable_records -eq 12 -and $app5Checkpoint01Contract.package.defense_questions -eq 15 -and $app5Checkpoint01Contract.package.assembled_files -eq 240 -and @($app5Checkpoint01Contract.authority.PSObject.Properties | Where-Object { $_.Value -ne 'prohibited' }).Count -eq 0)
+    release_contract = ($app5Checkpoint01Release.status -eq 'runnable release candidate' -and $app5Checkpoint01Release.checkpoint.id -eq 'oclc-app5-cp01' -and $app5Checkpoint01Release.checkpoint.commons_release -eq '0.90.0' -and $app5Checkpoint01Release.accepted_evidence.checkpoint_score -eq '40 of 40' -and $app5Checkpoint01Release.accepted_evidence.module01_gates -eq '12 of 12 pass' -and $app5Checkpoint01Release.accepted_evidence.module02_gates -eq '15 of 15 pass' -and $app5Checkpoint01Release.accepted_evidence.module03_gates -eq '18 of 18 pass' -and $app5Checkpoint01Release.accepted_evidence.checkpoint_gates -eq '22 of 22 pass' -and $app5Checkpoint01Release.validation.complete_reference_checks -eq 1460 -and $app5Checkpoint01Release.validation.starter_checks -eq 1446 -and $app5Checkpoint01Release.validation.failure_routes_rejected -eq 27 -and $app5Checkpoint01Release.progression.module04_permission -eq 'permitted for curriculum construction' -and $app5Checkpoint01Release.progression.deployment -eq 'prohibited')
+    score_contract = ($app5Checkpoint01Scores.Count -eq 13 -and ($app5Checkpoint01Scores | Where-Object { $_.source_module -eq 'oclc-app5-02' -and $_.criterion_id -match '^R' } | ForEach-Object { [int]$_.points_awarded } | Measure-Object -Sum).Sum -eq 20 -and ($app5Checkpoint01Scores | Where-Object { $_.source_module -eq 'oclc-app5-03' -and $_.criterion_id -match '^R' } | ForEach-Object { [int]$_.points_awarded } | Measure-Object -Sum).Sum -eq 20 -and $app5Checkpoint01Scores[-1].points_awarded -eq '40')
+    gate_contract = ($app5Checkpoint01Gates.Count -eq 22 -and ($app5Checkpoint01Gates.gate_id -join ',') -eq ((1..22 | ForEach-Object { 'G{0:d2}' -f $_ }) -join ',') -and @($app5Checkpoint01Gates | Where-Object { $_.status -ne 'pass' }).Count -eq 0)
+    condition_contract = ($app5Checkpoint01Conditions.Count -eq 12 -and @($app5Checkpoint01Conditions | Where-Object { $_.status -ne 'open' -or $_.blocks -ne 'alpha' -or -not $_.owner -or -not $_.verifier }).Count -eq 0)
+    defense_contract = ([regex]::Matches($app5Checkpoint01Defense, '(?m)^## Q\d{2}\.').Count -eq 15 -and [regex]::Matches($app5Checkpoint01Defense, '(?m)^Answer:').Count -eq 15 -and [regex]::Matches($app5Checkpoint01Defense, '(?m)^Evidence:').Count -eq 15 -and [regex]::Matches($app5Checkpoint01Defense, '(?m)^Limit:').Count -eq 15)
+    review_and_reproduction = ([regex]::Matches($app5Checkpoint01Reviewer, '(?m)^\| [^|]+ \| [^|]+ \| pending before alpha \|$').Count -eq 17 -and $app5Checkpoint01Reproduction -match 'Candidate files: `219`' -and $app5Checkpoint01Reproduction -match 'Deliberate failure routes: `27 rejected`' -and $app5Checkpoint01Reproduction -match 'b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192')
+}
+$app5Checkpoint01Failures = @($app5Checkpoint01Checks.GetEnumerator() | Where-Object { -not $_.Value } | ForEach-Object { $_.Key })
+if ($app5Checkpoint01Failures.Count -gt 0) {
+    throw "APP-5 Checkpoint 01 0.1.0 contract checks failed: $($app5Checkpoint01Failures -join ', ')."
+}
+& python (Join-Path $app5Checkpoint01Root 'build_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Checkpoint 01 builder self-check failed.' }
+& python (Join-Path $app5Checkpoint01Root 'validate_checkpoint.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Checkpoint 01 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -6339,3 +6379,4 @@ Write-Output "APP-5 course architecture passed: $app5Sections sections, $app5Mod
 Write-Output "APP-5 Module 01 passed: $app5Module01Sections contract sections, $($app5Module01Files.Count) required files, $($app5Module01Fields.Count) field records, and $($app5Module01Release.public_source_release.three_source_intersection) tracts in the three-source intersection."
 Write-Output "APP-5 Module 02 passed: $app5Module02Sections contract sections, $app5Module02FileCount package files, $($app5Module02Report.findings.measure_tracts) linked tracts, and $($app5Module02Queries.Count) passing query checks."
 Write-Output "APP-5 Module 03 passed: $app5Module03Sections contract sections, $app5Module03FileCount package files, $($app5Module03Report.findings.disparity_comparisons) reference comparisons, and $($app5Module03SuppressionAudit.Count) passing suppression audits."
+Write-Output "APP-5 Checkpoint 01 passed: $app5Checkpoint01Sections contract sections, $app5Checkpoint01FileCount package files, $($app5Checkpoint01Release.package.assembled_files) assembled files, and $($app5Checkpoint01Gates.Count) checkpoint gates."

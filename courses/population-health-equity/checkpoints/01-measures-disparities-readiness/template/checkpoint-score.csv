@@ -1,0 +1,14 @@
+source_module,criterion_id,criterion,points_available,points_awarded,evidence
+oclc-app5-02,R01,"Population, age-band, numerator, denominator, and linkage logic",4,REPLACE,REPLACE
+oclc-app5-02,R02,Crude and age-specific rates,4,REPLACE,REPLACE
+oclc-app5-02,R03,Direct and indirect standardization,4,REPLACE,REPLACE
+oclc-app5-02,R04,"Uncertainty, support, and evidence separation",4,REPLACE,REPLACE
+oclc-app5-02,R05,"Reproducibility, interpretation, and handoff",4,REPLACE,REPLACE
+oclc-app5-02,SUBTOTAL,Module 02 subtotal,20,REPLACE,REPLACE
+oclc-app5-03,R01,"Group rates, support intervals, and standardization",4,REPLACE,REPLACE
+oclc-app5-03,R02,"Absolute, relative, summary, and reference-sensitivity measures",4,REPLACE,REPLACE
+oclc-app5-03,R03,"Missingness, representation, selection, linkage, and measurement bias",4,REPLACE,REPLACE
+oclc-app5-03,R04,Primary and complementary suppression with non-reconstruction,4,REPLACE,REPLACE
+oclc-app5-03,R05,"Responsible claim, reproducibility, AI record, and progression",4,REPLACE,REPLACE
+oclc-app5-03,SUBTOTAL,Module 03 subtotal,20,REPLACE,REPLACE
+checkpoint,TOTAL,Week 3 checkpoint total,40,REPLACE,REPLACE

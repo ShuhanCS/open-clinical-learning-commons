@@ -1,0 +1,13 @@
+condition_id,condition,owner,verifier,status,blocks
+C01,Assign the official APP-5 section and half-term dates,REPLACE,REPLACE,REPLACE,alpha
+C02,Confirm PLACES ACS SVI and synthetic source identities and roles,REPLACE,REPLACE,REPLACE,alpha
+C03,Confirm adult denominator age bands margin method rates intervals and standard population,REPLACE,REPLACE,REPLACE,alpha
+C04,Confirm group labels race and ethnicity standards language and disability terms,REPLACE,REPLACE,REPLACE,alpha
+C05,Confirm primary and comparison references summary measure and uncertainty interpretation,REPLACE,REPLACE,REPLACE,alpha
+C06,Review missingness representation capture linkage exclusion and conditioned geography claims,REPLACE,REPLACE,REPLACE,alpha
+C07,Review the selection linkage and measurement-bias register,REPLACE,REPLACE,REPLACE,alpha
+C08,Confirm event and denominator thresholds complementary suppression and non-reconstruction,REPLACE,REPLACE,REPLACE,alpha
+C09,Confirm community review disagreement recourse pause and stop rights,REPLACE,REPLACE,REPLACE,alpha
+C10,Verify exact accessible alternatives and language and disability access,REPLACE,REPLACE,REPLACE,alpha
+C11,Review agent use claim limits and human accountability,REPLACE,REPLACE,REPLACE,alpha
+C12,Complete clean independent reproduction of all three modules and the checkpoint,REPLACE,REPLACE,REPLACE,alpha

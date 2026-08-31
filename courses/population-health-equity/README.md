@@ -28,5 +28,7 @@ Checkpoint totals are 40 points at Week 3, 25 points at Week 6, and 35 points on
 - Module 02 specification: `docs/curriculum/courses/APP-5/modules/02-population-measures-linked-data-spec.md`
 - Module 03 package: `courses/population-health-equity/modules/03-disparities-data-limits/`
 - Module 03 specification: `docs/curriculum/courses/APP-5/modules/03-disparities-data-limits-spec.md`
+- Week 3 checkpoint package: `courses/population-health-equity/checkpoints/01-measures-disparities-readiness/`
+- Week 3 checkpoint specification: `docs/curriculum/courses/APP-5/checkpoints/01-measures-disparities-readiness-spec.md`
 
 Each module is built, validated, versioned, committed, pushed, and remote-verified before the next module begins.
