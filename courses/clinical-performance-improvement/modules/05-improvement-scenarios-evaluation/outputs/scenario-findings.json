@@ -1,0 +1,153 @@
+{
+  "claim_limit": "synthetic assumption-testing evidence only; no clinical, causal, productivity, staffing, safety, equity, automated, or implementation claim",
+  "commons_release": "0.71.0",
+  "evaluation": {
+    "causal_status": "not established by simulation",
+    "measures": 12,
+    "return_within_72_hours": "not simulated; prospective measurement required",
+    "safety_outcome": "not simulated; prospective measurement required",
+    "threats": 8
+  },
+  "module06_handoff": {
+    "authority": "feasibility, monitoring, and embedded-ML planning only; no implementation authority",
+    "option_for_feasibility_review": "none"
+  },
+  "module_id": "oclc-app3-05",
+  "module_version": "0.1.0",
+  "point_demand": {
+    "S00": {
+      "flex_clinician_hours": 0.0,
+      "left_before_seen_percent": 11.914912,
+      "median_arrivals": 875.0,
+      "median_completed": 772.5,
+      "median_wait_minutes": 60.035963,
+      "p90_wait_minutes": 136.453267,
+      "scenario_name": "No change"
+    },
+    "S01": {
+      "flex_clinician_hours": 40.0,
+      "left_before_seen_percent": 9.393213,
+      "median_arrivals": 875.0,
+      "median_completed": 795.0,
+      "median_wait_minutes": 58.437408,
+      "p90_wait_minutes": 114.495931,
+      "scenario_name": "Flex clinician coverage"
+    },
+    "S02": {
+      "flex_clinician_hours": 0.0,
+      "left_before_seen_percent": 5.260214,
+      "median_arrivals": 875.0,
+      "median_completed": 829.0,
+      "median_wait_minutes": 66.508977,
+      "p90_wait_minutes": 180.955701,
+      "scenario_name": "Fast-track activation"
+    },
+    "S03": {
+      "flex_clinician_hours": 25.220413,
+      "left_before_seen_percent": 8.693199,
+      "median_arrivals": 875.0,
+      "median_completed": 801.0,
+      "median_wait_minutes": 60.0,
+      "p90_wait_minutes": 121.55906,
+      "scenario_name": "Combined bounded rule"
+    }
+  },
+  "point_paired_effects": {
+    "S01": {
+      "language_gap_worsening_minutes": 0.013189,
+      "left_before_seen_improvement_percentage_points": 2.518,
+      "median_wait_improvement_minutes": 1.958703,
+      "p90_wait_improvement_minutes": 21.244986,
+      "throughput_change_percent": 2.874244
+    },
+    "S02": {
+      "language_gap_worsening_minutes": -0.34544,
+      "left_before_seen_improvement_percentage_points": 6.61114,
+      "median_wait_improvement_minutes": -5.803341,
+      "p90_wait_improvement_minutes": -41.617987,
+      "throughput_change_percent": 7.54065
+    },
+    "S03": {
+      "language_gap_worsening_minutes": 0.031209,
+      "left_before_seen_improvement_percentage_points": 3.163164,
+      "median_wait_improvement_minutes": 0.316383,
+      "p90_wait_improvement_minutes": 14.547388,
+      "throughput_change_percent": 3.590432
+    }
+  },
+  "schema_version": "1.0.0",
+  "selection": {
+    "decisions": {
+      "S01": {
+        "point_flex_hours": 40.0,
+        "point_median_wait_improvement": 1.9587027991419745,
+        "qualifies": false,
+        "rules": {
+          "language_gap": true,
+          "left_before_seen": true,
+          "median_wait": false,
+          "p90_wait": true,
+          "stress_wait": true,
+          "throughput": true
+        },
+        "scenario_name": "Flex clinician coverage",
+        "stress_median_wait_improvement": 7.327178359019854
+      },
+      "S02": {
+        "point_flex_hours": 0.0,
+        "point_median_wait_improvement": -5.803341304873811,
+        "qualifies": false,
+        "rules": {
+          "language_gap": true,
+          "left_before_seen": true,
+          "median_wait": false,
+          "p90_wait": false,
+          "stress_wait": false,
+          "throughput": true
+        },
+        "scenario_name": "Fast-track activation",
+        "stress_median_wait_improvement": -86.6716444955091
+      },
+      "S03": {
+        "point_flex_hours": 25.220413204666073,
+        "point_median_wait_improvement": 0.3163829138670735,
+        "qualifies": false,
+        "rules": {
+          "language_gap": true,
+          "left_before_seen": true,
+          "median_wait": false,
+          "p90_wait": false,
+          "stress_wait": true,
+          "throughput": true
+        },
+        "scenario_name": "Combined bounded rule",
+        "stress_median_wait_improvement": 1.3444371600071463
+      }
+    },
+    "near_tie_minutes": 5,
+    "purpose": "feasibility review only",
+    "selected_option": "none"
+  },
+  "sensitivity": {
+    "conditions": 5,
+    "null_or_failed_rows": 6,
+    "retention_rule": "changed, null, and failed results remain visible"
+  },
+  "simulation_contract": {
+    "base_seed": 7300500,
+    "claim": "guided discrete-event assumption test, not a production simulator or proof of realized effect",
+    "conditions": 5,
+    "effective_service_fraction": 0.2,
+    "measurement_days": 7,
+    "paired_replications_per_condition": 200,
+    "scenario_runs": 4000,
+    "warmup_days": 7
+  },
+  "upstream": {
+    "accepted_encounters": 43628,
+    "files": 29,
+    "forecast_arrivals": 876.924084,
+    "module04_version": "0.1.0",
+    "scenarios": 4
+  }
+}

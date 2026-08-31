@@ -1,0 +1,8 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+C01,Frozen forecast and scenario contract,3,REPLACE,REPLACE
+C02,Model validation and conservation,5,REPLACE,REPLACE
+C03,Scenario comparison,5,REPLACE,REPLACE
+C04,Sensitivity and tradeoffs,4,REPLACE,REPLACE
+C05,Evaluation design and threats,5,REPLACE,REPLACE
+C06,Reproducibility communication and responsible AI,3,REPLACE,REPLACE
+TOTAL,Week 6 Module 05 score,25,REPLACE,REPLACE

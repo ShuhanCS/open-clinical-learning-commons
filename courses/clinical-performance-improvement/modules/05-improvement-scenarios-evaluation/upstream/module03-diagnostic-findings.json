@@ -1,0 +1,73 @@
+{
+  "baseline_weeks": [
+    1,
+    24
+  ],
+  "bounded_diagnosis": {
+    "baseline_median_minutes": 49.0,
+    "recovery_median_minutes": 49.0,
+    "root_cause_status": "not established",
+    "scope": "evening shifts in Weeks 35 through 44",
+    "staffing_change_status": "not authorized",
+    "stage": "roomed_to_clinician",
+    "status": "supported for the fictional release",
+    "target_median_minutes": 66.0
+  },
+  "claim_limit": "synthetic bounded process diagnosis only; no root-cause, staffing, clinical, causal, or implementation authorization",
+  "commons_release": "0.68.0",
+  "control_charts": {
+    "arrival_run_median": 853.0,
+    "incident_u_center_per_1000": 9.895751,
+    "p_chart_center_percent": 8.13767,
+    "signal_records": 9,
+    "xmr_center_minutes": 97.636958,
+    "xmr_lower_minutes": 90.485606,
+    "xmr_moving_range_mean": 2.688478,
+    "xmr_upper_minutes": 104.788311
+  },
+  "evaluation_weeks": [
+    25,
+    52
+  ],
+  "expected_signal_recovery": {
+    "incident_low_run_by_week_40": true,
+    "p_chart_high_point_week_44": true,
+    "p_chart_high_run_by_week_49": true,
+    "xmr_baseline_high_run_by_week_11": true,
+    "xmr_high_point_week_44": true,
+    "xmr_high_run_by_week_42": true
+  },
+  "known_truth_review": {
+    "KT04_demand_event": "not isolated by the unadjusted arrival run chart; defer seasonal adjustment to Module 04",
+    "KT05_first_clinician_delay": "recovered by the evaluation run and stage reconciliation",
+    "KT06_access_support_delay": "visible in full-release summaries; target-window language and mobility groups remain below support threshold",
+    "KT07_safety_undercapture": "recovered by class-specific truth, trigger, incident, and reviewed-non-event counts",
+    "KT08_routine_variation": "signals outside KT05 remain review prompts and are not treated as generated causes"
+  },
+  "module_id": "oclc-app3-03",
+  "module_version": "0.1.0",
+  "progression": "continue with conditions",
+  "safety": {
+    "incident_capture_percent": 40.0447,
+    "incident_true_positives": 358,
+    "known_true_events": 894,
+    "temporal_incident_signal_status": "no exact Poisson limit breach",
+    "trigger_false_positives": 379,
+    "trigger_sensitivity_percent": 75.2796,
+    "trigger_specificity_percent": 99.0302,
+    "trigger_true_positives": 673
+  },
+  "schema_version": "1.0.0",
+  "subgroup": {
+    "full_release_supported_groups": 3,
+    "target_window_claim_status": "not supported",
+    "target_window_supported_groups": 1
+  },
+  "upstream": {
+    "accepted_encounters": 43628,
+    "files": 14,
+    "module02_version": "0.1.0",
+    "query_checks": 30
+  },
+  "week3_checkpoint_permission": "permitted for curriculum construction"
+}

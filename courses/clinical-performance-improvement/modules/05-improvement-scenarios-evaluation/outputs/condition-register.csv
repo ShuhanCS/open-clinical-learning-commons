@@ -1,0 +1,6 @@
+condition_id,condition_name,expected_weekly_arrivals,service_time_multiplier,fast_track_service_multiplier,warmup_days,measurement_days,paired_replications,base_seed,interpretation,synthetic_flag
+C01,Lower demand,805.136639,1.000000,0.700000,7,7,200,7300500,"assumption test, not a prediction of realized effect",1
+C02,Point demand,876.924084,1.000000,0.700000,7,7,200,7300500,"assumption test, not a prediction of realized effect",1
+C03,Upper demand,970.733035,1.000000,0.700000,7,7,200,7300500,"assumption test, not a prediction of realized effect",1
+C04,Upper demand and slower service,970.733035,1.150000,0.700000,7,7,200,7300500,"assumption test, not a prediction of realized effect",1
+C05,Point demand and weak workflow effect,876.924084,1.000000,0.900000,7,7,200,7300500,"assumption test, not a prediction of realized effect",1

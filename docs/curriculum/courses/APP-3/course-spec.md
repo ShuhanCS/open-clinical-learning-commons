@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.70.0 through Module 04.
+- Current Commons release: 0.71.0 through Module 05.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -305,6 +305,7 @@ Learners apply Little's Law only as a bounded consistency check and state when n
 - Specification: `docs/curriculum/courses/APP-3/modules/05-improvement-scenarios-evaluation-spec.md`.
 - Decision: which baseline, flex-staffing, or fast-track option, if any, deserves feasibility review.
 - Submission: 25-point forecast, scenario, and evaluation component.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.71.0`; Module 06 construction is permitted with conditions and no selected option.
 
 Learners configure a provided discrete-event scenario rather than build a production simulation system. They validate arrival, service, routing, priority, staffing, capacity, warm-up, replication, and conservation assumptions against the accepted evidence.
 
@@ -517,7 +518,6 @@ Open conditions before alpha:
 - Complete human review of the synthetic operational generator, known truth, subgroup design, safety events, staffing assumptions, and workload language.
 - Run and independently review the Module 03 base-R control-chart verification in an environment with R installed.
 - Run and independently review the Module 04 base-R forecast verification in an environment with R installed.
-- Declare the scenario warm-up, replications, seeds, conservation checks, and decision thresholds after the baseline model is validated.
 - Declare the ML decision-change threshold before fitting the ML candidate.
 - Confirm SimPy, statsmodels, R, qcc, and a supported forecasting package in one teaching environment, or document a tested course-supported alternative.
 - Name the faculty, clinical, nursing, operations, measurement, process-control, safety, forecasting, operations-research, workforce, equity, accessibility, governance, model, responsible-AI, and independent-reproduction reviewers.
@@ -538,5 +538,6 @@ Construction acceptance for this course-level unit:
 - [x] APP-3 remains distinct from FND-1, FND-2, APP-1, APP-2, and DA-730.
 - [x] Module 01 pins all three complete public snapshots and releases a validated 25-file decision-framing workspace.
 - [x] Module 04 freezes Checkpoint 01, compares three transparent methods on 28 rolling origins, and releases a bounded Week 53 planning range without staffing authority.
+- [x] Module 05 compares four scenarios across five conditions, preserves failed results, assigns the 25-point component once, and hands Module 06 a no-selection result without implementation authority.
 
-Resume with Module 05 only: use the frozen point forecast, empirical range, difficult folds, Week 3 diagnosis, and action boundaries to compare no change with bounded improvement scenarios and define the 25-point evaluation component.
+Resume with Module 06 only: freeze the Module 05 no-selection result, failed sensitivities, evaluation measures, threat audit, and authority boundary before testing feasibility, monitoring, and the bounded embedded-ML comparison.

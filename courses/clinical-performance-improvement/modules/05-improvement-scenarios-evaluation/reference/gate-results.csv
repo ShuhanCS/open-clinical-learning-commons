@@ -1,0 +1,21 @@
+gate_id,gate,required_status,evidence,status
+G01,Upstream release identity,pass,30 frozen handoff files verify,pass
+G02,Forecast identity,pass,876.924084 point and accepted range verify,pass
+G03,Scenario register,pass,S00 through S03 retained,pass
+G04,Condition register,pass,C01 through C05 retained,pass
+G05,Paired random inputs,pass,1000 seeds shared across scenarios,pass
+G06,Warm-up and measurement,pass,7 days plus 7 days,pass
+G07,Replication count,pass,4000 unique runs,pass
+G08,Priority rule,pass,high-acuity median wait does not exceed low-acuity median,pass
+G09,Capacity and trigger rules,pass,declared schedule and thresholds verify,pass
+G10,Conservation,pass,arrivals equal completed plus left before seen,pass
+G11,Nonnegative outputs,pass,no negative count or time,pass
+G12,Calibration,pass,no-change wait and abandonment pass broad ranges,pass
+G13,Access groups,pass,standard language and mobility groups reported,pass
+G14,Failed evidence retained,pass,6 null or failed comparisons retained,pass
+G15,Safety boundary,pass,safety is explicitly unmodeled,pass
+G16,Return boundary,pass,72-hour return is explicitly unmodeled,pass
+G17,Workforce boundary,pass,flex hours are not staffing recommendations,pass
+G18,Causal boundary,pass,simulation is not an effect estimate,pass
+G19,Implementation boundary,pass,no option or action is authorized,pass
+G20,Reproducibility and AI,pass,clean rebuild and AI disclosure verify,pass

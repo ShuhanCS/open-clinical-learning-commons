@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app3-05",
+  "module_version": "0.1.0",
+  "commons_release": "0.71.0",
+  "status": "runnable release candidate",
+  "reference_score": 25,
+  "reference_gates_passed": 20,
+  "reference_progression": "continue with conditions",
+  "selected_option": "none",
+  "outputs": {
+    "files": 12,
+    "replication_rows": 4000,
+    "summary_rows": 20,
+    "paired_effect_rows": 15
+  },
+  "workspace": {
+    "learner_files": 56,
+    "learner_manifest_rows": 41,
+    "reference_files": 68,
+    "reference_manifest_rows": 53,
+    "learner_records": 14
+  },
+  "validation": {
+    "complete_checks": 271,
+    "starter_checks": 166,
+    "failure_routes_rejected": 12,
+    "python_release_checks": "pass"
+  },
+  "module06_permission": "permitted for feasibility, monitoring, and embedded-ML planning with no option authorized",
+  "implementation_authorized": false
+}

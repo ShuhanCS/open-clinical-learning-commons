@@ -1,0 +1,23 @@
+module_id: oclc-app3-05
+module_version: 0.1.0
+commons_release: 0.71.0
+service_id: CGH-ED-01
+service_status: fictional
+upstream:
+  module_id: oclc-app3-04
+  module_version: 0.1.0
+  commons_release: 0.70.0
+  manifest: upstream/module05-handoff-manifest.csv
+accepted_evidence:
+  forecast_arrivals: 876.924084
+  forecast_lower: 805.136639
+  forecast_upper: 970.733035
+  accepted_encounters: 43628
+  scenarios: 4
+simulation:
+  replications_per_scenario_condition: 200
+  conditions: 5
+  synthetic_flag: 1
+privacy: no real patient, clinician, workforce, or hospital data
+public_source_role: inherited definition and historical aggregate context only; no public-to-synthetic linkage
+claim_limit: bounded synthetic scenario and proposed evaluation only; no staffing, clinical, safety, causal, automated, or implementation authority

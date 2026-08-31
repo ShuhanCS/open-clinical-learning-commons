@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.70.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, first four runnable modules, and cumulative Week 3 checkpoint.
+- Current version: `0.71.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 and APP-2 are complete with seven modules and three checkpoints each. APP-3 has its complete course contract, open-data architecture, first five runnable modules, and cumulative Week 3 checkpoint.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -114,6 +114,8 @@ The third runnable unit is [APP-3 Module 03: Variation, safety signals, and bott
 The cumulative [APP-3 Week 3 checkpoint](courses/clinical-performance-improvement/checkpoints/01-measures-variation-readiness/reference/README.md) freezes 137 accepted files from Modules 01 through 03, carries the Module 02 and Module 03 20-point components once, and keeps Module 01 as a required zero-point gate. Its durable [checkpoint specification](docs/curriculum/courses/APP-3/checkpoints/01-measures-variation-readiness-spec.md) defines 18 integrity gates, a 12-question defense, the exact signal and safety limits, and conditional permission for Module 04 demand forecasting and capacity analysis.
 
 The fourth runnable unit is [APP-3 Module 04: Demand forecasting and capacity](courses/clinical-performance-improvement/modules/04-demand-forecasting-capacity/README.md), governed by the durable [Module 04 specification](docs/curriculum/courses/APP-3/modules/04-demand-forecasting-capacity-spec.md). It freezes the accepted Week 3 checkpoint, evaluates last value, seasonal naive, and bounded seasonal exponential smoothing on 28 common rolling origins, and carries a Week 53 point forecast plus empirical range into Module 05 without authorizing staffing or implementation.
+
+The fifth runnable unit is [APP-3 Module 05: Improvement scenarios and evaluation](courses/clinical-performance-improvement/modules/05-improvement-scenarios-evaluation/README.md), governed by the durable [Module 05 specification](docs/curriculum/courses/APP-3/modules/05-improvement-scenarios-evaluation-spec.md). It compares four scenarios across five conditions in 4,000 paired runs, retains six null or failed comparisons, defines 12 prospective measures and eight evaluation threats, and awards the 25-point Week 6 component once. No option clears every predeclared gate, so Module 06 receives a correct no-selection result without implementation authority.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -291,7 +293,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-3 Module 05, Improvement scenarios and evaluation.
+1. Build APP-3 Module 06, Feasibility, monitoring, and embedded machine learning.
 2. Continue APP-4 through APP-7 one distinct course at a time.
 3. Complete named human reviews before alpha promotion.
 

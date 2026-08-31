@@ -1,0 +1,25 @@
+check_id,check,status,evidence
+V01,accepted encounter population,pass,"43,628 accepted encounter rows"
+V02,accepted scenario register,pass,S00 through S03
+V03,input strata,pass,"45 shift, acuity, and support strata"
+V04,forecast demand identity,pass,876.924084 accepted point arrivals
+V05,demand conditions,pass,"lower, point, upper, stress, and weak-effect conditions"
+V06,warm-up,pass,seven days excluded from measurement
+V07,replications,pass,200 paired replications for 20 scenario-condition cells
+V08,paired random inputs,pass,one seed shared by four scenarios
+V09,priority,pass,nonpreemptive acuity priority retained
+V10,base capacity,pass,calibrated clinician-slot schedule
+V11,flex threshold,pass,shift-specific 75th-percentile thresholds
+V12,fast-track trigger,pass,four waiting patients for 15 minutes
+V13,S02 net staff,pass,no added clinician-hours
+V14,S03 combined rule,pass,forecast eligibility and queue persistence both required
+V15,conservation,pass,arrivals equal completed plus left before seen
+V16,nonnegative results,pass,no negative count or time
+V17,result identity,pass,no duplicate scenario run
+V18,no-change wait calibration,pass,point-demand median is within the broad guided-model range
+V19,no-change abandonment calibration,pass,point-demand abandonment remains plausible for the synthetic source
+V20,access groups,pass,all three support groups reported
+V21,failed condition retained,pass,KT10 null or failed condition retained
+V22,safety boundary,pass,not simulated; prospective measurement required
+V23,return boundary,pass,not simulated; prospective measurement required
+V24,selection output,pass,selected option is none

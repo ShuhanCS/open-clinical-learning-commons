@@ -1,0 +1,8 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+C01,Frozen forecast and scenario contract,3,3,exact Module 04 handoff and 18 accepted assumptions
+C02,Model validation and conservation,5,5,24 of 24 validation checks pass
+C03,Scenario comparison,5,5,paired S00 through S03 comparison with no forced selection
+C04,Sensitivity and tradeoffs,4,4,15 comparisons with 6 null or failed rows retained
+C05,Evaluation design and threats,5,5,12 measures and 8 threats with causal limits
+C06,Reproducibility communication and responsible AI,3,3,clean rebuild accessible evidence and bounded AI record
+TOTAL,Week 6 Module 05 score,25,25,counted once

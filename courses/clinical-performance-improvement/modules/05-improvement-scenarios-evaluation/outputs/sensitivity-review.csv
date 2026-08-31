@@ -1,0 +1,16 @@
+condition_id,condition_name,scenario_id,scenario_name,median_wait_improvement_minutes,p90_wait_improvement_minutes,left_before_seen_improvement_percentage_points,throughput_change_percent,language_gap_worsening_minutes,median_flex_clinician_hours,effect_status,synthetic_flag
+C01,Lower demand,S01,Flex clinician coverage,1.297503,17.170748,2.008492,2.209945,0.244346,40.000000,partial only,1
+C01,Lower demand,S02,Fast-track activation,-3.010806,-22.363815,4.953323,5.482156,-0.231294,0.000000,null or failed improvement,1
+C01,Lower demand,S03,Combined bounded rule,0.106618,8.582088,2.313125,2.562596,0.121918,19.711159,partial only,1
+C02,Point demand,S01,Flex clinician coverage,1.958703,21.244986,2.518000,2.874244,0.013189,40.000000,partial only,1
+C02,Point demand,S02,Fast-track activation,-5.803341,-41.617987,6.611140,7.540650,-0.345440,0.000000,null or failed improvement,1
+C02,Point demand,S03,Combined bounded rule,0.316383,14.547388,3.163164,3.590432,0.031209,25.220413,partial only,1
+C03,Upper demand,S01,Flex clinician coverage,2.639145,33.440915,3.084282,3.647418,0.242009,40.000000,partial only,1
+C03,Upper demand,S02,Fast-track activation,-17.755788,-114.824049,9.470414,11.178623,-1.101910,0.000000,null or failed improvement,1
+C03,Upper demand,S03,Combined bounded rule,0.512094,21.232373,4.239856,5.019095,0.015994,29.693627,partial only,1
+C04,Upper demand and slower service,S01,Flex clinician coverage,7.327178,64.775556,3.968288,5.155967,0.127291,40.000000,partial only,1
+C04,Upper demand and slower service,S02,Fast-track activation,-86.671644,-1201.952589,14.094172,18.320059,7.783331,0.000000,null or failed improvement,1
+C04,Upper demand and slower service,S03,Combined bounded rule,1.344437,35.419349,5.916118,7.620334,-0.238254,35.561318,partial only,1
+C05,Point demand and weak workflow effect,S01,Flex clinician coverage,1.644444,20.645782,2.534646,2.897558,0.214332,40.000000,partial only,1
+C05,Point demand and weak workflow effect,S02,Fast-track activation,-8.000000,-60.833622,5.858849,6.657963,-0.065109,0.000000,null or failed improvement,1
+C05,Point demand and weak workflow effect,S03,Combined bounded rule,0.000000,9.283590,3.033736,3.476582,0.124075,24.726122,null or failed improvement,1

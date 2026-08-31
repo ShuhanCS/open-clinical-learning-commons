@@ -1,0 +1,19 @@
+assumption_id,domain,assumption,accepted_value,source,status,claim_limit
+A01,demand,point weekly arrivals,876.924084,Module 04 Week 53 forecast,accepted,forecast is not realized demand
+A02,demand,lower weekly arrivals,805.136639,Module 04 empirical range,accepted,range is not calibrated coverage
+A03,demand,upper weekly arrivals,970.733035,Module 04 empirical range,accepted,range is not calibrated coverage
+A04,time,warm-up period,7 days,scenario contract,accepted,excluded from results
+A05,time,measurement period,7 days,scenario contract,accepted,one synthetic week
+A06,replication,paired replications,200 per scenario-condition,scenario contract,accepted,Monte Carlo uncertainty only
+A07,randomness,base seed,7300500,scenario contract,accepted,reproducibility control
+A08,arrivals,within-shift process,homogeneous Poisson,scenario contract,accepted,teaching approximation
+A09,service,effective service fraction,0.20,scenario contract,accepted,not productivity
+A10,capacity,base clinician slots,2 night; 6 day; 4 evening,calibrated guided model,accepted,not observed staffing
+A11,priority,queue discipline,nonpreemptive acuity order,scenario contract,accepted,not a clinical routing order
+A12,flex,forecast thresholds,32 night; 55 day; 48 evening,accepted scenario register,accepted,not a staffing order
+A13,fast track,queue trigger,4 waiting for 15 minutes,accepted scenario register,accepted,not implementation authority
+A14,fast track,eligible acuity,4 and 5,accepted scenario register,accepted,synthetic routing only
+A15,fast track,service multiplier,0.70,scenario contract,accepted,assumption not observed effect
+A16,sensitivity,slower service,1.15 multiplier in C04,scenario contract,accepted,stress condition
+A17,sensitivity,weak workflow effect,0.90 fast-track multiplier in C05,scenario contract,accepted,failed results retained
+A18,outcomes,safety and 72-hour return,not simulated,scenario contract,accepted,prospective measurement required

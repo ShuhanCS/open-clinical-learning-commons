@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.70.0
+- Current release: 0.71.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Module 04, demand forecasting and capacity
-- Next unit: APP-3 Module 05, improvement scenarios and evaluation
+- Last completed unit: APP-3 Module 05, improvement scenarios and evaluation
+- Next unit: APP-3 Module 06, feasibility, monitoring, and embedded machine learning
 
 ## Confirmed decisions
 
@@ -509,7 +509,19 @@
 - The learner workspace has 49 files and 36 immutable manifest rows. The reference has 59 files and 46 immutable manifest rows. Complete validation passes 255 checks and starter validation passes 151 structural checks.
 - Upstream, forecast, workspace, and validator self-checks pass. Nineteen mutation and incomplete-workspace routes are rejected. The committed base-R cross-check remains pending because Rscript is unavailable in the construction environment.
 - The reference passes all 18 zero-point gates. Progression is `continue with conditions`, permitting Module 05 improvement scenario and evaluation construction while staffing, scenario-effect, clinical, automated, and implementation claims remain prohibited.
-- APP-3 Module 04 is a runnable release candidate at Commons 0.70.0. Module 05 is next.
+- APP-3 Module 04 is a runnable release candidate at Commons 0.70.0.
+- APP-3 Module 05 version 0.1.0 freezes 29 exact Module 04, checkpoint, diagnostic, and measure files plus a handoff manifest. It preserves the 876.924084-arrival point forecast, 805.136639 to 970.733035 empirical range, 43,628 accepted encounters, S00 through S03 scenario register, and KT09 through KT10 scenario truths.
+- The guided discrete-event engine uses a 7-day warm-up, 7-day measurement period, 200 paired replications per scenario-condition cell, base seed 7300500, common random numbers, 20 percent effective-service proxy, and a calibrated 2-night, 6-day, and 4-evening slot schedule.
+- Five conditions cover lower, point, upper, slower-service stress, and weak-workflow-effect assumptions. Four scenarios produce 4,000 unique runs, 20 scenario-condition summaries, and 15 paired option comparisons.
+- At point demand, no change has a 60.035963-minute median arrival-to-clinician time, 136.453267-minute P90, and 11.914912 percent left before seen.
+- S01 improves P90 wait by 21.244986 minutes and left before seen by 2.518000 percentage points but misses the 10-minute median rule. S02 improves throughput by 7.540650 percent while worsening median wait by 5.803341 minutes and P90 wait by 41.617987 minutes. S03 also misses both point-demand wait rules.
+- No option qualifies for feasibility review. Six null or failed option-condition rows remain visible, including S02 under the slower-service stress condition, where median wait is 86.671644 minutes worse.
+- The evaluation release defines 12 prospective process, outcome, safety, access, and workforce measures plus eight audits for secular trend, regression to the mean, measurement change, concurrent intervention, case mix, gaming, adoption, and missing groups.
+- Safety and 72-hour return are explicitly not simulated. Flex hours are not staffing recommendations. Simulation does not establish a causal effect or authorize implementation.
+- The learner workspace has 56 files and 41 immutable manifest rows. The reference has 68 files and 53 immutable manifest rows. Complete validation passes 271 checks and starter validation passes 166 structural checks.
+- Upstream, scenario, workspace, and validator self-checks pass. Twelve mutation and incomplete-workspace routes are rejected.
+- The reference scores 25 of 25 once and passes all 20 gates. Progression is `continue with conditions`, permitting Module 06 feasibility, monitoring, and embedded-ML construction with no selected option and no implementation authority.
+- APP-3 Module 05 is a runnable release candidate at Commons 0.71.0. Module 06 is next.
 
 ## Pending confirmation
 
@@ -527,8 +539,8 @@
 
 1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoint 01 package, Module 04 specification and package, curriculum catalog, and this ledger.
 2. Freeze the accepted Week 3 diagnosis and Module 04 forecast, range, difficult folds, unsupported holiday slice, and action boundaries without recomputing them.
-3. Write the durable APP-3 Module 05 specification before building its package.
-4. Configure a provided discrete-event scenario with explicit arrivals, service, routing, priority, staffing, capacity, warm-up, replication, seed, and conservation rules.
-5. Compare no change with at least two bounded redesign options across wait, cycle time, throughput, abandonment, utilization, overtime, escalation delay, safety, access, subgroup, workforce, and balancing measures.
-6. Preserve failed runs and uncertainty, and separate scenario evidence from a real intervention-effect claim.
-7. Release the 25-point Module 05 scenario and evaluation component for Module 06, advance semver, update this ledger, commit, and push.
+3. Write the durable APP-3 Module 06 specification before building its package.
+4. Preserve the Module 05 no-selection result, six failed comparisons, 12 prospective measures, eight threats, exact 25-point score, and authority boundary without retuning them.
+5. Test feasibility, access, workforce burden, implementation measures, monitoring cadence, escalation, stop, fallback, and stewardship for no change and any explicitly revised bounded option.
+6. Fit one bounded gradient-boosted forecast on the accepted Module 04 target, cutoffs, folds, horizons, and eligible rows, and compare it with the transparent method without leakage.
+7. Release the cumulative Week 6 package with the Module 05 points counted once, advance semver, update this ledger, commit, and push.

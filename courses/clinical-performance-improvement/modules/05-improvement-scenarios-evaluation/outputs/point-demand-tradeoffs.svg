@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="980" height="430" viewBox="0 0 980 430">
+<title>Point-demand scenario tradeoffs</title>
+<desc>Median paired wait improvement across 200 replications for three options. No option qualified. Scenario results test assumptions and do not prove realized effects.</desc>
+<rect width="100%" height="100%" fill="#ffffff" />
+<text x="490" y="38" text-anchor="middle" font-size="23" font-weight="bold">Point-demand scenario tradeoffs</text>
+<text x="490" y="68" text-anchor="middle" font-size="14">Median paired improvement across 200 synthetic replications</text>
+<text x="230" y="126" text-anchor="end" font-size="16">Flex clinician coverage</text>
+<rect x="250" y="105" width="600.0" height="30" fill="#64748b" />
+<text x="860.0" y="126" font-size="14">2.0 min; LBBS 2.5 pp; flex 40.0 h</text>
+<text x="230" y="216" text-anchor="end" font-size="16">Fast-track activation</text>
+<rect x="250" y="195" width="0.0" height="30" fill="#64748b" />
+<text x="260.0" y="216" font-size="14">-5.8 min; LBBS 6.6 pp; flex 0.0 h</text>
+<text x="230" y="306" text-anchor="end" font-size="16">Combined bounded rule</text>
+<rect x="250" y="285" width="96.9" height="30" fill="#64748b" />
+<text x="356.9" y="306" font-size="14">0.3 min; LBBS 3.2 pp; flex 25.2 h</text>
+<text x="490" y="392" text-anchor="middle" font-size="15">No option qualified</text>
+<text x="490" y="416" text-anchor="middle" font-size="13">Assumption test only. Safety and 72-hour return require prospective measurement.</text>
+</svg>

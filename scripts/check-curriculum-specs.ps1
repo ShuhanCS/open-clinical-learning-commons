@@ -114,7 +114,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.70.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.71.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2816,8 +2816,8 @@ if (
     $app3Content -match '(?im)[A-Z]:\\Users\\' -or
     $app3SourceContent -match '(?im)[A-Z]:\\Users\\' -or
     $app3PackageContent -match '(?im)[A-Z]:\\Users\\' -or
-    $app3Content -notmatch 'Current Commons release: 0\.70\.0' -or
-    $app3PackageContent -notmatch 'Current Commons release: 0\.70\.0' -or
+    $app3Content -notmatch 'Current Commons release: 0\.71\.0' -or
+    $app3PackageContent -notmatch 'Current Commons release: 0\.71\.0' -or
     $app3Content -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '084a412054c77169ea065cf15ed3cc7097e412a6017fbb58a260e909d17717e3' -or
     $app3SourceContent -notmatch '26,907' -or
@@ -2842,12 +2842,12 @@ if (
     $app3Content -notmatch 'Joe Joseph, MD, SFHM' -or
     $app3Content -notmatch 'https://www\.mghihp\.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current\.pdf' -or
     $app3Content -notmatch 'Module 01 pins all three complete public snapshots' -or
-    $app3PackageContent -notmatch 'Modules 01 through 04, and Checkpoint 01 complete' -or
+    $app3PackageContent -notmatch 'Modules 01 through 05, and Checkpoint 01 complete' -or
     $app3Content -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.70.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.71.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -3400,6 +3400,126 @@ if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 04 forecast self-check failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 04 workspace-builder self-check failed.' }
 & python (Join-Path $app3Module04Root 'validate_workspace.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 04 validator self-check failed.' }
+
+$app3Module05Root = Join-Path $repo 'courses\clinical-performance-improvement\modules\05-improvement-scenarios-evaluation'
+$app3Module05Spec = Join-Path $repo 'docs\curriculum\courses\APP-3\modules\05-improvement-scenarios-evaluation-spec.md'
+$app3Module05RecordNames = @(
+    'scenario-assumption-register.csv', 'scenario-validation.md',
+    'scenario-comparison.md', 'sensitivity-interpretation.md',
+    'access-workforce-safety-review.md', 'evaluation-design.md',
+    'evaluation-threat-audit.csv', 'gaming-unintended-effects.md',
+    'week6-score.csv', 'gate-results.csv', 'module06-handoff.md',
+    'ai-use.md', 'progression-decision.md', 'reproducibility-check.md'
+)
+$app3Module05Files = @(
+    '.gitattributes', 'README.md', 'VERSION', 'assessment.md',
+    'build_scenarios.py', 'build_workspace.py', 'data-spec.md',
+    'scenario-contract.json', 'freeze_upstream.py', 'instructor-notes.md',
+    'release.json', 'source-record.yml', 'validate_workspace.py',
+    'upstream\module05-handoff-manifest.csv', 'outputs\input-profile.csv',
+    'outputs\condition-register.csv', 'outputs\validation-checks.csv',
+    'outputs\replication-results.csv', 'outputs\scenario-summary.csv',
+    'outputs\paired-effects.csv', 'outputs\sensitivity-review.csv',
+    'outputs\evaluation-measures.csv', 'outputs\evaluation-threats.csv',
+    'outputs\scenario-findings.json', 'outputs\point-demand-tradeoffs.svg',
+    'outputs\sensitivity-wait-effects.svg'
+) + @($app3Module05RecordNames | ForEach-Object { "reference\$_" }) + @($app3Module05RecordNames | ForEach-Object { "template\$_" })
+$app3Module05Missing = @($app3Module05Files | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $app3Module05Root $_))
+})
+if (-not (Test-Path -LiteralPath $app3Module05Spec) -or $app3Module05Missing.Count -gt 0) {
+    throw "APP-3 Module 05 is missing its specification or package files: $($app3Module05Missing -join ', ')."
+}
+$app3Module05Content = Get-Content -Raw -LiteralPath $app3Module05Spec
+$app3Module05Sections = [regex]::Matches($app3Module05Content, '(?m)^## \d+\.').Count
+$app3Module05Release = Get-Content -Raw -LiteralPath (Join-Path $app3Module05Root 'release.json') | ConvertFrom-Json
+$app3Module05Contract = Get-Content -Raw -LiteralPath (Join-Path $app3Module05Root 'scenario-contract.json') | ConvertFrom-Json
+$app3Module05Findings = Get-Content -Raw -LiteralPath (Join-Path $app3Module05Root 'outputs\scenario-findings.json') | ConvertFrom-Json
+$app3Module05Profiles = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\input-profile.csv'))
+$app3Module05Conditions = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\condition-register.csv'))
+$app3Module05Validations = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\validation-checks.csv'))
+$app3Module05Replications = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\replication-results.csv'))
+$app3Module05Summaries = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\scenario-summary.csv'))
+$app3Module05Paired = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\paired-effects.csv'))
+$app3Module05Sensitivity = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\sensitivity-review.csv'))
+$app3Module05Measures = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\evaluation-measures.csv'))
+$app3Module05Threats = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'outputs\evaluation-threats.csv'))
+$app3Module05Gates = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'reference\gate-results.csv'))
+$app3Module05Score = @(Import-Csv -LiteralPath (Join-Path $app3Module05Root 'reference\week6-score.csv'))
+$app3Module05Failed = @($app3Module05Sensitivity | Where-Object { $_.effect_status -eq 'null or failed improvement' })
+if (
+    $app3Module05Sections -ne 21 -or
+    $app3Module05Content -match '[—–]' -or
+    $app3Module05Content -notmatch 'Student effort: 16\.0 hours' -or
+    $app3Module05Content -notmatch '4,000' -or
+    $app3Module05Content -notmatch '60\.035963' -or
+    $app3Module05Content -notmatch '21\.244986' -or
+    $app3Module05Content -notmatch '86\.671644' -or
+    $app3Module05Content -notmatch '271 checks' -or
+    $app3Module05Content -notmatch '166 structural checks' -or
+    $app3Module05Content -notmatch '12 failure routes' -or
+    $app3Module05Release.module_id -ne 'oclc-app3-05' -or
+    $app3Module05Release.module_version -ne '0.1.0' -or
+    $app3Module05Release.commons_release -ne '0.71.0' -or
+    $app3Module05Release.reference_score -ne 25 -or
+    $app3Module05Release.reference_gates_passed -ne 20 -or
+    $app3Module05Release.reference_progression -ne 'continue with conditions' -or
+    $app3Module05Release.selected_option -ne 'none' -or
+    $app3Module05Release.outputs.files -ne 12 -or
+    $app3Module05Release.outputs.replication_rows -ne 4000 -or
+    $app3Module05Release.outputs.summary_rows -ne 20 -or
+    $app3Module05Release.outputs.paired_effect_rows -ne 15 -or
+    $app3Module05Release.workspace.learner_files -ne 56 -or
+    $app3Module05Release.workspace.learner_manifest_rows -ne 41 -or
+    $app3Module05Release.workspace.reference_files -ne 68 -or
+    $app3Module05Release.workspace.reference_manifest_rows -ne 53 -or
+    $app3Module05Release.workspace.learner_records -ne 14 -or
+    $app3Module05Release.validation.complete_checks -ne 271 -or
+    $app3Module05Release.validation.starter_checks -ne 166 -or
+    $app3Module05Release.validation.failure_routes_rejected -ne 12 -or
+    $app3Module05Release.implementation_authorized -ne $false -or
+    $app3Module05Contract.module.hours -ne 16.0 -or
+    $app3Module05Contract.module.course_points -ne 25 -or
+    $app3Module05Contract.simulation.warmup_days -ne 7 -or
+    $app3Module05Contract.simulation.measurement_days -ne 7 -or
+    $app3Module05Contract.simulation.replications_per_scenario_condition -ne 200 -or
+    $app3Module05Contract.simulation.base_seed -ne 7300500 -or
+    $app3Module05Contract.simulation.base_clinician_slots.night -ne 2 -or
+    $app3Module05Contract.simulation.base_clinician_slots.day -ne 6 -or
+    $app3Module05Contract.simulation.base_clinician_slots.evening -ne 4 -or
+    $app3Module05Contract.assessment.noncompensable_gates -ne 20 -or
+    $app3Module05Findings.selection.selected_option -ne 'none' -or
+    $app3Module05Findings.sensitivity.null_or_failed_rows -ne 6 -or
+    $app3Module05Findings.point_demand.S00.median_wait_minutes -ne 60.035963 -or
+    $app3Module05Findings.point_paired_effects.S01.p90_wait_improvement_minutes -ne 21.244986 -or
+    $app3Module05Findings.point_paired_effects.S02.median_wait_improvement_minutes -ne -5.803341 -or
+    $app3Module05Findings.evaluation.causal_status -ne 'not established by simulation' -or
+    $app3Module05Profiles.Count -ne 45 -or
+    $app3Module05Conditions.Count -ne 5 -or
+    $app3Module05Validations.Count -ne 24 -or
+    @($app3Module05Validations | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Module05Replications.Count -ne 4000 -or
+    $app3Module05Summaries.Count -ne 20 -or
+    $app3Module05Paired.Count -ne 15 -or
+    $app3Module05Sensitivity.Count -ne 15 -or
+    $app3Module05Failed.Count -ne 6 -or
+    $app3Module05Measures.Count -ne 12 -or
+    $app3Module05Threats.Count -ne 8 -or
+    $app3Module05Gates.Count -ne 20 -or
+    @($app3Module05Gates | Where-Object { $_.status -ne 'pass' }).Count -ne 0 -or
+    $app3Module05Score.Count -ne 7 -or
+    [decimal]$app3Module05Score[-1].points_awarded -ne [decimal]25
+) {
+    throw 'APP-3 Module 05 specification, scenario outputs, sensitivity, evaluation, assessment, progression, or responsible-claim boundary does not match the 0.1.0 contract.'
+}
+& python (Join-Path $app3Module05Root 'freeze_upstream.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 05 upstream self-check failed.' }
+& python (Join-Path $app3Module05Root 'build_scenarios.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 05 scenario self-check failed.' }
+& python (Join-Path $app3Module05Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 05 workspace-builder self-check failed.' }
+& python (Join-Path $app3Module05Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-3 Module 05 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -4711,3 +4831,4 @@ Write-Output "APP-3 Module 02 passed: $app3Module02Sections contract sections an
 Write-Output "APP-3 Module 03 passed: $app3Module03Sections contract sections and $($app3Module03Files.Count) required files."
 Write-Output "APP-3 Checkpoint 01 passed: $app3Checkpoint01Sections contract sections and $($app3Checkpoint01Files.Count) required files."
 Write-Output "APP-3 Module 04 passed: $app3Module04Sections contract sections and $($app3Module04Files.Count) required files."
+Write-Output "APP-3 Module 05 passed: $app3Module05Sections contract sections and $($app3Module05Files.Count) required files."

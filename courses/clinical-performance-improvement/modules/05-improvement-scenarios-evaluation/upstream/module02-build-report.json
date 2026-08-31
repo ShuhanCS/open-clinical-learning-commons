@@ -1,0 +1,135 @@
+{
+  "commons_release": "0.67.0",
+  "findings": {
+    "accepted_encounters": 43628,
+    "clinician_time_available": 39974,
+    "completed_encounters": 39975,
+    "failed_query_checks": 0,
+    "left_before_seen": 3653,
+    "maximum_queue_end": 20,
+    "median_arrival_to_clinician_minutes": 98.0,
+    "median_arrival_to_departure_minutes": 304.0,
+    "median_arrival_to_triage_minutes": 13.0,
+    "overtime_hours": 1050.0,
+    "query_checks": 30,
+    "return_within_72h": 0,
+    "safety": {
+      "eligible_completed_encounters": 39975,
+      "incident_capture_percent": 40.0447,
+      "incident_true_positives": 358,
+      "known_true_events": 894,
+      "trigger_false_positives": 379,
+      "trigger_sensitivity_percent": 75.2796,
+      "trigger_specificity_percent": 99.0302,
+      "trigger_true_positives": 673
+    },
+    "shift_arrivals": 43628,
+    "shift_completed_encounters": 39975,
+    "shift_rows": 1092,
+    "valid_event_sequences": 43627
+  },
+  "interpretation_status": "measure release only; no bottleneck, staffing, causal, clinical, or implementation conclusion",
+  "loaded_rows": {
+    "raw_calendar_demand": 1092,
+    "raw_defect_register": 12,
+    "raw_encounters": 43631,
+    "raw_known_truth": 10,
+    "raw_process_events": 250821,
+    "raw_queue_snapshots": 17520,
+    "raw_safety_events": 1274,
+    "raw_scenarios": 4,
+    "raw_staffing": 4368
+  },
+  "module_id": "oclc-app3-02",
+  "module_version": "0.1.0",
+  "outputs": {
+    "defect-impact.csv": {
+      "bytes": 1085,
+      "columns": 5,
+      "raw_bytes": 1085,
+      "raw_sha256": "37c7886ee2087b6e5e5facd9d123d84ef5aa67b05080601737a12ac8d3636ce4",
+      "rows": 12,
+      "sha256": "37c7886ee2087b6e5e5facd9d123d84ef5aa67b05080601737a12ac8d3636ce4"
+    },
+    "encounter-measures.csv.gz": {
+      "bytes": 1618877,
+      "columns": 33,
+      "raw_bytes": 11373933,
+      "raw_sha256": "d77e61587ff3499d3a1e23e3c9acfa59be7ecc23ef4e7e15720e90a24bc7f1c9",
+      "rows": 43628,
+      "sha256": "a996474197924b2a06dcc7e74989207f6fbe8d06d9a8c88ef6d14f5a2a470b7c"
+    },
+    "query-checks.csv": {
+      "bytes": 1159,
+      "columns": 4,
+      "raw_bytes": 1159,
+      "raw_sha256": "b4b053f33b9500404c21354fba9f831d4798fb88cea51882ee43ba6394a7d172",
+      "rows": 30,
+      "sha256": "b4b053f33b9500404c21354fba9f831d4798fb88cea51882ee43ba6394a7d172"
+    },
+    "safety-diagnostics.csv": {
+      "bytes": 459,
+      "columns": 10,
+      "raw_bytes": 459,
+      "raw_sha256": "28323242cb60c434e1dc51dd461555203d03df7894c9e4a07becfb27df3f7822",
+      "rows": 5,
+      "sha256": "28323242cb60c434e1dc51dd461555203d03df7894c9e4a07becfb27df3f7822"
+    },
+    "shift-metrics.csv": {
+      "bytes": 153192,
+      "columns": 29,
+      "raw_bytes": 153192,
+      "raw_sha256": "cd2ca9163acc7c79572b0014fd54f9726614c1cfd352a4efa11fd1bbedeacd57",
+      "rows": 1092,
+      "sha256": "cd2ca9163acc7c79572b0014fd54f9726614c1cfd352a4efa11fd1bbedeacd57"
+    },
+    "source-reconciliation.csv": {
+      "bytes": 523,
+      "columns": 4,
+      "raw_bytes": 523,
+      "raw_sha256": "d99b2a5e6db5ef1a8e41403ca7ccc679ad63c009aac4961281321dcb7f1b07cd",
+      "rows": 9,
+      "sha256": "d99b2a5e6db5ef1a8e41403ca7ccc679ad63c009aac4961281321dcb7f1b07cd"
+    },
+    "subgroup-support.csv": {
+      "bytes": 447,
+      "columns": 11,
+      "raw_bytes": 447,
+      "raw_sha256": "1e3367307e25be194b05851d6959ff8a249aa6c173b17f65b4eb0d2b88e5e9e6",
+      "rows": 3,
+      "sha256": "1e3367307e25be194b05851d6959ff8a249aa6c173b17f65b4eb0d2b88e5e9e6"
+    },
+    "weekly-metrics.csv": {
+      "bytes": 5395,
+      "columns": 18,
+      "raw_bytes": 5395,
+      "raw_sha256": "61c8fd5ec4d47ce97c3d1d38297b865a06d2ae9f6f9ee916406bccaba139e00d",
+      "rows": 52,
+      "sha256": "61c8fd5ec4d47ce97c3d1d38297b865a06d2ae9f6f9ee916406bccaba139e00d"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source_manifest_sha256": "e489afcc2126789d57f17e821c38e534eb3c154def6ca5ec818b7d46eb1f6ce4",
+  "source_release": "cgh-ed-01-operational-v1",
+  "source_summary": {
+    "manifest_rows": {
+      "calendar-demand": 1092,
+      "defect-register": 12,
+      "encounters": 43631,
+      "known-truth": 10,
+      "process-events": 250821,
+      "queue-snapshots": 17520,
+      "safety-events": 1274,
+      "scenarios": 4,
+      "staffing": 4368
+    },
+    "tables": 9,
+    "total_rows": 318732
+  },
+  "sql_sha256": {
+    "01-clean-operational-sources.sql": "790f0374cac08867b9a4349bc7ca3d51caa003cbb64147400a8f413731bffdea",
+    "02-encounter-measures.sql": "b47e778605f5f9118a60f1e82772c285ca5dd4858e3ede290f276724c66f3e39",
+    "03-operational-measures.sql": "c50e4439581cf19c90e3584c456ae01f10f341ccdf912b2e7ce56b220fa16662",
+    "04-validation-and-defects.sql": "4f7cbbf691e47f7ba7102f564b6ca53dcb1a4a1e55f36055eb449336a2630014"
+  }
+}

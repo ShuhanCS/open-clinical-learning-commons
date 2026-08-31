@@ -1,0 +1,21 @@
+gate_id,gate,required_status,evidence,status
+G01,Upstream release identity,pass,REPLACE,REPLACE
+G02,Forecast identity,pass,REPLACE,REPLACE
+G03,Scenario register,pass,REPLACE,REPLACE
+G04,Condition register,pass,REPLACE,REPLACE
+G05,Paired random inputs,pass,REPLACE,REPLACE
+G06,Warm-up and measurement,pass,REPLACE,REPLACE
+G07,Replication count,pass,REPLACE,REPLACE
+G08,Priority rule,pass,REPLACE,REPLACE
+G09,Capacity and trigger rules,pass,REPLACE,REPLACE
+G10,Conservation,pass,REPLACE,REPLACE
+G11,Nonnegative outputs,pass,REPLACE,REPLACE
+G12,Calibration,pass,REPLACE,REPLACE
+G13,Access groups,pass,REPLACE,REPLACE
+G14,Failed evidence retained,pass,REPLACE,REPLACE
+G15,Safety boundary,pass,REPLACE,REPLACE
+G16,Return boundary,pass,REPLACE,REPLACE
+G17,Workforce boundary,pass,REPLACE,REPLACE
+G18,Causal boundary,pass,REPLACE,REPLACE
+G19,Implementation boundary,pass,REPLACE,REPLACE
+G20,Reproducibility and AI,pass,REPLACE,REPLACE

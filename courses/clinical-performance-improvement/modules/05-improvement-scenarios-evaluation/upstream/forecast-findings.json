@@ -1,0 +1,83 @@
+{
+  "capacity": {
+    "baseline_anchor_clinician_hours_per_arrival": 0.96,
+    "historical_baseline_weekly_clinician_hours": {
+      "maximum": 852.0,
+      "median": 842.0,
+      "minimum": 822.0
+    },
+    "lower_planning_clinician_hours": 772.931174,
+    "point_planning_clinician_hours": 841.847121,
+    "staffing_recommendation": "not authorized",
+    "upper_planning_clinician_hours": 931.903714
+  },
+  "claim_limit": "synthetic forecast and planning implication only; no demand guarantee, staffing, productivity, equilibrium, root-cause, clinical, automated, causal, scenario-effect, or implementation authority",
+  "commons_release": "0.70.0",
+  "contract": {
+    "alpha": 0.3,
+    "evaluation_rows_per_method": 588,
+    "folds": 28,
+    "gamma": 0.2,
+    "horizon_shifts": 21,
+    "seasonal_period_shifts": 21,
+    "target": "arrivals per eight-hour shift"
+  },
+  "failure_review": {
+    "highest_fold_mae_arrivals": 8.174933,
+    "highest_mae_fold": "F09",
+    "highest_mae_test_week": 33,
+    "routine_mae_arrivals": 5.932063,
+    "special_event_mae_arrivals": 5.956421
+  },
+  "littles_law": {
+    "equilibrium_status": "not established",
+    "rows": 4,
+    "use": "bounded consistency check only"
+  },
+  "method_metrics": {
+    "last_value": {
+      "bias": -3.391156,
+      "mae": 10.77551,
+      "over": 2171.0,
+      "rmse": 13.291345,
+      "under": 4165.0,
+      "wape": 27.479724
+    },
+    "seasonal_exponential_smoothing": {
+      "bias": 0.008215,
+      "mae": 5.937283,
+      "over": 1747.976153,
+      "rmse": 7.30718,
+      "under": 1743.145982,
+      "wape": 15.141268
+    },
+    "seasonal_naive": {
+      "bias": -0.14966,
+      "mae": 7.095238,
+      "over": 2042.0,
+      "rmse": 9.060079,
+      "under": 2130.0,
+      "wape": 18.094288
+    }
+  },
+  "module05_permission": "permitted for improvement scenario and evaluation construction",
+  "module_id": "oclc-app3-04",
+  "module_version": "0.1.0",
+  "progression": "continue with conditions",
+  "schema_version": "1.0.0",
+  "selected_method": "seasonal_exponential_smoothing",
+  "upstream": {
+    "candidate_files": 137,
+    "checkpoint_id": "oclc-app3-cp01",
+    "frozen_files": 23,
+    "shift_rows": 1092
+  },
+  "week53": {
+    "empirical_actual_equivalent_lower": 805.136639,
+    "empirical_actual_equivalent_upper": 970.733035,
+    "end_date": "2025-01-05",
+    "raw_forecast_arrivals": 876.924084,
+    "rounded_shift_total_arrivals": 878,
+    "start_date": "2024-12-30"
+  }
+}
