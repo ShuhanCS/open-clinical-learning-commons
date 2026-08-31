@@ -115,7 +115,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.90.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.91.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2848,7 +2848,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.90.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.91.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4072,7 +4072,7 @@ if (
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
     $app4PackageContent -notmatch 'all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.90.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.91.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -5048,6 +5048,53 @@ if ($app5Checkpoint01Failures.Count -gt 0) {
 if ($LASTEXITCODE -ne 0) { throw 'APP-5 Checkpoint 01 builder self-check failed.' }
 & python (Join-Path $app5Checkpoint01Root 'validate_checkpoint.py') --self-check
 if ($LASTEXITCODE -ne 0) { throw 'APP-5 Checkpoint 01 validator self-check failed.' }
+
+$app5Module04Root = Join-Path $repo 'courses\population-health-equity\modules\04-place-evidence-geographic-reasoning'
+$app5Module04Spec = Join-Path $repo 'docs\curriculum\courses\APP-5\modules\04-place-evidence-geographic-reasoning-spec.md'
+$app5Module04Plan = Join-Path $repo 'docs\plans\2026-08-31-app5-module04-plan.md'
+if (-not (Test-Path -LiteralPath $app5Module04Root) -or -not (Test-Path -LiteralPath $app5Module04Spec) -or -not (Test-Path -LiteralPath $app5Module04Plan)) {
+    throw 'APP-5 Module 04 is missing its package, specification, or build plan.'
+}
+$app5Module04SpecContent = Get-Content -Raw -Encoding UTF8 -LiteralPath $app5Module04Spec
+$app5Module04Readme = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $app5Module04Root 'README.md')
+$app5Module04Sections = [regex]::Matches($app5Module04SpecContent, '(?m)^## \d+\.').Count
+$app5Module04FileCount = @(Get-ChildItem -Recurse -File -LiteralPath $app5Module04Root).Count
+$app5Module04Contract = Get-Content -Raw -LiteralPath (Join-Path $app5Module04Root 'geography-contract.json') | ConvertFrom-Json
+$app5Module04Release = Get-Content -Raw -LiteralPath (Join-Path $app5Module04Root 'release.json') | ConvertFrom-Json
+$app5Module04Report = Get-Content -Raw -LiteralPath (Join-Path $app5Module04Root 'outputs\build-report.json') | ConvertFrom-Json
+$app5Module04Sources = @(Import-Csv -LiteralPath (Join-Path $app5Module04Root 'data\source-manifest.csv'))
+$app5Module04Handoff = @(Import-Csv -LiteralPath (Join-Path $app5Module04Root 'upstream\checkpoint-handoff-manifest.csv'))
+$app5Module04Scores = @(Import-Csv -LiteralPath (Join-Path $app5Module04Root 'reference\week6-component-score.csv'))
+$app5Module04Gates = @(Import-Csv -LiteralPath (Join-Path $app5Module04Root 'reference\gate-results.csv'))
+$app5Module04Classes = @(Import-Csv -LiteralPath (Join-Path $app5Module04Root 'outputs\map-class-summary.csv'))
+$app5Module04Queries = @(Import-Csv -LiteralPath (Join-Path $app5Module04Root 'outputs\query-checks.csv'))
+$app5Module04Checks = [ordered]@{
+    package_shape = ($app5Module04FileCount -eq 301 -and $app5Module04Sections -eq 21)
+    plain_ascii = ($app5Module04SpecContent -notmatch '[—–]' -and $app5Module04Readme -notmatch '[—–]')
+    no_personal_paths = ($app5Module04SpecContent -notmatch '(?im)[A-Z]:\\Users\\' -and $app5Module04Readme -notmatch '(?im)[A-Z]:\\Users\\')
+    spec_contract = ($app5Module04SpecContent -match 'Module version: `0\.1\.0`' -and $app5Module04SpecContent -match 'Commons release: `0\.91\.0`' -and $app5Module04SpecContent -match '74ca27e8dd9ed393e43b75e237ff7d652ef072e413532821847de58a7aa4bfd4' -and $app5Module04SpecContent -match 'db70b4e20a17fbddd2b49f7647dd9ce5bcd064e01af5e7a7e23df9122889914e' -and $app5Module04SpecContent -match 'cf5386a255dc37c518e8410ea891f2f73726a95c13b65e22dbadf218ba6c1ae6' -and $app5Module04SpecContent -match '930 complete reference checks' -and $app5Module04SpecContent -match '832 learner checks' -and $app5Module04SpecContent -match '22 protected failure routes')
+    contract_identity = ($app5Module04Contract.module.id -eq 'oclc-app5-04' -and $app5Module04Contract.module.version -eq '0.1.0' -and $app5Module04Contract.module.commons_release -eq '0.91.0' -and $app5Module04Contract.source.tracts -eq 1620 -and $app5Module04Contract.source.valid_geometry_rows -eq 1620 -and $app5Module04Contract.workspace.learner_files -eq 275 -and $app5Module04Contract.workspace.learner_manifest_rows -eq 259 -and $app5Module04Contract.workspace.reference_files -eq 287 -and $app5Module04Contract.workspace.reference_manifest_rows -eq 271)
+    release_contract = ($app5Module04Release.module_id -eq 'oclc-app5-04' -and $app5Module04Release.commons_release -eq '0.91.0' -and $app5Module04Release.course_points -eq 10 -and $app5Module04Release.place_release.outputs -eq 12 -and $app5Module04Release.validation.complete_checks -eq 930 -and $app5Module04Release.validation.starter_checks -eq 832 -and $app5Module04Release.validation.protected_failure_routes -eq 22 -and $app5Module04Release.map_release.sha256 -eq 'cf5386a255dc37c518e8410ea891f2f73726a95c13b65e22dbadf218ba6c1ae6' -and $app5Module04Release.reference_decision.score -eq 10 -and $app5Module04Release.reference_decision.gates_passed -eq 22 -and $app5Module04Release.reference_decision.progression -eq 'continue with conditions')
+    source_and_handoff = ($app5Module04Sources.Count -eq 8 -and $app5Module04Handoff.Count -eq 240 -and $app5Module04Release.source_release.source_manifest_sha256 -eq 'f1d530f18fd55aacba6d99fbfef847c214c60aba66759e8746bb9713e4d872b0' -and $app5Module04Contract.upstream.handoff_manifest_sha256 -eq 'db70b4e20a17fbddd2b49f7647dd9ce5bcd064e01af5e7a7e23df9122889914e')
+    build_findings = ($app5Module04Report.geometry.rows -eq 1620 -and $app5Module04Report.findings.mapped_estimates -eq 1597 -and $app5Module04Report.findings.geometry_only_unavailable -eq 23 -and $app5Module04Report.findings.limited_support_review_tracts -eq 49 -and $app5Module04Report.findings.tracts_changing_class_after_county_aggregation -eq 645 -and $app5Module04Report.findings.failed_query_checks -eq 0)
+    assessment_contract = ($app5Module04Scores.Count -eq 5 -and $app5Module04Scores[-1].points_awarded -eq '10' -and $app5Module04Gates.Count -eq 22 -and @($app5Module04Gates | Where-Object { $_.status -ne 'pass' }).Count -eq 0)
+    class_contract = ($app5Module04Classes.Count -eq 6 -and ($app5Module04Classes.tract_count -join ',') -eq '82,826,608,64,17,23')
+    query_contract = ($app5Module04Queries.Count -eq 32 -and @($app5Module04Queries | Where-Object { $_.status -ne 'pass' }).Count -eq 0)
+}
+$app5Module04Failures = @($app5Module04Checks.GetEnumerator() | Where-Object { -not $_.Value } | ForEach-Object { $_.Key })
+if ($app5Module04Failures.Count -gt 0) {
+    throw "APP-5 Module 04 0.1.0 contract checks failed: $($app5Module04Failures -join ', ')."
+}
+& python (Join-Path $app5Module04Root 'acquire_geometry.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 04 geometry-source self-check failed.' }
+& python (Join-Path $app5Module04Root 'freeze_upstream.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 04 handoff self-check failed.' }
+& python (Join-Path $app5Module04Root 'build_place_evidence.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 04 place-evidence builder self-check failed.' }
+& python (Join-Path $app5Module04Root 'build_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 04 workspace-builder self-check failed.' }
+& python (Join-Path $app5Module04Root 'validate_workspace.py') --self-check
+if ($LASTEXITCODE -ne 0) { throw 'APP-5 Module 04 validator self-check failed.' }
 
 $fnd1Module01Root = Join-Path $repo 'courses\healthcare-data-foundations\modules\01-reproducible-workspace'
 $fnd1Module01Spec = Join-Path $repo 'docs\curriculum\courses\FND-1\modules\01-reproducible-workspace-spec.md'
@@ -6380,3 +6427,4 @@ Write-Output "APP-5 Module 01 passed: $app5Module01Sections contract sections, $
 Write-Output "APP-5 Module 02 passed: $app5Module02Sections contract sections, $app5Module02FileCount package files, $($app5Module02Report.findings.measure_tracts) linked tracts, and $($app5Module02Queries.Count) passing query checks."
 Write-Output "APP-5 Module 03 passed: $app5Module03Sections contract sections, $app5Module03FileCount package files, $($app5Module03Report.findings.disparity_comparisons) reference comparisons, and $($app5Module03SuppressionAudit.Count) passing suppression audits."
 Write-Output "APP-5 Checkpoint 01 passed: $app5Checkpoint01Sections contract sections, $app5Checkpoint01FileCount package files, $($app5Checkpoint01Release.package.assembled_files) assembled files, and $($app5Checkpoint01Gates.Count) checkpoint gates."
+Write-Output "APP-5 Module 04 passed: $app5Module04Sections contract sections, $app5Module04FileCount package files, $($app5Module04Report.findings.mapped_estimates) mapped estimates, and $($app5Module04Gates.Count) gates."

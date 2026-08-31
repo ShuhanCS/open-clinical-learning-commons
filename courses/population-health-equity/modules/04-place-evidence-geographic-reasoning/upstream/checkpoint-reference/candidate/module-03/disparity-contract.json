@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app5-03",
+    "version": "0.1.0",
+    "commons_release": "0.89.0",
+    "hours": 16.5,
+    "course_points": 20
+  },
+  "upstream": {
+    "module_id": "oclc-app5-02",
+    "module_version": "0.1.0",
+    "commons_release": "0.88.0",
+    "reference_files": 72,
+    "nested_manifest_rows": 57,
+    "handoff_payload_files": 73,
+    "handoff_manifest_bytes": 12048,
+    "handoff_manifest_sha256": "f5e84b251143edeb65b68d816a57492755083d8bc57c73e6bdaede381b933ef1"
+  },
+  "source": {
+    "release": "fma-dp-01-equity-v1",
+    "generator_version": "0.1.0",
+    "seed": 73053,
+    "period": "2024",
+    "dimensions": 3,
+    "groups": 19,
+    "margin_rows": 151715,
+    "completeness_rows": 7985,
+    "adult_denominator_per_dimension": 5679768,
+    "synthetic_events_per_dimension": 283614,
+    "manifest_sha256": "c3f7549f6fcc25e0bfd5f074a7f936e519a0bd7f9459452da903c653aee28384"
+  },
+  "analysis": {
+    "rate_multiplier": 100000,
+    "age_bands": 5,
+    "sql_files": 4,
+    "accepted_output_tables": 11,
+    "query_checks": 36,
+    "source_reconciliation_checks": 12,
+    "group_age_rates": 110,
+    "standardized_group_rates": 22,
+    "reported_comparison_groups": 16,
+    "disparity_comparisons": 32,
+    "summary_disparities": 6,
+    "missingness_fields": 5,
+    "representation_rows": 19,
+    "bias_register_rows": 8
+  },
+  "suppression": {
+    "minimum_event_count": 16,
+    "minimum_denominator": 100,
+    "published_tract_group_rows": 30343,
+    "primary_suppressed_cells": 19742,
+    "complementary_suppressed_cells": 1488,
+    "publishable_cells": 9113,
+    "audit_rows": 4791,
+    "failed_audits": 0,
+    "suppressed_values_are_zero": false,
+    "tract_totals_published": false
+  },
+  "assessment": {
+    "criteria": 5,
+    "points": 20,
+    "pass_score": 16,
+    "noncompensable_gates": 18,
+    "week3_total_after_checkpoint": 40
+  },
+  "workspace": {
+    "learner_files": 108,
+    "learner_manifest_rows": 92,
+    "reference_files": 120,
+    "reference_manifest_rows": 104,
+    "editable_records": 11,
+    "editable_sql_files": 4
+  },
+  "authority": {
+    "real_disparity_claim": "prohibited",
+    "intersectional_claim": "prohibited",
+    "mapping": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_allocation": "prohibited",
+    "model_fitting": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "real_community_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  }
+}

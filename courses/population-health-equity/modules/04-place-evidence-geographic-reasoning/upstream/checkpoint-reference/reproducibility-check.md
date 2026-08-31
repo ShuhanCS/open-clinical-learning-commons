@@ -1,0 +1,44 @@
+# Reproducibility check
+
+- Candidate files: `219`.
+- Nested immutable rows: `177`.
+- Checkpoint files: `240`.
+- Candidate manifest bytes: `41,641`.
+- Candidate manifest SHA-256: `b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192`.
+- Point reproduction: `Module 01 has 0 points, Module 02 has 20 points once, Module 03 has 20 points once, and the sum is 40`.
+- Gate reproduction: `12 + 15 + 18 inherited gates and 22 checkpoint gates all pass`.
+- Build reproduction: `two independent reference builds match byte for byte`.
+- Learner/reference candidate match: `pass`.
+- Copied validator: `pass`.
+- Deliberate failure routes: `27 rejected`.
+- Module 01 source and workspace checks: `pass`.
+- Module 02 source, measure, workspace, and validator checks: `pass`.
+- Module 03 handoff, source, disparity, workspace, and validator checks: `pass`.
+- Changed candidate: `rejected`.
+- Missing candidate: `rejected`.
+- Module 01 point mutation: `rejected`.
+- Duplicate Module 02 point mutation: `rejected`.
+- Duplicate Module 03 point mutation: `rejected`.
+- Wrong-total mutation: `rejected`.
+- Failed inherited gate: `rejected`.
+- Failed checkpoint gate: `rejected`.
+- Public-synthetic merge: `rejected`.
+- Denominator mutation: `rejected`.
+- Reference mutation: `rejected`.
+- Missing-interval mutation: `rejected`.
+- Hidden-missingness mutation: `rejected`.
+- Intersectional-claim mutation: `rejected`.
+- Suppressed-zero mutation: `rejected`.
+- Reconstructable-total mutation: `rejected`.
+- Real-disparity mutation: `rejected`.
+- Mapping or ranking mutation: `rejected`.
+- Targeting or allocation mutation: `rejected`.
+- Incomplete-defense mutation: `rejected`.
+- Missing-reviewer mutation: `rejected`.
+- Missing-condition mutation: `rejected`.
+- Missing-AI-field mutation: `rejected`.
+- Invalid-progression mutation: `rejected`.
+- Implementation mutation: `rejected`.
+- Deployment mutation: `rejected`.
+- Missing-reproduction-route mutation: `rejected`.
+- Named human reproduction: `pending before alpha`.

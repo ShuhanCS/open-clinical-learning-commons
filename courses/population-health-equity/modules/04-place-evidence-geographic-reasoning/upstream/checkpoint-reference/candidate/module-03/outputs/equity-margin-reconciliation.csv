@@ -1,0 +1,13 @@
+check_id,item,observed_value,expected_value,status,interpretation
+SR01,synthetic equity margin rows,151715,151715,pass,complete generated tract-age-dimension-group margin release
+SR02,synthetic field completeness rows,7985,7985,pass,one generated completeness row per accepted tract-age row
+SR03,equity group contract rows,19,19,pass,three separate marginal dimensions
+SR04,race and ethnicity population total,5679768,5679768,pass,reconciles to accepted adult denominator
+SR05,race and ethnicity event total,283614,283614,pass,reconciles to accepted generated numerator
+SR06,primary language population total,5679768,5679768,pass,reconciles to accepted adult denominator
+SR07,primary language event total,283614,283614,pass,reconciles to accepted generated numerator
+SR08,disability status population total,5679768,5679768,pass,reconciles to accepted adult denominator
+SR09,disability status event total,283614,283614,pass,reconciles to accepted generated numerator
+SR10,frozen Module 02 denominator total,5679768,5679768,pass,accepted Module 02 denominator preserved
+SR11,frozen Module 02 event total,283614,283614,pass,accepted Module 02 numerator preserved
+SR12,margin-only flags,151715,151715,pass,separate dimensions cannot be crossed into person records

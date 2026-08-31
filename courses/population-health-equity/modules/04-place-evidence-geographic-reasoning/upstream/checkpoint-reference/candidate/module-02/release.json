@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app5-02",
+  "module_version": "0.1.0",
+  "commons_release": "0.88.0",
+  "status": "runnable release candidate",
+  "hours": 16.0,
+  "course_points": 20,
+  "source_release": {
+    "id": "fma-dp-01-measures-v1",
+    "tracts": 1597,
+    "age_bands": 5,
+    "rows": 7985,
+    "adult_denominator": 5679768,
+    "synthetic_events": 283614,
+    "manifest_sha256": "9915aeb15f62d88a52cfa6304d211a4fd092d33c11e73cd5d63a14d64946823d"
+  },
+  "measure_release": {
+    "outputs": 10,
+    "query_checks": 30,
+    "failed_query_checks": 0,
+    "tract_union": 1620,
+    "measure_tracts": 1597,
+    "age_band_rows": 7985,
+    "direct_rates_available": 1576,
+    "direct_rates_unavailable": 21,
+    "guided_indirect_required": 80,
+    "public_modeled_rows": 1597
+  },
+  "workspace": {
+    "learner_files": 61,
+    "learner_manifest_rows": 46,
+    "reference_files": 72,
+    "reference_manifest_rows": 57
+  },
+  "validation": {
+    "complete_checks": 266,
+    "starter_checks": 187,
+    "protected_failure_routes": 12,
+    "copied_answer_rejected": true,
+    "complete_mode_starter_rejected": true,
+    "two_source_builds_match": true,
+    "two_measure_builds_match": true,
+    "two_reference_workspaces_match": true
+  },
+  "reference_decision": {
+    "score": 20,
+    "gates_passed": 15,
+    "progression": "continue with conditions",
+    "module03_permission": "permitted for curriculum construction",
+    "disparity_claim": "prohibited",
+    "mapping": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_allocation": "prohibited",
+    "model_fitting": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "real_community_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, community, equity, accessibility, privacy, responsible-AI, and independent-reproduction review pending before alpha"
+}

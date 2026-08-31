@@ -1,0 +1,9 @@
+relative_path,bytes,sha256,source_url,role
+raw/tl_2024_25_tract.zip,4506627,74ca27e8dd9ed393e43b75e237ff7d652ef072e413532821847de58a7aa4bfd4,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,complete official 2024 TIGER/Line Massachusetts tract archive
+archive/tl_2024_25_tract.cpg,5,3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,decompressed official TIGER/Line archive member
+archive/tl_2024_25_tract.dbf,206190,e6430beb691fe4c6b40e758dd7a6a315e6196de46c4d9c0872696389ad510d5d,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,decompressed official TIGER/Line archive member
+archive/tl_2024_25_tract.prj,165,0b9041e921d9ebb43247d314608fe9e38a0b008ee793067fc1806199ea1fb9dd,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,decompressed official TIGER/Line archive member
+archive/tl_2024_25_tract.shp,7201488,c6853216ec2187051021333468fb2abeee630920c7b79e7c54cfa1c1659856f3,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,decompressed official TIGER/Line archive member
+archive/tl_2024_25_tract.shp.ea.iso.xml,23142,14395515c840ea31a5a2f593cbde7497d46d516808b12ee95e302bfbecb29e0f,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,decompressed official TIGER/Line archive member
+archive/tl_2024_25_tract.shp.iso.xml,51160,03fabb1b28d98e8659de1572bd6e0f782dbdc62b8000d8df29b3c7278499ddbc,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,decompressed official TIGER/Line archive member
+archive/tl_2024_25_tract.shx,13060,708d2e6956b037b9d74447c8351a97c424cc33ecf918dc6c6a951d472f1aa76b,https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip,decompressed official TIGER/Line archive member

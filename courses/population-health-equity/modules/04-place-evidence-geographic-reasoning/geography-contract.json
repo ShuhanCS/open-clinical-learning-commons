@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app5-04",
+    "version": "0.1.0",
+    "commons_release": "0.91.0",
+    "hours": 16.5,
+    "course_points": 10,
+    "week6_checkpoint_points_after_acceptance": 10
+  },
+  "upstream": {
+    "checkpoint_id": "oclc-app5-cp01",
+    "checkpoint_version": "0.1.0",
+    "commons_release": "0.90.0",
+    "reference_files": 240,
+    "candidate_files": 219,
+    "candidate_manifest_bytes": 41641,
+    "candidate_manifest_sha256": "b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192",
+    "checkpoint_score": 40,
+    "checkpoint_gates": 67,
+    "handoff_payload_files": 240,
+    "handoff_manifest_bytes": 45547,
+    "handoff_manifest_sha256": "db70b4e20a17fbddd2b49f7647dd9ce5bcd064e01af5e7a7e23df9122889914e"
+  },
+  "source": {
+    "id": "TIGER2024-MA-TRACT",
+    "release": "2024 TIGER/Line Massachusetts census tracts",
+    "url": "https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_25_tract.zip",
+    "archive_bytes": 4506627,
+    "archive_sha256": "74ca27e8dd9ed393e43b75e237ff7d652ef072e413532821847de58a7aa4bfd4",
+    "archive_members": 7,
+    "tracts": 1620,
+    "state_fips": "25",
+    "counties": 14,
+    "source_crs_epsg": 4269,
+    "projected_crs_epsg": 26986,
+    "display_simplification_meters": 100,
+    "polygon_rows": 1617,
+    "multipolygon_rows": 3,
+    "valid_geometry_rows": 1620,
+    "empty_geometry_rows": 0,
+    "null_geometry_rows": 0
+  },
+  "measure": {
+    "source": "CDC PLACES 2025 census-tract release",
+    "measure_year": 2023,
+    "measure_id": "DIABETES",
+    "estimate_type": "modeled small-area crude prevalence",
+    "matched_tracts": 1597,
+    "geometry_only_tracts": 23,
+    "map_classes": [
+      "unavailable",
+      "less than 5.0%",
+      "5.0% to less than 10.0%",
+      "10.0% to less than 15.0%",
+      "15.0% to less than 20.0%",
+      "20.0% or greater"
+    ],
+    "limited_support_interval_width": 4.0,
+    "limited_support_population": 500,
+    "rank_based_classes": false
+  },
+  "assessment": {
+    "criteria": 4,
+    "points": 10,
+    "pass_score": 8,
+    "noncompensable_gates": 22,
+    "week6_component_points": 10
+  },
+  "workspace": {
+    "learner_files": 275,
+    "learner_manifest_rows": 259,
+    "reference_files": 287,
+    "reference_manifest_rows": 271,
+    "editable_records": 12,
+    "editable_sql_files": 3
+  },
+  "authority": {
+    "responsible_teaching_map": "permitted",
+    "real_disparity_claim": "prohibited",
+    "individual_inference": "prohibited",
+    "tract_ranking": "prohibited",
+    "priority_or_need_label": "prohibited",
+    "targeting_or_eligibility": "prohibited",
+    "outreach": "prohibited",
+    "allocation_or_funding": "prohibited",
+    "model_fitting": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "real_community_action": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

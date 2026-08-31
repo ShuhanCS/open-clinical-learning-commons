@@ -1,0 +1,23 @@
+gate_id,gate,status,evidence,owner
+G01,Accepted module identities,pass,"three module IDs versions Commons releases and progressions match",course director
+G02,Outer candidate chain of custody,pass,"219 sorted candidate fingerprints match",data steward
+G03,Nested immutable chain of custody,pass,"177 nested manifest rows match",independent reproducer
+G04,Public source identity and role,pass,"PLACES ACS and SVI identities and public evidence limits remain exact",public-data reviewer
+G05,Population denominator geography time and audience,pass,"FMA-DP-01 adult population and decision contracts remain exact",population-health clinical reviewer
+G06,Linkage and reconciliation,pass,"1620 union tracts 1597 measure tracts and source differences remain visible",data steward
+G07,Rate and standardization contract,pass,"five age bands one standard population and exact rate definitions remain fixed",biostatistics reviewer
+G08,Uncertainty and support,pass,"1576 direct rates 21 unavailable rates and 80 guided indirect cases remain explicit",epidemiology reviewer
+G09,Public and synthetic evidence separation,pass,"PLACES modeled prevalence is never combined with synthetic events",claims reviewer
+G10,Separate marginal dimensions,pass,"race and ethnicity language and disability margins are not joined as people",equity reviewer
+G11,Group and reference contract,pass,"19 groups declared references and comparison references remain exact",equity methods reviewer
+G12,Disparity measures and sensitivity,pass,"110 group-age rates 22 standardized rates 32 comparisons and six summaries remain exact",biostatistics reviewer
+G13,Missingness and representation,pass,"five completeness fields and 19 representation records remain explicit",equity reviewer
+G14,Selection linkage and measurement bias,pass,"all eight bias records retain owners and consequences",epidemiology reviewer
+G15,Primary and complementary suppression,pass,"19742 primary and 1488 complementary suppressions reproduce",privacy reviewer
+G16,Non-reconstruction and unavailable state,pass,"21230 protected cells are blank and all 4791 audits pass without tract totals",privacy reviewer
+G17,Point source and no duplication,pass,"Module 01 has zero points and Modules 02 and 03 have 20 points once",course director
+G18,Inherited gates,pass,"12 Module 01 15 Module 02 and 18 Module 03 gates pass",course director
+G19,Checkpoint score and gates,pass,"40 of 40 and all 22 checkpoint gates pass",assessment lead
+G20,Defense review conditions reproduction AI and claims,pass,"all 12 records are complete and traceable",course director
+G21,Bounded fictional claim,pass,"no real or intersectional disparity claim appears",population-health clinical reviewer
+G22,Bounded progression and authority,pass,"Module 04 curriculum construction only and all action routes remain prohibited",course director

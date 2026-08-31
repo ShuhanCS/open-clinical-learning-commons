@@ -1,0 +1,23 @@
+gate_id,gate,status,evidence,blocking_if_failed
+G01,Accepted Week 3 checkpoint identity is unchanged,REPLACE,REPLACE,yes
+G02,Official TIGER archive fingerprint and inventory pass,REPLACE,REPLACE,yes
+G03,Geometry row and unique-key counts pass,REPLACE,REPLACE,yes
+G04,State and county identities pass,REPLACE,REPLACE,yes
+G05,Coordinate-system contract passes,REPLACE,REPLACE,yes
+G06,Geometry type validity null and empty checks pass,REPLACE,REPLACE,yes
+G07,Projected area integrity check passes,REPLACE,REPLACE,yes
+G08,Exact tract-key join reconciles,REPLACE,REPLACE,yes
+G09,Unavailable values remain unavailable,REPLACE,REPLACE,yes
+G10,Public and synthetic evidence remain separate,REPLACE,REPLACE,yes
+G11,Measure identity period release and intervals are retained,REPLACE,REPLACE,yes
+G12,Absolute classes are declared and rank free,REPLACE,REPLACE,yes
+G13,Small-area review rule is declared and non-exclusionary,REPLACE,REPLACE,yes
+G14,County aggregation is labeled as a teaching summary,REPLACE,REPLACE,yes
+G15,Aggregation sensitivity is reproduced,REPLACE,REPLACE,yes
+G16,SVG accessibility structure passes,REPLACE,REPLACE,yes
+G17,Meaning does not depend on color alone,REPLACE,REPLACE,yes
+G18,Ecological compositional and contextual limits pass,REPLACE,REPLACE,yes
+G19,Non-stigmatizing and non-action language passes,REPLACE,REPLACE,yes
+G20,Score and required records pass,REPLACE,REPLACE,yes
+G21,AI accountability and independent reproduction pass,REPLACE,REPLACE,yes
+G22,Progression authority remains bounded,REPLACE,REPLACE,yes

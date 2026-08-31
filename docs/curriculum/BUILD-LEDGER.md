@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.90.0
+- Current release: 0.91.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-5 Week 3 checkpoint, Population measures, disparities, and data-limit readiness
-- Next unit: APP-5 Module 04
+- Last completed unit: APP-5 Module 04, Place-based evidence and geographic reasoning
+- Next unit: APP-5 Module 05
 
 ## Confirmed decisions
 
@@ -696,6 +696,14 @@
 - The checkpoint preserves 1,620 union tracts, 1,597 measure tracts, 5,679,768 denominator units, 283,614 synthetic events, 1,576 available direct rates, 21 unavailable direct rates, 80 guided indirect cases, three separate marginal dimensions, 19 groups, 151,715 group-margin rows, five missingness results, eight bias records, and 21,230 protected cells.
 - Complete checkpoint validation passes 1,460 checks, learner validation passes 1,446 checks, the copied validator passes, deterministic assembly matches, and 27 deliberate failure routes plus complete-mode learner rejection are verified.
 - APP-5 Checkpoint 01 is a runnable release candidate at Commons 0.90.0 with disposition `continue with conditions`. Module 04 place-based curriculum construction may begin. Module 05 remains prohibited until Module 04 passes. Real or intersectional disparity claims, map publication from the checkpoint, ranking, targeting, eligibility, outreach, allocation, funding, real community action, implementation, production connection, and deployment remain prohibited.
+- APP-5 Module 04 version 0.1.0 freezes the complete 240-file Week 3 checkpoint reference workspace in a 240-row, 45,547-byte handoff manifest with SHA-256 `db70b4e20a17fbddd2b49f7647dd9ce5bcd064e01af5e7a7e23df9122889914e`.
+- The module commits the complete 4,506,627-byte 2024 TIGER/Line Massachusetts tract archive with SHA-256 `74ca27e8dd9ed393e43b75e237ff7d652ef072e413532821847de58a7aa4bfd4`. Its eight-row source manifest has SHA-256 `f1d530f18fd55aacba6d99fbfef847c214c60aba66759e8746bb9713e4d872b0`.
+- All 1,620 geometry rows have unique tract keys. The layer contains 1,617 Polygon and three MultiPolygon rows across 14 counties; every geometry is valid, none are null or empty, the source CRS is EPSG 4269, and the EPSG 26986 area check has a maximum relative difference of 0.0001990791.
+- The exact join matches 1,597 accepted CDC PLACES 2023 modeled diabetes prevalence rows and retains 23 geometry-only tracts as unavailable. The 1,597 mapped values retain their intervals, population field, release identity, support state, and claim limit.
+- The map uses fixed absolute classes rather than ranks. It flags 49 tracts for classroom support review, creates 14 population-weighted county teaching summaries, and shows 645 tract class changes under county aggregation. The county summaries are not official county PLACES estimates.
+- The deterministic 1,515,932-byte accessible SVG has SHA-256 `cf5386a255dc37c518e8410ea891f2f73726a95c13b65e22dbadf218ba6c1ae6`. It is paired with a complete 1,620-row exact table, structured facts, a written text alternative, and a non-stigmatizing context memo.
+- The reference earns 10 of 10 and passes all 22 gates. Complete validation passes 930 checks, learner validation passes 832 checks, the copied validator passes, copied-answer and complete-mode learner packages are rejected, and 22 protected failure routes are verified.
+- APP-5 Module 04 is a runnable release candidate at Commons 0.91.0 with disposition `continue with conditions`. Module 05 curriculum construction may begin. Real disparity claims, individual inference, ranking, priority labels, targeting, eligibility, outreach, funding, allocation, model fitting, intervention-effect estimation, real community action, implementation, production connection, and deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -729,12 +737,14 @@
 - Complete named faculty, population-health clinical, epidemiology, biostatistics, equity, community, privacy, race and ethnicity standards, language-access, disability, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 03 before alpha.
 - Complete the 12 owned APP-5 Checkpoint 01 conditions covering dates, source roles, measure methods, group standards, references, missingness, bias, suppression, community rights, accessibility, responsible AI, and clean reproduction before alpha.
 - Complete named APP-5 Checkpoint 01 faculty, population-health clinical, epidemiology, biostatistics, Census and ACS, PLACES, SVI, GIS, race and ethnicity standards, language-access, disability, community, equity, privacy, accessibility, responsible-AI, and independent-reproduction review before alpha.
+- Confirm APP-5 Module 04's TIGER acquisition date, boundary and measure vintage compatibility, fixed display classes, classroom support rule, EPSG 26986 projection, 100-meter display generalization, county teaching-summary method, ecological and contextual language, and map acceptance before alpha.
+- Complete named APP-5 Module 04 faculty, population-health clinical, epidemiology, biostatistics, Census and TIGER geography, GIS, PLACES, equity, community, privacy, accessibility, responsible-AI, and independent-reproduction review before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the accepted APP-5 course specification, Checkpoint 01 specification, package, release, candidate manifest identity, evidence index, readiness review, responsible-claims audit, conditions, and progression decision.
-2. Freeze the complete 240-file Checkpoint 01 reference workspace without recomputing or repairing accepted sources, denominators, measures, standardization, references, missingness, bias, suppression, score, gates, or claims.
-3. Build APP-5 Module 04 as the place-based evidence and geographic-reasoning release. Acquire and validate the complete accepted 2024 Massachusetts tract geometry before mapping.
-4. Preserve key, vintage, coordinate reference system, invalid geometry, missing geometry, extra geometry, and spatial-join accounting. Compare tract and county aggregation, small-area stability, ecological and contextual interpretation, and non-stigmatizing language.
-5. Create one responsible accessible teaching map, exact table, text alternative, and context memo. Do not rank, target, define eligibility, contact, allocate, fund, fit a model, estimate effects, implement, or deploy. Advance semver, validate, commit, push, and remote-verify Module 04 as its own unit.
+1. Read the accepted APP-5 course specification and Module 04 specification, package, source and handoff manifests, exact map table, support review, county teaching summaries, aggregation comparison, claims audit, context memo, score, gates, progression decision, and open conditions.
+2. Freeze the complete 287-file Module 04 reference workspace without recomputing or repairing the accepted source, checkpoint evidence, geometry, join, unavailable states, intervals, classes, support flags, aggregation, map, score, gates, or claims.
+3. Build APP-5 Module 05 as the targeting and fairness release using fictional decisions only. Define a fixed resource constraint and compare equal, need-based, capacity-aware, and community-review rules without treating the map or an SVI rank as automatic authority.
+4. For every rule, report inclusion, exclusion, delay, burden, unsupported cases, possible benefit and harm, geographic concentration, group consequences, access, capacity, sensitivity to weights and thresholds, balancing measures, appeal, review, and the accountable human owner.
+5. Keep real eligibility, outreach, funding, allocation, community action, implementation, production connection, and deployment prohibited. Advance semver, validate, commit, push, and remote-verify Module 05 as its own unit.

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable release candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app5-cp01",
+    "title": "Population measures, disparities, and data-limit readiness",
+    "version": "0.1.0",
+    "commons_release": "0.90.0",
+    "course": "APP-5: Data for Population Health and Equity",
+    "due_point": "end of instructional Week 3",
+    "course_points": 40,
+    "point_source": "Module 02 20 points once plus Module 03 20 points once"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app5-01", "version": "0.1.0", "commons_release": "0.87.0", "assembled_files": 27, "manifest_rows": 16, "manifest_bytes": 1907, "manifest_sha256": "65ea81f391ed426f63e84593588d57542e827f89f2493aa0b3a2f8b1d9a2b0e9", "points": 0},
+    {"id": "oclc-app5-02", "version": "0.1.0", "commons_release": "0.88.0", "assembled_files": 72, "manifest_rows": 57, "manifest_bytes": 7588, "manifest_sha256": "330b4e9ba5071ad4529d46f4af5b15555e8db84ef1718de2a8de42d0aa76a4b0", "points": 20},
+    {"id": "oclc-app5-03", "version": "0.1.0", "commons_release": "0.89.0", "assembled_files": 120, "manifest_rows": 104, "manifest_bytes": 15465, "manifest_sha256": "d9591e028ba49d79762d444d769821dc21055a712aceda3f501c0e31bb7d24b8", "points": 20}
+  ],
+  "accepted_evidence": {
+    "component_files": 219,
+    "immutable_rows": 177,
+    "checkpoint_score": "40 of 40",
+    "module01_gates": "12 of 12 pass",
+    "module02_gates": "15 of 15 pass",
+    "module03_gates": "18 of 18 pass",
+    "checkpoint_gates": "22 of 22 pass",
+    "adult_denominator": 5679768,
+    "synthetic_events": 283614,
+    "direct_rates_available": 1576,
+    "direct_rates_unavailable": 21,
+    "guided_indirect_cases": 80,
+    "equity_margin_rows": 151715,
+    "suppressed_cells": 21230,
+    "suppression_audits": 4791
+  },
+  "package": {
+    "candidate_manifest_rows": 219,
+    "candidate_manifest_bytes": 41641,
+    "candidate_manifest_sha256": "b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192",
+    "checkpoint_editable_records": 12,
+    "defense_questions": 15,
+    "assembled_files": 240,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module04_permission": "permitted for curriculum construction",
+    "module05_permission": "prohibited until Module 04 passes",
+    "real_disparity_claim": "prohibited",
+    "mapping_in_checkpoint": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_allocation": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 1460,
+    "starter_checks": 1446,
+    "failure_routes_rejected": 27
+  },
+  "known_issues": [
+    "The official APP-5 section and half-term dates remain to be assigned from the published academic calendar.",
+    "Named faculty, methods, clinical, community, equity, privacy, accessibility, responsible-AI, and independent-reproduction reviews remain pending before alpha.",
+    "The equity release contains separate marginal dimensions and does not support intersectional claims.",
+    "The synthetic disparity statement does not establish a real Massachusetts disparity.",
+    "No package authorizes mapping inside the checkpoint, ranking, targeting, eligibility, outreach, allocation, funding, implementation, production connection, or deployment."
+  ]
+}

@@ -14,7 +14,7 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.90.0` through the Week 3 checkpoint.
+- Current Commons release target: `0.91.0` through Module 04.
 - Specification status: construction candidate.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
@@ -274,17 +274,21 @@ The Week 3 checkpoint freezes the population, denominator, source identities, st
 
 - Module ID: `oclc-app5-04`.
 - Hours: 16.5.
-- Planned package path: `courses/population-health-equity/modules/04-place-evidence-geographic-reasoning/`.
-- Planned specification: `docs/curriculum/courses/APP-5/modules/04-place-evidence-geographic-reasoning-spec.md`.
+- Package path: `courses/population-health-equity/modules/04-place-evidence-geographic-reasoning/`.
+- Specification: `docs/curriculum/courses/APP-5/modules/04-place-evidence-geographic-reasoning-spec.md`.
 - Decision: can the accepted population evidence be communicated geographically without unstable, ecological, misleading, or stigmatizing claims?
 - Submission: 10-point responsible map and context memo.
-- Build status: planned from the accepted Checkpoint 01 handoff.
+- Build status: runnable release candidate at module version `0.1.0` and Commons release `0.91.0`.
 
 Learners acquire and validate the complete accepted Massachusetts tract geometry. They test keys, coordinate reference systems, invalid geometry, missing geometry, extra geometry, tract vintage, spatial joins, and aggregation before mapping.
 
 The module compares tract and county aggregation to expose the modifiable areal unit problem, distinguishes contextual from compositional interpretations, tests small-area stability, and rewrites ecological and stigmatizing claims. Learners use DA-730 principles to choose accessible encodings, class breaks, uncertainty treatments, exact-value alternatives, notes, and community-facing language.
 
 A polished map cannot compensate for wrong geography, wrong vintage, unstable support, a hidden join loss, inaccessible output, ecological inference, or language that treats a place or its residents as the problem.
+
+The accepted release commits the complete 4,506,627-byte 2024 TIGER/Line Massachusetts tract archive with SHA-256 `74ca27e8dd9ed393e43b75e237ff7d652ef072e413532821847de58a7aa4bfd4`. All 1,620 geometries are valid. The exact join matches 1,597 public CDC PLACES modeled diabetes prevalence rows and retains 23 geometry-only tracts as unavailable. Forty-nine tracts carry a classroom support-review flag. Fourteen population-weighted county teaching summaries expose 645 tract class changes under aggregation.
+
+The deterministic accessible SVG, complete 1,620-row exact table, structured and written alternatives, ecological claims audit, and context memo pass. The reference earns 10 of 10 and passes all 22 gates. Complete validation passes 930 checks, learner validation passes 832 checks, and 22 protected failure routes are rejected. Module 05 curriculum construction may begin with conditions. No tract is ranked, prioritized, targeted, made eligible, contacted, funded, allocated, implemented, connected to production, or deployed.
 
 ## 13. Module 05 brief: Targeting and fairness
 
@@ -294,7 +298,7 @@ A polished map cannot compensate for wrong geography, wrong vintage, unstable su
 - Planned specification: `docs/curriculum/courses/APP-5/modules/05-targeting-fairness-spec.md`.
 - Decision: which, if any, transparent fictional targeting rule is responsible enough to enter an intervention plan?
 - Submission: 15-point targeting and fairness audit.
-- Build status: planned after Module 04 acceptance.
+- Build status: planned from the accepted Module 04 handoff.
 
 Learners compare equal allocation, need-based allocation, capacity-aware allocation, and a rule that requires structured community review before inclusion. The fixed fictional resource constraint, eligible areas, public evidence, synthetic capacity, and implementation assumptions remain identical across comparisons.
 

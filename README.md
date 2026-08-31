@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.90.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-4 are complete with seven modules and three checkpoints each. APP-5 has a complete course contract, runnable Modules 01 through 03, and a runnable Week 3 checkpoint.
+- Current version: `0.91.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-4 are complete with seven modules and three checkpoints each. APP-5 has a complete course contract, runnable Modules 01 through 04, and a runnable Week 3 checkpoint.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -158,6 +158,8 @@ The second runnable unit is [APP-5 Module 02: Population measures from linked da
 The third runnable unit is [APP-5 Module 03: Disparities and data limits](courses/population-health-equity/modules/03-disparities-data-limits/README.md), governed by its durable [Module 03 specification](docs/curriculum/courses/APP-5/modules/03-disparities-data-limits-spec.md). It freezes the accepted Module 02 evidence; adds separately reconciling synthetic race and ethnicity, language, and disability margins; computes absolute, relative, summary, and reference-sensitive disparities; audits five completeness fields and three bias types; and applies deterministic primary and complementary suppression. All 36 analytic checks and 4,791 suppression audits pass. The result is a fictional synthetic teaching finding only; mapping, ranking, targeting, allocation, implementation, and deployment remain prohibited. The separate Week 3 checkpoint owns cumulative acceptance and Module 04 progression.
 
 The cumulative [APP-5 Week 3 checkpoint](courses/population-health-equity/checkpoints/01-measures-disparities-readiness/reference/README.md), governed by its durable [checkpoint specification](docs/curriculum/courses/APP-5/checkpoints/01-measures-disparities-readiness-spec.md), freezes 219 accepted files and 177 nested immutable rows from Modules 01 through 03. It counts the Module 02 and Module 03 20-point components once, retains Module 01 as a zero-point gate, and passes all 67 inherited and checkpoint gates. Module 04 place-based curriculum construction may begin with conditions. Real or intersectional disparity claims, map publication from the checkpoint, ranking, targeting, eligibility, outreach, allocation, funding, implementation, and deployment remain prohibited.
+
+The fourth runnable unit is [APP-5 Module 04: Place-based evidence and geographic reasoning](courses/population-health-equity/modules/04-place-evidence-geographic-reasoning/README.md), governed by its durable [Module 04 specification](docs/curriculum/courses/APP-5/modules/04-place-evidence-geographic-reasoning-spec.md). It commits the complete 4,506,627-byte 2024 TIGER/Line Massachusetts tract archive, validates all 1,620 geometries, joins 1,597 accepted CDC PLACES modeled diabetes prevalence rows, preserves 23 unavailable tracts, and produces one accessible teaching map with a complete exact table and text alternative. Forty-nine tracts carry a classroom support-review flag, and 645 of 1,597 tract classes change under the county teaching summary. The reference earns 10 of 10 and passes all 22 gates. Module 05 curriculum construction may begin with conditions; no tract is ranked, prioritized, targeted, made eligible, contacted, funded, allocated, implemented, or deployed.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -335,7 +337,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Begin APP-5 Module 04 from the accepted Week 3 checkpoint handoff.
+1. Begin APP-5 Module 05 from the accepted Module 04 handoff.
 2. Continue APP-5 through APP-7 one distinct module and course at a time.
 3. Preserve separate final checkpoints and clinician-led leadership blocks for every applied course.
 4. Complete named human reviews before alpha promotion.

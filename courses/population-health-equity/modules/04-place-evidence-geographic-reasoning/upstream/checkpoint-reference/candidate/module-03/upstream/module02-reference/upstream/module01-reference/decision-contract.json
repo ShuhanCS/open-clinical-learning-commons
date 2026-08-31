@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app5-01",
+    "title": "Framing a population-health decision",
+    "version": "0.1.0",
+    "commons_release": "0.87.0",
+    "course": "APP-5: Data for Population Health and Equity",
+    "week": 1,
+    "hours": 15.5
+  },
+  "decision": {
+    "owner": "fictional FMA-DP-01 Massachusetts population-health planning council",
+    "question": "Are the population, denominator roles, geography, time frame, source roles, community-review rights, accountable audience, and claim limits defined well enough to begin population-measure construction?",
+    "permitted_next_action": "construct and validate the Module 02 population, denominator, rate, and standardization measures for curriculum use"
+  },
+  "case": {
+    "id": "FMA-DP-01",
+    "status": "explicitly fictional Massachusetts adult diabetes-prevention planning review",
+    "public_geographies": "real Massachusetts census-tract identities",
+    "real_agency_or_program_linkage": "prohibited",
+    "real_community_action": "prohibited",
+    "protected_or_identifiable_data": "prohibited"
+  },
+  "public_release": {
+    "places_rows": 1597,
+    "places_fields": 24,
+    "places_sha256": "3d55a099be438999fd52b1e34f13589dcf3e260162c56967fa01fb0a80135846",
+    "acs_rows": 1620,
+    "acs_fields": 100,
+    "acs_sha256": "bca33aebaa0a9e418d6a5343818aebc1e8b1dc2d355156419e5693d1907fa419",
+    "svi_rows": 1613,
+    "svi_fields": 158,
+    "svi_sha256": "fac1aabd51880624ce728f4a63f01ba6b50959c203c6975400c02daf21329de0",
+    "field_inventory_rows": 282,
+    "three_source_intersection": 1597,
+    "union_tracts": 1620,
+    "source_inventory_sha256": "1392a8a84047cf9725daf4053dbc0ac6efdbbe1b93eb6e9ed1e0c8074b6e89dd",
+    "field_inventory_sha256": "d65fb0bbde925e17e2b94ee362e43c1320d4f10467241f77cd260f50329854f7",
+    "join_feasibility_sha256": "2fc7811fc1f6350fb65581a5d946d073039b05a72006a9dd30ad829005cde1e6",
+    "reading_inventory_sha256": "081f5d85da1657d838e51df31cb746d32f4ac6f716a3e24e4c28e33235148292"
+  },
+  "package": {
+    "immutable_manifest_rows": 16,
+    "editable_records": 10,
+    "assembled_files": 27
+  },
+  "assessment": {
+    "course_points_awarded_here": 0,
+    "module02_week3_points": 20,
+    "module03_week3_points": 20,
+    "noncompensable_gates": 12
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module02_permission": "permitted for curriculum construction"
+  },
+  "authority": {
+    "rate_calculation_in_module01": "prohibited",
+    "standardization_in_module01": "prohibited",
+    "disparity_claim_in_module01": "prohibited",
+    "mapping_in_module01": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_allocation": "prohibited",
+    "model_fitting": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "real_community_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  }
+}

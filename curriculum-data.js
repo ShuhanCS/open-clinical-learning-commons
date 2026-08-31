@@ -483,7 +483,7 @@
           "title": "Place-based evidence and geographic reasoning",
           "outcome": "Read place-based evidence responsibly with maps and area-level data.",
           "topics": "Choropleth mapping, geographic aggregation, ecological fallacy, contextual and compositional effects, small-area rate stability, non-stigmatizing visualization.",
-          "submission": "Responsible map and context memo.",
+          "submission": "Ten-point responsible map and context memo counted once in the 25-point Week 6 checkpoint.",
           "hours": 16.5
         },
         {

@@ -1,0 +1,6 @@
+criterion_id,criterion,points_available,points_awarded,status,evidence
+R1,Source and geometry integrity,2,REPLACE,REPLACE,REPLACE
+R2,Join aggregation and stability accounting,3,REPLACE,REPLACE,REPLACE
+R3,Responsible accessible map and exact alternative,3,REPLACE,REPLACE,REPLACE
+R4,Ecological contextual reproducibility and claim limits,2,REPLACE,REPLACE,REPLACE
+TOTAL,Module 04 Week 6 component,10,REPLACE,REPLACE,REPLACE

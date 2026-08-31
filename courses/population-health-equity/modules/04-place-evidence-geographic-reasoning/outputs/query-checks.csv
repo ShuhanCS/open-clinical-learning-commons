@@ -1,0 +1,33 @@
+check_id,check_name,expected,actual,status
+Q01,geometry rows,1620,1620,pass
+Q02,unique geometry keys,1620,1620,pass
+Q03,Massachusetts state only,25,25,pass
+Q04,county count,14,14,pass
+Q05,valid geometry rows,1620,1620,pass
+Q06,null geometry rows,0,0,pass
+Q07,empty geometry rows,0,0,pass
+Q08,accepted geometry types,0 invalid,0,pass
+Q09,maximum projected area relative difference,<0.001,0.0001990791,pass
+Q10,accepted PLACES rows,1597,1597,pass
+Q11,accepted linkage audit rows,1620,1620,pass
+Q12,matched measure tracts,1597,1597,pass
+Q13,geometry-only unavailable tracts,23,23,pass
+Q14,linkage disagreements,0,0,pass
+Q15,unavailable rows retain null estimate,23,23,pass
+Q16,mapped public estimates,1597,1597,pass
+Q17,measure year,2023,2023,pass
+Q18,measure identity,DIABETES,DIABETES,pass
+Q19,source release identity,CDC PLACES 2025 census-tract release,CDC PLACES 2025 census-tract release,pass
+Q20,ordered confidence limits,0 invalid,0,pass
+Q21,county teaching summaries,14,14,pass
+Q22,aggregation comparison rows,1597,1597,pass
+Q23,map class rows,6,6,pass
+Q24,map class tract reconciliation,1620,1620,pass
+Q25,stability rows,1597,1597,pass
+Q26,limited-support review is populated,>0,49,pass
+Q27,supported display state is populated,>0,1548,pass
+Q28,aggregation changes at least one display class,>0,645,pass
+Q29,county names are complete,0 missing,0,pass
+Q30,retained PLACES population,5663670,5663670,pass
+Q31,public estimate range,0.7 to 30.5,0.7 to 30.5,pass
+Q32,one public claim limit,1,1,pass
