@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.88.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-4 are complete with seven modules and three checkpoints each. APP-5 has a complete course contract and runnable Modules 01 and 02.
+- Current version: `0.89.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-4 are complete with seven modules and three checkpoints each. APP-5 has a complete course contract and runnable Modules 01 through 03.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -154,6 +154,8 @@ The fifth applied course is specified in [APP-5: Data for Population Health and 
 The first runnable unit is [APP-5 Module 01: Framing a population-health decision](courses/population-health-equity/modules/01-population-health-decision/README.md), governed by its durable [Module 01 specification](docs/curriculum/courses/APP-5/modules/01-population-health-decision-spec.md). It pins 1,597 Massachusetts CDC PLACES diabetes tract rows, 1,620 ACS tract rows, and 1,613 SVI tract rows; inventories 282 fields; and releases a 27-file learner or reference workspace. All 1,597 PLACES tracts match both ACS and SVI. Module 02 measure construction may begin with conditions, while rate calculation, standardization, disparity claims, tract ranking, targeting, model fitting, real community action, implementation, and deployment remain outside Module 01 authority.
 
 The second runnable unit is [APP-5 Module 02: Population measures from linked data](courses/population-health-equity/modules/02-population-measures-linked-data/README.md), governed by its durable [Module 02 specification](docs/curriculum/courses/APP-5/modules/02-population-measures-linked-data-spec.md). It freezes the complete Module 01 reference package, preserves all 1,620 union tracts, and constructs 7,985 age-band denominators and generated numerator rows across 1,597 matched tracts. SQL and Python reconcile 5,679,768 denominator units, 283,614 synthetic events, 1,576 available direct rates, 21 unavailable direct rates, and 80 guided indirect cases. Module 03 disparity construction may begin with conditions; the release makes no real observed-case, disparity, ranking, targeting, allocation, intervention, implementation, or deployment claim.
+
+The third runnable unit is [APP-5 Module 03: Disparities and data limits](courses/population-health-equity/modules/03-disparities-data-limits/README.md), governed by its durable [Module 03 specification](docs/curriculum/courses/APP-5/modules/03-disparities-data-limits-spec.md). It freezes the accepted Module 02 evidence; adds separately reconciling synthetic race and ethnicity, language, and disability margins; computes absolute, relative, summary, and reference-sensitive disparities; audits five completeness fields and three bias types; and applies deterministic primary and complementary suppression. All 36 analytic checks and 4,791 suppression audits pass. The result is a fictional synthetic teaching finding only; mapping, ranking, targeting, allocation, implementation, and deployment remain prohibited. The separate 40-point Week 3 checkpoint may now be assembled with conditions.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -331,7 +333,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Begin APP-5 Module 03 from the accepted Module 02 handoff.
+1. Assemble the APP-5 Week 3 checkpoint from the accepted Modules 01 through 03 handoff.
 2. Continue APP-5 through APP-7 one distinct module and course at a time.
 3. Preserve separate final checkpoints and clinician-led leadership blocks for every applied course.
 4. Complete named human reviews before alpha promotion.

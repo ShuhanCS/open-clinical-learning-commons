@@ -14,7 +14,7 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.88.0` through Module 02.
+- Current Commons release target: `0.89.0` through Module 03.
 - Specification status: construction candidate.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
@@ -254,15 +254,19 @@ The component cannot pass with a mismatched population, denominator, period, geo
 
 - Module ID: `oclc-app5-03`.
 - Hours: 16.5.
-- Planned package path: `courses/population-health-equity/modules/03-disparities-data-limits/`.
-- Planned specification: `docs/curriculum/courses/APP-5/modules/03-disparities-data-limits-spec.md`.
+- Package path: `courses/population-health-equity/modules/03-disparities-data-limits/`.
+- Specification: `docs/curriculum/courses/APP-5/modules/03-disparities-data-limits-spec.md`.
 - Decision: does the evidence support a disparity statement strong enough to enter place and targeting work under explicit limits?
-- Submission: 20-point disparity and data-limit analysis plus the 40-point Week 3 release.
-- Build status: planned after Module 02 acceptance.
+- Submission: 20-point disparity and data-limit analysis for the separate 40-point Week 3 checkpoint.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.89.0`.
 
 Learners calculate rate difference, rate ratio, and at least one summary disparity measure. They justify the reference group, test how another defensible reference changes interpretation, report intervals and support, and separate absolute from relative disparity.
 
 They profile missing race, ethnicity, language, disability, and geography fields; examine who is captured, linked, or excluded; distinguish selection, linkage, and measurement bias; and apply deterministic small-number, suppression, and aggregation rules. Suppressed values remain unavailable rather than becoming zero or being recoverable through totals.
+
+The accepted release freezes the complete 72-file Module 02 reference workspace and adds three separately reconciling synthetic marginal dimensions with 19 groups, 151,715 group-margin rows, and a separate 7,985-row field-completeness audit. Every dimension reconciles to the accepted 5,679,768 adult denominator and 283,614 synthetic events. The release contains 110 group-age rates, 22 standardized group rates, 32 reference comparisons, six summary disparities, five missingness results, 19 representation records, and an eight-row bias register. Deterministic primary and complementary suppression leave 21,230 of 30,343 tract-group cells unavailable and non-reconstructable. All 36 query checks, 12 source-reconciliation checks, 4,791 suppression audits, 431 complete checks, 332 starter checks, and 17 protected failure routes pass.
+
+The supported statement applies only to the fictional synthetic release. It does not establish a real disparity, an intersectional result, a map, a tract ranking, a target, an allocation, an intervention effect, or authority to act.
 
 The Week 3 checkpoint freezes the population, denominator, source identities, standardization, disparity measures, reference groups, uncertainty, missingness, support, suppression, bias analysis, responsible claim, AI record, score, gates, and progression decision before place-based targeting begins.
 

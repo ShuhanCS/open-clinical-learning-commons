@@ -1,0 +1,19 @@
+gate_id,gate,status,evidence,owner
+G01,Frozen Module 02 identity,pass,73 payload files match the pinned handoff manifest,data steward
+G02,Synthetic source identity,pass,151715 margins and 7985 completeness rows match the source manifest,data steward
+G03,Dimension reconciliation,pass,each dimension preserves 5679768 denominator units and 283614 events,measurement lead
+G04,Separate-margin boundary,pass,all 151715 source rows carry margin_only one,equity reviewer
+G05,Group support and intervals,pass,110 age-specific rows have denominators rates Wilson intervals and states,biostatistics reviewer
+G06,Direct standardization,pass,22 rates use the accepted five-band standard,epidemiology reviewer
+G07,Absolute disparity measure,pass,rate differences reproduce under both references,epidemiology reviewer
+G08,Relative disparity measure,pass,rate ratios reproduce under both references,epidemiology reviewer
+G09,Predeclared references,pass,White English and no reported disability are explicit analytic choices,equity reviewer
+G10,Alternative references,pass,overall reported reference is calculated for all three dimensions,equity reviewer
+G11,Summary disparity measures,pass,six summary rows preserve pairwise support and limits,biostatistics reviewer
+G12,Missingness audit,pass,race ethnicity language disability and conditioned geography are reported,data steward
+G13,Representation audit,pass,all 19 groups remain visible without support-driven merging,equity reviewer
+G14,Bias analysis,pass,eight selection linkage measurement uncertainty and suppression records remain open,methods reviewer
+G15,Primary suppression,pass,event threshold 16 and denominator threshold 100 are deterministic,privacy reviewer
+G16,Complementary suppression,pass,all 4791 tract-dimension audits pass,privacy reviewer
+G17,Non-reconstruction and unavailable state,pass,21230 suppressed cells expose no counts rates intervals or tract totals,privacy reviewer
+G18,Claim and authority boundary,pass,synthetic checkpoint question only and no real action authority,population-health council

@@ -1,0 +1,19 @@
+gate_id,gate,status,evidence,owner
+G01,Frozen Module 02 identity,REPLACE,REPLACE,REPLACE
+G02,Synthetic source identity,REPLACE,REPLACE,REPLACE
+G03,Dimension reconciliation,REPLACE,REPLACE,REPLACE
+G04,Separate-margin boundary,REPLACE,REPLACE,REPLACE
+G05,Group support and intervals,REPLACE,REPLACE,REPLACE
+G06,Direct standardization,REPLACE,REPLACE,REPLACE
+G07,Absolute disparity measure,REPLACE,REPLACE,REPLACE
+G08,Relative disparity measure,REPLACE,REPLACE,REPLACE
+G09,Predeclared references,REPLACE,REPLACE,REPLACE
+G10,Alternative references,REPLACE,REPLACE,REPLACE
+G11,Summary disparity measures,REPLACE,REPLACE,REPLACE
+G12,Missingness audit,REPLACE,REPLACE,REPLACE
+G13,Representation audit,REPLACE,REPLACE,REPLACE
+G14,Bias analysis,REPLACE,REPLACE,REPLACE
+G15,Primary suppression,REPLACE,REPLACE,REPLACE
+G16,Complementary suppression,REPLACE,REPLACE,REPLACE
+G17,Non-reconstruction and unavailable state,REPLACE,REPLACE,REPLACE
+G18,Claim and authority boundary,REPLACE,REPLACE,REPLACE

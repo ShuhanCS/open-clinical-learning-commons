@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "oclc-app5-03",
+  "module_version": "0.1.0",
+  "commons_release": "0.89.0",
+  "status": "runnable release candidate",
+  "hours": 16.5,
+  "course_points": 20,
+  "week3_checkpoint_points_after_acceptance": 40,
+  "source_release": {
+    "id": "fma-dp-01-equity-v1",
+    "dimensions": 3,
+    "groups": 19,
+    "margin_rows": 151715,
+    "completeness_rows": 7985,
+    "adult_denominator_per_dimension": 5679768,
+    "synthetic_events_per_dimension": 283614,
+    "manifest_sha256": "c3f7549f6fcc25e0bfd5f074a7f936e519a0bd7f9459452da903c653aee28384"
+  },
+  "disparity_release": {
+    "outputs": 11,
+    "query_checks": 36,
+    "source_reconciliation_checks": 12,
+    "group_age_rates": 110,
+    "standardized_group_rates": 22,
+    "disparity_comparisons": 32,
+    "summary_disparities": 6,
+    "missingness_fields": 5,
+    "representation_rows": 19,
+    "bias_register_rows": 8
+  },
+  "suppression_release": {
+    "minimum_event_count": 16,
+    "minimum_denominator": 100,
+    "published_tract_group_rows": 30343,
+    "primary_suppressed_cells": 19742,
+    "complementary_suppressed_cells": 1488,
+    "publishable_cells": 9113,
+    "audit_rows": 4791,
+    "failed_audits": 0
+  },
+  "workspace": {
+    "learner_files": 108,
+    "learner_manifest_rows": 92,
+    "reference_files": 120,
+    "reference_manifest_rows": 104
+  },
+  "validation": {
+    "complete_checks": 431,
+    "starter_checks": 332,
+    "protected_failure_routes": 17,
+    "copied_answer_rejected": true,
+    "complete_mode_starter_rejected": true,
+    "two_source_builds_match": true,
+    "two_disparity_builds_match": true,
+    "two_reference_workspaces_match": true
+  },
+  "reference_decision": {
+    "score": 20,
+    "gates_passed": 18,
+    "progression": "continue with conditions",
+    "week3_checkpoint_permission": "permitted for curriculum construction",
+    "module04_permission": "not yet; Week 3 checkpoint must accept the frozen package first",
+    "synthetic_disparity_statement": "supported with conditions for the fictional release",
+    "real_disparity_claim": "prohibited",
+    "mapping": "prohibited",
+    "tract_ranking": "prohibited",
+    "targeting_or_allocation": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "review_status": "faculty, population-health clinical, epidemiology, biostatistics, equity, community, privacy, race and ethnicity standards, language-access, disability, accessibility, responsible-AI, and independent-reproduction review pending before alpha"
+}

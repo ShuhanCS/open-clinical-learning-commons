@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.88.0
+- Current release: 0.89.0
 - Last updated: 2026-08-31
 - Active phase: applied-course build
-- Last completed unit: APP-5 Module 02, Population measures from linked data
-- Next unit: APP-5 Module 03
+- Last completed unit: APP-5 Module 03, Disparities and data limits
+- Next unit: APP-5 Week 3 checkpoint
 
 ## Confirmed decisions
 
@@ -684,6 +684,12 @@
 - The five standard-population rows total 5,679,768 and their weights total one. Public PLACES modeled prevalence remains in a separate 1,597-row table and is never relabeled as observed cases or combined with the synthetic numerator.
 - All 30 SQL checks and eight source-reconciliation checks pass. Complete validation passes 266 checks, starter validation passes 187 checks, deterministic source, measure, and workspace builds match, and copied-answer, complete-mode starter, and 12 protected failure routes are rejected.
 - APP-5 Module 02 is a runnable release candidate at Commons 0.88.0. Module 03 disparity and data-limit construction may begin with conditions; disparity claims, mapping, tract ranking, targeting, allocation, model fitting, intervention-effect estimation, real community action, implementation, and deployment remain prohibited at the Module 02 handoff.
+- APP-5 Module 03 version 0.1.0 freezes the complete 72-file Module 02 reference workspace plus its release record in a 73-row, 12,048-byte handoff manifest with SHA-256 `f5e84b251143edeb65b68d816a57492755083d8bc57c73e6bdaede381b933ef1`.
+- The deterministic `fma-dp-01-equity-v1` release uses seed 73053 and adds three separately reconciling synthetic marginal dimensions with 19 groups, 151,715 group-margin rows, and a separate 7,985-row field-completeness audit. Each dimension reconciles to 5,679,768 denominator units and 283,614 synthetic events. The source manifest has SHA-256 `c3f7549f6fcc25e0bfd5f074a7f936e519a0bd7f9459452da903c653aee28384`.
+- The accepted analysis contains 110 group-age rates, 22 standardized group rates, 32 reference comparisons, six summary disparity records, five missingness results, 19 representation records, and an eight-row selection, linkage, and measurement-bias register.
+- Deterministic rules suppress 19,742 cells for primary small-number or denominator limits and 1,488 complementary cells. Of 30,343 tract-group rows, 9,113 remain publishable and 21,230 remain unavailable. All 4,791 non-reconstruction audits pass, and tract totals are not published.
+- All 36 SQL checks and 12 source-reconciliation checks pass. Complete validation passes 431 checks, starter validation passes 332 checks, deterministic source, analysis, and workspace builds match, and copied-answer, complete-mode starter, and 17 protected failure routes are rejected.
+- APP-5 Module 03 is a runnable release candidate at Commons 0.89.0. The separate 40-point Week 3 checkpoint may be assembled with conditions. Module 04 may not begin until that checkpoint accepts the frozen package. Real or intersectional disparity claims, mapping, tract ranking, targeting, allocation, model fitting, intervention-effect estimation, real community action, implementation, and deployment remain prohibited.
 
 ## Pending confirmation
 
@@ -713,12 +719,14 @@
 - Complete named faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, GIS, community, equity, language-access, disability-access, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 01 before alpha.
 - Confirm APP-5 Module 02's five adult age bands, 38-cell ACS routing, approximate margin method, synthetic planning-need numerator, fixed probabilities, common standard population, interval methods, zero-denominator rule, small-support rule, and indirect comparison limit.
 - Complete named faculty, population-health clinical, epidemiology, biostatistics, ACS, PLACES, SVI, community, equity, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 02 before alpha.
+- Confirm APP-5 Module 03's marginal group contract, reference groups, interval treatment, completeness assumptions, bias register, event and denominator thresholds, complementary-suppression policy, and bounded synthetic claim before alpha.
+- Complete named faculty, population-health clinical, epidemiology, biostatistics, equity, community, privacy, race and ethnicity standards, language-access, disability, accessibility, responsible-AI, and independent-reproduction review of APP-5 Module 03 before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the accepted APP-5 course specification, source record, Module 02 specification, package, release record, score, gates, progression decision, and eight conditions.
-2. Freeze the complete 72-file Module 02 reference workspace and its 57 immutable rows without recomputing or repairing accepted Module 01 sources, the generated numerator, denominators, rates, standardization results, unavailable states, score, or gates.
-3. Build APP-5 Module 03 as the disparity and data-limit release: add the approved synthetic equity-group layer, calculate absolute and relative disparity measures, test reference-group sensitivity, audit missingness and representation, and apply deterministic support and suppression rules.
-4. Preserve suppressed values as unavailable and non-reconstructable. Do not map, rank tracts, select a target or allocation rule, fit a model, estimate intervention effects, make real community claims, implement, or deploy.
-5. Assemble the 40-point Week 3 checkpoint only after Module 03 passes. Advance semver, validate, commit, push, and remote-verify each isolated unit.
+1. Read the accepted APP-5 course specification and the Module 01 through Module 03 specifications, packages, release records, scores, gates, progression decisions, and open conditions.
+2. Freeze the complete Module 03 reference workspace and preserve its nested Module 02 handoff, synthetic source identity, group contract, standard population, measures, references, missingness results, bias register, suppression states, responsible claim, score, and gates without recomputing or repairing them.
+3. Build the separate APP-5 Week 3 checkpoint. Count the Module 02 20-point component and Module 03 20-point component once; retain Module 01 as a required zero-point gate.
+4. Require the cumulative defense, reviewer record, independent reproduction, conditions register, progression decision, and explicit acceptance or revision decision before Module 04.
+5. Preserve all unavailable and suppressed states. Do not map, rank tracts, select a target or allocation rule, fit a model, estimate intervention effects, make real community claims, implement, or deploy. Advance semver, validate, commit, push, and remote-verify the checkpoint as its own unit.

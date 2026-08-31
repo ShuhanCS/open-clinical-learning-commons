@@ -1,0 +1,7 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+R01,"Group rates support intervals and standardization",4,4,"110 age-specific and 22 standardized rate rows reconcile"
+R02,"Absolute relative summary and reference-sensitivity measures",4,4,"32 pairwise and six summary results under two references"
+R03,"Missingness representation selection linkage and measurement bias",4,4,"five-field audit 19 representation rows and eight bias records"
+R04,"Primary and complementary suppression with non-reconstruction",4,4,"30343 publication rows and 4791 passing audits"
+R05,"Responsible claim reproducibility AI record and progression",4,4,"bounded synthetic statement deterministic reproduction and conditioned checkpoint permission"
+TOTAL,Total,20,20,"all five criteria and all 18 gates pass"

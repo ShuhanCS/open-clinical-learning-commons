@@ -1,0 +1,4 @@
+dimension_id,primary_reference,alternative_reference,primary_summary_absolute_difference,primary_summary_ratio,alternative_summary_absolute_difference,alternative_summary_ratio,interpretation,status
+disability_status,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+primary_language,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+race_ethnicity,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

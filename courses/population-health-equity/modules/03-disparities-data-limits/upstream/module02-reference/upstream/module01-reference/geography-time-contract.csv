@@ -1,0 +1,9 @@
+contract_id,element,accepted_value,status,source_or_owner,later_use,limit
+"GT-01","Primary public key","11-character Massachusetts census tract FIPS","accepted","PLACES locationid; ACS derived tract_fips; SVI FIPS","Module 02 tabular joins","key agreement does not make source periods or populations identical"
+"GT-02","PLACES geography and time","Massachusetts tract; measure year 2023; 2025 release","accepted for interpretation","CDC PLACES","modeled surveillance evidence","not an observed tract case count or program-effect measure"
+"GT-03","ACS geography and time","Massachusetts tract; 2020-2024 five-year estimates","accepted for denominator route","U.S. Census Bureau","Module 02 population structure","survey estimate period differs from PLACES"
+"GT-04","SVI geography and time","Massachusetts tract; SVI 2022 release and documented source vintages","accepted for context","CDC/ATSDR SVI","Module 03 and Module 04 context","rank is release-relative and not a longitudinal score"
+"GT-05","Boundary source","2024 TIGER/Line Massachusetts census tracts","route fixed","U.S. Census Bureau","Module 04 geometry and maps","geometry is not acquired or validated in Module 01"
+"GT-06","Aggregation comparison","tract versus county under one accepted crosswalk and period","reserved","Module 04 faculty and GIS owner","modifiable-areal-unit exercise","county aggregation cannot repair incompatible source definitions"
+"GT-07","Surveillance cadence","annual source-release compatibility review for the fictional plan","accepted","FMA-DP-01 data steward","later monitoring design","do not infer trend across incompatible releases, methods, ranks, or boundaries"
+"GT-08","Individual geography","no address, person, household, parcel, or individual inference","prohibited","APP-5 authority boundary","none","a tract average cannot be assigned to a resident"

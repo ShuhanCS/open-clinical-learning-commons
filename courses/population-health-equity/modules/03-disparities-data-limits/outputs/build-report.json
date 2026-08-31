@@ -1,0 +1,201 @@
+{
+  "commons_release": "0.89.0",
+  "findings": {
+    "bias_register_rows": 8,
+    "complementary_suppressed_cells": 1488,
+    "completeness_rows": 7985,
+    "disparity_comparisons": 32,
+    "failed_query_checks": 0,
+    "failed_source_reconciliation_checks": 0,
+    "group_age_rates": 110,
+    "highest_supported_group": {
+      "dimension": "disability_status",
+      "group_id": "reported_disability",
+      "rate_per_100k": 6778.904836055377
+    },
+    "margin_rows": 151715,
+    "missingness": {
+      "disability_status": 8376,
+      "ethnicity": 7578,
+      "primary_language": 5314,
+      "race": 6000,
+      "tract_geography": 0
+    },
+    "primary_suppressed_cells": 19742,
+    "publishable_cells": 9113,
+    "published_tract_group_rows": 30343,
+    "query_checks": 36,
+    "representation_rows": 19,
+    "source_reconciliation_checks": 12,
+    "standardized_group_rates": 22,
+    "summary_disparities": 6
+  },
+  "handoff": {
+    "adult_denominator": 5679768,
+    "manifest_bytes": 12048,
+    "manifest_sha256": "f5e84b251143edeb65b68d816a57492755083d8bc57c73e6bdaede381b933ef1",
+    "nested_manifest_rows": 57,
+    "payload_files": 73,
+    "reference_files": 72,
+    "synthetic_events": 283614,
+    "upstream_files": 74
+  },
+  "interpretation_status": "synthetic disparity and data-limit release only; no real disparity, mapping, ranking, targeting, allocation, intervention, community, implementation, or deployment conclusion",
+  "loaded": {
+    "raw_equity_margins": {
+      "columns": 21,
+      "rows": 151715
+    },
+    "raw_field_completeness": {
+      "columns": 18,
+      "rows": 7985
+    },
+    "raw_group_contract": {
+      "columns": 11,
+      "rows": 19
+    },
+    "raw_standard_population": {
+      "columns": 10,
+      "rows": 5
+    },
+    "raw_upstream_denominators": {
+      "columns": 13,
+      "rows": 7985
+    },
+    "raw_upstream_events": {
+      "columns": 19,
+      "rows": 7985
+    }
+  },
+  "module_id": "oclc-app5-03",
+  "module_version": "0.1.0",
+  "outputs": {
+    "bias-register.csv": {
+      "bytes": 2144,
+      "columns": 8,
+      "content_bytes": 2144,
+      "content_sha256": "3b06a50c0246d6a4118923d90eb8f70812f2eae81bf59425a86b630450ebf59e",
+      "rows": 8,
+      "sha256": "3b06a50c0246d6a4118923d90eb8f70812f2eae81bf59425a86b630450ebf59e"
+    },
+    "complementary-suppression-audit.csv": {
+      "bytes": 645318,
+      "columns": 8,
+      "content_bytes": 645318,
+      "content_sha256": "0b47dc885d478d1485ba9a130ba4635b9daba836ff63c94a50ffb39e77a0f3ec",
+      "rows": 4791,
+      "sha256": "0b47dc885d478d1485ba9a130ba4635b9daba836ff63c94a50ffb39e77a0f3ec"
+    },
+    "disparity-comparisons.csv": {
+      "bytes": 14089,
+      "columns": 18,
+      "content_bytes": 14089,
+      "content_sha256": "96b9f25c5c768e680636f4f222bdc1c34ca58fcd956caa85a7ec143dcd61ce78",
+      "rows": 32,
+      "sha256": "96b9f25c5c768e680636f4f222bdc1c34ca58fcd956caa85a7ec143dcd61ce78"
+    },
+    "equity-margin-reconciliation.csv": {
+      "bytes": 1260,
+      "columns": 6,
+      "content_bytes": 1260,
+      "content_sha256": "f50399f9fa23c67d20936fc1be2eea44122ccd6e1cb97510ce3847705a52ec17",
+      "rows": 12,
+      "sha256": "f50399f9fa23c67d20936fc1be2eea44122ccd6e1cb97510ce3847705a52ec17"
+    },
+    "group-age-rates.csv": {
+      "bytes": 31724,
+      "columns": 18,
+      "content_bytes": 31724,
+      "content_sha256": "8cb835a825a123aaaab230cbaee7d47365a0cd081db539b5cbc5792541011844",
+      "rows": 110,
+      "sha256": "8cb835a825a123aaaab230cbaee7d47365a0cd081db539b5cbc5792541011844"
+    },
+    "missingness-audit.csv": {
+      "bytes": 819,
+      "columns": 6,
+      "content_bytes": 819,
+      "content_sha256": "5503bf8bd7e7034b63a07c6a0e7b22ca7acf9988a2d4b67de323d25a942ed63c",
+      "rows": 5,
+      "sha256": "5503bf8bd7e7034b63a07c6a0e7b22ca7acf9988a2d4b67de323d25a942ed63c"
+    },
+    "published-tract-group-rates.csv.gz": {
+      "bytes": 430138,
+      "columns": 14,
+      "content_bytes": 7148494,
+      "content_sha256": "f654e0a9fd35d4dd8cf9afd77bf5c3d206eb55b70a4d26d518e3810d80448a8b",
+      "rows": 30343,
+      "sha256": "1bb68ab0ed13f2f49df41bdc5e84c622c6a4b645ec8611ad54548accb81fe2d0"
+    },
+    "query-checks.csv": {
+      "bytes": 1599,
+      "columns": 5,
+      "content_bytes": 1599,
+      "content_sha256": "6ce2bbd7980f5ebe1f5222f46625e2ccfbb9ec445a08e44737b5a51bb099e426",
+      "rows": 36,
+      "sha256": "6ce2bbd7980f5ebe1f5222f46625e2ccfbb9ec445a08e44737b5a51bb099e426"
+    },
+    "representation-audit.csv": {
+      "bytes": 5477,
+      "columns": 12,
+      "content_bytes": 5477,
+      "content_sha256": "9461154fc0172a4d3bf427a2e1f6818d4b78ef7b010c85e962dc4760d034702a",
+      "rows": 19,
+      "sha256": "9461154fc0172a4d3bf427a2e1f6818d4b78ef7b010c85e962dc4760d034702a"
+    },
+    "standardized-group-rates.csv": {
+      "bytes": 6503,
+      "columns": 16,
+      "content_bytes": 6503,
+      "content_sha256": "1feccf9c75de467e9c3e301a08084e097c62391c3e55c72f986613e0cb15dd1f",
+      "rows": 22,
+      "sha256": "1feccf9c75de467e9c3e301a08084e097c62391c3e55c72f986613e0cb15dd1f"
+    },
+    "summary-disparities.csv": {
+      "bytes": 1875,
+      "columns": 11,
+      "content_bytes": 1875,
+      "content_sha256": "1a0d27cc4a145388b0007b2be859daac06c29f9bc43dc367bfc2e7f7bc344289",
+      "rows": 6,
+      "sha256": "1a0d27cc4a145388b0007b2be859daac06c29f9bc43dc367bfc2e7f7bc344289"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "adult_denominator_per_dimension": 5679768,
+    "completeness_rows": 7985,
+    "dimensions": 3,
+    "files": {
+      "data-dictionary.csv": {
+        "bytes": 8148,
+        "sha256": "1ae498e5a8f084bacb5e34a65d716b70747116c73d03fc3e25c7326712e0fdab"
+      },
+      "equity-group-contract.csv": {
+        "bytes": 5366,
+        "sha256": "56530a6063dd614eab498396ca9cfaca68fd37c70888be375a003d21fe468e70"
+      },
+      "raw/synthetic-equity-margins.csv.gz": {
+        "bytes": 1708745,
+        "sha256": "aaacdd529cf3ab563db5ad4ebd4509496db544ebb63896b8c4dfaed44c89793d"
+      },
+      "raw/synthetic-field-completeness.csv.gz": {
+        "bytes": 71316,
+        "sha256": "9093020f885deaa71b9f1a1f47682343c17a401910c298b9f72fd661768c9edf"
+      },
+      "synthetic-source-manifest.csv": {
+        "bytes": 1606,
+        "sha256": "c3f7549f6fcc25e0bfd5f074a7f936e519a0bd7f9459452da903c653aee28384"
+      }
+    },
+    "groups": 19,
+    "margin_rows": 151715,
+    "source_manifest_sha256": "c3f7549f6fcc25e0bfd5f074a7f936e519a0bd7f9459452da903c653aee28384",
+    "synthetic_events_per_dimension": 283614
+  },
+  "source_release": "fma-dp-01-equity-v1",
+  "sql_sha256": {
+    "01-link-equity-margins-and-reconcile.sql": "c19e57f884283032f5126337b49ba52b584407cc55d307a2020c0932d6864c15",
+    "02-build-group-age-rates.sql": "431a885809a851eca4a1e56f10732a3e04322caf4599511e3974d9eee4c66330",
+    "03-standardize-and-compare-references.sql": "b2a19dbef4f3d7cb958d89e856b132b1a51486a1939103f587ab9072e0192b9e",
+    "04-audit-missingness-bias-and-suppression.sql": "fb17e1586bb21e8d1915da58d71003f994b48f14af23aa0130ce5d10e23800b4"
+  }
+}

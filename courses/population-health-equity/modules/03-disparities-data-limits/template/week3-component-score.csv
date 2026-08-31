@@ -1,0 +1,7 @@
+criterion_id,criterion,points_available,points_awarded,evidence
+R01,"Group rates support intervals and standardization",4,REPLACE,REPLACE
+R02,"Absolute relative summary and reference-sensitivity measures",4,REPLACE,REPLACE
+R03,"Missingness representation selection linkage and measurement bias",4,REPLACE,REPLACE
+R04,"Primary and complementary suppression with non-reconstruction",4,REPLACE,REPLACE
+R05,"Responsible claim reproducibility AI record and progression",4,REPLACE,REPLACE
+TOTAL,Total,20,REPLACE,REPLACE

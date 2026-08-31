@@ -1,0 +1,4 @@
+comparison,left_source,left_tracts,right_source,right_tracts,intersection,left_only,right_only,interpretation
+PLACES versus SVI,places,1597,svi,1613,1597,0,16,All PLACES diabetes tracts have SVI context; 16 SVI tracts have no PLACES diabetes row.
+PLACES versus ACS,places,1597,acs,1620,1597,0,23,All PLACES diabetes tracts have ACS B01001 denominators; 23 ACS tracts have no PLACES diabetes row.
+SVI versus ACS,svi,1613,acs,1620,1613,0,7,All SVI tracts have ACS B01001 denominators; seven ACS tract records have no SVI row.
