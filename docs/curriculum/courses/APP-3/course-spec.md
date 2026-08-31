@@ -13,7 +13,7 @@
 - R role: read, run, and interpret statistical process control and forecasting code; writing R from scratch is not graded.
 - Final deliverable: clinical performance improvement package with reproducible evidence and a defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.72.0 through Module 06.
+- Current Commons release: 0.73.0 through Checkpoint 02.
 - Specification status: construction candidate.
 
 APP-3 is where learners turn harm, delay, unreliable care, poor access, or a capacity constraint into a measurable clinical performance decision. Learners define the unit moving through a service, validate the measures that describe its performance, distinguish a signal from routine variation, locate bottlenecks, forecast demand, and test a bounded redesign before recommending action.
@@ -332,7 +332,7 @@ ML changes the recommendation only if a prespecified decision rule is met and th
 
 The Week 6 package carries the 25 Module 05 course points once. Module 06 gates are required but add no points.
 
-Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.72.0`. The release preserves all four Module 05 dispositions, specifies 12 monitoring measures and ten human-owned escalation rules, and provides a static accessible dashboard. One fixed gradient-boosted challenger is evaluated on the same 588 target shifts as the accepted transparent method. It passes seven of eight replacement rules but improves MAE by 0.731788 rather than the required 0.750000 arrivals per shift. The transparent method remains accepted, the cumulative Week 6 score remains 25 points once, and Checkpoint 2 construction is permitted without implementation authority.
+Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.72.0`; accepted by Checkpoint 02 at Commons release `0.73.0`. The release preserves all four Module 05 dispositions, specifies 12 monitoring measures and ten human-owned escalation rules, and provides a static accessible dashboard. One fixed gradient-boosted challenger is evaluated on the same 588 target shifts as the accepted transparent method. It passes seven of eight replacement rules but improves MAE by 0.731788 rather than the required 0.750000 arrivals per shift. The transparent method remains accepted, the cumulative Week 6 score remains 25 points once, and Module 07 construction is permitted with conditions without implementation authority.
 
 ## 15. Module 07 brief: Clinician leadership, recommendation, and defense
 
@@ -369,9 +369,10 @@ The checkpoint counts the 20-point Module 02 and 20-point Module 03 components o
 
 - Timing: end of instructional Week 6.
 - Course points: 25.
-- Future package path: `courses/clinical-performance-improvement/checkpoints/02-forecast-scenario-monitoring-release/`.
-- Future specification: `docs/curriculum/courses/APP-3/checkpoints/02-forecast-scenario-monitoring-release-spec.md`.
+- Package path: `courses/clinical-performance-improvement/checkpoints/02-forecast-scenario-monitoring-release/`.
+- Specification: `docs/curriculum/courses/APP-3/checkpoints/02-forecast-scenario-monitoring-release-spec.md`.
 - Decision: is the analytic case strong enough for clinician leadership review?
+- Build status: runnable release candidate at Checkpoint version `0.1.0` and Commons release `0.73.0`; Module 07 construction is permitted with conditions.
 
 Required evidence includes accepted Week 3 identity; forecast contract; temporal folds; benchmark and smoothing predictions; exact errors and cost of error; residual and failure evidence; Little's Law limit; capacity implication; scenario contract; seeds and replications; scenario validation; baseline and redesign results; sensitivity; evaluation threats; gaming and unintended effects; feasibility; access and equity; workforce burden; implementation, process, outcome, safety, and balancing measures; dashboard and exact table; escalation and fallback rules; transparent-versus-ML comparison; leakage tests; 25-point score; gates; AI record; defense; and progression decision.
 
@@ -542,5 +543,6 @@ Construction acceptance for this course-level unit:
 - [x] Module 04 freezes Checkpoint 01, compares three transparent methods on 28 rolling origins, and releases a bounded Week 53 planning range without staffing authority.
 - [x] Module 05 compares four scenarios across five conditions, preserves failed results, assigns the 25-point component once, and hands Module 06 a no-selection result without implementation authority.
 - [x] Module 06 preserves the no-selection result, releases an accessible monitoring design, evaluates one fixed ML challenger without leakage or tuning, and retains the transparent forecast after one predeclared rule fails.
+- [x] Checkpoint 02 freezes all 209 accepted Module 04 through Module 06 files, counts 25 Module 05 points once, passes 20 integrity gates, and hands Module 07 the no-selection and transparent-forecast decisions without action authority.
 
-Resume with Checkpoint 2 only: freeze the accepted Module 04 through Module 06 packages without recomputing them, count the Module 05 25-point component once, and assemble the forecast, scenario, monitoring, and ML evidence for clinician leadership review.
+Resume with Module 07 only: freeze both accepted checkpoints, preserve the no-selection and transparent-forecast decisions, and build the clinician leadership, recommendation, ownership, communication, and defense package without granting testing or implementation authority.

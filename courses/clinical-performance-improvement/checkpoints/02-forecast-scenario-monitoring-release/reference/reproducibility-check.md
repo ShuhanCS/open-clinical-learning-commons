@@ -1,0 +1,42 @@
+# Checkpoint reproducibility check
+
+- Accepted modules: `3`
+- Accepted candidate files: `209`
+- Candidate directories: `module-04, module-05, and module-06`
+- Candidate manifest rows: `209`
+- Candidate manifest bytes: `36654`
+- Candidate manifest SHA-256: `4f2a303bc5626ea58139aa935da157f524db1d25b5a158a927ef5daec197958a`
+- Nested manifests: `all row counts, bytes, and SHA-256 values match their accepted releases`
+- Point check: `Module 04 has 0 points, Module 05 has 25 once, Module 06 has 0, and the sum is 25`
+- Gate check: `18 Module 04, 20 Module 05, 22 Module 06, and 20 checkpoint gates pass`
+- Assembly: `two independent reference builds match byte for byte`
+- Learner and reference candidates: `identical`
+- Existing target: `overwrite refused`
+- Copied validator: `passes from the assembled checkpoint`
+- Candidate mutation: `rejected`
+- Nested-manifest mutation: `rejected`
+- Missing-candidate mutation: `rejected`
+- Duplicate-point mutation: `rejected`
+- Wrong-component-point mutation: `rejected`
+- Module-04-gate mutation: `rejected`
+- Module-05-gate mutation: `rejected`
+- Module-06-gate mutation: `rejected`
+- Forecast-method mutation: `rejected`
+- Forecast-row mutation: `rejected`
+- Forecast-range mutation: `rejected`
+- Forced-scenario-selection mutation: `rejected`
+- Hidden-scenario-failure mutation: `rejected`
+- Invented-safety mutation: `rejected`
+- Changed-disposition mutation: `rejected`
+- Unavailable-as-zero mutation: `rejected`
+- Dashboard-boundary mutation: `rejected`
+- ML-row mutation: `rejected`
+- Leakage-failure mutation: `rejected`
+- Moved-R01 mutation: `rejected`
+- Accepted-challenger mutation: `rejected`
+- Incomplete-defense mutation: `rejected`
+- Unauthorized-implementation mutation: `rejected`
+- Placeholder-reference mutation: `rejected`
+- Invalid-progression mutation: `rejected`
+- External Python dependencies for checkpoint assembly and validation: `none`
+- Independent reproduction: `pending before alpha`

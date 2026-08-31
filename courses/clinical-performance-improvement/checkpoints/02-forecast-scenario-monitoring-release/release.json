@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-08-30",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app3-cp02",
+    "title": "Forecast, scenario, evaluation, and monitoring release",
+    "version": "0.1.0",
+    "commons_release": "0.73.0",
+    "course": "APP-3: Data for Clinical Performance and Improvement",
+    "due_point": "end of instructional Week 6",
+    "course_points": 25,
+    "point_source": "Module 05 25 points once"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app3-04", "version": "0.1.0", "commons_release": "0.70.0", "assembled_files": 59, "manifest_rows": 46, "manifest_bytes": 5946, "manifest_sha256": "e462b470ba6aefa83c50bfdbcc21f8ca3be11dcf8e47ef9c377b820b42571f12", "points": 0},
+    {"id": "oclc-app3-05", "version": "0.1.0", "commons_release": "0.71.0", "assembled_files": 68, "manifest_rows": 53, "manifest_bytes": 6773, "manifest_sha256": "2c6cddb2d59ba3e5d3eb67023c68756f9c2cd50144ba7e699fcf1cde8bfc4104", "points": 25},
+    {"id": "oclc-app3-06", "version": "0.1.0", "commons_release": "0.72.0", "assembled_files": 82, "manifest_rows": 64, "manifest_bytes": 8672, "manifest_sha256": "7f81c00961f783c81e3f2b9d77b3a82b7e2d422860efb19e27ae55eb50b9ef85", "points": 0}
+  ],
+  "accepted_evidence": {
+    "component_files": 209,
+    "checkpoint_score": "25 of 25",
+    "module04_gates": "18 of 18 pass",
+    "module05_gates": "20 of 20 pass",
+    "module06_gates": "22 of 22 pass",
+    "checkpoint_gates": "20 of 20 pass",
+    "selected_scenario": "none",
+    "accepted_forecast": "seasonal_exponential_smoothing",
+    "ml_decision": "retain transparent forecast",
+    "failed_ml_rule": "R01: observed MAE improvement 0.731788 versus required 0.750000"
+  },
+  "package": {
+    "candidate_manifest_rows": 209,
+    "candidate_manifest_bytes": 36654,
+    "candidate_manifest_sha256": "4f2a303bc5626ea58139aa935da157f524db1d25b5a158a927ef5daec197958a",
+    "checkpoint_editable_records": 9,
+    "defense_questions": 14,
+    "assembled_files": 226,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module07_permission": "permitted for clinician leadership, recommendation, and defense",
+    "clinical_action": "prohibited",
+    "staffing_change": "prohibited",
+    "automated_action": "prohibited",
+    "testing": "prohibited",
+    "implementation": "prohibited",
+    "production_scoring": "prohibited",
+    "model_deployment": "prohibited"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "copied_validator": "pass",
+    "complete_reference_checks": 1102,
+    "starter_checks": 1061,
+    "two_assemblies_match": "pass",
+    "existing_target_rejection": "pass",
+    "failure_routes_rejected": 25
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, cumulative assembly, defense contract, validation, and release record"}
+  ],
+  "known_issues": [
+    "The official APP-3 section and half-term dates remain to be assigned from the published academic calendar.",
+    "Joe Joseph, MD, participation, schedule, session format, recording permission, and final biography wording require direct confirmation before alpha.",
+    "Named faculty, clinical, safety, operations, workforce, equity, accessibility, forecasting, ML, responsible-AI, and independent reproduction reviews remain pending before alpha.",
+    "The Module 03 and Module 04 base-R checks remain pending in an environment with R installed.",
+    "The point score cannot compensate for a failed inherited or checkpoint gate.",
+    "No package authorizes a clinical action, staffing change, automated action, test, implementation, production scoring, or model deployment."
+  ]
+}

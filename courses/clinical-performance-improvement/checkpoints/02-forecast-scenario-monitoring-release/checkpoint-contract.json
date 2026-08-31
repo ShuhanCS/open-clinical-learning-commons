@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_id": "oclc-app3-cp02",
+  "version": "0.1.0",
+  "commons_release": "0.73.0",
+  "course": "APP-3: Data for Clinical Performance and Improvement",
+  "due_point": "end of instructional Week 6",
+  "course_points": 25,
+  "point_source": "oclc-app3-05 25 points once; oclc-app3-04 and oclc-app3-06 are zero-point gates",
+  "accepted_component_files": 209,
+  "accepted_modules": [
+    {"id": "oclc-app3-04", "version": "0.1.0", "commons_release": "0.70.0", "assembled_files": 59, "manifest_rows": 46, "manifest_bytes": 5946, "manifest_sha256": "e462b470ba6aefa83c50bfdbcc21f8ca3be11dcf8e47ef9c377b820b42571f12", "points": 0},
+    {"id": "oclc-app3-05", "version": "0.1.0", "commons_release": "0.71.0", "assembled_files": 68, "manifest_rows": 53, "manifest_bytes": 6773, "manifest_sha256": "2c6cddb2d59ba3e5d3eb67023c68756f9c2cd50144ba7e699fcf1cde8bfc4104", "points": 25},
+    {"id": "oclc-app3-06", "version": "0.1.0", "commons_release": "0.72.0", "assembled_files": 82, "manifest_rows": 64, "manifest_bytes": 8672, "manifest_sha256": "7f81c00961f783c81e3f2b9d77b3a82b7e2d422860efb19e27ae55eb50b9ef85", "points": 0}
+  ],
+  "required_gates": {
+    "module04_forecast": 18,
+    "module05_scenario_evaluation": 20,
+    "module06_feasibility_monitoring_ml": 22,
+    "checkpoint_integrity": 20
+  },
+  "accepted_decisions": {
+    "scenario": "none qualifies",
+    "scenario_dispositions": {"S00": "retain", "S01": "revise", "S02": "stop", "S03": "revise"},
+    "forecast": "seasonal_exponential_smoothing",
+    "ml": "retain transparent forecast",
+    "progression": "continue with conditions"
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "continue_permission": "permitted for clinician leadership and defense",
+    "next_module": "oclc-app3-07"
+  },
+  "boundaries": {
+    "clinical_action": "prohibited",
+    "staffing_change": "prohibited",
+    "automated_action": "prohibited",
+    "testing": "prohibited",
+    "implementation": "prohibited",
+    "model_deployment": "prohibited"
+  }
+}

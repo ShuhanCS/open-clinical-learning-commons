@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.72.0
+- Current release: 0.73.0
 - Last updated: 2026-08-30
 - Active phase: applied-course build
-- Last completed unit: APP-3 Module 06, feasibility, monitoring, and embedded machine learning
-- Next unit: APP-3 Checkpoint 02, forecast, scenario, evaluation, and monitoring release
+- Last completed unit: APP-3 Checkpoint 02, forecast, scenario, evaluation, and monitoring release
+- Next unit: APP-3 Module 07, clinician leadership, recommendation, and defense
 
 ## Confirmed decisions
 
@@ -531,7 +531,15 @@
 - The learner workspace has 63 files and 45 immutable manifest rows. The reference has 82 files and 64 immutable manifest rows. Complete validation passes 354 checks and starter validation passes 183 structural checks.
 - Upstream, evidence, workspace, and validator self-checks pass. Nineteen deterministic outputs reproduce byte for byte, and 18 mutation or incomplete-workspace routes are rejected.
 - The Week 6 score remains 25 of 25 counted once from Module 05. Module 06 adds zero points and passes all 22 gates. Progression is `continue with conditions`, permitting Checkpoint 02 assembly with no clinical, staffing, testing, implementation, or deployment authority.
-- APP-3 Module 06 is a runnable release candidate at Commons 0.72.0. Checkpoint 02 is next.
+- APP-3 Module 06 is a runnable release candidate at Commons 0.72.0. Checkpoint 02 follows as the cumulative Week 6 release.
+- APP-3 Checkpoint 02 version 0.1.0 freezes 59 Module 04 files, 68 Module 05 files, and 82 Module 06 files without recomputing accepted evidence.
+- Its 209-row candidate manifest is 36,654 bytes with SHA-256 `4f2a303bc5626ea58139aa935da157f524db1d25b5a158a927ef5daec197958a`. Nine checkpoint records and seven controls create a 226-file learner or reference package.
+- Module 04 contributes zero points, Module 05 contributes 25 points once, and Module 06 contributes zero points. All 18 Module 04, 20 Module 05, 22 Module 06, and 20 checkpoint gates remain required.
+- The checkpoint retains seasonal exponential smoothing, the 876.924084 Week 53 point, the 805.136639 to 970.733035 range, no selected scenario, all four feasibility dispositions, 12 measures, three unavailable values, ten human-owned escalation rules, and zero automatic actions.
+- The ML challenger remains rejected because its 0.731788-arrival MAE improvement misses the required 0.750000 rule. Seven other rules passing does not change the `retain transparent forecast` decision.
+- Reference validation passes 1,102 checks and learner validation passes 1,061 checks. Two-build equality, copied validation, existing-target refusal, and 25 mutation or incomplete-package routes pass.
+- Progression is `continue with conditions`, permitting Module 07 clinician leadership, recommendation, and defense. Clinical, staffing, automated, testing, implementation, production-scoring, and deployment authority remain prohibited.
+- APP-3 Checkpoint 02 is a runnable release candidate at Commons 0.73.0. Module 07 is next.
 
 ## Pending confirmation
 
@@ -547,10 +555,10 @@
 
 ## Next resume instructions
 
-1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoint 01, Modules 04 through 06, the curriculum catalog, and this ledger.
-2. Write the durable APP-3 Checkpoint 02 specification before assembling its package.
-3. Freeze the accepted Module 04, Module 05, and Module 06 reference workspaces without editing or recomputing evidence.
-4. Preserve the transparent forecast, empirical range, difficult folds, no-selection scenario result, six failed comparisons, 12 measures, ten escalation rules, failed ML replacement rule, exact 25-point score, and all authority boundaries.
-5. Assemble one candidate manifest, evidence index, defense, score, gates, AI record, progression decision, and exact Module 07 handoff.
-6. Prove that the Module 05 points are counted once, Module 04 and Module 06 add zero points, every upstream gate remains required, and no option or challenger is silently accepted.
-7. Advance semver, update this ledger, commit, and push before starting Module 07.
+1. Read the master architecture, APP-3 course specification, source record, accepted Checkpoints 01 and 02, the curriculum catalog, and this ledger.
+2. Write the durable APP-3 Module 07 specification before assembling its package.
+3. Freeze both accepted checkpoint releases without editing or recomputing evidence.
+4. Preserve the no-selection result, all four scenario dispositions, monitoring and escalation ownership, failed ML replacement rule, exact 40, 25, and future 35-point accounting, and all authority boundaries.
+5. Build the clinician leadership synthesis, frontline brief, recommendation, alternatives, ownership, disagreement, stewardship, AI, reproducibility, and defense records.
+6. Confirm Joe Joseph, MD, participation details remain pending before alpha and make no current-employer or current-title claim.
+7. Advance semver, update this ledger, commit, and push before building the final checkpoint.

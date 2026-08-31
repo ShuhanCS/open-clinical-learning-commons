@@ -1,0 +1,21 @@
+gate_id,gate,status,evidence,owner
+G01,All 209 accepted candidate files and fingerprints match,pass,candidate-manifest.csv,reproducibility owner
+G02,Module 04 release 18 gates and zero points remain exact,pass,evidence-index.csv and candidate module-04,forecast reviewer
+G03,Module 05 release 20 gates and 25 points remain exact,pass,evidence-index.csv and candidate module-05,assessment owner
+G04,Module 06 release 22 gates and zero points remain exact,pass,evidence-index.csv and candidate module-06,monitoring reviewer
+G05,The cumulative score is 25 points counted once,pass,evidence-index.csv and accepted week6-score.csv,assessment owner
+G06,Forecast target cutoff folds horizon and 588 rows remain exact,pass,candidate module-04 forecast records,forecast reviewer
+G07,Seasonal exponential smoothing and accepted errors remain exact,pass,candidate module-04 error-summary.csv,forecast reviewer
+G08,Week 53 range Little's Law and staffing limits remain exact,pass,candidate module-04 capacity records,operations reviewer
+G09,No scenario is selected,pass,candidate module-05 scenario-findings.json,evaluation reviewer
+G10,All failed and stress scenario evidence remains visible,pass,candidate module-05 sensitivity-review.csv,evaluation reviewer
+G11,Safety return causal workforce and implementation limits remain visible,pass,candidate module-05 review records,clinical and workforce reviewers
+G12,All four feasibility dispositions remain exact,pass,candidate module-06 decision-change.csv,feasibility reviewer
+G13,All 12 monitoring measures and three unavailable states remain exact,pass,candidate module-06 monitoring-measures.csv,measurement steward
+G14,The dashboard remains static accessible bounded and complete,pass,candidate module-06 monitoring-dashboard.html,accessibility reviewer
+G15,Ten escalation rules remain human-owned with zero automatic actions,pass,candidate module-06 escalation-fallback.csv,clinical performance council
+G16,The fixed challenger 588 rows and 12 leakage checks remain exact,pass,candidate module-06 ML records,ML reviewer
+G17,R01 remains failed and the transparent method remains accepted,pass,candidate module-06 decision-change.csv,ML reviewer
+G18,Difficult periods failure cases and the noncausal feature limit remain visible,pass,candidate failure reviews,forecast and ML reviewers
+G19,Defense AI reproduction and ownership records are complete,pass,checkpoint work records,faculty owner
+G20,Progression and Module 07 handoff preserve all authority limits,pass,progression-decision.md and module07-handoff.md,checkpoint owner

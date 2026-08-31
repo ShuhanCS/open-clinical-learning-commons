@@ -1,0 +1,21 @@
+gate_id,gate,status,evidence,owner
+G01,Exact 209-file candidate identity,REPLACE,REPLACE,REPLACE
+G02,Module 04 release gates and points,REPLACE,REPLACE,REPLACE
+G03,Module 05 release gates and points,REPLACE,REPLACE,REPLACE
+G04,Module 06 release gates and points,REPLACE,REPLACE,REPLACE
+G05,Points counted once,REPLACE,REPLACE,REPLACE
+G06,Forecast target cutoff folds horizon and rows,REPLACE,REPLACE,REPLACE
+G07,Accepted transparent method and errors,REPLACE,REPLACE,REPLACE
+G08,Week 53 range and capacity limits,REPLACE,REPLACE,REPLACE
+G09,No-selection scenario result,REPLACE,REPLACE,REPLACE
+G10,Failed scenario evidence,REPLACE,REPLACE,REPLACE
+G11,Safety return causal workforce and implementation limits,REPLACE,REPLACE,REPLACE
+G12,Four feasibility dispositions,REPLACE,REPLACE,REPLACE
+G13,Measures and unavailable states,REPLACE,REPLACE,REPLACE
+G14,Accessible bounded static dashboard,REPLACE,REPLACE,REPLACE
+G15,Human-owned escalation and fallback rules,REPLACE,REPLACE,REPLACE
+G16,Comparable fixed ML and leakage checks,REPLACE,REPLACE,REPLACE
+G17,Failed R01 and retained transparent method,REPLACE,REPLACE,REPLACE
+G18,Difficult periods failures and noncausal feature limit,REPLACE,REPLACE,REPLACE
+G19,Complete defense AI reproduction and ownership,REPLACE,REPLACE,REPLACE
+G20,Bounded progression and Module 07 handoff,REPLACE,REPLACE,REPLACE

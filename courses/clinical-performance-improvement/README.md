@@ -4,8 +4,8 @@
 - Credits: 3.
 - Prerequisites: FND-1 and FND-2.
 - Total learner work: 112.5 hours.
-- Current Commons release: 0.72.0.
-- Current build: course specification, source architecture, Modules 01 through 06, and Checkpoint 01 complete; the Week 6 checkpoint, Module 07, and final checkpoint are not yet built.
+- Current Commons release: 0.73.0.
+- Current build: course specification, source architecture, Modules 01 through 06, and Checkpoints 01 and 02 complete; Module 07 and the final checkpoint are not yet built.
 
 APP-3 teaches learners to define and validate clinical performance measures, distinguish process signals from routine variation, diagnose bottlenecks, forecast demand, test capacity and workflow scenarios, and defend a monitored improvement recommendation.
 
@@ -27,7 +27,7 @@ The continuing case is an explicitly fictional adult emergency service, `CGH-ED-
 ## Checkpoints
 
 - Week 3: [40-point measures, variation, safety, and bottleneck readiness package](checkpoints/01-measures-variation-readiness/reference/README.md).
-- Week 6: 25-point forecast, scenario, evaluation, and monitoring package.
+- Week 6: [25-point forecast, scenario, evaluation, and monitoring package](checkpoints/02-forecast-scenario-monitoring-release/reference/README.md).
 - Official half-term end date: 35-point clinical performance improvement package.
 
 The Week 3 checkpoint combines the source course's 20-point measure build and 20-point performance diagnostic. The Week 6 checkpoint carries the source course's 25-point forecast, scenario, and evaluation assessment. Module 06 adds required feasibility, monitoring, and simple-versus-ML gates without adding course points.
@@ -54,5 +54,7 @@ The fourth runnable package is [Module 04](modules/04-demand-forecasting-capacit
 The fifth runnable package is [Module 05](modules/05-improvement-scenarios-evaluation/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/05-improvement-scenarios-evaluation-spec.md). It runs 4,000 paired scenario simulations across five conditions, retains six null or failed comparisons, defines 12 prospective measures and eight evaluation threats, awards the 25-point component once, and passes 20 gates. No option clears the predeclared decision rule, so Module 06 receives a bounded no-selection result without implementation authority.
 
 The sixth runnable package is [Module 06](modules/06-feasibility-monitoring-embedded-ml/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/modules/06-feasibility-monitoring-embedded-ml-spec.md). It screens 28 scenario-domain feasibility combinations, specifies 12 owned monitoring measures and ten human escalation rules, releases a static accessible dashboard, and compares one fixed gradient-boosted challenger with the transparent forecast on the same 588 shifts. The challenger passes seven of eight replacement rules but misses the required MAE improvement by 0.018212 arrivals per shift, so the transparent forecast remains accepted. Module 06 passes 22 gates and carries the 25-point Week 6 score once without authorizing implementation.
+
+The cumulative [Week 6 checkpoint](checkpoints/02-forecast-scenario-monitoring-release/reference/README.md), governed by its [durable specification](../../docs/curriculum/courses/APP-3/checkpoints/02-forecast-scenario-monitoring-release-spec.md), freezes 59 Module 04 files, 68 Module 05 files, and 82 Module 06 files in one 226-file release. Its 209-row candidate manifest is exact, the Module 05 score is counted once, all 80 gates pass, and the 14-question defense permits Module 07 with conditions while preserving every action boundary.
 
 No package authorizes clinical implementation, current hospital performance judgment, patient or workforce targeting, staffing change, or model deployment.
