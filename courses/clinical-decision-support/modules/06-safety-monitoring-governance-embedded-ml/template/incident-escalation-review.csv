@@ -1,0 +1,2 @@
+rule_id,trigger_review,owner_review,escalation_review,fallback_review,automatic_action,status
+REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,incomplete

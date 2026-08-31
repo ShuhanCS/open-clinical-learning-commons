@@ -1,0 +1,23 @@
+check_id,check,status,noncompensable_reason
+I01,22 hazards are present,pass,a failed invariant blocks release
+I02,all 17 Module 05 failure modes are preserved,pass,a failed invariant blocks release
+I03,"every hazard has stop, restart, and retirement rules",pass,a failed invariant blocks release
+I04,20 monitoring measures are present,pass,a failed invariant blocks release
+I05,"every measure has cadence, owner, origin, unavailable state, and human action",pass,a failed invariant blocks release
+I06,monitoring has no automatic action,pass,a failed invariant blocks release
+I07,eight seeded monitoring scenarios are present,pass,a failed invariant blocks release
+I08,12 human escalation rules are present,pass,a failed invariant blocks release
+I09,"7,544 common prediction rows are present",pass,a failed invariant blocks release
+I10,"development contains 3,652 rows",pass,a failed invariant blocks release
+I11,"holdout contains 1,806 rows",pass,a failed invariant blocks release
+I12,"stress contains 2,086 rows",pass,a failed invariant blocks release
+I13,both models have all three performance rows,pass,a failed invariant blocks release
+I14,all six thresholds remain candidates for both models and all partitions,pass,a failed invariant blocks release
+I15,64 subgroup-model rows preserve the evaluation support audit,pass,a failed invariant blocks release
+I16,all 12 leakage tests pass,pass,a failed invariant blocks release
+I17,all 11 replacement rules are applied,pass,a failed invariant blocks release
+I18,the challenger fails at least one replacement rule,pass,a failed invariant blocks release
+I19,the transparent model is retained,pass,a failed invariant blocks release
+I20,0.03000000 remains unaccepted,pass,a failed invariant blocks release
+I21,only public or synthetic teaching evidence is used,pass,a failed invariant blocks release
+I22,"real-patient scoring, clinical action, implementation, and deployment remain prohibited",pass,a failed invariant blocks release

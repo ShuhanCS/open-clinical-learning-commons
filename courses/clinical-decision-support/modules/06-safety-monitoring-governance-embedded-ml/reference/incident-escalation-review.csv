@@ -1,0 +1,13 @@
+rule_id,trigger_review,owner_review,escalation_review,fallback_review,automatic_action,status
+E01,trigger exact,data steward confirmed,clinical informatics route confirmed,visible unavailable state confirmed,none,pass
+E02,trigger exact,service owner confirmed,governance route confirmed,visible delayed state confirmed,none,pass
+E03,trigger exact,service owner confirmed,patient-safety route confirmed,visible error state confirmed,none,pass
+E04,trigger exact,patient-safety owner confirmed,governance route confirmed,affected evaluation stops,none,pass
+E05,trigger exact,evaluation steward confirmed,governance route confirmed,performance reported unavailable,none,pass
+E06,trigger exact,model steward confirmed,governance route confirmed,calibration claims pause,none,pass
+E07,trigger exact,model steward confirmed,governance route confirmed,transparent reference retained,none,pass
+E08,trigger exact,equity steward confirmed,governance route confirmed,unsupported result suppressed,none,pass
+E09,trigger exact,model steward confirmed,governance route confirmed,mismatch rejected visibly,none,pass
+E10,trigger exact,patient-safety owner confirmed,governance route confirmed,affected release stops,none,pass
+E11,trigger exact,clinical owner confirmed,governance route confirmed,response reported unavailable,none,pass
+E12,trigger exact,named control owner confirmed,governance route confirmed,affected output blocked,none,pass

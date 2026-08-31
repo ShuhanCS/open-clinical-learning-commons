@@ -1,0 +1,13 @@
+rule_id,fallback,stop_condition,restart_evidence,retirement_condition,decision_owner,status
+E01,show unavailable,input source cannot be bounded,corrected source and passing repeat fixture,source cannot be restored,data steward,pass
+E02,show delayed state,latency control cannot be bounded,latency evidence and passing repeat fixture,budget cannot be supported,service owner,pass
+E03,show visible error,error source cannot be explained,corrected service and reconciled trace,repeated unresolved error,patient-safety owner,pass
+E04,stop affected evaluation,one reconciled silent failure,all four ledgers reconcile and governance approves,recurrent unresolved silence,governance council,pass
+E05,report performance unavailable,outcome completeness cannot be bounded,restored follow-up source and documented denominator,follow-up cannot support evaluation,evaluation steward,pass
+E06,pause calibration claims,calibration trigger is met,reviewed source and passing recalculation,calibration cannot be restored,model steward,pass
+E07,retain transparent reference,discrimination or drift rule fails,new frozen evidence and all replacement rules,challenger cannot meet replacement contract,governance council,pass
+E08,suppress unsupported result,support or subgroup rule fails,restored support and repeated governed audit,group evidence remains unsupported,equity steward,pass
+E09,reject visibly,version mismatch occurs,accepted version and passing repeat fixture,version control cannot be restored,model steward,pass
+E10,stop affected release,severe or repeated incident rule is met,closed incident and governance approval,unsafe pattern remains unresolved,governance council,pass
+E11,report response unavailable,override ledger is unavailable,restored ledger and reconciliation,human response cannot be observed,clinical owner,pass
+E12,block affected output,accessibility duplicate or semantic control fails,passing control fixture and owner sign-off,required control cannot be restored,governance council,pass

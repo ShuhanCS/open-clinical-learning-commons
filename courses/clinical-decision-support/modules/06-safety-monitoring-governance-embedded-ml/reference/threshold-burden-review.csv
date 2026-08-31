@@ -1,0 +1,13 @@
+partition,threshold,threshold_role,burden_review,missed_case_review,decision,status
+temporal_holdout,0.02000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+temporal_holdout,0.03000000,unaccepted sandbox fixture,challenger flag difference within 0.100,challenger missed cases lower in this historical comparison,not selected or accepted,pass
+temporal_holdout,0.04000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+temporal_holdout,0.05000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+temporal_holdout,0.07500000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+temporal_holdout,0.10000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+transport_stress,0.02000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+transport_stress,0.03000000,unaccepted sandbox fixture,challenger flag difference within 0.100,challenger missed cases lower in this historical comparison,not selected or accepted,pass
+transport_stress,0.04000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+transport_stress,0.05000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+transport_stress,0.07500000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass
+transport_stress,0.10000000,evidence candidate only,challenger flag difference within 0.100,missed-case increase within 2 per 1000,not selected or accepted,pass

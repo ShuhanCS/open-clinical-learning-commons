@@ -1,0 +1,7 @@
+name: oclc-app4-module06
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy=2.0.2
+  - scikit-learn=1.9.0

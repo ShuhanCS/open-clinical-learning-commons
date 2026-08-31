@@ -1,0 +1,108 @@
+{
+  "authority": {
+    "clinical_action": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "deployment": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "real_patient_scoring": "prohibited",
+    "silent_mode_evaluation": "prohibited"
+  },
+  "challenger": {
+    "decision": "retain transparent model",
+    "model": "fixed_gradient_boosted",
+    "prediction_rows": 7544,
+    "random_state": 7400600,
+    "replacement_rules": 11,
+    "replacement_rules_passed": 8,
+    "search_or_tuning": "none"
+  },
+  "design": {
+    "accepted_threshold": null,
+    "id": "panel-t003",
+    "threshold": "0.03000000"
+  },
+  "generator": "APP-4 Module 06 deterministic builder 0.1.0",
+  "output_manifest": [
+    {
+      "bytes": 4276,
+      "relative_path": "escalation-rules.csv",
+      "sha256": "f21bf3d36d8a2b84a66d93a06305fe97c5a1438f590f97f268147a0461518850"
+    },
+    {
+      "bytes": 386,
+      "relative_path": "feature-importance.csv",
+      "sha256": "4ab11752e08946e57a2f4e862b734414a97389f2aadbef6e73787274d36b2178"
+    },
+    {
+      "bytes": 13077,
+      "relative_path": "hazard-register.csv",
+      "sha256": "aaf9a0b66d81bc59c6059bf4bac69b185a64906e4962de3f5279a05c088ef74c"
+    },
+    {
+      "bytes": 1979,
+      "relative_path": "invariant-checks.csv",
+      "sha256": "5090a9b0869a5090c98c38592c3a68f9888a103bad1d0fbb5e158a2d6e5ba771"
+    },
+    {
+      "bytes": 1427,
+      "relative_path": "leakage-tests.csv",
+      "sha256": "4dd72045f31d6957dc64f2dd9650014f2f1e6d01c12304d68e661cb0ebd3cf75"
+    },
+    {
+      "bytes": 1733,
+      "relative_path": "model-performance.csv",
+      "sha256": "48efc4f7991aaf1d788f77f3fb6efbc20500526364e66c06fbbd9fa88a641bb6"
+    },
+    {
+      "bytes": 141566,
+      "relative_path": "model-predictions.csv.gz",
+      "sha256": "b2e3b7f109f7b00b09ecee580480aa1b1a4d74ff207fa7210be9864df6a814ac"
+    },
+    {
+      "bytes": 10220,
+      "relative_path": "monitoring-measures.csv",
+      "sha256": "e69be19c1b8428fc0809ebd14d69a3ab2b79e85bdab7b27cac385dc79e26d8ec"
+    },
+    {
+      "bytes": 1364,
+      "relative_path": "monitoring-scenarios.csv",
+      "sha256": "1f9a5da77b1c16fa40d180ae379b0b06c47e07bfc4843cc18e5d4154632f7159"
+    },
+    {
+      "bytes": 1960,
+      "relative_path": "replacement-rules.csv",
+      "sha256": "b6e0098b94ed846441aaa6101acc367a78ce23dbc1a97c15388d9f616fdf8be2"
+    },
+    {
+      "bytes": 14967,
+      "relative_path": "subgroup-comparison.csv",
+      "sha256": "f7e2a60195df1d930893fd97a5b2cee11ed8c9080aefafc76d18e1f731f75ff5"
+    },
+    {
+      "bytes": 8002,
+      "relative_path": "threshold-comparison.csv",
+      "sha256": "ede101935b87f2a4576e30a43dece3f394c302382196e9016a2ed1b20b9d24b3"
+    }
+  ],
+  "release_id": "APP4-M06-SAFETY-ML-2026-08-31-v1",
+  "safety": {
+    "escalation_rules": 12,
+    "hazards": 22,
+    "monitoring_measures": 20,
+    "monitoring_scenarios": 8
+  },
+  "schema_version": "1.0.0",
+  "score": {
+    "module04_points_carried_once": "25.00",
+    "module06_points": "0.00"
+  },
+  "status": "historical public and synthetic teaching evidence only",
+  "upstream": {
+    "module03_rows": 7544,
+    "module05": "oclc-app4-05@0.1.0",
+    "module05_manifest_rows": 324,
+    "module05_manifest_sha256": "6bc3e7c0040b8ae93d273d1464459ae8d500913e0e8a423ca1e5b120256c8baf",
+    "module05_reference_files": 341
+  }
+}

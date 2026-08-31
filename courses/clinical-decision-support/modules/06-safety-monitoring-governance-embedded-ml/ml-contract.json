@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "contract_status": "fixed before evaluation",
+  "source_release": "APP4-M03-NHANES-EVIDENCE-2026-08-31-v1",
+  "target": "LBXGH at or above 6.5 percent; observed laboratory result, not diagnosis",
+  "predictors": [
+    "age_centered_per_10",
+    "bmi_centered_per_5",
+    "female_indicator"
+  ],
+  "development_cycles": ["2013-2014", "2015-2016"],
+  "temporal_holdout_cycle": "2017-2018",
+  "transport_stress_cycle": "2021-2023",
+  "weight": "analytic_weight",
+  "transparent_model": "survey-weighted binomial GLM with logit link",
+  "challenger": {
+    "class": "sklearn.ensemble.GradientBoostingClassifier",
+    "n_estimators": 80,
+    "learning_rate": 0.05,
+    "max_depth": 2,
+    "min_samples_leaf": 50,
+    "subsample": 1.0,
+    "random_state": 7400600,
+    "search_or_tuning": "none"
+  },
+  "candidate_thresholds": [0.02, 0.03, 0.04, 0.05, 0.075, 0.10],
+  "threshold_status": "evidence candidates only; none selected or accepted",
+  "missing_input_rule": "do not score; show unavailable state and refer to the data owner",
+  "decision_logic": "retain the transparent model unless every replacement rule passes",
+  "prohibited": [
+    "holdout-guided tuning",
+    "threshold selection or acceptance",
+    "changed intended use",
+    "real-patient scoring",
+    "clinical alerting or action",
+    "silent-mode evaluation",
+    "implementation",
+    "production connection",
+    "deployment"
+  ]
+}

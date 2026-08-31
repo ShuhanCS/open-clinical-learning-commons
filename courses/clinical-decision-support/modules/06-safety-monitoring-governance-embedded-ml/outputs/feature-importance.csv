@@ -1,0 +1,4 @@
+predictor,importance,interpretation
+age_centered_per_10,0.08217949,"global impurity importance; not direction, causality, or a patient-level explanation"
+bmi_centered_per_5,0.87087751,"global impurity importance; not direction, causality, or a patient-level explanation"
+female_indicator,0.04694300,"global impurity importance; not direction, causality, or a patient-level explanation"

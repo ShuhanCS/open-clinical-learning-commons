@@ -1,0 +1,23 @@
+gate_id,domain,status,evidence,noncompensable_reason
+G01,Module 05 release identity,pass,release-manifest.csv; upstream/module05/release-manifest.csv,accepted sandbox evidence cannot change
+G02,nested Module 04 and Week 3 chain,pass,upstream/module05/upstream/module04/release-manifest.csv,all nested immutable evidence must remain exact
+G03,complete sandbox failures,pass,upstream/module05/failure-mode-register.csv; outputs/hazard-register.csv,all 17 seeded failures must remain visible
+G04,silent-failure preservation,pass,upstream/module05/silent-failure-review.md; silent-failure-monitoring.md,the four-ledger finding cannot be replaced with a service log
+G05,accessibility defect preservation,pass,upstream/module05/accessibility-review.csv; outputs/hazard-register.csv,the malformed card must remain blocked
+G06,complete hazard register,pass,hazard-review.csv; outputs/hazard-register.csv,all hazards require controls and owners
+G07,hazard life cycle,pass,safety-case.md; fallback-stop-restart-retirement.csv,stop restart and retirement cannot be omitted
+G08,complete monitoring scope,pass,monitoring-plan.csv; outputs/monitoring-measures.csv,all 20 measures are required
+G09,measure accountability,pass,monitoring-plan.csv,every measure needs cadence owner origin unavailable state and human action
+G10,human escalation only,pass,incident-escalation-review.csv; outputs/escalation-rules.csv,no automatic clinical action is allowed
+G11,incident fallback and stop,pass,fallback-stop-restart-retirement.csv,unsafe or unavailable states must have a bounded fallback
+G12,governance ownership,pass,governance-accountability.csv,decision rights and escalation must be explicit
+G13,frozen ML contract,pass,ml-contract.json; ml-contract-review.md,holdout results cannot change model settings
+G14,common evidence and rows,pass,outputs/leakage-tests.csv,the challenger must use the same evidence target predictors weights and rows
+G15,temporal separation and no tuning,pass,outputs/leakage-tests.csv; leakage-interpretability-review.md,leakage invalidates the comparison
+G16,calibration and discrimination review,pass,outputs/model-performance.csv; model-comparison.md,all predeclared performance rules must be applied
+G17,threshold burden and missed cases,pass,threshold-burden-review.csv; outputs/threshold-comparison.csv,no candidate threshold may become accepted
+G18,subgroup support and drift,pass,subgroup-drift-review.csv; outputs/subgroup-comparison.csv,unsupported or degraded results cannot be hidden
+G19,all-rules replacement decision,pass,outputs/replacement-rules.csv; model-comparison.md,better average performance alone cannot replace the transparent model
+G20,reproduction and AI accountability,pass,reproducibility-check.md; ai-use.md,generated evidence and agent use require human verification
+G21,score carryforward,pass,checkpoint-score-carryforward.csv,Module 04 points count once and Module 06 adds none
+G22,progression and authority,pass,progression-checkpoint02-handoff.md,checkpoint permission cannot grant clinical or deployment authority

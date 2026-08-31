@@ -1,0 +1,21 @@
+measure_id,source_review,cadence_review,owner_review,threshold_origin_review,unavailable_state_review,human_action_review,status
+M01,declared source complete,weekly confirmed,clinical owner confirmed,Module 04 baseline preserved,unavailable state explicit,human verification and escalation explicit,pass
+M02,declared source complete,daily confirmed,data steward confirmed,Module 05 failures preserved,unavailable state explicit,human verification and escalation explicit,pass
+M03,declared source complete,weekly confirmed,clinical informatics owner confirmed,Module 04 burden review preserved,unavailable state explicit,human verification and escalation explicit,pass
+M04,declared source complete,weekly confirmed,clinical owner confirmed,Module 05 suppression fixtures preserved,unavailable state explicit,human verification and escalation explicit,pass
+M05,declared source complete,weekly confirmed,workflow owner confirmed,Module 04 alert budget preserved,unavailable state explicit,human verification and escalation explicit,pass
+M06,prospective source declared,weekly confirmed,clinical owner confirmed,prospective rule identified,unavailable state explicit,human verification and escalation explicit,pass
+M07,declared source complete,daily confirmed,service owner confirmed,Module 05 teaching budget preserved,unavailable state explicit,human verification and escalation explicit,pass
+M08,declared source complete,daily confirmed,service owner confirmed,Module 05 failure matrix preserved,unavailable state explicit,human verification and escalation explicit,pass
+M09,four independent ledgers required,daily confirmed,patient-safety owner confirmed,Module 05 seeded failure preserved,unavailable state explicit,immediate human escalation explicit,pass
+M10,prospective source declared,monthly confirmed,evaluation steward confirmed,prospective rule identified,unavailable state explicit,human verification and escalation explicit,pass
+M11,declared source complete,monthly confirmed,model steward confirmed,Module 06 replacement rule preserved,unavailable state explicit,human verification and escalation explicit,pass
+M12,declared source complete,monthly confirmed,model steward confirmed,Module 03 validation preserved,unavailable state explicit,human verification and escalation explicit,pass
+M13,declared source complete,monthly confirmed,model steward confirmed,Module 03 transport audit preserved,unavailable state explicit,human verification and escalation explicit,pass
+M14,declared source complete,monthly confirmed,equity steward confirmed,Module 03 support audit preserved,unavailable state explicit,human verification and escalation explicit,pass
+M15,declared source complete,daily confirmed,model steward confirmed,Module 05 version fixture preserved,unavailable state explicit,human verification and escalation explicit,pass
+M16,prospective source declared,weekly confirmed,patient-safety owner confirmed,prospective rule identified,unavailable state explicit,human verification and escalation explicit,pass
+M17,prospective source declared,weekly confirmed,clinical owner confirmed,prospective rule identified,unavailable state explicit,human verification and escalation explicit,pass
+M18,declared source complete,each release confirmed,accessibility owner confirmed,Module 05 blocked defect preserved,unavailable state explicit,human verification and release block explicit,pass
+M19,declared source complete,daily confirmed,clinical informatics owner confirmed,Module 05 duplicate fixture preserved,unavailable state explicit,human verification and escalation explicit,pass
+M20,declared source complete,daily confirmed,terminology steward confirmed,Module 05 semantic fixtures preserved,unavailable state explicit,human verification and escalation explicit,pass

@@ -1,0 +1,12 @@
+rule_id,domain,status,observed,decision_effect
+R01,"same evidence, target, predictors, cutoffs, weights, and evaluation rows",pass,12 source and split checks reviewed,required for replacement; one failure retains the transparent model
+R02,fixed model with no holdout-guided tuning,pass,one fixed GradientBoostingClassifier fit,required for replacement; one failure retains the transparent model
+R03,temporal-holdout ROC AUC is not lower,fail,difference -0.00743486,required for replacement; one failure retains the transparent model
+R04,transport-stress ROC AUC is no more than 0.010 lower,fail,difference -0.01928938,required for replacement; one failure retains the transparent model
+R05,Brier score is not worse on either evaluation set,pass,holdout -0.00021620; stress -0.00033886,required for replacement; one failure retains the transparent model
+R06,absolute calibration error is at most 0.005 on holdout and 0.010 on stress,pass,holdout 0.00075165; stress 0.00304604,required for replacement; one failure retains the transparent model
+R07,candidate burden differs by at most 0.100 and missed cases rise by at most 2 per 1000,pass,max flag difference 0.09474026; max missed increase 1.93231763,required for replacement; one failure retains the transparent model
+R08,supported subgroup ROC AUC degradation is at most 0.050,fail,maximum degradation 0.10385240,required for replacement; one failure retains the transparent model
+R09,all leakage and reproducibility checks pass,pass,12 of 12 pass,required for replacement; one failure retains the transparent model
+R10,global importance is complete and normalized,pass,three prespecified predictors sum to 1.00000000,required for replacement; one failure retains the transparent model
+R11,"intended use, threshold role, workflow, and authority remain unchanged",pass,no threshold selected and all clinical and production routes prohibited,required for replacement; one failure retains the transparent model

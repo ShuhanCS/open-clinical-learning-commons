@@ -1,0 +1,5 @@
+review_id,partition_or_scope,evidence,support_boundary,decision,status
+SD01,temporal_holdout,challenger AUC is 0.00743486 lower overall,descriptive historical support only,retain transparent model,pass
+SD02,transport_stress,challenger AUC is 0.01928938 lower overall,descriptive historical support only,retain transparent model,pass
+SD03,supported subgroup audit,maximum challenger AUC degradation is 0.10385240,unsupported values remain blank and no groups are ranked,replacement rule R08 fails,pass
+SD04,drift interpretation,holdout and later-cycle differences are described without assigned cause,not local performance or fairness evidence,continue with conditions,pass

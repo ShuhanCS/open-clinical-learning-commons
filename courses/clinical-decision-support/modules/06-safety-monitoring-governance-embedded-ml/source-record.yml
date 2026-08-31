@@ -1,0 +1,28 @@
+schema_version: 1.0.0
+module_id: oclc-app4-06
+release_id: APP4-M06-SAFETY-ML-2026-08-31-v1
+source_roles:
+  - source: APP-4 Module 05 complete reference workspace
+    role: frozen sandbox, failure, score, gate, and authority evidence
+    manifest_rows: 324
+    manifest_bytes: 75019
+    manifest_sha256: 6bc3e7c0040b8ae93d273d1464459ae8d500913e0e8a423ca1e5b120256c8baf
+  - source: APP-4 Module 03 model cohort
+    role: frozen public historical model rows and predictors
+    rows: 7544
+    sha256: 5ee21d19ecaca1e95e57910b2ca12b27960473eb16be4edac0b62b96de731304
+  - source: APP-4 Module 03 predictions
+    role: accepted transparent model probabilities
+    rows: 7544
+    sha256: 2bd6064b557c34936e7c8ef606dc0ac5ffa7751095d7100d3312e69c411f122f
+  - source: APP-4 Module 03 subgroup support audit
+    role: frozen group definitions and support states
+    rows: 48
+    sha256: 064882d3dafcb8d652a86c6baabc083d8f9c0387604af67c4753af0345deafc6
+generated_evidence:
+  generator: build_evidence.py
+  model: fixed GradientBoostingClassifier
+  random_state: 7400600
+  network_access: false
+  real_patient_data: false
+claim_limit: historical public or synthetic teaching evidence only; not local validity, clinical utility, threshold acceptance, implementation, or deployment

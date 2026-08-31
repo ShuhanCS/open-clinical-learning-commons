@@ -1,0 +1,9 @@
+scenario_id,scenario,seeded_truth,measures,expected_human_action,automatic_action,evidence_status
+S01,reconciled baseline,all four ledgers reconcile and no trigger fires,M01-M20,continue review with no automatic action,none,synthetic monitoring exercise
+S02,input availability drop,required input availability falls to 96 percent,M02,"show unavailable, investigate source, and escalate",none,synthetic monitoring exercise
+S03,suppression shift,suppression reason mix changes by 25 percent,M04,"verify logic, case mix, and traces before interpretation",none,synthetic monitoring exercise
+S04,silent failure,"one received request has no response, terminal trace, or notice",M09,stop affected evaluation and escalate immediately,none,synthetic monitoring exercise
+S05,calibration drift,absolute calibration error exceeds 0.010,M11-M13,pause performance claims and investigate,none,synthetic monitoring exercise
+S06,subgroup support loss,one group falls below the declared event support,M14,suppress the group result and refer,none,synthetic monitoring exercise
+S07,version mismatch,one request carries an unreviewed model version,M15,reject visibly and stop the affected release,none,synthetic monitoring exercise
+S08,accessibility regression,one card lacks the required summary,M18,block release and return to accessibility review,none,synthetic monitoring exercise

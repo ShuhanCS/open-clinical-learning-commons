@@ -14,7 +14,7 @@
 - Interoperability role: build and inspect nonproduction FHIR R4 and CDS Hooks examples.
 - Final deliverable: clinical decision support package with a nonproduction prototype, safety case, monitoring plan, and defense.
 - Course version target: 0.1.0.
-- Current Commons release: 0.82.0 through Module 05.
+- Current Commons release: 0.83.0 through Module 06.
 - Specification status: construction candidate.
 
 APP-4 is where learners take a prediction or rule into a specific clinical workflow and decide whether it is useful and safe enough to deserve further evaluation. The work starts with the person receiving support, the moment they receive it, the action they may consider, and the harm the tool could cause. Learners then specify logic and inputs, audit calibration and thresholds, count burden, test failure modes in a sandbox, and build a human-owned safety and monitoring case.
@@ -306,7 +306,7 @@ All 31 declared tests pass and all 20 release invariants pass. The four-ledger v
 - Specification: `docs/curriculum/courses/APP-4/modules/06-safety-monitoring-governance-embedded-ml-spec.md`.
 - Decision: is the safety and monitoring case ready for clinician leadership review, and does a fixed ML challenger change the recommendation?
 - Submission: cumulative Week 6 release.
-- Build status: specified; runnable package pending.
+- Build status: runnable release candidate at Module version `0.1.0` and Commons release `0.83.0`; Checkpoint 02 curriculum assembly is permitted with conditions.
 
 The safety block maps hazards to causes, controls, detection, owners, escalation, fallback, stop, restart, and retirement. Monitoring covers eligibility, input availability, firing, suppression, burden, response, latency, errors, silent failure, outcome availability, calibration, drift, subgroup support, version, incidents, and overrides. Every measure has a cadence, owner, threshold origin, unavailable state, and human action.
 
@@ -315,6 +315,14 @@ The ML extension compares the accepted transparent logistic model with one fixed
 The challenger replaces the transparent model only if every predeclared calibration, discrimination, burden, missed-case, subgroup-support, drift, reproducibility, leakage, and interpretability rule passes. Better average discrimination is insufficient. ML cannot change intended use, set the threshold, excuse a workflow defect, or automate action.
 
 The Week 6 package carries the 25 Module 04 course points once. Modules 05 and 06 add required gates but no points.
+
+The runnable release freezes the complete 341-file Module 05 workspace inside a 387-file learner or reference workspace with 369 immutable rows and 17 assessed records. Its final manifest is 88,971 bytes with SHA-256 `e6553079256fdd2a37ab042a87c2ec69812cad7074abefa7d7907e6ee7b56f7d`. It preserves all 31 sandbox cases, 17 inherited failures, the seeded silent failure, the blocked accessibility defect, `panel-t003`, the unaccepted `0.03000000` fixture, the 25-point score carryforward, and all 20 Module 05 gates.
+
+The safety evidence contains 22 hazards, 20 monitoring measures, eight seeded monitoring scenarios, and 12 human escalation routes. Every measure has a cadence, owner, threshold origin, unavailable state, and human action. Every hazard has detection, control, escalation, fallback, stop, restart, and retirement. No automatic action is permitted.
+
+The fixed gradient-boosted challenger uses the same 7,544 rows, target, three predictors, analytic weights, development cycles, temporal holdout, transport stress set, missing-input rule, and six unaccepted thresholds as the transparent model. It passes 8 of 11 replacement rules. It fails temporal-holdout discrimination by `-0.00743486`, transport discrimination by `-0.01928938`, and the supported subgroup rule with maximum degradation `0.10385240`. The transparent model remains accepted for the teaching comparison.
+
+All 22 Module 06 gates pass. Reference validation passes 1,230 checks, learner validation passes 1,152 checks, copied validation passes, and 22 deliberate failure routes are rejected. Progression is `continue with conditions` to cumulative Week 6 curriculum assembly. No threshold, silent-mode, clinical, implementation, production, or deployment authority is added.
 
 ## 15. Module 07 brief: Clinician leadership, product brief, and defense
 
@@ -532,5 +540,6 @@ Construction acceptance for this course-level unit:
 - [x] Checkpoint 01 freezes all 245 accepted Module 01 through Module 03 files, counts 20 plus 20 points once, preserves all six thresholds as unaccepted, and releases a validated 263-file cumulative workspace.
 - [x] Module 04 freezes the complete Week 3 release, compares all six unaccepted candidates with interruptive, passive, and no-alert designs, scores the 25-point workflow component once, and releases a validated 302-file workspace with a protected Module 05 sandbox handoff.
 - [x] Module 05 freezes all 302 Module 04 files, releases 31 local FHIR R4 and CDS Hooks-shaped normal and failure cases in a validated 341-file workspace, detects seeded silent failure from independent ledgers, blocks a malformed card, and protects the zero-point Module 06 handoff.
+- [x] Module 06 freezes all 341 Module 05 files, builds a complete safety and monitoring case, evaluates one fixed challenger on the same 7,544 rows, retains the transparent model after three replacement-rule failures, and protects the zero-point Week 6 handoff.
 
-APP-4 Modules 01 through 05 and Checkpoint 01 are complete for curriculum construction. Resume with Module 06 by freezing the complete Module 05 release manifest, preserving every visible and silent failure, carrying the 25-point Module 04 score once, and building the nonproduction hazard, monitoring, governance, and fixed-challenger comparison without changing intended use, design, threshold, subgroup support, or clinical authority.
+APP-4 Modules 01 through 06 and Checkpoint 01 are complete for curriculum construction. Resume with Checkpoint 02 by freezing the complete Module 04, Module 05, and Module 06 releases, carrying the 25-point Module 04 score exactly once, preserving all 20 Module 05 and 22 Module 06 gates, and retaining the transparent model, `panel-t003`, the unaccepted `0.03000000` fixture, every visible and silent failure, and every clinical and production prohibition.

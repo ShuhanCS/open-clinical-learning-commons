@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app4-06",
+    "title": "Safety case, monitoring, governance, and embedded machine learning",
+    "version": "0.1.0",
+    "commons_release": "0.83.0",
+    "course": "APP-4: Data for Clinical Decision Support",
+    "hours": 16.0,
+    "course_points": 0,
+    "assessment_role": "required zero-point gate for Checkpoint 02"
+  },
+  "decision": {
+    "owner": "CGH-GIM-01 clinical decision support governance council",
+    "question": "Is the safety and monitoring case ready for clinician leadership review, and does the fixed ML challenger change the recommendation?",
+    "permitted_next_action": "assemble the bounded Week 6 checkpoint from frozen Modules 04 through 06"
+  },
+  "upstream": {
+    "module": "oclc-app4-05@0.1.0",
+    "commons_release": "0.82.0",
+    "reference_manifest_rows": 324,
+    "reference_manifest_bytes": 75019,
+    "reference_manifest_sha256": "6bc3e7c0040b8ae93d273d1464459ae8d500913e0e8a423ca1e5b120256c8baf",
+    "reference_files": 341,
+    "module04_score": "25.00 of 25.00, carried into Checkpoint 02 exactly once",
+    "module05_gates": "20 of 20 pass",
+    "sandbox_cases": 31,
+    "silent_failures_detected": 1,
+    "accessibility_defects_blocked": 1
+  },
+  "protected_design": {
+    "id": "panel-t003",
+    "role": "passive contextual panel fixture for mechanics testing only",
+    "threshold": "0.03000000",
+    "threshold_status": "unaccepted sandbox fixture",
+    "accepted_threshold": null
+  },
+  "assessment": {
+    "gates": 22,
+    "points_added": 0,
+    "checkpoint_score": "25.00 of 25.00, counted once",
+    "passing_disposition": "continue with conditions"
+  },
+  "authority": {
+    "real_patient_scoring": "prohibited",
+    "clinical_threshold_acceptance": "prohibited",
+    "clinical_alerting": "prohibited",
+    "clinical_action": "prohibited",
+    "silent_mode_evaluation": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

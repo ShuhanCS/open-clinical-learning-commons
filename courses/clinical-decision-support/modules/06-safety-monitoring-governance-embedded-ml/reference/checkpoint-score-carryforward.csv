@@ -1,0 +1,5 @@
+criterion_id,criterion,points_available,points_awarded,evidence,status
+W6-01,Module 04 workflow burden and equity review,25.00,25.00,accepted score carried once,pass
+W6-02,Module 05 sandbox and failure-mode gates,0.00,0.00,20 required gates passed,pass
+W6-03,Module 06 safety monitoring and governance gates,0.00,0.00,required zero-point gates,pass
+W6-04,Module 06 embedded ML gates,0.00,0.00,required zero-point gates,pass

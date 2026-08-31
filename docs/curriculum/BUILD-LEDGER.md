@@ -634,6 +634,15 @@
 - Module 05 adds zero points and carries the accepted 25.00 Module 04 points into Checkpoint 02 exactly once. All 20 Module 05 gates pass.
 - Progression is `continue with conditions`. Module 06 may construct a nonproduction safety, monitoring, governance, and fixed-challenger package. The design and threshold remain fixtures, and real-patient scoring, clinical alerting, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
 - APP-4 Module 05 is a runnable release candidate at Commons 0.82.0.
+- APP-4 Module 06 version 0.1.0 freezes the complete 341-file Module 05 reference workspace and its 324-row, 75,019-byte manifest with SHA-256 `6bc3e7c0040b8ae93d273d1464459ae8d500913e0e8a423ca1e5b120256c8baf`.
+- The safety release contains 22 hazards, including all 17 inherited Module 05 failure modes, 20 monitoring measures, eight seeded monitoring scenarios, and 12 human escalation routes. Every hazard has detection, control, owner, fallback, stop, restart, and retirement. Every measure has cadence, owner, threshold origin, unavailable state, and human action.
+- The fixed `GradientBoostingClassifier` uses the same 7,544 Module 03 rows, target, three predictors, analytic weights, development cycles, temporal holdout, later-cycle stress set, missing-input rule, and six unaccepted threshold candidates as the transparent model. It is fit once with random state 7400600 and no search or holdout-guided tuning.
+- The challenger passes 8 of 11 replacement rules. It improves weighted Brier score but loses weighted ROC AUC by 0.00743486 on the temporal holdout and 0.01928938 on the transport stress set. Maximum supported subgroup AUC degradation is 0.10385240. R03, R04, and R08 fail, so the transparent model remains accepted.
+- The Module 06 learner or reference workspace contains 369 immutable rows, 17 assessed records, and 387 files. Reference validation passes 1,230 checks, learner validation passes 1,152 checks, copied validation passes, and 22 deliberate failure routes are rejected.
+- The final Module 06 workspace manifest is 88,971 bytes with SHA-256 `e6553079256fdd2a37ab042a87c2ec69812cad7074abefa7d7907e6ee7b56f7d`.
+- Module 06 adds zero points and carries the accepted 25.00 Module 04 points into Checkpoint 02 exactly once. All 22 Module 06 gates pass.
+- Progression is `continue with conditions`. Checkpoint 02 may assemble the frozen Week 6 curriculum package. The design and threshold remain fixtures, the transparent model remains accepted, and real-patient scoring, clinical alerting, silent-mode evaluation, implementation, production connection, and deployment remain prohibited.
+- APP-4 Module 06 is a runnable release candidate at Commons 0.83.0. Checkpoint 02 is the next isolated build unit.
 
 ## Pending confirmation
 
@@ -653,17 +662,17 @@
 - Complete named clinical, survey-methods, calibration, clinical-informatics, interoperability, terminology, workflow, human-factors, patient, access, equity, privacy, accessibility, responsible-AI, and independent-reproduction review of APP-4 Checkpoint 01 before alpha.
 - Complete named workflow, human-factors, clinical, patient, Spanish-language, broader language-access, disability-access, equity, privacy, accessibility, patient-safety, responsible-AI, and independent-reproduction review of APP-4 Module 04 before alpha.
 - Complete named APP-4 Module 05 clinical-informatics, FHIR and CDS Hooks, patient-safety, workflow, patient, language-access, disability-access, accessibility, equity, privacy, security, responsible-AI, and independent-reproduction review before alpha.
+- Complete named APP-4 Module 06 clinical, patient-safety, workflow, model-risk, biostatistics, equity, accessibility, privacy, security, governance, responsible-AI, and independent-reproduction review before alpha.
 - Review APP-4's FHIR R4 and CDS Hooks teaching shapes, terminology, safety case, monitoring contract, and embedded-ML comparison before alpha.
 - Complete named review of APP-4 Module 01's clinical purpose, confirmatory-action wording, NHANES survey methods, source roles, preliminary input routes, synthetic generator contract, patient and workflow consequences, privacy, accessibility, and agent boundaries.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the APP-4 course and Module 04 specifications plus the complete accepted Module 04 release before building Module 05.
-2. Freeze the exact 302-file Module 04 workspace and 60,302-byte release manifest with SHA-256 `41692b01fa2c339068fcdbf5fbc6f3e301a79ba4535d9ecb94d602cb2e4b3bf9`.
-3. Preserve `panel-t003` as a passive contextual panel sandbox fixture and `0.03` as unaccepted. Do not introduce `0.20` or accept any clinical threshold.
-4. Build nonproduction FHIR R4 and CDS Hooks-shaped requests and responses for normal, boundary, repeat, missing, stale, inconsistent, delayed, terminology, version, and silent-failure cases.
-5. Keep unavailable states visible, preserve human nonaction and override, and test language and disability access without connecting to a live system.
-6. Record every expected result, trace, latency, visible failure, silent failure, and rollback condition. Do not call passing message tests interoperability or safety approval.
-7. Add the required zero-point Module 05 gate and protected Module 06 handoff without changing the 25-point Module 04 component.
-8. Advance semver, validate the complete curriculum, commit, push, and remote-verify Module 05 before building Module 06.
+1. Read the APP-4 course, Checkpoint 02 contract, and complete accepted Module 04 through Module 06 releases.
+2. Freeze the exact 302-file Module 04, 341-file Module 05, and 387-file Module 06 workspaces without recomputing accepted evidence.
+3. Preserve `panel-t003`, the unaccepted `0.03000000` fixture, all visible and silent failures, the blocked accessibility defect, and the retained transparent-model decision.
+4. Carry the 25.00 Module 04 points exactly once. Modules 05 and 06 add zero points and retain all 20 plus 22 inherited gates.
+5. Assemble one cumulative Week 6 evidence index, score record, gate record, responsible-claims check, reproducibility record, AI-use record, defense, and protected Module 07 handoff.
+6. Reject any changed upstream file, duplicate points, hidden failed replacement rule, threshold acceptance, or expanded clinical or production authority.
+7. Advance semver, validate the complete curriculum, commit, push, and remote-verify Checkpoint 02 before building Module 07.

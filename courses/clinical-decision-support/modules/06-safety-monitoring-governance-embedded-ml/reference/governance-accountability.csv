@@ -1,0 +1,9 @@
+role,accountable_for,decision_right,evidence_required,escalates_to,status
+clinical owner,intended use suppression response and override meaning,refer or stop clinical interpretation,workflow evidence and human-response record,governance council,pass
+patient-safety owner,silent failure incidents and stop rules,stop affected evaluation or release,four-ledger reconciliation and incident evidence,governance council,pass
+data steward,input availability validity dates and units,declare data unavailable,source audit and correction evidence,governance council,pass
+model steward,version calibration discrimination drift and ML comparison,retain model or refer replacement,model contract and untouched evaluation evidence,governance council,pass
+equity steward,support access and subgroup boundaries,suppress unsupported group result,denominators events follow-up and subgroup audit,governance council,pass
+accessibility owner,card and communication accessibility,block malformed output,declared accessibility checks and human review,governance council,pass
+service owner,availability latency errors and traces,stop affected service fixture,terminal evidence and repeat test,governance council,pass
+governance council,progression restart retirement and authority,continue revise refer stop or retire,complete safety case score gates and accountable-owner record,clinician leadership review,pass

@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.82.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract, runnable Modules 01 through 05, and a runnable Week 3 checkpoint.
+- Current version: `0.83.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1, APP-2, and APP-3 are complete with seven modules and three checkpoints each. APP-4 has a complete course contract, runnable Modules 01 through 06, and a runnable Week 3 checkpoint.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -140,6 +140,8 @@ The first APP-4 cumulative release is [Checkpoint 01: Logic, evidence, calibrati
 The fourth runnable unit is [APP-4 Module 04: Alert burden, human factors, and equity](courses/clinical-decision-support/modules/04-alert-burden-human-factors-equity/README.md), governed by the durable [Module 04 specification](docs/curriculum/courses/APP-4/modules/04-alert-burden-human-factors-equity-spec.md). It preserves the complete 263-file Week 3 release, creates 1,200 scripted synthetic encounter opportunities and 7,200 six-threshold comparisons, and scores the 25-point workflow component once. The reference advances a passive-panel design only as a Module 05 sandbox fixture. No threshold becomes clinically accepted.
 
 The fifth runnable unit is [APP-4 Module 05: Sandbox prototype and failure modes](courses/clinical-decision-support/modules/05-sandbox-prototype-failure-modes/README.md), governed by the durable [Module 05 specification](docs/curriculum/courses/APP-4/modules/05-sandbox-prototype-failure-modes-spec.md). It freezes all 302 Module 04 files, builds 31 local FHIR R4 and CDS Hooks-shaped teaching cases with 184 prefetch resources, and reconciles 61 trace events. All declared tests pass, one seeded silent failure is detected, and one malformed card is blocked. Module 06 curriculum construction may begin with conditions, but clinical and deployment authority remain prohibited.
+
+The sixth runnable unit is [APP-4 Module 06: Safety case, monitoring, governance, and embedded machine learning](courses/clinical-decision-support/modules/06-safety-monitoring-governance-embedded-ml/README.md), governed by the durable [Module 06 specification](docs/curriculum/courses/APP-4/modules/06-safety-monitoring-governance-embedded-ml-spec.md). It freezes all 341 Module 05 files, preserves the silent failure and blocked accessibility defect, and creates 22 hazards, 20 monitoring measures, eight scenarios, and 12 human escalation routes. Its fixed gradient-boosted challenger passes 8 of 11 replacement rules but loses discrimination on the temporal holdout, transport stress set, and worst supported subgroup, so the transparent model remains accepted and no threshold or clinical authority is added.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -317,8 +319,8 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-4 Module 06 from the accepted Module 05 sandbox release.
-2. Complete APP-4's Week 6 and official-end-date checkpoints before moving to APP-5.
+1. Build APP-4 Checkpoint 02 from the accepted Modules 04 through 06 releases.
+2. Complete APP-4 Module 07 and the official-end-date checkpoint before moving to APP-5.
 3. Continue APP-5 through APP-7 one distinct course at a time.
 4. Complete named human reviews before alpha promotion.
 

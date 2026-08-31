@@ -1,0 +1,23 @@
+hazard_id,control_adequacy,residual_risk,owner_confirmation,disposition,status
+H01,control and visible unavailable state specified,wrong or missing evaluation remains possible,data steward confirmed,continue with conditions,pass
+H02,staleness detection and visible state specified,source dates can still be wrong,data steward confirmed,continue with conditions,pass
+H03,range detection and visible state specified,invalid values can escape declared ranges,data steward confirmed,continue with conditions,pass
+H04,latency branch and trace specified,delay can exceed the teaching budget,clinical informatics owner confirmed,continue with conditions,pass
+H05,independent request identity ledger specified,duplicate identity can be unavailable,clinical informatics owner confirmed,continue with conditions,pass
+H06,semantic mismatch rejection specified,mappings can be incomplete,terminology steward confirmed,continue with conditions,pass
+H07,hook version rejection specified,version metadata can be missing,clinical informatics owner confirmed,continue with conditions,pass
+H08,unit mismatch rejection specified,unit metadata can be missing,data steward confirmed,continue with conditions,pass
+H09,service allowlist rejection specified,configuration can drift,governance owner confirmed,continue with conditions,pass
+H10,missing-score unavailable state specified,prediction source can fail,model steward confirmed,continue with conditions,pass
+H11,suppression trace reason specified,suppression logic can drift,clinical owner confirmed,continue with conditions,pass
+H12,recent-result suppression trace specified,date logic can drift,clinical owner confirmed,continue with conditions,pass
+H13,visible 503 result and trace specified,service availability can change,service owner confirmed,continue with conditions,pass
+H14,visible timeout result and trace specified,latency can exceed the budget,service owner confirmed,continue with conditions,pass
+H15,four-ledger reconciliation specified,one ledger alone cannot detect silence,patient-safety owner confirmed,continue with conditions,pass
+H16,malformed output remains blocked,other accessibility defects can remain,accessibility owner confirmed,continue with conditions,pass
+H17,model-version mismatch stop specified,version metadata can be wrong,model steward confirmed,continue with conditions,pass
+H18,outcome availability reported explicitly,follow-up can remain incomplete,evaluation steward confirmed,continue with conditions,pass
+H19,calibration review and pause specified,reference triggers are not local limits,model steward confirmed,continue with conditions,pass
+H20,support loss suppresses group results,small samples can remain unstable,equity steward confirmed,continue with conditions,pass
+H21,override ledger reconciliation specified,human response can remain incomplete,clinical owner confirmed,continue with conditions,pass
+H22,decision-age and version audit specified,governance delay can persist,governance owner confirmed,continue with conditions,pass

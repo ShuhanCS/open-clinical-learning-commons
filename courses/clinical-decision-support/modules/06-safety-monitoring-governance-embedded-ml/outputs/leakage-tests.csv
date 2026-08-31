@@ -1,0 +1,13 @@
+test_id,test,status,evidence,noncompensable_reason
+L01,development cycles fixed,pass,2013-2014 and 2015-2016 only,a failed leakage test invalidates the challenger comparison
+L02,temporal holdout untouched,pass,2017-2018 only,a failed leakage test invalidates the challenger comparison
+L03,transport stress untouched,pass,2021-2023 only,a failed leakage test invalidates the challenger comparison
+L04,same common rows,pass,"7,544 aligned rows",a failed leakage test invalidates the challenger comparison
+L05,same predictors,pass,three Module 03 predictors,a failed leakage test invalidates the challenger comparison
+L06,same observed target,pass,LBXGH threshold target,a failed leakage test invalidates the challenger comparison
+L07,same analytic weights,pass,positive frozen analytic weights,a failed leakage test invalidates the challenger comparison
+L08,same threshold candidates,pass,six unaccepted candidates,a failed leakage test invalidates the challenger comparison
+L09,no accepted threshold,pass,accepted threshold is none,a failed leakage test invalidates the challenger comparison
+L10,one fixed model family,pass,GradientBoostingClassifier only,a failed leakage test invalidates the challenger comparison
+L11,no search or tuning,pass,fixed settings and one fit,a failed leakage test invalidates the challenger comparison
+L12,fixed random state,pass,7400600,a failed leakage test invalidates the challenger comparison
