@@ -6,24 +6,26 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.106.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star, simulated review panel, and 40-hour competency crosswalk are also included.
+- Current version: `0.106.1`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The Nutrition Data Rounds specification, simulated review panel, question register, and 40-hour competency crosswalk are also included.
 
 ## NIH nutrition education award North Star
 
-The Commons is being considered as the delivery layer for an NIH Developing Track residency submission tentatively titled **Open Nutrition Data Commons for Emergency Medicine Residency**.
+The Commons is being considered as the delivery layer for an NIH Developing Track residency submission tentatively titled **Nutrition Data Rounds: An Open Computational Curriculum for Emergency Medicine Residency**.
 
-> Build a 40-hour or 40-hour competency-equivalent nutrition curriculum through the Mass General Brigham University Healthcare Data Analytics Program, implement it with the Harvard-Affiliated Emergency Medicine Residency and the MGB Department of Emergency Medicine, and release it as a portable national teaching package.
+> Give emergency medicine residents repeated practice recognizing nutrition risk, interpreting nutrition-related data, choosing a safe clinical action or referral, and detecting unreliable AI-generated nutrition advice through self-directed browser cases that provide immediate, transparent feedback.
 
-The Healthcare Data Analytics Program is the proposed curriculum creator and academic lead. The Harvard-Affiliated Emergency Medicine Residency is the educational setting, and its residents are the learners. The Department of Emergency Medicine is the proposed institutional sponsor and implementation partner. The curriculum combines nutrition teaching with applied analytics, open data, and structured sessions that may use food purchased by Healthcare Data Analytics through the institutional route MGB approves. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
+The working design has ten four-hour browser-based data rounds. Residents use synthetic emergency medicine cases and prepared public nutrition data, make structured decisions, and receive immediate feedback. Residents do not need to program, and the core pathway does not require live lectures, teaching kitchens, food purchases, manual grading, MGB Azure access, protected health information, or proprietary software. The submission build includes one polished 60 to 90 minute prototype rather than ten completed rounds.
+
+The Healthcare Data Analytics Program is the proposed curriculum creator and analytics lead. The Harvard-Affiliated Emergency Medicine Residency is the proposed educational setting, and its residents are the learners. The Department of Emergency Medicine is the proposed institutional sponsor and implementation coordinator.
 
 These roles, activities, purchases, and implementation details are working proposals. The team will revise them to follow the institutional rules and approval path identified during review.
 
-The full working specification contains the exact submission headings, page and formatting limits, eligibility gates, draft 40-hour map, evidence plan, and simulated review procedure: [NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
+The canonical working specification defines the product, boundaries, ten-round architecture, flagship prototype, assessment model, exact submission requirements, decision IDs, open questions, and simulated review procedure: [Nutrition Data Rounds specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
 
-The [working HAEMR nutrition competency crosswalk](docs/specs/2026-09-01-haemr-nutrition-competency-crosswalk.md) selects 16 competencies across six HHS domains, totals exactly 40 hours, and ties every competency to an emergency medicine learning activity and observable assessment. Final selection follows HAEMR's baseline curriculum inventory and review by a qualified nutrition professional.
+The [working HAEMR nutrition competency crosswalk](docs/specs/2026-09-01-haemr-nutrition-competency-crosswalk.md) selects 16 competencies across five HHS domains, totals exactly 40 hours, and ties every competency to a computational emergency medicine activity and observable assessment. Final selection follows HAEMR's baseline curriculum inventory and review by a qualified nutrition professional.
 
-The [MGB administrative approval packet](docs/submission/administrative/README.md) contains one consolidated Research Management intake and institutional authorization document.
+The [MGB administrative approval packet](docs/submission/administrative/README.md) contains one consolidated Research Management intake and institutional authorization document. It reflects an earlier food-centered design and must be reconciled with the canonical specification before circulation as a current curriculum description.
 
 ### Submission requirements at a glance
 
