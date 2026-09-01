@@ -2,7 +2,7 @@
 
 - Status: draft for institutional review
 - Date: 2026-09-01
-- Commons release: `0.102.0`
+- Commons release: `0.103.0`
 - Submission deadline: September 15, 2026, 11:59 PM Eastern Time
 
 ## Decision requested
@@ -14,9 +14,11 @@ The recommended structure is a single-Entity submission by Mass General Brigham.
 ## Send first
 
 1. Copy [the routing email](00-routing-email.md) into an MGB email.
-2. Attach [the institutional decision memo](word/01-mgb-institutional-decision-memo.docx).
-3. Attach the three commitment letter drafts most relevant to each recipient.
+2. Attach [the Research Management intake and clearance request](word/01-mgb-research-management-intake.docx).
+3. Attach [the institutional submission authorization record](word/02-mgb-institutional-authorization-record.docx).
 4. Include the official Participant Agreement link. Do not sign or alter that official form until MGB confirms the legal Lead Entity name, Point of Contact, one-entry clearance, and authorized representative.
+
+These two Word documents are the core packet. The program and collaboration letters are optional backup. Send them only if Research Management, GME, or department leadership asks for a signed support record.
 
 Official Participant Agreement:
 https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/NIH-Nutrition-Education-Challenge-Team-Agreement_5.26.26-1.pdf
@@ -30,15 +32,18 @@ https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/NIH-Nutrition
 - MGB Research Management general mailbox: PHSresearchmanagement@mgb.org
 - Mass General Brigham University: confirm the Healthcare Data Analytics collaboration and whether any additional university approval is required.
 
-## Word documents
+## Core Research Management documents
 
-- [Institutional decision memo](word/01-mgb-institutional-decision-memo.docx)
-- [Point of Contact and one-entry authorization letter](word/02-poc-one-entry-authorization-letter.docx)
+- [Research Management intake and clearance request](word/01-mgb-research-management-intake.docx)
+- [Institutional submission authorization record](word/02-mgb-institutional-authorization-record.docx)
+
+## Optional support records
+
 - [HAEMR program commitment letter](word/03-haemr-program-commitment-letter.docx)
 - [Division AI build commitment letter](word/04-division-ai-build-commitment-letter.docx)
 - [Healthcare Data Analytics collaboration letter](word/05-health-data-analytics-collaboration-letter.docx)
 
-Each Word document is an editable draft. Place signed letters on the appropriate institutional letterhead and remove bracketed drafting notes.
+Each Word document is editable. Research Management may copy the intake data into Insight or another internal system if that is the required route.
 
 ## Facts supporting the route
 

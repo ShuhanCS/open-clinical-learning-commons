@@ -19,8 +19,8 @@ const repo = path.resolve(__dirname, "..");
 const sourceDir = path.join(repo, "docs", "submission", "administrative");
 const outputDir = path.join(sourceDir, "word");
 const documents = [
-  "01-mgb-institutional-decision-memo",
-  "02-poc-one-entry-authorization-letter",
+  "01-mgb-research-management-intake",
+  "02-mgb-institutional-authorization-record",
   "03-haemr-program-commitment-letter",
   "04-division-ai-build-commitment-letter",
   "05-health-data-analytics-collaboration-letter",
@@ -32,6 +32,17 @@ function textRuns(line) {
       new ExternalHyperlink({
         link: line,
         children: [new TextRun({ text: line, style: "Hyperlink" })],
+      }),
+    ];
+  }
+
+  const labeledUrl = line.match(/^([^:]{1,55}:) (https:\/\/\S+)$/);
+  if (labeledUrl) {
+    return [
+      new TextRun({ text: `${labeledUrl[1]} `, bold: true }),
+      new ExternalHyperlink({
+        link: labeledUrl[2],
+        children: [new TextRun({ text: labeledUrl[2], style: "Hyperlink" })],
       }),
     ];
   }
@@ -94,7 +105,7 @@ function buildDocument(markdown, filename) {
   return new Document({
     creator: "Open Clinical Learning Commons",
     title: filename,
-    description: "Draft for Mass General Brigham institutional review",
+    description: "Draft for Mass General Brigham Research Management review",
     numbering: {
       config: [
         {
@@ -163,7 +174,7 @@ function buildDocument(markdown, filename) {
                 alignment: AlignmentType.RIGHT,
                 children: [
                   new TextRun({
-                    text: "NIH Nutrition Education Challenge | Draft for MGB review",
+                    text: "NIH Nutrition Education Challenge | MGB administrative intake",
                     size: 17,
                     color: "64748B",
                   }),

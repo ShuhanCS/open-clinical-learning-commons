@@ -1,6 +1,6 @@
 # Routing email
 
-Subject: Urgent institutional clearance requested by September 4: NIH Nutrition Education Challenge, HAEMR Developing Track
+Subject: Research Management intake: NIH Nutrition Education Challenge, HAEMR, due September 15
 
 To: Laura Welsh, MD; Katherine Chappell, MA; [Division AI Chief]; [MGB Emergency Medicine Department Administrator]
 
@@ -12,18 +12,18 @@ The proposed entry is for the Developing Track and Residency Program category. T
 
 Current national residency records identify Mass General Brigham as the sponsor of HAEMR, ACGME program 1102421150. I recommend a single-Entity MGB submission, with Healthcare Data Analytics described as an internal academic collaborator rather than a formal Partner Entity, unless Research Management or legal counsel advises otherwise.
 
-The attached decision memo asks MGB to confirm:
+The attached Research Management intake asks MGB to classify the opportunity, assign the internal route, and confirm:
 
 - the exact legal Lead Entity name and eligibility route;
 - availability of MGB's single permitted entry;
 - authorization for me to serve as the institutional Point of Contact;
 - the authorized representative for the required Participant Agreement;
 - approval of the competition's intellectual property and public dissemination terms; and
-- HAEMR, Division AI, GME, and departmental support for the proposed roles.
+- the route for prize acceptance if selected.
 
 This is a federal prize competition, not a grant or subaward. There is no application budget. A Developing Track residency award is up to $75,000 and would be paid to the institution if selected. Federal award funds may not be used to prepare the entry.
 
-Could the appropriate institutional offices confirm the route and initial go or no-go decision by September 4? I can provide the current North Star, 40-hour competency crosswalk, and draft submission materials immediately.
+Could the appropriate institutional offices confirm the route and initial go or no-go decision by September 4? I have attached an editable authorization record for the legal entity, one-entry check, Point of Contact, signer, and approval sequence. Program support letters are available if the institutional route requires them.
 
 Thank you,
 

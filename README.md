@@ -6,7 +6,7 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.102.0`
+- Current version: `0.103.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star, simulated review panel, and 40-hour competency crosswalk are also included.
 
 ## NIH nutrition education award North Star
@@ -21,7 +21,7 @@ The full working specification contains the exact submission headings, page and 
 
 The [working HAEMR nutrition competency crosswalk](docs/specs/2026-09-01-haemr-nutrition-competency-crosswalk.md) selects 16 competencies across six HHS domains, totals exactly 40 hours, and ties every competency to an emergency medicine learning activity and observable assessment. Final selection follows HAEMR's baseline curriculum inventory and review by a qualified nutrition professional.
 
-The [MGB administrative approval packet](docs/submission/administrative/README.md) contains the urgent routing email, institutional decision memo, Point of Contact and one-entry authorization draft, and commitment letters for HAEMR, Division AI, and Healthcare Data Analytics.
+The [MGB administrative approval packet](docs/submission/administrative/README.md) centers on a Research Management intake and an institutional submission authorization record. Optional support letters are available for HAEMR, Division AI, and Healthcare Data Analytics if the institutional route requires them.
 
 ### Submission requirements at a glance
 

@@ -2,7 +2,7 @@
 
 - Date: 2026-09-01
 - Status: complete
-- Commons release: `0.102.0`
+- Commons release: `0.103.0`
 - Repository: https://github.com/ShuhanCS/open-clinical-learning-commons
 
 ## Objective
@@ -11,13 +11,11 @@ Give Mass General Brigham leadership a small, accurate packet that supports an i
 
 ## Deliverables
 
-1. A routing email that identifies the decision and deadline.
-2. An institutional decision memo that records the proposed submission structure, requested approvals, certifications, and internal route.
-3. A signature-ready authorization and one-entry clearance letter.
-4. A signature-ready HAEMR program commitment letter.
-5. A signature-ready Division of Artificial Intelligence build commitment letter.
-6. A signature-ready Healthcare Data Analytics collaboration letter.
-7. Editable Word versions of the memo and four letters.
+1. A routing email that identifies the opportunity, decision, and deadline.
+2. A Research Management intake that records the sponsor, mechanism, applicant, scope, compliance screen, sponsor terms, classification questions, and requested routing.
+3. An institutional authorization record for the legal entity, one-entry clearance, Point of Contact, Participant Agreement signer, and internal approvals.
+4. Optional HAEMR, Division of Artificial Intelligence, and Healthcare Data Analytics support letters if an approving office requests them.
+5. Editable Word versions of every record.
 
 ## Working administrative structure
 
@@ -35,6 +33,8 @@ Give Mass General Brigham leadership a small, accurate packet that supports an i
 - The packet asks for one-entry clearance, authorized Point of Contact designation, Participant Agreement signature, rights review, and submission approval.
 - The documents describe a prize competition rather than a grant or subaward.
 - MGB University is not presented as a formal Partner Entity without institutional direction.
+- The primary packet reads as institutional intake and routing documentation. Support letters are optional.
+- The intake screens human subjects, patient data, clinical AI, procurement, agreements, budget, federal funding, rights, and prize acceptance without claiming institutional determinations that have not been made.
 - No document claims effectiveness, implementation, protected health information access, clinical AI deployment, or institutional authorization that has not been confirmed.
 - Word documents use US Letter pages, one-inch margins, Arial 11-point body text, and editable placeholders.
 - Generated Word files validate and receive a visual page review.
