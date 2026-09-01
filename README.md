@@ -6,16 +6,16 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.97.0`
+- Current version: `0.98.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. This release adds the working NIH nutrition education award North Star and simulated review panel.
 
 ## NIH nutrition education award North Star
 
 The Commons is being considered as the delivery layer for an NIH Developing Track submission tentatively titled **Open Nutrition Data Commons for Nursing Education**.
 
-> Build a 53-hour, competency-mapped nutrition data and responsible AI pathway for nursing education that is engineered by the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence, academically co-designed by the Mass General Brigham University Health Data Analytics Program, reviewed with nursing educators and nutrition experts, and released as a portable national teaching package.
+> Build a 53-hour, competency-mapped nutrition data and responsible AI pathway for nursing learners, using the Mass General Brigham University Health Data Analytics applied curriculum as its recurring build and validation engine, the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence as its institutional lead and engineering builder, and nursing educators and nutrition experts as its practice and content partners.
 
-The Division of Artificial Intelligence is the analytic and engineering builder. Its institutionally procured Microsoft Azure environment is the proposed development and validation environment. The Health Data Analytics Program contributes applied data education, visualization, reproducibility, and assessment design. Nursing education provides practice review, learner context, and a planned adoption pathway. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
+The challenge curriculum serves nursing learners and meets the 53-hour nursing expectation. The Health Data Analytics applied curriculum is a linked builder layer where data educators and learners help develop, test, and improve the reusable analytics activities. The Division of Artificial Intelligence leads the submission and engineering work, using its institutionally procured Microsoft Azure environment for development and validation. Nursing education provides practice review, the target learner context, and a planned adoption pathway. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
 
 The full working specification, open decisions, proposed 53-hour map, evidence plan, and simulated review procedure are in [the NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
 

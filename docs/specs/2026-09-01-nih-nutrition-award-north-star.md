@@ -16,7 +16,14 @@ This is a prize submission, not a request for NIH to finance speculative infrast
 
 ## North Star
 
-> Build a 53-hour, competency-mapped nutrition data and responsible AI pathway for nursing education that is engineered by the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence, academically co-designed by the Mass General Brigham University Health Data Analytics Program, reviewed with nursing educators and nutrition experts, and released as a portable national teaching package through the Open Clinical Learning Commons.
+> Build a 53-hour, competency-mapped nutrition data and responsible AI pathway for nursing learners, using the Mass General Brigham University Health Data Analytics applied curriculum as its recurring build and validation engine, the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence as its institutional lead and engineering builder, and nursing educators and nutrition experts as its practice and content partners.
+
+This model has two linked learning layers:
+
+1. The challenge curriculum is the 53-hour nutrition pathway for nursing learners. This is the curriculum NIH evaluates for fit within nursing education.
+2. The builder curriculum sits within Health Data Analytics applied education. Data educators and learners help develop, test, document, and improve the reusable analytics activities that support the nursing pathway.
+
+The builder layer is an interdisciplinary strength, but it cannot replace the nursing learner, nursing curriculum placement, or 53-hour nursing requirement. The Developing Track allows the nursing implementation to be proposed or in an early stage, so the nursing letter should document a credible review and adoption path without claiming that implementation has already occurred.
 
 The learner outcome comes before the platform. A nursing learner completing the pathway should be able to recognize nutrition risk, reason from clinical and population data, evaluate evidence, communicate within nursing scope, make an appropriate referral, and identify when an AI-supported nutrition recommendation is unsupported, unsafe, biased, or irrelevant to the patient.
 
@@ -29,7 +36,7 @@ The adoption test is equally important:
 The proposed entry is stronger than a collection of nutrition lectures because it joins four capabilities in one reusable model:
 
 1. Division AI builds and maintains the analytic learning environment, reproducible assets, and responsible AI activities.
-2. The Health Data Analytics Program turns nutrition questions into applied work with data, visualization, interpretation, and evaluation.
+2. The Health Data Analytics applied curriculum becomes a recurring build and validation engine for nutrition data, visualization, interpretation, and evaluation activities.
 3. Nursing educators connect the work to nursing learners, clinical practice, curriculum placement, and an adoption pathway.
 4. Nutrition experts validate the evidence, content boundaries, referrals, and scope of practice.
 
@@ -56,6 +63,7 @@ The Lead Entity and Partner Entity treatment must be resolved against the Partic
 ### In scope
 
 - A 53-hour modular nutrition pathway designed for nursing education.
+- A linked applied Health Data Analytics builder experience that develops and validates reusable learning assets for that pathway.
 - Evidence-based nutrition content mapped to selected HHS competencies.
 - Synthetic and legally reusable open data.
 - Applied analytics, visualization, communication, referral, and responsible AI activities.
@@ -188,6 +196,7 @@ The working build should also produce a competency appendix, 53-hour map, repres
 - [ ] Confirm whether the submission is a single-entity MGB entry or an MGB and Mass General Brigham University partnership.
 - [ ] Confirm the exact eligibility basis and authorized signer for each formal entity.
 - [ ] Name the nursing program, learner level, faculty liaison, and planned curriculum placement.
+- [ ] Confirm where the builder work fits within the Health Data Analytics applied curriculum and what its learners will produce.
 - [ ] Confirm whether the pathway is required, elective, embedded, or a combination.
 - [ ] Approve or revise the draft 53-hour module map.
 - [ ] Name a credentialed nutrition reviewer and define the review commitment.
