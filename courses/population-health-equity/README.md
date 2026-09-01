@@ -36,5 +36,7 @@ Checkpoint totals are 40 points at Week 3, 25 points at Week 6, and 35 points on
 - Module 05 specification: `docs/curriculum/courses/APP-5/modules/05-targeting-fairness-spec.md`
 - Module 06 package: `courses/population-health-equity/modules/06-intervention-monitoring-embedded-ml/`
 - Module 06 specification: `docs/curriculum/courses/APP-5/modules/06-intervention-monitoring-embedded-ml-spec.md`
+- Week 6 checkpoint package: `courses/population-health-equity/checkpoints/02-place-targeting-intervention-release/`
+- Week 6 checkpoint specification: `docs/curriculum/courses/APP-5/checkpoints/02-place-targeting-intervention-release-spec.md`
 
-Each module is built, validated, versioned, committed, pushed, and remote-verified before the next module begins.
+Modules 01 through 06 and the Week 3 and Week 6 checkpoints are runnable release candidates. Module 07 is the next isolated build unit. Each unit is built, validated, versioned, committed, pushed, and remote-verified before the next unit begins.

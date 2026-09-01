@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_id": "oclc-app5-cp02",
+  "version": "0.1.0",
+  "commons_release": "0.94.0",
+  "course": "APP-5: Data for Population Health and Equity",
+  "due_point": "end of instructional Week 6",
+  "course_points": 25,
+  "point_source": "oclc-app5-04 10 points once plus oclc-app5-05 15 points once; oclc-app5-06 adds zero points",
+  "accepted_component_files": 1030,
+  "accepted_immutable_rows": 966,
+  "accepted_modules": [
+    {
+      "id": "oclc-app5-04",
+      "version": "0.1.0",
+      "commons_release": "0.91.0",
+      "assembled_files": 287,
+      "manifest_rows": 271,
+      "manifest_bytes": 48575,
+      "manifest_sha256": "c0300a2eff3fa9ede53eab4723fe7296cad341cf5f6e4e5e76fde25881652629",
+      "points": 10
+    },
+    {
+      "id": "oclc-app5-05",
+      "version": "0.1.0",
+      "commons_release": "0.92.0",
+      "assembled_files": 340,
+      "manifest_rows": 318,
+      "manifest_bytes": 62245,
+      "manifest_sha256": "54da8bae1c36ae49397b278fc636f2b8e112f55406acbfc57c94a215087818da",
+      "points": 15
+    },
+    {
+      "id": "oclc-app5-06",
+      "version": "0.1.0",
+      "commons_release": "0.93.0",
+      "assembled_files": 403,
+      "manifest_rows": 377,
+      "manifest_bytes": 79357,
+      "manifest_sha256": "2e9358d65c889e786db474de97e223982a8d238dba64ec283c6dc950ebb89e82",
+      "points": 0
+    }
+  ],
+  "required_gates": {
+    "module04_place": 22,
+    "module05_targeting_fairness": 26,
+    "module06_intervention_monitoring_ml": 34,
+    "checkpoint_integrity": 24
+  },
+  "package": {
+    "candidate_manifest_rows": 1030,
+    "candidate_manifest_bytes": 249511,
+    "candidate_manifest_sha256": "6d403bfb0e4bb6f177400ae97a3b1d89cf968c35b24482f64cea6b927f397f83",
+    "checkpoint_editable_records": 12,
+    "defense_questions": 16,
+    "assembled_files": 1051,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "allowed": ["continue", "continue with conditions", "revise", "refer"],
+    "reference": "continue with conditions",
+    "module07_permission": "permitted for curriculum construction",
+    "module07_scope": "clinician leadership interpretation, accountability, recommendation, and defense using the exact frozen Week 3 and Week 6 records",
+    "final_checkpoint_permission": "prohibited until Module 07 passes"
+  },
+  "authority": {
+    "real_need_determination": "prohibited",
+    "consent_or_eligibility": "prohibited",
+    "outreach": "prohibited",
+    "allocation_or_funding": "prohibited",
+    "real_community_action": "prohibited",
+    "service_delivery": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "automatic_model_action": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

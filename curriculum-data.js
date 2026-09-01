@@ -2,7 +2,7 @@
   "use strict";
 
   const curriculum = {
-  "version": "0.36.0",
+  "version": "0.37.0",
   "courseCount": 11,
   "moduleCount": 77,
   "courses": [
@@ -499,8 +499,13 @@
           "title": "Accountable intervention design, monitoring, and embedded ML",
           "outcome": "Design an accountable intervention and decide whether a fixed area-profile challenger adds useful planning questions.",
           "topics": "Intervention analytics, implementation measures, monitoring, feedback, governance, fixed clustering challenger, stability, support, and human decision ownership.",
-          "submission": "Required zero-point intervention, monitoring, governance, and ML gate for the separate Week 6 checkpoint.",
-          "hours": 16
+          "submission": "Required zero-point intervention, monitoring, governance, and ML gate for the accepted Week 6 checkpoint.",
+          "hours": 16,
+          "resource": {
+            "title": "Runnable Week 6 checkpoint",
+            "description": "Review the frozen place, targeting, intervention, monitoring, accountability, and rejected-ML release.",
+            "url": "courses/population-health-equity/checkpoints/02-place-targeting-intervention-release/reference/README.md"
+          }
         },
         {
           "week": 7,

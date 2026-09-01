@@ -1,0 +1,25 @@
+gate_id,gate,status,evidence,owner
+G01,Exact Module 04 through Module 06 identities are preserved,pass,evidence-index.csv,APP-5 faculty owner
+G02,All 1030 candidate files match the outer manifest,pass,candidate-manifest.csv,independent reproducer
+G03,All 966 nested immutable rows match accepted manifests,pass,candidate/module-04/release-manifest.csv; candidate/module-05/release-manifest.csv; candidate/module-06/release-manifest.csv,independent reproducer
+G04,Module 04 contributes 10 and Module 05 contributes 15 points once while Module 06 adds zero,pass,checkpoint-score.csv,APP-5 faculty owner
+G05,All 82 inherited noncompensable gates pass,pass,evidence-index.csv,APP-5 faculty owner
+G06,Responsible map accessibility and exact-table evidence remain complete,pass,candidate/module-04/outputs/responsible-diabetes-prevalence-map.svg; candidate/module-04/outputs/tract-map-table.csv,accessibility and GIS reviewers
+G07,All 1597 mapped estimates and 23 unavailable geography-only rows remain visible,pass,candidate/module-04/outputs/tract-map-table.csv,GIS reviewer
+G08,Aggregation support ecological and contextual limits remain explicit,pass,candidate/module-04/aggregation-and-stability-review.md; candidate/module-04/responsible-map-context-memo.md,population-health clinician
+G09,Four fixed fictional targeting rules and resource constraints remain exact,pass,candidate/module-05/data/rule-definitions.csv; candidate/module-05/targeting-contract.json,resource-governance reviewer
+G10,Inclusion exclusion consequences and all 20 sensitivity variants remain visible,pass,candidate/module-05/outputs/rule-assignments.csv.gz; candidate/module-05/outputs/sensitivity-results.csv,equity reviewer
+G11,Community review remains a transparent candidate and not an automatic rule,pass,candidate/module-05/community-review-recourse.md,community reviewer
+G12,Language and disability access routes remain required,pass,candidate/module-05/access-capacity-review.md,language and disability access reviewers
+G13,Five staff-not-ready twelve high-travel and one high-burden conditions remain visible,pass,candidate/module-06/readiness-capacity-review.csv,implementation reviewer
+G14,Fictional intervention purpose assumptions owners and authority remain explicit,pass,candidate/module-06/intervention-and-authority-contract.md,population-health clinician
+G15,Outcomes remain unavailable and no intervention effect is estimated,pass,candidate/module-06/dry-run-interpretation.md; candidate/module-06/evaluation-proposal.md,causal reviewer
+G16,All 20 measures and six triggers retain denominators owners and human responses,pass,candidate/module-06/monitoring-plan.csv,implementation reviewer
+G17,Feedback correction refusal appeal and disagreement routes remain complete,pass,candidate/module-06/feedback-recourse-plan.md,community reviewer
+G18,All 23 incidents retain named escalation routes,pass,candidate/module-06/incident-escalation-register.csv,safety reviewer
+G19,Pause stop revision and retirement rights remain human owned,pass,candidate/module-06/pause-stop-revision-retirement.md,governance reviewer
+G20,The fixed clustering challenger preserves its features rows algorithm seed and variants,pass,candidate/module-06/cluster-model-card.md; candidate/module-06/outputs/challenger-stability.csv,biostatistics reviewer
+G21,Scaling instability and selected-area coverage failures remain visible,pass,candidate/module-06/cluster-stability-support-review.md; candidate/module-06/selected-tract-cluster-review.csv,biostatistics reviewer
+G22,The challenger remains rejected and the transparent community-review comparison remains unchanged,pass,candidate/module-06/tailoring-questions.md,responsible-AI reviewer
+G23,Claims AI reproduction defense review and conditions records are complete,pass,responsible-claims-audit.md; ai-use.md; reproducibility-check.md; checkpoint-defense.md,APP-5 faculty owner
+G24,Module 07 permission is bounded and every real-world authority route remains prohibited,pass,progression-decision.md,clinician-leadership reviewer

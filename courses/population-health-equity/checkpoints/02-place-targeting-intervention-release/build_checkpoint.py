@@ -1,0 +1,246 @@
+"""Assemble the APP-5 cumulative Week 6 checkpoint."""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import importlib.util
+import json
+import shutil
+import tempfile
+from pathlib import Path
+
+
+CHECKPOINT_ROOT = Path(__file__).resolve().parent
+COURSE_ROOT = CHECKPOINT_ROOT.parent.parent
+MODULES = (
+    {
+        "id": "oclc-app5-04",
+        "version": "0.1.0",
+        "directory": "module-04",
+        "root": COURSE_ROOT / "modules/04-place-evidence-geographic-reasoning",
+        "files": 287,
+        "manifest_rows": 271,
+        "manifest_bytes": 48575,
+        "manifest_sha256": "c0300a2eff3fa9ede53eab4723fe7296cad341cf5f6e4e5e76fde25881652629",
+    },
+    {
+        "id": "oclc-app5-05",
+        "version": "0.1.0",
+        "directory": "module-05",
+        "root": COURSE_ROOT / "modules/05-targeting-fairness",
+        "files": 340,
+        "manifest_rows": 318,
+        "manifest_bytes": 62245,
+        "manifest_sha256": "54da8bae1c36ae49397b278fc636f2b8e112f55406acbfc57c94a215087818da",
+    },
+    {
+        "id": "oclc-app5-06",
+        "version": "0.1.0",
+        "directory": "module-06",
+        "root": COURSE_ROOT / "modules/06-intervention-monitoring-embedded-ml",
+        "files": 403,
+        "manifest_rows": 377,
+        "manifest_bytes": 79357,
+        "manifest_sha256": "2e9358d65c889e786db474de97e223982a8d238dba64ec283c6dc950ebb89e82",
+    },
+)
+IMMUTABLE_FILES = (
+    ".gitattributes",
+    "VERSION",
+    "assessment.md",
+    "checkpoint-contract.json",
+    "instructor-notes.md",
+    "release.json",
+    "build_checkpoint.py",
+    "validate_checkpoint.py",
+)
+WORK_FILES = (
+    "README.md",
+    "evidence-index.csv",
+    "place-targeting-intervention-readiness-review.md",
+    "checkpoint-score.csv",
+    "checkpoint-gates.csv",
+    "responsible-claims-audit.md",
+    "checkpoint-defense.md",
+    "reviewer-record.md",
+    "conditions-register.csv",
+    "reproducibility-check.md",
+    "ai-use.md",
+    "progression-decision.md",
+)
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def load_builder(module_id: str, root: Path):
+    spec = importlib.util.spec_from_file_location(
+        f"{module_id.replace('-', '_')}_workspace", root / "build_workspace.py"
+    )
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Cannot load workspace builder for {module_id}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def copy(source: Path, target: Path, relative: str) -> None:
+    destination = target / relative
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source, destination)
+
+
+def assemble(target: Path, reference: bool = False) -> dict[str, object]:
+    target = target.resolve()
+    if target.exists():
+        raise FileExistsError(f"Refusing to overwrite existing target: {target}")
+    record_root = CHECKPOINT_ROOT / ("reference" if reference else "template")
+    missing = [name for name in IMMUTABLE_FILES if not (CHECKPOINT_ROOT / name).is_file()]
+    missing += [name for name in WORK_FILES if not (record_root / name).is_file()]
+    if missing:
+        raise FileNotFoundError(f"Checkpoint package is missing: {', '.join(missing)}")
+
+    target.mkdir(parents=True)
+    for name in IMMUTABLE_FILES:
+        copy(CHECKPOINT_ROOT / name, target, name)
+    for name in WORK_FILES:
+        copy(record_root / name, target, name)
+
+    manifest: list[dict[str, object]] = []
+    with tempfile.TemporaryDirectory(prefix="app5-cp02-modules-") as temporary:
+        temp = Path(temporary)
+        for details in MODULES:
+            workspace = temp / str(details["directory"])
+            report = load_builder(str(details["id"]), Path(details["root"])).assemble(
+                workspace, reference=True
+            )
+            nested_manifest = workspace / "release-manifest.csv"
+            if (
+                report["assembled_files"] != details["files"]
+                or report["manifest_rows"] != details["manifest_rows"]
+                or nested_manifest.stat().st_size != details["manifest_bytes"]
+                or report["manifest_sha256"] != details["manifest_sha256"]
+            ):
+                raise ValueError(f"{details['id']} accepted workspace identity changed")
+            for path in sorted(workspace.rglob("*")):
+                if not path.is_file() or "__pycache__" in path.parts:
+                    continue
+                within = path.relative_to(workspace).as_posix()
+                relative = f"candidate/{details['directory']}/{within}"
+                copy(path, target, relative)
+                destination = target / relative
+                manifest.append(
+                    {
+                        "relative_path": relative,
+                        "bytes": destination.stat().st_size,
+                        "sha256": sha256(destination),
+                        "source_module": details["id"],
+                        "source_version": details["version"],
+                        "role": "accepted reference workspace artifact",
+                    }
+                )
+
+    manifest.sort(key=lambda row: str(row["relative_path"]))
+    manifest_path = target / "candidate-manifest.csv"
+    with manifest_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=(
+                "relative_path",
+                "bytes",
+                "sha256",
+                "source_module",
+                "source_version",
+                "role",
+            ),
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(manifest)
+
+    file_count = sum(
+        path.is_file() for path in target.rglob("*") if "__pycache__" not in path.parts
+    )
+    if len(manifest) != 1030 or file_count != 1051:
+        raise ValueError(
+            f"Checkpoint contract changed: {len(manifest)} candidate rows and {file_count} files"
+        )
+    return {
+        "status": "pass",
+        "mode": "reference" if reference else "learner",
+        "candidate_manifest_rows": len(manifest),
+        "candidate_manifest_bytes": manifest_path.stat().st_size,
+        "candidate_manifest_sha256": sha256(manifest_path),
+        "checkpoint_editable_records": len(WORK_FILES),
+        "assembled_files": file_count,
+    }
+
+
+def self_check() -> None:
+    with tempfile.TemporaryDirectory(prefix="app5-cp02-build-") as temporary:
+        base = Path(temporary)
+        first = base / "reference-1"
+        second = base / "reference-2"
+        learner = base / "learner"
+        one = assemble(first, reference=True)
+        two = assemble(second, reference=True)
+        starter = assemble(learner)
+        assert one == two
+        assert one["candidate_manifest_rows"] == 1030
+        assert one["assembled_files"] == starter["assembled_files"] == 1051
+        assert one["candidate_manifest_sha256"] == starter["candidate_manifest_sha256"]
+        assert "REPLACE" not in (
+            first / "place-targeting-intervention-readiness-review.md"
+        ).read_text(encoding="utf-8")
+        assert "REPLACE" in (
+            learner / "place-targeting-intervention-readiness-review.md"
+        ).read_text(encoding="utf-8")
+        first_files = {
+            path.relative_to(first): sha256(path)
+            for path in first.rglob("candidate/**/*")
+            if path.is_file()
+        }
+        second_files = {
+            path.relative_to(second): sha256(path)
+            for path in second.rglob("candidate/**/*")
+            if path.is_file()
+        }
+        assert first_files == second_files
+        try:
+            assemble(first, reference=True)
+        except FileExistsError:
+            pass
+        else:
+            raise AssertionError("Checkpoint builder overwrote an existing target")
+    print(
+        "APP-5 Checkpoint 02 builder self-check passed: "
+        "1,030 accepted component files and 1,051 assembled files."
+    )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--target", type=Path)
+    parser.add_argument("--reference", action="store_true")
+    parser.add_argument("--self-check", action="store_true")
+    args = parser.parse_args()
+    try:
+        if args.self_check:
+            self_check()
+        elif args.target:
+            print(json.dumps(assemble(args.target, reference=args.reference), indent=2))
+        else:
+            parser.error("--target is required unless --self-check is used")
+    except (OSError, ValueError, ImportError) as error:
+        parser.exit(1, f"Build failed: {error}\n")
+
+
+if __name__ == "__main__":
+    main()

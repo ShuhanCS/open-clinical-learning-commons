@@ -1,0 +1,12 @@
+source_module,criterion_id,criterion,points_available,points_awarded,evidence
+oclc-app5-04,R1,Source and geometry integrity,2,REPLACE,REPLACE
+oclc-app5-04,R2,Join aggregation and stability accounting,3,REPLACE,REPLACE
+oclc-app5-04,R3,Responsible accessible map and exact alternative,3,REPLACE,REPLACE
+oclc-app5-04,R4,Ecological contextual reproducibility and claim limits,2,REPLACE,REPLACE
+oclc-app5-04,TOTAL,Module 04 Week 6 component,10,REPLACE,REPLACE
+oclc-app5-05,R1,Decision resource and rule integrity,3,REPLACE,REPLACE
+oclc-app5-05,R2,Inclusion exclusion access capacity and burden accounting,4,REPLACE,REPLACE
+oclc-app5-05,R3,Fairness geography group benefit harm and sensitivity reasoning,5,REPLACE,REPLACE
+oclc-app5-05,R4,Community review recourse reproducibility AI and claim limits,3,REPLACE,REPLACE
+oclc-app5-05,TOTAL,Module 05 Week 6 component,15,REPLACE,REPLACE
+checkpoint,SUMMARY,Cumulative Week 6 package,25,REPLACE,REPLACE

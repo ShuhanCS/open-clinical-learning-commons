@@ -14,7 +14,7 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.92.0` through Module 05.
+- Current Commons release target: `0.94.0` through Checkpoint 02.
 - Specification status: construction candidate.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
@@ -349,7 +349,7 @@ All 34 Module 06 gates pass. The package may enter construction of the separate 
 - Decision: whether to recommend structured community review of one bounded fictional intervention plan, revise the evidence or plan, refer the question, or stop.
 - Submission: final population intervention analytics plan and defense.
 - Point role: 35-point final component.
-- Build status: planned after Checkpoint 02 acceptance.
+- Build status: next isolated build unit after accepted Checkpoint 02 version `0.1.0` at Commons `0.94.0`.
 
 Module 07 freezes the accepted Week 3 and Week 6 evidence before adding leadership records. Learners cannot change the population, denominator, geography, standardization, disparity measure, reference group, suppression, map facts, targeting results, resource constraint, intervention assumptions, monitoring facts, or ML result inside the leadership package.
 
@@ -382,8 +382,9 @@ Checkpoint acceptance freezes the population, geography, period, source identiti
 
 - Timing: end of instructional Week 6.
 - Course points: 25.
-- Planned package path: `courses/population-health-equity/checkpoints/02-place-targeting-intervention-release/`.
-- Planned specification: `docs/curriculum/courses/APP-5/checkpoints/02-place-targeting-intervention-release-spec.md`.
+- Package path: `courses/population-health-equity/checkpoints/02-place-targeting-intervention-release/`.
+- Specification: `docs/curriculum/courses/APP-5/checkpoints/02-place-targeting-intervention-release-spec.md`.
+- Build status: runnable release candidate at checkpoint version `0.1.0` and Commons release `0.94.0`.
 - Decision: is the complete place, targeting, fairness, intervention, monitoring, accountability, and ML case strong enough for clinician leadership review?
 
 Required evidence includes the accepted Week 3 identity; complete TIGER source and geometry checks; spatial-join accounting; tract and county aggregation comparison; small-area stability; ecological and contextual claim audit; responsible accessible map and exact table; non-stigmatizing context memo; fixed fictional resource and capacity constraints; equal, need-based, capacity-aware, and community-review rules; inclusion and exclusion results; fairness definition; differential impact; benefit and harm tradeoffs; access and burden; sensitivity; balancing measures; intervention theory; implementation measures; monitoring plan; feedback and recourse; incidents; escalation, pause, stop, revision, and retirement; fixed clustering challenger; stability and support checks; 25-point score; gates; AI record; claim audit; defense; and progression decision.
@@ -391,6 +392,12 @@ Required evidence includes the accepted Week 3 identity; complete TIGER source a
 The checkpoint counts the 10-point Module 04 and 15-point Module 05 components once. Module 06 adds required intervention, monitoring, accountability, governance, and embedded-ML gates without adding points.
 
 Checkpoint acceptance freezes the public and synthetic evidence, responsible map, targeting comparisons, scored decisions, intervention assumptions, monitoring facts, and ML result before leadership work. No tract is made genuinely eligible, funded, enrolled, or contacted.
+
+The accepted checkpoint freezes 287 Module 04 files, 340 Module 05 files, and 403 Module 06 files in a 1,030-row candidate manifest. The three nested manifests protect 966 immutable rows. The 249,511-byte candidate manifest has SHA-256 `6d403bfb0e4bb6f177400ae97a3b1d89cf968c35b24482f64cea6b927f397f83`.
+
+The reference earns 25 of 25 by counting the accepted 10 and 15 points once. Module 06 and checkpoint integrity add zero points. All 82 inherited gates and all 24 checkpoint gates pass. Complete validation passes 7,071 checks, learner validation passes 7,058 checks, copied validation passes, and 14 protected failure routes are rejected.
+
+The reference disposition is `continue with conditions`. Module 07 curriculum construction is permitted for clinician leadership interpretation, accountability, recommendation, and defense. The intervention remains unready, the clustering challenger remains rejected, the transparent community-review comparison remains unchanged, and every real-world authority route remains prohibited.
 
 ### Final checkpoint: Population intervention analytics plan
 

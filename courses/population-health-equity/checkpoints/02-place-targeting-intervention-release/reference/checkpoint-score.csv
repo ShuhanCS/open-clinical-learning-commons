@@ -1,0 +1,12 @@
+source_module,criterion_id,criterion,points_available,points_awarded,evidence
+oclc-app5-04,R1,Source and geometry integrity,2,2,"exact official archive fingerprint; 1620 unique tracts; EPSG 4269; 1620 valid geometry rows; projected area check passes"
+oclc-app5-04,R2,Join aggregation and stability accounting,3,3,"1597 matched and 23 unavailable; 14 county teaching summaries; 49 support-review tracts; 645 class changes after aggregation"
+oclc-app5-04,R3,Responsible accessible map and exact alternative,3,3,"accessible SVG with fixed absolute classes; complete 1620-row exact table; structured text alternative and legend counts"
+oclc-app5-04,R4,Ecological contextual reproducibility and claim limits,2,2,"10-claim audit; context memo; deterministic build; AI record; bounded progression"
+oclc-app5-04,TOTAL,Module 04 Week 6 component,10,10,"subtotal only; counted once"
+oclc-app5-05,R1,Decision resource and rule integrity,3,3,"287-file upstream handoff; 1597-row synthetic source; fixed 280-place contract; four exact rules"
+oclc-app5-05,R2,Inclusion exclusion access capacity and burden accounting,4,4,"6388 complete assignments; 28 selections and 280 places per rule; all exclusions and consequences visible"
+oclc-app5-05,R3,Fairness geography group benefit harm and sensitivity reasoning,5,5,"four named fairness definitions; 56 county rows; 76 suppression-preserving group rows; six overlaps; 20 sensitivities"
+oclc-app5-05,R4,Community review recourse reproducibility AI and claim limits,3,3,"accessible review appeal correction pause and stop routes; deterministic release; bounded AI and progression"
+oclc-app5-05,TOTAL,Module 05 Week 6 component,15,15,"subtotal only; counted once"
+checkpoint,SUMMARY,Cumulative Week 6 package,25,25,"non-additive summary of Module 04 plus Module 05; Module 06 and checkpoint integrity add zero points"

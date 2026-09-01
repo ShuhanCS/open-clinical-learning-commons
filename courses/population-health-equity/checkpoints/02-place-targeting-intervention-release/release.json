@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable release candidate",
+  "release_date": "2026-08-31",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app5-cp02",
+    "title": "Place, targeting, intervention, and monitoring release",
+    "version": "0.1.0",
+    "commons_release": "0.94.0",
+    "course": "APP-5: Data for Population Health and Equity",
+    "due_point": "end of instructional Week 6",
+    "course_points": 25,
+    "point_source": "Module 04 10 points once plus Module 05 15 points once; Module 06 adds zero points"
+  },
+  "accepted_modules": [
+    {"id": "oclc-app5-04", "version": "0.1.0", "commons_release": "0.91.0", "assembled_files": 287, "manifest_rows": 271, "manifest_bytes": 48575, "manifest_sha256": "c0300a2eff3fa9ede53eab4723fe7296cad341cf5f6e4e5e76fde25881652629", "points": 10},
+    {"id": "oclc-app5-05", "version": "0.1.0", "commons_release": "0.92.0", "assembled_files": 340, "manifest_rows": 318, "manifest_bytes": 62245, "manifest_sha256": "54da8bae1c36ae49397b278fc636f2b8e112f55406acbfc57c94a215087818da", "points": 15},
+    {"id": "oclc-app5-06", "version": "0.1.0", "commons_release": "0.93.0", "assembled_files": 403, "manifest_rows": 377, "manifest_bytes": 79357, "manifest_sha256": "2e9358d65c889e786db474de97e223982a8d238dba64ec283c6dc950ebb89e82", "points": 0}
+  ],
+  "accepted_evidence": {
+    "component_files": 1030,
+    "immutable_rows": 966,
+    "checkpoint_score": "25 of 25",
+    "module04_gates": "22 of 22 pass",
+    "module05_gates": "26 of 26 pass",
+    "module06_gates": "34 of 34 pass",
+    "checkpoint_gates": "24 of 24 pass",
+    "mapped_estimates": 1597,
+    "geometry_only_unavailable": 23,
+    "targeting_rules": 4,
+    "awards_per_rule": 28,
+    "community_review_selected_tracts": 28,
+    "staff_not_ready": 5,
+    "high_travel": 12,
+    "high_burden": 1,
+    "monitoring_measures": 20,
+    "monitoring_triggers": 6,
+    "dry_run_incidents": 23,
+    "intervention_ready_for_real_use": false,
+    "challenger_accepted": false,
+    "challenger_decision": "not useful; preserve transparent community-review rule only"
+  },
+  "package": {
+    "candidate_manifest_rows": 1030,
+    "candidate_manifest_bytes": 249511,
+    "candidate_manifest_sha256": "6d403bfb0e4bb6f177400ae97a3b1d89cf968c35b24482f64cea6b927f397f83",
+    "checkpoint_editable_records": 12,
+    "defense_questions": 16,
+    "assembled_files": 1051,
+    "external_python_dependencies": 0
+  },
+  "progression": {
+    "reference": "continue with conditions",
+    "module07_permission": "permitted for curriculum construction",
+    "final_checkpoint_permission": "prohibited until Module 07 passes",
+    "real_need_or_eligibility": "prohibited",
+    "outreach": "prohibited",
+    "allocation_or_funding": "prohibited",
+    "service_delivery": "prohibited",
+    "effect_estimation": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "validation": {
+    "builder_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 7071,
+    "starter_checks": 7058,
+    "failure_routes_rejected": 14
+  },
+  "known_issues": [
+    "The official APP-5 section and half-term dates remain to be assigned from the published academic calendar.",
+    "Named faculty, clinical, methods, community, access, safety, governance, responsible-AI, clinician-leadership, and independent-reproduction reviews remain pending before alpha.",
+    "The fictional intervention remains unready for real use and has no outcome evidence.",
+    "The clustering challenger remains rejected because scaling stability and selected-area coverage failed.",
+    "No package authorizes real need determination, consent, eligibility, outreach, funding, allocation, community action, service delivery, effect estimation, implementation, production connection, or deployment."
+  ]
+}

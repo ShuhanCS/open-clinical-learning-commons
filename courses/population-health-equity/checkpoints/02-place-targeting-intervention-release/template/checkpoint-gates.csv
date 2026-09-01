@@ -1,0 +1,25 @@
+gate_id,gate,status,evidence,owner
+G01,Exact Module 04 through Module 06 identities are preserved,REPLACE,REPLACE,REPLACE
+G02,All 1030 candidate files match the outer manifest,REPLACE,REPLACE,REPLACE
+G03,All 966 nested immutable rows match accepted manifests,REPLACE,REPLACE,REPLACE
+G04,Module 04 contributes 10 and Module 05 contributes 15 points once while Module 06 adds zero,REPLACE,REPLACE,REPLACE
+G05,All 82 inherited noncompensable gates pass,REPLACE,REPLACE,REPLACE
+G06,Responsible map accessibility and exact-table evidence remain complete,REPLACE,REPLACE,REPLACE
+G07,All 1597 mapped estimates and 23 unavailable geography-only rows remain visible,REPLACE,REPLACE,REPLACE
+G08,Aggregation support ecological and contextual limits remain explicit,REPLACE,REPLACE,REPLACE
+G09,Four fixed fictional targeting rules and resource constraints remain exact,REPLACE,REPLACE,REPLACE
+G10,Inclusion exclusion consequences and all 20 sensitivity variants remain visible,REPLACE,REPLACE,REPLACE
+G11,Community review remains a transparent candidate and not an automatic rule,REPLACE,REPLACE,REPLACE
+G12,Language and disability access routes remain required,REPLACE,REPLACE,REPLACE
+G13,Five staff-not-ready twelve high-travel and one high-burden conditions remain visible,REPLACE,REPLACE,REPLACE
+G14,Fictional intervention purpose assumptions owners and authority remain explicit,REPLACE,REPLACE,REPLACE
+G15,Outcomes remain unavailable and no intervention effect is estimated,REPLACE,REPLACE,REPLACE
+G16,All 20 measures and six triggers retain denominators owners and human responses,REPLACE,REPLACE,REPLACE
+G17,Feedback correction refusal appeal and disagreement routes remain complete,REPLACE,REPLACE,REPLACE
+G18,All 23 incidents retain named escalation routes,REPLACE,REPLACE,REPLACE
+G19,Pause stop revision and retirement rights remain human owned,REPLACE,REPLACE,REPLACE
+G20,The fixed clustering challenger preserves its features rows algorithm seed and variants,REPLACE,REPLACE,REPLACE
+G21,Scaling instability and selected-area coverage failures remain visible,REPLACE,REPLACE,REPLACE
+G22,The challenger remains rejected and the transparent community-review comparison remains unchanged,REPLACE,REPLACE,REPLACE
+G23,Claims AI reproduction defense review and conditions records are complete,REPLACE,REPLACE,REPLACE
+G24,Module 07 permission is bounded and every real-world authority route remains prohibited,REPLACE,REPLACE,REPLACE

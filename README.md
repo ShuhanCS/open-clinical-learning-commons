@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.93.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-4 are complete with seven modules and three checkpoints each. APP-5 has a complete course contract, runnable Modules 01 through 06, and a runnable Week 3 checkpoint.
+- Current version: `0.94.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-4 are complete with seven modules and three checkpoints each. APP-5 has a complete course contract, runnable Modules 01 through 06, and runnable Week 3 and Week 6 checkpoints.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -164,6 +164,8 @@ The fourth runnable unit is [APP-5 Module 04: Place-based evidence and geographi
 The fifth runnable unit is [APP-5 Module 05: Targeting and fairness](courses/population-health-equity/modules/05-targeting-fairness/README.md), governed by its durable [Module 05 specification](docs/curriculum/courses/APP-5/modules/05-targeting-fairness-spec.md). It freezes the complete 287-file Module 04 reference workspace, adds an independent 1,597-row fictional planning layer, and compares equal geographic, need-based, capacity-aware, and community-review rules under one fixed 280-place resource contract. The 6,388 assignments expose different geographic, support, access, burden, objection, capacity, and group consequences, while 20 predeclared sensitivities show how rule choices change the result. The reference earns 15 of 15 and passes all 26 gates. Module 06 curriculum construction may begin with conditions using the community-review rule only as the least unacceptable fictional planning candidate. Real need, consent, priority, eligibility, outreach, funding, allocation, community action, service delivery, implementation, production connection, and deployment remain prohibited.
 
 The sixth runnable unit is [APP-5 Module 06: Accountable intervention design, monitoring, and embedded ML](courses/population-health-equity/modules/06-intervention-monitoring-embedded-ml/README.md), governed by its durable [Module 06 specification](docs/curriculum/courses/APP-5/modules/06-intervention-monitoring-embedded-ml-spec.md). It freezes the complete 340-file Module 05 reference, reconciles 280 fictional monitoring tests, reports all 20 measures and six human-review triggers, and preserves feedback, recourse, incident, pause, stop, revision, and retirement. Its fixed four-cluster challenger passes alternate-seed checks but fails the preregistered scaling and selected-area coverage standards, so the model is rejected without tuning and the transparent community-review comparison remains unchanged. All 34 gates pass, permitting construction of the separate Week 6 checkpoint while real intervention use and Module 07 remain prohibited.
+
+The cumulative [APP-5 Week 6 checkpoint](courses/population-health-equity/checkpoints/02-place-targeting-intervention-release/reference/README.md), governed by its durable [checkpoint specification](docs/curriculum/courses/APP-5/checkpoints/02-place-targeting-intervention-release-spec.md), freezes 1,030 accepted files and 966 nested immutable rows from Modules 04 through 06. It counts the accepted 10 and 15 points once, keeps Module 06 as a zero-point gate, passes all 106 inherited and checkpoint gates, preserves the unready intervention and rejected challenger, and permits Module 07 curriculum construction with conditions.
 
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
@@ -341,7 +343,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build the separate APP-5 Week 6 checkpoint from accepted Modules 04 through 06.
+1. Build APP-5 Module 07 from the accepted Week 3 and Week 6 checkpoints.
 2. Continue APP-5 through APP-7 one distinct module and checkpoint at a time.
 3. Preserve separate final checkpoints and clinician-led leadership blocks for every applied course.
 4. Complete named human reviews before alpha promotion.
