@@ -1,9 +1,9 @@
 # Nutrition Data Rounds
 
 - Status: canonical working specification
-- Specification version: `NDR-0.1`
+- Specification version: `NDR-0.2`
 - Date: 2026-09-01
-- Commons release: `0.106.1`
+- Commons release: `0.106.2`
 - Challenge: NIH Integration of Nutrition Training into Health Care Education Challenge
 - Track: Developing
 - Program type: Residency Program
@@ -69,6 +69,8 @@ The local gap claim remains provisional until HAEMR completes a baseline invento
 | D-008 | Use AI-generated advice as an object of critique, not as the final grader or clinical authority. | This supports responsible AI education without making the course depend on unstable model output. |
 | D-009 | Build one polished vertical-slice case before submission, not all 40 hours. | The Developing Track permits a proposed curriculum. One working case can establish feasibility. |
 | D-010 | Publish through the Open Clinical Learning Commons without requiring MGB Azure, an EHR connection, or proprietary software for adoption. | The national adoption path must be credible. |
+| D-011 | Treat residents as learners during institutionally approved educational time. Faculty and staff own curriculum development, data stewardship, platform maintenance, and evaluation administration. | The curriculum should fit graduate medical education without depending on uncompensated resident labor. |
+| D-012 | Treat any food, wellbeing support, educational benefit, or conference travel as an optional implementation resource that requires prior institutional approval. | The submission cannot promise spending, alter an existing benefit, or create a continuing employment commitment. |
 
 ## Non-goals for the submission build
 
@@ -231,6 +233,27 @@ The computational model reduces recurring delivery work. It does not remove acco
 
 A department, program, laboratory, or individual is not automatically a separate eligible institution. The official Lead Entity and Point of Contact must satisfy the challenge rules.
 
+## Resident education and labor compliance
+
+This is the working compliance basis for Curriculum Overview Section 9, Context within medical education. It explains why the proposed learning activities fit the current public record. It does not authorize the project, commit funds, change a resident benefit, or replace review by MGB Graduate Medical Education, Human Resources, Labor Relations, finance, the residency program, or department leadership.
+
+The current collective bargaining agreement between Mass General Brigham and the Committee of Interns and Residents/SEIU is effective from May 23, 2025, through June 30, 2027: https://www.cirseiu.org/wp-content/uploads/2025/07/Mass-General-Brigham-CBA-2025-2027-RevB.pdf. MGB must confirm the agreement's application to the proposed learner cohort and the final implementation plan.
+
+| Proposed activity | Documented basis | Project boundary |
+|---|---|---|
+| Browser cases, courses, simulations, and computer training | CBA Article 15, page 10, identifies education as a component of residency and lists didactics, conferences, courses, simulations, and computer training among scheduled academic activities that MGB will endeavor to facilitate. | HAEMR leadership approves placement and protects patient care. The project does not independently schedule resident time. |
+| Placement within existing residency education | HAEMR describes a weekly Wednesday conference from 12:00 p.m. to 5:00 p.m. during which residents are free from clinical responsibilities. Its published methods include simulation, small groups, and interactive instruction: https://haemr.org/residency/curriculum/. | The conference is a documented implementation opportunity, not a confirmed commitment. Final placement remains subject to HAEMR approval. |
+| Required learner participation | CBA Article 14, pages 9 to 10, requires resident schedules and duty hours to meet applicable ACGME requirements and describes duty-hour recording. | Any required round must be scheduled and recorded through the residency program. The project will not require unrecorded work outside approved education time. |
+| Resident role in the project | CBA Article 8, page 6, addresses excessive reliance on residents for non-physician obligations. Article 15 supports their role in education. | Residents complete learning activities and ordinary course feedback. Faculty and staff build and maintain the curriculum, prepare data, administer evaluation, and manage the platform. Residents are not used as unpaid programmers, data curators, research staff, or administrative labor. |
+| Meals, materials, or an additional educational benefit | CBA Article 24, page 16, preserves existing department meal benefits and requires union notice and consultation before a reduction. Article 18(C), page 13, permits MGB, at its discretion, to provide additional benefits. | Any meal or additional resource is incidental, time limited, available on an equitable basis, and subject to MGB approval and purchasing rules. It is not compensation, a condition of research or labor, a substitute for an existing benefit, or a promise of a permanent benefit. |
+| Resident wellbeing extension | CBA Article 10, page 8, establishes a House Staff Wellbeing Committee and an annual MGB budget of up to $50,000. The committee submits funding requests to the GME Office for approval. | This is a possible later sustainability route. The submission assumes no access to these funds and makes no commitment on behalf of the committee or GME. |
+| Presentation and dissemination | CBA Article 17, pages 11 to 12, addresses authorized business travel, approved conference travel, and program-specific education or conference benefits. | Conference support is requested through existing program and MGB processes. The submission does not promise reimbursement or use a resident's discretionary stipend as project funding. |
+| A recurring benefit or material change in working conditions | CBA Article 12, page 9, establishes a labor-management process for issues involving working conditions, facilities, and the agreement. | MGB GME, Human Resources, and Labor Relations decide whether notice or consultation is needed. The project team will not negotiate employment terms directly with residents or the union. |
+
+Grant-ready compliance language:
+
+> Residents will participate as learners during institutionally approved educational time. Faculty and staff will perform curriculum development, technical implementation, data stewardship, platform maintenance, and evaluation administration. Any meals, educational resources, wellbeing support, or conference travel will be incidental to the educational program, time limited, and provided only through approved institutional processes. No project resource will substitute for compensation, depend on resident labor or research participation, reduce an existing benefit, or create a continuing employment commitment. All implementation activities remain subject to MGB policy, Graduate Medical Education requirements, the applicable collective bargaining agreement, and final institutional approval.
+
 ## NIH scoring strategy
 
 The Developing Track Curriculum Overview receives a global score from 0 to 5 on each of eight criteria, for a maximum of 40 points. Scalability has a required narrative section and is a cross-cutting expectation, but it is not a ninth 5-point Developing Track criterion.
@@ -368,6 +391,7 @@ Each simulated reviewer scores all eight criteria independently from 0 to 5, cit
 | Specification version | Date | Change |
 |---|---|---|
 | `NDR-0.1` | 2026-09-01 | Replaced the broad food-centered concept with Nutrition Data Rounds, a ten-round computational curriculum, and defined the prototype, automation boundary, evaluation plan, decision IDs, and question register. |
+| `NDR-0.2` | 2026-09-01 | Added the resident education and labor compliance basis, cited the MGB resident agreement and HAEMR curriculum, and fixed the resident, benefit, and institutional approval boundaries. |
 
 ## Official sources
 
@@ -378,5 +402,7 @@ Each simulated reviewer scores all eight criteria independently from 0 to 5, cit
 - Challenge portal: https://nutritioneducationchallenge.org/
 - Challenge FAQ: https://nutritioneducationchallenge.org/faq/
 - Harvard-Affiliated Emergency Medicine Residency: https://haemr.org/
+- Harvard-Affiliated Emergency Medicine Residency educational curriculum: https://haemr.org/residency/curriculum/
+- MGB and CIR/SEIU 2025-2027 Collective Bargaining Agreement: https://www.cirseiu.org/wp-content/uploads/2025/07/Mass-General-Brigham-CBA-2025-2027-RevB.pdf
 - Mass General Brigham University Health Data Analytics Program: https://www.mgbu.edu/health-rehabilitation-sciences/departments-programs/health-sciences/master-science-healthcare-data-analytics/
 - Open Clinical Learning Commons: https://github.com/ShuhanCS/open-clinical-learning-commons
