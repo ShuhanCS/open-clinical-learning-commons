@@ -6,65 +6,15 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.99.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star and simulated review panel are also included.
+- Current version: `0.100.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The nutrition education initiative now has a separate public page.
 
-## NIH nutrition education award North Star
+## Nutrition education initiative
 
-The Commons is being considered as the delivery layer for an NIH Developing Track submission tentatively titled **Open Nutrition Data Commons for Nursing Education**.
+The NIH nutrition education award work is separate from the 11-course health analytics catalog.
 
-> Build a 53-hour, competency-mapped nutrition data and responsible AI pathway for nursing learners, using the Mass General Brigham University Health Data Analytics applied curriculum as its recurring build and validation engine, the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence as its institutional lead and engineering builder, and nursing educators and nutrition experts as its practice and content partners.
-
-The challenge curriculum serves nursing learners and meets the 53-hour nursing expectation. The Health Data Analytics applied curriculum is a linked builder layer where data educators and learners help develop, test, and improve the reusable analytics activities. The Division of Artificial Intelligence leads the submission and engineering work, using its institutionally procured Microsoft Azure environment for development and validation. Nursing education provides practice review, the target learner context, and a planned adoption pathway. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
-
-The full working specification, open decisions, proposed 53-hour map, evidence plan, and simulated review procedure are in [the NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
-
-### Official Developing Track evaluation criteria
-
-The scored Curriculum Overview has eight equally weighted criteria. Each receives 0 to 5 points, for a maximum of 40 points.
-
-| Criterion | What reviewers need to see from this submission |
-|---|---|
-| Framework | A traceable 53-hour map from every lesson, activity, and assessment to selected HHS nutrition competencies. |
-| Innovation | A clear reason that an open data commons, applied analytics, and responsible AI improve nutrition learning rather than merely adding technology. |
-| Clarity of teaching methods | A module sequence with learner actions, instructor actions, time, modality, outputs, and assessment rules. |
-| Means to address identified competency gaps | A documented gap in current nursing nutrition education and a direct explanation of which curriculum components close it. |
-| Evaluation methods | Feasible measures of knowledge, applied performance, communication, referral judgment, data reasoning, and responsible AI use. |
-| Integration of innovative approaches | Authentic cases, synthetic data, simulation, interactive visualization, AI audit, and experiential work tied to learning outcomes. |
-| Context within medical or nursing education | A credible place in nursing education, including whether components are required, elective, embedded, or piloted. |
-| Interdisciplinary approach | Defined and evidenced roles for Division AI builders, Health Data Analytics educators, nursing educators, and a credentialed nutrition expert. |
-
-Scalability is also a required submission theme even though it is not a ninth 5-point Developing Track criterion. The public toolkit must make national adoption credible.
-
-### Who evaluates and judges
-
-NIH has published the panel structure, but it has not published individual judge names.
-
-1. An administrative triage checks eligibility, completeness, and applicability to the challenge scope.
-2. An Evaluation Panel of technical subject-matter experts scores eligible submissions against the published criteria.
-3. A Judging Panel of federal employees from NIH and potentially other federal agencies considers those evaluations and selects winners, pending approval.
-4. The Award Approving Official makes the final award decision.
-
-Official challenge page: https://www.nih.gov/challenges/integration-nutrition-training-into-health-care-education-challenge
-
-Official submission guide: https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/FINAL_5.21.26_Submission-Guide_NIH-Nutrition-Challenge.pdf
-
-HHS Medical Education Nutrition Competency Framework: https://www.hhs.gov/sites/default/files/nutrition-competencies-framework.pdf
-
-### Internal simulated review panel
-
-This is a fictional panel for rehearsal. Its members are roles, not representations of actual or expected NIH judges.
-
-| Simulated reviewer | Primary lens | Questions this reviewer will press |
-|---|---|---|
-| Nutrition science and dietetics reviewer | Framework, evidence, scope of practice | Is the nutrition content current, balanced, clinically appropriate, and reviewed by qualified experts? |
-| Nursing curriculum reviewer | Nursing context and competency gaps | Can a nursing program place the 53 hours in a real curriculum, and do the activities prepare nurses for practice? |
-| Learning science and assessment reviewer | Teaching clarity and evaluation | Do learners practice the stated competencies, and can the proposed assessments show that they learned them? |
-| Clinical AI and data reviewer | Innovation and responsible technology use | Does analytics improve the educational task, are AI outputs auditable, and can learners detect unsafe or biased results? |
-| Implementation and open education reviewer | Scalability and reuse | Can another institution understand, adapt, teach, and maintain the package without MGB infrastructure? |
-| Simulated federal adjudicator | Public value and overall confidence | Is this in scope, feasible, distinctive, nationally useful, and ready to recognize as a Developing Track model? |
-
-The internal go standard is at least 34 of 40 points, no criterion below 4, no unresolved administrative triage failure, and no unsupported institutional claim. This is an internal quality bar, not a score or cutoff published by NIH.
+- Public initiative page: [nutrition.html](nutrition.html)
+- Working North Star specification: [docs/specs/2026-09-01-nih-nutrition-award-north-star.md](docs/specs/2026-09-01-nih-nutrition-award-north-star.md)
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -262,6 +212,7 @@ The complete seven-week path, prerequisites, and final deliverable for every cou
 | Course | `course.html?id=FND-1` | Shows one course and its seven modules. |
 | Module | `module.html?course=FND-1&week=1` | Shows the outcome, topics, submission, workload, and course context for one roadmap module. |
 | Working lesson | `courses/data-visualization/atlas.html#atlas` | Opens the clinical visualization atlas and guided synthetic-data case. |
+| Nutrition initiative | `nutrition.html` | Keeps the proposed nursing nutrition pathway separate from the 11-course catalog. |
 
 The shared [curriculum-data.js](curriculum-data.js) file is the single source for all 11 courses and 77 modules. See [docs/plans/2026-08-29-course-module-site-plan.md](docs/plans/2026-08-29-course-module-site-plan.md) for the page contract and release checks.
 

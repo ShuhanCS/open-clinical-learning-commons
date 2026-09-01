@@ -1,6 +1,6 @@
 # Curriculum build ledger
 
-- Current release: 0.99.0
+- Current release: 0.100.0
 - Last updated: 2026-09-01
 - Active phase: applied-course build
 - Last completed unit: APP-5 Checkpoint 03, Population intervention analytics plan
@@ -26,8 +26,8 @@
 
 ## Public site release
 
-- Commons 0.99.0 applies the clinical visualization atlas design system to the home, course, and module pages.
-- Public catalog 0.40.0 retains all 11 course routes and 77 module routes while standardizing the Manrope and IBM Plex Mono typography, cool gray canvas, white learning panels, blue actions, compact route cards, and accessible focus treatment.
+- Commons 0.100.0 separates the nutrition education initiative from the curriculum catalog and publishes it on a dedicated review page.
+- Public catalog 0.41.0 retains all 11 course routes and 77 module routes while adding the standalone Nutrition route to the shared Atlas-styled navigation.
 
 ## Source status
 
