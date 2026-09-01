@@ -2,7 +2,7 @@
 
 - Status: working North Star and submission control document
 - Date: 2026-09-01
-- Commons release: `0.100.0`
+- Commons release: `0.101.0`
 - Challenge: NIH Integration of Nutrition Training into Health Care Education Challenge
 - Track: Developing
 - Program type: Residency Program
@@ -127,7 +127,7 @@ The page allocations are internal targets, not NIH requirements. They reserve ab
 Appendices should supply evidence, not rescue an incomplete narrative.
 
 1. Appendix: 40-Hour Curriculum Map
-2. Appendix: Competency Mapping
+2. Appendix: [HAEMR Nutrition Competency Crosswalk](2026-09-01-haemr-nutrition-competency-crosswalk.md)
 3. Appendix: Sample Instructional Session
 4. Appendix: Evaluation Tools
 5. Appendix: Dissemination and Scalability
@@ -186,17 +186,20 @@ The body must cover:
 
 An actual 40-hour map is easier to verify than a competency-equivalent claim. The team should use the equivalence route only if HAEMR cannot adopt a clock-hour map.
 
-| Component | Hours | Primary resident work | Educational purpose |
-|---|---:|---|---|
-| Nutrition foundations and evidence | 5 | Interpret core nutrition concepts and distinguish strong evidence from unsupported claims. | Establish a common evidence base. |
-| Nutrition risk and assessment in emergency care | 6 | Recognize risk from history, examination, measurements, laboratory findings, and clinical context. | Connect nutrition to emergency assessment and disposition. |
-| Acute and chronic disease integration | 6 | Apply nutrition reasoning to common emergency presentations and diet-related chronic disease. | Move from general knowledge to clinical decisions. |
-| Food access, equity, discharge, and referral | 5 | Identify access barriers, avoid unsafe assumptions, use local resources, and plan appropriate follow-up. | Link emergency care to prevention and continuity. |
-| Communication and interprofessional management | 4 | Practice brief counseling, shared goals, documentation, consultation, and referral. | Keep resident actions within scope and connected to dietetics. |
-| Applied nutrition analytics and visualization | 5 | Build and interpret reproducible summaries from synthetic and open nutrition data. | Strengthen data reasoning and communication. |
-| Responsible AI and digital nutrition tools | 4 | Audit generated guidance, check sources, identify bias, and document human accountability. | Prepare residents to evaluate emerging tools safely. |
-| Integrated emergency cases and simulation | 5 | Complete and defend cases from assessment through communication, referral, and disposition. | Demonstrate integrated performance. |
-| **Total** | **40** |  |  |
+The [working HAEMR competency crosswalk](2026-09-01-haemr-nutrition-competency-crosswalk.md) selects 16 competencies across six HHS domains. The selection remains subject to HAEMR's baseline curriculum inventory and review by a qualified nutrition professional.
+
+| Component | HHS competencies | Hours | Primary resident work |
+|---|---|---:|---|
+| Nutrition foundations and evidence | 1, 11, 20 | 6.0 | Interpret core concepts, national guidance, bioavailability, and nutrition evidence. |
+| Nutrition risk and assessment in emergency care | 22, 24 | 7.0 | Use history, examination, measurements, laboratory findings, and clinical context to assess risk. |
+| Deficiency recognition | 3 | 3.0 | Recognize likely deficiency patterns and choose a safe immediate or follow-up action. |
+| Allergies, medication interactions, and supported nutrition | 4, 6, 9 | 7.0 | Address high-yield acute-care nutrition problems within emergency physician scope. |
+| Communication in acute care | 12, 30, 34 | 8.0 | Translate evidence into brief, patient-centered counseling and shared decisions. |
+| Interprofessional transition and referral | 39, 40, 44 | 7.0 | Screen for access barriers, involve the right discipline, and create an actionable transition plan. |
+| Responsible AI for nutrition information | 56 | 2.0 | Audit generated advice, verify sources, identify bias and safety risks, and document human accountability. |
+| **Total** | **16 competencies across six domains** | **40.0** |  |
+
+Applied analytics, visualization, simulation, and responsible AI are teaching methods inside these components. They support the selected competencies and are not counted as extra hours.
 
 ## Official Developing Track judging criteria
 
@@ -274,7 +277,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 
 ## Minimum evidence package
 
-1. Complete 40-hour curriculum and competency map.
+1. Complete the [40-hour curriculum and competency map](2026-09-01-haemr-nutrition-competency-crosswalk.md).
 2. One representative component at runnable release-candidate quality.
 3. One synthetic or open dataset with provenance, terms, data dictionary, and known limits.
 4. One worked resident case and one independent assessment task.
@@ -290,7 +293,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 - [ ] Confirm the authorized Point of Contact and Participant Agreement signer.
 - [ ] Obtain HAEMR program leadership commitment and select the resident years and curriculum placements.
 - [ ] Decide whether the curriculum uses 40 clock hours or documents a 40-hour competency equivalent.
-- [ ] Approve or revise the draft 40-hour map.
+- [ ] Approve or revise the working 16-competency, 40-hour map after the HAEMR baseline inventory and nutrition review.
 - [ ] Confirm the final public title.
 - [ ] Name a qualified nutrition reviewer and define the review responsibility.
 - [ ] Confirm the exact Health Data Analytics collaboration and letter.

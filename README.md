@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.100.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star and simulated review panel are also included.
+- Current version: `0.101.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star, simulated review panel, and 40-hour competency crosswalk are also included.
 
 ## NIH nutrition education award North Star
 
@@ -18,6 +18,8 @@ The Commons is being considered as the delivery layer for an NIH Developing Trac
 The Harvard-Affiliated Emergency Medicine Residency is the proposed educational setting and its residents are the target learners. Division AI is the proposed builder and institutional coordinator. The Health Data Analytics Program contributes applied analytics, visualization, reproducibility, and assessment design. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
 
 The full working specification contains the exact submission headings, page and formatting limits, eligibility gates, draft 40-hour map, evidence plan, and simulated review procedure: [NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
+
+The [working HAEMR nutrition competency crosswalk](docs/specs/2026-09-01-haemr-nutrition-competency-crosswalk.md) selects 16 competencies across six HHS domains, totals exactly 40 hours, and ties every competency to an emergency medicine learning activity and observable assessment. Final selection follows HAEMR's baseline curriculum inventory and review by a qualified nutrition professional.
 
 ### Submission requirements at a glance
 
