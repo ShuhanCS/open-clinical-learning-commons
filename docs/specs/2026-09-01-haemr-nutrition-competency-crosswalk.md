@@ -2,7 +2,7 @@
 
 - Status: working selection for institutional and nutrition review
 - Date: 2026-09-01
-- Commons release: `0.105.0`
+- Commons release: `0.106.0`
 - Proposed setting: Harvard-Affiliated Emergency Medicine Residency
 - Proposed track: NIH Developing Track, Residency Program
 - Official framework: https://www.hhs.gov/sites/default/files/nutrition-competencies-framework.pdf
@@ -44,9 +44,9 @@ The competency descriptions below are concise working labels. The official HHS f
 
 | HHS number | Domain | Hours | Working competency label | HAEMR learning activity | Observable assessment evidence |
 |---:|---|---:|---|---|---|
-| 1 | Foundational Nutrition Knowledge | 3.0 | Nutritional content of foods, including macro- and micronutrients | Residents compare nutrition claims in an emergency case with authoritative sources and a structured food-data summary. | Case-based knowledge check plus a short source-supported explanation. |
+| 1 | Foundational Nutrition Knowledge | 3.0 | Nutritional content of foods, including macro- and micronutrients | Residents compare actual foods or meals, nutrition claims, authoritative sources, and a structured food-data summary. | Case-based knowledge check plus a short source-supported explanation. |
 | 11 | Foundational Nutrition Knowledge | 2.0 | Healthy, balanced diet using national guidance | Residents translate national guidance into a realistic recommendation for a patient leaving the emergency department. | Discharge recommendation scored for accuracy, feasibility, and scope. |
-| 20 | Foundational Nutrition Knowledge | 1.0 | Bioavailability, preparation, and nutrient interactions | Residents explain how preparation or food combinations alter a case-relevant nutrition recommendation. | One-minute case explanation scored with an accuracy checklist. |
+| 20 | Foundational Nutrition Knowledge | 1.0 | Bioavailability, preparation, and nutrient interactions | Residents examine how preparation and food combinations alter a case-relevant nutrition recommendation during a structured food-centered session. | One-minute case explanation scored with an accuracy checklist. |
 | 22 | Assessment | 4.0 | Nutrition assessment using history, measurements, examination, and laboratory data | Residents work through synthetic emergency records, identify missing information, and produce a structured nutrition-risk assessment. | Completed assessment note scored for data selection, interpretation, uncertainty, and next action. |
 | 24 | Assessment | 3.0 | Examination and biomarkers for malnutrition risk | Residents interpret case findings and laboratory patterns without treating a single measure as diagnostic. | Timed case interpretation with a required uncertainty statement and escalation decision. |
 | 3 | Foundational Nutrition Knowledge | 3.0 | Identify nutrient deficiencies and recommend appropriate food or supplement options | Residents recognize deficiency patterns in common emergency presentations and distinguish immediate management from follow-up care. | Case plan scored for recognition, urgency, safety, and referral. |
@@ -77,8 +77,8 @@ The competency descriptions below are concise working labels. The official HHS f
 
 - HAEMR curriculum leadership confirms the current gaps, resident years, schedule, required or elective status, and feasible instructional hours.
 - A qualified nutrition professional verifies the competency interpretation, evidence sources, clinical accuracy, and scope boundaries.
-- The Department of Emergency Medicine confirms the data, visualization, simulation, and AI-audit activities it can build and maintain.
-- The Health Data Analytics collaborator confirms its role in analytic methods, visualization, reproducibility, or assessment.
+- The Healthcare Data Analytics Program confirms responsibility for curriculum creation, analytic methods, visualization, reproducibility, and assessment.
+- The Department of Emergency Medicine and HAEMR confirm the scheduled education and implementation route, including any institutionally approved food-centered sessions.
 - The writing team updates this crosswalk and the 15-page Curriculum Overview together so the competency numbers, hours, activities, and assessments remain identical.
 
 Competencies not selected here remain available for later expansion. They should not be claimed in the submission unless the curriculum gives them explicit time, instruction, and assessment.

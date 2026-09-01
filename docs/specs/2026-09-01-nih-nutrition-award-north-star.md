@@ -2,7 +2,7 @@
 
 - Status: working North Star and submission control document
 - Date: 2026-09-01
-- Commons release: `0.105.0`
+- Commons release: `0.106.0`
 - Challenge: NIH Integration of Nutrition Training into Health Care Education Challenge
 - Track: Developing
 - Program type: Residency Program
@@ -21,14 +21,15 @@ This is a federal prize competition, not a grant or subaward. The submission mus
 - Residency Program category.
 - HAEMR residents as the target learners.
 - A 40-hour longitudinal curriculum across residency, with a 40-hour competency equivalent reserved as a fallback.
-- Mass General Brigham Department of Emergency Medicine as the proposed builder and submission coordinator.
-- Mass General Brigham University Health Data Analytics Program as the applied analytics collaborator.
+- Mass General Brigham University Healthcare Data Analytics Program as the curriculum creator and academic lead.
+- Mass General Brigham Department of Emergency Medicine as the proposed institutional sponsor, submission coordinator, and implementation partner.
+- Food-centered learning sessions as an optional implementation method when institutionally approved.
 - Open Clinical Learning Commons as the public delivery layer.
 - No real patient records, patient-facing AI, or requirement for adopters to use MGB infrastructure.
 
 ## North Star
 
-> Build a 40-hour, competency-mapped nutrition data and responsible AI curriculum for HAEMR residents that improves clinical reasoning, communication, referral, and evidence use in emergency care; is led and engineered by the MGB Department of Emergency Medicine; is strengthened by Health Data Analytics and qualified nutrition expertise; and can be adopted by another residency without MGB credentials, protected health information, or proprietary software.
+> Create a 40-hour, competency-mapped nutrition curriculum through the MGB University Healthcare Data Analytics Program, implement it with HAEMR and the MGB Department of Emergency Medicine, and publish a package another residency can teach without MGB credentials, protected health information, or proprietary software.
 
 A resident completing the pathway should be able to recognize nutrition risk during emergency care, connect nutrition to acute and chronic disease, interpret relevant clinical and population data, communicate within physician scope, make an appropriate referral, plan a safe transition of care, and identify when AI-supported nutrition guidance is unsupported, biased, unsafe, or irrelevant.
 
@@ -42,14 +43,16 @@ The national adoption test is concrete:
 |---|---|---|
 | Eligible Lead Entity | Mass General Brigham is the working Lead Entity based on current HAEMR sponsor records, subject to confirmation of the exact legal entity name and eligibility by Research Management and GME. | Exact legal name, accreditation basis, authorized representative, and one-entry clearance. |
 | Educational setting | Harvard-Affiliated Emergency Medicine Residency | Program leadership support, learner description, curriculum placement, and implementation commitment. |
-| Builder and coordinator | MGB Department of Emergency Medicine | Department leadership approval and supportable descriptions of personnel, technical capacity, and the development environment. |
+| Curriculum creator and academic lead | Mass General Brigham University Healthcare Data Analytics Program | Written institutional role confirmation, responsibility for curriculum design and assessment, and an approved purchasing route for any program-managed delivery expenses. |
+| Institutional sponsor and implementation partner | MGB Department of Emergency Medicine | Department leadership approval, submission coordination, and residency implementation support. |
 | Point of Contact | Shuhan He, subject to institutional authorization | Written confirmation that the Lead Entity authorizes him to register, communicate, and submit on its behalf. |
-| Applied analytics collaborator | Mass General Brigham University Health Data Analytics Program | Written institutional role confirmation and a defined role in curriculum, analytics, visualization, reproducibility, or assessment. |
 | Nutrition content reviewer | To be confirmed | Named qualified nutrition professional with a defined review and approval responsibility. |
 | Public delivery layer | Open Clinical Learning Commons | Public repository, licensing, module structure, and at least one demonstrable component. |
 | Development environment | Institutionally procured MGB Microsoft Azure environment | Approved wording about access, governance, capabilities, and limits. |
 
-The Department of Emergency Medicine may lead the work, but the official Lead Entity must satisfy the NIH institutional eligibility rules. A department, laboratory, or individual is not automatically a separate eligible institution.
+Healthcare Data Analytics may lead curriculum creation, and the Department of Emergency Medicine may sponsor and coordinate implementation, but the official Lead Entity must satisfy the NIH institutional eligibility rules. A program, department, laboratory, or individual is not automatically a separate eligible institution.
+
+All named roles, educational activities, purchases, and implementation details are working proposals. The team will revise them to follow the institutional rules and approval path identified by MGB, Mass General Brigham University, Graduate Medical Education, HAEMR, and the Department of Emergency Medicine.
 
 ## Administrative requirements
 
@@ -190,7 +193,7 @@ The [working HAEMR competency crosswalk](2026-09-01-haemr-nutrition-competency-c
 
 | Component | HHS competencies | Hours | Primary resident work |
 |---|---|---:|---|
-| Nutrition foundations and evidence | 1, 11, 20 | 6.0 | Interpret core concepts, national guidance, bioavailability, and nutrition evidence. |
+| Nutrition foundations and evidence | 1, 11, 20 | 6.0 | Interpret core concepts, national guidance, food data, bioavailability, and nutrition evidence through cases and structured work with actual foods or meals when approved. |
 | Nutrition risk and assessment in emergency care | 22, 24 | 7.0 | Use history, examination, measurements, laboratory findings, and clinical context to assess risk. |
 | Deficiency recognition | 3 | 3.0 | Recognize likely deficiency patterns and choose a safe immediate or follow-up action. |
 | Allergies, medication interactions, and supported nutrition | 4, 6, 9 | 7.0 | Address high-yield acute-care nutrition problems within emergency physician scope. |
@@ -208,7 +211,7 @@ Each criterion receives a global score from 0 to 5. The maximum score is 40.
 | Criterion | What NIH asks | Our 5-point standard | Required evidence |
 |---|---|---|---|
 | Framework | Does the curriculum address the HHS framework? | Every selected competency is traceable to time, resident work, and assessment. | 40-hour map, competency crosswalk, module specifications, and nutrition review. |
-| Innovation | Does it introduce new ideas or approaches? | Data and AI change what residents can practice, inspect, and defend. | Applied cases, auditable AI task, reproducible data exercise, and comparison with ordinary instruction. |
+| Innovation | Does it introduce new ideas or approaches? | Food-centered sessions, data, and AI change what residents can practice, inspect, and defend. | Food and data learning activity, applied cases, auditable AI task, reproducible data exercise, and comparison with ordinary instruction. |
 | Clarity of Teaching Methods | Are instructional strategies clear and understandable? | Another faculty member can run each component from the documentation. | Sequence, time, modality, faculty action, resident action, output, and scoring rule. |
 | Means to Address Identified Competency Gaps | Does it address gaps and additive future needs? | The proposal names current HAEMR gaps and maps each gap to a response. | Baseline inventory, gap analysis, stakeholder input, and response matrix. |
 | Evaluation Methods | Are methods for assessing outcomes well defined? | Measures cover knowledge, clinical performance, communication, referral, data reasoning, and AI audit. | Pre and post measures, performance rubrics, implementation measures, and feedback loop. |
@@ -278,7 +281,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 ## Minimum evidence package
 
 1. Complete the [40-hour curriculum and competency map](2026-09-01-haemr-nutrition-competency-crosswalk.md).
-2. One representative component at runnable release-candidate quality.
+2. One representative food-centered component at runnable release-candidate quality.
 3. One synthetic or open dataset with provenance, terms, data dictionary, and known limits.
 4. One worked resident case and one independent assessment task.
 5. One scoring rubric and one evaluation instrument.
@@ -296,8 +299,9 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 - [ ] Approve or revise the working 16-competency, 40-hour map after the HAEMR baseline inventory and nutrition review.
 - [ ] Confirm the final public title.
 - [ ] Name a qualified nutrition reviewer and define the review responsibility.
-- [ ] Confirm the exact Health Data Analytics collaboration.
-- [ ] Approve the public description of the Department of Emergency Medicine and the MGB Azure development environment.
+- [ ] Confirm the Healthcare Data Analytics curriculum creator and academic lead role.
+- [ ] Approve the public description of the Department of Emergency Medicine implementation role and the MGB Azure development environment.
+- [ ] Confirm the institutional account and purchasing route for any approved food used in scheduled resident nutrition sessions.
 - [ ] Choose the representative component to build before submission.
 - [ ] Clear rights for curriculum prose, code, data, and images.
 

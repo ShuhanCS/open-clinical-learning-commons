@@ -12,7 +12,9 @@ Federal deadline: September 15, 2026, 11:59 PM Eastern Time
 
 This document gives Mass General Brigham Research Management and the responsible institutional offices the information needed to classify, route, and authorize one proposed entry to the NIH Integration of Nutrition Training into Health Care Education Challenge.
 
-The submission would use the Harvard Affiliated Emergency Medicine Residency as the educational setting. The MGB Department of Emergency Medicine would build and coordinate the curriculum. The Mass General Brigham University Healthcare Data Analytics Program would contribute applied analytics and assessment design as an internal collaborator.
+The Mass General Brigham University Healthcare Data Analytics Program would create the nutrition curriculum, including its applied analytics and assessment design. The Harvard Affiliated Emergency Medicine Residency would be the educational setting. The MGB Department of Emergency Medicine would sponsor the submission and coordinate residency implementation.
+
+All roles, activities, purchases, and implementation details in this intake are working proposals. The team will revise the curriculum and operating plan to follow the institutional rules and approval path identified by MGB, Mass General Brigham University, Graduate Medical Education, HAEMR, and the Department of Emergency Medicine.
 
 This is a federal prize competition, not a grant, cooperative agreement, contract, or subaward. There is no application budget. The required Participant Agreement contains institutional certifications and public-use terms, so an authorized MGB office must review the submission route and identify the institutional signer.
 
@@ -56,15 +58,17 @@ Primary teaching site in the current AMA record: Massachusetts General Hospital
 
 Department: MGB Department of Emergency Medicine
 
-Internal builder and coordinator: MGB Department of Emergency Medicine
+Institutional sponsor and submission coordinator: MGB Department of Emergency Medicine
 
-Educational setting and implementation owner: Harvard Affiliated Emergency Medicine Residency
+Educational setting and implementation partner: Harvard Affiliated Emergency Medicine Residency
 
-Internal academic collaborator: Mass General Brigham University Healthcare Data Analytics Program
+Curriculum creator and academic lead: Mass General Brigham University Healthcare Data Analytics Program
+
+Proposed curriculum delivery purchaser: Healthcare Data Analytics through the institutional purchasing route designated by MGB, if approved
 
 Proposed Point of Contact: Shuhan He, MD, subject to written MGB authorization
 
-Formal Partner Entities: None proposed. MGB University is treated as an internal collaborator unless Research Management or legal counsel directs otherwise.
+Formal Partner Entities: None proposed. The MGB University program role is treated as internal to the MGB submission unless Research Management or legal counsel directs otherwise.
 
 Prize recipient if selected: The legal Lead Entity confirmed by MGB
 
@@ -82,11 +86,15 @@ NRMP program record: https://programdirectory.nrmp.org/mass-general-brigham-ma-2
 
 Working title: Open Nutrition Data Commons for Emergency Medicine Residency
 
-Educational product: A proposed 40-hour longitudinal curriculum for emergency medicine residents that maps 16 HHS nutrition competencies across six domains to case-based learning, applied data analysis, and observable assessments.
+Educational product: A proposed 40-hour longitudinal curriculum created by Healthcare Data Analytics for emergency medicine residents. It maps 16 HHS nutrition competencies across six domains to food-centered learning, clinical cases, applied data analysis, and observable assessments.
 
-Development environment: The Department of Emergency Medicine project team may use an approved MGB Azure environment for internal development. The public curriculum will not require MGB credentials, MGB Azure access, or proprietary software.
+Development environment: The project team may use an approved MGB Azure environment for internal development. The public curriculum will not require MGB credentials, MGB Azure access, or proprietary software.
 
 Data: Synthetic cases and public or open datasets only for the proposed submission materials.
+
+Resident learning sessions: HAEMR residents would participate in scheduled educational activities. If the entry is selected and MGB approves the expense, some sessions may include food purchased for use in the nutrition curriculum.
+
+Proposed operating model: Healthcare Data Analytics would create the curriculum and, if the entry is selected and MGB approves the expense, would use the designated institutional purchasing route to obtain food for scheduled resident nutrition sessions and other teaching materials.
 
 Public delivery: Reusable curriculum and teaching assets through the Open Clinical Learning Commons, subject to MGB rights review and final approval.
 
@@ -125,11 +133,12 @@ Prize acceptance: MGB should identify the legal payee, financial account route, 
 - [ ] Is an Insight record or another internal proposal or agreement record required?
 - [ ] Is this submission eligible through HAEMR and ACGME program 1102421150?
 - [ ] Is MGB's one permitted entry available for this challenge?
-- [ ] May MGB University Healthcare Data Analytics be listed as an internal collaborator without formal Partner Entity status?
+- [ ] May MGB University Healthcare Data Analytics be listed as the internal curriculum creator and academic lead without formal Partner Entity status?
 - [ ] May Shuhan He, MD, serve as the authorized institutional Point of Contact?
 - [ ] Who may sign the official Participant Agreement for the Lead Entity?
 - [ ] Which office will review the public-use license and open curriculum release?
 - [ ] Which office will receive and administer the prize if selected?
+- [ ] If selected, may an approved institutional account pay for food used in scheduled resident nutrition sessions and other curriculum delivery expenses?
 - [ ] Do the stated data and educational activities require any additional privacy, information security, human research, or clinical AI review before submission?
 
 ## Requested institutional actions
@@ -149,16 +158,21 @@ Research Management Contracts or legal reviewer
 Graduate Medical Education and HAEMR
 
 - Verify the residency program record and educational setting.
-- Confirm that HAEMR may be named in the submission and may participate in curriculum development and implementation.
+- Confirm that HAEMR may be named in the submission and may implement the curriculum in scheduled resident education.
 
 Department of Emergency Medicine leadership
 
-- Confirm departmental sponsorship of the proposed submission and the Department's builder and coordination role.
+- Confirm departmental sponsorship of the proposed submission and the Department's submission coordination and implementation role.
 - Confirm a permissible nonfederal source for submission preparation effort and computing.
+
+Mass General Brigham University Healthcare Data Analytics Program
+
+- Confirm responsibility for curriculum creation, applied analytics, visualization, reproducibility, and assessment design, plus any approved curriculum delivery purchases routed through the program.
 
 Research Finance or designated financial office
 
 - Confirm the institutional prize acceptance and account route if selected.
+- Confirm the purchasing route for approved curriculum delivery expenses, including food used in scheduled resident nutrition sessions.
 
 ## Materials available for review
 
@@ -197,10 +211,11 @@ Administrative owner: __________________________________________________
 - [ ] The Lead Entity is eligible to enter the Residency Program category through HAEMR, ACGME program 1102421150.
 - [ ] This is the Lead Entity's only entry to the challenge, whether submitted alone or through a formal partnership.
 - [ ] The entry will be submitted as a single-Entity entry with no formal Partner Entity unless a later written approval changes that structure.
-- [ ] Mass General Brigham University Healthcare Data Analytics may be named as an internal academic collaborator.
+- [ ] Mass General Brigham University Healthcare Data Analytics may be named as the curriculum creator and academic lead within the MGB submission.
 - [ ] The Participant Agreement and its public-use terms have been reviewed or routed to the responsible reviewer.
 - [ ] No federal grant, cooperative agreement, or other transaction funds will support preparation of the entry.
 - [ ] The institutional route for receiving and administering any prize has been identified.
+- [ ] Healthcare Data Analytics may manage approved curriculum delivery expenses through the designated institutional purchasing route if the entry is selected.
 
 ## Point of Contact authorization
 
@@ -252,6 +267,14 @@ MGB Department of Emergency Medicine
 Name and title: ________________________________________________________
 
 Decision: [ ] Confirm sponsorship  [ ] Confirm with conditions  [ ] Do not confirm
+
+Signature and date: ____________________________________________________
+
+Mass General Brigham University Healthcare Data Analytics Program
+
+Name and title: ________________________________________________________
+
+Decision: [ ] Confirm curriculum creator and delivery role  [ ] Confirm with conditions  [ ] Do not confirm
 
 Signature and date: ____________________________________________________
 

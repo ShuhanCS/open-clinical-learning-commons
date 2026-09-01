@@ -49,7 +49,10 @@ if (
     $mgbAdminText -notmatch 'not a grant, cooperative agreement, contract, or subaward' -or
     $mgbAdminText -notmatch 'Insight record or another internal proposal or agreement record' -or
     $mgbAdminText -notmatch 'Human subjects research at the submission stage' -or
-    $mgbAdminText -notmatch 'MGB Department of Emergency Medicine would build and coordinate the curriculum' -or
+    $mgbAdminText -notmatch 'Healthcare Data Analytics Program would create the nutrition curriculum' -or
+    $mgbAdminText -notmatch 'Department of Emergency Medicine would sponsor the submission and coordinate residency implementation' -or
+    $mgbAdminText -notmatch 'food purchased for use in the nutrition curriculum' -or
+    $mgbAdminText -notmatch 'will revise the curriculum and operating plan to follow the institutional rules and approval path' -or
     $mgbAdminText -notmatch 'Point of Contact authorization' -or
     $mgbAdminText -notmatch 'Participant Agreement signer' -or
     $mgbAdminContent -match 'Division of Artificial Intelligence|Division AI|emaidivision\.org' -or
@@ -168,7 +171,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.105.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2901,7 +2904,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.105.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4125,7 +4128,7 @@ if (
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
     $app4PackageContent -notmatch 'all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.105.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }

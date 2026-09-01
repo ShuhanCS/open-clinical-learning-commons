@@ -2,7 +2,7 @@
 
 - Date: 2026-09-01
 - Status: complete
-- Commons release: `0.105.0`
+- Commons release: `0.106.0`
 - Repository: https://github.com/ShuhanCS/open-clinical-learning-commons
 
 ## Objective
@@ -22,17 +22,20 @@ Give Mass General Brigham leadership a small, accurate packet that supports an i
 - Track and category: Developing Track, Residency Program.
 - Submission structure: single Entity, unless Research Management or legal counsel directs otherwise.
 - Point of Contact: Shuhan He, MD, subject to written MGB authorization.
-- Internal builder and coordinator: MGB Department of Emergency Medicine.
-- Internal academic collaborator: Mass General Brigham University Healthcare Data Analytics Program.
+- Institutional sponsor and submission coordinator: MGB Department of Emergency Medicine.
+- Curriculum creator and academic lead: Mass General Brigham University Healthcare Data Analytics Program.
+- Educational setting and implementation partner: Harvard Affiliated Emergency Medicine Residency.
+- Potential implementation support: Healthcare Data Analytics may purchase food for scheduled resident nutrition sessions through the institutional route MGB designates.
 
 ## Acceptance checks
 
 - Every institutional claim is either sourced or marked for confirmation.
+- Every proposed role, activity, purchase, and implementation detail is conditional on institutional review and will be revised to follow the approved institutional rules and route.
 - The packet asks for one-entry clearance, authorized Point of Contact designation, Participant Agreement signature, rights review, and submission approval.
 - The documents describe a prize competition rather than a grant or subaward.
 - MGB University is not presented as a formal Partner Entity without institutional direction.
 - The packet contains exactly one Word document.
-- The intake screens human subjects, patient data, clinical AI, procurement, agreements, budget, federal funding, rights, and prize acceptance without claiming institutional determinations that have not been made.
+- The intake screens human subjects, patient data, clinical AI, procurement, agreements, budget, federal funding, rights, prize acceptance, and the route for approved implementation expenses without claiming institutional determinations that have not been made.
 - No document claims effectiveness, implementation, protected health information access, clinical AI deployment, or institutional authorization that has not been confirmed.
 - The Word document uses US Letter pages, one-inch margins, Arial 11-point body text, and editable placeholders.
 - The generated Word file validates and receives a visual page review.

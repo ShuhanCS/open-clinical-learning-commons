@@ -86,7 +86,9 @@ function parseMarkdown(markdown) {
     } else if (line.startsWith("- [ ] ")) {
       children.push(
         new Paragraph({
+          style: "Normal",
           indent: { left: 280 },
+          spacing: { after: 100, line: 264 },
           children: textRuns(line.slice(2)),
         }),
       );

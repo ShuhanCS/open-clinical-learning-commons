@@ -6,16 +6,18 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.105.0`
+- Current version: `0.106.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star, simulated review panel, and 40-hour competency crosswalk are also included.
 
 ## NIH nutrition education award North Star
 
 The Commons is being considered as the delivery layer for an NIH Developing Track residency submission tentatively titled **Open Nutrition Data Commons for Emergency Medicine Residency**.
 
-> Build a 40-hour or 40-hour competency-equivalent nutrition data and responsible AI curriculum for the Harvard-Affiliated Emergency Medicine Residency, led and engineered by the Mass General Brigham Department of Emergency Medicine, strengthened by the Mass General Brigham University Health Data Analytics Program and nutrition experts, and released as a portable national teaching package.
+> Build a 40-hour or 40-hour competency-equivalent nutrition curriculum through the Mass General Brigham University Healthcare Data Analytics Program, implement it with the Harvard-Affiliated Emergency Medicine Residency and the MGB Department of Emergency Medicine, and release it as a portable national teaching package.
 
-The Harvard-Affiliated Emergency Medicine Residency is the proposed educational setting and its residents are the target learners. The Department of Emergency Medicine is the proposed builder and institutional coordinator. The Health Data Analytics Program contributes applied analytics, visualization, reproducibility, and assessment design. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
+The Healthcare Data Analytics Program is the proposed curriculum creator and academic lead. The Harvard-Affiliated Emergency Medicine Residency is the educational setting, and its residents are the learners. The Department of Emergency Medicine is the proposed institutional sponsor and implementation partner. The curriculum combines nutrition teaching with applied analytics, open data, and structured sessions that may use food purchased by Healthcare Data Analytics through the institutional route MGB approves. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
+
+These roles, activities, purchases, and implementation details are working proposals. The team will revise them to follow the institutional rules and approval path identified during review.
 
 The full working specification contains the exact submission headings, page and formatting limits, eligibility gates, draft 40-hour map, evidence plan, and simulated review procedure: [NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
 
@@ -72,7 +74,7 @@ The Curriculum Overview receives a global score from 0 to 5 on each of eight equ
 | Evaluation methods | Feasible measures of knowledge, clinical reasoning, communication, referral judgment, data interpretation, and responsible AI use. |
 | Integration of innovative approaches | Authentic emergency cases, simulation, open or synthetic data, visualization, and AI audit activities tied to learning outcomes. |
 | Context within medical education | A credible place across HAEMR training years, with program leadership, schedule, required or elective status, and implementation path stated. |
-| Interdisciplinary approach | Defined roles for residency education, the Department of Emergency Medicine, Health Data Analytics, and a qualified nutrition professional. |
+| Interdisciplinary approach | Defined roles for Healthcare Data Analytics as curriculum creator, residency education and Emergency Medicine as implementation partners, and a qualified nutrition professional as content reviewer. |
 
 Scalability is a required narrative section and a cross-cutting expectation even though it is not a ninth 5-point Developing Track criterion. The Toolkit is reviewed pass-fail for completeness, clarity, required structure, and suitability for dissemination.
 
