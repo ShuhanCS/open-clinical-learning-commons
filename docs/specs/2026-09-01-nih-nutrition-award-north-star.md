@@ -2,7 +2,7 @@
 
 - Status: working North Star and submission control document
 - Date: 2026-09-01
-- Commons release: `0.101.0`
+- Commons release: `0.102.0`
 - Challenge: NIH Integration of Nutrition Training into Health Care Education Challenge
 - Track: Developing
 - Program type: Residency Program
@@ -40,7 +40,7 @@ The national adoption test is concrete:
 
 | Role | Working assignment | Evidence required before submission |
 |---|---|---|
-| Eligible Lead Entity | To be confirmed from the current HAEMR ACGME sponsorship record and NIH rules | Exact legal name, accreditation basis, authorized representative, and one-entry clearance. |
+| Eligible Lead Entity | Mass General Brigham is the working Lead Entity based on current HAEMR sponsor records, subject to confirmation of the exact legal entity name and eligibility by Research Management and GME. | Exact legal name, accreditation basis, authorized representative, and one-entry clearance. |
 | Educational setting | Harvard-Affiliated Emergency Medicine Residency | Program leadership support, learner description, curriculum placement, and implementation commitment. |
 | Builder and coordinator | MGB Department of Emergency Medicine Division of Artificial Intelligence | Division leadership approval and supportable descriptions of personnel, engineering capacity, and the development environment. |
 | Point of Contact | Shuhan He, subject to institutional authorization | Written confirmation that the Lead Entity authorizes him to register, communicate, and submit on its behalf. |
@@ -263,7 +263,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 
 | Check | Required evidence | Current status |
 |---|---|---|
-| Eligible Lead Entity | Exact current HAEMR ACGME sponsor and NIH eligibility basis. | Open, blocking. |
+| Eligible Lead Entity | Exact current HAEMR ACGME sponsor and NIH eligibility basis. | Mass General Brigham identified as current sponsor for ACGME program 1102421150; legal entity name and institutional certification remain open and blocking. |
 | Authorized Point of Contact | Written authority from the Lead Entity. | Open, blocking. |
 | One-entry clearance | Confirmation from the Lead Entity and each formal partner. | Open, blocking. |
 | HAEMR participation | Program leadership support and implementation role. | Open, blocking. |
@@ -288,7 +288,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 
 ## Decisions to make next
 
-- [ ] Confirm the exact current ACGME Sponsoring Institution and legal Lead Entity for HAEMR.
+- [ ] Obtain MGB Research Management and GME confirmation of the exact legal Lead Entity name; current program records identify Mass General Brigham as sponsor of ACGME program 1102421150.
 - [ ] Obtain one-entry clearance from that institution.
 - [ ] Confirm the authorized Point of Contact and Participant Agreement signer.
 - [ ] Obtain HAEMR program leadership commitment and select the resident years and curriculum placements.

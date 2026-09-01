@@ -28,6 +28,33 @@ if (
     throw "The HAEMR competency crosswalk must contain 16 unique HHS competencies totaling 40 hours with the official source and plain-ASCII punctuation; found $($nutritionMatches.Count) rows, $($nutritionNumbers.Count) unique numbers, and $nutritionHours hours."
 }
 
+$mgbAdminRoot = Join-Path $repo 'docs\submission\administrative'
+$mgbAdminFiles = @(
+    'README.md',
+    '00-routing-email.md',
+    '01-mgb-institutional-decision-memo.md',
+    '02-poc-one-entry-authorization-letter.md',
+    '03-haemr-program-commitment-letter.md',
+    '04-division-ai-build-commitment-letter.md',
+    '05-health-data-analytics-collaboration-letter.md',
+    'word\01-mgb-institutional-decision-memo.docx',
+    'word\02-poc-one-entry-authorization-letter.docx',
+    'word\03-haemr-program-commitment-letter.docx',
+    'word\04-division-ai-build-commitment-letter.docx',
+    'word\05-health-data-analytics-collaboration-letter.docx'
+)
+$mgbAdminMissing = @($mgbAdminFiles | Where-Object { -not (Test-Path -LiteralPath (Join-Path $mgbAdminRoot $_)) })
+$mgbAdminText = Get-Content -Raw -LiteralPath (Join-Path $mgbAdminRoot '01-mgb-institutional-decision-memo.md')
+if (
+    $mgbAdminMissing.Count -gt 0 -or
+    $mgbAdminText -notmatch '1102421150' -or
+    $mgbAdminText -notmatch 'one entry per institution' -or
+    $mgbAdminText -notmatch 'not a grant, cooperative agreement, contract, or subaward' -or
+    $mgbAdminText -match '[—–]'
+) {
+    throw "The MGB administrative packet is incomplete or missing its sponsor, one-entry, prize-mechanism, or plain-ASCII contract: $($mgbAdminMissing -join ', ')."
+}
+
 $moduleCount = [regex]::Matches($content, '(?m)^## Module \d{2} brief:').Count
 if ($moduleCount -ne 13) {
     throw "DA-730 must define 13 module briefs; found $moduleCount."
@@ -138,7 +165,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.101.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.102.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2871,7 +2898,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.101.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.102.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4095,7 +4122,7 @@ if (
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
     $app4PackageContent -notmatch 'all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.101.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.102.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -6614,6 +6641,7 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Output "DA-730 specification passed: $moduleCount modules, $hours hours, $checkpointCount checkpoints."
 Write-Output "HAEMR nutrition crosswalk passed: $($nutritionNumbers.Count) unique HHS competencies and $nutritionHours hours."
+Write-Output "MGB administrative packet passed: $($mgbAdminFiles.Count) required source and Word files."
 Write-Output "DA-730 $($module01.Label) passed: $($module01.Sections) contract sections and $($module01.FileCount) required files."
 Write-Output "DA-730 $($module02.Label) passed: $($module02.Sections) contract sections and $($module02.FileCount) required files."
 Write-Output "DA-730 $($module03.Label) passed: $($module03.Sections) contract sections and $($module03.FileCount) required files."
