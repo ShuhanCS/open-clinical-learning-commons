@@ -1,0 +1,19 @@
+role_id,role,accountability,decision_right,consulted,status
+R01,fictional planning council,owns the classroom planning disposition,accept revise refer or stop the fictional proposal,true,active in case
+R02,APP-5 faculty owner,owns curriculum assessment and evidence integrity,accept revise or reject the curriculum package,true,pending review
+R03,Joe Joseph MD or approved clinician lead,tests clinical meaning burden uncertainty and leadership reasoning,challenge and assess the clinician-led defense,true,pending direct confirmation
+R04,population-health clinical owner,owns condition meaning population-to-patient boundary and clinical consequences,pause refer or stop an affected clinical claim,true,pending review
+R05,community-accountability owner,owns review rights correction disagreement recourse and nonretaliation,pause revise refer or stop the review design,true,pending review
+R06,community representatives,own their statements priorities objections and participation choices,correct disagree refuse withdraw refer or request stop,true,not yet engaged
+R07,epidemiology owner,owns population measure surveillance bias and causal boundaries,pause or reject an unsupported epidemiologic claim,true,pending review
+R08,biostatistics owner,owns denominator standardization disparity uncertainty support and fairness methods,pause or reject an unsupported quantitative claim,true,pending review
+R09,GIS and geography owner,owns boundary vintage joins aggregation support and map accuracy,pause or reject an unsupported geographic claim,true,pending review
+R10,equity and civil-rights owner,owns differential impact exclusion stigma and rights analysis,pause revise refer or stop an inequitable route,true,pending review
+R11,language-access owner,owns interpretation translation readability and language access,pause an inaccessible route,true,pending review
+R12,disability-access owner,owns disability access accommodations and nonvisual alternatives,pause an inaccessible route,true,pending review
+R13,implementation and resource owner,owns staffing capacity travel burden budget and delivery feasibility,pause revise or reject an infeasible route,true,pending review
+R14,monitoring and safety owner,owns measures triggers incidents escalation pause and stop response,pause or stop an affected route,true,pending review
+R15,evaluation and causal owner,owns later estimand comparison outcome bias and effect claims,reject an unsupported evaluation or effect claim,true,pending review
+R16,data privacy security and accessibility steward,owns minimization access control nonreconstruction security and usable release,pause or reject an unsafe release,true,pending review
+R17,independent reproducer,owns clean reproduction findings,report pass fail or unresolved reproduction,true,pending review
+R18,agent or model,may assist with bounded drafting calculation and checking,no decision or sign-off right,false,not a reviewer

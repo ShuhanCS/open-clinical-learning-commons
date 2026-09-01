@@ -1,0 +1,27 @@
+gate_id,gate,status,evidence
+G01,accepted Checkpoint 01 identity,REPLACE,REPLACE
+G02,accepted Checkpoint 02 identity,REPLACE,REPLACE
+G03,complete immutable manifest,REPLACE,REPLACE
+G04,unchanged evidence and prior point history,REPLACE,REPLACE
+G05,public and synthetic roles remain separate,REPLACE,REPLACE
+G06,population denominator geography period uncertainty and support remain exact,REPLACE,REPLACE
+G07,area evidence is not converted to individual inference,REPLACE,REPLACE
+G08,unavailable and suppressed states remain protected,REPLACE,REPLACE
+G09,modeled prevalence is not called an observed outcome,REPLACE,REPLACE
+G10,place aggregation ecological and limited-support facts remain exact,REPLACE,REPLACE
+G11,four targeting rules and one fixed resource contract remain exact,REPLACE,REPLACE
+G12,community-review comparison remains bounded and nonauthorizing,REPLACE,REPLACE
+G13,five staff twelve travel and one burden conditions remain visible,REPLACE,REPLACE
+G14,outcomes remain unavailable and effect estimation remains prohibited,REPLACE,REPLACE
+G15,intervention remains not ready for real use,REPLACE,REPLACE
+G16,all measures triggers objection tests and incidents remain visible,REPLACE,REPLACE
+G17,feedback recourse escalation pause stop revision and retirement remain human owned,REPLACE,REPLACE
+G18,fixed clustering failures and rejected decision remain exact,REPLACE,REPLACE
+G19,community input is not fabricated and silence is not agreement,REPLACE,REPLACE
+G20,language disability accessibility privacy and nonreconstruction boundaries remain visible,REPLACE,REPLACE
+G21,possible benefit harm burden exclusion and accountability are addressed,REPLACE,REPLACE
+G22,curriculum disposition and planning recommendation remain separate,REPLACE,REPLACE
+G23,community-facing communication is accurate accessible and non-stigmatizing,REPLACE,REPLACE
+G24,responsible claims agent use clinician identity review and reproduction state remain explicit,REPLACE,REPLACE
+G25,all inherited checkpoint conditions remain open owned and unresolved,REPLACE,REPLACE
+G26,no real-world authority is added,REPLACE,REPLACE

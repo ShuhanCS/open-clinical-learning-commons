@@ -1,0 +1,5 @@
+condition_id,source,condition,owner,evidence_needed,status
+CP1-C01,Checkpoint 01,REPLACE,REPLACE,REPLACE,open
+CP1-C12,Checkpoint 01,REPLACE,REPLACE,REPLACE,open
+CP2-C01,Checkpoint 02,REPLACE,REPLACE,REPLACE,open
+CP2-C14,Checkpoint 02,REPLACE,REPLACE,REPLACE,open

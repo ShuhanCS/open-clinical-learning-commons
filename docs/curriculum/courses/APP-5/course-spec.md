@@ -14,7 +14,7 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.94.0` through Checkpoint 02.
+- Current Commons release target: `0.95.0` through Module 07.
 - Specification status: construction candidate.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
@@ -344,18 +344,24 @@ All 34 Module 06 gates pass. The package may enter construction of the separate 
 - Module ID: `oclc-app5-07`.
 - Hours: 16.0.
 - Clinician session design: Joe Joseph, MD, SFHM. Dated public identity is confirmed elsewhere in the Commons; participation and final wording require direct confirmation before alpha.
-- Planned package path: `courses/population-health-equity/modules/07-clinician-leadership-equity-recommendation/`.
-- Planned specification: `docs/curriculum/courses/APP-5/modules/07-clinician-leadership-equity-recommendation-spec.md`.
+- Package path: `courses/population-health-equity/modules/07-clinician-leadership-equity-recommendation/`.
+- Specification: `docs/curriculum/courses/APP-5/modules/07-clinician-leadership-equity-recommendation-spec.md`.
 - Decision: whether to recommend structured community review of one bounded fictional intervention plan, revise the evidence or plan, refer the question, or stop.
 - Submission: final population intervention analytics plan and defense.
 - Point role: 35-point final component.
-- Build status: next isolated build unit after accepted Checkpoint 02 version `0.1.0` at Commons `0.94.0`.
+- Build status: runnable release candidate at module version `0.1.0` and Commons release `0.95.0`.
 
 Module 07 freezes the accepted Week 3 and Week 6 evidence before adding leadership records. Learners cannot change the population, denominator, geography, standardization, disparity measure, reference group, suppression, map facts, targeting results, resource constraint, intervention assumptions, monitoring facts, or ML result inside the leadership package.
 
 The final package includes an executive decision brief, population and denominator contract, evidence synthesis, disparity interpretation, place and context memo, targeting and fairness audit, intervention analytics design, implementation and monitoring plan, community-facing summary, feedback and recourse plan, stewardship and governance record, disagreement record, accessible evidence appendix, reproducibility audit, responsible-claims audit, AI-use record, and defense.
 
 Leadership must address uncertainty, small numbers, missing and misclassified equity fields, geographic aggregation, ecological limits, stigma, access, capacity, burden, community voice, competing priorities, possible benefit and harm, who can pause or stop the plan, what evidence would permit reconsideration, and what remains outside course authority.
+
+The accepted reference freezes the complete 240-file Week 3 and 1,051-file Week 6 checkpoint packages plus both release records. Its 1,301-row immutable manifest is 328,429 bytes with SHA-256 `ebae232c051fe8b1204b4266aec416f48fe152b4dc5cda06a3ae00171807097b`. The complete candidate has 1,328 files and 26 editable leadership records.
+
+The reference earns 35.00 of 35.00, passes all 26 noncompensable gates, preserves all 26 inherited conditions as open, and completes a 16-question defense. Complete validation passes 9,305 checks, learner validation passes 9,219 checks, copied validation passes, two reference assemblies match, and 29 failure routes are rejected.
+
+The curriculum package status is `accept with conditions`. The separate fictional planning recommendation is `recommend seeking approval for bounded structured community review`. The intervention remains unready for real use, outcomes remain unavailable, the clustering challenger remains rejected, and the final checkpoint is permitted for curriculum construction only.
 
 ## 16. Three cumulative checkpoint contracts
 

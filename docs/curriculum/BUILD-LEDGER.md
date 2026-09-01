@@ -1,10 +1,10 @@
 # Curriculum build ledger
 
-- Current release: 0.94.0
-- Last updated: 2026-08-31
+- Current release: 0.95.0
+- Last updated: 2026-09-01
 - Active phase: applied-course build
-- Last completed unit: APP-5 Checkpoint 02, Place, targeting, intervention, and monitoring release
-- Next unit: APP-5 Module 07, Clinician leadership and equity recommendation
+- Last completed unit: APP-5 Module 07, Clinician leadership and equity recommendation
+- Next unit: APP-5 Checkpoint 03, Population intervention analytics plan
 
 ## Confirmed decisions
 
@@ -727,6 +727,14 @@
 - Outcomes remain unavailable. The intervention remains unready for real use. The fixed KMeans challenger retains alternate-seed minimum agreement 0.893633, scaling-variant median agreement 0.11995481449421869, selected-area coverage of two clusters, and the decision `not useful`.
 - All 22 Module 04, 26 Module 05, 34 Module 06, and 24 checkpoint integrity gates pass. Complete validation passes 7,071 checks, learner validation passes 7,058 checks, the copied validator passes, deterministic builds match, and 14 protected failure routes plus complete-mode learner rejection are verified.
 - APP-5 Checkpoint 02 is a runnable release candidate at Commons 0.94.0 with disposition `continue with conditions`. Module 07 curriculum construction may begin for clinician leadership interpretation, accountability, recommendation, and defense. The transparent community-review comparison remains unchanged, and every real-world authority route remains prohibited.
+- APP-5 Module 07 version 0.1.0 freezes the exact 240-file Week 3 and 1,051-file Week 6 checkpoint reference packages plus both accepted release records without recomputing or repairing evidence.
+- The leadership candidate contains eight immutable controls, 1,291 accepted checkpoint files, two release records, 26 editable leadership records, and one generated manifest: 1,328 files total and 1,301 immutable rows.
+- The release manifest is 328,429 bytes with SHA-256 `ebae232c051fe8b1204b4266aec416f48fe152b4dc5cda06a3ae00171807097b`.
+- The reference preserves the 5,679,768 adult denominator, all unavailable and suppressed states, 1,597 mapped estimates, 23 unavailable geography-only rows, 49 support-review tracts, 645 aggregation class changes, four targeting comparisons, five staff holds, 12 travel concerns, one burden concern, 20 measures, six triggers, 14 objection tests, 23 incidents, unavailable outcomes, and the rejected clustering challenger.
+- The 35-point leadership component scores 35.00 of 35.00 and all 26 noncompensable gates pass. All 26 inherited conditions remain open and owned. The defense contains 16 complete questions, and 18 stakeholder roles keep all decision and sign-off authority human.
+- The curriculum package status is `accept with conditions`. The separate fictional planning recommendation is `recommend seeking approval for bounded structured community review`. No contact, outreach, eligibility, funding, allocation, service, effect estimation, implementation, production connection, or deployment is authorized.
+- Reference validation passes 9,305 checks, learner validation passes 9,219 checks, copied validation passes, two reference assemblies match, overwrite is rejected, and 29 deliberate failure routes are rejected.
+- APP-5 Module 07 is a runnable release candidate at Commons 0.95.0. The official-end-date population intervention analytics checkpoint is the next isolated build unit.
 
 ## Pending confirmation
 
@@ -768,12 +776,15 @@
 - Complete named APP-5 Module 06 faculty, population-health clinical, implementation, epidemiology, biostatistics, causal, equity, community, language-access, disability-access, privacy, accessibility, safety, responsible-AI, resource-governance, and independent-reproduction review before alpha.
 - Complete the 14 owned APP-5 Checkpoint 02 conditions covering dates, geometry and map review, ecological claims, resource and fairness assumptions, community and access rights, intervention authority, capacity, monitoring, incidents, evaluation, clustering, privacy, responsible AI, independent reproduction, and clinician-leadership participation before alpha.
 - Complete named APP-5 Checkpoint 02 faculty, population-health clinical, implementation, epidemiology, biostatistics, causal, GIS, equity, community, language-access, disability-access, privacy, accessibility, safety, resource-governance, responsible-AI, clinician-leadership, and independent-reproduction review before alpha.
+- Confirm Joe Joseph, MD participation, schedule, session format, recording permission, accessibility needs, preparation materials, case wording, assessment role, and final biography wording before APP-5 alpha.
+- Complete named APP-5 Module 07 faculty, population-health clinical, community-accountability, epidemiology, biostatistics, GIS, equity, civil-rights, language-access, disability-access, implementation, monitoring, causal, model-risk, privacy, security, accessibility, responsible-AI, clinician-leadership, and independent-reproduction review before alpha.
+- Complete the 26 inherited APP-5 Module 07 conditions, independent clean reproduction, and live or equivalent 16-question defense before alpha.
 - Complete named program, measurement, survey methods, patient, accessibility, equity, governance, clinical, responsible-AI, and independent reproduction reviews before alpha.
 
 ## Next resume instructions
 
-1. Read the accepted APP-5 course specification, both checkpoint specifications and packages, Module 07 brief, release records, progression decisions, and open conditions.
-2. Freeze the complete 240-file Week 3 and 1,051-file Week 6 checkpoint reference workspaces without recomputing or repairing evidence, scores, gates, conditions, or authority.
-3. Build APP-5 Module 07 as the clinician leadership, equity recommendation, accountability, and defense unit under Joe Joseph, MD.
-4. Preserve the exact population, denominator, geography, measures, disparities, responsible map, targeting comparisons, community-review candidate, intervention assumptions, monitoring facts, incidents, and rejected clustering challenger.
-5. Keep real need, consent, eligibility, outreach, funding, allocation, community action, service delivery, intervention-effect estimation, implementation, production connection, and deployment prohibited. Advance semver, validate, commit, push, and remote-verify Module 07 as its own unit.
+1. Read the accepted APP-5 course specification, both checkpoint packages, Module 07 specification and package, release records, progression decisions, and all 26 open conditions.
+2. Freeze the complete 1,328-file Module 07 reference candidate without recomputing or repairing checkpoint evidence, scores, gates, conditions, recommendation, or authority.
+3. Build APP-5 Checkpoint 03 as the official-end-date population intervention analytics plan and defense package.
+4. Count the Module 07 35-point component once, producing `40 + 25 + 35 = 100` with no duplication. Keep curriculum-package disposition separate from the fictional planning recommendation.
+5. Preserve the unready intervention, unavailable outcomes, rejected clustering challenger, bounded structured-community-review recommendation, and every real-world prohibition. Advance semver, validate, commit, push, and remote-verify the final checkpoint as its own unit.

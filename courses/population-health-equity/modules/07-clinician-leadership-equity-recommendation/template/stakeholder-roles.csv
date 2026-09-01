@@ -1,0 +1,5 @@
+role_id,role,accountability,decision_right,consulted,status
+R01,REPLACE,REPLACE,REPLACE,true,REPLACE
+R02,REPLACE,REPLACE,REPLACE,true,REPLACE
+R03,REPLACE,REPLACE,REPLACE,true,REPLACE
+R18,agent or model,may assist with bounded drafting calculation and checking,no decision or sign-off right,false,not a reviewer

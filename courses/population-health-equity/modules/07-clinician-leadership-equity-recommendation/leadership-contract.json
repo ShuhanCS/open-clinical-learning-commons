@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "module": {
+    "id": "oclc-app5-07",
+    "version": "0.1.0",
+    "commons_release": "0.95.0",
+    "course": "APP-5: Data for Population Health and Equity",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "accepted_inputs": [
+    {
+      "id": "oclc-app5-cp01",
+      "version": "0.1.0",
+      "commons_release": "0.90.0",
+      "files": 240,
+      "manifest_sha256": "b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192",
+      "release_sha256": "2748c0bf5f6c0fe90bca29899202e8a3e2b0fa303b4fa37248bbd8daca5d5289"
+    },
+    {
+      "id": "oclc-app5-cp02",
+      "version": "0.1.0",
+      "commons_release": "0.94.0",
+      "files": 1051,
+      "manifest_sha256": "6d403bfb0e4bb6f177400ae97a3b1d89cf968c35b24482f64cea6b927f397f83",
+      "release_sha256": "b67fa825fa35e86063799091c34c65ccb95c3784f03e3c4c6cfa692f0c584f55"
+    }
+  ],
+  "allowed_recommendations": [
+    "recommend seeking approval for bounded structured community review",
+    "revise before seeking structured community review approval",
+    "refer",
+    "stop"
+  ],
+  "reference": {
+    "package_status": "accept with conditions",
+    "recommendation": "recommend seeking approval for bounded structured community review",
+    "intervention_ready_for_real_use": false,
+    "outcomes_available": false,
+    "ml_decision": "reject challenger; preserve transparent community-review comparison",
+    "final_checkpoint_permission": "permitted for curriculum construction"
+  },
+  "score": {
+    "criteria": {"E01": 8.0, "P01": 9.0, "L01": 8.0, "G01": 6.0, "H01": 4.0},
+    "minimum_to_pass": 28.0,
+    "maximum": 35.0
+  },
+  "required_gates": 26,
+  "defense_questions": 16,
+  "boundaries": {
+    "real_need_determination": "prohibited",
+    "individual_inference_or_eligibility": "prohibited",
+    "community_contact": "prohibited",
+    "outreach_or_enrollment": "prohibited",
+    "funding_or_allocation": "prohibited",
+    "service_delivery": "prohibited",
+    "effect_estimation": "prohibited",
+    "automatic_model_action": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited"
+  }
+}

@@ -2,7 +2,7 @@
   "use strict";
 
   const curriculum = {
-  "version": "0.37.0",
+  "version": "0.38.0",
   "courseCount": 11,
   "moduleCount": 77,
   "courses": [
@@ -513,7 +513,12 @@
           "outcome": "Defend a bounded population recommendation with clinician leadership and community accountability.",
           "topics": "Evidence synthesis, equity rationale, clinical consequences, monitoring, community-facing communication, disagreement, stop rights, stewardship, and stated limits.",
           "submission": "Final population intervention analytics plan.",
-          "hours": 16
+          "hours": 16,
+          "resource": {
+            "title": "Runnable clinician leadership package",
+            "description": "Review the frozen checkpoints, equity recommendation, community-accountability record, conditions, and defense.",
+            "url": "courses/population-health-equity/modules/07-clinician-leadership-equity-recommendation/README.md"
+          }
         }
       ]
     },

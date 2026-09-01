@@ -1,0 +1,3 @@
+input_id,version,commons_release,assembled_files,candidate_manifest_sha256,release_sha256,points,disposition
+oclc-app5-cp01,0.1.0,0.90.0,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE
+oclc-app5-cp02,0.1.0,0.94.0,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE

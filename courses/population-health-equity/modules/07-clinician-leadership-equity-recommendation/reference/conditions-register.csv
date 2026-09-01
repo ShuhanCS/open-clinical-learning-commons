@@ -1,0 +1,27 @@
+condition_id,source,condition,owner,evidence_needed,status
+CP1-C01,Checkpoint 01,map the package to the official APP-5 section and published half-term dates,program director,approved section and date record,open
+CP1-C02,Checkpoint 01,review public and synthetic source identities roles and limits,public-data lead,dated source and synthetic-release review,open
+CP1-C03,Checkpoint 01,review denominator rate standardization and measure methods,biostatistics lead,documented method review,open
+CP1-C04,Checkpoint 01,review group labels standards and separate-margin limits,equity lead,documented equity standards review,open
+CP1-C05,Checkpoint 01,review references uncertainty and support decisions,biostatistics lead,documented uncertainty review,open
+CP1-C06,Checkpoint 01,review missingness linkage and representation limits,equity lead,documented representation review,open
+CP1-C07,Checkpoint 01,review selection linkage measurement and interpretation bias,epidemiology lead,documented bias review,open
+CP1-C08,Checkpoint 01,review suppression privacy and nonreconstruction controls,privacy lead,documented privacy review,open
+CP1-C09,Checkpoint 01,confirm community correction disagreement refusal and stop rights,community-accountability lead,approved community-rights design,open
+CP1-C10,Checkpoint 01,review accessibility language disability and exact alternatives,accessibility lead,documented access review,open
+CP1-C11,Checkpoint 01,review responsible AI verification correction and accountability,responsible-AI lead,documented responsible-AI review,open
+CP1-C12,Checkpoint 01,complete clean independent reproduction,independent reproducer,signed clean reproduction record,open
+CP2-C01,Checkpoint 02,map the checkpoint to the official APP-5 section and published dates,APP-5 faculty owner,approved course mapping record,open
+CP2-C02,Checkpoint 02,review TIGER geometry projection simplification map and exact table,GIS owner,documented GIS review,open
+CP2-C03,Checkpoint 02,review ecological contextual support aggregation and place language,population-health clinician,documented clinical and equity review,open
+CP2-C04,Checkpoint 02,review resource assumptions four rules fairness consequences and sensitivity,resource-governance owner,documented quantitative and governance review,open
+CP2-C05,Checkpoint 02,confirm community correction appeal language and disability access routes,community-accountability owner,approved community and access review,open
+CP2-C06,Checkpoint 02,confirm no real need consent eligibility or outreach authority,clinical owner,documented population-health clinical review,open
+CP2-C07,Checkpoint 02,resolve or retain staff travel burden and capacity conditions,implementation owner,documented feasibility disposition,open
+CP2-C08,Checkpoint 02,review monitoring definitions denominators triggers unavailable states and responses,monitoring owner,documented epidemiology review,open
+CP2-C09,Checkpoint 02,review incidents disagreement escalation pause stop revision and retirement,governance owner,documented safety and governance review,open
+CP2-C10,Checkpoint 02,confirm outcomes unavailable and effect estimation deferred to APP-6,evaluation owner,documented causal boundary review,open
+CP2-C11,Checkpoint 02,review clustering contract failures rejection and prohibited uses,model-risk owner,documented biostatistics and responsible-AI review,open
+CP2-C12,Checkpoint 02,review privacy security accessibility and nonreconstruction,data steward,documented privacy security and accessibility review,open
+CP2-C13,Checkpoint 02,review every material AI use verification correction and human accountability,APP-5 faculty owner,documented responsible-AI review,open
+CP2-C14,Checkpoint 02,confirm independent reproduction and Joe Joseph MD participation details,program director,direct clinician confirmation and signed reproduction record,open

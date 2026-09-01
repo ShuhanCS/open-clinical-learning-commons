@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable release candidate",
+  "release_date": "2026-09-01",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "module": {
+    "id": "oclc-app5-07",
+    "title": "Clinician leadership and equity recommendation",
+    "version": "0.1.0",
+    "commons_release": "0.95.0",
+    "course": "APP-5: Data for Population Health and Equity",
+    "week": "final clinician-led block",
+    "hours": 16.0,
+    "course_points": 35
+  },
+  "clinician_of_record": {
+    "name": "Joe Joseph, MD, SFHM",
+    "identity_status": "confirmed from dated Sound Physicians public sources",
+    "current_employer_claim": "none",
+    "participation_confirmation": "required before alpha"
+  },
+  "accepted_inputs": [
+    {"id": "oclc-app5-cp01", "version": "0.1.0", "commons_release": "0.90.0", "assembled_files": 240, "candidate_manifest_sha256": "b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192", "release_sha256": "2748c0bf5f6c0fe90bca29899202e8a3e2b0fa303b4fa37248bbd8daca5d5289"},
+    {"id": "oclc-app5-cp02", "version": "0.1.0", "commons_release": "0.94.0", "assembled_files": 1051, "candidate_manifest_sha256": "6d403bfb0e4bb6f177400ae97a3b1d89cf968c35b24482f64cea6b927f397f83", "release_sha256": "b67fa825fa35e86063799091c34c65ccb95c3784f03e3c4c6cfa692f0c584f55"}
+  ],
+  "reference_decision": {
+    "candidate_score": "35.00 of 35.00",
+    "gates": "26 of 26 pass",
+    "defense": "adequate for curriculum construction",
+    "candidate_status": "accept with conditions",
+    "planning_recommendation": "recommend seeking approval for bounded structured community review",
+    "intervention_ready_for_real_use": false,
+    "outcomes_available": false,
+    "challenger_accepted": false,
+    "final_checkpoint": "permitted for curriculum construction",
+    "real_world_action": "prohibited",
+    "implementation": "prohibited",
+    "deployment": "prohibited"
+  },
+  "reference_facts": {
+    "adult_denominator": 5679768,
+    "direct_rates_available": 1576,
+    "direct_rates_unavailable": 21,
+    "mapped_estimates": 1597,
+    "geometry_only_unavailable": 23,
+    "targeting_rules": 4,
+    "selected_tracts": 28,
+    "staff_not_ready": 5,
+    "high_travel": 12,
+    "high_burden": 1,
+    "monitoring_measures": 20,
+    "monitoring_triggers": 6,
+    "incidents": 23,
+    "outcomes_available": false,
+    "cluster_alternate_seed_minimum_ari": "0.893633",
+    "cluster_scaling_median_ari": "0.11995481449421869",
+    "selected_clusters": 2
+  },
+  "package": {
+    "immutable_controls": 8,
+    "accepted_evidence_files": 1291,
+    "accepted_release_records": 2,
+    "immutable_manifest_rows": 1301,
+    "leadership_records": 26,
+    "candidate_files": 1328,
+    "manifest_bytes": 328429,
+    "manifest_sha256": "ebae232c051fe8b1204b4266aec416f48fe152b4dc5cda06a3ae00171807097b"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 9305,
+    "starter_checks": 9219,
+    "copied_validator_check": "pass",
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "failure_routes": 29
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "module specification, leadership package, deterministic assembly, validation, and release record"}
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, accessibility needs, preparation materials, case wording, assessment role, and final biography wording before alpha.",
+    "Named population-health clinical, community, epidemiology, biostatistics, GIS, equity, access, implementation, causal, privacy, accessibility, responsible-AI, model-risk, and independent reviews remain pending before alpha.",
+    "Independent human clean reproduction and a live or equivalent 16-question defense remain pending.",
+    "The intervention remains unready for real use, outcomes are unavailable, and the clustering challenger remains rejected.",
+    "The package does not authorize real need determination, individual inference, community contact, outreach, eligibility, funding, allocation, service, effect estimation, implementation, production connection, or deployment."
+  ]
+}

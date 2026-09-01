@@ -167,6 +167,8 @@ The sixth runnable unit is [APP-5 Module 06: Accountable intervention design, mo
 
 The cumulative [APP-5 Week 6 checkpoint](courses/population-health-equity/checkpoints/02-place-targeting-intervention-release/reference/README.md), governed by its durable [checkpoint specification](docs/curriculum/courses/APP-5/checkpoints/02-place-targeting-intervention-release-spec.md), freezes 1,030 accepted files and 966 nested immutable rows from Modules 04 through 06. It counts the accepted 10 and 15 points once, keeps Module 06 as a zero-point gate, passes all 106 inherited and checkpoint gates, preserves the unready intervention and rejected challenger, and permits Module 07 curriculum construction with conditions.
 
+The seventh runnable unit is [APP-5 Module 07: Clinician leadership and equity recommendation](courses/population-health-equity/modules/07-clinician-leadership-equity-recommendation/README.md), governed by its durable [Module 07 specification](docs/curriculum/courses/APP-5/modules/07-clinician-leadership-equity-recommendation-spec.md). It freezes the complete 240-file Week 3 and 1,051-file Week 6 checkpoints in a 1,328-file leadership candidate, preserves all 26 inherited conditions, and records `accept with conditions` separately from `recommend seeking approval for bounded structured community review`. The intervention remains unready, outcomes remain unavailable, the clustering challenger remains rejected, and every real-world authority remains prohibited. Joe Joseph, MD, SFHM, is the designated clinician of record under a dated identity boundary; participation details remain a pre-alpha condition.
+
 The first rebuilt module is [DA-730 Module 01: Encoding and the grammar of graphics](courses/data-visualization/modules/01-encoding-grammar/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/01-encoding-grammar-spec.md).
 
 The second rebuilt module is [DA-730 Module 02: Perception and visual accuracy](courses/data-visualization/modules/02-perception-accuracy/README.md), with its durable [module specification](docs/curriculum/courses/DA-730/modules/02-perception-accuracy-spec.md).
@@ -343,7 +345,7 @@ Other programs can adopt a release without an IRB submission, data use agreement
 
 ## Build order
 
-1. Build APP-5 Module 07 from the accepted Week 3 and Week 6 checkpoints.
+1. Build the APP-5 final population intervention analytics checkpoint from the accepted Module 07 package.
 2. Continue APP-5 through APP-7 one distinct module and checkpoint at a time.
 3. Preserve separate final checkpoints and clinician-led leadership blocks for every applied course.
 4. Complete named human reviews before alpha promotion.

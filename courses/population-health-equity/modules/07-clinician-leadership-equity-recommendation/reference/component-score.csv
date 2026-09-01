@@ -1,0 +1,7 @@
+criterion_id,criterion,points_possible,points_awarded,status,evidence
+E01,Evidence integrity and synthesis,8.00,8.00,complete,evidence index synthesis claim boundary and exact immutable handoff
+P01,Population-health and equity judgment,9.00,9.00,complete,consequence review readiness recommendation and alternatives
+L01,Clinician leadership and community communication,8.00,8.00,complete,accountability disagreement reflection and community-facing summary
+G01,Governance monitoring and stewardship,6.00,6.00,complete,monitoring governance conditions stakeholder rights and retirement
+H01,Handoff reproducibility and defense,4.00,4.00,complete,reproduction AI review progression and 16-question defense
+TOTAL,Total,35.00,35.00,complete,all criteria complete and all gates pass

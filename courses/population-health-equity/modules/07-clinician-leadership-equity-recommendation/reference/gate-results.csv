@@ -1,0 +1,27 @@
+gate_id,gate,status,evidence
+G01,accepted Checkpoint 01 identity,pass,evidence index and immutable checkpoint1 package
+G02,accepted Checkpoint 02 identity,pass,evidence index and immutable checkpoint2 package
+G03,complete immutable manifest,pass,release-manifest.csv contains 1301 sorted rows
+G04,unchanged evidence and prior point history,pass,40 and 25 points remain counted once
+G05,public and synthetic roles remain separate,pass,evidence synthesis and source records
+G06,population denominator geography period uncertainty and support remain exact,pass,population claim boundary and technical appendix
+G07,area evidence is not converted to individual inference,pass,population claim boundary and community summary
+G08,unavailable and suppressed states remain protected,pass,evidence synthesis and inherited evidence
+G09,modeled prevalence is not called an observed outcome,pass,population claim boundary and responsible claims audit
+G10,place aggregation ecological and limited-support facts remain exact,pass,evidence synthesis and technical appendix
+G11,four targeting rules and one fixed resource contract remain exact,pass,equity consequence review
+G12,community-review comparison remains bounded and nonauthorizing,pass,recommendation and responsible claims audit
+G13,five staff twelve travel and one burden conditions remain visible,pass,intervention readiness
+G14,outcomes remain unavailable and effect estimation remains prohibited,pass,evaluation proposal
+G15,intervention remains not ready for real use,pass,intervention readiness and progression decision
+G16,all measures triggers objection tests and incidents remain visible,pass,implementation monitoring governance
+G17,feedback recourse escalation pause stop revision and retirement remain human owned,pass,community accountability and stewardship
+G18,fixed clustering failures and rejected decision remain exact,pass,evidence synthesis and technical appendix
+G19,community input is not fabricated and silence is not agreement,pass,community accountability and disagreement record
+G20,language disability accessibility privacy and nonreconstruction boundaries remain visible,pass,community accountability and stakeholder roles
+G21,possible benefit harm burden exclusion and accountability are addressed,pass,equity consequence review
+G22,curriculum disposition and planning recommendation remain separate,pass,recommendation and progression decision
+G23,community-facing communication is accurate accessible and non-stigmatizing,pass,community-facing summary
+G24,responsible claims agent use clinician identity review and reproduction state remain explicit,pass,claims AI profile reviewer and reproduction records
+G25,all 26 inherited checkpoint conditions remain open owned and unresolved,pass,conditions register
+G26,no real-world authority is added,pass,leadership contract and progression decision

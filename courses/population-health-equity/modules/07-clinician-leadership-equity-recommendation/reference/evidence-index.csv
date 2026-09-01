@@ -1,0 +1,3 @@
+input_id,version,commons_release,assembled_files,candidate_manifest_sha256,release_sha256,points,disposition
+oclc-app5-cp01,0.1.0,0.90.0,240,b8331c4fbdddf1403560f0e494c057d2d29944d2b9f15f6273d8b2cabe7b9192,2748c0bf5f6c0fe90bca29899202e8a3e2b0fa303b4fa37248bbd8daca5d5289,40,continue with conditions
+oclc-app5-cp02,0.1.0,0.94.0,1051,6d403bfb0e4bb6f177400ae97a3b1d89cf968c35b24482f64cea6b927f397f83,b67fa825fa35e86063799091c34c65ccb95c3784f03e3c4c6cfa692f0c584f55,25,continue with conditions
