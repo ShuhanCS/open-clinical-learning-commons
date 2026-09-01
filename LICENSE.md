@@ -30,4 +30,4 @@ An imported dataset keeps the license, attribution requirements, and terms of it
 
 ## Names and marks
 
-Licensing the repository does not grant permission to use the names, logos, or marks of Mass General Brigham, MGB University, the IDEA Fellowship, or any data provider.
+Licensing the repository does not grant permission to use the names, logos, or marks of Mass General Brigham, Mass General Brigham University, or any data provider.

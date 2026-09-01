@@ -6,43 +6,79 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.99.0`
+- Current version: `0.100.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star and simulated review panel are also included.
 
 ## NIH nutrition education award North Star
 
-The Commons is being considered as the delivery layer for an NIH Developing Track submission tentatively titled **Open Nutrition Data Commons for Nursing Education**.
+The Commons is being considered as the delivery layer for an NIH Developing Track residency submission tentatively titled **Open Nutrition Data Commons for Emergency Medicine Residency**.
 
-> Build a 53-hour, competency-mapped nutrition data and responsible AI pathway for nursing learners, using the Mass General Brigham University Health Data Analytics applied curriculum as its recurring build and validation engine, the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence as its institutional lead and engineering builder, and nursing educators and nutrition experts as its practice and content partners.
+> Build a 40-hour or 40-hour competency-equivalent nutrition data and responsible AI curriculum for the Harvard-Affiliated Emergency Medicine Residency, led and engineered by the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence, strengthened by the Mass General Brigham University Health Data Analytics Program and nutrition experts, and released as a portable national teaching package.
 
-The challenge curriculum serves nursing learners and meets the 53-hour nursing expectation. The Health Data Analytics applied curriculum is a linked builder layer where data educators and learners help develop, test, and improve the reusable analytics activities. The Division of Artificial Intelligence leads the submission and engineering work, using its institutionally procured Microsoft Azure environment for development and validation. Nursing education provides practice review, the target learner context, and a planned adoption pathway. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
+The Harvard-Affiliated Emergency Medicine Residency is the proposed educational setting and its residents are the target learners. Division AI is the proposed builder and institutional coordinator. The Health Data Analytics Program contributes applied analytics, visualization, reproducibility, and assessment design. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
 
-The full working specification, open decisions, proposed 53-hour map, evidence plan, and simulated review procedure are in [the NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
+The full working specification contains the exact submission headings, page and formatting limits, eligibility gates, draft 40-hour map, evidence plan, and simulated review procedure: [NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
 
-### Official Developing Track evaluation criteria
+### Submission requirements at a glance
 
-The scored Curriculum Overview has eight equally weighted criteria. Each receives 0 to 5 points, for a maximum of 40 points.
-
-| Criterion | What reviewers need to see from this submission |
+| Requirement | Developing Track residency submission |
 |---|---|
-| Framework | A traceable 53-hour map from every lesson, activity, and assessment to selected HHS nutrition competencies. |
-| Innovation | A clear reason that an open data commons, applied analytics, and responsible AI improve nutrition learning rather than merely adding technology. |
-| Clarity of teaching methods | A module sequence with learner actions, instructor actions, time, modality, outputs, and assessment rules. |
-| Means to address identified competency gaps | A documented gap in current nursing nutrition education and a direct explanation of which curriculum components close it. |
-| Evaluation methods | Feasible measures of knowledge, applied performance, communication, referral judgment, data reasoning, and responsible AI use. |
-| Integration of innovative approaches | Authentic cases, synthetic data, simulation, interactive visualization, AI audit, and experiential work tied to learning outcomes. |
-| Context within medical or nursing education | A credible place in nursing education, including whether components are required, elective, embedded, or piloted. |
-| Interdisciplinary approach | Defined and evidenced roles for Division AI builders, Health Data Analytics educators, nursing educators, and a credentialed nutrition expert. |
+| Deadline | September 15, 2026, 11:59 PM Eastern Time. Late or incomplete submissions are not considered. |
+| Eligible Lead Entity | A U.S.-based, nonprofit public or private academic institution that provides an ACGME-accredited graduate medical residency program. The exact HAEMR sponsoring institution and Lead Entity must be confirmed. |
+| Point of Contact | Must be employed by and acting at the behest of the eligible institution. Written institutional authorization is required for our internal go decision. |
+| Entry limit | One entry per institution, whether submitted alone or in a partnership. Every formal partner consumes its one-entry allowance. |
+| Track and program type | Developing Track; Residency Program. Proposed and early-stage curricula are allowed. |
+| Nutrition requirement | At least 40 hours across the years of residency, or a documented 40-hour competency equivalent. |
+| Formal package | Three separate PDFs: Curriculum Overview, Nutrition Education Toolkit, and signed Participant Agreement. The portal also collects a Developing Track Toolkit Form. |
+| Curriculum Overview length | No more than 15 pages, excluding optional appendices. The Title and Executive Summary must be the first page and cannot exceed one page. |
+| Toolkit length | No more than 3 pages for the public Toolkit PDF. |
+| Page and text format | 8.5 x 11 inch pages, at least 1-inch margins, Arial at least 11 points, line spacing at least 1.0, and English. |
+| Branding | Do not use HHS or NIH logos or seals and do not imply federal endorsement. An institutional logo is optional in the Toolkit. |
+| Signatures | The Lead Entity and every formal Partner Entity must complete and sign the Participant Agreement. |
+| Rights | The institution must own or have permission to use every submitted work and must be able to grant NIH the license stated in the official rules. |
 
-Scalability is also a required submission theme even though it is not a ninth 5-point Developing Track criterion. The public toolkit must make national adoption credible.
+Missing a PDF, required section, signature, eligibility condition, or deadline is an administrative failure that can prevent scoring.
+
+### Required Curriculum Overview headings
+
+The guide requires the exact headings below. Section 7 applies only to the Exemplar Track and is omitted from this Developing Track draft.
+
+1. Title and Executive Summary
+2. Description of the curriculum and how it is designed to serve key learners
+3. Nutrition focus and alignment with the HHS Medical Education Nutrition Competency Framework
+4. Education or training approaches and modalities
+5. Means to address identified competency gaps
+6. Assessment methods
+8. Potential for broader dissemination and scalability
+9. Context within medical or nursing education
+10. Interdisciplinary approach
+
+Required information must appear in the 15-page narrative. Appendices can support the narrative but cannot replace it.
+
+### Official Developing Track judging criteria
+
+The Curriculum Overview receives a global score from 0 to 5 on each of eight equally weighted criteria, for a maximum of 40 points.
+
+| Criterion | What a 5-point submission needs to show |
+|---|---|
+| Framework | A traceable 40-hour or competency-equivalent map from every activity and assessment to selected HHS nutrition competencies. |
+| Innovation | A clear reason that emergency medicine cases, open data, applied analytics, and responsible AI improve nutrition learning rather than merely adding technology. |
+| Clarity of teaching methods | A sequence that states what residents and instructors do, when they do it, how long it takes, what they produce, and how performance is judged. |
+| Means to address identified competency gaps | A documented gap in current residency nutrition training, plus any additive future-facing competencies, with each gap mapped to a curriculum response. |
+| Evaluation methods | Feasible measures of knowledge, clinical reasoning, communication, referral judgment, data interpretation, and responsible AI use. |
+| Integration of innovative approaches | Authentic emergency cases, simulation, open or synthetic data, visualization, and AI audit activities tied to learning outcomes. |
+| Context within medical education | A credible place across HAEMR training years, with program leadership, schedule, required or elective status, and implementation path stated. |
+| Interdisciplinary approach | Defined roles for residency education, Division AI, Health Data Analytics, and a qualified nutrition professional. |
+
+Scalability is a required narrative section and a cross-cutting expectation even though it is not a ninth 5-point Developing Track criterion. The Toolkit is reviewed pass-fail for completeness, clarity, required structure, and suitability for dissemination.
 
 ### Who evaluates and judges
 
-NIH has published the panel structure, but it has not published individual judge names.
+NIH has published the review structure, but it has not published individual judge names.
 
-1. An administrative triage checks eligibility, completeness, and applicability to the challenge scope.
-2. An Evaluation Panel of technical subject-matter experts scores eligible submissions against the published criteria.
-3. A Judging Panel of federal employees from NIH and potentially other federal agencies considers those evaluations and selects winners, pending approval.
+1. Administrative triage checks eligibility, completeness, and applicability to scope.
+2. An Evaluation Panel of technical subject-matter experts scores eligible submissions.
+3. A Judging Panel of federal employees from NIH and potentially other federal agencies selects winners, subject to final approval.
 4. The Award Approving Official makes the final award decision.
 
 Official challenge page: https://www.nih.gov/challenges/integration-nutrition-training-into-health-care-education-challenge
@@ -53,18 +89,18 @@ HHS Medical Education Nutrition Competency Framework: https://www.hhs.gov/sites/
 
 ### Internal simulated review panel
 
-This is a fictional panel for rehearsal. Its members are roles, not representations of actual or expected NIH judges.
+This fictional panel rehearses the published review lenses. Its roles are not representations of actual or expected NIH judges.
 
-| Simulated reviewer | Primary lens | Questions this reviewer will press |
+| Simulated reviewer | Primary lens | Question this reviewer will press |
 |---|---|---|
-| Nutrition science and dietetics reviewer | Framework, evidence, scope of practice | Is the nutrition content current, balanced, clinically appropriate, and reviewed by qualified experts? |
-| Nursing curriculum reviewer | Nursing context and competency gaps | Can a nursing program place the 53 hours in a real curriculum, and do the activities prepare nurses for practice? |
-| Learning science and assessment reviewer | Teaching clarity and evaluation | Do learners practice the stated competencies, and can the proposed assessments show that they learned them? |
-| Clinical AI and data reviewer | Innovation and responsible technology use | Does analytics improve the educational task, are AI outputs auditable, and can learners detect unsafe or biased results? |
-| Implementation and open education reviewer | Scalability and reuse | Can another institution understand, adapt, teach, and maintain the package without MGB infrastructure? |
-| Simulated federal adjudicator | Public value and overall confidence | Is this in scope, feasible, distinctive, nationally useful, and ready to recognize as a Developing Track model? |
+| Nutrition science and dietetics reviewer | Framework and clinical accuracy | Is the content current, balanced, clinically appropriate, and reviewed by a qualified nutrition professional? |
+| Emergency medicine residency leader | Residency context and feasibility | Can HAEMR place the equivalent of 40 hours across training without displacing required clinical education? |
+| Graduate medical education reviewer | Teaching clarity and competency gaps | Does the curriculum fit resident progression, supervision, assessment, and program governance? |
+| Learning science and assessment reviewer | Teaching and evaluation | What observable resident performance would demonstrate competence rather than exposure? |
+| Clinical AI and data reviewer | Innovation and responsible technology | Why are data or AI needed, and how will residents detect unsupported or unsafe outputs? |
+| Implementation and open education reviewer | Scalability and public value | Can another residency adopt the package without MGB accounts or specialist engineers? |
 
-The internal go standard is at least 34 of 40 points, no criterion below 4, no unresolved administrative triage failure, and no unsupported institutional claim. This is an internal quality bar, not a score or cutoff published by NIH.
+The internal go standard is at least 34 of 40 points, no criterion below 4, no administrative triage failure, and no unsupported institutional claim. This is an internal quality bar, not an NIH cutoff.
 
 The durable curriculum rules, checkpoint contracts, open-data requirements, and context-safe build order are recorded in [docs/specs/2026-08-29-curriculum-master-architecture-spec.md](docs/specs/2026-08-29-curriculum-master-architecture-spec.md).
 
@@ -396,9 +432,9 @@ The planned web interface is a learning front door, not another learning managem
 - Every synthetic release must include its generator, version, row count, checksum, and known issues.
 - An incomplete build or a dataset that fails its teaching checks does not ship.
 
-## Why this connects MSDA and IDEA
+## Why this connects Health Data Analytics and emergency medicine education
 
-The Commons supplies a shared practice environment for the MGB University Master of Science in Health Data Analytics and the IDEA Fellowship in emergency medicine. MSDA learners can use it across foundation, applied, and capstone courses. IDEA fellows can use the same assets for reproducible coding, clinical data analysis, research communication, and reusable scholarly contributions.
+The Commons supplies a shared practice environment for the Mass General Brigham University Master of Science in Health Data Analytics and emergency medicine education. Health Data Analytics learners can use it across foundation, applied, and capstone courses. Emergency medicine educators and learners can use selected assets for reproducible analysis, clinical reasoning, research communication, and reusable scholarly contributions.
 
 Other programs can adopt a release without an IRB submission, data use agreement, or local patient data.
 

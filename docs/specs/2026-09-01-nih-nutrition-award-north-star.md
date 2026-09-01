@@ -1,215 +1,312 @@
-# Open Nutrition Data Commons for Nursing Education
+# Open Nutrition Data Commons for Emergency Medicine Residency
 
-- Status: working North Star for discussion
+- Status: working North Star and submission control document
 - Date: 2026-09-01
-- Commons release: `0.97.0`
+- Commons release: `0.100.0`
 - Challenge: NIH Integration of Nutrition Training into Health Care Education Challenge
-- Working track: Developing
-- Working program type: Nursing
+- Track: Developing
+- Program type: Residency Program
+- Proposed educational setting: Harvard-Affiliated Emergency Medicine Residency (HAEMR)
 - Submission deadline: September 15, 2026, 11:59 PM Eastern Time
 
 ## Purpose
 
-This specification defines the submission we are trying to create before the team writes the 15-page Curriculum Overview or builds nutrition modules. It keeps the learner outcome, prize criteria, team roles, technical boundary, and evidence requirements stable while details are refined.
+This specification defines the entry before the team writes the 15-page Curriculum Overview. It separates administrative gates from scored content, records the exact required headings, gives the writing team a page budget, and states what evidence must support each claim.
 
-This is a prize submission, not a request for NIH to finance speculative infrastructure. The application must show that the team, development environment, educational partnership, and national distribution path are credible now.
+This is a federal prize competition, not a grant or subaward. The submission must describe a credible curriculum, implementation plan, evaluation plan, team, and dissemination path. Developing Track entries may be proposed or in early implementation and do not need effectiveness data.
+
+## Confirmed working decisions
+
+- Developing Track.
+- Residency Program category.
+- HAEMR residents as the target learners.
+- A 40-hour longitudinal curriculum across residency, with a 40-hour competency equivalent reserved as a fallback.
+- Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence as the proposed builder and submission coordinator.
+- Mass General Brigham University Health Data Analytics Program as the applied analytics collaborator.
+- Open Clinical Learning Commons as the public delivery layer.
+- No real patient records, patient-facing AI, or requirement for adopters to use MGB infrastructure.
 
 ## North Star
 
-> Build a 53-hour, competency-mapped nutrition data and responsible AI pathway for nursing learners, using the Mass General Brigham University Health Data Analytics applied curriculum as its recurring build and validation engine, the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence as its institutional lead and engineering builder, and nursing educators and nutrition experts as its practice and content partners.
+> Build a 40-hour, competency-mapped nutrition data and responsible AI curriculum for HAEMR residents that improves clinical reasoning, communication, referral, and evidence use in emergency care; is led and engineered by the MGB Department of Emergency Medicine Division of Artificial Intelligence; is strengthened by Health Data Analytics and qualified nutrition expertise; and can be adopted by another residency without MGB credentials, protected health information, or proprietary software.
 
-This model has two linked learning layers:
+A resident completing the pathway should be able to recognize nutrition risk during emergency care, connect nutrition to acute and chronic disease, interpret relevant clinical and population data, communicate within physician scope, make an appropriate referral, plan a safe transition of care, and identify when AI-supported nutrition guidance is unsupported, biased, unsafe, or irrelevant.
 
-1. The challenge curriculum is the 53-hour nutrition pathway for nursing learners. This is the curriculum NIH evaluates for fit within nursing education.
-2. The builder curriculum sits within Health Data Analytics applied education. Data educators and learners help develop, test, document, and improve the reusable analytics activities that support the nursing pathway.
+The national adoption test is concrete:
 
-The builder layer is an interdisciplinary strength, but it cannot replace the nursing learner, nursing curriculum placement, or 53-hour nursing requirement. The Developing Track allows the nursing implementation to be proposed or in an early stage, so the nursing letter should document a credible review and adoption path without claiming that implementation has already occurred.
+> A residency educator outside MGB should be able to understand the full pathway in 30 minutes, inspect the competency and hour map, select a component for local use, and teach it with the public package.
 
-The learner outcome comes before the platform. A nursing learner completing the pathway should be able to recognize nutrition risk, reason from clinical and population data, evaluate evidence, communicate within nursing scope, make an appropriate referral, and identify when an AI-supported nutrition recommendation is unsupported, unsafe, biased, or irrelevant to the patient.
+## Team model
 
-The adoption test is equally important:
-
-> A nursing educator outside MGB should be able to understand the full pathway in 30 minutes, inspect the competency and hour map, select a module for local use, and run it without MGB credentials, protected health information, or proprietary software.
-
-## Prize thesis
-
-The proposed entry is stronger than a collection of nutrition lectures because it joins four capabilities in one reusable model:
-
-1. Division AI builds and maintains the analytic learning environment, reproducible assets, and responsible AI activities.
-2. The Health Data Analytics applied curriculum becomes a recurring build and validation engine for nutrition data, visualization, interpretation, and evaluation activities.
-3. Nursing educators connect the work to nursing learners, clinical practice, curriculum placement, and an adoption pathway.
-4. Nutrition experts validate the evidence, content boundaries, referrals, and scope of practice.
-
-The public value is a portable curriculum package, not access to MGB infrastructure. Microsoft Azure supports development and validation, while the public release must remain platform-independent.
-
-## Working submission structure
-
-| Role | Working assignment | Evidence needed before submission |
+| Role | Working assignment | Evidence required before submission |
 |---|---|---|
-| Lead Entity | Mass General Brigham | Authorized representative, confirmation of eligibility basis, and confirmation that this is its only entry. |
-| Submitting unit and builder | Department of Emergency Medicine, Division of Artificial Intelligence | Division leadership approval and a precise, supportable description of the Azure environment and engineering capacity. |
-| Lead Point of Contact | Shuhan He, acting in an authorized Division AI capacity | Written confirmation that the Lead Entity authorizes registration and submission. |
-| Academic collaborator | Mass General Brigham University Health Data Analytics Program | Collaboration letter or other institutional confirmation of the program's role. |
-| Health Data Analytics lead | Shuhan He, Program Director | Description of curriculum, assessment, and analytics contributions. |
-| Nursing education collaborator | To be confirmed | Letter describing faculty review, nursing learner context, and a realistic pilot or adoption pathway. |
-| Nutrition content reviewer | To be confirmed | Named RDN or other qualified nutrition professional with a specific review commitment. |
-| Public delivery layer | Open Clinical Learning Commons | Public repository, licensing, module structure, and a demonstrable sample. |
-| Development environment | MGB-procured Microsoft Azure environment | Approved wording about procurement, governance, capabilities, and limits. |
+| Eligible Lead Entity | To be confirmed from the current HAEMR ACGME sponsorship record and NIH rules | Exact legal name, accreditation basis, authorized representative, and one-entry clearance. |
+| Educational setting | Harvard-Affiliated Emergency Medicine Residency | Program leadership support, learner description, curriculum placement, and implementation commitment. |
+| Builder and coordinator | MGB Department of Emergency Medicine Division of Artificial Intelligence | Division leadership approval and supportable descriptions of personnel, engineering capacity, and the development environment. |
+| Point of Contact | Shuhan He, subject to institutional authorization | Written confirmation that the Lead Entity authorizes him to register, communicate, and submit on its behalf. |
+| Applied analytics collaborator | Mass General Brigham University Health Data Analytics Program | Collaboration letter and a defined role in curriculum, analytics, visualization, reproducibility, or assessment. |
+| Nutrition content reviewer | To be confirmed | Named qualified nutrition professional with a defined review and approval responsibility. |
+| Public delivery layer | Open Clinical Learning Commons | Public repository, licensing, module structure, and at least one demonstrable component. |
+| Development environment | Institutionally procured MGB Microsoft Azure environment | Approved wording about access, governance, capabilities, and limits. |
 
-The Lead Entity and Partner Entity treatment must be resolved against the Participation and Team Agreement. If Mass General Brigham University is a formal Partner Entity, its authorized representative must sign. If its programs participate only as collaborators, the application must still have permission to use their institutional names and describe their commitments.
+The Division of Artificial Intelligence may lead the work, but the official Lead Entity must satisfy the NIH institutional eligibility rules. A department, division, laboratory, or individual is not automatically a separate eligible institution.
 
-## Submission boundary
+## Administrative requirements
 
-### In scope
+These are pass-fail gates. A strong curriculum is not scored if administrative triage finds the entry ineligible, incomplete, late, or outside scope.
 
-- A 53-hour modular nutrition pathway designed for nursing education.
-- A linked applied Health Data Analytics builder experience that develops and validates reusable learning assets for that pathway.
-- Evidence-based nutrition content mapped to selected HHS competencies.
-- Synthetic and legally reusable open data.
-- Applied analytics, visualization, communication, referral, and responsible AI activities.
-- Online, case-based, simulation, and experiential learning formats.
-- Reusable faculty guidance, learner materials, datasets, code, rubrics, and evaluation tools.
-- An implementation and sustainability plan for nursing programs with different resources.
+### Eligibility and authority
 
-### Out of scope for this submission
+- The Lead Entity must be a fully accredited, U.S.-based, nonprofit public or private academic institution that provides an ACGME-accredited graduate medical residency program.
+- The institution must be incorporated in and maintain its primary place of business in the United States.
+- The Point of Contact must be employed by and acting at the behest of the eligible institution.
+- The Point of Contact registers the institution, submits the entry, and receives challenge communications.
+- Only one entry per institution is permitted, whether the institution enters alone or as part of a partnership.
+- Every formal Partner Entity must also be eligible, must sign the Participant Agreement, and uses its one-entry allowance.
+- If a partnership wins, NIH divides the prize equally among the eligible partner institutions.
+- Federal award or contract funds cannot be used to develop the challenge submission or support submission work.
+- The institution must own or have permission to use every submitted work.
+- The institution must be able to grant NIH the irrevocable, paid-up, royalty-free, nonexclusive worldwide license stated in the official rules to reproduce, publish, post, link to, share, and publicly display the submission. The institution retains its other applicable intellectual property rights.
+- A Unique Entity ID from SAM.gov is required to expedite payment if selected, but the official page does not list it as a submission attachment.
 
-- Real patient records or protected health information.
-- Patient-facing AI or autonomous clinical recommendations.
-- Claims that the curriculum is approved, required, implemented, or effective unless documented.
-- A new learning management system.
-- A requirement that adopters purchase Azure or use MGB infrastructure.
-- A complete rebuild of the existing Commons curriculum.
-- Clinical nutrition practice beyond the learner's professional scope.
+### Registration and deadline
 
-## Draft 53-hour pathway
+- Register and create the submission account at https://nutritioneducationchallenge.org/
+- Register the Point of Contact and every individual competing on behalf of the institution.
+- Identify every formal partner and its Point of Contact during registration.
+- Certify agreement with the eligibility rules, participation rules, and challenge requirements.
+- Submit the complete package by September 15, 2026, at 11:59 PM Eastern Time.
+- Late or incomplete submissions are not considered.
 
-This is a planning map. Nursing educators and the nutrition reviewer must approve the final sequence, learner level, and hour assignments.
+## The three required PDFs
 
-| Component | Hours | Primary learner work | HHS connection |
+| PDF | Purpose | Length | Completion rule |
+|---|---|---:|---|
+| Curriculum Overview | Primary scored technical narrative | 15 pages maximum, excluding optional appendices | Use every required Developing Track heading. Keep required evidence in the narrative. |
+| Nutrition Education Toolkit | Public dissemination document | 3 pages maximum | Complete the separate Toolkit Form in the portal and submit the public Toolkit PDF. |
+| Participant Agreement | Eligibility, rules, intellectual property, and institutional consent | Official form length | Lead Entity and every formal Partner Entity complete and sign it. |
+
+All three documents must be submitted as separate PDFs. If any one is missing, the entry may not be judged.
+
+## Formatting rules
+
+- Page size: 8.5 x 11 inches.
+- Margins: at least 1 inch.
+- Font: Arial, no smaller than 11 points.
+- Line spacing: at least 1.0.
+- Language: English.
+- The Title and Executive Summary must be the first page of the Curriculum Overview and cannot exceed one page.
+- Do not use HHS or NIH logos or seals.
+- Do not imply federal endorsement.
+- The Toolkit may include an institutional logo or branding.
+- Appendices are optional and do not count toward the 15-page Curriculum Overview limit.
+- Label every appendix and cite it from the relevant narrative section.
+- Do not move required content into an appendix. Reviewers evaluate the primary narrative.
+
+## Curriculum Overview writing template
+
+The submission guide requires the exact headings below. Section 7 is for Exemplar Track entries only, so the Developing Track narrative jumps from Section 6 to Section 8.
+
+The page allocations are internal targets, not NIH requirements. They reserve about 1.5 pages for figures, tables, and layout movement within the 15-page limit.
+
+| Official section heading | Internal target | What the section must establish | Main scoring connection |
 |---|---:|---|---|
-| Nutrition foundations and evidence | 7 | Interpret core nutrition concepts and distinguish strong evidence from unsupported claims. | Foundational nutrition knowledge; critical use of evidence. |
-| Nutrition assessment and clinical data | 8 | Combine history, measurements, laboratory findings, and context to identify nutrition risk. | Nutrition assessment and diagnosis. |
-| Food access, public health, and equity | 6 | Analyze food and nutrition needs, access barriers, population patterns, and referral options. | Public health nutrition. |
-| Communication and behavior change | 6 | Practice brief, respectful, evidence-based nutrition communication and shared goals. | Food and nutrition-related communication skills. |
-| Interprofessional referral and management | 5 | Identify scope boundaries and coordinate with dietitians and other professionals. | Collaborative, interprofessional referral and patient management. |
-| Applied nutrition analytics and visualization | 8 | Build reproducible summaries and visual explanations from synthetic and open nutrition data. | Additive data literacy and evidence interpretation competencies. |
-| Responsible AI and digital nutrition tools | 6 | Test AI-generated guidance, document sources, identify bias and unsafe advice, and preserve human accountability. | Digital health technology integration; responsible use of AI for nutrition advice. |
-| Integrated nursing case and portfolio | 7 | Complete and defend one evidence chain from assessment through communication, referral, and follow-up. | Integrated demonstration across selected domains. |
-| **Total** | **53** |  |  |
+| Curriculum Overview Section 1: Title and Executive Summary | 1.0 page, hard maximum | Track, institution, target learners, selected HHS competencies, curriculum, goals, approach, and expected impact. | All criteria at summary level. |
+| Curriculum Overview Section 2: Description of the curriculum and how it is designed to serve key learners | 2.5 pages | Goals, content, teaching formats, resident progression, delivery setting, learner interaction over time, and evidence base. | Context; clarity. |
+| Curriculum Overview Section 3: Nutrition focus and alignment with the HHS Medical Education Nutrition Competency Framework | 2.0 pages | Selected competencies, the 40-hour map, clinical integration, and traceability from competency to activity and assessment. | Framework. |
+| Curriculum Overview Section 4: Education or training approaches and modalities | 2.0 pages | Instructional methods, resident actions, faculty qualifications, onboarding, simulation, cases, analytics, and responsible AI activities. | Clarity; innovation; innovative approaches. |
+| Curriculum Overview Section 5: Means to address identified competency gaps | 1.25 pages | Current residency nutrition gaps, additive future-facing competencies, and the curriculum response to each gap. | Competency gaps. |
+| Curriculum Overview Section 6: Assessment methods | 1.5 pages | Planned knowledge and performance measures, timing, scoring, feedback, implementation measures, and curriculum improvement process. | Evaluation methods. |
+| Curriculum Overview Section 8: Potential for broader dissemination and scalability | 1.25 pages | National need, portability, public assets, low-resource adoption, faculty preparation, maintenance, and evidence of likely uptake. | Required scalability narrative. |
+| Curriculum Overview Section 9: Context within medical or nursing education | 1.25 pages | HAEMR training years, required or elective status, calendar, governance, relation to existing GME, and implementation path. | Context. |
+| Curriculum Overview Section 10: Interdisciplinary approach | 0.75 page | Division AI, residency education, Health Data Analytics, nutrition expertise, ownership, and decision rights. | Interdisciplinary approach. |
+| **Planned narrative** | **13.5 pages** | Leaves layout room without exceeding 15 pages. |  |
 
-## Minimum release package
+## Recommended appendices
 
-The Developing Track entry does not need every lesson to be fully implemented, but it needs enough concrete material to make the plan believable.
+Appendices should supply evidence, not rescue an incomplete narrative.
 
-1. A complete 53-hour curriculum and competency map.
-2. One representative module built to runnable release-candidate quality.
-3. One synthetic or open dataset with provenance, terms, data dictionary, and known limits.
-4. One worked learner case and one independent assessment task.
-5. One scoring rubric and one evaluation instrument.
-6. A faculty implementation guide and a low-resource adoption path.
-7. Letters confirming the Division AI, Health Data Analytics, nursing education, and nutrition-review roles.
-8. A public-facing three-page toolkit that is useful without access to the scored application.
+1. Appendix: 40-Hour Curriculum Map
+2. Appendix: Competency Mapping
+3. Appendix: Sample Instructional Session
+4. Appendix: Evaluation Tools
+5. Appendix: Dissemination and Scalability
+6. Appendix: Program Integration
+7. Appendix: Interdisciplinary Collaboration
+8. Appendix: Letters of Support
 
-## Official award evaluation criteria
+## Developing Track Toolkit Form
 
-The Developing Track Curriculum Overview is scored on eight criteria worth 0 to 5 points each. The maximum is 40 points.
+The portal form collects a standardized snapshot. Prepare these fields before portal entry:
 
-| Criterion | Our 5-point standard | Required evidence |
-|---|---|---|
-| Framework | Every claimed hour and competency is traceable to a lesson, learner action, and assessment. | 53-hour map, competency crosswalk, module specifications, and nutrition expert review. |
-| Innovation | Data and AI change what learners can practice, inspect, and defend. The technology is not ornamental. | Applied cases, auditable AI task, reproducible data exercise, and comparison with ordinary instruction. |
-| Clarity of teaching methods | Another educator can tell exactly what the learner and instructor do, in what order, for how long, and with what output. | Module map, sample lesson, faculty guide, learner instructions, and delivery plan. |
-| Means to address identified competency gaps | The application documents a specific current gap and maps each gap to a curriculum response. | Baseline curriculum inventory, gap analysis, stakeholder input, and response matrix. |
-| Evaluation methods | Measures cover knowledge and performance and can be run during a pilot. | Pre and post measures, performance rubric, AI audit rubric, implementation measures, and feedback loop. |
-| Integration of innovative approaches | Cases, simulation, data laboratories, visual explanation, and AI critique are tied to outcomes. | Sample artifacts and a rationale for each modality. |
-| Context within medical or nursing education | The pathway has a credible nursing home, learner level, calendar, approval path, and required or elective status. | Nursing letter, integration map, implementation timeline, and governance steps. |
-| Interdisciplinary approach | Each discipline owns necessary work, and the collaboration changes the curriculum. | Role table, named contributors, letters, review records, and decision rights. |
+- Program or curriculum title.
+- Institution name and location.
+- Program website or URL.
+- Primary contact name and email.
+- Partnerships or collaborators.
+- Program type.
+- Planned HHS competencies, maximum 250 words.
+- Target learner population.
+- Required, elective, combination, or other status.
+- Anticipated implementation date.
+- Current stage of development.
+- Anticipated total nutrition hours and planned credit hours, if applicable.
+- Anticipated learners per cohort and annually.
+- Anticipated number of faculty or instructors.
+- Brief program overview, maximum 250 words.
+- Proposed educational settings, maximum 250 words.
+- Proposed delivery structure, maximum 250 words.
+- Planned instructional formats, maximum 250 words.
+- Curriculum components with name, format, hours, status, and learner level.
+- Specialized resources or facilities, maximum 250 words.
+- Institutional support and sustainability, maximum 250 words.
+- Anticipated challenges or barriers, maximum 250 words.
+- Implementation timeline or rollout plan, maximum 250 words.
 
-Scalability remains a required submission theme and a cross-cutting expectation. It must be demonstrated in the Curriculum Overview and public toolkit even though the Developing Track rubric does not list it as a ninth scored criterion.
+## Three-page Toolkit PDF
+
+The public Toolkit is reviewed pass-fail for completeness, clarity, adherence to the required structure, and suitability for dissemination. It should stand on its own for an educator who has not read the scored Curriculum Overview.
+
+The mandatory header includes:
+
+- Program or curriculum title.
+- Institution name and location.
+- Program website or URL.
+- Optional institutional logo or branding.
+
+The body must cover:
+
+1. Proposed Curriculum Structure and Scope: structure, intended settings, and planned components.
+2. Teaching and Learning Approaches: teaching methods, distinctive features, participating disciplines, and educational philosophy.
+3. Implementation Planning and Anticipated Impact: timeline, institutional support, barriers, intended outcomes, lessons informing development, and advice for other institutions.
+4. Additional Resources, if used: supporting materials, websites, and notes.
+5. Key contact information.
+
+## Draft 40-hour residency pathway
+
+An actual 40-hour map is easier to verify than a competency-equivalent claim. The team should use the equivalence route only if HAEMR cannot adopt a clock-hour map.
+
+| Component | Hours | Primary resident work | Educational purpose |
+|---|---:|---|---|
+| Nutrition foundations and evidence | 5 | Interpret core nutrition concepts and distinguish strong evidence from unsupported claims. | Establish a common evidence base. |
+| Nutrition risk and assessment in emergency care | 6 | Recognize risk from history, examination, measurements, laboratory findings, and clinical context. | Connect nutrition to emergency assessment and disposition. |
+| Acute and chronic disease integration | 6 | Apply nutrition reasoning to common emergency presentations and diet-related chronic disease. | Move from general knowledge to clinical decisions. |
+| Food access, equity, discharge, and referral | 5 | Identify access barriers, avoid unsafe assumptions, use local resources, and plan appropriate follow-up. | Link emergency care to prevention and continuity. |
+| Communication and interprofessional management | 4 | Practice brief counseling, shared goals, documentation, consultation, and referral. | Keep resident actions within scope and connected to dietetics. |
+| Applied nutrition analytics and visualization | 5 | Build and interpret reproducible summaries from synthetic and open nutrition data. | Strengthen data reasoning and communication. |
+| Responsible AI and digital nutrition tools | 4 | Audit generated guidance, check sources, identify bias, and document human accountability. | Prepare residents to evaluate emerging tools safely. |
+| Integrated emergency cases and simulation | 5 | Complete and defend cases from assessment through communication, referral, and disposition. | Demonstrate integrated performance. |
+| **Total** | **40** |  |  |
+
+## Official Developing Track judging criteria
+
+Each criterion receives a global score from 0 to 5. The maximum score is 40.
+
+| Criterion | What NIH asks | Our 5-point standard | Required evidence |
+|---|---|---|---|
+| Framework | Does the curriculum address the HHS framework? | Every selected competency is traceable to time, resident work, and assessment. | 40-hour map, competency crosswalk, module specifications, and nutrition review. |
+| Innovation | Does it introduce new ideas or approaches? | Data and AI change what residents can practice, inspect, and defend. | Applied cases, auditable AI task, reproducible data exercise, and comparison with ordinary instruction. |
+| Clarity of Teaching Methods | Are instructional strategies clear and understandable? | Another faculty member can run each component from the documentation. | Sequence, time, modality, faculty action, resident action, output, and scoring rule. |
+| Means to Address Identified Competency Gaps | Does it address gaps and additive future needs? | The proposal names current HAEMR gaps and maps each gap to a response. | Baseline inventory, gap analysis, stakeholder input, and response matrix. |
+| Evaluation Methods | Are methods for assessing outcomes well defined? | Measures cover knowledge, clinical performance, communication, referral, data reasoning, and AI audit. | Pre and post measures, performance rubrics, implementation measures, and feedback loop. |
+| Integration of Innovative Approaches | Are innovative methods incorporated into teaching? | Simulation, cases, open data, visualization, and AI critique each support a stated outcome. | Sample artifacts and a rationale for each method. |
+| Context within Medical Education | Is the curriculum situated in the broader residency? | The proposal identifies training years, schedule, status, governance, and relation to existing education. | HAEMR support, integration map, implementation timeline, and approval path. |
+| Interdisciplinary Approach | Does it involve multiple disciplines? | Each discipline owns necessary work and changes the educational design. | Role table, named contributors, letters, review records, and decision rights. |
+
+Scalability is not a ninth 5-point criterion, but it has its own required Curriculum Overview section and is central to the public Toolkit.
 
 ## Who evaluates and judges
 
-NIH has published the judging structure but not the names of individual judges.
+NIH has published the review structure but not individual judge names.
 
-1. Administrative triage reviews eligibility, completeness, and applicability to scope.
-2. A technical Evaluation Panel with relevant subject-matter expertise scores eligible submissions.
-3. A Judging Panel made up of federal employees from NIH and potentially other federal agencies considers the technical evaluations and selects winners, pending final approval.
+1. Administrative triage reviews eligibility, completeness, deadline compliance, and applicability to scope.
+2. An Evaluation Panel of technical experts individually scores eligible submissions.
+3. A Judging Panel of federal employees from NIH and potentially other agencies considers those scores and selects winners, pending approval.
 4. The Award Approving Official makes the final award decision.
-
-We will not invent judge identities, affiliations, or preferences. The internal panel below simulates the expertise and questions the published process is likely to require.
 
 ## Simulated review panel
 
-| Panel role | Primary criteria | Review posture | Required challenge question |
-|---|---|---|---|
-| Nutrition science and dietetics reviewer | Framework; competency gaps | Protect content accuracy and professional scope. | Which claimed competency lacks qualified review, enough learner time, or an assessment? |
-| Nursing curriculum reviewer | Context; teaching clarity | Test whether this belongs in real nursing education. | Where do the 53 hours fit, who teaches them, and what will nursing learners do differently? |
-| Learning science and assessment reviewer | Teaching clarity; evaluation | Look for alignment among outcomes, practice, and measurement. | What learner performance would prove competence rather than exposure? |
-| Clinical AI and data reviewer | Innovation; innovative approaches | Separate meaningful analytic learning from technology decoration. | Why is data or AI necessary here, and how will learners catch a wrong answer? |
-| Implementation and open education reviewer | Interdisciplinary approach; scalability | Test portability, workload, maintenance, and reuse. | Can a resource-constrained nursing program adopt this without MGB accounts or specialist engineers? |
-| Simulated federal adjudicator | Overall public value | Decide whether the entry is in scope, feasible, distinctive, and nationally useful. | Why should NIH recognize and disseminate this model instead of another nutrition curriculum? |
+This fictional panel rehearses likely expert lenses. It does not claim to identify NIH judges.
+
+| Panel role | Primary criteria | Required challenge question |
+|---|---|---|
+| Nutrition science and dietetics reviewer | Framework; gaps | Which competency, claim, or resident action lacks enough time, evidence, or qualified review? |
+| Emergency medicine residency leader | Context; feasibility | Can this fit longitudinally in HAEMR, and what will residents do differently in practice? |
+| Graduate medical education reviewer | Teaching clarity; governance | Are progression, supervision, faculty preparation, assessment, and approval credible? |
+| Learning science and assessment reviewer | Teaching clarity; evaluation | What observable performance would prove competence rather than exposure? |
+| Clinical AI and data reviewer | Innovation; innovative approaches | Why are data or AI needed, and how will residents catch unsupported or unsafe outputs? |
+| Implementation and open education reviewer | Scalability; public value | Can another residency adopt this without MGB accounts, protected data, or specialist engineers? |
 
 ### Simulation procedure
 
-1. Run administrative triage before scoring. A failed eligibility, scope, completeness, hour, signature, or one-entry check stops the review.
+1. Run administrative triage before scoring. An unresolved eligibility, signature, one-entry, scope, format, package, or deadline failure stops the review.
 2. Give every reviewer the same submission package and require an independent 0 to 5 score for all eight criteria.
 3. Require one evidence citation and one unresolved concern for every score below 5.
 4. Discuss any criterion with a score range of 2 or more points across reviewers.
-5. Revise the submission and repeat the panel after the evidence package changes materially.
+5. Revise and repeat after the evidence package changes materially.
 
 ### Internal go standard
 
-- Total score of at least 34 of 40.
+- At least 34 of 40 points.
 - No criterion below 4.
 - No unresolved administrative triage failure.
-- No unsupported claim about eligibility, approval, partnership, Azure, implementation, or effectiveness.
-- A one-page executive summary that states the learner, problem, 53-hour approach, team, evidence, and national value.
+- No unsupported claim about eligibility, authorization, HAEMR participation, Division AI, Health Data Analytics, Azure, implementation, or effectiveness.
+- A complete one-page executive summary.
+- A readable three-page public Toolkit.
 
 This is an internal quality bar. NIH has not published a minimum winning score.
 
-## Administrative triage simulation
+## Administrative triage checklist
 
-| Check | Submission evidence | Current status |
+| Check | Required evidence | Current status |
 |---|---|---|
-| Eligible Lead Entity | Lead Entity name and accreditation basis. | Open decision. |
-| Authorized Point of Contact | Written institutional authority to register and submit. | Open decision. |
-| One entry per institution | Confirmation from each formal participating institution. | Open decision. |
-| Correct track | Developing Track selected consistently. | Working decision. |
-| Applicable scope | Nursing learners, nursing curriculum context, and 53 hours. | Working design. |
+| Eligible Lead Entity | Exact current HAEMR ACGME sponsor and NIH eligibility basis. | Open, blocking. |
+| Authorized Point of Contact | Written authority from the Lead Entity. | Open, blocking. |
+| One-entry clearance | Confirmation from the Lead Entity and each formal partner. | Open, blocking. |
+| HAEMR participation | Program leadership support and implementation role. | Open, blocking. |
+| Correct classification | Developing Track and Residency Program selected consistently. | Confirmed working decision. |
+| Applicable scope | Emergency medicine residents and a 40-hour map or equivalent. | Working design. |
 | Complete package | Curriculum Overview, Toolkit, and signed Participant Agreement as separate PDFs. | Not started. |
-| Formatting | Page size, margins, font, page limits, language, and prohibited-logo rules. | Not started. |
-| Deadline | Complete submission by September 15, 2026, 11:59 PM Eastern Time. | Fixed. |
+| Required headings | Sections 1 through 6 and 8 through 10 with exact headings. | Template defined. |
+| Formatting | Page size, margins, font, spacing, language, page limits, and logo rules. | Checklist defined. |
+| Rights | Source and license review for all prose, code, data, and images. | Not started. |
+| Deadline | Complete portal submission by September 15, 2026, 11:59 PM Eastern Time. | Fixed. |
 
-## Fifteen-day submission package
+## Minimum evidence package
 
-The final entry requires three separate PDFs:
+1. Complete 40-hour curriculum and competency map.
+2. One representative component at runnable release-candidate quality.
+3. One synthetic or open dataset with provenance, terms, data dictionary, and known limits.
+4. One worked resident case and one independent assessment task.
+5. One scoring rubric and one evaluation instrument.
+6. Faculty implementation guide and low-resource adoption path.
+7. Institutional authorization and support letters for the roles claimed.
+8. Three-page public Toolkit.
 
-1. Curriculum Overview, no more than 15 pages excluding appendices.
-2. Nutrition Education Toolkit form plus a public-facing toolkit PDF no more than 3 pages.
-3. Participation and Team Agreement signed by the Lead Entity and any formal Partner Entities.
+## Decisions to make next
 
-The working build should also produce a competency appendix, 53-hour map, representative module, evaluation instruments, implementation timeline, and support letters. These are evidence for the three required PDFs rather than additional portal deliverables unless the final rules or portal request them.
-
-## North Star decisions to make together
-
-- [ ] Confirm the final title and whether `Open Nutrition Data Commons` is the public program name.
-- [ ] Confirm whether the submission is a single-entity MGB entry or an MGB and Mass General Brigham University partnership.
-- [ ] Confirm the exact eligibility basis and authorized signer for each formal entity.
-- [ ] Name the nursing program, learner level, faculty liaison, and planned curriculum placement.
-- [ ] Confirm where the builder work fits within the Health Data Analytics applied curriculum and what its learners will produce.
-- [ ] Confirm whether the pathway is required, elective, embedded, or a combination.
-- [ ] Approve or revise the draft 53-hour module map.
-- [ ] Name a credentialed nutrition reviewer and define the review commitment.
-- [ ] Approve the exact public description of the Division's Azure procurement and environment.
-- [ ] Choose the representative module that will be built before submission.
-- [ ] Confirm licensing for curriculum prose, code, synthetic data, and imported sources.
+- [ ] Confirm the exact current ACGME Sponsoring Institution and legal Lead Entity for HAEMR.
+- [ ] Obtain one-entry clearance from that institution.
+- [ ] Confirm the authorized Point of Contact and Participant Agreement signer.
+- [ ] Obtain HAEMR program leadership commitment and select the resident years and curriculum placements.
+- [ ] Decide whether the curriculum uses 40 clock hours or documents a 40-hour competency equivalent.
+- [ ] Approve or revise the draft 40-hour map.
+- [ ] Confirm the final public title.
+- [ ] Name a qualified nutrition reviewer and define the review responsibility.
+- [ ] Confirm the exact Health Data Analytics collaboration and letter.
+- [ ] Approve the public description of Division AI and its Azure environment.
+- [ ] Choose the representative component to build before submission.
+- [ ] Clear rights for curriculum prose, code, data, and images.
 
 ## Official sources
 
-- Official challenge page: https://www.nih.gov/challenges/integration-nutrition-training-into-health-care-education-challenge
+- Official challenge announcement and rules: https://www.nih.gov/challenges/integration-nutrition-training-into-health-care-education-challenge
 - Submission guide: https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/FINAL_5.21.26_Submission-Guide_NIH-Nutrition-Challenge.pdf
-- Participation and Team Agreement: https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/NIH-Nutrition-Education-Challenge-Team-Agreement_5.26.26-1.pdf
+- Participant Agreement: https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/NIH-Nutrition-Education-Challenge-Team-Agreement_5.26.26-1.pdf
 - HHS Medical Education Nutrition Competency Framework: https://www.hhs.gov/sites/default/files/nutrition-competencies-framework.pdf
+- Challenge portal: https://nutritioneducationchallenge.org/
 - Challenge FAQ: https://nutritioneducationchallenge.org/faq/
+- Harvard-Affiliated Emergency Medicine Residency: https://haemr.org/
+- MGB Department of Emergency Medicine Division of Artificial Intelligence: https://emaidivision.org/
 - Mass General Brigham University Health Data Analytics Program: https://www.mgbu.edu/health-rehabilitation-sciences/departments-programs/health-sciences/master-science-healthcare-data-analytics/
 - Open Clinical Learning Commons: https://github.com/ShuhanCS/open-clinical-learning-commons

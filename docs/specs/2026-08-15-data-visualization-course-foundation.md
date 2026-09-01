@@ -10,15 +10,13 @@ Use the DA-730 redesign as the first working application of the Open Clinical Le
 
 The first build should be one complete module, not the full course and not the full synthetic health system. Module 04, Distributions versus summaries, is the vertical slice because Ali Goff's source document already defines its competency, data requirements, lab, critique exercises, assessments, and instructor notes.
 
-This first module will test whether a teaching unit can move between MSDA courses, IDEA Fellowship training, and another institution without rewriting the concept or exposing patient data.
+This first module will test whether a teaching unit can move between Health Data Analytics courses, emergency medicine education, and another institution without rewriting the concept or exposing patient data.
 
 ## Source material
 
 This specification draws from three documents supplied for the project:
 
 - Ali Goff's redesign of DA-730, including a complete Module 04 example;
-- The IDEA Fellowship for Emergency Medicine prospectus;
-- The IDEA Fellowship and MSDA curriculum and Open Clinical Learning Commons alignment one-pager.
 
 The original DOCX and fellowship PDFs are not copied into this public repository. Course authors should confirm permission and attribution before publishing adapted instructional text.
 
@@ -146,7 +144,7 @@ The generator must support real, null, and clinically trivial effect variants so
 
 A new instructor can open the module, run the generator and checks, teach the concept without reading the DA-730 source document, and grade a learner's chart and recommendation from the supplied rubric. No real patient record, restricted dataset, or unpublished partner data is required.
 
-## IDEA Fellowship and MSDA alignment
+## Emergency medicine and Health Data Analytics alignment
 
 | Need | Course contribution | Commons contribution |
 |---|---|---|
@@ -157,7 +155,7 @@ A new instructor can open the module, run the generator and checks, teach the co
 | Research products and grantsmanship | Learners turn analysis into a decision-focused visual and written recommendation. | Fellows can contribute reviewed datasets, teaching cases, benchmarks, and documentation as reusable scholarly products. |
 | A longitudinal project and national development | The course provides a small, complete analytic workflow before a capstone or fellowship project. | Other programs can adopt a versioned module without an IRB, data use agreement, or local patient data. |
 
-Within the revised MSDA curriculum, the course supplies the visualization and communication thread that begins in Fundamentals I and is reused in each Data for X course and the capstone. For IDEA fellows, the same modules provide a common technical baseline and a contribution path into national teaching infrastructure.
+Within the revised Health Data Analytics curriculum, the course supplies the visualization and communication thread that begins in Fundamentals I and is reused in each Data for X course and the capstone. Emergency medicine educators and learners can use the same modules as a technical baseline and a contribution path into national teaching infrastructure.
 
 ## Data and release rules
 
