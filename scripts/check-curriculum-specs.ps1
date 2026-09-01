@@ -33,29 +33,25 @@ $mgbAdminFiles = @(
     'README.md',
     '00-routing-email.md',
     '01-mgb-research-management-intake.md',
-    '02-mgb-institutional-authorization-record.md',
-    '03-haemr-program-commitment-letter.md',
-    '04-department-emergency-medicine-build-commitment-letter.md',
-    '05-health-data-analytics-collaboration-letter.md',
-    'word\01-mgb-research-management-intake.docx',
-    'word\02-mgb-institutional-authorization-record.docx',
-    'word\03-haemr-program-commitment-letter.docx',
-    'word\04-department-emergency-medicine-build-commitment-letter.docx',
-    'word\05-health-data-analytics-collaboration-letter.docx'
+    'word\01-mgb-research-management-intake.docx'
 )
 $mgbAdminMissing = @($mgbAdminFiles | Where-Object { -not (Test-Path -LiteralPath (Join-Path $mgbAdminRoot $_)) })
+$mgbAdminDocx = @(Get-ChildItem -LiteralPath (Join-Path $mgbAdminRoot 'word') -Filter '*.docx' -File)
 $mgbAdminText = Get-Content -Raw -LiteralPath (Join-Path $mgbAdminRoot '01-mgb-research-management-intake.md')
 $mgbAdminContent = (($mgbAdminFiles | Where-Object { $_ -like '*.md' } | ForEach-Object {
     Get-Content -Raw -LiteralPath (Join-Path $mgbAdminRoot $_)
 }) -join "`n")
 if (
     $mgbAdminMissing.Count -gt 0 -or
+    $mgbAdminDocx.Count -ne 1 -or
     $mgbAdminText -notmatch '1102421150' -or
     $mgbAdminText -notmatch 'one entry per institution' -or
     $mgbAdminText -notmatch 'not a grant, cooperative agreement, contract, or subaward' -or
     $mgbAdminText -notmatch 'Insight record or another internal proposal or agreement record' -or
     $mgbAdminText -notmatch 'Human subjects research at the submission stage' -or
     $mgbAdminText -notmatch 'MGB Department of Emergency Medicine would build and coordinate the curriculum' -or
+    $mgbAdminText -notmatch 'Point of Contact authorization' -or
+    $mgbAdminText -notmatch 'Participant Agreement signer' -or
     $mgbAdminContent -match 'Division of Artificial Intelligence|Division AI|emaidivision\.org' -or
     $mgbAdminText -match '[—–]'
 ) {
@@ -172,7 +168,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.104.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.105.0'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2905,7 +2901,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.104.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.105.0'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4129,7 +4125,7 @@ if (
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
     $app4PackageContent -notmatch 'all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.104.0'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.105.0'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }

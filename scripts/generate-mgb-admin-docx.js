@@ -20,10 +20,6 @@ const sourceDir = path.join(repo, "docs", "submission", "administrative");
 const outputDir = path.join(sourceDir, "word");
 const documents = [
   "01-mgb-research-management-intake",
-  "02-mgb-institutional-authorization-record",
-  "03-haemr-program-commitment-letter",
-  "04-department-emergency-medicine-build-commitment-letter",
-  "05-health-data-analytics-collaboration-letter",
 ];
 
 function textRuns(line) {
@@ -85,6 +81,13 @@ function parseMarkdown(markdown) {
         new Paragraph({
           heading: HeadingLevel.HEADING_2,
           children: [new TextRun(line.slice(4))],
+        }),
+      );
+    } else if (line.startsWith("- [ ] ")) {
+      children.push(
+        new Paragraph({
+          indent: { left: 280 },
+          children: textRuns(line.slice(2)),
         }),
       );
     } else if (line.startsWith("- ")) {
@@ -209,7 +212,7 @@ async function main() {
     const buffer = await Packer.toBuffer(buildDocument(markdown, name));
     fs.writeFileSync(path.join(outputDir, `${name}.docx`), buffer);
   }
-  process.stdout.write(`Generated ${documents.length} Word documents in ${outputDir}\n`);
+  process.stdout.write(`Generated ${documents.length} Word document in ${outputDir}\n`);
 }
 
 main().catch((error) => {

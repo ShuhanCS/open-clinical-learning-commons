@@ -23,7 +23,7 @@ The attached Research Management intake asks MGB to classify the opportunity, as
 
 This is a federal prize competition, not a grant or subaward. There is no application budget. A Developing Track residency award is up to $75,000 and would be paid to the institution if selected. Federal award funds may not be used to prepare the entry.
 
-Could the appropriate institutional offices confirm the route and initial go or no-go decision by September 4? I have attached an editable authorization record for the legal entity, one-entry check, Point of Contact, signer, and approval sequence. Program support letters are available if the institutional route requires them.
+Could the appropriate institutional offices confirm the route and initial go or no-go decision by September 4? I have attached one editable Research Management intake that includes the legal entity, one-entry check, Point of Contact authorization, Participant Agreement signer, and approval record.
 
 Thank you,
 

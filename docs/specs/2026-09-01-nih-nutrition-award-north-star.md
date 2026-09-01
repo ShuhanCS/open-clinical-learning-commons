@@ -2,7 +2,7 @@
 
 - Status: working North Star and submission control document
 - Date: 2026-09-01
-- Commons release: `0.104.0`
+- Commons release: `0.105.0`
 - Challenge: NIH Integration of Nutrition Training into Health Care Education Challenge
 - Track: Developing
 - Program type: Residency Program
@@ -44,7 +44,7 @@ The national adoption test is concrete:
 | Educational setting | Harvard-Affiliated Emergency Medicine Residency | Program leadership support, learner description, curriculum placement, and implementation commitment. |
 | Builder and coordinator | MGB Department of Emergency Medicine | Department leadership approval and supportable descriptions of personnel, technical capacity, and the development environment. |
 | Point of Contact | Shuhan He, subject to institutional authorization | Written confirmation that the Lead Entity authorizes him to register, communicate, and submit on its behalf. |
-| Applied analytics collaborator | Mass General Brigham University Health Data Analytics Program | Collaboration letter and a defined role in curriculum, analytics, visualization, reproducibility, or assessment. |
+| Applied analytics collaborator | Mass General Brigham University Health Data Analytics Program | Written institutional role confirmation and a defined role in curriculum, analytics, visualization, reproducibility, or assessment. |
 | Nutrition content reviewer | To be confirmed | Named qualified nutrition professional with a defined review and approval responsibility. |
 | Public delivery layer | Open Clinical Learning Commons | Public repository, licensing, module structure, and at least one demonstrable component. |
 | Development environment | Institutionally procured MGB Microsoft Azure environment | Approved wording about access, governance, capabilities, and limits. |
@@ -283,7 +283,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 4. One worked resident case and one independent assessment task.
 5. One scoring rubric and one evaluation instrument.
 6. Faculty implementation guide and low-resource adoption path.
-7. Institutional authorization and support letters for the roles claimed.
+7. Consolidated institutional authorization for the roles claimed.
 8. Three-page public Toolkit.
 
 ## Decisions to make next
@@ -296,7 +296,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 - [ ] Approve or revise the working 16-competency, 40-hour map after the HAEMR baseline inventory and nutrition review.
 - [ ] Confirm the final public title.
 - [ ] Name a qualified nutrition reviewer and define the review responsibility.
-- [ ] Confirm the exact Health Data Analytics collaboration and letter.
+- [ ] Confirm the exact Health Data Analytics collaboration.
 - [ ] Approve the public description of the Department of Emergency Medicine and the MGB Azure development environment.
 - [ ] Choose the representative component to build before submission.
 - [ ] Clear rights for curriculum prose, code, data, and images.
