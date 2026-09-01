@@ -2,7 +2,7 @@
   "use strict";
 
   const curriculum = {
-  "version": "0.39.0",
+  "version": "0.40.0",
   "courseCount": 11,
   "moduleCount": 77,
   "courses": [

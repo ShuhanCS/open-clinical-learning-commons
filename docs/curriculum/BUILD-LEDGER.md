@@ -1,6 +1,6 @@
 # Curriculum build ledger
 
-- Current release: 0.96.0
+- Current release: 0.99.0
 - Last updated: 2026-09-01
 - Active phase: applied-course build
 - Last completed unit: APP-5 Checkpoint 03, Population intervention analytics plan
@@ -23,6 +23,11 @@
 - APP-4 preserves its own source assessment weights through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day.
 - APP-5 preserves all source assessment work through cumulative checkpoints: 40 points at Week 3, 25 points at Week 6, and 35 points on the official last day.
 - APP-5 owns population denominators, standardization, disparity measurement, geographic reasoning, fair targeting, accountable intervention design, monitoring, community accountability, and a clinician-led equity recommendation.
+
+## Public site release
+
+- Commons 0.99.0 applies the clinical visualization atlas design system to the home, course, and module pages.
+- Public catalog 0.40.0 retains all 11 course routes and 77 module routes while standardizing the Manrope and IBM Plex Mono typography, cool gray canvas, white learning panels, blue actions, compact route cards, and accessible focus treatment.
 
 ## Source status
 

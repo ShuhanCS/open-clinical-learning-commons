@@ -6,8 +6,8 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.98.0`
-- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. This release adds the working NIH nutrition education award North Star and simulated review panel.
+- Current version: `0.99.0`
+- Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star and simulated review panel are also included.
 
 ## NIH nutrition education award North Star
 
