@@ -22,7 +22,7 @@ const documents = [
   "01-mgb-research-management-intake",
   "02-mgb-institutional-authorization-record",
   "03-haemr-program-commitment-letter",
-  "04-division-ai-build-commitment-letter",
+  "04-department-emergency-medicine-build-commitment-letter",
   "05-health-data-analytics-collaboration-letter",
 ];
 

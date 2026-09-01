@@ -12,7 +12,7 @@ Federal deadline: September 15, 2026, 11:59 PM Eastern Time
 
 This document gives Mass General Brigham Research Management and the responsible institutional offices the information needed to classify, route, and authorize one proposed entry to the NIH Integration of Nutrition Training into Health Care Education Challenge.
 
-The submission would use the Harvard Affiliated Emergency Medicine Residency as the educational setting. The proposed MGB Department of Emergency Medicine Division of Artificial Intelligence would build and coordinate the curriculum. The Mass General Brigham University Healthcare Data Analytics Program would contribute applied analytics and assessment design as an internal collaborator.
+The submission would use the Harvard Affiliated Emergency Medicine Residency as the educational setting. The MGB Department of Emergency Medicine would build and coordinate the curriculum. The Mass General Brigham University Healthcare Data Analytics Program would contribute applied analytics and assessment design as an internal collaborator.
 
 This is a federal prize competition, not a grant, cooperative agreement, contract, or subaward. There is no application budget. The required Participant Agreement contains institutional certifications and public-use terms, so an authorized MGB office must review the submission route and identify the institutional signer.
 
@@ -56,7 +56,7 @@ Primary teaching site in the current AMA record: Massachusetts General Hospital
 
 Department: MGB Department of Emergency Medicine
 
-Internal builder and coordinator: Proposed Division of Artificial Intelligence
+Internal builder and coordinator: MGB Department of Emergency Medicine
 
 Educational setting and implementation owner: Harvard Affiliated Emergency Medicine Residency
 
@@ -84,7 +84,7 @@ Working title: Open Nutrition Data Commons for Emergency Medicine Residency
 
 Educational product: A proposed 40-hour longitudinal curriculum for emergency medicine residents that maps 16 HHS nutrition competencies across six domains to case-based learning, applied data analysis, and observable assessments.
 
-Development environment: The Division of Artificial Intelligence may use its existing MGB Azure environment for internal development. The public curriculum will not require MGB credentials, MGB Azure access, or proprietary software.
+Development environment: The Department of Emergency Medicine project team may use an approved MGB Azure environment for internal development. The public curriculum will not require MGB credentials, MGB Azure access, or proprietary software.
 
 Data: Synthetic cases and public or open datasets only for the proposed submission materials.
 
@@ -151,9 +151,9 @@ Graduate Medical Education and HAEMR
 - Verify the residency program record and educational setting.
 - Confirm that HAEMR may be named in the submission and may participate in curriculum development and implementation.
 
-Department of Emergency Medicine and Division of Artificial Intelligence leadership
+Department of Emergency Medicine leadership
 
-- Confirm departmental sponsorship of the proposed submission and the Division's builder and coordination role.
+- Confirm departmental sponsorship of the proposed submission and the Department's builder and coordination role.
 - Confirm a permissible nonfederal source for submission preparation effort and computing.
 
 Research Finance or designated financial office

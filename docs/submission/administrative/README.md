@@ -2,7 +2,7 @@
 
 - Status: draft for institutional review
 - Date: 2026-09-01
-- Commons release: `0.103.0`
+- Commons release: `0.104.0`
 - Submission deadline: September 15, 2026, 11:59 PM Eastern Time
 
 ## Decision requested
@@ -26,7 +26,7 @@ https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/NIH-Nutrition
 ## Immediate routing
 
 - HAEMR: Laura Welsh, MD, Program Director; Katherine Chappell, MA, Education Administrator.
-- MGB Department of Emergency Medicine: Division of Artificial Intelligence leadership and the appropriate department administrator or chair.
+- MGB Department of Emergency Medicine: department leadership and the appropriate administrator or chair.
 - MGB Graduate Medical Education: confirm that Mass General Brigham is the current sponsoring institution and approve residency participation.
 - MGB Research Management or another designated institutional office: confirm the legal Lead Entity name, one-entry availability, authorized Point of Contact, authorized signer, rights language, prize acceptance route, and Participant Agreement process.
 - MGB Research Management general mailbox: PHSresearchmanagement@mgb.org
@@ -40,7 +40,7 @@ https://nutritioneducationchallenge.org/wp-content/uploads/2026/05/NIH-Nutrition
 ## Optional support records
 
 - [HAEMR program commitment letter](word/03-haemr-program-commitment-letter.docx)
-- [Division AI build commitment letter](word/04-division-ai-build-commitment-letter.docx)
+- [Department of Emergency Medicine build commitment letter](word/04-department-emergency-medicine-build-commitment-letter.docx)
 - [Healthcare Data Analytics collaboration letter](word/05-health-data-analytics-collaboration-letter.docx)
 
 Each Word document is editable. Research Management may copy the intake data into Insight or another internal system if that is the required route.

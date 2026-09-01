@@ -2,7 +2,7 @@
 
 - Date: 2026-09-01
 - Status: complete
-- Commons release: `0.103.0`
+- Commons release: `0.104.0`
 - Repository: https://github.com/ShuhanCS/open-clinical-learning-commons
 
 ## Objective
@@ -14,7 +14,7 @@ Give Mass General Brigham leadership a small, accurate packet that supports an i
 1. A routing email that identifies the opportunity, decision, and deadline.
 2. A Research Management intake that records the sponsor, mechanism, applicant, scope, compliance screen, sponsor terms, classification questions, and requested routing.
 3. An institutional authorization record for the legal entity, one-entry clearance, Point of Contact, Participant Agreement signer, and internal approvals.
-4. Optional HAEMR, Division of Artificial Intelligence, and Healthcare Data Analytics support letters if an approving office requests them.
+4. Optional HAEMR, Department of Emergency Medicine, and Healthcare Data Analytics support letters if an approving office requests them.
 5. Editable Word versions of every record.
 
 ## Working administrative structure
@@ -24,7 +24,7 @@ Give Mass General Brigham leadership a small, accurate packet that supports an i
 - Track and category: Developing Track, Residency Program.
 - Submission structure: single Entity, unless Research Management or legal counsel directs otherwise.
 - Point of Contact: Shuhan He, MD, subject to written MGB authorization.
-- Internal builder: MGB Department of Emergency Medicine Division of Artificial Intelligence.
+- Internal builder and coordinator: MGB Department of Emergency Medicine.
 - Internal academic collaborator: Mass General Brigham University Healthcare Data Analytics Program.
 
 ## Acceptance checks

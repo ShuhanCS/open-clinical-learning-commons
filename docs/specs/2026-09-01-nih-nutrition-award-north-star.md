@@ -2,7 +2,7 @@
 
 - Status: working North Star and submission control document
 - Date: 2026-09-01
-- Commons release: `0.103.0`
+- Commons release: `0.104.0`
 - Challenge: NIH Integration of Nutrition Training into Health Care Education Challenge
 - Track: Developing
 - Program type: Residency Program
@@ -21,14 +21,14 @@ This is a federal prize competition, not a grant or subaward. The submission mus
 - Residency Program category.
 - HAEMR residents as the target learners.
 - A 40-hour longitudinal curriculum across residency, with a 40-hour competency equivalent reserved as a fallback.
-- Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence as the proposed builder and submission coordinator.
+- Mass General Brigham Department of Emergency Medicine as the proposed builder and submission coordinator.
 - Mass General Brigham University Health Data Analytics Program as the applied analytics collaborator.
 - Open Clinical Learning Commons as the public delivery layer.
 - No real patient records, patient-facing AI, or requirement for adopters to use MGB infrastructure.
 
 ## North Star
 
-> Build a 40-hour, competency-mapped nutrition data and responsible AI curriculum for HAEMR residents that improves clinical reasoning, communication, referral, and evidence use in emergency care; is led and engineered by the MGB Department of Emergency Medicine Division of Artificial Intelligence; is strengthened by Health Data Analytics and qualified nutrition expertise; and can be adopted by another residency without MGB credentials, protected health information, or proprietary software.
+> Build a 40-hour, competency-mapped nutrition data and responsible AI curriculum for HAEMR residents that improves clinical reasoning, communication, referral, and evidence use in emergency care; is led and engineered by the MGB Department of Emergency Medicine; is strengthened by Health Data Analytics and qualified nutrition expertise; and can be adopted by another residency without MGB credentials, protected health information, or proprietary software.
 
 A resident completing the pathway should be able to recognize nutrition risk during emergency care, connect nutrition to acute and chronic disease, interpret relevant clinical and population data, communicate within physician scope, make an appropriate referral, plan a safe transition of care, and identify when AI-supported nutrition guidance is unsupported, biased, unsafe, or irrelevant.
 
@@ -42,14 +42,14 @@ The national adoption test is concrete:
 |---|---|---|
 | Eligible Lead Entity | Mass General Brigham is the working Lead Entity based on current HAEMR sponsor records, subject to confirmation of the exact legal entity name and eligibility by Research Management and GME. | Exact legal name, accreditation basis, authorized representative, and one-entry clearance. |
 | Educational setting | Harvard-Affiliated Emergency Medicine Residency | Program leadership support, learner description, curriculum placement, and implementation commitment. |
-| Builder and coordinator | MGB Department of Emergency Medicine Division of Artificial Intelligence | Division leadership approval and supportable descriptions of personnel, engineering capacity, and the development environment. |
+| Builder and coordinator | MGB Department of Emergency Medicine | Department leadership approval and supportable descriptions of personnel, technical capacity, and the development environment. |
 | Point of Contact | Shuhan He, subject to institutional authorization | Written confirmation that the Lead Entity authorizes him to register, communicate, and submit on its behalf. |
 | Applied analytics collaborator | Mass General Brigham University Health Data Analytics Program | Collaboration letter and a defined role in curriculum, analytics, visualization, reproducibility, or assessment. |
 | Nutrition content reviewer | To be confirmed | Named qualified nutrition professional with a defined review and approval responsibility. |
 | Public delivery layer | Open Clinical Learning Commons | Public repository, licensing, module structure, and at least one demonstrable component. |
 | Development environment | Institutionally procured MGB Microsoft Azure environment | Approved wording about access, governance, capabilities, and limits. |
 
-The Division of Artificial Intelligence may lead the work, but the official Lead Entity must satisfy the NIH institutional eligibility rules. A department, division, laboratory, or individual is not automatically a separate eligible institution.
+The Department of Emergency Medicine may lead the work, but the official Lead Entity must satisfy the NIH institutional eligibility rules. A department, laboratory, or individual is not automatically a separate eligible institution.
 
 ## Administrative requirements
 
@@ -119,7 +119,7 @@ The page allocations are internal targets, not NIH requirements. They reserve ab
 | Curriculum Overview Section 6: Assessment methods | 1.5 pages | Planned knowledge and performance measures, timing, scoring, feedback, implementation measures, and curriculum improvement process. | Evaluation methods. |
 | Curriculum Overview Section 8: Potential for broader dissemination and scalability | 1.25 pages | National need, portability, public assets, low-resource adoption, faculty preparation, maintenance, and evidence of likely uptake. | Required scalability narrative. |
 | Curriculum Overview Section 9: Context within medical or nursing education | 1.25 pages | HAEMR training years, required or elective status, calendar, governance, relation to existing GME, and implementation path. | Context. |
-| Curriculum Overview Section 10: Interdisciplinary approach | 0.75 page | Division AI, residency education, Health Data Analytics, nutrition expertise, ownership, and decision rights. | Interdisciplinary approach. |
+| Curriculum Overview Section 10: Interdisciplinary approach | 0.75 page | Department of Emergency Medicine, residency education, Health Data Analytics, nutrition expertise, ownership, and decision rights. | Interdisciplinary approach. |
 | **Planned narrative** | **13.5 pages** | Leaves layout room without exceeding 15 pages. |  |
 
 ## Recommended appendices
@@ -253,7 +253,7 @@ This fictional panel rehearses likely expert lenses. It does not claim to identi
 - At least 34 of 40 points.
 - No criterion below 4.
 - No unresolved administrative triage failure.
-- No unsupported claim about eligibility, authorization, HAEMR participation, Division AI, Health Data Analytics, Azure, implementation, or effectiveness.
+- No unsupported claim about eligibility, authorization, HAEMR participation, the Department of Emergency Medicine, Health Data Analytics, Azure, implementation, or effectiveness.
 - A complete one-page executive summary.
 - A readable three-page public Toolkit.
 
@@ -297,7 +297,7 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 - [ ] Confirm the final public title.
 - [ ] Name a qualified nutrition reviewer and define the review responsibility.
 - [ ] Confirm the exact Health Data Analytics collaboration and letter.
-- [ ] Approve the public description of Division AI and its Azure environment.
+- [ ] Approve the public description of the Department of Emergency Medicine and the MGB Azure development environment.
 - [ ] Choose the representative component to build before submission.
 - [ ] Clear rights for curriculum prose, code, data, and images.
 
@@ -310,6 +310,5 @@ This is an internal quality bar. NIH has not published a minimum winning score.
 - Challenge portal: https://nutritioneducationchallenge.org/
 - Challenge FAQ: https://nutritioneducationchallenge.org/faq/
 - Harvard-Affiliated Emergency Medicine Residency: https://haemr.org/
-- MGB Department of Emergency Medicine Division of Artificial Intelligence: https://emaidivision.org/
 - Mass General Brigham University Health Data Analytics Program: https://www.mgbu.edu/health-rehabilitation-sciences/departments-programs/health-sciences/master-science-healthcare-data-analytics/
 - Open Clinical Learning Commons: https://github.com/ShuhanCS/open-clinical-learning-commons

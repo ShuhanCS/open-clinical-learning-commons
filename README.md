@@ -6,22 +6,22 @@ The Open Clinical Learning Commons is a public teaching resource built from synt
 
 Each release will carry the data, documentation, teaching tasks, evaluation checks, contribution history, source terms, and known issues needed for another program to teach from it.
 
-- Current version: `0.103.0`
+- Current version: `0.104.0`
 - Status: The public preview has an all-courses home page and the original 77 roadmap module routes. DA-730 has all 13 concept-first modules and all three cumulative checkpoints as runnable release candidates. FND-1 and FND-2 each have all seven technical modules and all three cumulative checkpoints as runnable release candidates. APP-1 through APP-5 are complete with seven modules and three checkpoints each. The public catalog now uses the visualization atlas design system on every home, course, and module page. The NIH nutrition education award North Star, simulated review panel, and 40-hour competency crosswalk are also included.
 
 ## NIH nutrition education award North Star
 
 The Commons is being considered as the delivery layer for an NIH Developing Track residency submission tentatively titled **Open Nutrition Data Commons for Emergency Medicine Residency**.
 
-> Build a 40-hour or 40-hour competency-equivalent nutrition data and responsible AI curriculum for the Harvard-Affiliated Emergency Medicine Residency, led and engineered by the Mass General Brigham Department of Emergency Medicine Division of Artificial Intelligence, strengthened by the Mass General Brigham University Health Data Analytics Program and nutrition experts, and released as a portable national teaching package.
+> Build a 40-hour or 40-hour competency-equivalent nutrition data and responsible AI curriculum for the Harvard-Affiliated Emergency Medicine Residency, led and engineered by the Mass General Brigham Department of Emergency Medicine, strengthened by the Mass General Brigham University Health Data Analytics Program and nutrition experts, and released as a portable national teaching package.
 
-The Harvard-Affiliated Emergency Medicine Residency is the proposed educational setting and its residents are the target learners. Division AI is the proposed builder and institutional coordinator. The Health Data Analytics Program contributes applied analytics, visualization, reproducibility, and assessment design. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
+The Harvard-Affiliated Emergency Medicine Residency is the proposed educational setting and its residents are the target learners. The Department of Emergency Medicine is the proposed builder and institutional coordinator. The Health Data Analytics Program contributes applied analytics, visualization, reproducibility, and assessment design. Public adopters must not need MGB Azure access, protected health information, or proprietary software.
 
 The full working specification contains the exact submission headings, page and formatting limits, eligibility gates, draft 40-hour map, evidence plan, and simulated review procedure: [NIH nutrition award North Star specification](docs/specs/2026-09-01-nih-nutrition-award-north-star.md).
 
 The [working HAEMR nutrition competency crosswalk](docs/specs/2026-09-01-haemr-nutrition-competency-crosswalk.md) selects 16 competencies across six HHS domains, totals exactly 40 hours, and ties every competency to an emergency medicine learning activity and observable assessment. Final selection follows HAEMR's baseline curriculum inventory and review by a qualified nutrition professional.
 
-The [MGB administrative approval packet](docs/submission/administrative/README.md) centers on a Research Management intake and an institutional submission authorization record. Optional support letters are available for HAEMR, Division AI, and Healthcare Data Analytics if the institutional route requires them.
+The [MGB administrative approval packet](docs/submission/administrative/README.md) centers on a Research Management intake and an institutional submission authorization record. Optional support letters are available for HAEMR, the Department of Emergency Medicine, and Healthcare Data Analytics if the institutional route requires them.
 
 ### Submission requirements at a glance
 
@@ -72,7 +72,7 @@ The Curriculum Overview receives a global score from 0 to 5 on each of eight equ
 | Evaluation methods | Feasible measures of knowledge, clinical reasoning, communication, referral judgment, data interpretation, and responsible AI use. |
 | Integration of innovative approaches | Authentic emergency cases, simulation, open or synthetic data, visualization, and AI audit activities tied to learning outcomes. |
 | Context within medical education | A credible place across HAEMR training years, with program leadership, schedule, required or elective status, and implementation path stated. |
-| Interdisciplinary approach | Defined roles for residency education, Division AI, Health Data Analytics, and a qualified nutrition professional. |
+| Interdisciplinary approach | Defined roles for residency education, the Department of Emergency Medicine, Health Data Analytics, and a qualified nutrition professional. |
 
 Scalability is a required narrative section and a cross-cutting expectation even though it is not a ninth 5-point Developing Track criterion. The Toolkit is reviewed pass-fail for completeness, clarity, required structure, and suitability for dissemination.
 

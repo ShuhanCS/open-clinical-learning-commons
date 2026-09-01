@@ -2,7 +2,7 @@
 
 - Status: working selection for institutional and nutrition review
 - Date: 2026-09-01
-- Commons release: `0.101.0`
+- Commons release: `0.104.0`
 - Proposed setting: Harvard-Affiliated Emergency Medicine Residency
 - Proposed track: NIH Developing Track, Residency Program
 - Official framework: https://www.hhs.gov/sites/default/files/nutrition-competencies-framework.pdf
@@ -77,7 +77,7 @@ The competency descriptions below are concise working labels. The official HHS f
 
 - HAEMR curriculum leadership confirms the current gaps, resident years, schedule, required or elective status, and feasible instructional hours.
 - A qualified nutrition professional verifies the competency interpretation, evidence sources, clinical accuracy, and scope boundaries.
-- Division AI confirms the data, visualization, simulation, and AI-audit activities it can build and maintain.
+- The Department of Emergency Medicine confirms the data, visualization, simulation, and AI-audit activities it can build and maintain.
 - The Health Data Analytics collaborator confirms its role in analytic methods, visualization, reproducibility, or assessment.
 - The writing team updates this crosswalk and the 15-page Curriculum Overview together so the competency numbers, hours, activities, and assessments remain identical.
 

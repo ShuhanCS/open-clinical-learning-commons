@@ -24,7 +24,7 @@ Subject to institutional approval and standard residency curriculum governance, 
 
 The curriculum is designed for acute-care practice while preserving clear roles for registered dietitians, pharmacists, social care professionals, primary care clinicians, and specialists. Public teaching materials would use synthetic cases and open data rather than patient records.
 
-HAEMR supports the Division of Artificial Intelligence as the proposed curriculum builder and technical coordinator and the Mass General Brigham University Healthcare Data Analytics Program as an academic collaborator in analytics, visualization, reproducibility, and assessment design.
+HAEMR supports the MGB Department of Emergency Medicine as the proposed curriculum builder and coordinator and the Mass General Brigham University Healthcare Data Analytics Program as an academic collaborator in analytics, visualization, reproducibility, and assessment design.
 
 Sincerely,
 

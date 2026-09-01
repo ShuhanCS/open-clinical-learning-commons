@@ -2,13 +2,13 @@
 
 Subject: Research Management intake: NIH Nutrition Education Challenge, HAEMR, due September 15
 
-To: Laura Welsh, MD; Katherine Chappell, MA; [Division AI Chief]; [MGB Emergency Medicine Department Administrator]
+To: Laura Welsh, MD; Katherine Chappell, MA; [MGB Emergency Medicine Department Chair or Administrator]
 
 Cc: [MGB GME or DIO contact]; [departmental pre-award contact]; PHSresearchmanagement@mgb.org; [MGB University academic approver]
 
 I am requesting expedited institutional review of a proposed Mass General Brigham submission to the NIH Integration of Nutrition Training into Health Care Education Challenge. The federal deadline is September 15, 2026, at 11:59 PM Eastern Time.
 
-The proposed entry is for the Developing Track and Residency Program category. The educational setting is the Harvard Affiliated Emergency Medicine Residency. The Department of Emergency Medicine Division of Artificial Intelligence would build and coordinate the curriculum, and the Mass General Brigham University Healthcare Data Analytics Program would contribute applied analytics, visualization, reproducibility, and assessment design. The current working curriculum maps 16 HHS competencies to 40 hours of residency education.
+The proposed entry is for the Developing Track and Residency Program category. The educational setting is the Harvard Affiliated Emergency Medicine Residency. The MGB Department of Emergency Medicine would build and coordinate the curriculum, and the Mass General Brigham University Healthcare Data Analytics Program would contribute applied analytics, visualization, reproducibility, and assessment design. The current working curriculum maps 16 HHS competencies to 40 hours of residency education.
 
 Current national residency records identify Mass General Brigham as the sponsor of HAEMR, ACGME program 1102421150. I recommend a single-Entity MGB submission, with Healthcare Data Analytics described as an internal academic collaborator rather than a formal Partner Entity, unless Research Management or legal counsel advises otherwise.
 
