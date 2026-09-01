@@ -40,5 +40,7 @@ Checkpoint totals are 40 points at Week 3, 25 points at Week 6, and 35 points on
 - Week 6 checkpoint specification: `docs/curriculum/courses/APP-5/checkpoints/02-place-targeting-intervention-release-spec.md`
 - Module 07 package: `courses/population-health-equity/modules/07-clinician-leadership-equity-recommendation/`
 - Module 07 specification: `docs/curriculum/courses/APP-5/modules/07-clinician-leadership-equity-recommendation-spec.md`
+- Final checkpoint package: `courses/population-health-equity/checkpoints/03-population-intervention-analytics-plan/`
+- Final checkpoint specification: `docs/curriculum/courses/APP-5/checkpoints/03-population-intervention-analytics-plan-spec.md`
 
-All seven modules and the Week 3 and Week 6 checkpoints are runnable release candidates. Module 07 freezes both checkpoints in a 1,328-file clinician leadership candidate, preserves every open condition and rejected ML result, and adds the 35-point equity recommendation once. The final checkpoint is the next isolated build unit.
+All seven modules and all three checkpoints are runnable release candidates. The final checkpoint freezes the 1,328-file Module 07 candidate in a 1,343-file package, counts `40 + 25 + 35 = 100` with no duplication, preserves all 26 open conditions, and closes APP-5 for curriculum construction as `accept with conditions`. The separate fictional planning recommendation remains `recommend seeking approval for bounded structured community review`; the package authorizes no real-world action.

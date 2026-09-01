@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint": {
+    "id": "oclc-app5-cp03",
+    "version": "0.1.0",
+    "commons_release": "0.96.0",
+    "course": "APP-5: Data for Population Health and Equity",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_module07": {
+    "id": "oclc-app5-07",
+    "version": "0.1.0",
+    "candidate_files": 1328,
+    "immutable_manifest_rows": 1301,
+    "immutable_manifest_bytes": 328429,
+    "immutable_manifest_sha256": "ebae232c051fe8b1204b4266aec416f48fe152b4dc5cda06a3ae00171807097b",
+    "release_bytes": 4366,
+    "release_sha256": "6e5a2c796257b7a9f72ccc1e7f725a2f9e818753791afd90e24fdef817477ce7"
+  },
+  "accepted_releases": {
+    "checkpoint1_sha256": "2748c0bf5f6c0fe90bca29899202e8a3e2b0fa303b4fa37248bbd8daca5d5289",
+    "checkpoint2_sha256": "b67fa825fa35e86063799091c34c65ccb95c3784f03e3c4c6cfa692f0c584f55"
+  },
+  "package": {
+    "candidate_files": 1328,
+    "final_review_files": 15,
+    "assembled_files": 1343,
+    "final_manifest_rows": 1328,
+    "final_manifest_bytes": 304982,
+    "final_manifest_sha256": "b9d02996141cf4652bff8b30776f541f6a5c38c9c8eceba8cef4e848c3b1331e"
+  },
+  "score": {
+    "maximum": 35.0,
+    "minimum_to_pass": 28.0,
+    "criteria": {"E01": 8.0, "P01": 9.0, "L01": 8.0, "G01": 6.0, "H01": 4.0}
+  },
+  "required_gates": 26,
+  "defense_questions": 16,
+  "required_conditions": 26,
+  "required_reviewer_roles": 18,
+  "allowed_package_dispositions": ["accept", "accept with conditions", "revise", "refer"],
+  "allowed_planning_recommendations": [
+    "recommend seeking approval for bounded structured community review",
+    "revise before seeking structured community review approval",
+    "refer",
+    "stop"
+  ],
+  "reference": {
+    "package_disposition": "accept with conditions",
+    "planning_recommendation": "recommend seeking approval for bounded structured community review",
+    "intervention_ready_for_real_use": false,
+    "outcomes_available": false,
+    "selected_comparison": "transparent community-review comparison only",
+    "ml_decision": "reject challenger; preserve transparent community-review comparison",
+    "course_status": "complete for curriculum construction only",
+    "real_need_determination": "prohibited",
+    "individual_inference_or_eligibility": "prohibited",
+    "community_contact": "prohibited",
+    "outreach_or_enrollment": "prohibited",
+    "funding_or_allocation": "prohibited",
+    "service_delivery": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "automatic_model_action": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited",
+    "proposed_tag": "app5-population-intervention-analytics-plan-v0.1.0",
+    "tag_status": "proposed - not created"
+  }
+}

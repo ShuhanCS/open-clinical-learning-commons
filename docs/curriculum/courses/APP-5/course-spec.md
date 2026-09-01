@@ -14,8 +14,8 @@
 - R role: read, run, and interpret epidemiology, standardization, `tidycensus`, and small-area examples; writing R from scratch is not graded.
 - Final deliverable: population intervention analytics plan with a reproducible evidence release, equity rationale, targeting and fairness audit, implementation and monitoring design, community-facing summary, accountability record, and defense.
 - Course version target: `0.1.0`.
-- Current Commons release target: `0.95.0` through Module 07.
-- Specification status: construction candidate.
+- Current Commons release target: `0.96.0` through the final checkpoint.
+- Specification status: runnable release candidate; curriculum construction complete.
 
 APP-5 is where learners define the population behind a health decision, construct and test its denominators, measure how rates differ across groups and places, and decide what that evidence can responsibly support. Learners move from public and contextual data through standardization, disparity analysis, geographic reasoning, targeting, intervention design, monitoring, and a clinician-led defense.
 
@@ -409,13 +409,20 @@ The reference disposition is `continue with conditions`. Module 07 curriculum co
 
 - Timing: official last day of the assigned half-term.
 - Course points: 35.
-- Planned package path: `courses/population-health-equity/checkpoints/03-population-intervention-analytics-plan/`.
-- Planned specification: `docs/curriculum/courses/APP-5/checkpoints/03-population-intervention-analytics-plan-spec.md`.
+- Package path: `courses/population-health-equity/checkpoints/03-population-intervention-analytics-plan/`.
+- Specification: `docs/curriculum/courses/APP-5/checkpoints/03-population-intervention-analytics-plan-spec.md`.
+- Build status: runnable release candidate at checkpoint version `0.1.0` and Commons release `0.96.0`.
 - Decision: should the fictional council recommend structured community review of one bounded plan, revise, refer, or stop?
 
 Required evidence includes both accepted checkpoints; immutable candidate manifest; final reproducible repository; executive decision brief; population, denominator, geography, and time contract; source and synthetic identities; evidence synthesis; disparity and uncertainty interpretation; place and context memo; targeting and fairness audit; intervention analytics design; implementation and monitoring plan; evaluation proposal; community-facing summary; language and disability access; feedback and recourse; governance, stewardship, accountability, disagreement, escalation, pause, stop, revision, and retirement; ML interpretation; accessible evidence; technical appendix; AI and responsible-claims audit; 35-point score; gates; defense; reviewer record; reproduction record; conditions; and separate curriculum-package and fictional-planning recommendations.
 
 The final checkpoint adds 35 points once, giving a course total of `40 + 25 + 35 = 100` with no duplication.
+
+The final package freezes all 1,328 Module 07 files in a 1,343-file release. Its 1,328-row candidate manifest is 304,982 bytes with SHA-256 `b9d02996141cf4652bff8b30776f541f6a5c38c9c8eceba8cef4e848c3b1331e`.
+
+The reference earns 35.00 of 35.00, passes all 26 final gates, preserves all 26 inherited conditions as open, carries all 18 reviewer roles as pending, and retains the complete 16-question defense. Complete validation passes 6,723 checks, learner validation passes 6,690 checks, two reference assemblies match, reconstructed Module 07 validation passes, and 26 deliberate failure routes plus complete-mode learner rejection are verified.
+
+The final curriculum disposition is `accept with conditions`. The separate fictional planning recommendation is `recommend seeking approval for bounded structured community review`. The intervention remains unready, outcomes remain unavailable, the clustering challenger remains rejected, and no real-world authority is added. APP-5 is complete for curriculum construction only.
 
 ## 17. Assessment map and grading rules
 

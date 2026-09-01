@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "status": "runnable-release-candidate",
+  "release_date": "2026-09-01",
+  "repository": "https://github.com/ShuhanCS/open-clinical-learning-commons",
+  "checkpoint": {
+    "id": "oclc-app5-cp03",
+    "title": "Population intervention analytics plan",
+    "version": "0.1.0",
+    "commons_release": "0.96.0",
+    "course": "APP-5: Data for Population Health and Equity",
+    "timing": "official last day of the assigned MGH Institute half-term",
+    "course_points": 35
+  },
+  "calendar": "https://www.mghihp.edu/sites/default/files/2026-06/ihp-calendar-2026-2027-with-winter-term-current.pdf",
+  "accepted_candidate": {
+    "id": "oclc-app5-07",
+    "version": "0.1.0",
+    "commons_release": "0.95.0",
+    "candidate_files": 1328,
+    "immutable_manifest_rows": 1301,
+    "immutable_manifest_bytes": 328429,
+    "immutable_manifest_sha256": "ebae232c051fe8b1204b4266aec416f48fe152b4dc5cda06a3ae00171807097b",
+    "release_bytes": 4366,
+    "release_sha256": "6e5a2c796257b7a9f72ccc1e7f725a2f9e818753791afd90e24fdef817477ce7"
+  },
+  "accepted_release_sha256": {
+    "checkpoint01": "2748c0bf5f6c0fe90bca29899202e8a3e2b0fa303b4fa37248bbd8daca5d5289",
+    "checkpoint02": "b67fa825fa35e86063799091c34c65ccb95c3784f03e3c4c6cfa692f0c584f55"
+  },
+  "course_score": {
+    "week3": 40,
+    "week6": 25,
+    "final": 35,
+    "total": 100,
+    "final_score": "35.00 of 35.00",
+    "double_counted_components": 0
+  },
+  "reference_decision": {
+    "gates": "26 of 26 pass or pass with an allowed condition",
+    "defense": "adequate for curriculum construction",
+    "package_disposition": "accept with conditions",
+    "planning_recommendation": "recommend seeking approval for bounded structured community review",
+    "intervention_ready_for_real_use": false,
+    "outcomes_available": false,
+    "selected_comparison": "transparent community-review comparison only",
+    "ml_decision": "reject challenger; preserve transparent community-review comparison",
+    "open_conditions": 26,
+    "reviewer_roles": 18,
+    "real_need_determination": "prohibited",
+    "individual_inference_or_eligibility": "prohibited",
+    "community_contact": "prohibited",
+    "outreach_or_enrollment": "prohibited",
+    "funding_or_allocation": "prohibited",
+    "service_delivery": "prohibited",
+    "intervention_effect_estimation": "prohibited",
+    "automatic_model_action": "prohibited",
+    "implementation": "prohibited",
+    "production_connection": "prohibited",
+    "deployment": "prohibited",
+    "course_status": "complete for curriculum construction only",
+    "proposed_tag": "app5-population-intervention-analytics-plan-v0.1.0",
+    "tag_status": "proposed - not created"
+  },
+  "package": {
+    "candidate_files": 1328,
+    "final_review_files": 15,
+    "assembled_files": 1343,
+    "candidate_manifest_rows": 1328,
+    "candidate_manifest_bytes": 304982,
+    "candidate_manifest_sha256": "b9d02996141cf4652bff8b30776f541f6a5c38c9c8eceba8cef4e848c3b1331e"
+  },
+  "validation": {
+    "assembler_self_check": "pass",
+    "validator_self_check": "pass",
+    "complete_reference_checks": 6723,
+    "starter_checks": 6690,
+    "two_build_match": "pass",
+    "existing_target_rejection": "pass",
+    "inside_candidate_target_rejection": "pass",
+    "failure_routes": 26,
+    "complete_mode_template_rejection": "pass"
+  },
+  "contributors": [
+    {"name": "Shuhan He", "role": "Commons sponsor, curriculum direction, clinician designation, and construction disposition"},
+    {"name": "OpenAI Codex", "role": "checkpoint specification, final package, deterministic assembly, validation, and release record"}
+  ],
+  "known_issues": [
+    "Joe Joseph, MD must confirm participation, schedule, session format, recording permission, accessibility needs, preparation materials, case wording, assessment role, and final biography wording before alpha.",
+    "All 18 named review roles, meaningful community participation where required, and independent human clean reproduction remain pending.",
+    "A live or approved equivalent 16-question defense and official section and half-term assignment remain pending.",
+    "All 26 inherited conditions remain open; the intervention is unready, outcomes are unavailable, and the clustering challenger remains rejected.",
+    "The proposed tag has not been created.",
+    "The package does not authorize real need determination, individual inference, community contact, outreach, eligibility, funding, allocation, service delivery, effect estimation, automatic action, implementation, production connection, or deployment."
+  ]
+}

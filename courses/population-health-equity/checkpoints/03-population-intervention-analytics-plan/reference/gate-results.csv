@@ -1,0 +1,27 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,Exact Checkpoint 01 Checkpoint 02 and Module 07 release identities,pass,final-review/submission-record.md,independent reproducer,
+G02,Exact 1328-file candidate and 1328-row final manifest,pass,final-review/candidate-manifest.csv,independent reproducer,
+G03,Exact 1301-row Module 07 immutable manifest and fingerprint,pass,release-manifest.csv,independent reproducer,
+G04,Repository commit versions releases and proposed tag recorded,pass with condition,final-review/submission-record.md,APP-5 faculty owner,CP2-C01
+G05,Public and synthetic source roles remain separate,pass with condition,evidence-synthesis.md,public-data reviewer,CP1-C02
+G06,Population denominator geography period uncertainty and support remain exact,pass with condition,population-place-claim-boundary.md,biostatistics reviewer,CP1-C03
+G07,Area evidence is not converted to individual inference,pass,population-place-claim-boundary.md,population-health clinician,
+G08,Unavailable and suppressed states remain protected,pass with condition,evidence-synthesis.md,privacy reviewer,CP1-C08
+G09,Modeled prevalence is not called an observed outcome,pass,evidence-synthesis.md,epidemiology reviewer,
+G10,Place aggregation ecological and limited-support facts remain exact,pass with condition,technical-appendix.md,GIS reviewer,CP2-C02
+G11,Four targeting rules and one fixed resource contract remain exact,pass with condition,equity-benefit-harm-consequences.md,resource-governance reviewer,CP2-C04
+G12,The transparent community-review comparison remains bounded and nonauthorizing,pass,recommendation-and-alternatives.md,community-accountability reviewer,
+G13,Five staff 12 travel and one burden conditions remain visible,pass with condition,intervention-readiness.md,implementation reviewer,CP2-C07
+G14,Outcomes remain unavailable and effect estimation remains prohibited,pass with condition,evaluation-proposal.md,causal reviewer,CP2-C10
+G15,The intervention remains not ready for real use,pass,population-intervention-brief.md,population-health clinician,
+G16,All 20 measures six triggers 14 objection tests and 23 incidents remain visible,pass with condition,implementation-monitoring-governance.md,monitoring reviewer,CP2-C08
+G17,Feedback recourse disagreement escalation pause stop revision and retirement remain human owned,pass with condition,community-accountability-and-access.md,community-accountability reviewer,CP1-C09
+G18,Fixed clustering failures and the rejected challenger remain exact,pass with condition,technical-appendix.md,model-risk reviewer,CP2-C11
+G19,Community input is not fabricated and silence is not agreement,pass with condition,disagreement-record.md,community representatives,CP2-C05
+G20,Language disability accessibility privacy and nonreconstruction remain visible,pass with condition,community-accountability-and-access.md,accessibility reviewer,CP1-C10
+G21,Possible benefit harm burden exclusion and accountability are addressed,pass,equity-benefit-harm-consequences.md,equity and civil-rights reviewer,
+G22,Curriculum disposition and fictional planning recommendation remain separate,pass,final-review/final-decision.md,APP-5 faculty owner,
+G23,Community-facing communication is accurate accessible and non-stigmatizing,pass with condition,community-facing-summary.md,communication reviewer,CP2-C03
+G24,Responsible claims agent use clinician identity reviewer state and reproduction are explicit,pass with condition,final-review/final-audit.md,responsible-AI reviewer,CP2-C13
+G25,All 26 conditions 18 reviewer roles and 16 defense answers remain complete,pass with condition,final-review/conditions-register.csv,faculty and clinician panel,CP2-C14
+G26,Course points completion tag state decisions and every authority prohibition are consistent,pass,final-review/release-acceptance.md,APP-5 faculty owner,

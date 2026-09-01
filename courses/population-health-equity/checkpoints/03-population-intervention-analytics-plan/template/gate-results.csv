@@ -1,0 +1,27 @@
+gate_id,gate,result,evidence,reviewer,condition_id
+G01,Accepted release identities,REPLACE,REPLACE,REPLACE,REPLACE
+G02,Final candidate identity,REPLACE,REPLACE,REPLACE,REPLACE
+G03,Module 07 immutable identity,REPLACE,REPLACE,REPLACE,REPLACE
+G04,Repository commit versions releases and tag,REPLACE,REPLACE,REPLACE,REPLACE
+G05,Public and synthetic source roles,REPLACE,REPLACE,REPLACE,REPLACE
+G06,Population denominator geography period uncertainty and support,REPLACE,REPLACE,REPLACE,REPLACE
+G07,Population-to-person boundary,REPLACE,REPLACE,REPLACE,REPLACE
+G08,Unavailable and suppressed states,REPLACE,REPLACE,REPLACE,REPLACE
+G09,Modeled prevalence versus outcomes,REPLACE,REPLACE,REPLACE,REPLACE
+G10,Place aggregation ecology and support,REPLACE,REPLACE,REPLACE,REPLACE
+G11,Targeting rules and resource contract,REPLACE,REPLACE,REPLACE,REPLACE
+G12,Bounded transparent comparison,REPLACE,REPLACE,REPLACE,REPLACE
+G13,Staff travel and burden conditions,REPLACE,REPLACE,REPLACE,REPLACE
+G14,Outcomes and effect boundary,REPLACE,REPLACE,REPLACE,REPLACE
+G15,Intervention readiness,REPLACE,REPLACE,REPLACE,REPLACE
+G16,Measures triggers objections and incidents,REPLACE,REPLACE,REPLACE,REPLACE
+G17,Feedback recourse escalation and stop,REPLACE,REPLACE,REPLACE,REPLACE
+G18,Clustering rejection,REPLACE,REPLACE,REPLACE,REPLACE
+G19,Community voice and participation truth,REPLACE,REPLACE,REPLACE,REPLACE
+G20,Language disability privacy and accessibility,REPLACE,REPLACE,REPLACE,REPLACE
+G21,Benefit harm burden exclusion and accountability,REPLACE,REPLACE,REPLACE,REPLACE
+G22,Separate final decisions,REPLACE,REPLACE,REPLACE,REPLACE
+G23,Community-facing communication,REPLACE,REPLACE,REPLACE,REPLACE
+G24,Claims agents clinician review and reproduction,REPLACE,REPLACE,REPLACE,REPLACE
+G25,Conditions reviewers and defense,REPLACE,REPLACE,REPLACE,REPLACE
+G26,Score completion tag and authority,REPLACE,REPLACE,REPLACE,REPLACE
