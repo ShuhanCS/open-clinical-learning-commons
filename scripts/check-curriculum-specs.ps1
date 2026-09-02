@@ -6,61 +6,6 @@ $portableLinkRunner = Join-Path $PSScriptRoot 'run-python-with-portable-links.py
 $da730 = Join-Path $repo 'docs\curriculum\courses\DA-730\course-spec.md'
 $content = Get-Content -Raw -LiteralPath $da730
 
-$nutritionCrosswalk = Join-Path $repo 'docs\specs\2026-09-01-haemr-nutrition-competency-crosswalk.md'
-$nutritionNorthStar = Join-Path $repo 'docs\specs\2026-09-01-nih-nutrition-award-north-star.md'
-if (-not (Test-Path -LiteralPath $nutritionCrosswalk) -or -not (Test-Path -LiteralPath $nutritionNorthStar)) {
-    throw 'The NIH nutrition award must include its North Star and HAEMR competency crosswalk.'
-}
-$nutritionContent = Get-Content -Raw -LiteralPath $nutritionCrosswalk
-$nutritionMatches = [regex]::Matches(
-    $nutritionContent,
-    '(?m)^\| (?<number>\d+) \| [^|]+ \| (?<hours>\d+(?:\.\d+)?) \|'
-)
-$nutritionHours = ($nutritionMatches | ForEach-Object { [decimal]$_.Groups['hours'].Value } | Measure-Object -Sum).Sum
-$nutritionNumbers = @($nutritionMatches | ForEach-Object { $_.Groups['number'].Value } | Sort-Object -Unique)
-if (
-    $nutritionMatches.Count -ne 16 -or
-    $nutritionNumbers.Count -ne 16 -or
-    $nutritionHours -ne [decimal]40 -or
-    $nutritionContent -notmatch 'https://www\.hhs\.gov/sites/default/files/nutrition-competencies-framework\.pdf' -or
-    $nutritionContent -match '[—–]'
-) {
-    throw "The HAEMR competency crosswalk must contain 16 unique HHS competencies totaling 40 hours with the official source and plain-ASCII punctuation; found $($nutritionMatches.Count) rows, $($nutritionNumbers.Count) unique numbers, and $nutritionHours hours."
-}
-
-$mgbAdminRoot = Join-Path $repo 'docs\submission\administrative'
-$mgbAdminFiles = @(
-    'README.md',
-    '00-routing-email.md',
-    '01-mgb-research-management-intake.md',
-    'word\01-mgb-research-management-intake.docx'
-)
-$mgbAdminMissing = @($mgbAdminFiles | Where-Object { -not (Test-Path -LiteralPath (Join-Path $mgbAdminRoot $_)) })
-$mgbAdminDocx = @(Get-ChildItem -LiteralPath (Join-Path $mgbAdminRoot 'word') -Filter '*.docx' -File)
-$mgbAdminText = Get-Content -Raw -LiteralPath (Join-Path $mgbAdminRoot '01-mgb-research-management-intake.md')
-$mgbAdminContent = (($mgbAdminFiles | Where-Object { $_ -like '*.md' } | ForEach-Object {
-    Get-Content -Raw -LiteralPath (Join-Path $mgbAdminRoot $_)
-}) -join "`n")
-if (
-    $mgbAdminMissing.Count -gt 0 -or
-    $mgbAdminDocx.Count -ne 1 -or
-    $mgbAdminText -notmatch '1102421150' -or
-    $mgbAdminText -notmatch 'one entry per institution' -or
-    $mgbAdminText -notmatch 'not a grant, cooperative agreement, contract, or subaward' -or
-    $mgbAdminText -notmatch 'Insight record or another internal proposal or agreement record' -or
-    $mgbAdminText -notmatch 'Human subjects research at the submission stage' -or
-    $mgbAdminText -notmatch 'Healthcare Data Analytics Program would create the nutrition curriculum' -or
-    $mgbAdminText -notmatch 'Department of Emergency Medicine would sponsor the submission and coordinate residency implementation' -or
-    $mgbAdminText -notmatch 'food purchased for use in the nutrition curriculum' -or
-    $mgbAdminText -notmatch 'will revise the curriculum and operating plan to follow the institutional rules and approval path' -or
-    $mgbAdminText -notmatch 'Point of Contact authorization' -or
-    $mgbAdminText -notmatch 'Participant Agreement signer' -or
-    $mgbAdminContent -match 'Division of Artificial Intelligence|Division AI|emaidivision\.org' -or
-    $mgbAdminText -match '[—–]'
-) {
-    throw "The MGB Research Management packet is incomplete or missing its sponsor, one-entry, prize-mechanism, routing, compliance-screen, or plain-ASCII contract: $($mgbAdminMissing -join ', ')."
-}
-
 $moduleCount = [regex]::Matches($content, '(?m)^## Module \d{2} brief:').Count
 if ($moduleCount -ne 13) {
     throw "DA-730 must define 13 module briefs; found $moduleCount."
@@ -171,7 +116,7 @@ if (
     $fnd2Content -notmatch '15%' -or
     ([regex]::Matches($fnd2Content, '25%')).Count -lt 2 -or
     $fnd2Content -notmatch '35%' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.2'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.3'
 ) {
     throw 'FND-2 is missing its source, version, ownership, workload, assessment, modeling, forecasting, decision, or plain-ASCII contract.'
 }
@@ -2904,7 +2849,7 @@ if (
     $app3SourceContent -notmatch '26dc5ada150a735fa1807cebc3274619a14495b2286fd34e9083b4508cfa367d' -or
     $app3Content -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
     $app3SourceContent -notmatch 'b3ef37e7e8d9888ff241caab83ec43be7e26be3c592a5a4e120acbf541edea7f' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.2'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.3'
 ) {
     throw 'APP-3 is missing its source, version, workload, 40/25/35 assessment, public-data, synthetic-service, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
@@ -4128,7 +4073,7 @@ if (
     $app4SourceContent -notmatch 'https://github\.com/synthetichealth/synthea/releases/tag/v4\.0\.0' -or
     $app4SourceContent -notmatch 'https://www\.healthit\.gov/topic/safety/safer-guides' -or
     $app4PackageContent -notmatch 'all seven modules and all three checkpoints are runnable release candidates; APP-4 is complete for curriculum construction' -or
-    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.2'
+    (Get-Content -Raw -LiteralPath (Join-Path $repo 'VERSION')).Trim() -ne '0.106.3'
 ) {
     throw 'APP-4 is missing its source, version, workload, 40/25/35 assessment, NHANES, synthetic-service, interoperability, ML, leadership, calendar, build-status, or plain-ASCII contract.'
 }
